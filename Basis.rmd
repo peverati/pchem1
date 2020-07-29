@@ -1,22 +1,4 @@
---- 
-title: "The Live Textbook of Physical Chemistry 1"
-author: "[Dr. Roberto Peverati](https://rpvresearch.weebly.com)"
-date: "`r Sys.Date()`"
-description: This GitBook is an example of a GitBook for teaching. It can be 
-  adapted for specific courses. The output format for this example
-  is bookdown::gitbook.
-documentclass: book
-github-repo: peverati/PChem1
-link-citations: yes
-bibliography:
-- book.bib
-- packages.bib
-site: bookdown::bookdown_site
-biblio-style: apalike
----
-
-<!--"Using GitBooks to create Open course materials"-->
-# Systems and Variables
+# Systems and Variables {#SystemVariables}
 
 ## Thermodynamic System
 A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings. The surroundings may include other thermodynamic systems, or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Fig. XXX below. 
