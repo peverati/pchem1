@@ -197,7 +197,8 @@ print("This is an R-command!")
 <p>Second, to include it in the list of chapters, open the file <code>_bookdown.yml</code> (click it in the Files explorer in the bottom right of Rstudio). This file has a list of <code>.Rmd</code> files to be included in the book. In this example, the list looks like this:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="editing-the-book.html#cb3-1"></a>tmp &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="st">&quot;_bookdown.yml&quot;</span>)</span>
 <span id="cb3-2"><a href="editing-the-book.html#cb3-2"></a><span class="kw">cat</span>(tmp[<span class="kw">grep</span>(<span class="st">&quot;^rmd_files&quot;</span>, tmp)<span class="op">:</span><span class="kw">grep</span>(<span class="st">&quot;references</span><span class="ch">\\</span><span class="st">.Rmd&quot;</span>, tmp)], <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
-<p>rmd_files: [“Basis.Rmd”,
+<p>rmd_files: [“index.Rmd”,
+“Basis.Rmd”,
 “prerequisites.Rmd”,
 “get_your_gitbook.Rmd”,
 “editing_the_book.Rmd”,
