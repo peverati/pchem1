@@ -18,7 +18,7 @@ biblio-style: apalike
 <!--"Using GitBooks to create Open course materials"-->
 # Systems and Variables
 
-## Thermodynamic System
+## The Thermodynamic System
 A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings. The surroundings may include other thermodynamic systems, or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Fig. XXX below. 
 
 In the first case, a liquid is contained in a typical erlenmeyer flask. The boundaries of the system are clearly the glass walls of the beaker. The second system is represented by the gas contained in a balloon. The boundary is a physical barrier also in this case. The third case is a that of a thunder cloud, where the boundary is not a well-defined physical barriers, but rather some condition of pressure and chemical composition at the interface between the cloud and the atmosphere. Finally the fourth case is the case of an open flame. In this case the boundary is again non-physical, and possibly even harder to define than for a cloud. For example, we can chose to define the flame based on some temperature threshold, or some color criterion, or even some chemical one. despite the lack of physical boundaries, both the cloud and the flame—as portions of space containing matter—can be defined as a thermodynamic system and studied as such.
@@ -35,36 +35,28 @@ The chemistry convention of the sign is system-centric.
 	•	If something (energy or mass) is going out of the system it has a negative sign – (system is losing)
 If you want a trick to remember the convention, use the weight loss/gain during exercise example above. You are the system, if you lose weight the kilograms will be negative (–2 kg), while if you gain weight they will be positive (+2 kg). Similarly, if you eat an energy bar, you are the system and you will have increased your energy by +500 kcal (positive), while if you burned energy during exercise, you are the system and you will have lost energy, hence –500 kcal (negative). If the system is a balloon filled with gas, and the balloon is losing mass, you are the balloon and you are losing weight, hence the mass will be negative. If the balloon is absorbing heat (likely increasing its temperature, hence increasing its volume), you are the system and you are gaining heat, hence heat will be positive.
 
-## Thermodynamic Variables
+## Variables
 The system is defined and studied using parameters that are called variables. These variables are quantities that we are able to measure, such as pressure and temperature, but don’t be surprised if in some occasion youu encounter some variable that is a little harder to measure directly, such as entropy. The variables depends only on the current state of the system, and therefore they define it. In other words, if I know the values of all the “relevant variables” of a system, I know the state of the system. The relationship between the variables are described by mathematical functions that are called state functions, while the “relevant variables” are called natural variables.
 What are the “relevant variables” of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:
-
-\begin{equation}
-  PV=nRT       
-  (\#eq:idealgaslaw)
-\end{equation}
-
+ $$PV=nRT$$
 Therefore, the natural variables for an ideal gas are: the pressure P, the volume V,  the number of moles n, and the temperature T, with R being the ideal gas constant. Recalling from the general chemistry courses, R is a universal dimensional constant which has the values of R = 8.31 kJ/mol in SI units.  
 We will use the ideal gas equation and its variables as an example to discuss about variables and functions in this chapter, and then we will analyze more complicated cases in the next chapters. 
 Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:
-
-- **Physical variables ($P$, $V$, $T$ in the ideal gas law):** independent on the chemical composition of the system.
--	**Chemical variables ($n$ in the ideal gas law):** dependent on the chemical composition of the system.
-
+	•	Physical variables (P, V, T in the ideal gas law): independent on the chemical composition of the system.
+	•	Chemical variables (n in the ideal gas law): dependent on the chemical composition of the system.
 Another useful classification is:
-
-- **Intensive variables ($P$, $T$ in the ideal gas law):** independent on the physical size (extension) of the system.
--	**Extensive variables ($V$, $n$ in the ideal gas law):** dependent on the physical size (extension) of the system.
-
+	•	 Intensive variables (P, T in the ideal gas law): independent on the physical size (extension) of the system.
+	•	Extensive variables (V, n in the ideal gas law): dependent on the physical size (extension) of the system.
 When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:
-$$V_m=\frac{V}{n}.$$
-We can then recast eq.\@ref(eq:idealgaslaw) as:
-$$PV_m=RT,$$
+. (1.2.2)
+We can then recast eq. 1.2.1 as:
+,  (1.2.3)
 which is the preferred equation that we will use for the remainder of this course.
 The ideal gas equation connects the 3 variables pressure, molar volume, and temperature, and reduces the number of independent variables to just 2. In other words, once 2 of the 3 variables are known, the other one can be easily obtained using these simple relations:
-$$P(T,V_m)=\frac{RT}{V_m},$$
-$$V_m(T,P)=\frac{RT}{P},$$
-$$T(P,V_m)=\frac{PV_m}{R}.$$
+ (1.2.4)
+(1.2.5)
+ (1.2.6)
+
 These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. 1.2.4 defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. 1.2.5 defines the “molar volume” as a function of temperature and pressure, and eq. 1.2.6 defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential (see eq. XXX), for example for the pressure P(T, Vm):
 
 . (1.2.7)
@@ -77,7 +69,7 @@ Which can be easily verified considering that:
 and 
 . (1.2.8)
 
-While for the ideal gas law all the variables are “well-behaved” and always satisfies Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold. Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. For this reason, these functions are called path functions, that is, they depend on the path rather than the state. The most typical example of path functions that we will encounter in the next chapters are heat (Q) and work (W). For these functions we cannot define exact differentials dQ and dW, and we must introduce a new notation to define their “inexact differentials” xxxQ and xxxW. 
+While for the ideal gas law all the variables are “well-behaved” and always satisfies Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold. Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. For this reason, these functions are called path functions, that is, they depend on the path rather than the state. The most typical example of path functions that we will encounter in the next chapters are heat (Q) and work (W). For these functions we cannot define exact differentials dQ and dW, and we must introduce a new notation to define their “inexact differentials”  δQ and δW. 
 We will return on exact and inexact differential when we discuss heat and work, but for this chapter it is important to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s for example consider the distance between New York City and Los Angeles. If we fly straight from one city to the other there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities and it stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the positions of the cities depend uniquely on their latitudes and longitudes, the “air distance” is a state functions, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs. car vs. train vs. boat vs. …), and it will depend on a plentiful amount of other factors such as the choice of road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance”. Certainly we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure XXX.
 
 ![](./img/using_gitbook.jpeg)
