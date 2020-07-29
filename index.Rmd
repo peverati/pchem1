@@ -2,9 +2,7 @@
 title: "The Live Textbook of Physical Chemistry 1"
 author: "[Dr. Roberto Peverati](https://rpvresearch.weebly.com)"
 date: "`r Sys.Date()`"
-description: This GitBook is an example of a GitBook for teaching. It can be 
-  adapted for specific courses. The output format for this example
-  is bookdown::gitbook.
+description: Textbook for P-Chem 1 class at Florida Tech
 documentclass: book
 github-repo: peverati/PChem1
 link-citations: yes
@@ -14,5 +12,20 @@ bibliography:
 site: bookdown::bookdown_site
 biblio-style: apalike
 ---
+
+# Preface {-}
+This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 3001) for 2020.
+
+The instructor for this course is Dr. Roberto Peverati.
+Chemistry Program, Department of Biomedical and Chenical Engineering and Science
+Florida Institute of Technology, Melbourne, FL
+
+This live open textbook is distributed under the CC-BY-SA-4.0 License
+
+
+## Structure of this book {-}
+How should you use this book? 
+
+
 
 
