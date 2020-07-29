@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>The Live Textbook of Physical Chemistry 1</title>
+  <title>2 Zeroth Law of Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="2 Zeroth Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="2 Zeroth Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="SystemVariables.html"/>
+<link rel="prev" href="SystemVariables.html"/>
+<link rel="next" href="FirstLaw.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -115,21 +115,29 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">The Live Textbook of Physical Chemistry 1</h1>
-<p class="author"><em><a href="https://rpvresearch.weebly.com">Dr. Roberto Peverati</a></em></p>
-<p class="date"><em>2020-07-29</em></p>
+<div id="ZerothLaw" class="section level1">
+<h1><span class="header-section-number">2</span> Zeroth Law of Thermodynamics</h1>
+<div id="what-is-thermodynamics" class="section level2">
+<h2><span class="header-section-number">2.1</span> What is Thermodynamics?</h2>
+<p>Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A definition of these forms of energy is as follow:</p>
+<ul>
+<li>Work is exchanged if external parameters are changed during the process.</li>
+<li>Heat is exchanged if only internal parameters are changed during the process.</li>
+</ul>
+<p>As we saw in Chapter <a href="SystemVariables.html#SystemVariables">1</a> though, heat and work are not “well-behaved” quantities because they are path functions. While on the one hand it might be simple to measure experimentally the amount of heat and/or work, these measured numbers cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods that are used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the XXXX century, a time when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related with each other, and how they were also related with the other variables that they were able to measure, such as temperature and volume. XXX some more XXX</p>
+<p>Before we even discuss the definition of energy and how it relates to heat and work, it is important to introduce the important concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition. In fact with this course we will not even arrive at a rigorous definition of temperature, so you will not see it in this book. However, for all our purposes, it is not important to have a microscopic definition of temperature, as long as we have guarantee that this quantity can be measured in an unambiguous manner. In other words, we need a mathematical definition of temperature that will agree with the physical existence of thermometers.</p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 3001) for 2020.</p>
-<p>The instructor for this course is Dr. Roberto Peverati.
-Chemistry Program, Department of Biomedical and Chenical Engineering and Science
-Florida Institute of Technology, Melbourne, FL</p>
-<p>This live open textbook is distributed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-SA 4.0 License</a></p>
-<div id="structure-of-this-book" class="section level2 unnumbered">
-<h2>Structure of this book</h2>
-<p>How should you use this book?</p>
+<div id="thermometers" class="section level2">
+<h2><span class="header-section-number">2.2</span> Thermometers</h2>
+</div>
+<div id="the-zeroth-law-of-thermodynamics" class="section level2">
+<h2><span class="header-section-number">2.3</span> The zeroth law of thermodynamics</h2>
+<p>The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly superfluous, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:</p>
+<p><span class="math display" id="eq:ZerothLaw">\[\begin{equation}
+  \text{If  } T_A = T_B \text{ , and } T_B = T_C \text{ , then } T_A = T_C
+  \tag{2.1}
+\end{equation}\]</span></p>
+<p>Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at <span class="math inline">\(P=\)</span> 1 atm. Its temperature, <span class="math inline">\(T_{H_2O}\)</span>, is about 373 K. Let’s now immerse in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature <span class="math inline">\(T_W = T_{H_2O}\)</span>. Similarly, the metal coin will also be in thermal equilibrium with the water, hence <span class="math inline">\(T_M = T_{H_2O}\)</span>. According to the zeroth law the temperature of the wood coin and that of the metal coin are exactly the same <span class="math inline">\(T_W = T_M\)</span>, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. So, if you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you guess that they have the same temperature? Probably not.</p>
 
 </div>
 </div>
@@ -138,8 +146,8 @@ Florida Institute of Technology, Melbourne, FL</p>
           </div>
         </div>
       </div>
-
-<a href="SystemVariables.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="SystemVariables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="FirstLaw.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -170,7 +178,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cjvanlissa/gitbook-demo/edit/master/index.Rmd",
+"link": "https://github.com/cjvanlissa/gitbook-demo/edit/master/02_ZerothLaw.rmd",
 "text": "Edit"
 },
 "history": {

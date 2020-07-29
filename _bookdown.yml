@@ -1,17 +1,23 @@
 book_filename: "Pchem1"
-rmd_files: ["index.Rmd",
-            "Basis.rmd",
-            "ZerothLaw.Rmd",
-            "get_your_gitbook.Rmd",
-            "editing_the_book.Rmd",
-            "figures_tables.Rmd",
-            "examples.Rmd",
-            "open_educational.Rmd",
-            "use_in_course.Rmd",
-            "licenses.Rmd",
-            "references.Rmd"]
+rmd_files: ["index.rmd",
+            "01_Basis.rmd",
+            "02_ZerothLaw.rmd",
+            "03_FirstLaw.rmd",
+            "04_Thermochemistry.rmd",
+            "05_ThermodynamicCycles.rmd",
+            "06_SecondThirdLaws.rmd",
+            "07_Potentials.rmd",
+            "08_ChemicalEquilibrium.rmd",
+            "09_Gases.rmd",
+            "10_RealGases.rmd",
+            "11_PhaseEquilibrium.rmd",
+            "12_MCPhaseDiagrams.rmd",
+            "13_Solutions.rmd",
+            "14_KTG.rmd",
+            "15_Kinetics.rmd",
+              ]
 output_dir: "docs"
 language:
-  ui:
-    chapter_name: "Chapter "
+#  ui:
+#    chapter_name: "Chapter "
 delete_merged_file: true
