@@ -141,7 +141,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.1</b> Thermodynamic Systems</a></li>
 <li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>2</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="zeroth-law-of-thermodynamics.html"><a href="zeroth-law-of-thermodynamics.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a><ul>
+<li class="chapter" data-level="2.1" data-path="zeroth-law-of-thermodynamics.html"><a href="zeroth-law-of-thermodynamics.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="zeroth-law-of-thermodynamics.html"><a href="zeroth-law-of-thermodynamics.html#thermometers"><i class="fa fa-check"></i><b>2.2</b> Thermometers</a></li>
+<li class="chapter" data-level="2.3" data-path="zeroth-law-of-thermodynamics.html"><a href="zeroth-law-of-thermodynamics.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.3</b> The zeroth law of thermodynamics</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="getgitbook.html"><a href="getgitbook.html"><i class="fa fa-check"></i><b>3</b> Get your GitBook</a></li>
 <li class="chapter" data-level="4" data-path="editing-the-book.html"><a href="editing-the-book.html"><i class="fa fa-check"></i><b>4</b> Editing the book</a><ul>
 <li class="chapter" data-level="4.1" data-path="editing-the-book.html"><a href="editing-the-book.html#creating-new-chapters"><i class="fa fa-check"></i><b>4.1</b> Creating new chapters</a></li>
@@ -185,8 +189,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="figtab" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Figures and tables</h1>
 <p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="figtab.html#cb4-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
-<span id="cb4-2"><a href="figtab.html#cb4-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="figtab.html#cb3-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
+<span id="cb3-2"><a href="figtab.html#cb3-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
 <img src="Pchem1_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
 <p class="caption">
@@ -194,10 +198,10 @@ Figure 5.1: Here is a nice figure!
 </p>
 </div>
 <p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="figtab.html#fig:nice-fig">5.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="figtab.html#tab:nice-tab">5.1</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="figtab.html#cb5-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
-<span id="cb5-2"><a href="figtab.html#cb5-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb5-3"><a href="figtab.html#cb5-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
-<span id="cb5-4"><a href="figtab.html#cb5-4"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="figtab.html#cb4-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb4-2"><a href="figtab.html#cb4-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb4-3"><a href="figtab.html#cb4-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb4-4"><a href="figtab.html#cb4-4"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 5.1: </span>Here is a nice table!</caption>
 <thead>

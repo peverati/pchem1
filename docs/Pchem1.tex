@@ -303,97 +303,28 @@ We will return on exact and inexact differential when we discuss heat and work, 
 \caption{State Functions vs. Path Functions}\label{fig:Fig2c1}
 \end{figure}
 
-\hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\hypertarget{zeroth-law-of-thermodynamics}{%
+\chapter{Zeroth Law of Thermodynamics}\label{zeroth-law-of-thermodynamics}}
 
-This GitBook is created in Rstudio, using the \texttt{bookdown} package. To get your system set up correctly, you have to install several software packages, and register on GitHub. You only have to perform these steps once, and the entire process should take approximately 1 hour if you start from scratch. In case some software is already installed on your system, you can skip related steps. Follow these steps in order:
+\hypertarget{what-is-thermodynamics}{%
+\section{What is Thermodynamics?}\label{what-is-thermodynamics}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Install R from \href{https://cloud.r-project.org/}{cloud.r-project.org}
-\item
-  Install Rstudio Desktop (Free) from \href{https://rstudio.com/products/rstudio/download/\#download}{rstudio.com}
-\item
-  Install Git from \href{https://git-scm.com/downloads}{git-scm.com}. Use the default, recommended settings. It is especially important to leave these settings selected:
+Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A definition of these forms of energy is as follow:
+• Work is exchanged if external parameters are changed during the process.
+• Heat is exchanged if only internal parameters are changed during the process.
+As we saw in the previous chapter though, heat and work are not ``well-behaved'' quantities because they are path functions. While on the one hand it might be simple to measure experimentally the amount of heat and/or work, these measured numbers cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods that are used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the XXXX century, a time when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related with each other, and how they were also related with the other variables that they were able to measure, such as temperature and volume. XXX some more XXX
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Git from the command line and also from third party software\\
-  \item
-    Use the OpenSSL library\\
-  \item
-    Checkout Windows-style, commit Unix-style line endings\\
-  \item
-    Enable Git Credential Manager\\
-  \item
-    If you run into any trouble, a more comprehensive tutorial on installing Git is available at \href{https://happygitwithr.com/install-git.html}{happygitwithr.com}.
-  \end{itemize}
-\item
-  Register on GitHub
+Before we even discuss the definition of energy and how it relates to heat and work, it is important to introduce the important concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition. In fact with this course we will not even arrive at a rigorous definition of temperature, so you will not see it in this book. However, for all our purposes, it is not important to have a microscopic definition of temperature, as long as we have guarantee that this quantity can be measured in an unambiguous manner. In other words, we need a mathematical definition of temperature that will agree with the physical existence of thermometers.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Go to \url{https://github.com/} and click ``Sign up''. Choose an ``Individual'', ``Free'' plan.
-  \item
-    Request a \href{https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount}{free academic upgrade}. This allows you to create \emph{private repositories}, which are only visible to you and selected collaborators, and can be made public when your work is published.
-  \end{itemize}
-\item
-  Connect Rstudio to Git and Github (for more support, see \href{https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN}{this Rstudio article}, and \href{https://www.r-bloggers.com/rstudio-and-github/}{this blog post})
+\hypertarget{thermometers}{%
+\section{Thermometers}\label{thermometers}}
 
-  \begin{enumerate}
-  \def\labelenumii{\alph{enumii}.}
-  \tightlist
-  \item
-    Open Rstudio, open the Tools menu, click \emph{Global Options}, and click \emph{Git/SVN}
-  \item
-    Verify that \emph{Enable version control interface for RStudio projects} is selected
-  \item
-    Verify that \emph{Git executable:} shows the location of git.exe. If it is missing, manually fix the location of the file.
-  \item
-    Click \emph{Create RSA Key}. Do not enter a passphrase. Press \emph{Create}. A window with some information will open, which you can close.
-  \item
-    Click \emph{View public key}, and copy the entire text to the clipboard.
-  \item
-    Close Rstudio (it might offer to restart by itself; this is fine)
-  \item
-    Go to \url{https://github.com}
-  \item
-    Click your user icon, click \emph{Settings}, and then select the \emph{SSH and GPG keys} tab.
-  \item
-    Click \emph{New SSH key}. Give it an arbitrary name (e.g., your computer ID), and paste the public key from your clipboard into the box labeled ``\emph{Key}''.
-  \item
-    Open Rstudio again (unless it restarted by itself)
-  \end{enumerate}
-\item
-  Install all required packages by running the following code in the Rstudio console. Be prepared for three contingencies:
+\hypertarget{the-zeroth-law-of-thermodynamics}{%
+\section{The zeroth law of thermodynamics}\label{the-zeroth-law-of-thermodynamics}}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    If you receive any error saying \emph{There is no package called XYZ}, then run the code \texttt{install.packages("XYZ")}\\
-  \item
-    If you are prompted to update packages, just press \texttt{3:\ None}. Updating packages this way in an interactive session sometimes leads to errors, if the packages are loaded.\\
-  \item
-    If you see a pop-up dialog asking \emph{Do you want to install from sources the package which needs compilation?}, click \emph{No}. If this leads to errors, then please follow \emph{Step 3} from \href{https://cjvanlissa.github.io/worcs/articles/setup.html}{this online guide}, and run \texttt{install.packages("devtools")}. This will take a long time, but will allow you to install packages from source.
-  \end{itemize}
-\end{enumerate}
-
-Run the following code to install the required packages:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"tinytex"}\NormalTok{)}
-\NormalTok{tinytex}\OperatorTok{::}\KeywordTok{install_tinytex}\NormalTok{()}
-\NormalTok{git2r}\OperatorTok{::}\KeywordTok{config}\NormalTok{(}\DataTypeTok{global =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{user.name =} \StringTok{"your.name"}\NormalTok{, }\DataTypeTok{user.email =} \StringTok{"your.email"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-That's it! Everything should be installed and connected now.
+The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly superfluous, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
+If TA = TB, and TB = TC, then TA = TC (2.1)
+Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let's, for example, consider a pot of boiling water at 1 atm. Its temperature, TH2O, is about 373 K. Let's now immerse in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature TW = TH2O. Similarly, the metal coin will also be in thermal equilibrium with the water, hence TM = TH2O. According to the zeroth law the temperature of the wood coin and that of the metal coin are exactly the same TW = TM, even if they are not in direct contact with each other. Now here's the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. So, if you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you guess that they have the same temperature? Probably not.
 
 \hypertarget{getgitbook}{%
 \chapter{Get your GitBook}\label{getgitbook}}
@@ -474,8 +405,8 @@ Second, to include it in the list of chapters, open the file \texttt{\_bookdown.
 \end{Shaded}
 
 rmd\_files: {[}``index.Rmd'',
-``Basis.Rmd'',
-``prerequisites.Rmd'',
+``Basis.rmd'',
+``ZerothLaw.Rmd'',
 ``get\_your\_gitbook.Rmd'',
 ``editing\_the\_book.Rmd'',
 ``figures\_tables.Rmd'',
