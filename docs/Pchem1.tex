@@ -334,7 +334,7 @@ Before we even discuss the definition of energy and how it relates to heat and w
 The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly superfluous, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
 
 \begin{definition}
-\protect\hypertarget{def:zerothlaw}{}{\label{def:zerothlaw} }\textbf{Zeroth Law of Thermodynamics:} If \(T_A = T_B\), and \(T_B = T_C\), then \(T_A = T_C\)
+\protect\hypertarget{def:zerothlaw}{}{\label{def:zerothlaw} }\textbf{Zeroth Law of Thermodynamics:} If \(T_A = T_B\), and \(T_B = T_C\), then \(T_A = T_C\).
 \end{definition}
 
 Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let's, for example, consider a pot of boiling water at \(P=\) 1 atm. Its temperature, \(T_{H_2O}\), is about 373 K. Let's now immerse in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature \(T_W = T_{H_2O}\). Similarly, the metal coin will also be in thermal equilibrium with the water, hence \(T_M = T_{H_2O}\). According to the zeroth law the temperature of the wood coin and that of the metal coin are exactly the same \(T_W = T_M\), even if they are not in direct contact with each other. Now here's the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. So, if you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you guess that they have the same temperature? Probably not.
@@ -524,7 +524,9 @@ which result in the simple formula:
 
 The definition of energy is:
 
-xxx
+\begin{definition}
+\protect\hypertarget{def:energy}{}{\label{def:energy} }\textbf{Energy:} Property of a system that can be wither transferred or converted.
+\end{definition}
 
 In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \ref{def:chemistryconv}, which gives the convention for the signs of heat and work, the definition of energy can be written as:
 
@@ -546,8 +548,42 @@ which, using eq. \eqref{eq:Wdef} becomes:
   \label{eq:dUpdv}
 \end{equation}
 
-\hypertarget{adiabatic-processes}{%
-\subsection{Adiabatic Processes}\label{adiabatic-processes}}
+\hypertarget{isothermic-processes-dt0}{%
+\subsection{\texorpdfstring{Isothermic processes (\(dT=0\))}{Isothermic processes (dT=0)}}\label{isothermic-processes-dt0}}
+
+To study the behavior of the energy at constant temperature, James Prescott Joule created the apparatus depicted in Figure \ref{fig:FigJexp}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.006} 
+
+}
+
+\caption{The Joule Expansion Experiment.}\label{fig:FigJexp}
+\end{figure}
+
+The left side of the Joule apparatus's inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, to guarantee isolation from the environment. When the communication channel between the chambers is open, the gas expands and equilibrates. The work associated with the transformation is:
+
+\begin{equation}
+  đ W=P_{\text{ext}}dV = 0,
+  \label{eq:JexpW}
+\end{equation}
+
+since the chambers are not in communication with the environment, \(P_{\text{ext}}=0\). Thus, changes in energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, \(T_i\), and at the end of the experiment \(T_f\). Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature will not change \(T_i = T_f\). Since the temperature doesn't change there is no heat transfer, and therefore the energy stays constant:
+
+\begin{equation}
+  dU = đ Q = 0.
+  \label{eq:JexpQU}
+\end{equation}
+
+\begin{quote}
+Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in a following chapter when we will study real gases.
+\end{quote}
+
+From this simple experiment, we can conclude that the energy of an ideal gas depends only on its temperature.
+
+\hypertarget{adiabatic-processes-ux111q0}{%
+\subsection{\texorpdfstring{Adiabatic Processes (\(đQ=0\))}{Adiabatic Processes (đQ=0)}}\label{adiabatic-processes-ux111q0}}
 
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, \(đ Q=0\), and the work associated with an adiabatic process becomes a state function:
 
@@ -556,8 +592,10 @@ An adiabatic process is defined as a process that happens without the exchange o
   \label{eq:dUadiabatic}
 \end{equation}
 
-\hypertarget{isochoric-process}{%
-\subsection{Isochoric process}\label{isochoric-process}}
+which can then be calculated using the formulas that we derived in section \ref{workint}.
+
+\hypertarget{isochoric-processes-dv0}{%
+\subsection{\texorpdfstring{Isochoric processes (\(dV=0\))}{Isochoric processes (dV=0)}}\label{isochoric-processes-dv0}}
 
 An isocoric process is a process in which the volume does not change. Therefore, \(đ W=0\), and \(dU = đ Q_V\), which for 1 mol of substance and using eq. \eqref{eq:Cvdef}, becomes:
 
@@ -573,16 +611,16 @@ Since no work is performed at these conditions, the heat becomes a state functio
   \label{eq:cvstatefunc}
 \end{equation}
 
-where we have replaced the total derivative \(d\) with a partial one \(\partial\), and we have specified that the derivation happens at constant volume. Eq. @(eq:cvstatefunc) equation brings a rigorous definition of heat capacity at constant volume for 1 mol of substance:
+where we have replaced the total derivative \(d\) with a partial one \(\partial\), and we have specified that the derivation happens at constant volume. Eq. \eqref{eq:cvstatefunc} equation brings a rigorous definition of heat capacity at constant volume for 1 mol of substance:
 
 \begin{definition}
 \protect\hypertarget{def:newdefcv}{}{\label{def:newdefcv} }\emph{The heat capacity of a substance, \(C_V\), represents its ability to absorb \textbf{energy} at constant \textbf{volume}.}
 \end{definition}
 
-\hypertarget{isobaric-processes}{%
-\subsection{Isobaric processes}\label{isobaric-processes}}
+\hypertarget{isobaric-processes-dp0}{%
+\subsection{\texorpdfstring{Isobaric processes (\(dP=0\))}{Isobaric processes (dP=0)}}\label{isobaric-processes-dp0}}
 
-In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \$ P \$. \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \citet{ref}(eq:cvstatefunc) gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_V\)?
+In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \(P\). \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \eqref{eq:cvstatefunc} gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_V\)?
 
 In order to do so, we can introduce a new state function, called the enthalpy (\(H\)), as:
 
@@ -619,7 +657,7 @@ which simplifies to:
   \label{eq:dh2}
 \end{equation}
 
-Eq. \eqref{eq:dh2} establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by eq. @(eq:enthalpydef). It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to \(C_V\), \(C_P\) can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):
+Eq. \eqref{eq:dh2} establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by eq. \eqref{eq:enthalpydef}. It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to \(C_V\), \(C_P\) can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):
 
 \begin{equation}
   C_P = \left( \frac{\partial H} {\partial T} \right)_P,
@@ -631,11 +669,6 @@ Eq. \eqref{eq:cpstatefunc} brings also a rigorous definition of heat capacity at
 \begin{definition}
 \protect\hypertarget{def:newdefcp}{}{\label{def:newdefcp} }\emph{The heat capacity of a substance, \(C_P\), represents its ability to absorb \textbf{enthalpy} at constant \textbf{pressure}.}
 \end{definition}
-
-\hypertarget{isothermic-processes}{%
-\subsection{Isothermic processes}\label{isothermic-processes}}
-
-xxx JT experiment xxx
 
 \hypertarget{the-first-law-of-thermodynamics}{%
 \section{The First Law of Thermodynamics}\label{the-first-law-of-thermodynamics}}
@@ -703,7 +736,7 @@ The total absolute value of the work for the 2-step process is given by the sum 
 
 As can be easily verified by comparing the shaded areas in the plots, \(\left| W_{\text{2-step}} \right| > \left| W_{\text{1-step}} \right|\).
 
-We can easily extend this procedure to consider processes that happens in 3, 4, 5, \ldots, \(n\) steps. What is the limit of this procedure? In other words, what happens when \(n \rightarrow \infty\)? A simple answer is given by the plot in Figure XXX, which clearly demonstrates that the maximum value of the area underneath the curve \(\left| W_{\text{max}}\right|\) is achieved in an \(\infty\)-step process, for which the work is calculated as:
+We can easily extend this procedure to consider processes that happens in 3, 4, 5, \ldots, \(n\) steps. What is the limit of this procedure? In other words, what happens when \(n \rightarrow \infty\)? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve \(\left| W_{\text{max}}\right|\) is achieved in an \(\infty\)-step process, for which the work is calculated as:
 
 \begin{equation}
   \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
@@ -712,7 +745,7 @@ We can easily extend this procedure to consider processes that happens in 3, 4, 
 
 \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-1} \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-2} \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-3} \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-4}
 
-The integral on the right hand side is similar to the integral that we already solved for eq. \eqref{eq:WintsolvedV}. Using the same trick, we can solve eq. \eqref{eq:WintsolvedV2} for an ideal gas as:
+The integral on the right hand side of eq. \eqref{eq:WintsolvedV2} is similar to the integral that we already solved for eq. \eqref{eq:WintsolvedV}. Using the same trick, we can solve eq. \eqref{eq:WintsolvedV2} for an ideal gas as:
 
 \begin{equation}
   \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
@@ -723,12 +756,83 @@ This example shows clearly why work is a path function. If we perform a fast 1-s
 
 The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.\footnote{In contrast to a lower bound for expansion processes.} \(\left| W_{\text{min}} \right|\) for compressions is calculated as the area underneath the PV curve, exactly as \(\left| W_{\text{min}} \right|\) for expansions in eq. \eqref{eq:WintsolvedV2}.
 
-\hypertarget{definition-of-reversible-transformations}{%
-\subsection{Definition of reversible transformations}\label{definition-of-reversible-transformations}}
+\hypertarget{cycles-and-reversibility}{%
+\subsection{Cycles and reversibility}\label{cycles-and-reversibility}}
 
-Let's now consider the cycle in Figure XXX. The process in this case starts from state 1 (system at \(P_1V_1\)), expands to state 2 (system at \(P_2V_2\)), and compresses back to state 1 (system at \(P_1V_1\)).
+Let's now consider the cycle in Figure \ref{fig:FigRevCyc}. The process in this case starts from state 1 (system at \(P_1V_1\)), expands to state 2 (system at \(P_2V_2\)), and compresses back to state 1 (system back to \(P_1V_1\)).
 
-xxx Expand more here on reversible processes
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.005} 
+
+}
+
+\caption{Expansion/Compression Cycle of an Ideal Gas}\label{fig:FigRevCyc}
+\end{figure}
+
+Since the process starts and finishes at the same state, the value of the energy at the end of the process will be the same as its value at the beginning, regardless of the path:\footnote{recall that the energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.}
+
+\begin{equation}
+  \oint dE=0.
+  \label{eq:de0}
+\end{equation}
+
+However, the same is not valid for work. For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \eqref{eq:WintF}):\footnote{notice that the work for the expansion is negative, as it should be.}
+
+\begin{equation}
+  W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{>0})<0,
+  \label{eq:Wexp1}
+\end{equation}
+
+and if we also perform the compression in 1-step:\footnote{notice that the work for the compression is positive, as it should be.}
+
+\begin{equation}
+  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_2-V_1}_{<0})>0.
+  \label{eq:Wcomp1}
+\end{equation}
+
+With a little bit of math, it is easy to prove that the total work for the entire cycle is:
+
+\begin{equation}
+\begin{aligned}
+W^{\text{cycle}}_{\text{1-step}} {} & =  W^{\text{expansion}}_{\text{1-step}}+W^{\text{compression}}_{\text{1-step}} \\
+ & = -P_2(V_2-V_1)-P_1(V_1-V_2) \\
+ & = -P_2(V_2-V_1)+P_1(V_2-V_1) \\
+ & = (\underbrace{V_2-V_1}_{>0})(\underbrace{P_1-P_2}_{>0}) > 0,
+\end{aligned}
+  \label{eq:Wtot1}
+\end{equation}
+
+or, in other words, net work is destroyed.
+
+\begin{quote}
+In practice, if we want to manually perform this cycle by pushing on the piston down by hand, we will notice that it requires more energy to push down than the amount it gives back when it moves up.
+\end{quote}
+
+However, if both the expansion and the compression happen in a slow \(\infty\)-step manner, the work associated with them will be \(W_{\text{max}}\) and \(W_{\text{min}}\) respectively, which are calculated using eq. \eqref{eq:WmaxV}. The total work related with the cycle will be in this case:
+
+\begin{equation}
+\begin{aligned}
+W^{\text{cycle}}_{\infty\text{-step}} {} & = W^{\text{expansion}}_{\text{max}}+W^{\text{compression}}_{\text{min}} \\
+ & = -nRT \ln \frac{V_f}{V_i}-nRT \ln \frac{V_i}{V_f} \\
+ & = -nRT \underbrace{\left( \ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i} \right)}_{=0} = 0,
+\end{aligned}
+  \label{eq:Wtot1}
+\end{equation}
+
+which means that, in this case, work is not destroyed nor created.
+
+\begin{quote}
+In practice, if we were able to perform this cycle manually by pushing on the piston down by hand, we will notice that it requires the same amount of energy to push down than the amount it gives back when it moves up.
+\end{quote}
+
+This process can happen both ways without losses, and is called \emph{reversible}:
+
+\begin{definition}
+\protect\hypertarget{def:reversible}{}{\label{def:reversible} }\textbf{Reversible process:} a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.\footnote{Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)}
+\end{definition}
+
+Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
 
 \hypertarget{Thermochemistry}{%
 \chapter{Thermochemistry}\label{Thermochemistry}}

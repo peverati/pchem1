@@ -92,15 +92,15 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a><ul>
 <li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energy-in-thermodynamics"><i class="fa fa-check"></i><b>3.1</b> Energy in Thermodynamics</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#adiabatic-processes"><i class="fa fa-check"></i><b>3.1.1</b> Adiabatic Processes</a></li>
-<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#isochoric-process"><i class="fa fa-check"></i><b>3.1.2</b> Isochoric process</a></li>
-<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#isobaric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Isobaric processes</a></li>
-<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermic-processes"><i class="fa fa-check"></i><b>3.1.4</b> Isothermic processes</a></li>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermic-processes-dt0"><i class="fa fa-check"></i><b>3.1.1</b> Isothermic processes (<span class="math inline">\(dT=0\)</span>)</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#adiabatic-processes-đq0"><i class="fa fa-check"></i><b>3.1.2</b> Adiabatic Processes (<span class="math inline">\(đQ=0\)</span>)</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#isochoric-processes-dv0"><i class="fa fa-check"></i><b>3.1.3</b> Isochoric processes (<span class="math inline">\(dV=0\)</span>)</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#isobaric-processes-dp0"><i class="fa fa-check"></i><b>3.1.4</b> Isobaric processes (<span class="math inline">\(dP=0\)</span>)</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
 <li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#calculation-of-w_textmax-and-w_textmin"><i class="fa fa-check"></i><b>3.3.1</b> Calculation of <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span></a></li>
-<li class="chapter" data-level="3.3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#definition-of-reversible-transformations"><i class="fa fa-check"></i><b>3.3.2</b> Definition of reversible transformations</a></li>
+<li class="chapter" data-level="3.3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#cycles-and-reversibility"><i class="fa fa-check"></i><b>3.3.2</b> Cycles and reversibility</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a></li>
@@ -152,7 +152,7 @@
 <p>The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly superfluous, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:</p>
 
 <div class="definition">
-<span id="def:zerothlaw" class="definition"><strong>Definition 2.1  </strong></span><strong>Zeroth Law of Thermodynamics:</strong> If <span class="math inline">\(T_A = T_B\)</span>, and <span class="math inline">\(T_B = T_C\)</span>, then <span class="math inline">\(T_A = T_C\)</span>
+<p><span id="def:zerothlaw" class="definition"><strong>Definition 2.1  </strong></span><strong>Zeroth Law of Thermodynamics:</strong> If <span class="math inline">\(T_A = T_B\)</span>, and <span class="math inline">\(T_B = T_C\)</span>, then <span class="math inline">\(T_A = T_C\)</span>.</p>
 </div>
 
 <p>Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at <span class="math inline">\(P=\)</span> 1 atm. Its temperature, <span class="math inline">\(T_{H_2O}\)</span>, is about 373 K. Let’s now immerse in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature <span class="math inline">\(T_W = T_{H_2O}\)</span>. Similarly, the metal coin will also be in thermal equilibrium with the water, hence <span class="math inline">\(T_M = T_{H_2O}\)</span>. According to the zeroth law the temperature of the wood coin and that of the metal coin are exactly the same <span class="math inline">\(T_W = T_M\)</span>, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. So, if you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you guess that they have the same temperature? Probably not.</p>
