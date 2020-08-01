@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-07-31" />
+<meta name="date" content="2020-08-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -272,27 +272,27 @@ Figure 3.1: The Joule Expansion Experiment.
 <div id="calculation-of-w_textmax-and-w_textmin" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Calculation of <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span></h3>
 <p>Let’s go back to the calculation of the work in a process at constant temperature. We can use the formulas obtained in section <a href="ZerothLaw.html#workint">2.3</a> to understand a little bit better the meaning of a <em>path function</em>. Let’s consider the following PV diagram, obtained from an ideal gas at constant <span class="math inline">\(T=298\)</span> K:</p>
-<p><img src="Pchem1_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>where the isothermal expansion happens between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in a one-step fast process, for example against a constant pressure <span class="math inline">\(P_f=P_{\text{ext}}\)</span>, the work is given by eq. <a href="ZerothLaw.html#eq:WintF">(2.12)</a>. On the plot, the absolute value of the work<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> is represented by the red area:
-<img src="Pchem1_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" />
+<img src="pchem1_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" />
 <span class="math display" id="eq:Warea1">\[\begin{equation}
 \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
   \tag{3.16}
 \end{equation}\]</span></p>
 <p>However, if the process happens in two steps, by pausing at position (1) until equilibrium is reached, then we should calculate the work by dividing the process into two. The first process is an expansion between <span class="math inline">\(P\)</span> and <span class="math inline">\(P_1\)</span>, whose absolute value of the work, <span class="math inline">\(W_A\)</span>, is represented by the blue area:
-<img src="Pchem1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
+<img src="pchem1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
 <span class="math display" id="eq:Warea2">\[\begin{equation}
 \left| W_A \right| = P_1 (V_1-V_i)
   \tag{3.17}
 \end{equation}\]</span></p>
 <p>The second process is an expansion between <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_{\text{ext}}\)</span>, whose absolute value of the work is represented by the green area:</p>
-<p><img src="Pchem1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><span class="math display" id="eq:Warea3">\[\begin{equation}
 \left| W_B \right| = P_f (V_f-V_1)
   \tag{3.18}
 \end{equation}\]</span></p>
 <p>The total absolute value of the work for the 2-step process is given by the sum of the two areas:</p>
-<p><img src="Pchem1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><span class="math display" id="eq:Warea4">\[\begin{equation}
   \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
   \tag{3.19}
@@ -303,7 +303,7 @@ Figure 3.1: The Joule Expansion Experiment.
   \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
   \tag{3.20}
 \end{equation}\]</span></p>
-<p><img src="Pchem1_files/figure-html/figures-side-1.png" width="50%" height="100%" /><img src="Pchem1_files/figure-html/figures-side-2.png" width="50%" height="100%" /><img src="Pchem1_files/figure-html/figures-side-3.png" width="50%" height="100%" /><img src="Pchem1_files/figure-html/figures-side-4.png" width="50%" height="100%" /></p>
+<p><img src="pchem1_files/figure-html/figures-side-1.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-2.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-3.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-4.png" width="50%" height="100%" /></p>
 <p>The integral on the right hand side of eq. <a href="FirstLaw.html#eq:WintsolvedV2">(3.20)</a> is similar to the integral that we already solved for eq. <a href="ZerothLaw.html#eq:WintsolvedV">(2.8)</a>. Using the same trick, we can solve eq. <a href="FirstLaw.html#eq:WintsolvedV2">(3.20)</a> for an ideal gas as:</p>
 <p><span class="math display" id="eq:WmaxV">\[\begin{equation}
   \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
@@ -351,13 +351,13 @@ W^{\text{cycle}}_{\text{1-step}} {} &amp; =  W^{\text{expansion}}_{\text{1-step}
 <p>In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it and it moves back up.</p>
 </blockquote>
 <p>In contrast, if both the expansion and the compression happen in a slow <span class="math inline">\(\infty\)</span>-step manner, the work associated with them will be <span class="math inline">\(W_{\text{max}}\)</span> and <span class="math inline">\(W_{\text{min}}\)</span>, respectively, which are calculated using eq. <a href="FirstLaw.html#eq:WmaxV">(3.21)</a>. The total work related with the cycle will be in this case:</p>
-<p><span class="math display" id="eq:Wtot1">\[\begin{equation}
+<p><span class="math display" id="eq:Wtot2">\[\begin{equation}
 \begin{aligned}
 W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max}}+W^{\text{compression}}_{\text{min}} \\
  &amp; = -nRT \ln \frac{V_f}{V_i}-nRT \ln \frac{V_i}{V_f} \\
  &amp; = -nRT \left( \underbrace{\ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i}}_{=0} \right) = 0,
 \end{aligned}
-  \tag{3.25}
+  \tag{3.26}
 \end{equation}\]</span></p>
 <p>which means that, in this case, work is not destroyed nor created.</p>
 <blockquote>
@@ -422,7 +422,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/PChem1/edit/master/03_FirstLaw.rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/03_FirstLaw.rmd",
 "text": "Edit"
 },
 "history": {
@@ -433,7 +433,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Pchem1.pdf"],
+"download": ["pchem1.pdf"],
 "toc": {
 "collapse": "subsection"
 }

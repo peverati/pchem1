@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.29)  31 JUL 2020 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.29)  1 AUG 2020 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Pchem1.tex
-(./Pchem1.tex
+**pchem1.tex
+(./pchem1.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-07-17> (/Users/peve/Library/TinyTeX/texmf-dist/tex/l
 atex/base/book.cls
@@ -364,12 +364,8 @@ ef
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count284
 \l__pdf_internal_box=\box52
-) (./Pchem1.aux
-
-LaTeX Warning: Label `eq:Wtot1' multiply defined.
-
-)
-\openout1 = `Pchem1.aux'.
+) (./pchem1.aux)
+\openout1 = `pchem1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
 LaTeX Font Info:    ... okay on input line 101.
@@ -415,9 +411,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 101.
 LaTeX Info: Redefining \pageref on input line 101.
 LaTeX Info: Redefining \nameref on input line 101.
-(./Pchem1.out) (./Pchem1.out)
+(./pchem1.out) (./pchem1.out)
 \@outlinefile=\write3
-\openout3 = `Pchem1.out'.
+\openout3 = `pchem1.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 03.
@@ -459,7 +455,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/Users/peve/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-] (./Pchem1.toc
+] (./pchem1.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -468,7 +464,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
 [3])
 \tf@toc=\write4
-\openout4 = `Pchem1.toc'.
+\openout4 = `pchem1.toc'.
 
 <./img/OEP_Figures.000.jpeg, id=154, 806.01125pt x 566.115pt>
 File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
@@ -632,93 +628,93 @@ LaTeX Warning: Command \dj invalid in math mode on input line 685.
 
 LaTeX Warning: Command \dj invalid in math mode on input line 685.
 
-<Pchem1_files/figure-latex/unnamed-chunk-2-1.pdf, id=412, 469.755pt x 325.215pt
+<pchem1_files/figure-latex/unnamed-chunk-2-1.pdf, id=412, 469.755pt x 325.215pt
 >
-File: Pchem1_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-2-1.pdf  used 
+File: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf  used 
 on input line 705.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [27]
-<Pchem1_files/figure-latex/unnamed-chunk-3-1.pdf, id=427, 469.755pt x 325.215pt
+<pchem1_files/figure-latex/unnamed-chunk-3-1.pdf, id=427, 469.755pt x 325.215pt
 >
-File: Pchem1_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-3-1.pdf  used 
+File: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf  used 
 on input line 709.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28 <./Pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>]
-<Pchem1_files/figure-latex/unnamed-chunk-4-1.pdf, id=438, 469.755pt x 325.215pt
+[28 <./pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>]
+<pchem1_files/figure-latex/unnamed-chunk-4-1.pdf, id=438, 469.755pt x 325.215pt
 >
-File: Pchem1_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-4-1.pdf  used 
+File: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf  used 
 on input line 718.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[29 <./Pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<Pchem1_files/figure-latex/unnamed-chunk-5-1.pdf, id=450, 469.755pt x 325.215pt
+[29 <./pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<pchem1_files/figure-latex/unnamed-chunk-5-1.pdf, id=450, 469.755pt x 325.215pt
 >
-File: Pchem1_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-5-1.pdf  used 
+File: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf  used 
 on input line 727.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30 <./Pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>]
-<Pchem1_files/figure-latex/unnamed-chunk-6-1.pdf, id=462, 469.755pt x 325.215pt
+[30 <./pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>]
+<pchem1_files/figure-latex/unnamed-chunk-6-1.pdf, id=462, 469.755pt x 325.215pt
 >
-File: Pchem1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-6-1.pdf  used 
+File: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf  used 
 on input line 736.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[31 <./Pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>]
-<Pchem1_files/figure-latex/figures-side-1.pdf, id=475, 469.755pt x 325.215pt>
-File: Pchem1_files/figure-latex/figures-side-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/figures-side-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/figures-side-1.pdf  used on 
+[31 <./pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>]
+<pchem1_files/figure-latex/figures-side-1.pdf, id=475, 469.755pt x 325.215pt>
+File: pchem1_files/figure-latex/figures-side-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figures-side-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-1.pdf  used on 
 input line 752.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
-<Pchem1_files/figure-latex/figures-side-2.pdf, id=476, 469.755pt x 325.215pt>
-File: Pchem1_files/figure-latex/figures-side-2.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/figures-side-2.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/figures-side-2.pdf  used on 
+<pchem1_files/figure-latex/figures-side-2.pdf, id=476, 469.755pt x 325.215pt>
+File: pchem1_files/figure-latex/figures-side-2.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figures-side-2.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-2.pdf  used on 
 input line 752.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
-<Pchem1_files/figure-latex/figures-side-3.pdf, id=477, 469.755pt x 325.215pt>
-File: Pchem1_files/figure-latex/figures-side-3.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/figures-side-3.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/figures-side-3.pdf  used on 
+<pchem1_files/figure-latex/figures-side-3.pdf, id=477, 469.755pt x 325.215pt>
+File: pchem1_files/figure-latex/figures-side-3.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figures-side-3.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-3.pdf  used on 
 input line 752.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
-<Pchem1_files/figure-latex/figures-side-4.pdf, id=478, 469.755pt x 325.215pt>
-File: Pchem1_files/figure-latex/figures-side-4.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/figures-side-4.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/figures-side-4.pdf  used on 
+<pchem1_files/figure-latex/figures-side-4.pdf, id=478, 469.755pt x 325.215pt>
+File: pchem1_files/figure-latex/figures-side-4.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figures-side-4.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-4.pdf  used on 
 input line 752.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[32 <./Pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>]
+[32 <./pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[33 <./Pchem1_files/figure-latex/figures-side-1.pdf> <./Pchem1_files/figure-lat
-ex/figures-side-2.pdf> <./Pchem1_files/figure-latex/figures-side-3.pdf> <./Pche
+[33 <./pchem1_files/figure-latex/figures-side-1.pdf> <./pchem1_files/figure-lat
+ex/figures-side-2.pdf> <./pchem1_files/figure-latex/figures-side-3.pdf> <./pche
 m1_files/figure-latex/figures-side-4.pdf>]
 <./img/OEP_Figures.005.jpeg, id=525, 1027.84pt x 770.88pt>
 File: ./img/OEP_Figures.005.jpeg Graphic file (type jpg)
@@ -733,29 +729,18 @@ Chapter 4.
 
 ]
 Chapter 5.
-<Pchem1_files/figure-latex/unnamed-chunk-7-1.pdf, id=572, 469.755pt x 325.215pt
+<pchem1_files/figure-latex/unnamed-chunk-7-1.pdf, id=572, 469.755pt x 325.215pt
 >
-File: Pchem1_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-7-1.pdf  used 
+File: pchem1_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-7-1.pdf  used 
 on input line 849.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<Pchem1_files/figure-latex/unnamed-chunk-7-2.pdf, id=573, 469.755pt x 325.215pt
->
-File: Pchem1_files/figure-latex/unnamed-chunk-7-2.pdf Graphic file (type pdf)
-<use Pchem1_files/figure-latex/unnamed-chunk-7-2.pdf>
-Package pdftex.def Info: Pchem1_files/figure-latex/unnamed-chunk-7-2.pdf  used 
-on input line 851.
-(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+[39 <./pchem1_files/figure-latex/unnamed-chunk-7-1.pdf>] [40
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[39 <./Pchem1_files/figure-latex/unnamed-chunk-7-1.pdf>] [40 <./Pchem1_files/fi
-gure-latex/unnamed-chunk-7-2.pdf>]
+]
 Chapter 6.
-[41
-
-] [42
+[41] [42
 
 ]
 Chapter 7.
@@ -791,25 +776,22 @@ Chapter 14.
 
 ]
 Chapter 15.
-No file Pchem1.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 885.
+No file pchem1.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 883.
 [59]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 885.
-(./Pchem1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 885.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 885.
-Package rerunfilecheck Info: File `Pchem1.out' has not changed.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 883.
+(./pchem1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 883.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 883.
+Package rerunfilecheck Info: File `pchem1.out' has not changed.
 (rerunfilecheck)             Checksum: 96616E3793257B79311CC7D543D3AE73;4285.
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 885.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 883.
  ) 
 Here is how much of TeX's memory you used:
- 11476 strings out of 482854
- 164075 string characters out of 5953142
- 414292 words of memory out of 5000000
- 26364 multiletter control sequences out of 15000+600000
+ 11470 strings out of 482854
+ 163743 string characters out of 5953142
+ 414312 words of memory out of 5000000
+ 26359 multiletter control sequences out of 15000+600000
  622262 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,15n,37p,2450b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -837,10 +819,10 @@ pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></
 Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb></Users/
 peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/peve/L
 ibrary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Pchem1.pdf (59 pages, 2619903 bytes).
+Output written on pchem1.pdf (59 pages, 2615086 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 691 compressed objects within 7 object streams
+ 802 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
  217 named destinations out of 1000 (max. 500000)
- 299 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 

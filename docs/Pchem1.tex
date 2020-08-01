@@ -81,7 +81,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{31 July 2020}
+\date{01 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -702,11 +702,11 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 
 Let's go back to the calculation of the work in a process at constant temperature. We can use the formulas obtained in section \ref{workint} to understand a little bit better the meaning of a \emph{path function}. Let's consider the following PV diagram, obtained from an ideal gas at constant \(T=298\) K:
 
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-2-1} \end{center}
+\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 where the isothermal expansion happens between \(P_i\) and \(P_f\). If the expansion happens in a one-step fast process, for example against a constant pressure \(P_f=P_{\text{ext}}\), the work is given by eq. \eqref{eq:WintF}. On the plot, the absolute value of the work\footnote{we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition \ref{def:chemistryconv}.} is represented by the red area:
 
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \begin{equation}
 \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
@@ -715,7 +715,7 @@ where the isothermal expansion happens between \(P_i\) and \(P_f\). If the expan
 
 However, if the process happens in two steps, by pausing at position (1) until equilibrium is reached, then we should calculate the work by dividing the process into two. The first process is an expansion between \(P\) and \(P_1\), whose absolute value of the work, \(W_A\), is represented by the blue area:
 
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \begin{equation}
 \left| W_A \right| = P_1 (V_1-V_i)
@@ -724,7 +724,7 @@ However, if the process happens in two steps, by pausing at position (1) until e
 
 The second process is an expansion between \(P_1\) and \(P_{\text{ext}}\), whose absolute value of the work is represented by the green area:
 
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \begin{equation}
 \left| W_B \right| = P_f (V_f-V_1)
@@ -733,7 +733,7 @@ The second process is an expansion between \(P_1\) and \(P_{\text{ext}}\), whose
 
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{equation}
   \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
@@ -749,7 +749,7 @@ We can easily extend this procedure to consider processes that happens in 3, 4, 
   \label{eq:WintsolvedV2}
 \end{equation}
 
-\includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-1} \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-2} \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-3} \includegraphics[width=0.5\linewidth,height=1\textheight]{Pchem1_files/figure-latex/figures-side-4}
+\includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-1} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-2} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-3} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-4}
 
 The integral on the right hand side of eq. \eqref{eq:WintsolvedV2} is similar to the integral that we already solved for eq. \eqref{eq:WintsolvedV}. Using the same trick, we can solve eq. \eqref{eq:WintsolvedV2} for an ideal gas as:
 
@@ -823,7 +823,7 @@ W^{\text{cycle}}_{\infty\text{-step}} {} & = W^{\text{expansion}}_{\text{max}}+W
  & = -nRT \ln \frac{V_f}{V_i}-nRT \ln \frac{V_i}{V_f} \\
  & = -nRT \left( \underbrace{\ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i}}_{=0} \right) = 0,
 \end{aligned}
-  \label{eq:Wtot1}
+  \label{eq:Wtot2}
 \end{equation}
 
 which means that, in this case, work is not destroyed nor created.
@@ -846,9 +846,7 @@ Reversible processes are ideal processes that are hard to realize in practice si
 \hypertarget{ThermodynamicCycles}{%
 \chapter{Thermodynamic Cycles}\label{ThermodynamicCycles}}
 
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-7-1} \end{center}
-
-\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-7-2} \end{center}
+\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-7-1} \end{center}
 
 \hypertarget{SecondThirdLaws}{%
 \chapter{Second and Third Laws of Thermodynamics}\label{SecondThirdLaws}}
