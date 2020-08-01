@@ -14,8 +14,16 @@ bibliography:
 site: bookdown::bookdown_site
 biblio-style: apalike
 ---
+\centering
+![System](./img/OEP_Figures.000.jpeg)
+
 
 # Preface {-}
+
+```{r out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center'}
+knitr::include_graphics('./img/OEP_Figures.000.jpeg')
+```
+
 This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 3001) at Florida Tech.
 
 The instructor for this course and author of this textbook is Dr. Roberto Peverati.
@@ -42,6 +50,6 @@ Each chapter of this book represents one week of work in the classroom and at ho
 
 > If you spot a mistake or a typo, contact Dr. Peverati via [email](mailto:rpeverati@fit.edu) and you will receive a credit of up to three points towards the final score, once the typo has been verified and corrected. 
 
-## A note on units {-}
+[//]: ## A note on units {-}
 
 
