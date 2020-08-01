@@ -1,1 +1,83 @@
 # Thermodynamic Cycles {#ThermodynamicCycles}
+
+
+
+
+```{r, echo=FALSE, fig.align='center'}
+
+x <- seq(0,1.25,0.01)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+
+
+plot(x, 0.081*298/x,
+     xlim=c(0.2, 0.45),
+     ylim=c(50, 230),
+     type="l",
+     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     
+par(new=TRUE)
+plot(x, 0.081*600/x,
+     xlim=c(0.2, 0.45),
+     ylim=c(50, 230),
+     type="l",
+     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     
+par(new=TRUE)
+plot(x, 0.4/x^(13/3),
+     xlim=c(0.2, 0.45),
+     ylim=c(50, 230),
+     type="l",
+     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+
+par(new=TRUE)
+plot(x, 1.2/x^(13/3),
+     xlim=c(0.2, 0.45),
+     ylim=c(50, 230),
+     type="l",
+     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+
+text(0.42,135, "isotherm T=3,000K", col = "#2E9FDF")
+text(0.23,125, "isotherm T=300K", col = "#2E9FDF")
+text(0.255,225, "adiabatic 1", col = "blue")
+text(0.32,225, "adiabatic 2", col = "blue")
+
+points(0.237,205, col="red", pch=19)
+points(0.33, 147, col="red", pch=19)
+points(0.406, 59, col="red", pch=19)
+points(0.292, 83, col="red", pch=19)
+
+text(0.237+0.005,205+10, "1")
+text(0.33+0.005, 147+10, "2")
+text(0.406+0.005, 59+10, "3")
+text(0.292-0.005, 83-10, "4")
+
+arrows(0.237,205, 0.237, -10 , length=0, angle=90, code=3, lty="dotted")
+arrows(0.237,205, -10, 205 , length=0, angle=90, code=3, lty="dotted")
+
+arrows(0.33, 147, 0.33, -10 , length=0, angle=90, code=3, lty="dotted")
+arrows(0.33, 147, -10, 147 , length=0, angle=90, code=3, lty="dotted")
+
+arrows(0.406,59, 0.406, -10 , length=0, angle=90, code=3, lty="dotted")
+arrows(0.406,59, -10, 59 , length=0, angle=90, code=3, lty="dotted")
+
+arrows(0.292,83, 0.292, -10 , length=0, angle=90, code=3, lty="dotted")
+arrows(0.292,83, -10, 89 , length=0, angle=90, code=3, lty="dotted")
+
+text(0.237-0.005, 50, expression('V'[1]))
+text(0.2, 215, expression('P'[1]))
+
+text(0.33-0.005, 50, expression('V'[2]))
+text(0.2, 157, expression('P'[2]))
+
+text(0.292-0.005, 50, expression('V'[4]))
+text(0.2, 93, expression('P'[4]))
+ 
+text(0.406-0.005, 50, expression('V'[3]))
+text(0.2, 69, expression('P'[3]))
+ 
+ legend(0.45,22, expression(abs(W[2-step])),box.col = "white", bg = "white", adj=0.15)
+
+
+```

@@ -148,7 +148,7 @@ Navigating the book should be straightforward. On each page, there is a useful s
 Each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week's chapter before the lecture on Friday.
 
 \begin{quote}
-If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati@fit.edu}{email} and you will receive a credit of up to three points towards the final score, once the typo has been verified and corrected.
+If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati@fit.edu}{email} and you will receive a credit of up to three points towards your final score, once the typo has been verified and corrected.
 \end{quote}
 
 \hypertarget{SystemVariables}{%
@@ -340,7 +340,7 @@ Before we even discuss the definition of energy and how it relates to heat and w
 The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly superfluous, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
 
 \begin{definition}
-\protect\hypertarget{def:zerothlaw}{}{\label{def:zerothlaw} }\textbf{Zeroth Law of Thermodynamics:} If \(T_A = T_B\), and \(T_B = T_C\), then \(T_A = T_C\).
+\protect\hypertarget{def:zerothlaw}{}{\label{def:zerothlaw} }\emph{Zeroth Law of Thermodynamics:} If \(T_A = T_B\), and \(T_B = T_C\), then \(T_A = T_C\).
 \end{definition}
 
 Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let's, for example, consider a pot of boiling water at \(P=\) 1 atm. Its temperature, \(T_{H_2O}\), is about 373 K. Let's now immerse in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature \(T_W = T_{H_2O}\). Similarly, the metal coin will also be in thermal equilibrium with the water, hence \(T_M = T_{H_2O}\). According to the zeroth law the temperature of the wood coin and that of the metal coin are exactly the same \(T_W = T_M\), even if they are not in direct contact with each other. Now here's the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. So, if you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you guess that they have the same temperature? Probably not.
@@ -531,7 +531,7 @@ which result in the simple formula:
 The definition of energy is:
 
 \begin{definition}
-\protect\hypertarget{def:energy}{}{\label{def:energy} }\textbf{Energy:} Property of a system that can be wither transferred or converted.
+\protect\hypertarget{def:energy}{}{\label{def:energy} }\emph{Energy:} Property of a system that can be wither transferred or converted.
 \end{definition}
 
 In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \ref{def:chemistryconv}, which gives the convention for the signs of heat and work, the definition of energy can be written as:
@@ -691,7 +691,7 @@ and heat and work can be easily calculated using any of the appropriate formulas
 The first law is a conservation law. It is intuitive since it comes directly from Lavoisier's principle of ``nothing is lost, nothing is created, everything is transformed.'' Considering that the only system that is truly isolated is the universe, we can condense the first law in one simple sentence:
 
 \begin{definition}
-\protect\hypertarget{def:firstlaw}{}{\label{def:firstlaw} }\textbf{First Law of Thermodynamics:} The energy of the universe is conserved.
+\protect\hypertarget{def:firstlaw}{}{\label{def:firstlaw} }\emph{First Law of Thermodynamics:} The energy of the universe is conserved.
 \end{definition}
 
 \hypertarget{reversible-and-irreversible-processes}{%
@@ -779,11 +779,11 @@ Let's now consider the cycle in Figure \ref{fig:FigRevCyc}. The process in this 
 Since the process starts and finishes at the same state, the value of the energy at the end of the process will be the same as its value at the beginning, regardless of the path:\footnote{recall that the energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.}
 
 \begin{equation}
-  \oint dE=0.
+  \oint dE=0,
   \label{eq:de0}
 \end{equation}
 
-However, the same is not valid for work. For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \eqref{eq:WintF}):\footnote{notice that the work for the expansion is negative, as it should be.}
+where the symbol \(\oint\) indicates an integral along a cycle. However, the same is not valid for work. For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \eqref{eq:WintF}):\footnote{notice that the work for the expansion is negative, as it should be.}
 
 \begin{equation}
   W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{>0})<0,
@@ -812,10 +812,10 @@ W^{\text{cycle}}_{\text{1-step}} {} & =  W^{\text{expansion}}_{\text{1-step}}+W^
 or, in other words, net work is destroyed.
 
 \begin{quote}
-In practice, if we want to manually perform this cycle by pushing on the piston down by hand, we will notice that it requires more energy to push down than the amount it gives back when it moves up.
+In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it and it moves back up.
 \end{quote}
 
-However, if both the expansion and the compression happen in a slow \(\infty\)-step manner, the work associated with them will be \(W_{\text{max}}\) and \(W_{\text{min}}\) respectively, which are calculated using eq. \eqref{eq:WmaxV}. The total work related with the cycle will be in this case:
+In contrast, if both the expansion and the compression happen in a slow \(\infty\)-step manner, the work associated with them will be \(W_{\text{max}}\) and \(W_{\text{min}}\), respectively, which are calculated using eq. \eqref{eq:WmaxV}. The total work related with the cycle will be in this case:
 
 \begin{equation}
 \begin{aligned}
@@ -835,7 +835,7 @@ In practice, if we were able to perform this cycle manually by pushing on the pi
 This process can happen both ways without losses, and is called \emph{reversible}:
 
 \begin{definition}
-\protect\hypertarget{def:reversible}{}{\label{def:reversible} }\textbf{Reversible process:} a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.\footnote{Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)}
+\protect\hypertarget{def:reversible}{}{\label{def:reversible} }\emph{Reversible process:} a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.\footnote{Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)}
 \end{definition}
 
 Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
@@ -845,6 +845,10 @@ Reversible processes are ideal processes that are hard to realize in practice si
 
 \hypertarget{ThermodynamicCycles}{%
 \chapter{Thermodynamic Cycles}\label{ThermodynamicCycles}}
+
+\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-7-1} \end{center}
+
+\begin{center}\includegraphics{Pchem1_files/figure-latex/unnamed-chunk-7-2} \end{center}
 
 \hypertarget{SecondThirdLaws}{%
 \chapter{Second and Third Laws of Thermodynamics}\label{SecondThirdLaws}}

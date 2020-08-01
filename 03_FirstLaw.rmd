@@ -4,7 +4,7 @@
 The definition of energy is:
 
 ```{definition, energy}
-**Energy:** Property of a system that can be wither transferred or converted.
+*Energy:* Property of a system that can be wither transferred or converted.
 
 
 ```
@@ -151,7 +151,7 @@ and heat and work can be easily calculated using any of the appropriate formulas
 The first law is a conservation law. It is intuitive since it comes directly from Lavoisier's principle of "nothing is lost, nothing is created, everything is transformed." Considering that the only system that is truly isolated is the universe, we can condense the first law in one simple sentence:
 
 ```{definition, firstlaw}
-**First Law of Thermodynamics:** The energy of the universe is conserved.
+*First Law of Thermodynamics:* The energy of the universe is conserved.
 ```
 
 
@@ -327,6 +327,10 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
 ```{r, echo=FALSE, fig.align='center'}
+x <- seq(0,1.25,0.01)
+i <- 0.2
+f <- 1
+p1 <- 0.5
 
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
@@ -565,11 +569,11 @@ knitr::include_graphics('./img/OEP_Figures.005.jpeg')
 Since the process starts and finishes at the same state, the value of the energy at the end of the process will be the same as its value at the beginning, regardless of the path:^[recall that the energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.]
 
 \begin{equation}
-  \oint dE=0.
+  \oint dE=0,
   (\#eq:de0)
 \end{equation}
 
-However, the same is not valid for work. For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \@ref(eq:WintF)):^[notice that the work for the expansion is negative, as it should be.]
+where the symbol $\oint$ indicates an integral along a cycle. However, the same is not valid for work. For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \@ref(eq:WintF)):^[notice that the work for the expansion is negative, as it should be.]
 
 \begin{equation}
   W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{>0})<0,
@@ -597,10 +601,10 @@ W^{\text{cycle}}_{\text{1-step}} {} & =  W^{\text{expansion}}_{\text{1-step}}+W^
 
 or, in other words, net work is destroyed. 
 
-> In practice, if we want to manually perform this cycle by pushing on the piston down by hand, we will notice that it requires more energy to push down than the amount it gives back when it moves up.
+> In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it and it moves back up.
 
 
-However, if both the expansion and the compression happen in a slow $\infty$-step manner, the work associated with them will be $W_{\text{max}}$ and $W_{\text{min}}$ respectively, which are calculated using eq. \@ref(eq:WmaxV). The total work related with the cycle will be in this case:
+In contrast, if both the expansion and the compression happen in a slow $\infty$-step manner, the work associated with them will be $W_{\text{max}}$ and $W_{\text{min}}$, respectively, which are calculated using eq. \@ref(eq:WmaxV). The total work related with the cycle will be in this case:
 
 \begin{equation}
 \begin{aligned}
@@ -608,7 +612,7 @@ W^{\text{cycle}}_{\infty\text{-step}} {} & = W^{\text{expansion}}_{\text{max}}+W
  & = -nRT \ln \frac{V_f}{V_i}-nRT \ln \frac{V_i}{V_f} \\
  & = -nRT \left( \underbrace{\ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i}}_{=0} \right) = 0,
 \end{aligned}
-  (\#eq:Wtot1)
+  (\#eq:Wtot2)
 \end{equation}
 
 which means that, in this case, work is not destroyed nor created. 
@@ -618,7 +622,7 @@ which means that, in this case, work is not destroyed nor created.
 This process can happen both ways without losses, and is called *reversible*:
 
 ```{definition, reversible}
-**Reversible process:** a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.^[Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)]
+*Reversible process:* a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.^[Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)]
 
 
 ```
