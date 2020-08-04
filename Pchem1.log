@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.29)  1 AUG 2020 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.29)  3 AUG 2020 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,8 +341,6 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip58
 \thm@headsep=\skip59
 \dth@everypar=\toks30
-) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/cancel/cancel.sty
-Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip60
@@ -364,27 +362,40 @@ ef
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count284
 \l__pdf_internal_box=\box52
-) (./pchem1.aux)
+) (./pchem1.aux
+
+LaTeX Warning: Label `eq:WtotCC' multiply defined.
+
+
+LaTeX Warning: Label `eq:effcIRR' multiply defined.
+
+
+LaTeX Warning: Label `eq:qirrcycle' multiply defined.
+
+
+LaTeX Warning: Label `eq:trouton' multiply defined.
+
+)
 \openout1 = `pchem1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
 y
@@ -396,7 +407,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 100.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -408,45 +419,45 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count285
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 100.
+LaTeX Info: Redefining \pageref on input line 100.
+LaTeX Info: Redefining \nameref on input line 100.
 (./pchem1.out) (./pchem1.out)
 \@outlinefile=\write3
 \openout3 = `pchem1.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-03.
+02.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-03.
+02.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-103.
+102.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-103.
+102.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 103.
+(Font)              <12> on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 103.
+(Font)              <8> on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 103.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 103
+(Font)              <6> on input line 102.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102
 .
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 103
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102
 .
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -467,364 +478,523 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout4 = `pchem1.toc'.
 
 [4]
-<./img/OEP_Figures.000.jpeg, id=160, 806.01125pt x 566.115pt>
+<./img/OEP_Figures.000.jpeg, id=230, 806.01125pt x 566.115pt>
 File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.000.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 112.
+Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 111.
 (pdftex.def)             Requested size: 275.9957pt x 193.85002pt.
 [5
 
  <./img/OEP_Figures.000.jpeg>] [6]
 Chapter 1.
-<./img/OEP_Figures.001.jpeg, id=179, 901.3675pt x 586.19pt>
+<./img/OEP_Figures.001.jpeg, id=248, 901.3675pt x 586.19pt>
 File: ./img/OEP_Figures.001.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.001.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.001.jpeg  used on input line 156.
+Package pdftex.def Info: ./img/OEP_Figures.001.jpeg  used on input line 155.
 (pdftex.def)             Requested size: 275.99635pt x 179.48982pt.
 [7
 
- <./img/OEP_Figures.001.jpeg>] [8]
-Underfull \vbox (badness 3302) has occurred while \output is active []
-
-[9]
+ <./img/OEP_Figures.001.jpeg>] [8] [9]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-93.
+92.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [10] [11]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 294.
+LaTeX Warning: Command \dj invalid in math mode on input line 295.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 294.
+LaTeX Warning: Command \dj invalid in math mode on input line 295.
 
 [12]
-<./img/OEP_Figures.002.jpeg, id=239, 810.02625pt x 457.71pt>
+<./img/OEP_Figures.002.jpeg, id=304, 810.02625pt x 457.71pt>
 File: ./img/OEP_Figures.002.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.002.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.002.jpeg  used on input line 302.
+Package pdftex.def Info: ./img/OEP_Figures.002.jpeg  used on input line 303.
 (pdftex.def)             Requested size: 275.99855pt x 155.95457pt.
 [13 <./img/OEP_Figures.002.jpeg>] [14
 
 ]
 Chapter 2.
 [15]
-<./img/OEP_Figures.003.jpeg, id=257, 626.34pt x 585.18625pt>
+<./img/OEP_Figures.003.jpeg, id=323, 626.34pt x 585.18625pt>
 File: ./img/OEP_Figures.003.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.003.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.003.jpeg  used on input line 348.
+Package pdftex.def Info: ./img/OEP_Figures.003.jpeg  used on input line 351.
 (pdftex.def)             Requested size: 172.49728pt x 161.16333pt.
+
+Underfull \vbox (badness 4096) has occurred while \output is active []
+
 [16]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 360.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 374.
+LaTeX Warning: Command \dj invalid in math mode on input line 363.
 
 [17 <./img/OEP_Figures.003.jpeg>]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 381.
+LaTeX Warning: Command \dj invalid in math mode on input line 377.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 385.
+LaTeX Warning: Command \dj invalid in math mode on input line 384.
 
 
 LaTeX Warning: Command \dj invalid in math mode on input line 388.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 395.
+LaTeX Warning: Command \dj invalid in math mode on input line 391.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 402.
+LaTeX Warning: Command \dj invalid in math mode on input line 398.
 
-<./img/OEP_Figures.004.jpeg, id=289, 693.59125pt x 646.415pt>
+
+LaTeX Warning: Command \dj invalid in math mode on input line 405.
+
+[18]
+<./img/OEP_Figures.004.jpeg, id=365, 693.59125pt x 646.415pt>
 File: ./img/OEP_Figures.004.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.004.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.004.jpeg  used on input line 426.
+Package pdftex.def Info: ./img/OEP_Figures.004.jpeg  used on input line 429.
 (pdftex.def)             Requested size: 172.4978pt x 160.76495pt.
-[18]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 438.
+LaTeX Warning: Command \dj invalid in math mode on input line 441.
 
 [19 <./img/OEP_Figures.004.jpeg>]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 476.
+LaTeX Warning: Command \dj invalid in math mode on input line 479.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 476.
+LaTeX Warning: Command \dj invalid in math mode on input line 479.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 483.
+LaTeX Warning: Command \dj invalid in math mode on input line 486.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 483.
+LaTeX Warning: Command \dj invalid in math mode on input line 486.
 
 [20]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 506.
+LaTeX Warning: Command \dj invalid in math mode on input line 509.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 506.
+LaTeX Warning: Command \dj invalid in math mode on input line 509.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 506.
+LaTeX Warning: Command \dj invalid in math mode on input line 509.
 
 [21] [22
 
 ]
 Chapter 3.
 
-LaTeX Warning: Command \dj invalid in math mode on input line 538.
+LaTeX Warning: Command \dj invalid in math mode on input line 543.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 538.
+LaTeX Warning: Command \dj invalid in math mode on input line 543.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 545.
+LaTeX Warning: Command \dj invalid in math mode on input line 550.
 
-<./img/OEP_Figures.006.jpeg, id=344, 1027.84pt x 340.27126pt>
+[23]
+<./img/OEP_Figures.006.jpeg, id=420, 1027.84pt x 340.27126pt>
 File: ./img/OEP_Figures.006.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.006.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.006.jpeg  used on input line 556.
+Package pdftex.def Info: ./img/OEP_Figures.006.jpeg  used on input line 561.
 (pdftex.def)             Requested size: 275.9992pt x 91.37082pt.
-[23]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 566.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 573.
+LaTeX Warning: Command \dj invalid in math mode on input line 571.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 584.
+LaTeX Warning: Command \dj invalid in math mode on input line 578.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 586.
+LaTeX Warning: Command \dj invalid in math mode on input line 591.
 
 [24 <./img/OEP_Figures.006.jpeg>]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 589.
+LaTeX Warning: Command \dj invalid in math mode on input line 594.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 598.
+LaTeX Warning: Command \dj invalid in math mode on input line 603.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 598.
+LaTeX Warning: Command \dj invalid in math mode on input line 603.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 601.
+LaTeX Warning: Command \dj invalid in math mode on input line 606.
 
 [25]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 647.
-
 
 LaTeX Warning: Command \dj invalid in math mode on input line 654.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 677.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 677.
+LaTeX Warning: Command \dj invalid in math mode on input line 661.
 
 [26]
-<pchem1_files/figure-latex/unnamed-chunk-2-1.pdf, id=411, 469.755pt x 325.215pt
+
+LaTeX Warning: Command \dj invalid in math mode on input line 686.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 686.
+
+<pchem1_files/figure-latex/unnamed-chunk-2-1.pdf, id=471, 469.755pt x 325.215pt
 >
 File: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf  used 
-on input line 697.
+on input line 708.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[27 <./pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>]
-<pchem1_files/figure-latex/unnamed-chunk-3-1.pdf, id=431, 469.755pt x 325.215pt
+
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+[27]
+<pchem1_files/figure-latex/unnamed-chunk-3-1.pdf, id=490, 469.755pt x 325.215pt
 >
 File: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf  used 
-on input line 701.
+on input line 712.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<pchem1_files/figure-latex/unnamed-chunk-4-1.pdf, id=432, 469.755pt x 325.215pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[28 <./pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>]
+<pchem1_files/figure-latex/unnamed-chunk-4-1.pdf, id=501, 469.755pt x 325.215pt
 >
 File: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf  used 
-on input line 710.
+on input line 721.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28 <./pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<pchem1_files/figure-latex/unnamed-chunk-5-1.pdf, id=445, 469.755pt x 325.215pt
+[29 <./pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<pchem1_files/figure-latex/unnamed-chunk-5-1.pdf, id=513, 469.755pt x 325.215pt
 >
 File: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf  used 
-on input line 719.
+on input line 730.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[29 <./pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>]
-<pchem1_files/figure-latex/unnamed-chunk-6-1.pdf, id=457, 469.755pt x 325.215pt
+[30 <./pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>]
+<pchem1_files/figure-latex/unnamed-chunk-6-1.pdf, id=525, 469.755pt x 325.215pt
 >
 File: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf  used 
-on input line 728.
+on input line 739.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30 <./pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>]
-<pchem1_files/figure-latex/figures-side-1.pdf, id=469, 469.755pt x 325.215pt>
+[31 <./pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>]
+<pchem1_files/figure-latex/figures-side-1.pdf, id=538, 469.755pt x 325.215pt>
 File: pchem1_files/figure-latex/figures-side-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-1.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/figures-side-1.pdf  used on 
-input line 744.
+input line 755.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
-<pchem1_files/figure-latex/figures-side-2.pdf, id=470, 469.755pt x 325.215pt>
+<pchem1_files/figure-latex/figures-side-2.pdf, id=539, 469.755pt x 325.215pt>
 File: pchem1_files/figure-latex/figures-side-2.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-2.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/figures-side-2.pdf  used on 
-input line 744.
+input line 755.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
-<pchem1_files/figure-latex/figures-side-3.pdf, id=471, 469.755pt x 325.215pt>
+<pchem1_files/figure-latex/figures-side-3.pdf, id=540, 469.755pt x 325.215pt>
 File: pchem1_files/figure-latex/figures-side-3.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-3.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/figures-side-3.pdf  used on 
-input line 744.
+input line 755.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
-<pchem1_files/figure-latex/figures-side-4.pdf, id=472, 469.755pt x 325.215pt>
+<pchem1_files/figure-latex/figures-side-4.pdf, id=541, 469.755pt x 325.215pt>
 File: pchem1_files/figure-latex/figures-side-4.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-4.pdf>
 Package pdftex.def Info: pchem1_files/figure-latex/figures-side-4.pdf  used on 
-input line 744.
+input line 755.
 (pdftex.def)             Requested size: 172.4949pt x 119.41954pt.
 
-Overfull \hbox (2.21202pt too wide) in paragraph at lines 744--745
+Overfull \hbox (2.21202pt too wide) in paragraph at lines 755--756
 [][] []
  []
 
 
-Overfull \hbox (2.21202pt too wide) in paragraph at lines 744--745
+Overfull \hbox (2.21202pt too wide) in paragraph at lines 755--756
 [] [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[31 <./pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>]
+[32 <./pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>]
 Underfull \vbox (badness 1895) has occurred while \output is active []
 
-[32 <./pchem1_files/figure-latex/figures-side-1.pdf> <./pchem1_files/figure-lat
+[33 <./pchem1_files/figure-latex/figures-side-1.pdf> <./pchem1_files/figure-lat
 ex/figures-side-2.pdf> <./pchem1_files/figure-latex/figures-side-3.pdf> <./pche
 m1_files/figure-latex/figures-side-4.pdf>]
-<./img/OEP_Figures.005.jpeg, id=523, 1027.84pt x 770.88pt>
+<./img/OEP_Figures.005.jpeg, id=592, 1027.84pt x 770.88pt>
 File: ./img/OEP_Figures.005.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.005.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.005.jpeg  used on input line 764.
+Package pdftex.def Info: ./img/OEP_Figures.005.jpeg  used on input line 775.
 (pdftex.def)             Requested size: 275.9992pt x 206.9994pt.
-[33 <./img/OEP_Figures.005.jpeg>] [34] [35] [36
 
-]
+LaTeX Warning: Command \dj invalid in math mode on input line 791.
+
+[34 <./img/OEP_Figures.005.jpeg>] [35] [36]
 Chapter 4.
-[37] [38
+[37
 
-]
+] [38] [39] [40]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 1032.
+[41]
+Overfull \hbox (29.62206pt too wide) detected at line 1072
+\OT1/lmr/m/n/10 ^^A[]\OML/lmm/m/it/10 H[] \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 ^^
+@\OT1/lmr/m/n/10 283\OML/lmm/m/it/10 :\OT1/lmr/m/n/10 0 + [] \OMS/lmsy/m/n/10 ^
+^B \OT1/lmr/m/n/10 10[](398 \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 298) = \OMS/lm
+sy/m/n/10 ^^@\OT1/lmr/m/n/10 283\OML/lmm/m/it/10 :\OT1/lmr/m/n/10 6 []\OML/lmm/
+m/it/10 :
+ []
+
+[42]
 Chapter 5.
-<pchem1_files/figure-latex/unnamed-chunk-7-1.pdf, id=571, 469.755pt x 325.215pt
->
-File: pchem1_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-7-1.pdf  used 
-on input line 841.
+<./img/OEP_Figures.008.jpeg, id=713, 1027.84pt x 770.88pt>
+File: ./img/OEP_Figures.008.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.008.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.008.jpeg  used on input line 1085.
+(pdftex.def)             Requested size: 275.9992pt x 206.9994pt.
+[43
+
+ <./img/OEP_Figures.008.jpeg>] [44]
+<pchem1_files/figure-latex/FigCarnotPV-1.pdf, id=737, 469.755pt x 325.215pt>
+File: pchem1_files/figure-latex/FigCarnotPV-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/FigCarnotPV-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/FigCarnotPV-1.pdf  used on i
+nput line 1119.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[39 <./pchem1_files/figure-latex/unnamed-chunk-7-1.pdf>] [40
+<./img/OEP_Figures.007a.png, id=738, 630.85687pt x 542.025pt>
+File: ./img/OEP_Figures.007a.png Graphic file (type png)
+<use ./img/OEP_Figures.007a.png>
+Package pdftex.def Info: ./img/OEP_Figures.007a.png  used on input line 1129.
+(pdftex.def)             Requested size: 241.4993pt x 207.49342pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[45 <./pchem1_files/figure-latex/FigCarnotPV-1.pdf>]
+<./img/OEP_Figures.007b.png, id=758, 684.30656pt x 503.63156pt>
+File: ./img/OEP_Figures.007b.png Graphic file (type png)
+<use ./img/OEP_Figures.007b.png>
+Package pdftex.def Info: ./img/OEP_Figures.007b.png  used on input line 1153.
+(pdftex.def)             Requested size: 241.4948pt x 177.7338pt.
+[46 <./img/OEP_Figures.007a.png>]
+<./img/OEP_Figures.007c.png, id=769, 722.7pt x 515.67656pt>
+File: ./img/OEP_Figures.007c.png Graphic file (type png)
+<use ./img/OEP_Figures.007c.png>
+Package pdftex.def Info: ./img/OEP_Figures.007c.png  used on input line 1172.
+(pdftex.def)             Requested size: 241.50224pt x 172.3219pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[47 <./img/OEP_Figures.007b.png>]
+<./img/OEP_Figures.007d.png, id=779, 730.98094pt x 491.58656pt>
+File: ./img/OEP_Figures.007d.png Graphic file (type png)
+<use ./img/OEP_Figures.007d.png>
+Package pdftex.def Info: ./img/OEP_Figures.007d.png  used on input line 1196.
+(pdftex.def)             Requested size: 241.49214pt x 162.40408pt.
+
+Underfull \vbox (badness 8151) has occurred while \output is active []
+
+[48 <./img/OEP_Figures.007c.png>] [49 <./img/OEP_Figures.007d.png>]
+<./img/OEP_Figures.009.jpeg, id=802, 1027.84pt x 620.3175pt>
+File: ./img/OEP_Figures.009.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.009.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.009.jpeg  used on input line 1276.
+(pdftex.def)             Requested size: 275.9992pt x 166.56982pt.
+[50]
+<./img/OEP_Figures.010.jpeg, id=816, 1027.84pt x 626.34pt>
+File: ./img/OEP_Figures.010.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.010.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.010.jpeg  used on input line 1291.
+(pdftex.def)             Requested size: 206.99156pt x 126.13547pt.
+[51 <./img/OEP_Figures.009.jpeg> <./img/OEP_Figures.010.jpeg>] [52]
+Chapter 6.
+[53
 
 ]
-Chapter 6.
-[41] [42
+<pchem1_files/figure-latex/unnamed-chunk-12-1.pdf, id=860, 469.755pt x 325.215p
+t>
+File: pchem1_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-12-1.pdf  used
+ on input line 1354.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+[54 <./pchem1_files/figure-latex/unnamed-chunk-12-1.pdf>]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1374.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1381.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1405.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1412.
+
+[55]
+<./img/OEP_Figures.011.jpeg, id=901, 1027.84pt x 770.88pt>
+File: ./img/OEP_Figures.011.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.011.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.011.jpeg  used on input line 1425.
+(pdftex.def)             Requested size: 275.9992pt x 206.9994pt.
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1435.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1435.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1435.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1443.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1443.
+
+[56 <./img/OEP_Figures.011.jpeg>]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1451.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1451.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1455.
+
+[57] [58
 
 ]
 Chapter 7.
-[43] [44
+[59]
 
-]
+LaTeX Warning: Command \dj invalid in math mode on input line 1507.
+
+[60]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1553.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1557.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1558.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1569.
+
+[61]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1586.
+
+[62]
+Overfull \hbox (34.04266pt too wide) detected at line 1638
+[][][]
+ []
+
+[63] [64]
 Chapter 8.
-[45] [46
+[65
+
+] [66
 
 ]
 Chapter 9.
-[47] [48
+[67] [68
 
 ]
 Chapter 10.
-[49] [50
+[69] [70
 
 ]
 Chapter 11.
-[51] [52
+[71] [72
 
 ]
 Chapter 12.
-[53] [54
+[73] [74
 
 ]
 Chapter 13.
-[55] [56
+[75] [76
 
 ]
 Chapter 14.
-[57] [58
+[77] [78
 
 ]
 Chapter 15.
 No file pchem1.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 875.
-[59]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 875.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1682.
+[79]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1682.
 (./pchem1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 875.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 875.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1682.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1682.
+
 Package rerunfilecheck Info: File `pchem1.out' has not changed.
-(rerunfilecheck)             Checksum: 96616E3793257B79311CC7D543D3AE73;4285.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 875.
+(rerunfilecheck)             Checksum: 45D8B7891431AEE695D7A83F6B93AEF9;7071.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1682.
  ) 
 Here is how much of TeX's memory you used:
- 11469 strings out of 482854
- 163733 string characters out of 5953142
- 415312 words of memory out of 5000000
- 26359 multiletter control sequences out of 15000+600000
- 622262 words of font info for 81 fonts, out of 8000000 for 9000
+ 11812 strings out of 482854
+ 169419 string characters out of 5953142
+ 420147 words of memory out of 5000000
+ 26523 multiletter control sequences out of 15000+600000
+ 639595 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,15n,37p,2450b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Us
-ers/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/peve/L
-ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/peve/Library/Tin
-yTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/peve/Library/TinyTeX/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/peve/Library/TinyTeX/texmf-d
-ist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/peve/Library/TinyTeX/texmf-dist/fonts
-/type1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1
-/public/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/publi
-c/lm/lmbx8.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
-bxi10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.
-pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></
-Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></Users/
-peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve/Li
-brary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/T
-inyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/peve/Library/TinyTeX/
-texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/peve/Library/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmr17.pfb></Users/peve/Library/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1
-/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/
-lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.
-pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></
-Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb></Users/
-peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/peve/L
-ibrary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on pchem1.pdf (59 pages, 2616715 bytes).
+ 43i,17n,37p,2450b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{definition.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/User
+s/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/peve
+/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/peve/Library/T
+inyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/peve/Library/TinyTeX/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/peve/Library/TinyTeX/texmf-dis
+t/fonts/enc/dvips/lm/lm-ts1.enc}</Users/peve/Library/TinyTeX/texmf-dist/fonts/t
+ype1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/p
+ublic/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/
+lm/lmbx8.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx
+i10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pf
+b></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Us
+ers/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></Users/pe
+ve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve/Libr
+ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/peve/Library/Tin
+yTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/TinyTeX/te
+xmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/peve/Library/TinyTeX/texmf-dis
+t/fonts/type1/public/lm/lmr10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts
+/type1/public/lm/lmr12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/
+public/lm/lmr17.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/
+lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.
+pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Us
+ers/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/peve
+/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/peve/Libra
+ry/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb></Users/peve/Library/Tiny
+TeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb></Users/peve/Library/TinyTeX/te
+xmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/peve/Library/TinyTeX/texmf-di
+st/fonts/type1/public/lm/lmsy5.pfb></Users/peve/Library/TinyTeX/texmf-dist/font
+s/type1/public/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1
+/public/lm/lmsy7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public
+/lm/lmsy8.pfb>
+Output written on pchem1.pdf (79 pages, 4365774 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
- 682 compressed objects within 7 object streams
- 216 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1247 PDF objects out of 1440 (max. 8388607)
+ 1089 compressed objects within 11 object streams
+ 379 named destinations out of 1000 (max. 500000)
+ 443 words of extra memory for PDF output out of 10000 (max. 10000000)
 

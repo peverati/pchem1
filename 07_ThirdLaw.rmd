@@ -1,0 +1,169 @@
+\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+
+# Third Law of Thermodynamics {#thirdlaw}
+
+The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to *always* consider changes in entropy in *both* the system (syst) and its surroundings (surr):
+
+\begin{equation}
+\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}} 
+(\#eq:dsuniv)
+\end{equation}
+
+## Calculation of $\Delta S^{\mathrm{sys}}$  {#dssys}
+
+In general $\Delta S^{\mathrm{sys}}$ can be calculated using either its Definition \@ref(def:entropy), or its differential formula, eq. \@ref(eq:dentropy).In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example: 
+
+\begin{equation}
+\begin{aligned}
+P_i, T_i & \quad \xrightarrow{ \Delta_{\text{TOT}} S_{\text{sys}} } \quad P_f, T_f \\
+  \scriptstyle{\Delta_1 S^{\text{sys}}} & \searrow \qquad  \qquad \nearrow \; \scriptstyle{\Delta_2 S^{\text{sys}}} \\
+& \qquad P_i, T_f \\
+\\
+\Delta_{\text{TOT}} S^{\text{sys}} & = \Delta_1 S^{\text{sys}} + \Delta_2 S^{\text{sys}},
+\end{aligned}
+(\#eq:entropycycle)
+\end{equation}
+
+with $\Delta_1 S^{\text{sys}}$ calculated at constant $P$, and $\Delta_2 S^{\text{sys}}$ at constant $T$. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in Section \@ref(energyint). 
+
+### Entropy in isothermal processes 
+
+- For an ideal gas at constant temperature $\Delta U =0$, and $Q_{\mathrm{REV}} = -W_{\mathrm{REV}}$. Using the formula for $W_{\mathrm{REV}}$ in either eq. \@ref(eq:WintsolvedV) or eq. \@ref(eq:WintsolvedP), we obtain:
+\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
+(\#eq:sigconsttV)
+\end{equation}
+or, similarly:
+\begin{equation}
+\Delta S^{\mathrm{sys}} = nR \ln \frac{P_i}{P_f}.
+(\#eq:sigconsttP)
+\end{equation}
+
+- A phase change is a particular case of an isothermal process that does not follow the formulas introduced above, since an ideal gas never liquefies. The entropy associated with a phase change at constant pressure, however, can be calculated from its definition, remembering that $Q_{\mathrm{rev}}= \Delta H$. For example for vaporizations:
+
+\begin{equation}
+\Delta_{\mathrm{vap}} S = \frac{\Delta_{\mathrm{vap}}H}{T_B},
+(\#eq:spc)
+\end{equation}
+
+with $\Delta_{\mathrm{vap}}H$ being the enthalpy of vaporization of a substance, and $T_B$ its boiling temperature.
+
+It is experimentally observed that the entropies of vaporization of many liquids have almost the same value of:
+
+\begin{equation}
+\Delta_{\mathrm{vap}} S \approx 10.5 R,
+(\#eq:trouton)
+\end{equation}
+
+which corresponds in SI to the range of about 85–88 J/(mol K). This simple rule is named **Trouton's rule**, after the French scientist that discovered it, Frederick Thomas Trouton (1863-1922).
+
+> ```{exercise, troutonex}
+Calculate the standard entropy of vaporization of water knowing $\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^\standardstate = 44 \  \text{kJ/mol}$, as calculated in Exercise \@ref(exr:HessLawEx).
+
+*Solution:* Using eq. \@ref(eq:trouton)—and knowing that at standard conditions of $P^\standardstate = 1 \  \text{bar}$ the boiling temperature of water is 373 K—we calculate:
+
+\begin{equation}
+\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^\standardstate = \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
+(\#eq:trouton)
+\end{equation}
+
+The entropy of vaporization of water is far from Trouton's rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.
+```
+
+
+### Entropy in adiabatic processes 
+Since adiabatic processes happen without the exchange of heat, $đQ=0$, it would be tempting to think that $\Delta S^{\mathrm{sys}} = 0$ for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes  $\Delta S^{\mathrm{sys}} \neq 0$. The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:
+
+\begin{equation}
+\begin{aligned}
+\text{reversible:} \qquad & \frac{đQ_{\mathrm{REV}}}{T} = 0 \longrightarrow \Delta S^{\mathrm{sys}} = 0 \quad \text{(isenthalpic),}\\
+\text{irreversible:} \qquad & \frac{đQ_{\mathrm{IRR}}}{T}  = 0 \longrightarrow \Delta S^{\mathrm{sys}} \neq 0. \\
+\end{aligned}
+(\#eq:adiabaticent)
+\end{equation}
+
+
+### Entropy in isochoric processes 
+We can calculate the heat exchanged in a process that happens at constant volume, $Q_V$, using eq. \@ref(eq:Cvint1). Since the heat exchanged at those conditions equals the energy (eq. \@ref(eq:dUqv)), and the energy is a state function, we can use $Q_V$ regardless of the path (reversible or irreversible). The entropy associated with the process will then be:
+
+\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T} dT,
+(\#eq:sconstV1)
+\end{equation}
+
+which, assuming $C_V$ independent of temperature and solving the integral on the right-hand side, becomes:
+
+\begin{equation}
+\Delta S^{\mathrm{sys}} \approx n C_V \ln \frac{T_f}{T_i}.
+(\#eq:sconstV)
+\end{equation}
+
+### Entropy in isobaric processes 
+Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, $Q_P$, using eq. \@ref(eq:Cpdef). Again, similarly to the previous case, $Q_P$ equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:
+
+\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
+(\#eq:sconstP1)
+\end{equation}
+
+which, assuming $C_P$ independent of temperature and solving the integral on the right-hand side, becomes:
+
+\begin{equation}
+\Delta S^{\mathrm{sys}} \approx n C_P \ln \frac{T_f}{T_i}.
+(\#eq:sconstP)
+\end{equation}
+
+## Calculation of $\Delta S^{\mathrm{surr}}$  {#dssurr}
+
+While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:
+
+\begin{equation}
+\Delta S^{\mathrm{surr}} = \frac{Q_{\text{surr}}}{T_{\text{surr}}}=\frac{-Q_{\text{sys}}}{T_{\text{surr}}},
+(\#eq:dssurr)
+\end{equation}
+
+where the substitution $Q_{\text{surr}}=-Q_{\text{sys}}$ can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.^[Even if we think at the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.] To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction happening in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, $T_{\text{surr}}$ will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions. 
+
+> ```{exercise, supercooledEx}
+Calculate the changes in entropy of the universe for the process of supercooled water, freezing at –10°C, knowing the following data: $\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}$, and assuming both $C_P$ to be independent on temperature.
+
+*Solution:* $\Delta S^{\mathrm{sys}}$ for the process under consideration can be calculated using the following cycle:
+
+\begin{equation}
+\begin{aligned}
+\mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad T=263\;K\\
+\scriptstyle{\Delta S_1} \; \bigg\downarrow \quad & \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta S_3} \\
+\mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_2 \qquad} \quad \mathrm{H}_2\mathrm{O}_{(s)} \qquad T=273\;K\\
+\\
+\Delta S^{\text{sys}} & = \Delta S_1 + \Delta S_2 + \Delta S_3 \\
+& = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
+& = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\end{aligned}
+(\#eq:supercooledsyst)
+\end{equation}
+
+Don't be confused by the fact that $\Delta S^{\text{sys}}$ is negative. This is ***not*** the entropy of the universe, hence it tells nothing about spontaneity! Let's now calculate $\Delta S^{\text{surr}}$:
+
+\begin{equation}
+\begin{aligned}
+Q^{\text{sys}} & = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
+& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) = -5.6 \; \text{kJ/mol}. \\
+\\
+\Delta S^{\text{surr}} & = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
+\end{aligned}
+(\#eq:supercooledsurr)
+\end{equation}
+
+Bringing \@ref(eq:supercooledsyst) and \@ref(eq:supercooledsurr) results together, we obtain:
+
+\begin{equation}
+\Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=-0.7 \; \text{J/K}.
+(\#eq:supercooledfinal)
+\end{equation}
+
+Since the entropy changes in the universe are positive, the process is spontaneous, as expected.
+```
+
+This exercise shows how calculating $\Delta S^{\mathrm{universe}}$ to infer the spontaneity of a process might not always be the simplest of calculations. Seeking for a more convenient indicator will be the subject of next Chapter. Calculation of $\Delta S^{\mathrm{universe}}$, however, remains the most unambiguous criterion, thanks to the second law.
+
+## The Third Law of Thermodynamics {#thirdlawsect}

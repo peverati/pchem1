@@ -6,8 +6,6 @@ description: Textbook for P-Chem 1 class at Florida Tech
 documentclass: book
 github-repo: peverati/PChem1
 link-citations: yes
-header-includes:
-   - \usepackage{cancel}
 bibliography:
 - book.bib
 - packages.bib
@@ -39,7 +37,7 @@ Florida Institute of Technology, Melbourne, FL.
 Please read this book carefully, since everything that will be in your exams is explained here.
 Since this book is specifically tailored for the CHM 3001 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.
 
-> However, when you see materials in this format (lighter grey, indented, and following a grey vertical bar), it indicates a reinforcement paragraph that supports the main concept. In other words, these are additional explanations that might help you understand the main concepts better.
+> Definitions and exercises are usually numbered and are highlighted in the text in this format (lighter grey, indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Exercises are essential for cementing the concepts, and you should attempt to execute them first without looking at the solution. Even if you were able to solve an exercise on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.
 
 Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and  a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar's corresponding icon. If you are *really* old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on [over there](https://github.com/peverati/PChem1) and fork the book. 
 

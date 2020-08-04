@@ -13,14 +13,15 @@ Before we even discuss the definition of energy and how it relates to heat and w
 ## The Zeroth Law of Thermodynamics
 The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly superfluous, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
 
-```{definition, zerothlaw}
+> ```{definition, zerothlaw}
 *Zeroth Law of Thermodynamics:* If $T_A = T_B$, and $T_B = T_C$, then $T_A = T_C$.
+
 ```
 
 Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at $P=$ 1 atm. Its temperature, $T_{H_2O}$, is about 373 K. Let’s now immerse in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature $T_W = T_{H_2O}$. Similarly, the metal coin will also be in thermal equilibrium with the water, hence $T_M = T_{H_2O}$. According to the zeroth law the temperature of the wood coin and that of the metal coin are exactly the same $T_W = T_M$, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. So, if you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you guess that they have the same temperature? Probably not.
 
 
-## Work in Theromdynamics {#workint}
+## Calculation of Work {#workint}
 
 ### Free expansion at constant temperature
 ```{r Fig1c3, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Free Expansion at Constant Temperature of an Ideal Gas'}
@@ -124,7 +125,7 @@ resulting in the following simple formula to calculate $W$:
 
 Comparing eq. \@ref(eq:WintF) with eq. \@ref(eq:WintsolvedP) shows how different this case is from the previous one. 
 
-## Heat in Theromdynamics {#heatint}
+## Calculation of Heat {#heatint}
 
 Heat (Q) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured easily, but its mathematical interpretation is complicated because *heat is a path function*.
 As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in $\frac{\text{J}}{\text{mol K}}$. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.
@@ -164,14 +165,14 @@ Similarly to the previous case, the heat capacity at constant pressure measures 
 And once again, this mathematical treatment follows:
 
 \begin{equation}
-  C_p = \frac{đ Q_p}{n dT} \Rightarrow đ Q_p = n C_p dT \rightarrow \int đ Q_p = n \int_{T_i}^{T_F}C_p dT,
+  C_P = \frac{đ Q_P}{n dT} \Rightarrow đ Q_P = n C_P dT \rightarrow \int đ Q_P = n \int_{T_i}^{T_F}C_P dT,
   (\#eq:Cpdef)
 \end{equation}
 
 which result in the simple formula:
 
 \begin{equation}
-  Q_p \cong n C_p \Delta T.
+  Q_P \cong n C_P \Delta T.
   (\#eq:Cpint)
 \end{equation}
 

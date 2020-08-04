@@ -1,15 +1,15 @@
 # First Law of Thermodynamics {#FirstLaw}
 
-## Energy in Thermodynamics
-The definition of energy is:
+## Calculation of Energy {#energyint}
+The definition of energy (U) used in thermodynamics is:
 
-```{definition, energy}
+> ```{definition, energy}
 *Energy:* Property of a system that can be wither transferred or converted.
 
 
 ```
 
-In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \@ref(def:chemistryconv), which gives the convention for the signs of heat and work, the definition of energy can be written as:
+In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \@ref(def:chemistryconv), which gives the convention for the signs of heat and work, the energy of a system can be written as:
 
 \begin{equation}
   U = Q + W,
@@ -30,8 +30,8 @@ which, using eq. \@ref(eq:Wdef) becomes:
 \end{equation}
 
 
-### Isothermic processes ($dT=0$)
-To study the behavior of the energy at constant temperature, James Prescott Joule created the apparatus depicted in Figure \@ref(fig:FigJexp).
+### Energy in isothermal processes {#isothermalE}
+To study the behavior of the energy in a process at constant temperature ($dT=0$), James Prescott Joule (1818–1889) created the apparatus depicted in Figure \@ref(fig:FigJexp).
 
 ```{r FigJexp, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule Expansion Experiment.'}
 knitr::include_graphics('./img/OEP_Figures.006.jpeg')
@@ -56,7 +56,7 @@ since the chambers are not in communication with the environment, $P_{\text{ext}
 From this simple experiment, we can conclude that the energy of an ideal gas depends only on its temperature. 
 
 
-### Adiabatic Processes  ($đQ=0$)
+### Energy in adiabatic processes 
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, $đ Q=0$, and the work associated with an adiabatic process becomes a state function:
 
 \begin{equation}
@@ -64,30 +64,30 @@ An adiabatic process is defined as a process that happens without the exchange o
   (\#eq:dUadiabatic)
 \end{equation}
 
-which can then be calculated using the formulas that we derived in section \@ref(workint).
+which can then be calculated using the formulas that we derived in section \@ref(workint). Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
-### Isochoric processes ($dV=0$)
+### Energy in isochoric processes
 An isocoric process is a process in which the volume does not change. Therefore, $đ W=0$, and $dU = đ Q_V$, which for 1 mol of substance and using eq. \@ref(eq:Cvdef), becomes:
 
 \begin{equation}
-  dU = đ Q_V = C_V dT.
+  dU = đ Q_V = n C_V dT.
   (\#eq:dUqv)
 \end{equation}
 
 Since no work is performed at these conditions, the heat becomes a state function. Eq. \@ref(eq:dUqv) also gives a mathematical justification of the concept of heat capacity at constant volume. $C_V$ can now be interpreted as the partial derivative (a coefficient) of a state function (the energy):
 
 \begin{equation}
-  C_V = \left( \frac{\partial U} {\partial T} \right)_V,
+  C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n},
   (\#eq:cvstatefunc)
 \end{equation}
 
-where we have replaced the total derivative $d$ with a partial one $\partial$, and we have specified that the derivation happens at constant volume. Eq. \@ref(eq:cvstatefunc)  equation brings a rigorous definition of heat capacity at constant volume for 1 mol of substance:
+where we have replaced the total derivative $d$ with a partial one $\partial$, and we have specified that the derivation happens at constant volume and number of moles. Eq. \@ref(eq:cvstatefunc)  equation brings a rigorous definition of heat capacity at constant volume for 1 mol of substance:
 
-```{definition, newdefcv}
+> ```{definition, newdefcv}
 *The heat capacity of a substance, $C_V$, represents its ability to absorb **energy** at constant **volume**.*
 ```
 
-### Isobaric processes  ($dP=0$)
+### Energy in isobaric processes {#enthalpy}
 In an isobaric process, the pressure does not change, hence $dP=0$. Unfortunately, eq. \@ref(eq:dU) for this case does not simplify further, as happened in the two previous cases. However, in section \@ref(heatconstp), we have introduced the useful concept of heat capacity at constant $P$. $C_P$ was used in an adiabatic process in the same manner as $C_V$ was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \@ref(eq:cvstatefunc) gave a mathematical definition of $C_V$ as the partial derivative of a state function (the energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain $C_V$?
 
 In order to do so, we can introduce a new state function, called the enthalpy ($H$), as:
@@ -128,13 +128,13 @@ which simplifies to:
 Eq. \@ref(eq:dh2) establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by eq. \@ref(eq:enthalpydef). It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to $C_V$, $C_P$ can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):
 
 \begin{equation}
-  C_P = \left( \frac{\partial H} {\partial T} \right)_P,
+  C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n},
   (\#eq:cpstatefunc)
 \end{equation}
 
 Eq. \@ref(eq:cpstatefunc) brings also a rigorous definition of heat capacity at constant pressure for 1 mol of substance:
 
-```{definition, newdefcp}
+> ```{definition, newdefcp}
 *The heat capacity of a substance, $C_P$, represents its ability to absorb **enthalpy** at constant **pressure**.*
 ```
 
@@ -150,7 +150,7 @@ and heat and work can be easily calculated using any of the appropriate formulas
 
 The first law is a conservation law. It is intuitive since it comes directly from Lavoisier's principle of "nothing is lost, nothing is created, everything is transformed." Considering that the only system that is truly isolated is the universe, we can condense the first law in one simple sentence:
 
-```{definition, firstlaw}
+> ```{definition, firstlaw}
 *First Law of Thermodynamics:* The energy of the universe is conserved.
 ```
 
@@ -569,11 +569,17 @@ knitr::include_graphics('./img/OEP_Figures.005.jpeg')
 Since the process starts and finishes at the same state, the value of the energy at the end of the process will be the same as its value at the beginning, regardless of the path:^[recall that the energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.]
 
 \begin{equation}
-  \oint dE=0,
+  \oint dU=0,
   (\#eq:de0)
 \end{equation}
 
-where the symbol $\oint$ indicates an integral along a cycle. However, the same is not valid for work. For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \@ref(eq:WintF)):^[notice that the work for the expansion is negative, as it should be.]
+where the symbol $\oint$ indicates an integral around a cycle. Considering the work associated with the cycle, however, the situation is radically different because it depends on the path that the system is taking, and in general 
+\begin{equation}
+\oint_{\text{path}} đW \neq 0.
+  (\#eq:dw0)
+\end{equation}
+
+For instance, if we perform the expansion in one step, the work associated with it will be (using eq. \@ref(eq:WintF)):^[notice that the work for the expansion is negative, as it should be.]
 
 \begin{equation}
   W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{>0})<0,
@@ -610,7 +616,7 @@ In contrast, if both the expansion and the compression happen in a slow $\infty$
 \begin{aligned}
 W^{\text{cycle}}_{\infty\text{-step}} {} & = W^{\text{expansion}}_{\text{max}}+W^{\text{compression}}_{\text{min}} \\
  & = -nRT \ln \frac{V_f}{V_i}-nRT \ln \frac{V_i}{V_f} \\
- & = -nRT \left( \underbrace{\ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i}}_{=0} \right) = 0,
+ & = -nRT \underbrace{\left( \ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i} \right) }_{=0}  = 0,
 \end{aligned}
   (\#eq:Wtot2)
 \end{equation}
@@ -621,7 +627,7 @@ which means that, in this case, work is not destroyed nor created.
 
 This process can happen both ways without losses, and is called *reversible*:
 
-```{definition, reversible}
+> ```{definition, reversible}
 *Reversible process:* a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.^[Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)]
 
 
