@@ -1,7 +1,7 @@
 # Systems and Variables {#SystemVariables}
 
 ## Thermodynamic Systems
-A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in  Figure \@ref(fig:Fig1c1) below. 
+A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in  Figure \@ref(fig:Fig1c1) below.^[The photos depicted in this figure are taken from [Wikipedia](https://en.wikipedia.org) and distributed under CC-BY-SA license.]
 ```{r Fig1c1, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Examples of Thermodynamic Systems'}
 knitr::include_graphics('./img/OEP_Figures.001.jpeg')
 ```
@@ -9,11 +9,11 @@ In the first case, a liquid is contained in a typical Erlenmeyer flask. The boun
 
 A system can exchange exclusively mass, exclusively energy, or both mass and energy with its surroundings. Depending on the boundaries' ability to exchange these quantities, a system is defined as open, closed, or isolated. An open system exchanges both mass and energy. A closed system exchanges only energy, but not mass. Finally, an isolated system does not exchange mass nor energy.
 
-|   Type of System:  |   Mass  |   Energy (either heat or work)  |
-|--------------------|:-------:|:-------------------------------:|
-|   **Open**         |     Y   |                 Y               |
-|   **Closed**       |     N   |                 Y               |
-|   **Isolated**     |     N   |                 N               |
+| **Type of System** | **Mass** | **Energy** <br> (either heat or work) |
+|--------------------|:--------:|:--------------------------------:|
+| **Open**           |     Y    |                 Y                |
+| **Closed**         |     N    |                 Y                |
+| **Isolated**       |     N    |                 N                |
 
 When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let's consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of –100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be –100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and –100 to the ingoing one, and the overall total would have stayed the same: +100–100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy? 
 

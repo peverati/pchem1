@@ -80,7 +80,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{03 August 2020}
+\date{04 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -148,7 +148,7 @@ If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati
 \hypertarget{thermodynamic-systems}{%
 \section{Thermodynamic Systems}\label{thermodynamic-systems}}
 
-A thermodynamic system---or just simply a system---is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure \ref{fig:Fig1c1} below.
+A thermodynamic system---or just simply a system---is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure \ref{fig:Fig1c1} below.\footnote{The photos depicted in this figure are taken from \href{https://en.wikipedia.org}{Wikipedia} and distributed under CC-BY-SA license.}
 
 \begin{figure}
 
@@ -165,7 +165,7 @@ A system can exchange exclusively mass, exclusively energy, or both mass and ene
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
-Type of System: & Mass & Energy (either heat or work)\tabularnewline
+\textbf{Type of System} & \textbf{Mass} & \textbf{Energy} (either heat or work)\tabularnewline
 \midrule
 \endhead
 \textbf{Open} & Y & Y\tabularnewline
@@ -343,6 +343,8 @@ Notice that when we state the zeroth law, it appears intuitive. However, this is
 \hypertarget{workint}{%
 \section{Calculation of Work}\label{workint}}
 
+In thermodynamics, work (\(W\)) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because \emph{work is a path function}. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.
+
 \hypertarget{free-expansion-at-constant-temperature}{%
 \subsection{Free expansion at constant temperature}\label{free-expansion-at-constant-temperature}}
 
@@ -461,7 +463,7 @@ Comparing eq. \eqref{eq:WintF} with eq. \eqref{eq:WintsolvedP} shows how differe
 \hypertarget{heatint}{%
 \section{Calculation of Heat}\label{heatint}}
 
-Heat (Q) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured easily, but its mathematical interpretation is complicated because \emph{heat is a path function}.
+Heat (\(Q\)) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because \emph{heat is a path function}.
 As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in \(\frac{\text{J}}{\text{mol K}}\). However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.
 
 \hypertarget{processes-at-constant-volume-isochoric}{%
@@ -521,24 +523,24 @@ which result in the simple formula:
 \chapter{First Law of Thermodynamics}\label{FirstLaw}}
 
 \hypertarget{energyint}{%
-\section{Calculation of Energy}\label{energyint}}
+\section{Calculation of Internal Energy Changes}\label{energyint}}
 
-The definition of energy (U) used in thermodynamics is:
+The internal energy (\(U\)) of a system is a thermodynamic state function defined as:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:energy}{}{\label{def:energy} }\emph{Energy:} Property of a system that can be wither transferred or converted.
+\protect\hypertarget{def:energy}{}{\label{def:energy} }\emph{Internal Energy:} Property of a system that can be wither transferred or converted.
 \end{definition}
 \end{quote}
 
-In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \ref{def:chemistryconv}, which gives the convention for the signs of heat and work, the energy of a system can be written as:
+In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \ref{def:chemistryconv}, which gives the convention for the signs of heat and work, the internal energy of a system can be written as:
 
 \begin{equation}
   U = Q + W,
   \label{eq:U}
 \end{equation}
 
-which, in differential form, reads:
+which we can write in differential form by considering that the internal energy is a state function, as:
 \begin{equation}
   dU = đ Q + đ W,
   \label{eq:dU}
@@ -547,14 +549,14 @@ which, in differential form, reads:
 which, using eq. \eqref{eq:Wdef} becomes:
 
 \begin{equation}
-  dU = đ Q - PdV,
+  dU = đ Q - PdV.
   \label{eq:dUpdv}
 \end{equation}
 
 \hypertarget{isothermalE}{%
-\subsection{Energy in isothermal processes}\label{isothermalE}}
+\subsection{Internal energy in isothermal processes}\label{isothermalE}}
 
-To study the behavior of the energy in a process at constant temperature (\(dT=0\)), James Prescott Joule (1818--1889) created the apparatus depicted in Figure \ref{fig:FigJexp}.
+To study the behavior of the internal energy in a process at constant temperature (\(dT=0\)), James Prescott Joule (1818--1889) created the apparatus depicted in Figure \ref{fig:FigJexp}.
 
 \begin{figure}
 
@@ -572,7 +574,7 @@ The left side of the Joule apparatus's inner chamber is filled with an ideal gas
   \label{eq:JexpW}
 \end{equation}
 
-since the chambers are not in communication with the environment, \(P_{\text{ext}}=0\). Thus, changes in energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, \(T_i\), and at the end of the experiment \(T_f\). Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature will not change \(T_i = T_f\). Since the temperature doesn't change there is no heat transfer, and therefore the energy stays constant:
+since the chambers are not in communication with the environment, \(P_{\text{ext}}=0\). Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, \(T_i\), and at the end of the experiment \(T_f\). Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature will not change \(T_i = T_f\). Since the temperature doesn't change there is no heat transfer, and therefore the internal energy stays constant:
 
 \begin{equation}
   dU = đ Q = 0.
@@ -583,10 +585,10 @@ since the chambers are not in communication with the environment, \(P_{\text{ext
 Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in a following chapter when we will study real gases.
 \end{quote}
 
-From this simple experiment, we can conclude that the energy of an ideal gas depends only on its temperature.
+From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature.
 
-\hypertarget{energy-in-adiabatic-processes}{%
-\subsection{Energy in adiabatic processes}\label{energy-in-adiabatic-processes}}
+\hypertarget{internal-energy-in-adiabatic-processes}{%
+\subsection{Internal energy in adiabatic processes}\label{internal-energy-in-adiabatic-processes}}
 
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, \(đ Q=0\), and the work associated with an adiabatic process becomes a state function:
 
@@ -597,8 +599,8 @@ An adiabatic process is defined as a process that happens without the exchange o
 
 which can then be calculated using the formulas that we derived in section \ref{workint}. Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
-\hypertarget{energy-in-isochoric-processes}{%
-\subsection{Energy in isochoric processes}\label{energy-in-isochoric-processes}}
+\hypertarget{internal-energy-in-isochoric-processes}{%
+\subsection{Internal energy in isochoric processes}\label{internal-energy-in-isochoric-processes}}
 
 An isocoric process is a process in which the volume does not change. Therefore, \(đ W=0\), and \(dU = đ Q_V\), which for 1 mol of substance and using eq. \eqref{eq:Cvdef}, becomes:
 
@@ -607,7 +609,7 @@ An isocoric process is a process in which the volume does not change. Therefore,
   \label{eq:dUqv}
 \end{equation}
 
-Since no work is performed at these conditions, the heat becomes a state function. Eq. \eqref{eq:dUqv} also gives a mathematical justification of the concept of heat capacity at constant volume. \(C_V\) can now be interpreted as the partial derivative (a coefficient) of a state function (the energy):
+Since no work is performed at these conditions, the heat becomes a state function. Eq. \eqref{eq:dUqv} also gives a mathematical justification of the concept of heat capacity at constant volume. \(C_V\) can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):
 
 \begin{equation}
   C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n},
@@ -623,9 +625,9 @@ where we have replaced the total derivative \(d\) with a partial one \(\partial\
 \end{quote}
 
 \hypertarget{enthalpy}{%
-\subsection{Energy in isobaric processes}\label{enthalpy}}
+\subsection{Internal energy in isobaric processes}\label{enthalpy}}
 
-In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \(P\). \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \eqref{eq:cvstatefunc} gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_V\)?
+In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \(P\). \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \eqref{eq:cvstatefunc} gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_V\)?
 
 In order to do so, we can introduce a new state function, called the enthalpy (\(H\)), as:
 
@@ -680,7 +682,7 @@ Eq. \eqref{eq:cpstatefunc} brings also a rigorous definition of heat capacity at
 \hypertarget{the-first-law-of-thermodynamics}{%
 \section{The First Law of Thermodynamics}\label{the-first-law-of-thermodynamics}}
 
-We finally come to a working definition of the first law. If we take an isolated system---i.e., a system that does not exchange heat nor mass with its surroundings---its energy is conserved. If the energy is conserved, \(dU=0\). Therefore, for an isolated system:
+We finally come to a working definition of the first law. If we take an isolated system---i.e., a system that does not exchange heat nor mass with its surroundings---its internal energy is conserved. If the internal energy is conserved, \(dU=0\). Therefore, for an isolated system:
 
 \begin{equation}
   đ Q = -đ W,
@@ -779,7 +781,7 @@ Let's now consider the cycle in Figure \ref{fig:FigRevCyc}. The process in this 
 \caption{Expansion/Compression Cycle of an Ideal Gas}\label{fig:FigRevCyc}
 \end{figure}
 
-Since the process starts and finishes at the same state, the value of the energy at the end of the process will be the same as its value at the beginning, regardless of the path:\footnote{recall that the energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.}
+Since the process starts and finishes at the same state, the value of the internal energy at the end of the process will be the same as its value at the beginning, regardless of the path:\footnote{recall that the internal energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.}
 
 \begin{equation}
   \oint dU=0,
@@ -864,7 +866,7 @@ In the previous chapter, we have discussed thermodynamical changes in energy in 
 In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. \eqref{eq:dh2} to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction ``reactants'' and the molecules at the end of the reaction ``products,'' the heat associated with the reaction (rxn) is defined as:
 
 \begin{equation}
-  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}}.
+  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
   \label{eq:DHrxn1}
 \end{equation}
 
@@ -963,7 +965,7 @@ The calculation of a standard reaction enthalpy can be performed using the follo
 \begin{aligned}
  \text{reactants} & \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \text{products} \\
 \scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \bigg\downarrow \quad & \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}} \\
- \text{"elements in t} & \text{heir standard reference state"}
+ \text{"elements in } & \text{their standard reference state"}
 \end{aligned}
 \label{eq:Hesscycle}
 \end{equation}
@@ -1096,9 +1098,9 @@ As we saw in Section \ref{isothermalE}, states 1 and 2 have exactly the same ene
   \label{eq:de0c}
 \end{equation}
 
-James Joule himself was indeed convinced that this must be the case and that we don't observe the backward transformation in practice only because we cannot to build ideal machines.\footnote{Either because we don't really have ideal gases, or because we are unable to construct mechanical devices without loss, or in general because of other experimental factors} Another scientist of that era was not convinced. William Thomson, the 1\textsuperscript{st} Baron Kelvin (1824-1907), was unsure about this idea, and invested substantial resources to try to prove Joule's wrong.\footnote{Interestingly enough, both Joule and Lord Kelvin are now recognized as key figures in the development of thermodynamics and science in general. So much so, that the energy unit and the temperature unit in the SI system are named after them.}
+James Joule himself was indeed convinced that this must be the case and that we don't observe the backward transformation in practice only because we cannot to build ideal machines.\footnote{Either because we don't really have ideal gases, or because we are unable to construct mechanical devices without loss, or in general because of other experimental factors} Another scientist of that era was not convinced. William Thomson, the 1\textsuperscript{st} Baron Kelvin (1824--1907), was unsure about this idea, and invested substantial resources to try to prove Joule's wrong.\footnote{Interestingly enough, both Joule and Lord Kelvin are now recognized as key figures in the development of thermodynamics and science in general. So much so, that the energy unit and the temperature unit in the SI system are named after them.}
 
-A few years later, the controversy between Joule and Kelvin was redeemed in favor of the latter, thanks to the experiments of French military engineer Nicolas Léonard Sadi Carnot (1796-1832). The work of Carnot began in France several years before Joule and Kelvin's time.\footnote{Carnot's lone book, the \href{https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire}{\emph{Réflexions sur la Puissance Motrice du Feu} (``Reflections on the Motive Power of Fire'')} was published in France in 1824, the same year Kelvin was born and just 6 years after Joule's birth.} At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency.
+A few years later, the controversy between Joule and Kelvin was redeemed in favor of the latter, thanks to the experiments of French military engineer Nicolas Léonard Sadi Carnot (1796--1832). The work of Carnot began in France several years before Joule and Kelvin's time.\footnote{Carnot's lone book, the \href{https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire}{\emph{Réflexions sur la Puissance Motrice du Feu} (``Reflections on the Motive Power of Fire'')} was published in France in 1824, the same year Kelvin was born and just 6 years after Joule's birth.} At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency.
 
 \hypertarget{carnotcyclesect}{%
 \section{Carnot Cycle}\label{carnotcyclesect}}
@@ -1128,7 +1130,7 @@ A Carnot cycle connects two ``heat reservoirs'' at temperatures \(T_h\) (hot) an
 
 \begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007a} \end{center}
 
-Starting the analysis of the cycle from point \(A\) in Figure \ref{fig:FigCarnotPV},\footnote{The stages of a Carnot depicted at the beginning of each of this section and the following three ones are taken from \href{https://en.wikipedia.org/wiki/Carnot_cycle}{Wikipedia}.} the first transformation we encounter is an isothermal expansion at \(T_h\). Since the transformation is isothermal:
+Starting the analysis of the cycle from point \(A\) in Figure \ref{fig:FigCarnotPV},\footnote{The stages of a Carnot depicted at the beginning of each of this section and the following three ones are taken from \href{https://en.wikipedia.org/wiki/Carnot_cycle}{Wikipedia} and distributed under CC-BY-SA license.} the first transformation we encounter is an isothermal expansion at \(T_h\). Since the transformation is isothermal:
 
 \begin{equation}
 U_1 = \overbrace{W_1}^{<0} + \overbrace{Q_1}^{>0} = 0 \Rightarrow Q_1 = -W_1,
@@ -1323,7 +1325,7 @@ which proves that the efficiency of a Carnot cycle is strictly smaller than 1.\f
 \hypertarget{SecondLaw}{%
 \chapter{Second Law of Thermodynamics}\label{SecondLaw}}
 
-In the previous Chapter, we have discussed heat engines as a mean of understanding how some processes are spontaneous while others are not. Carnot's findings did not just simply inspired Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822-1888) introducing the concept of entropy. In this Chapter, we will also discuss entropy in the context of the second and the third law of thermodynamics.
+In the previous Chapter, we have discussed heat engines as a mean of understanding how some processes are spontaneous while others are not. Carnot's findings did not just simply inspired Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822--1888) introducing the concept of entropy. In this Chapter, we will also discuss entropy in the context of the second and the third law of thermodynamics.
 
 \hypertarget{entropyint}{%
 \section{Entropy in Thermodynamics}\label{entropyint}}
@@ -1452,7 +1454,7 @@ which can be rearranged as:
 \label{eq:qirrcycle2}
 \end{equation}
 
-where we have used the fact that in an isolated system \(đQ_{\mathrm{IRR}}=0\). Eq. \eqref{eq:qirrcycle2} can be rewritten as:
+where we have used the fact that, for an isolated system (the universe), \(đQ_{\mathrm{IRR}}=0\). Eq. \eqref{eq:qirrcycle2} can be rewritten as:
 
 \begin{equation}
 \Delta S > 0,
@@ -1475,14 +1477,21 @@ which proves that for any irreversible process in an isolated system, the entrop
 The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to \emph{always} consider changes in entropy in \emph{both} the system (syst) and its surroundings (surr):
 
 \begin{equation}
-\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}} 
+\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}},
 \label{eq:dsuniv}
+\end{equation}
+
+or, in differential form:
+
+\begin{equation}
+d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}},
+\label{eq:dsunivd}
 \end{equation}
 
 \hypertarget{dssys}{%
 \section{\texorpdfstring{Calculation of \(\Delta S^{\mathrm{sys}}\)}{Calculation of \textbackslash Delta S\^{}\{\textbackslash mathrm\{sys\}\}}}\label{dssys}}
 
-In general \(\Delta S^{\mathrm{sys}}\) can be calculated using either its Definition \ref{def:entropy}, or its differential formula, eq. \eqref{eq:dentropy}.In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:
+In general \(\Delta S^{\mathrm{sys}}\) can be calculated using either its Definition \ref{def:entropy}, or its differential formula, eq. \eqref{eq:dentropy}. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:
 
 \begin{equation}
 \begin{aligned}
@@ -1604,28 +1613,43 @@ While the entropy of the system can be broken down into simple cases and calcula
 \label{eq:dssurr}
 \end{equation}
 
+or, in differential form:
+
+\begin{equation}
+d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
+\label{eq:dssurrd}
+\end{equation}
+
 where the substitution \(Q_{\text{surr}}=-Q_{\text{sys}}\) can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.\footnote{Even if we think at the most energetic event that we could imagine happening here on earth---such as the explosion of an atomic bomb or the hit of a meteorite from outer space---such an event will not modify the average temperature of the universe by the slightest degree.} To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction happening in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, \(T_{\text{surr}}\) will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:supercooledEx}{}{\label{exr:supercooledEx} }Calculate the changes in entropy of the universe for the process of supercooled water, freezing at --10°C, knowing the following data: \(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}\), and assuming both \(C_P\) to be independent on temperature.
+\protect\hypertarget{exr:supercooledEx}{}{\label{exr:supercooledEx} }Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at --10°C, knowing the following data: \(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}\), and assuming both \(C_P\) to be independent on temperature.
 
 \emph{Solution:} \(\Delta S^{\mathrm{sys}}\) for the process under consideration can be calculated using the following cycle:
 
 \begin{equation}
 \begin{aligned}
-\mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad T=263\;K\\
+\mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad \quad T=263\;K\\
 \scriptstyle{\Delta S_1} \; \bigg\downarrow \quad & \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta S_3} \\
 \mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_2 \qquad} \quad \mathrm{H}_2\mathrm{O}_{(s)} \qquad T=273\;K\\
 \\
-\Delta S^{\text{sys}} & = \Delta S_1 + \Delta S_2 + \Delta S_3 \\
-& = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
-& = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\Delta S^{\text{sys}} & = \Delta S_1 + \Delta S_2 + \Delta S_3
 \end{aligned}
 \label{eq:supercooledsyst}
 \end{equation}
 
-Don't be confused by the fact that \(\Delta S^{\text{sys}}\) is negative. This is \textbf{\emph{not}} the entropy of the universe, hence it tells nothing about spontaneity! Let's now calculate \(\Delta S^{\text{surr}}\):
+\(\Delta S_1\) and \(\Delta S_3\) are the isochoric heating and cooling processes of liquid and solid water, respectively, and can be calculated filling the given data into eq. \eqref{eq:sconstP1}. \(\Delta S_2\) is a phase change (isothermal process) and can be calculated translating eq. \eqref{eq:spc} to the freezing transformation. Overall:
+
+\begin{equation}
+\begin{aligned}
+\Delta S^{\text{sys}} & = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
+& = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\end{aligned}
+\label{eq:supercooledsyst2}
+\end{equation}
+
+Don't be confused by the fact that \(\Delta S^{\text{sys}}\) is negative. This is \textbf{\emph{not}} the entropy of the universe, hence it tells \textbf{\emph{nothing}} about spontaneity! We can now calculate \(\Delta S^{\text{surr}}\) from \(Q_{\text{sys}}\), noting that we can calculate the enthalpy around the same cycle in eq. \eqref{eq:supercooledsyst}. To do that, we already have \(\Delta_{\mathrm{fus}}H\) from the given data, and we can calculate \(\Delta H_1\) and \(\Delta H_3\) using eq. \eqref{eq:Cpdef}.
 
 \begin{equation}
 \begin{aligned}
@@ -1648,13 +1672,247 @@ Since the entropy changes in the universe are positive, the process is spontaneo
 \end{exercise}
 \end{quote}
 
-This exercise shows how calculating \(\Delta S^{\mathrm{universe}}\) to infer the spontaneity of a process might not always be the simplest of calculations. Seeking for a more convenient indicator will be the subject of next Chapter. Calculation of \(\Delta S^{\mathrm{universe}}\), however, remains the most unambiguous criterion, thanks to the second law.
+\hypertarget{spontS}{%
+\section{Clausius Theorem}\label{spontS}}
+
+By replacing eq. \eqref{eq:dssurrd} into \eqref{eq:dsunivd} we can write the differential change in the entropy of the system as:
+
+\begin{equation}
+d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T_{\text{surr}}}.
+\label{eq:dssysd}
+\end{equation}
+
+According to the second law, for any spontaneous process \(d S^{\mathrm{universe}}\geqslant0\), and therefore, replacing it into eq. \eqref{eq:dssysd}:
+
+\begin{equation}
+d S^{\mathrm{sys}} \geqslant \frac{đQ}{T_{\text{surr}}},
+\label{eq:dssyscrit}
+\end{equation}
+
+which is the mathematical expression of the so-called \textbf{Clausius theorem}. Eq. \eqref{eq:dssyscrit} distinguishes between three conditions:
+
+\begin{equation}
+\begin{aligned}
+d S^{\mathrm{sys}} > \frac{đQ}{T} \qquad &\text{spontaneous, irreversible transformation} \\
+d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &\text{reversible transformation} \\
+d S^{\mathrm{sys}} < \frac{đQ}{T} \qquad &\text{non-spontaneous, irreversible transformation}, 
+\end{aligned}
+\label{eq:dssyscond}
+\end{equation}
+
+Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it's hard to calculate \(\Delta S^{\mathrm{universe}}\). To do so, it will be necessary to measure the difference in entropy and the amount of heat that crosses the boundaries and the temperature of the surroundings. If a process produces more entropy than the amount of heat that crosses the boundaries divided by the surrounding's temperature, the process will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the surrounding's temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes, since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.
 
 \hypertarget{thirdlawsect}{%
 \section{The Third Law of Thermodynamics}\label{thirdlawsect}}
 
+In Chapter \ref{Thermochemistry}, we have discussed how to calculate reaction enthalpies for any reaction, given the formation enthalpies of reactants and products. In this section, we will try to do the same for reaction entropies. In this case, however, our task is simplified by a fundamental law of thermodynamics, introduced by Walther Hermann Nernst (1864--1941) in 1906.\footnote{Walther Nernst was awarded the 1920 Nobel Prize in Chemistry for his work in thermochemistry.} The statement that was initially known as Nernst's Theorem is now officially recognized as the third fundamental law of thermodynamics, and it has the following definition:
+
+\begin{quote}
+\begin{definition}
+\protect\hypertarget{def:thirdlawdef}{}{\label{def:thirdlawdef} }\emph{Third Law of Thermodynamics:} The entropy of a perfectly ordered, pure, crystalline substance is zero at \(T=0 \; \text{K}\).
+\end{definition}
+\end{quote}
+
+This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive. This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences.
+
+In simpler terms, given a substance \(i\), we are not able to measure absolute values of its enthalpy \(H_i\) (and we must resort to known enthalpy differences, such as \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) at standard pressure). At the same time, for entropy, we can measure \(S_i\) thanks to the third law, and we usually report them as \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\). Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
+
+\begin{equation}
+\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
+\label{eq:thirdlaweq}
+\end{equation}
+
+with \(\nu_i\) being the usual stoichiometric coefficients with their signs given in Definition \ref{def:nui}.
+
+The careful wording in the definition of the third law \ref{def:thirdlawdef} allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at \(T=0 \; \text{K}\). However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.\footnote{a procedure that---in practice---might be extremely difficult to achieve.}
+
+An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to \(T=0 \; \text{K}\) in a finite number of steps.
+
 \hypertarget{Potentials}{%
-\chapter{Chemical Potentials}\label{Potentials}}
+\chapter{Thermodynamic Potentials}\label{Potentials}}
+
+\hypertarget{fundeq}{%
+\section{Fundamental Equation of Thermodynamics}\label{fundeq}}
+
+Let's summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems:
+
+\begin{equation}
+\begin{aligned}
+\text{From 1}^{\text{st}} \text{ Law:} \qquad & dU = đQ_{\mathrm{REV}}-PdV \\
+\text{From The Definition of Entropy:} \qquad & dS = \frac{đQ_{\mathrm{REV}}}{T} \rightarrow đQ_{\mathrm{REV}} = TdS \\
+\\
+\Rightarrow & dU = TdS - PdV.
+\end{aligned}
+\label{eq:dunv}
+\end{equation}
+
+Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. \eqref{eq:dunv}, we notice that it exclusively involves state functions. As such, eq. \eqref{eq:dunv} applies to both reversible and irreversible processes and is the fundamental equation of thermodynamics combining both the first and the second laws. Eq. \eqref{eq:dunv}, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed.
+
+At the end of the 19\textsuperscript{th} century, Josiah Willard Gibbs (1839--1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he termed ``chemical potential'' and he defined as the amount of energy that is absorbed or released due to a change of the particle number of a given chemical species. The chemical potential of species \(i\) is usually abbreviated as \(\mu_i\) and it enters the fundamental equation of thermodynamics as:
+
+\begin{equation}
+dU = TdS-PdV+\sum_i\mu_i dn_i,
+\label{eq:dunv2}
+\end{equation}
+
+where \(dn_i\) is the differential change in the number of moles of substance \(i\), and the summation extends over all chemical species whose number of moles changes in the system.
+
+According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, \(S\), volume, \(V\), and number of moles \({n_i}\).\footnote{In the case of the number of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergoes chemical reactions.} Because of their importance to determine the internal energy these three variables are crucial in thermodynamics, since they determine all thermodynamic properties of the system. Under several circumstances, however, they might not be the most convenient variables to use.\footnote{For example, we don't always have a simple way to calculate or to measure the entropy}. To specify the important connections given by the fundamental equation, we can use the notation \(U(S,V,{n_i})\) and we can term \(S\), \(V\), and \({n_i}\) \textbf{natural variables} of the energy.
+
+\hypertarget{freeenergies}{%
+\section{Thermodynamic Potentials and Free Energies}\label{freeenergies}}
+
+Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called Legendre transform. A Legendre transform is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of its conjugate variables.
+
+Taking the internal energy as defined in eq. \eqref{eq:dunv}, we can perform such transformations by subtracting products of the following conjugate variables: \(T, S, P, V\). This procedure aims to define new state functions that depend on more convenient natural variables. An example of this procedure is the definition of enthalpy that we have introduced in Section \ref{enthalpy}. If we take the internal energy and subtract the product of pressure and volume, we obtain a new state function called enthalpy, as we did in eq. \eqref{eq:enthalpydef}). Taking the differential of this definition, we obtain:
+
+\begin{equation}
+dH = dU -VdP -PdV,
+\label{eq:dhdef1}
+\end{equation}
+
+and using the fundamental equation (eq. \eqref{eq:dunv2}) to replace \(dU\), we obtain:
+
+\begin{equation}
+\begin{aligned}
+dH & = TdS -PdV +\sum_i\mu_i dn_i -VdP -PdV  \\
+   & = TdS - VdP +\sum_i\mu_i dn_i.
+\end{aligned}
+\label{eq:dhdef2}
+\end{equation}
+
+which is the fundamental equation for enthalpy. The natural variables of the enthalpy are \(S\), \(P\), and \({n_i}\). The Legendre transform has allowed us to go from \(U(S,V,{n_i})\) to \(H(S,P,{n_i})\) by replacing the dependance on the extensive variable, \(V\), with an intensive one, \(P\).
+
+Following the same procedure, we can perform another Legendre transform with the goal of replacing the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, \(A\), as:
+
+\begin{equation}
+A = U -TS
+\label{eq:dadef1}
+\end{equation}
+
+which, taking the differential and using the fundamental equation (eq. \eqref{eq:dunv2}) becomes:
+
+\begin{equation}
+\begin{aligned}
+dA &= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
+   &= -SdT -PdV +\sum_i \mu_i dn_i.
+\end{aligned}
+\label{eq:dadef2}
+\end{equation}
+
+The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821---1894) and its natural variables are temperature, volume, and number of moles.
+
+Finally, if we perform a Legendre transform on the internal energy with the goal of replacing both the entropy and the volume with intensive variables, we can define a new function called the Gibbs free energy, \(G\), as:
+
+\begin{equation}
+G = U -TS -PV
+\label{eq:dgdef1}
+\end{equation}
+
+which, taking again the differential and using eq. \eqref{eq:dunv2} becomes:
+
+\begin{equation}
+\begin{aligned}
+dG &= dU -SdT -TdS -VdP -PdV = TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS -VdP -PdV \\
+   &= VdP -SdT +\sum_i\mu_i dn_i.
+\end{aligned}
+\label{eq:dgdef2}
+\end{equation}
+
+The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
+
+A summary of the four thermodynamic potential is given in the following table.
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+\textbf{Name} & \textbf{Symbol} & \textbf{Fundamental Equation} & \textbf{Natural Variables}\tabularnewline
+\midrule
+\endhead
+\textbf{Internal Energy} & \(U\) & \(dU=TdS-PdV+\sum_i\mu_i dn_i\) & \(S,V,{n_i}\)\tabularnewline
+\textbf{Enthalpy} & \(H\) & \(dH=TdS+VdP+\sum_i\mu_i dn_i\) & \(S,P,{n_i}\)\tabularnewline
+\textbf{Helmholtz Free Energy} & \(A\) & \(dA=-Sdt-PdV+\sum_i\mu_i dn_i\) & \(T,V,{n_i}\)\tabularnewline
+\textbf{Gibbs Free Energy} & \(G\) & \(dG=VdP-SdT+\sum_i\mu_i dn_i\) & \(T,P,{n_i}\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+Thermodynamic potentials are the analogue of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:
+
+\begin{itemize}
+\tightlist
+\item
+  Internal energy (\(U\)) is the capacity to do work plus the capacity to release heat.
+\item
+  Enthalpy (\(H\)) is the capacity to do non-mechanical work plus the capacity to release heat.
+\item
+  Gibbs free energy (\(G\)) is the capacity to do non-mechanical work.
+\item
+  Helmholtz free energy (\(A\)) is the capacity to do mechanical plus non-mechanical work.
+\end{itemize}
+
+\hypertarget{xxx-redo-this-section-here-xxx}{%
+\section{xxx REDO this section here: xxx}\label{xxx-redo-this-section-here-xxx}}
+
+Going back to Clausius theorem (Section. \ref{spontS}), we can write the criterion for spontaneity, eq. \eqref{eq:dssyscrit}, as:
+
+\begin{equation}
+TdS \geq đQ 0,
+\label{eq:duchem}
+\end{equation}
+
+which replacying \(đQ = dU+PdV\) becomes:
+\begin{equation}
+\begin{aligned}
+TdS & \geq dU + PdV 0 \\
+-dU -PdV +TdS & \geq 0.
+\end{aligned}
+\label{eq:duchem1}
+\end{equation}
+
+Eq. \eqref{eq:duchem1} is the
+
+which, at constant \(T\) and \(P\) becomes:
+
+\begin{equation}
+\begin{aligned}
+d(U-TS)_T & \leq 0 \\
+d(A)_T & \leq 0 \\
+\end{aligned}
+\label{eq:duchem2}
+\end{equation}
+
+The Legendre transform procedure translates all information contained in the original function to the new one. Therefore, \(H(S,P,{n_i})\), \(A(T,V,{n_i})\), and \(G(T,P,{n_i})\) all contain the same information that is in \(U(S,V,{n_i})\). However, the new functions depends on different natural variables, and they are therefore useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term \(\sum_i\mu_i dn_i\) that appears in each thermodynamic potential. In order to do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes of the internal energy at constant \(S\) and constant \(V\):
+
+\begin{equation}
+dU(S,V,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dS=dV=0.
+\label{eq:duchem}
+\end{equation}
+
+Similarly:
+
+\begin{equation}
+\begin{aligned}
+dH(S,P,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dS=dP=0, \\
+dA(T,V,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dT=dV=0, \\
+dG(T,P,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dT=dP=0.
+\end{aligned}
+\label{eq:dhagchem}
+\end{equation}
+
+The latter two cases are particularly interesting, since most of chemistry happens at either constant volume (for example several industrial processes in chemical plants), or constant pressure (for example most processes in a chemistry lab). Since \(dS=0\) is not a requirement for the Helmholtz free energy to describe chemical changes, we can apply it to study non-isenthalpic processes. If a process is not isenthalpic, it either increases the energy of the universe, or it decreases it. Therefore---according to the second law---it is either spontaneous or not.
+
+\hypertarget{maxwell}{%
+\section{Maxwell Relations}\label{maxwell}}
+
+Let's consider the four thermodynamic potentials that we have derived in XXX: \(U(S,V,{n_i})\), \(H(S,P,{n_i})\), \(A(T,V,{n_i})\), \(G(T,P,{n_i})\). From the simple knowledge of their natural variables, we could reconstruct the definition of the potential by using the total differential:
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial^2 U }{\partial S \partial V} &=& +\left(\frac{\partial T}{\partial V}\right)_S &=& -\left(\frac{\partial P}{\partial S}\right)_V \\
+\frac{\partial^2 H }{\partial S \partial P} &=& +\left(\frac{\partial T}{\partial P}\right)_S &=& +\left(\frac{\partial V}{\partial S}\right)_P\\
+-\frac{\partial^2 A }{\partial T \partial V} &=& +\left(\frac{\partial S}{\partial V}\right)_T &=& +\left(\frac{\partial P}{\partial T}\right)_V\\
+\frac{\partial^2 G }{\partial T \partial P} &=& -\left(\frac{\partial S}{\partial P}\right)_T &=& +\left(\frac{\partial V}{\partial T}\right)_P
+\end{aligned}
+\end{equation}
 
 \hypertarget{ChemicalEquilibrium}{%
 \chapter{Chemical Equilibrium}\label{ChemicalEquilibrium}}

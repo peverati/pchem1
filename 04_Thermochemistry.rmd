@@ -8,7 +8,7 @@ In the previous chapter, we have discussed thermodynamical changes in energy in 
 In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. \@ref(eq:dh2) to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction "reactants" and the molecules at the end of the reaction "products," the heat associated with the reaction (rxn) is defined as:
 
 \begin{equation}
-  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}}.
+  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
   (\#eq:DHrxn1)
 \end{equation}
 
@@ -93,7 +93,7 @@ The calculation of a standard reaction enthalpy can be performed using the follo
 \begin{aligned}
  \text{reactants} & \quad \xrightarrow{\Delta_{\text{rxn}} H^\standardstate} \quad \text{products} \\
 \scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^\standardstate} \quad \bigg\downarrow \quad & \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^\standardstate} \\
- \text{"elements in t} & \text{heir standard reference state"}
+ \text{"elements in } & \text{their standard reference state"}
 \end{aligned}
 (\#eq:Hesscycle)
 \end{equation}

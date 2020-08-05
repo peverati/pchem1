@@ -5,13 +5,20 @@
 The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to *always* consider changes in entropy in *both* the system (syst) and its surroundings (surr):
 
 \begin{equation}
-\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}} 
+\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}},
 (\#eq:dsuniv)
+\end{equation}
+
+or, in differential form:
+
+\begin{equation}
+d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}},
+(\#eq:dsunivd)
 \end{equation}
 
 ## Calculation of $\Delta S^{\mathrm{sys}}$  {#dssys}
 
-In general $\Delta S^{\mathrm{sys}}$ can be calculated using either its Definition \@ref(def:entropy), or its differential formula, eq. \@ref(eq:dentropy).In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example: 
+In general $\Delta S^{\mathrm{sys}}$ can be calculated using either its Definition \@ref(def:entropy), or its differential formula, eq. \@ref(eq:dentropy). In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example: 
 
 \begin{equation}
 \begin{aligned}
@@ -113,7 +120,7 @@ which, assuming $C_P$ independent of temperature and solving the integral on the
 (\#eq:sconstP)
 \end{equation}
 
-## Calculation of $\Delta S^{\mathrm{surr}}$  {#dssurr}
+## Calculation of $\Delta S^{\mathrm{surr}}$ {#dssurr} 
 
 While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:
 
@@ -122,27 +129,42 @@ While the entropy of the system can be broken down into simple cases and calcula
 (\#eq:dssurr)
 \end{equation}
 
+or, in differential form:
+
+\begin{equation}
+d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
+(\#eq:dssurrd)
+\end{equation}
+
 where the substitution $Q_{\text{surr}}=-Q_{\text{sys}}$ can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.^[Even if we think at the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.] To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction happening in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, $T_{\text{surr}}$ will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions. 
 
 > ```{exercise, supercooledEx}
-Calculate the changes in entropy of the universe for the process of supercooled water, freezing at –10°C, knowing the following data: $\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}$, and assuming both $C_P$ to be independent on temperature.
+Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: $\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}$, and assuming both $C_P$ to be independent on temperature.
 
 *Solution:* $\Delta S^{\mathrm{sys}}$ for the process under consideration can be calculated using the following cycle:
 
 \begin{equation}
 \begin{aligned}
-\mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad T=263\;K\\
+\mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad \quad T=263\;K\\
 \scriptstyle{\Delta S_1} \; \bigg\downarrow \quad & \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta S_3} \\
 \mathrm{H}_2 \mathrm{O}_{(l)} & \quad \xrightarrow{\quad \Delta S_2 \qquad} \quad \mathrm{H}_2\mathrm{O}_{(s)} \qquad T=273\;K\\
 \\
-\Delta S^{\text{sys}} & = \Delta S_1 + \Delta S_2 + \Delta S_3 \\
-& = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
-& = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\Delta S^{\text{sys}} & = \Delta S_1 + \Delta S_2 + \Delta S_3
 \end{aligned}
 (\#eq:supercooledsyst)
 \end{equation}
 
-Don't be confused by the fact that $\Delta S^{\text{sys}}$ is negative. This is ***not*** the entropy of the universe, hence it tells nothing about spontaneity! Let's now calculate $\Delta S^{\text{surr}}$:
+$\Delta S_1$ and $\Delta S_3$ are the isochoric heating and cooling processes of liquid and solid water, respectively, and can be calculated filling the given data into eq. \@ref(eq:sconstP1). $\Delta S_2$ is a phase change (isothermal process) and can be calculated translating eq. \@ref(eq:spc) to the freezing transformation. Overall:
+
+\begin{equation}
+\begin{aligned}
+\Delta S^{\text{sys}} & = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
+& = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\end{aligned}
+(\#eq:supercooledsyst2)
+\end{equation}
+
+Don't be confused by the fact that $\Delta S^{\text{sys}}$ is negative. This is ***not*** the entropy of the universe, hence it tells ***nothing*** about spontaneity! We can now calculate $\Delta S^{\text{surr}}$ from $Q_{\text{sys}}$, noting that we can calculate the enthalpy around the same cycle in eq. \@ref(eq:supercooledsyst). To do that, we already have $\Delta_{\mathrm{fus}}H$ from the given data, and we can calculate $\Delta H_1$ and $\Delta H_3$ using eq. \@ref(eq:Cpdef).
 
 \begin{equation}
 \begin{aligned}
@@ -164,6 +186,56 @@ Bringing \@ref(eq:supercooledsyst) and \@ref(eq:supercooledsurr) results togethe
 Since the entropy changes in the universe are positive, the process is spontaneous, as expected.
 ```
 
-This exercise shows how calculating $\Delta S^{\mathrm{universe}}$ to infer the spontaneity of a process might not always be the simplest of calculations. Seeking for a more convenient indicator will be the subject of next Chapter. Calculation of $\Delta S^{\mathrm{universe}}$, however, remains the most unambiguous criterion, thanks to the second law.
+## Clausius Theorem {#spontS}
+
+By replacing eq. \@ref(eq:dssurrd) into \@ref(eq:dsunivd) we can write the differential change in the entropy of the system as:
+
+\begin{equation}
+d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T_{\text{surr}}}.
+(\#eq:dssysd)
+\end{equation}
+
+According to the second law, for any spontaneous process $d S^{\mathrm{universe}}\geqslant0$, and therefore, replacing it into eq. \@ref(eq:dssysd):
+
+\begin{equation}
+d S^{\mathrm{sys}} \geqslant \frac{đQ}{T_{\text{surr}}},
+(\#eq:dssyscrit)
+\end{equation}
+
+which is the mathematical expression of the so-called **Clausius theorem**. Eq. \@ref(eq:dssyscrit) distinguishes between three conditions:
+
+\begin{equation}
+\begin{aligned}
+d S^{\mathrm{sys}} > \frac{đQ}{T} \qquad &\text{spontaneous, irreversible transformation} \\
+d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &\text{reversible transformation} \\
+d S^{\mathrm{sys}} < \frac{đQ}{T} \qquad &\text{non-spontaneous, irreversible transformation}, 
+\end{aligned}
+(\#eq:dssyscond)
+\end{equation}
+
+Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it's hard to calculate $\Delta S^{\mathrm{universe}}$. To do so, it will be necessary to measure the difference in entropy and the amount of heat that crosses the boundaries and the temperature of the surroundings. If a process produces more entropy than the amount of heat that crosses the boundaries divided by the surrounding's temperature, the process will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the surrounding's temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes, since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.
 
 ## The Third Law of Thermodynamics {#thirdlawsect}
+
+In Chapter \@ref(Thermochemistry), we have discussed how to calculate reaction enthalpies for any reaction, given the formation enthalpies of reactants and products. In this section, we will try to do the same for reaction entropies. In this case, however, our task is simplified by a fundamental law of thermodynamics, introduced by Walther Hermann Nernst (1864–1941) in 1906.^[Walther Nernst was awarded the 1920 Nobel Prize in Chemistry for his work in thermochemistry.] The statement that was initially known as Nernst's Theorem is now officially recognized as the third fundamental law of thermodynamics, and it has the following definition:
+
+> ```{definition, thirdlawdef}
+*Third Law of Thermodynamics:* The entropy of a perfectly ordered, pure, crystalline substance is zero at $T=0 \; \text{K}$.
+```
+
+This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive.   This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences. 
+
+In simpler terms, given a substance $i$, we are not able to measure absolute values of its enthalpy $H_i$ (and we must resort to known enthalpy differences, such as  $\Delta_{\mathrm{f}} H^\standardstate$ at standard pressure). At the same time, for entropy, we can measure $S_i$ thanks to the third law, and we usually report them as $S_i^\standardstate$. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
+
+\begin{equation}
+\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S_i^\standardstate,
+(\#eq:thirdlaweq)
+\end{equation}
+
+with $\nu_i$ being the usual stoichiometric coefficients with their signs given in Definition \@ref(def:nui).
+
+The careful wording in the definition of the third law  \@ref(def:thirdlawdef) allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at $T=0 \; \text{K}$. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.^[a procedure that—in practice—might be extremely difficult to achieve.] 
+
+An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to $T=0 \; \text{K}$ in a finite number of steps.
+
+[//]: maybe show S^0 vs T plot here...

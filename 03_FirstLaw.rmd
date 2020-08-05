@@ -1,22 +1,23 @@
 # First Law of Thermodynamics {#FirstLaw}
 
-## Calculation of Energy {#energyint}
-The definition of energy (U) used in thermodynamics is:
+## Calculation of Internal Energy Changes {#energyint}
+
+The internal energy ($U$) of a system is a thermodynamic state function defined as:
 
 > ```{definition, energy}
-*Energy:* Property of a system that can be wither transferred or converted.
+*Internal Energy:* Property of a system that can be wither transferred or converted.
 
 
 ```
 
-In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \@ref(def:chemistryconv), which gives the convention for the signs of heat and work, the energy of a system can be written as:
+In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \@ref(def:chemistryconv), which gives the convention for the signs of heat and work, the internal energy of a system can be written as:
 
 \begin{equation}
   U = Q + W,
   (\#eq:U)
 \end{equation}
 
-which, in differential form, reads:
+which we can write in differential form by considering that the internal energy is a state function, as:
 \begin{equation}
   dU = đ Q + đ W,
   (\#eq:dU)
@@ -25,13 +26,12 @@ which, in differential form, reads:
 which, using eq. \@ref(eq:Wdef) becomes:
 
 \begin{equation}
-  dU = đ Q - PdV,
+  dU = đ Q - PdV.
   (\#eq:dUpdv)
 \end{equation}
 
-
-### Energy in isothermal processes {#isothermalE}
-To study the behavior of the energy in a process at constant temperature ($dT=0$), James Prescott Joule (1818–1889) created the apparatus depicted in Figure \@ref(fig:FigJexp).
+### Internal energy in isothermal processes {#isothermalE}
+To study the behavior of the internal energy in a process at constant temperature ($dT=0$), James Prescott Joule (1818–1889) created the apparatus depicted in Figure \@ref(fig:FigJexp).
 
 ```{r FigJexp, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule Expansion Experiment.'}
 knitr::include_graphics('./img/OEP_Figures.006.jpeg')
@@ -44,7 +44,7 @@ The left side of the Joule apparatus's inner chamber is filled with an ideal gas
   (\#eq:JexpW)
 \end{equation}
 
-since the chambers are not in communication with the environment, $P_{\text{ext}}=0$. Thus, changes in energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, $T_i$, and at the end of the experiment $T_f$. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature will not change $T_i = T_f$. Since the temperature doesn't change there is no heat transfer, and therefore the energy stays constant:
+since the chambers are not in communication with the environment, $P_{\text{ext}}=0$. Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, $T_i$, and at the end of the experiment $T_f$. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature will not change $T_i = T_f$. Since the temperature doesn't change there is no heat transfer, and therefore the internal energy stays constant:
 
 \begin{equation}
   dU = đ Q = 0.
@@ -53,10 +53,10 @@ since the chambers are not in communication with the environment, $P_{\text{ext}
 
 > Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in a following chapter when we will study real gases. 
 
-From this simple experiment, we can conclude that the energy of an ideal gas depends only on its temperature. 
+From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature. 
 
 
-### Energy in adiabatic processes 
+### Internal energy in adiabatic processes 
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, $đ Q=0$, and the work associated with an adiabatic process becomes a state function:
 
 \begin{equation}
@@ -66,7 +66,7 @@ An adiabatic process is defined as a process that happens without the exchange o
 
 which can then be calculated using the formulas that we derived in section \@ref(workint). Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
-### Energy in isochoric processes
+### Internal energy in isochoric processes
 An isocoric process is a process in which the volume does not change. Therefore, $đ W=0$, and $dU = đ Q_V$, which for 1 mol of substance and using eq. \@ref(eq:Cvdef), becomes:
 
 \begin{equation}
@@ -74,7 +74,7 @@ An isocoric process is a process in which the volume does not change. Therefore,
   (\#eq:dUqv)
 \end{equation}
 
-Since no work is performed at these conditions, the heat becomes a state function. Eq. \@ref(eq:dUqv) also gives a mathematical justification of the concept of heat capacity at constant volume. $C_V$ can now be interpreted as the partial derivative (a coefficient) of a state function (the energy):
+Since no work is performed at these conditions, the heat becomes a state function. Eq. \@ref(eq:dUqv) also gives a mathematical justification of the concept of heat capacity at constant volume. $C_V$ can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):
 
 \begin{equation}
   C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n},
@@ -87,8 +87,8 @@ where we have replaced the total derivative $d$ with a partial one $\partial$, a
 *The heat capacity of a substance, $C_V$, represents its ability to absorb **energy** at constant **volume**.*
 ```
 
-### Energy in isobaric processes {#enthalpy}
-In an isobaric process, the pressure does not change, hence $dP=0$. Unfortunately, eq. \@ref(eq:dU) for this case does not simplify further, as happened in the two previous cases. However, in section \@ref(heatconstp), we have introduced the useful concept of heat capacity at constant $P$. $C_P$ was used in an adiabatic process in the same manner as $C_V$ was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \@ref(eq:cvstatefunc) gave a mathematical definition of $C_V$ as the partial derivative of a state function (the energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain $C_V$?
+### Internal energy in isobaric processes {#enthalpy}
+In an isobaric process, the pressure does not change, hence $dP=0$. Unfortunately, eq. \@ref(eq:dU) for this case does not simplify further, as happened in the two previous cases. However, in section \@ref(heatconstp), we have introduced the useful concept of heat capacity at constant $P$. $C_P$ was used in an adiabatic process in the same manner as $C_V$ was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \@ref(eq:cvstatefunc) gave a mathematical definition of $C_V$ as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain $C_V$?
 
 In order to do so, we can introduce a new state function, called the enthalpy ($H$), as:
 
@@ -139,7 +139,7 @@ Eq. \@ref(eq:cpstatefunc) brings also a rigorous definition of heat capacity at 
 ```
 
 ## The First Law of Thermodynamics
-We finally come to a working definition of the first law. If we take an isolated system—i.e., a system that does not exchange heat nor mass with its surroundings—its energy is conserved. If the energy is conserved, $dU=0$. Therefore, for an isolated system:
+We finally come to a working definition of the first law. If we take an isolated system—i.e., a system that does not exchange heat nor mass with its surroundings—its internal energy is conserved. If the internal energy is conserved, $dU=0$. Therefore, for an isolated system:
 
 \begin{equation}
   đ Q = -đ W,
@@ -566,7 +566,7 @@ Let's now consider the cycle in Figure \@ref(fig:FigRevCyc). The process in this
 knitr::include_graphics('./img/OEP_Figures.005.jpeg')
 ```
 
-Since the process starts and finishes at the same state, the value of the energy at the end of the process will be the same as its value at the beginning, regardless of the path:^[recall that the energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.]
+Since the process starts and finishes at the same state, the value of the internal energy at the end of the process will be the same as its value at the beginning, regardless of the path:^[recall that the internal energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.]
 
 \begin{equation}
   \oint dU=0,

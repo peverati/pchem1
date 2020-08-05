@@ -1,3 +1,176 @@
-# Chemical Potentials {#Potentials}
+# Thermodynamic Potentials {#Potentials}
 
 
+## Fundamental Equation of Thermodynamics {#fundeq}
+
+Let's summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems:
+
+\begin{equation}
+\begin{aligned}
+\text{From 1}^{\text{st}} \text{ Law:} \qquad & dU = đQ_{\mathrm{REV}}-PdV \\
+\text{From The Definition of Entropy:} \qquad & dS = \frac{đQ_{\mathrm{REV}}}{T} \rightarrow đQ_{\mathrm{REV}} = TdS \\
+\\
+\Rightarrow & dU = TdS - PdV.
+\end{aligned}
+(\#eq:dunv)
+\end{equation}
+
+Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. \@ref(eq:dunv), we notice that it exclusively involves state functions. As such, eq. \@ref(eq:dunv) applies to both reversible and irreversible processes and is the fundamental equation of thermodynamics combining both the first and the second laws. Eq. \@ref(eq:dunv), however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed. 
+
+At the end of the 19^th^ century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he termed "chemical potential" and he defined as the amount of energy that is absorbed or released due to a change of the particle number of a given chemical species. The chemical potential of species $i$ is usually abbreviated as $\mu_i$ and it enters the fundamental equation of thermodynamics as:
+
+\begin{equation}
+dU = TdS-PdV+\sum_i\mu_i dn_i,
+(\#eq:dunv2)
+\end{equation}
+
+where $dn_i$ is the differential change in the number of moles of substance $i$, and the summation extends over all chemical species whose number of moles changes in the system. 
+
+According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, $S$, volume, $V$, and number of moles ${n_i}$.^[In the case of the number of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergoes chemical reactions.] Because of their importance to determine the internal energy these three variables are crucial in thermodynamics, since they determine all thermodynamic properties of the system. Under several circumstances, however, they might not be the most convenient variables to use.^[For example, we don't always have a simple way to calculate or to measure the entropy]. To specify the important connections given by the fundamental equation, we can use the notation $U(S,V,{n_i})$ and we can term $S$, $V$, and ${n_i}$ **natural variables** of the energy.
+
+## Thermodynamic Potentials and Free Energies {#freeenergies}
+
+Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called Legendre transform. A Legendre transform is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of its conjugate variables. 
+
+Taking the internal energy as defined in eq. \@ref(eq:dunv), we can perform such transformations by subtracting products of the following conjugate variables: $T, S, P, V$. This procedure aims to define new state functions that depend on more convenient natural variables. An example of this procedure is the definition of enthalpy that we have introduced in Section \@ref(enthalpy). If we take the internal energy and subtract the product of pressure and volume, we obtain a new state function called enthalpy, as we did in eq. \@ref(eq:enthalpydef)). Taking the differential of this definition, we obtain:
+
+\begin{equation}
+dH = dU -VdP -PdV,
+(\#eq:dhdef1)
+\end{equation}
+
+and using the fundamental equation (eq. \@ref(eq:dunv2)) to replace $dU$, we obtain:
+
+\begin{equation}
+\begin{aligned}
+dH & = TdS -PdV +\sum_i\mu_i dn_i -VdP -PdV  \\
+   & = TdS - VdP +\sum_i\mu_i dn_i.
+\end{aligned}
+(\#eq:dhdef2)
+\end{equation}
+
+which is the fundamental equation for enthalpy. The natural variables of the enthalpy are $S$, $P$, and ${n_i}$. The Legendre transform has allowed us to go from $U(S,V,{n_i})$ to $H(S,P,{n_i})$ by replacing the dependance on the extensive variable, $V$, with an intensive one, $P$.
+
+Following the same procedure, we can perform another Legendre transform with the goal of replacing the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, $A$, as:
+
+\begin{equation}
+A = U -TS
+(\#eq:dadef1)
+\end{equation}
+
+which, taking the differential and using the fundamental equation (eq. \@ref(eq:dunv2)) becomes:
+
+\begin{equation}
+\begin{aligned}
+dA &= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
+   &= -SdT -PdV +\sum_i \mu_i dn_i.
+\end{aligned}
+(\#eq:dadef2)
+\end{equation}
+
+The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894) and its natural variables are temperature, volume, and number of moles.
+
+Finally, if we perform a Legendre transform on the internal energy with the goal of replacing both the entropy and the volume with intensive variables, we can define a new function called the Gibbs free energy, $G$, as:
+
+\begin{equation}
+G = U -TS -PV
+(\#eq:dgdef1)
+\end{equation}
+
+which, taking again the differential and using eq. \@ref(eq:dunv2) becomes:
+
+\begin{equation}
+\begin{aligned}
+dG &= dU -SdT -TdS -VdP -PdV = TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS -VdP -PdV \\
+   &= VdP -SdT +\sum_i\mu_i dn_i.
+\end{aligned}
+(\#eq:dgdef2)
+\end{equation} 
+
+The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
+
+A summary of the four thermodynamic potential is given in the following table.
+
+|          **Name**         | **Symbol** |    **Fundamental Equation**    | **Natural Variables** |
+|:-------------------------:|:----------:|:------------------------------:|:---------------------:|
+| **Internal Energy**       |     $U$    |  $dU=TdS-PdV+\sum_i\mu_i dn_i$ |      $S,V,{n_i}$      |
+| **Enthalpy**              |     $H$    |  $dH=TdS+VdP+\sum_i\mu_i dn_i$ |      $S,P,{n_i}$      |
+| **Helmholtz Free Energy** |     $A$    | $dA=-Sdt-PdV+\sum_i\mu_i dn_i$ |      $T,V,{n_i}$      |
+| **Gibbs Free Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,{n_i}$      |
+
+
+Thermodynamic potentials are the analogue of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:
+
+- Internal energy ($U$) is the capacity to do work plus the capacity to release heat.
+- Enthalpy ($H$) is the capacity to do non-mechanical work plus the capacity to release heat.
+- Gibbs free energy ($G$) is the capacity to do non-mechanical work.
+- Helmholtz free energy ($A$) is the capacity to do mechanical plus non-mechanical work.
+
+## xxx REDO this section here: xxx
+
+Going back to Clausius theorem (Section. \@ref(spontS)), we can write the criterion for spontaneity, eq. \@ref(eq:dssyscrit), as:
+
+\begin{equation}
+TdS \geq đQ 0,
+(\#eq:duchem)
+\end{equation}
+
+which replacying $đQ = dU+PdV$ becomes:
+\begin{equation}
+\begin{aligned}
+TdS & \geq dU + PdV 0 \\
+-dU -PdV +TdS & \geq 0.
+\end{aligned}
+(\#eq:duchem1)
+\end{equation}
+
+Eq. \@ref(eq:duchem1) is the 
+
+
+which, at constant $T$ and $P$ becomes:
+
+\begin{equation}
+\begin{aligned}
+d(U-TS)_T & \leq 0 \\
+d(A)_T & \leq 0 \\
+\end{aligned}
+(\#eq:duchem2)
+\end{equation}
+
+
+
+The Legendre transform procedure translates all information contained in the original function to the new one. Therefore, $H(S,P,{n_i})$, $A(T,V,{n_i})$, and $G(T,P,{n_i})$ all contain the same information that is in $U(S,V,{n_i})$. However, the new functions depends on different natural variables, and they are therefore useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term $\sum_i\mu_i dn_i$ that appears in each thermodynamic potential. In order to do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes of the internal energy at constant $S$ and constant $V$:
+
+\begin{equation}
+dU(S,V,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dS=dV=0.
+(\#eq:duchem)
+\end{equation}
+
+Similarly:
+
+\begin{equation}
+\begin{aligned}
+dH(S,P,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dS=dP=0, \\
+dA(T,V,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dT=dV=0, \\
+dG(T,P,{n_i}) = \sum_i\mu_i dn_i \; \text{if} \; dT=dP=0.
+\end{aligned}
+(\#eq:dhagchem)
+\end{equation}
+
+The latter two cases are particularly interesting, since most of chemistry happens at either constant volume (for example several industrial processes in chemical plants), or constant pressure (for example most processes in a chemistry lab). Since $dS=0$ is not a requirement for the Helmholtz  free energy to describe chemical changes, we can apply it to study non-isenthalpic processes. If a process is not isenthalpic, it either increases the energy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not.
+
+
+## Maxwell Relations {#maxwell}
+
+Let's consider the four thermodynamic potentials that we have derived in XXX: $U(S,V,{n_i})$, $H(S,P,{n_i})$, $A(T,V,{n_i})$, $G(T,P,{n_i})$. From the simple knowledge of their natural variables, we could reconstruct the definition of the potential by using the total differential:
+
+
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial^2 U }{\partial S \partial V} &=& +\left(\frac{\partial T}{\partial V}\right)_S &=& -\left(\frac{\partial P}{\partial S}\right)_V \\
+\frac{\partial^2 H }{\partial S \partial P} &=& +\left(\frac{\partial T}{\partial P}\right)_S &=& +\left(\frac{\partial V}{\partial S}\right)_P\\
+-\frac{\partial^2 A }{\partial T \partial V} &=& +\left(\frac{\partial S}{\partial V}\right)_T &=& +\left(\frac{\partial P}{\partial T}\right)_V\\
+\frac{\partial^2 G }{\partial T \partial P} &=& -\left(\frac{\partial S}{\partial P}\right)_T &=& +\left(\frac{\partial V}{\partial T}\right)_P
+\end{aligned}
+\end{equation}

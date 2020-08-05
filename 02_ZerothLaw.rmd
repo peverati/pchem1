@@ -22,6 +22,7 @@ Notice that when we state the zeroth law, it appears intuitive. However, this is
 
 
 ## Calculation of Work {#workint}
+In thermodynamics, work ($W$) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because *work is a path function*. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.  
 
 ### Free expansion at constant temperature
 ```{r Fig1c3, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Free Expansion at Constant Temperature of an Ideal Gas'}
@@ -127,7 +128,7 @@ Comparing eq. \@ref(eq:WintF) with eq. \@ref(eq:WintsolvedP) shows how different
 
 ## Calculation of Heat {#heatint}
 
-Heat (Q) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured easily, but its mathematical interpretation is complicated because *heat is a path function*.
+Heat ($Q$) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because *heat is a path function*.
 As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in $\frac{\text{J}}{\text{mol K}}$. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.
 
 ### Processes at constant volume (isochoric)
