@@ -290,7 +290,7 @@ and, following the same procedure used in Section \@ref(entropyint), we can rewr
 
 \begin{equation}
 \frac{Q_3}{Q_1} < - \frac{T_l}{T_h} \longrightarrow \frac{Q_3}{T_l} + \frac{Q_1}{T_h} < 0 \longrightarrow \sum_i \frac{Q}{T} < 0,
-(\#eq:effcIRR)
+(\#eq:effcIRR2)
 \end{equation}
 
 which can be generalized using calculus to:
@@ -331,7 +331,7 @@ We can then use Clausius inequality (eq. \@ref(eq:clausiusineq)) to write:
 \begin{aligned}
 \int_1^2 \frac{đQ_{\mathrm{IRR}}}{T} + \int_2^1 \frac{đQ_{\mathrm{REV}}}{T} < 0,
 \end{aligned}
-(\#eq:qirrcycle)
+(\#eq:qirrcycle1)
 \end{equation}
 
 which can be rearranged as:

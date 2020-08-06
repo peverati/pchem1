@@ -71,7 +71,7 @@ Calculate the standard entropy of vaporization of water knowing $\Delta_{\mathrm
 
 \begin{equation}
 \Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^\standardstate = \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
-(\#eq:trouton)
+(\#eq:trouton1)
 \end{equation}
 
 The entropy of vaporization of water is far from Trouton's rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.
@@ -191,18 +191,18 @@ Since the entropy changes in the universe are positive, the process is spontaneo
 By replacing eq. \@ref(eq:dssurrd) into \@ref(eq:dsunivd) we can write the differential change in the entropy of the system as:
 
 \begin{equation}
-d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T_{\text{surr}}}.
+d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T}.
 (\#eq:dssysd)
 \end{equation}
 
-According to the second law, for any spontaneous process $d S^{\mathrm{universe}}\geqslant0$, and therefore, replacing it into eq. \@ref(eq:dssysd):
+According to the second law, for any spontaneous process $d S^{\mathrm{universe}}\geq0$, and therefore, replacing it into eq. \@ref(eq:dssysd):
 
 \begin{equation}
-d S^{\mathrm{sys}} \geqslant \frac{đQ}{T_{\text{surr}}},
-(\#eq:dssyscrit)
+d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}},
+(\#eq:dssyscrit7)
 \end{equation}
 
-which is the mathematical expression of the so-called **Clausius theorem**. Eq. \@ref(eq:dssyscrit) distinguishes between three conditions:
+which is the mathematical expression of the so-called **Clausius theorem**. Eq. \@ref(eq:dssyscrit7) distinguishes between three conditions:
 
 \begin{equation}
 \begin{aligned}
@@ -213,7 +213,7 @@ d S^{\mathrm{sys}} < \frac{đQ}{T} \qquad &\text{non-spontaneous, irreversible t
 (\#eq:dssyscond)
 \end{equation}
 
-Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it's hard to calculate $\Delta S^{\mathrm{universe}}$. To do so, it will be necessary to measure the difference in entropy and the amount of heat that crosses the boundaries and the temperature of the surroundings. If a process produces more entropy than the amount of heat that crosses the boundaries divided by the surrounding's temperature, the process will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the surrounding's temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes, since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.
+Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it's hard to calculate $\Delta S^{\mathrm{universe}}$. Eq. \@ref(eq:dssyscrit7) requires knowledge of quantities that are dependent on the system exclusively, such as the difference in entropy, the amount of heat that crosses the boundaries and the absolute temperature of the process. If a process produces more entropy than the amount of heat that crosses the boundaries divided by the absolute temperature, the process will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the abosulte temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes, since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.
 
 ## The Third Law of Thermodynamics {#thirdlawsect}
 

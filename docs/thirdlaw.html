@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-04" />
+<meta name="date" content="2020-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -136,11 +136,19 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a><ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
-<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials and Free Energies</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#xxx-redo-this-section-here-xxx"><i class="fa fa-check"></i><b>8.3</b> xxx REDO this section here: xxx</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a></li>
+<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a><ul>
+<li class="chapter" data-level="9.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#Gbehavior"><i class="fa fa-check"></i><b>9.2</b> Behavior of the Gibbs Free Energy</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.1</b> Pressure dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.2</b> Temperature dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.3</b> Composition dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#chemeq"><i class="fa fa-check"></i><b>9.3</b> Chemical Equilibrium</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>10</b> Real Gases</a></li>
 <li class="chapter" data-level="11" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>11</b> Phase Equilibrium</a></li>
 <li class="chapter" data-level="12" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>12</b> Multi-Component Phase Diagrams</a></li>
@@ -224,9 +232,9 @@ or, similarly:
 <div class="exercise">
 <p><span id="exr:troutonex" class="exercise"><strong>Exercise 7.1  </strong></span>Calculate the standard entropy of vaporization of water knowing <span class="math inline">\(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= 44 \  \text{kJ/mol}\)</span>, as calculated in Exercise <a href="Thermochemistry.html#exr:HessLawEx">4.1</a>.</p>
 <p><em>Solution:</em> Using eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>—and knowing that at standard conditions of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \  \text{bar}\)</span> the boiling temperature of water is 373 K—we calculate:</p>
-<p><span class="math display" id="eq:trouton">\[\begin{equation}
+<p><span class="math display" id="eq:trouton1">\[\begin{equation}
 \Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
-\tag{7.7}
+\tag{7.8}
 \end{equation}\]</span></p>
 The entropy of vaporization of water is far from Trouton’s rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.
 </div>
@@ -240,7 +248,7 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 \text{reversible:} \qquad &amp; \frac{đQ_{\mathrm{REV}}}{T} = 0 \longrightarrow \Delta S^{\mathrm{sys}} = 0 \quad \text{(isenthalpic),}\\
 \text{irreversible:} \qquad &amp; \frac{đQ_{\mathrm{IRR}}}{T}  = 0 \longrightarrow \Delta S^{\mathrm{sys}} \neq 0. \\
 \end{aligned}
-\tag{7.8}
+\tag{7.9}
 \end{equation}\]</span></p>
 </div>
 <div id="entropy-in-isochoric-processes" class="section level3">
@@ -248,12 +256,12 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 <p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using eq. <a href="ZerothLaw.html#eq:Cvint1">(2.14)</a>. Since the heat exchanged at those conditions equals the energy (eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
 <p><span class="math display" id="eq:sconstV1">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T} dT,
-\tag{7.9}
+\tag{7.10}
 \end{equation}\]</span></p>
 <p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature and solving the integral on the right-hand side, becomes:</p>
 <p><span class="math display" id="eq:sconstV">\[\begin{equation}
 \Delta S^{\mathrm{sys}} \approx n C_V \ln \frac{T_f}{T_i}.
-\tag{7.10}
+\tag{7.11}
 \end{equation}\]</span></p>
 </div>
 <div id="entropy-in-isobaric-processes" class="section level3">
@@ -261,12 +269,12 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 <p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.16)</a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
 <p><span class="math display" id="eq:sconstP1">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
-\tag{7.11}
+\tag{7.12}
 \end{equation}\]</span></p>
 <p>which, assuming <span class="math inline">\(C_P\)</span> independent of temperature and solving the integral on the right-hand side, becomes:</p>
 <p><span class="math display" id="eq:sconstP">\[\begin{equation}
 \Delta S^{\mathrm{sys}} \approx n C_P \ln \frac{T_f}{T_i}.
-\tag{7.12}
+\tag{7.13}
 \end{equation}\]</span></p>
 </div>
 </div>
@@ -275,12 +283,12 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 <p>While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:</p>
 <p><span class="math display" id="eq:dssurr">\[\begin{equation}
 \Delta S^{\mathrm{surr}} = \frac{Q_{\text{surr}}}{T_{\text{surr}}}=\frac{-Q_{\text{sys}}}{T_{\text{surr}}},
-\tag{7.13}
+\tag{7.14}
 \end{equation}\]</span></p>
 <p>or, in differential form:</p>
 <p><span class="math display" id="eq:dssurrd">\[\begin{equation}
 d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
-\tag{7.14}
+\tag{7.15}
 \end{equation}\]</span></p>
 <p>where the substitution <span class="math inline">\(Q_{\text{surr}}=-Q_{\text{sys}}\)</span> can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction happening in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, <span class="math inline">\(T_{\text{surr}}\)</span> will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.</p>
 <blockquote>
@@ -296,17 +304,17 @@ d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\tex
 \\
 \Delta S^{\text{sys}} &amp; = \Delta S_1 + \Delta S_2 + \Delta S_3
 \end{aligned}
-\tag{7.15}
+\tag{7.16}
 \end{equation}\]</span></p>
-<p><span class="math inline">\(\Delta S_1\)</span> and <span class="math inline">\(\Delta S_3\)</span> are the isochoric heating and cooling processes of liquid and solid water, respectively, and can be calculated filling the given data into eq. <a href="thirdlaw.html#eq:sconstP1">(7.11)</a>. <span class="math inline">\(\Delta S_2\)</span> is a phase change (isothermal process) and can be calculated translating eq. <a href="thirdlaw.html#eq:spc">(7.6)</a> to the freezing transformation. Overall:</p>
+<p><span class="math inline">\(\Delta S_1\)</span> and <span class="math inline">\(\Delta S_3\)</span> are the isochoric heating and cooling processes of liquid and solid water, respectively, and can be calculated filling the given data into eq. <a href="thirdlaw.html#eq:sconstP1">(7.12)</a>. <span class="math inline">\(\Delta S_2\)</span> is a phase change (isothermal process) and can be calculated translating eq. <a href="thirdlaw.html#eq:spc">(7.6)</a> to the freezing transformation. Overall:</p>
 <p><span class="math display" id="eq:supercooledsyst2">\[\begin{equation}
 \begin{aligned}
 \Delta S^{\text{sys}} &amp; = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
 &amp; = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
 \end{aligned}
-\tag{7.16}
+\tag{7.17}
 \end{equation}\]</span></p>
-<p>Don’t be confused by the fact that <span class="math inline">\(\Delta S^{\text{sys}}\)</span> is negative. This is <strong><em>not</em></strong> the entropy of the universe, hence it tells <strong><em>nothing</em></strong> about spontaneity! We can now calculate <span class="math inline">\(\Delta S^{\text{surr}}\)</span> from <span class="math inline">\(Q_{\text{sys}}\)</span>, noting that we can calculate the enthalpy around the same cycle in eq. <a href="thirdlaw.html#eq:supercooledsyst">(7.15)</a>. To do that, we already have <span class="math inline">\(\Delta_{\mathrm{fus}}H\)</span> from the given data, and we can calculate <span class="math inline">\(\Delta H_1\)</span> and <span class="math inline">\(\Delta H_3\)</span> using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.16)</a>.</p>
+<p>Don’t be confused by the fact that <span class="math inline">\(\Delta S^{\text{sys}}\)</span> is negative. This is <strong><em>not</em></strong> the entropy of the universe, hence it tells <strong><em>nothing</em></strong> about spontaneity! We can now calculate <span class="math inline">\(\Delta S^{\text{surr}}\)</span> from <span class="math inline">\(Q_{\text{sys}}\)</span>, noting that we can calculate the enthalpy around the same cycle in eq. <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a>. To do that, we already have <span class="math inline">\(\Delta_{\mathrm{fus}}H\)</span> from the given data, and we can calculate <span class="math inline">\(\Delta H_1\)</span> and <span class="math inline">\(\Delta H_3\)</span> using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.16)</a>.</p>
 <p><span class="math display" id="eq:supercooledsurr">\[\begin{equation}
 \begin{aligned}
 Q^{\text{sys}} &amp; = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
@@ -314,12 +322,12 @@ Q^{\text{sys}} &amp; = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_
 \\
 \Delta S^{\text{surr}} &amp; = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
 \end{aligned}
-\tag{7.17}
+\tag{7.18}
 \end{equation}\]</span></p>
-<p>Bringing <a href="thirdlaw.html#eq:supercooledsyst">(7.15)</a> and <a href="thirdlaw.html#eq:supercooledsurr">(7.17)</a> results together, we obtain:</p>
+<p>Bringing <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a> and <a href="thirdlaw.html#eq:supercooledsurr">(7.18)</a> results together, we obtain:</p>
 <p><span class="math display" id="eq:supercooledfinal">\[\begin{equation}
 \Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=-0.7 \; \text{J/K}.
-\tag{7.18}
+\tag{7.19}
 \end{equation}\]</span></p>
 Since the entropy changes in the universe are positive, the process is spontaneous, as expected.
 </div>
@@ -327,26 +335,26 @@ Since the entropy changes in the universe are positive, the process is spontaneo
 </div>
 <div id="spontS" class="section level2">
 <h2><span class="header-section-number">7.3</span> Clausius Theorem</h2>
-<p>By replacing eq. <a href="thirdlaw.html#eq:dssurrd">(7.14)</a> into <a href="thirdlaw.html#eq:dsunivd">(7.2)</a> we can write the differential change in the entropy of the system as:</p>
+<p>By replacing eq. <a href="thirdlaw.html#eq:dssurrd">(7.15)</a> into <a href="thirdlaw.html#eq:dsunivd">(7.2)</a> we can write the differential change in the entropy of the system as:</p>
 <p><span class="math display" id="eq:dssysd">\[\begin{equation}
-d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T_{\text{surr}}}.
-\tag{7.19}
-\end{equation}\]</span></p>
-<p>According to the second law, for any spontaneous process <span class="math inline">\(d S^{\mathrm{universe}}\geqslant0\)</span>, and therefore, replacing it into eq. <a href="thirdlaw.html#eq:dssysd">(7.19)</a>:</p>
-<p><span class="math display" id="eq:dssyscrit">\[\begin{equation}
-d S^{\mathrm{sys}} \geqslant \frac{đQ}{T_{\text{surr}}},
+d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T}.
 \tag{7.20}
 \end{equation}\]</span></p>
-<p>which is the mathematical expression of the so-called <strong>Clausius theorem</strong>. Eq. <a href="thirdlaw.html#eq:dssyscrit">(7.20)</a> distinguishes between three conditions:</p>
+<p>According to the second law, for any spontaneous process <span class="math inline">\(d S^{\mathrm{universe}}\geq0\)</span>, and therefore, replacing it into eq. <a href="thirdlaw.html#eq:dssysd">(7.20)</a>:</p>
+<p><span class="math display" id="eq:dssyscrit7">\[\begin{equation}
+d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}},
+\tag{7.21}
+\end{equation}\]</span></p>
+<p>which is the mathematical expression of the so-called <strong>Clausius theorem</strong>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> distinguishes between three conditions:</p>
 <p><span class="math display" id="eq:dssyscond">\[\begin{equation}
 \begin{aligned}
 d S^{\mathrm{sys}} &gt; \frac{đQ}{T} \qquad &amp;\text{spontaneous, irreversible transformation} \\
 d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &amp;\text{reversible transformation} \\
 d S^{\mathrm{sys}} &lt; \frac{đQ}{T} \qquad &amp;\text{non-spontaneous, irreversible transformation}, 
 \end{aligned}
-\tag{7.21}
+\tag{7.22}
 \end{equation}\]</span></p>
-<p>Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it’s hard to calculate <span class="math inline">\(\Delta S^{\mathrm{universe}}\)</span>. To do so, it will be necessary to measure the difference in entropy and the amount of heat that crosses the boundaries and the temperature of the surroundings. If a process produces more entropy than the amount of heat that crosses the boundaries divided by the surrounding’s temperature, the process will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the surrounding’s temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes, since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.</p>
+<p>Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it’s hard to calculate <span class="math inline">\(\Delta S^{\mathrm{universe}}\)</span>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> requires knowledge of quantities that are dependent on the system exclusively, such as the difference in entropy, the amount of heat that crosses the boundaries and the absolute temperature of the process. If a process produces more entropy than the amount of heat that crosses the boundaries divided by the absolute temperature, the process will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the abosulte temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes, since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.</p>
 </div>
 <div id="thirdlawsect" class="section level2">
 <h2><span class="header-section-number">7.4</span> The Third Law of Thermodynamics</h2>
@@ -361,7 +369,7 @@ d S^{\mathrm{sys}} &lt; \frac{đQ}{T} \qquad &amp;\text{non-spontaneous, irrever
 <p>In simpler terms, given a substance <span class="math inline">\(i\)</span>, we are not able to measure absolute values of its enthalpy <span class="math inline">\(H_i\)</span> (and we must resort to known enthalpy differences, such as <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at standard pressure). At the same time, for entropy, we can measure <span class="math inline">\(S_i\)</span> thanks to the third law, and we usually report them as <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:</p>
 <p><span class="math display" id="eq:thirdlaweq">\[\begin{equation}
 \Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
-\tag{7.22}
+\tag{7.23}
 \end{equation}\]</span></p>
 <p>with <span class="math inline">\(\nu_i\)</span> being the usual stoichiometric coefficients with their signs given in Definition <a href="Thermochemistry.html#def:nui">4.2</a>.</p>
 <p>The careful wording in the definition of the third law <a href="thirdlaw.html#def:thirdlawdef">7.1</a> allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at <span class="math inline">\(T=0 \; \text{K}\)</span>. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a></p>

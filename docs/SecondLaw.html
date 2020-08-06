@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-04" />
+<meta name="date" content="2020-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -136,11 +136,19 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a><ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
-<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials and Free Energies</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#xxx-redo-this-section-here-xxx"><i class="fa fa-check"></i><b>8.3</b> xxx REDO this section here: xxx</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a></li>
+<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a><ul>
+<li class="chapter" data-level="9.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#Gbehavior"><i class="fa fa-check"></i><b>9.2</b> Behavior of the Gibbs Free Energy</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.1</b> Pressure dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.2</b> Temperature dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.3</b> Composition dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#chemeq"><i class="fa fa-check"></i><b>9.3</b> Chemical Equilibrium</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>10</b> Real Gases</a></li>
 <li class="chapter" data-level="11" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>11</b> Phase Equilibrium</a></li>
 <li class="chapter" data-level="12" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>12</b> Multi-Component Phase Diagrams</a></li>
@@ -172,7 +180,7 @@
 <p>In the previous Chapter, we have discussed heat engines as a mean of understanding how some processes are spontaneous while others are not. Carnot’s findings did not just simply inspired Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822–1888) introducing the concept of entropy. In this Chapter, we will also discuss entropy in the context of the second and the third law of thermodynamics.</p>
 <div id="entropyint" class="section level2">
 <h2><span class="header-section-number">6.1</span> Entropy in Thermodynamics</h2>
-<p>Let’s return to the definition of efficiency of a Carnot cycle and bring together eqs. <a href="ThermodynamicCycles.html#eq:effCC2">(5.16)</a> and <a href="ThermodynamicCycles.html#eq:effCC3">(5.17)</a>:</p>
+<p>Let’s return to the definition of efficiency of a Carnot cycle and bring together eqs. <a href="ThermodynamicCycles.html#eq:effCC2">(5.17)</a> and <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a>:</p>
 <p><span class="math display" id="eq:effcQT">\[\begin{equation}
 \varepsilon = 1+\frac{Q_3}{Q_1} = 1-\frac{T_l}{T_h}.
 \tag{6.1}
@@ -215,27 +223,27 @@ dS = \frac{đQ_{\mathrm{REV}}}{T},
 </div>
 <div id="irreversible-cycles" class="section level2">
 <h2><span class="header-section-number">6.2</span> Irreversible Cycles</h2>
-<p>Up to this point, we have discussed <em>reversible</em> cycles only. Notice that the heat that enters the definition of entropy (Definition <a href="SecondLaw.html#def:entropy">6.1</a> is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. <a href="SecondLaw.html#eq:dentropy">(6.5)</a> becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. <a href="ThermodynamicCycles.html#eq:effCC3">(5.17)</a> is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. <a href="SecondLaw.html#eq:effcQT">(6.1)</a> for an <em>irreversible</em> cycle will not hold anymore, and must be rewritten as:</p>
+<p>Up to this point, we have discussed <em>reversible</em> cycles only. Notice that the heat that enters the definition of entropy (Definition <a href="SecondLaw.html#def:entropy">6.1</a> is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. <a href="SecondLaw.html#eq:dentropy">(6.5)</a> becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a> is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. <a href="SecondLaw.html#eq:effcQT">(6.1)</a> for an <em>irreversible</em> cycle will not hold anymore, and must be rewritten as:</p>
 <p><span class="math display" id="eq:effcIRR">\[\begin{equation}
 \overbrace{1+\frac{Q_3}{Q_1}}^{\varepsilon_{\mathrm{IRR}}} &lt; \overbrace{1-\frac{T_l}{T_h}}^{\varepsilon_{\mathrm{REV}}},
 \tag{6.7}
 \end{equation}\]</span></p>
 <p>and, following the same procedure used in Section <a href="SecondLaw.html#entropyint">6.1</a>, we can rewrite eq. <a href="SecondLaw.html#eq:effcIRR">(6.7)</a> as:</p>
-<p><span class="math display" id="eq:effcIRR">\[\begin{equation}
+<p><span class="math display" id="eq:effcIRR2">\[\begin{equation}
 \frac{Q_3}{Q_1} &lt; - \frac{T_l}{T_h} \longrightarrow \frac{Q_3}{T_l} + \frac{Q_1}{T_h} &lt; 0 \longrightarrow \sum_i \frac{Q}{T} &lt; 0,
-\tag{6.7}
+\tag{6.8}
 \end{equation}\]</span></p>
 <p>which can be generalized using calculus to:</p>
 <p><span class="math display" id="eq:dqirrineq">\[\begin{equation}
 \oint \frac{đQ_{\mathrm{IRR}}}{T} &lt; 0.
-\tag{6.8}
-\end{equation}\]</span></p>
-<p>Putting eqs. <a href="SecondLaw.html#eq:ds0">(6.6)</a> and <a href="SecondLaw.html#eq:dqirrineq">(6.8)</a> together, we obtain:</p>
-<p><span class="math display" id="eq:clausiusineq">\[\begin{equation}
-\oint \frac{đQ}{T} \leq 0,
 \tag{6.9}
 \end{equation}\]</span></p>
-<p>where the equal sign holds for reversible transformations exclusively, while the inequality sign holds for irreversible ones. Eq. <a href="SecondLaw.html#eq:clausiusineq">(6.9)</a> is known as <strong>Clausius inequality</strong>.</p>
+<p>Putting eqs. <a href="SecondLaw.html#eq:ds0">(6.6)</a> and <a href="SecondLaw.html#eq:dqirrineq">(6.9)</a> together, we obtain:</p>
+<p><span class="math display" id="eq:clausiusineq">\[\begin{equation}
+\oint \frac{đQ}{T} \leq 0,
+\tag{6.10}
+\end{equation}\]</span></p>
+<p>where the equal sign holds for reversible transformations exclusively, while the inequality sign holds for irreversible ones. Eq. <a href="SecondLaw.html#eq:clausiusineq">(6.10)</a> is known as <strong>Clausius inequality</strong>.</p>
 </div>
 <div id="secondlaw" class="section level2">
 <h2><span class="header-section-number">6.3</span> The Second Law of Thermodynamics</h2>
@@ -249,26 +257,26 @@ Figure 6.1: Spontaneous and Non-Spontaneous Transformations in a Cycle
 <p>This cycle is similar to the cycle depicted in Figure <a href="ThermodynamicCycles.html#fig:FigJexpC">5.1</a> for the Joule’s expansion experiment. In this case, we have an intuitive understanding of the spontaneity of the irreversible expansion process, while the non-spontaneity of the backward compression. Since the cycle has at least one step that is irreversible, it is overall irreversible, and we can calculate:</p>
 <p><span class="math display" id="eq:qirrcycle">\[\begin{equation}
 \oint \frac{đQ_{\mathrm{IRR}}}{T} = \int_1^2 \frac{đQ_{\mathrm{IRR}}}{T} + \int_2^1 \frac{đQ_{\mathrm{REV}}}{T}.
-\tag{6.10}
+\tag{6.11}
 \end{equation}\]</span></p>
-<p>We can then use Clausius inequality (eq. <a href="SecondLaw.html#eq:clausiusineq">(6.9)</a>) to write:</p>
-<p><span class="math display" id="eq:qirrcycle">\[\begin{equation}
+<p>We can then use Clausius inequality (eq. <a href="SecondLaw.html#eq:clausiusineq">(6.10)</a>) to write:</p>
+<p><span class="math display" id="eq:qirrcycle1">\[\begin{equation}
 \begin{aligned}
 \int_1^2 \frac{đQ_{\mathrm{IRR}}}{T} + \int_2^1 \frac{đQ_{\mathrm{REV}}}{T} &lt; 0,
 \end{aligned}
-\tag{6.10}
+\tag{6.12}
 \end{equation}\]</span></p>
 <p>which can be rearranged as:</p>
 <p><span class="math display" id="eq:qirrcycle2">\[\begin{equation}
 \underbrace{\int_1^2 \frac{đQ_{\mathrm{REV}}}{T}}_{\int_1^2 dS = \Delta S} &gt; \underbrace{\int_1^2 \frac{đQ_{\mathrm{IRR}}}{T}}_{=0},
-\tag{6.11}
+\tag{6.13}
 \end{equation}\]</span></p>
-<p>where we have used the fact that, for an isolated system (the universe), <span class="math inline">\(đQ_{\mathrm{IRR}}=0\)</span>. Eq. <a href="SecondLaw.html#eq:qirrcycle2">(6.11)</a> can be rewritten as:</p>
+<p>where we have used the fact that, for an isolated system (the universe), <span class="math inline">\(đQ_{\mathrm{IRR}}=0\)</span>. Eq. <a href="SecondLaw.html#eq:qirrcycle2">(6.13)</a> can be rewritten as:</p>
 <p><span class="math display" id="eq:secondlaweq">\[\begin{equation}
 \Delta S &gt; 0,
-\tag{6.12}
+\tag{6.14}
 \end{equation}\]</span></p>
-<p>which proves that for any irreversible process in an isolated system, the entropy is increasing. Using eq. <a href="SecondLaw.html#eq:secondlaweq">(6.12)</a> and considering that the only system that is truly isolated is the universe, we can write a concise statement for a new fundamental law of thermodynamics:</p>
+<p>which proves that for any irreversible process in an isolated system, the entropy is increasing. Using eq. <a href="SecondLaw.html#eq:secondlaweq">(6.14)</a> and considering that the only system that is truly isolated is the universe, we can write a concise statement for a new fundamental law of thermodynamics:</p>
 <blockquote>
 
 <div class="definition">

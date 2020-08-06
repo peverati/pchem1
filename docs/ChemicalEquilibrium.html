@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-04" />
+<meta name="date" content="2020-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -136,11 +136,19 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a><ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
-<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials and Free Energies</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#xxx-redo-this-section-here-xxx"><i class="fa fa-check"></i><b>8.3</b> xxx REDO this section here: xxx</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a></li>
+<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a><ul>
+<li class="chapter" data-level="9.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#Gbehavior"><i class="fa fa-check"></i><b>9.2</b> Behavior of the Gibbs Free Energy</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.1</b> Pressure dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.2</b> Temperature dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.3</b> Composition dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#chemeq"><i class="fa fa-check"></i><b>9.3</b> Chemical Equilibrium</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>10</b> Real Gases</a></li>
 <li class="chapter" data-level="11" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>11</b> Phase Equilibrium</a></li>
 <li class="chapter" data-level="12" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>12</b> Multi-Component Phase Diagrams</a></li>
@@ -169,7 +177,126 @@
             <section class="normal" id="section-">
 <div id="ChemicalEquilibrium" class="section level1">
 <h1><span class="header-section-number">9</span> Chemical Equilibrium</h1>
+<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
+<div id="gibbseqsec" class="section level2">
+<h2><span class="header-section-number">9.1</span> Gibbs Equation</h2>
+<p>Recalling from the previous chapter, the definition of <span class="math inline">\(G\)</span> is:</p>
+<p><span class="math display" id="eq:dgdeftot">\[\begin{equation}
+G = U -TS -PV = H-TS,
+\tag{9.1}
+\end{equation}\]</span></p>
+<p>which, taking the differential at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, becomes:</p>
+<p><span class="math display" id="eq:dgdeftot2" id="eq:dgdeftot2">\[\begin{equation}
+\begin{aligned}
+dG &amp;= dU \; \overbrace{-SdT}^{=0} -TdS \; \overbrace{-VdP}^{=0} -PdV = dH \; \overbrace{-SdT}^{=0} -TdS \\
+   &amp;= dH -TdS.
+\end{aligned}
+\tag{9.2}
+\end{equation}\]</span></p>
+<p>Integrating eq. \tag{9.2} between the initial and final states of a process results in:</p>
+<p><span class="math display" id="eq:gibbseq">\[\begin{equation}
+\begin{aligned}
+\int_i^f dG &amp;= \int_i^f dH -T \int_i^f dS \\
+\Delta G &amp;= \Delta H -T \Delta S
+\end{aligned}
+\tag{9.3}
+\end{equation}\]</span></p>
+<p>which is the famous <strong>Gibbs equation</strong> for <span class="math inline">\(\Delta G\)</span>. Using Definition <a href="Potentials.html#def:helmgibbsminimum">8.1</a>, we can use <span class="math inline">\(\Delta G\)</span> to infer the spontaneity of a chemical process that happens at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> using <span class="math inline">\(\Delta G \leq 0\)</span>. If we set ourselves at standard conditions, we can calculate <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> for any reaction as:</p>
+<p><span class="math display" id="eq:gibbseq2">\[\begin{equation}
+\begin{aligned}
+\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}-T \Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}\\
+&amp;= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}+ T \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
+\end{aligned}
+\tag{9.4}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in Chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
+<p>The following four possibilities are possible for <span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of a chemical reaction:</p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="3%" />
+<col width="17%" />
+<col width="17%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th></th>
+<th align="center"><span class="math inline">\(\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th align="center"><span class="math inline">\(\Delta S^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th align="center">Spontaneous?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">–</td>
+<td><em>if</em></td>
+<td align="center">-</td>
+<td align="center">+</td>
+<td align="center"><em>Always</em></td>
+</tr>
+<tr class="even">
+<td align="center">+</td>
+<td><em>if</em></td>
+<td align="center">+</td>
+<td align="center">-</td>
+<td align="center"><em>Never</em></td>
+</tr>
+<tr class="odd">
+<td align="center">-/+</td>
+<td><em>if</em></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center"><em>Depends on <span class="math inline">\(T\)</span>:</em> <br> <span class="math inline">\(\scriptstyle{\text{spontaneous at low } T}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">+/-</td>
+<td><em>if</em></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"><em>Depends on <span class="math inline">\(T\)</span>:</em> <br> <span class="math inline">\(\scriptstyle{\text{spontaneous at high } T}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Or, in other words:</p>
+<ul>
+<li>Exothermic reactions that increase the entropy are always spontaneous.</li>
+<li>Endothermic reactions that reduce the entropy are always non-spontaneous.</li>
+<li>For the other two cases, the spontaneity of the reaction depends on the temperature:
+<ul>
+<li>Exothermic reactions that reduce the entropy are spontaneous at low <span class="math inline">\(T\)</span>.</li>
+<li>Endothermic reactions that increase the entropy are spontaneous at high <span class="math inline">\(T\)</span>.</li>
+</ul></li>
+</ul>
+<p>A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &gt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &lt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, the entropy will also reduce.</p>
+</div>
+<div id="Gbehavior" class="section level2">
+<h2><span class="header-section-number">9.2</span> Behavior of the Gibbs Free Energy</h2>
+<div id="pressure-dependence-of-delta-g" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Pressure dependence of <span class="math inline">\(\Delta G\)</span></h3>
+</div>
+<div id="temperature-dependence-of-delta-g" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Temperature dependence of <span class="math inline">\(\Delta G\)</span></h3>
+</div>
+<div id="composition-dependence-of-delta-g" class="section level3">
+<h3><span class="header-section-number">9.2.3</span> Composition dependence of <span class="math inline">\(\Delta G\)</span></h3>
+<div id="dependence-of-chemical-potentials-on-pressure" class="section level4">
+<h4><span class="header-section-number">9.2.3.1</span> Dependence of chemical potentials on pressure</h4>
+</div>
+</div>
+</div>
+<div id="chemeq" class="section level2">
+<h2><span class="header-section-number">9.3</span> Chemical Equilibrium</h2>
 
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="27">
+<li id="fn27"><p>The majority of chemical reactions in a lab happens at those condition, and all biological functions happen at those conditions as well.<a href="ChemicalEquilibrium.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. If <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="ChemicalEquilibrium.html#fnref28" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

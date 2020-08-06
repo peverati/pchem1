@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-04" />
+<meta name="date" content="2020-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -136,11 +136,19 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a><ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
-<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials and Free Energies</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#xxx-redo-this-section-here-xxx"><i class="fa fa-check"></i><b>8.3</b> xxx REDO this section here: xxx</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a></li>
+<li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a><ul>
+<li class="chapter" data-level="9.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#Gbehavior"><i class="fa fa-check"></i><b>9.2</b> Behavior of the Gibbs Free Energy</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.1</b> Pressure dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.2</b> Temperature dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.3</b> Composition dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#chemeq"><i class="fa fa-check"></i><b>9.3</b> Chemical Equilibrium</a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>10</b> Real Gases</a></li>
 <li class="chapter" data-level="11" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>11</b> Phase Equilibrium</a></li>
 <li class="chapter" data-level="12" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>12</b> Multi-Component Phase Diagrams</a></li>
@@ -302,14 +310,14 @@ U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{&gt;0 \text{ since } T_\math
   \tag{5.13}
 \end{equation}\]</span></p>
 <p>which, simplifies to:</p>
-<p><span class="math display" id="eq:WtotCC">\[\begin{equation}
+<p><span class="math display" id="eq:WtotCC3">\[\begin{equation}
 W_{\text{TOT}}=-(Q_1+Q_3),
-  \tag{5.11}
+  \tag{5.14}
 \end{equation}\]</span></p>
 <p>and, replacing <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_3\)</span> with the absolute values of the heats drawn from the hot and cold reservoirs, <span class="math inline">\(\left| Q_h \right|\)</span>, and <span class="math inline">\(\left| Q_l \right|\)</span> respectively:</p>
 <p><span class="math display" id="eq:QtotCC2">\[\begin{equation}
 \left| W_{\text{TOT}} \right| = \left| Q_h \right| - \left| Q_l \right|,
-  \tag{5.14}
+  \tag{5.15}
 \end{equation}\]</span></p>
 <p>or, in other words, more heat is extracted from the hot reservoir than it is put into the cold one. The difference between the absolute value of these amounts of heat gives the total work of the cycle. This process is depicted in Figure <a href="ThermodynamicCycles.html#fig:FigCarnotEff">5.3</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:FigCarnotEff"></span>
@@ -334,19 +342,19 @@ This reversed mode of operation is the basic principle behind refrigerators and 
 <p>The efficiency (<span class="math inline">\(\varepsilon\)</span>) of a cycle is defined as the ratio between the absolute value of the work extracted from the cycle (<span class="math inline">\(\left| W_{\text{TOT}} \right|\)</span>) and the heat that gets into the system (<span class="math inline">\(\left| Q_h \right|\)</span>):</p>
 <p><span class="math display" id="eq:effCC1">\[\begin{equation}
 \varepsilon = \frac{\left| W_{\text{TOT}} \right|}{\left| Q_h \right|} =\frac{-W_{\text{TOT}}}{Q_1}
-\tag{5.15}
-\end{equation}\]</span></p>
-<p>where the minus sign in front of the work is necessary because the efficiency is defined as a positive number. Replacing eq. <a href="ThermodynamicCycles.html#eq:WtotCC">(5.11)</a> into <a href="ThermodynamicCycles.html#eq:effCC1">(5.15)</a>, we obtain:</p>
-<p><span class="math display" id="eq:effCC2">\[\begin{equation}
-\varepsilon = \frac{Q_3+Q_1}{Q_1} = 1+\frac{Q_3}{Q_1}.
 \tag{5.16}
 \end{equation}\]</span></p>
-<p>If we go back to eq. <a href="ThermodynamicCycles.html#eq:effCC1">(5.15)</a> and we replace eq. <a href="ThermodynamicCycles.html#eq:WtotCC2">(5.12)</a> for <span class="math inline">\(W_{\mathrm{TOT}}\)</span> and eq. <a href="ThermodynamicCycles.html#eq:CCst1b">(5.3)</a> for <span class="math inline">\(Q_1\)</span>, we obtain:</p>
-<p><span class="math display" id="eq:effCC3">\[\begin{equation}
-\varepsilon = \frac{nR \left( T_h - T_l \right) \ln V_B/V_A}{nRT_h \ln V_B/V_A} = \frac{T_h-T_l}{T_h}=1-\frac{T_l}{T_h }&lt;1,
+<p>where the minus sign in front of the work is necessary because the efficiency is defined as a positive number. Replacing eq. <a href="ThermodynamicCycles.html#eq:WtotCC3">(5.14)</a> into <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a>, we obtain:</p>
+<p><span class="math display" id="eq:effCC2">\[\begin{equation}
+\varepsilon = \frac{Q_3+Q_1}{Q_1} = 1+\frac{Q_3}{Q_1}.
 \tag{5.17}
 \end{equation}\]</span></p>
-<p>which proves that the efficiency of a Carnot cycle is strictly smaller than 1.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> In other words, no cycle can convert 100% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. <a href="ThermodynamicCycles.html#eq:effCC1">(5.15)</a> and <a href="ThermodynamicCycles.html#eq:effCC3">(5.17)</a> for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement “It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects.”<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> This statement conclusively disproved Joule’s original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.</p>
+<p>If we go back to eq. <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a> and we replace eq. <a href="ThermodynamicCycles.html#eq:WtotCC2">(5.12)</a> for <span class="math inline">\(W_{\mathrm{TOT}}\)</span> and eq. <a href="ThermodynamicCycles.html#eq:CCst1b">(5.3)</a> for <span class="math inline">\(Q_1\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:effCC3">\[\begin{equation}
+\varepsilon = \frac{nR \left( T_h - T_l \right) \ln V_B/V_A}{nRT_h \ln V_B/V_A} = \frac{T_h-T_l}{T_h}=1-\frac{T_l}{T_h }&lt;1,
+\tag{5.18}
+\end{equation}\]</span></p>
+<p>which proves that the efficiency of a Carnot cycle is strictly smaller than 1.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> In other words, no cycle can convert 100% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a> and <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a> for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement “It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects.”<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> This statement conclusively disproved Joule’s original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.</p>
 
 </div>
 </div>
@@ -357,7 +365,7 @@ This reversed mode of operation is the basic principle behind refrigerators and 
 <li id="fn15"><p>Interestingly enough, both Joule and Lord Kelvin are now recognized as key figures in the development of thermodynamics and science in general. So much so, that the energy unit and the temperature unit in the SI system are named after them.<a href="ThermodynamicCycles.html#fnref15" class="footnote-back">↩︎</a></p></li>
 <li id="fn16"><p>Carnot’s lone book, the <a href="https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire"><em>Réflexions sur la Puissance Motrice du Feu</em> (“Reflections on the Motive Power of Fire”)</a> was published in France in 1824, the same year Kelvin was born and just 6 years after Joule’s birth.<a href="ThermodynamicCycles.html#fnref16" class="footnote-back">↩︎</a></p></li>
 <li id="fn17"><p>The stages of a Carnot depicted at the beginning of each of this section and the following three ones are taken from <a href="https://en.wikipedia.org/wiki/Carnot_cycle">Wikipedia</a> and distributed under CC-BY-SA license.<a href="ThermodynamicCycles.html#fnref17" class="footnote-back">↩︎</a></p></li>
-<li id="fn18"><p>Eq. <a href="ThermodynamicCycles.html#eq:effCC3">(5.17)</a> can be equal to 1 only if <span class="math inline">\(T_l=0 \; \text{K}\)</span> or <span class="math inline">\(T_h=\infty\)</span>, two conditions that are both equally impossible.<a href="ThermodynamicCycles.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p>Eq. <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a> can be equal to 1 only if <span class="math inline">\(T_l=0 \; \text{K}\)</span> or <span class="math inline">\(T_h=\infty\)</span>, two conditions that are both equally impossible.<a href="ThermodynamicCycles.html#fnref18" class="footnote-back">↩︎</a></p></li>
 <li id="fn19"><p>Thomson W. <a href="https://www.biodiversitylibrary.org/item/126047#page/295/mode/1up">Transactions of the Royal Society of Edinburgh. 1851 XX 261–268, 289–298.</a>.<a href="ThermodynamicCycles.html#fnref19" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

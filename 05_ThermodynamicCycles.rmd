@@ -249,7 +249,7 @@ which, simplifies to:
 
 \begin{equation}
 W_{\text{TOT}}=-(Q_1+Q_3),
-  (\#eq:WtotCC)
+  (\#eq:WtotCC3)
 \end{equation}
 
 and, replacing $Q_1$ and $Q_3$ with the absolute values of the heats drawn from the hot and cold reservoirs, $\left| Q_h \right|$, and $\left| Q_l \right|$ respectively:
@@ -285,7 +285,7 @@ The efficiency ($\varepsilon$) of a cycle is defined as the ratio between the ab
 (\#eq:effCC1)
 \end{equation}
 
-where the minus sign in front of the work is necessary because the efficiency is defined as a positive number. Replacing eq. \@ref(eq:WtotCC) into \@ref(eq:effCC1), we obtain:
+where the minus sign in front of the work is necessary because the efficiency is defined as a positive number. Replacing eq. \@ref(eq:WtotCC3) into \@ref(eq:effCC1), we obtain:
 
 \begin{equation}
 \varepsilon = \frac{Q_3+Q_1}{Q_1} = 1+\frac{Q_3}{Q_1}.

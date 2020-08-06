@@ -1,1 +1,83 @@
+\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+
 # Chemical Equilibrium {#ChemicalEquilibrium}
+
+In this chapter, we will concentrate on chemical processes that happen at constant $T$ and constant $P$.^[The majority of chemical reactions in a lab happens at those condition, and all biological functions happen at those conditions as well.] As such, we will focus our attention on the Gibbs free energy.
+
+## Gibbs Equation {#gibbseqsec}
+Recalling from the previous chapter, the definition of $G$ is:
+
+\begin{equation}
+G = U -TS -PV = H-TS,
+(\#eq:dgdeftot)
+\end{equation}
+
+which, taking the differential at constant $T$ and $P$, becomes:
+
+\begin{equation}
+\begin{aligned}
+dG &= dU \; \overbrace{-SdT}^{=0} -TdS \; \overbrace{-VdP}^{=0} -PdV = dH \; \overbrace{-SdT}^{=0} -TdS \\
+   &= dH -TdS.
+\end{aligned}
+(\#eq:dgdeftot2)
+\end{equation}
+
+Integrating eq. (\#eq:dgdeftot2) between the initial and final states of a process results in:
+
+\begin{equation}
+\begin{aligned}
+\int_i^f dG &= \int_i^f dH -T \int_i^f dS \\
+\Delta G &= \Delta H -T \Delta S
+\end{aligned}
+(\#eq:gibbseq)
+\end{equation}
+
+
+which is the famous **Gibbs equation** for $\Delta G$. Using Definition \@ref(def:helmgibbsminimum), we can use $\Delta G$ to infer the spontaneity of a chemical process that happens at constant $T$ and $P$ using $\Delta G \leq 0$. If we set ourselves at standard conditions, we can calculate $\Delta_{\text{rxn}} G^\standardstate$ for any reaction as:
+
+\begin{equation}
+\begin{aligned}
+\Delta_{\text{rxn}} G^\standardstate &= \Delta_{\text{rxn}} H^\standardstate -T \Delta_{\text{rxn}} S^\standardstate \\
+&= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate + T \sum_i \nu_i S_i^\standardstate,
+\end{aligned}
+(\#eq:gibbseq2)
+\end{equation}
+
+where $\Delta_{\mathrm{f}} H_i^\standardstate$ are the standard enthalpies of formation, $S_i^\standardstate$ are the standard entropies, and $\nu_i$ are the stoichiometric coefficients for every species $i$ involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in Chapters \@ref(Thermochemistry) and \@ref(thirdlaw), respectively.^[It is not uncommon to see values of $\Delta_{\text{f}} G^\standardstate$ tabulated alongside $\Delta_{\mathrm{f}} H^\standardstate$ and $S_i^\standardstate$, which simplifies even further the calculation. If $\Delta_{\text{f}} G^\standardstate$ are not reported, they can always be calculated by their constituents.]
+
+The following four possibilities are possible for $\Delta G^\standardstate$ of a chemical reaction:
+
+| $\Delta G^\standardstate$ |      | $\Delta H^\standardstate$ | $\Delta S^\standardstate$ |                             Spontaneous?                             |
+|:-------------------------:|------|:-------------------------:|:-------------------------:|:--------------------------------------------------------------------:|
+|             –             | *if* |             -             |             +             |                               *Always*                               |
+|             +             | *if* |             +             |             -             |                                *Never*                               |
+|            -/+            | *if* |             -             |             -             | *Depends on $T$:*  <br> $\scriptstyle{\text{spontaneous at low } T}$ |
+|            +/-            | *if* |             +             |             +             | *Depends on $T$:* <br> $\scriptstyle{\text{spontaneous at high } T}$ |
+
+Or, in other words:
+
+- Exothermic reactions that increase the entropy are always spontaneous.
+- Endothermic reactions that reduce the entropy are always non-spontaneous.
+- For the other two cases, the spontaneity of the reaction depends on the temperature:
+    - Exothermic reactions that reduce the entropy are spontaneous at low $T$. 
+    - Endothermic reactions that increase the entropy are spontaneous at high $T$.
+
+    
+A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys $\left( \left| \sum_\text{products} \nu_i \right| > \left| \sum_\text{reactants} \nu_i \right| \right)$, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing $\left( \left| \sum_\text{products} \nu_i \right| < \left| \sum_\text{reactants} \nu_i \right| \right)$, the entropy will also reduce.
+
+
+XXX exercise to calculate T inversion XXX
+
+
+## Behavior of the Gibbs Free Energy {#Gbehavior}
+
+
+### Pressure dependence of $\Delta G$
+
+### Temperature dependence of $\Delta G$
+
+### Composition dependence of $\Delta G$
+
+#### Dependence of chemical potentials on pressure
+
+## Chemical Equilibrium {#chemeq}
