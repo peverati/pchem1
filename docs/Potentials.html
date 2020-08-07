@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-05" />
+<meta name="date" content="2020-08-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,11 +143,14 @@
 <li class="chapter" data-level="9" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>9</b> Chemical Equilibrium</a><ul>
 <li class="chapter" data-level="9.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
 <li class="chapter" data-level="9.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#Gbehavior"><i class="fa fa-check"></i><b>9.2</b> Behavior of the Gibbs Free Energy</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.1</b> Pressure dependence of <span class="math inline">\(\Delta G\)</span></a></li>
-<li class="chapter" data-level="9.2.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.2</b> Temperature dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.1</b> Temperature dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.2</b> Pressure dependence of <span class="math inline">\(\Delta G\)</span></a></li>
 <li class="chapter" data-level="9.2.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2.3</b> Composition dependence of <span class="math inline">\(\Delta G\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#chemeq"><i class="fa fa-check"></i><b>9.3</b> Chemical Equilibrium</a></li>
+<li class="chapter" data-level="9.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#chemeq"><i class="fa fa-check"></i><b>9.3</b> Chemical Equilibrium</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>9.3.1</b> Temperature dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="9.3.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>9.3.2</b> Pressure and composition dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>10</b> Real Gases</a></li>
 <li class="chapter" data-level="11" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>11</b> Phase Equilibrium</a></li>
@@ -189,8 +192,15 @@
 \end{aligned}
 \tag{8.1}
 \end{equation}\]</span></p>
-<p>Eq. <a href="Potentials.html#eq:dunv">(8.1)</a> is called <strong>the fundamental equation of thermodynamics</strong> since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed.</p>
-<p>At the end of the 19<sup>th</sup> century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the <strong>chemical potential</strong>. The chemical potential is defined as the amount of energy absorbed or released due to a change of the particle number of a given chemical species. The chemical potential of species <span class="math inline">\(i\)</span> is usually abbreviated as <span class="math inline">\(\mu_i\)</span>, and it enters the fundamental equation of thermodynamics as:</p>
+<p>Eq. <a href="Potentials.html#eq:dunv">(8.1)</a> is called the <strong>fundamental equation of thermodynamics</strong> since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed.</p>
+<p>At the end of the 19<sup>th</sup> century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the chemical potential:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:chemicalpot" class="definition"><strong>Definition 8.1  </strong></span>The <em>chemical potential</em> is the amount of energy absorbed or released due to a change of the particle number of a given chemical species.</p>
+</div>
+</blockquote>
+<p>The chemical potential of species <span class="math inline">\(i\)</span> is usually abbreviated as <span class="math inline">\(\mu_i\)</span>, and it enters the fundamental equation of thermodynamics as:</p>
 <p><span class="math display" id="eq:dunv2">\[\begin{equation}
 dU = TdS-PdV+\sum_i\mu_i dn_i,
 \tag{8.2}
@@ -317,9 +327,9 @@ d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad 
 \begin{aligned}
 \text{constant} &amp; \; V:           &amp; \qquad \qquad &amp; \qquad \qquad &amp;     \text{constant} &amp; \; P: \\
 \\
-TdS &amp; \geq dU           &amp; &amp;   &amp;     TdS &amp; \geq dH, \\
+TdS &amp; \geq dU           &amp; &amp;   &amp;     TdS &amp; \geq dH \\
 \\
-TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0, \\
+TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
 \end{aligned}
 \tag{8.12}
 \end{equation}\]</span></p>
@@ -328,18 +338,18 @@ TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0, \\
 \begin{aligned}
 \text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\
 \\
-d(A)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       d(G)_{T,P} &amp;= dH - TdS, \\ 
+d(A)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       d(G)_{T,P} &amp;= dH - TdS \\ 
 \\
-dU = d(A)_{T,V} &amp;+TdS       &amp; &amp;   &amp;       dH = d(G)_{T,P} &amp;+TdS,
+dU = d(A)_{T,V} &amp;+TdS       &amp; &amp;   &amp;       dH = d(G)_{T,P} &amp;+TdS
 \end{aligned}
 \tag{8.13}
 \end{equation}\]</span></p>
 <p>and by merging <span class="math inline">\(dU\)</span> and <span class="math inline">\(dH\)</span> from eqs. <a href="Potentials.html#eq:dadgder3">(8.13)</a> into Clausius theorem expressed using eqs. <a href="Potentials.html#eq:dadgder1">(8.12)</a>, we obtain:</p>
 <p><span class="math display" id="eq:dadgcond">\[\begin{equation}
 \begin{aligned}
-TdS -d(A)_{T,P} &amp;- TdS \geq 0 &amp; &amp;  &amp; TdS -d(G)_{T,P} &amp;- TdS \geq 0, \\
+TdS -d(A)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -d(G)_{T,P} &amp;- TdS \geq 0 \\
 \\
-d(A)_{T,P} &amp; \leq 0 &amp; &amp; &amp; d(G)_{T,P} &amp; \leq 0. \\
+d(A)_{T,V} &amp; \leq 0 &amp; \qquad &amp; \qquad &amp; d(G)_{T,P} &amp; \leq 0. \\
 \end{aligned}
 \tag{8.14}
 \end{equation}\]</span></p>
@@ -347,7 +357,7 @@ d(A)_{T,P} &amp; \leq 0 &amp; &amp; &amp; d(G)_{T,P} &amp; \leq 0. \\
 <blockquote>
 
 <div class="definition">
-<p><span id="def:helmgibbsminimum" class="definition"><strong>Definition 8.1  </strong></span></p>
+<p><span id="def:helmgibbsminimum" class="definition"><strong>Definition 8.2  </strong></span><span class="math inline">\(\;\)</span></p>
 <ul>
 <li>During a spontaneous process at constant <em>temperature</em> and <em>volume</em>, the <em>Helmholtz free energy</em> will decrease <span class="math inline">\((dA&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dA=0)\)</span>.</li>
 <li>During a spontaneous process at constant <em>temperature</em> and <em>pressure</em>, the <em>Gibbs free energy</em> will decrease <span class="math inline">\((dG&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dG=0)\)</span>.</li>
@@ -355,9 +365,9 @@ d(A)_{T,P} &amp; \leq 0 &amp; &amp; &amp; d(G)_{T,P} &amp; \leq 0. \\
 </div>
 </blockquote>
 <div class="figure" style="text-align: center"><span id="fig:agfig"></span>
-<img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Transformations at Constant T,V (left) and Constant T,P (right)" width="672" />
+<img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right)." width="672" />
 <p class="caption">
-Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Transformations at Constant T,V (left) and Constant T,P (right)
+Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant <span class="math inline">\(T,V\)</span> (left) and Constant <span class="math inline">\(T,P\)</span> (right).
 </p>
 </div>
 </div>
@@ -407,7 +417,7 @@ dG(T,P,\{n_i\}) &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{
 \end{aligned}
 \tag{8.18}
 \end{equation}\]</span></p>
-<p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relation</strong>,<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
+<p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relations</strong>,<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
 <blockquote>
 
 <div class="exercise">
@@ -437,7 +447,7 @@ dG(T,P,\{n_i\}) &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{
  \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;= -\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}},
 \end{aligned}
 \end{equation}\]</span></p>
-which is the last of Maxwell’s relation, as defined in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>. This relation is particularly useful because it connects the quantity <span class="math inline">\(\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}\)</span>—which is impossible to measure in a lab—with the quantity <span class="math inline">\(\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}\)</span>—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
+which is the last of Maxwell relations, as defined in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>. This relation is particularly useful because it connects the quantity <span class="math inline">\(\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}\)</span>—which is impossible to measure in a lab—with the quantity <span class="math inline">\(\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}\)</span>—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
 </div>
 </blockquote>
 

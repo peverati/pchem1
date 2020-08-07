@@ -25,8 +25,8 @@ the heat at constant pressure is equal to the enthalpy of reaction, which is cal
 
 Using the chemistry sign convention, Definition \@ref(def:chemistryconv), reactions are classified in terms of the sign of their reaction enthalpies as follows:
 
-> ```{definition, exoendo}
-
+> ```{definition, exoendo} 
+$\;$
 
 - $\Delta_{\text{rxn}} H > 0 \Rightarrow$ *Endothermic reaction* (heat is gained by the system).
 - $\Delta_{\text{rxn}} H < 0 \Rightarrow$ *Exothermic reaction* (heat is lost by the system).
@@ -35,7 +35,7 @@ Using the chemistry sign convention, Definition \@ref(def:chemistryconv), reacti
 
 If we expand the sample reaction to account for its stoichiometry:
 
-$$ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}, $$
+$$ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , $$
 
 where $a,b,c,d$ are the stoichiometric coefficients of species $\mathrm{A,B,C,D}$. Eq. \@ref(eq:DHrxn2) can be rewritten as:
 
@@ -188,7 +188,7 @@ $$
 *Solution:* Using eq. \@ref(eq:DrxnHneq298f) we obtain:
 
 $$
- \Delta_{\text{rxn}} H_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^\standardstate} + \int_{298}^{398} \left( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} \right) \times 10^{-3} dT,
+ \Delta_{\text{rxn}} H_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^\standardstate} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
 $$
 
 which, assuming that the heat capacities does not depend on the temperature, becomes:

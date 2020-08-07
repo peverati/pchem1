@@ -15,9 +15,16 @@ Let's summarize some of the results from the first and second law of thermodynam
 (\#eq:dunv)
 \end{equation}
 
-Eq. \@ref(eq:dunv) is called **the fundamental equation of thermodynamics** since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. \@ref(eq:dunv), we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed. 
+Eq. \@ref(eq:dunv) is called the **fundamental equation of thermodynamics** since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. \@ref(eq:dunv), we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed. 
 
-At the end of the 19^th^ century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the **chemical potential**. The chemical potential is defined as the amount of energy absorbed or released due to a change of the particle number of a given chemical species. The chemical potential of species $i$ is usually abbreviated as $\mu_i$, and it enters the fundamental equation of thermodynamics as:
+At the end of the 19^th^ century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the chemical potential:
+
+> ```{definition, chemicalpot}
+The *chemical potential* is the amount of energy absorbed or released due to a change of the particle number of a given chemical species. 
+
+```
+
+The chemical potential of species $i$ is usually abbreviated as $\mu_i$, and it enters the fundamental equation of thermodynamics as:
 
 \begin{equation}
 dU = TdS-PdV+\sum_i\mu_i dn_i,
@@ -144,9 +151,9 @@ we can consider the two cases: constant $V$ ($đQ_V=dU$, left), and constant $P$
 \begin{aligned}
 \text{constant} & \; V:           & \qquad \qquad & \qquad \qquad &     \text{constant} & \; P: \\
 \\
-TdS & \geq dU           & &   &     TdS & \geq dH, \\
+TdS & \geq dU           & &   &     TdS & \geq dH \\
 \\
-TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0, \\
+TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0 \\
 \end{aligned}
 (\#eq:dadgder1)
 \end{equation}
@@ -157,9 +164,9 @@ we can then simplify the definition of free energies, eqs. \@ref(eq:dadef2) and 
 \begin{aligned}
 \text{constant} & \; T,V:           & \qquad & \qquad &     \text{constant} & \; T,P: \\
 \\
-d(A)_{T,V} &= dU -TdS     & &   &       d(G)_{T,P} &= dH - TdS, \\ 
+d(A)_{T,V} &= dU -TdS     & &   &       d(G)_{T,P} &= dH - TdS \\ 
 \\
-dU = d(A)_{T,V} &+TdS       & &   &       dH = d(G)_{T,P} &+TdS,
+dU = d(A)_{T,V} &+TdS       & &   &       dH = d(G)_{T,P} &+TdS
 \end{aligned}
 (\#eq:dadgder3)
 \end{equation}
@@ -168,9 +175,9 @@ and by merging $dU$ and $dH$ from eqs. \@ref(eq:dadgder3) into Clausius theorem 
 
 \begin{equation}
 \begin{aligned}
-TdS -d(A)_{T,P} &- TdS \geq 0 & &  & TdS -d(G)_{T,P} &- TdS \geq 0, \\
+TdS -d(A)_{T,V} &- TdS \geq 0 & \qquad & \qquad & TdS -d(G)_{T,P} &- TdS \geq 0 \\
 \\
-d(A)_{T,P} & \leq 0 & & & d(G)_{T,P} & \leq 0. \\
+d(A)_{T,V} & \leq 0 & \qquad & \qquad & d(G)_{T,P} & \leq 0. \\
 \end{aligned}
 (\#eq:dadgcond)
 \end{equation}
@@ -178,15 +185,14 @@ d(A)_{T,P} & \leq 0 & & & d(G)_{T,P} & \leq 0. \\
 These equations represent the conditions on $dA$ and $dG$ for inferring the spontaneity of a process, and can be summarized as follows:
 
 > ```{definition, helmgibbsminimum}
-
+$\;$
 
 - During a spontaneous process at constant *temperature* and *volume*, the *Helmholtz free energy* will decrease $(dA<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dA=0)$.
 - During a spontaneous process at constant *temperature* and *pressure*, the *Gibbs free energy* will decrease $(dG<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dG=0)$.
 
-
 ```
 
-```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Transformations at Constant T,V (left) and Constant T,P (right)'}
+```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).'}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
