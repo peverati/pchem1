@@ -1,13 +1,13 @@
 # Thermodynamic Cycles {#ThermodynamicCycles}
 
-The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let's consider once again the Joule experiment (Figure \@ref(fig:FigJexp)). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrized in both chambers and backwards, as in Figure \@ref(fig:FigJexpC), there is no restrictions imposed on this hypothetical cycle by the first law. 
+The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let's consider once again the Joule experiment (Figure \@ref(fig:FigJexp)). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in Figure \@ref(fig:FigJexpC), there are no restrictions imposed on this hypothetical cycle by the first law. 
 
-```{r FigJexpC, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Closing the Cycle in The Joule Expansion Experiment'}
+```{r FigJexpC, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Closing the Cycle in The Joule Expansion Experiment.'}
 knitr::include_graphics('./img/OEP_Figures.008.jpeg')
 
 ```
 
-As we saw in Section \@ref(isothermalE), states 1 and 2 have exactly the same energy at constant temperature. Restricting the analysis to the information contained in the first law, the ideal gas could hypothetically go from state 1 (all gas in the left chamber) to state 2 (gas in both chambers), as well as spontaneously close the cycle back from state 2 to state 1, without external intervention. While the transformation from 1 $\rightarrow$ 2 is intuitively spontaneous (it's the same transformation that we considered in Section \@ref(isothermalE)), the backward transformation  from 2 $\rightarrow$ 1 is clearly not as intuitive. In this case, the gas should spontaneously compress back to the left side, leaving vacuum on the right chambers, without us intervening from the outside. This transformation is clearly never observed. A gas just does not spontaneously concentrate on one side of a room, leaving a vacuum on the other side. In fact, when we need to create a vacuum, a lot of energy must be spent. If we look at the information contained in the first law, however, there is nothing that might suggest a preference for a system to perform the transformation 1 $\rightarrow$ 2, while restricting the 2 $\rightarrow$ 1 from happening spontaneously. Both states have the same energy, and 
+As we saw in section \@ref(isothermalE), states 1 and 2 have exactly the same energy at constant temperature. Restricting the analysis to the information contained in the first law, the ideal gas could hypothetically go from state 1 (all gas in the left chamber) to state 2 (gas in both chambers), as well as spontaneously close the cycle back from state 2 to state 1, without external intervention. While the transformation from 1 $\rightarrow$ 2 is intuitively spontaneous (it's the same transformation that we considered in section \@ref(isothermalE)), the backward transformation from 2 $\rightarrow$ 1 is clearly not as intuitive. In this case, the gas should spontaneously compress back to the left side, leaving a vacuum on the right chambers, without interventions from the outside. This transformation is clearly never observed. A gas just does not spontaneously concentrate on one side of a room, leaving a vacuum on the other side. In fact, when we need to create a vacuum, a lot of energy must be spent. Suppose we use exclusively information contained in the first law. In this case, there is nothing that might suggest a system's preference to perform the transformation 1 $\rightarrow$ 2, while restricting the 2 $\rightarrow$ 1 from happening spontaneously. Both states have the same energy, and 
 
 \begin{equation}
   \oint dU=0,
@@ -24,13 +24,13 @@ The main contribution of Carnot to thermodynamics is his abstraction of the stea
 
 > ```{definition, carnotcycle}
 
-A *Carnot cycle* is an idealized process that is composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an *ideal gas*. All transformations are assumed to be *reversible* and no energy is lost to mechanical friction.
+A *Carnot cycle* is an idealized process composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an *ideal gas*. All transformations are assumed to be *reversible*, and no energy is lost to mechanical friction.
 
 ```
 
-A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T_l$ (low), respectively. The reservoirs have a large thermal capacity, so that their temperatures are unaffected by the cycle. The system is composed exclusively by the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformation of a Carnot cycle on a $PV$ diagram, we obtain the following plot:
+A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T_l$ (low), respectively. The reservoirs have a large thermal capacity so that their temperatures are unaffected by the cycle. The system is composed exclusively by the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformations of a Carnot cycle on a $PV$ diagram, we obtain the following plot:
 
-```{r FigCarnotPV, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of Carnot Cycle'}
+```{r FigCarnotPV, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of a Carnot Cycle.'}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -131,7 +131,7 @@ and heat and work can be calculated for this stage using either eqs. \@ref(eq:Wi
   (\#eq:CCst1b)
 \end{equation}
 
-where we denote $\left| Q_h \right|$ the absolute value of the heat that gets **into** the system from the hot reservoir. 
+where we denoted $\left| Q_h \right|$ the absolute value of the heat that gets **into** the system from the hot reservoir. 
 
 
 ### Stage 2: adiabatic expansion $B \rightarrow C$ {#CCstage2}
@@ -261,20 +261,19 @@ and, replacing $Q_1$ and $Q_3$ with the absolute values of the heats drawn from 
 
 or, in other words, more heat is extracted from the hot reservoir than it is put into the cold one. The difference between the absolute value of these amounts of heat gives the total work of the cycle. This process is depicted in Figure \@ref(fig:FigCarnotEff).
 
-```{r FigCarnotEff, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Carnot Cycle Diagram'}
+```{r FigCarnotEff, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Carnot Cycle Diagram.'}
 knitr::include_graphics('./img/OEP_Figures.009.jpeg')
 ```
 
 > ```{exercise, CarnotEx}
-Up to this point, we have discussed Carnot cycles working in the hot $rightarrow$ cold direction ($A$ $\rightarrow$ $B$ $\rightarrow$ $C$ $\rightarrow$ $D$ $\rightarrow$ $A$), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold $rightarrow$ hot direction ($A$ $\rightarrow$ $D$ $\rightarrow$ $C$ $\rightarrow$ $B$ $\rightarrow$ $A$). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in Sections \@ref(carnotcyclesect) and \@ref(UWQCarnot).
+Up to this point, we have discussed Carnot cycles working in the hot $rightarrow$ cold direction ($A$ $\rightarrow$ $B$ $\rightarrow$ $C$ $\rightarrow$ $D$ $\rightarrow$ $A$), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold $rightarrow$ hot direction ($A$ $\rightarrow$ $D$ $\rightarrow$ $C$ $\rightarrow$ $B$ $\rightarrow$ $A$). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections \@ref(carnotcyclesect) and \@ref(UWQCarnot).
 
-*Solution:* When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of $Q$, $W$, and $U$ will be reversed. In this case, the total work would get **into** the systems and heat would be transferred from the cold reservoir to the hot one. Figure \@ref(fig:FigCarnotEff) would be modified as:
+*Solution:* When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of $Q$, $W$, and $U$ will be reversed. In this case, the total work would get **into** the systems, and heat would be transferred from the cold reservoir to the hot one. Figure \@ref(fig:FigCarnotEff) would be modified as:
 ```{r out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'right'}
 knitr::include_graphics('./img/OEP_Figures.010.jpeg')
 ```
 This reversed mode of operation is the basic principle behind refrigerators and air conditioning.
 
-```
 
 ## Efficiency of a Carnot Cycle
 

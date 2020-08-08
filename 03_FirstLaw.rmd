@@ -44,14 +44,14 @@ The left side of the Joule apparatus's inner chamber is filled with an ideal gas
   (\#eq:JexpW)
 \end{equation}
 
-since the chambers are not in communication with the environment, $P_{\text{ext}}=0$. Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, $T_i$, and at the end of the experiment $T_f$. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature will not change $T_i = T_f$. Since the temperature doesn't change there is no heat transfer, and therefore the internal energy stays constant:
+since the chambers are not in communication with the environment, $P_{\text{ext}}=0$. Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, $T_i$, and at the end of the experiment $T_f$. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature would not change $T_i = T_f$. Since the temperature doesn't change, there is no heat transfer, and therefore the internal energy stays constant:
 
 \begin{equation}
   dU = đ Q = 0.
   (\#eq:JexpQU)
 \end{equation}
 
-> Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in a following chapter when we will study real gases. 
+> Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas, we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in chapter \@ref(RealGases) when we will study non-ideal gases. 
 
 From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature. 
 
@@ -146,7 +146,7 @@ We finally come to a working definition of the first law. If we take an isolated
   (\#eq:heateqwork)
 \end{equation}
 
-and heat and work can be easily calculated using any of the appropriate formulas introduced in either Section \@ref(workint) or \@ref(heatint).
+and heat and work can be easily calculated using any of the appropriate formulas introduced in either section \@ref(workint) or \@ref(heatint).
 
 The first law is a conservation law. It is intuitive since it comes directly from Lavoisier's principle of "nothing is lost, nothing is created, everything is transformed." Considering that the only system that is truly isolated is the universe, we can condense the first law in one simple sentence:
 
@@ -160,10 +160,11 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 ### Calculation of $| W_{\text{max}} |$ and  $| W_{\text{min}} |$
 Let's go back to the calculation of the work in a process at constant temperature. We can use the formulas obtained in section \@ref(workint) to understand a little bit better the meaning of a *path function*. Let's consider the following PV diagram, obtained from an ideal gas at constant $T=298$ K:
 
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62}
 x <- seq(0,1.25,0.01)
 i <- 0.25
 f <- 1
+par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
@@ -188,10 +189,11 @@ arrows(f, 0.081*298/f, -10, 0.081*298/f , length=0, angle=90, code=3, lty="dotte
 ```
 
 where the isothermal expansion happens between $P_i$ and $P_f$. If the expansion happens in a one-step fast process, for example against a constant pressure $P_f=P_{\text{ext}}$, the work is given by eq. \@ref(eq:WintF). On the plot, the absolute value of the work^[we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition \@ref(def:chemistryconv).] is represented by the red area:
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
+par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
@@ -227,12 +229,12 @@ rect(i,i, f, 0.081*298/f, density = 20, angle = 45,
 \end{equation}
 
 However, if the process happens in two steps, by pausing at position (1) until equilibrium is reached, then we should calculate the work by dividing the process into two. The first process is an expansion between $P$ and $P_1$, whose absolute value of the work, $W_A$, is represented by the blue area:
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
 p1 <- 0.5
-
+par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
@@ -276,12 +278,12 @@ rect(i,i, p1, 0.081*298/p1, density = 20, angle = 45,
 
 The second process is an expansion between $P_1$ and $P_{\text{ext}}$, whose absolute value of the work is represented by the green area:
 
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
 p1 <- 0.5
-
+par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
@@ -326,12 +328,12 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
 p1 <- 0.5
-
+par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
@@ -553,7 +555,7 @@ The integral on the right hand side of eq. \@ref(eq:WintsolvedV2) is similar to 
   (\#eq:WmaxV)
 \end{equation}
 
-This example shows clearly why work is a path function. If we perform a fast 1-step expansion the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an $\infty$-step process.
+This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an $\infty$-step process.
 
 The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.^[In contrast to a lower bound for expansion processes.] $\left| W_{\text{min}} \right|$ for compressions is calculated as the area underneath the PV curve, exactly as $\left| W_{\text{min}} \right|$ for expansions in eq. \@ref(eq:WintsolvedV2).
 
@@ -562,11 +564,11 @@ The same considerations that we made up to this point for expansion processes ho
 
 Let's now consider the cycle in Figure \@ref(fig:FigRevCyc). The process in this case starts from state 1 (system at $P_1V_1$), expands to state 2 (system at $P_2V_2$), and compresses back to state 1 (system back to $P_1V_1$).
 
-```{r FigRevCyc, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Expansion/Compression Cycle of an Ideal Gas'}
+```{r FigRevCyc, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Expansion/Compression Cycle of an Ideal Gas.'}
 knitr::include_graphics('./img/OEP_Figures.005.jpeg')
 ```
 
-Since the process starts and finishes at the same state, the value of the internal energy at the end of the process will be the same as its value at the beginning, regardless of the path:^[recall that the internal energy is a state function, so its value depend exclusively from the conditions at the beginning and at the end. In a cycle we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.]
+Since the process starts and finishes at the same state, the value of the internal energy at the end of the process will be the same as its value at the beginning, regardless of the path:^[recall that the internal energy is a state function, so its value depends exclusively from the conditions at the beginning and at the end. In a cycle, we're going back to the same point, so the conditions at the beginning and at the end are equal by definition.]
 
 \begin{equation}
   \oint dU=0,
@@ -607,7 +609,7 @@ W^{\text{cycle}}_{\text{1-step}} {} & =  W^{\text{expansion}}_{\text{1-step}}+W^
 
 or, in other words, net work is destroyed. 
 
-> In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it and it moves back up.
+> In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it, and it moves back up.
 
 
 In contrast, if both the expansion and the compression happen in a slow $\infty$-step manner, the work associated with them will be $W_{\text{max}}$ and $W_{\text{min}}$, respectively, which are calculated using eq. \@ref(eq:WmaxV). The total work related with the cycle will be in this case:
