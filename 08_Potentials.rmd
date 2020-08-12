@@ -99,12 +99,14 @@ The Gibbs free energy is named after Willard Gibbs himself, and its natural vari
 
 A summary of the four thermodynamic potentials is given in the following table.^[For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the [thermodynamic square](https://en.wikipedia.org/wiki/Thermodynamic_square).]
 
+\scriptsize
 |          **Name**         | **Symbol** |    **Fundamental Equation**    | **Natural Variables** |
 |:-------------------------:|:----------:|:------------------------------:|:---------------------:|
 | **Energy**                |     $U$    |  $dU=TdS-PdV+\sum_i\mu_i dn_i$ |      $S,V,\{n_i\}$      |
 | **Enthalpy**              |     $H$    |  $dH=TdS+VdP+\sum_i\mu_i dn_i$ |      $S,P,\{n_i\}$      |
 | **Helmholtz Free Energy** |     $A$    | $dA=-Sdt-PdV+\sum_i\mu_i dn_i$ |      $T,V,\{n_i\}$      |
 | **Gibbs Free Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
+\normalsize
 
 The thermodynamic potentials are the analog of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:
 

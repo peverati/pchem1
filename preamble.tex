@@ -1,4 +1,5 @@
 \usepackage{booktabs}
+\usepackage{pdfpages}
 \usepackage{amsthm}
 \usepackage{cancel}
 \makeatletter
@@ -7,3 +8,5 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\let\oldmaketitle\maketitle
+\AtBeginDocument{\let\maketitle\relax}

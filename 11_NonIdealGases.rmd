@@ -1,1 +1,35 @@
 # Ideal and Non-Ideal Gases {#RealGases}
+
+## Ideal Gases
+
+assumptions:
+
+### Boyle's Law
+### Charles's and Gay-Lussac's Laws
+### Avogadro's Law
+### The ideal gas Law
+
+## Non-Ideal Gases
+Non-ideal gases (sometimes also referred to as "real gases"), do not behave as ideal gases because one or more od the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a $P$ *vs.* $V$ diagram, or a $PV$ *vs.* $P$  diagram:
+
+
+### The van der Waals equation
+
+### The virial equation
+
+## Compressibility Factors
+The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behaviour. It is usually represented with the symbol $z$, and is calculated as:
+
+\begin{equation}
+z=\frac{V_m}{V_m^{\text{ideal}}} = \frac{P V_m}{RT}.
+(\#eq:comprdef)
+\end{equation}
+
+It is obvious from eq. \@ref(eq:comprdef) that the compressibility factor is dependent on the pressure and for an an ideal gas it is $z=1$ at any pressure. For a real gas, $z$ might be either greater or smaller than one at any given pressure. The behavior of the compressibility factor against pressure is represented in Fig. XXX. 
+
+Fig XXX
+
+Two situation are common, exemplified by the behavior of $\mathrm{H}_2$ and $\mathrm{CO}_2$ in Fig. XXX. 
+
+## Fugacity
+
