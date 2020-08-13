@@ -3,12 +3,15 @@ title: "The Live Textbook of Physical Chemistry 1"
 author: "[Dr. Roberto Peverati](mailto:rpeverati@fit.edu)"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 description: Textbook for P-Chem 1 class at Florida Tech
-documentclass: book
+documentclass: extbook
+fontsize: 9pt
 github-repo: peverati/PChem1
 link-citations: yes
 site: bookdown::bookdown_site
 biblio-style: apalike
 ---
+
+\renewcommand{\arraystretch}{1.8}
 
 # Preface {-}
 
@@ -20,7 +23,7 @@ This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 
 
 The instructor for this course and author of this textbook is Dr. Roberto Peverati.
 
-CONTACTS: [rpeverati@fit.edu](mailto:rpeverati@fit.edu), Office: OPS 333, (321) 674-7735
+**Contacts**: [rpeverati@fit.edu](mailto:rpeverati@fit.edu), Office: OPS 333, (321) 674-7735
 
 Chemistry Program, Department of Biomedical and Chemical Engineering and Science
 Florida Institute of Technology, Melbourne, FL.

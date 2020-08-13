@@ -1,6 +1,6 @@
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-# The Gibbs Free Energy {#GibbsFree}
+# Gibbs Free Energy {#GibbsFree}
 
 In this chapter, we will concentrate on chemical processes that happen at constant $T$ and constant $P$.^[The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.] As such, we will focus our attention on the Gibbs free energy.
 
@@ -42,7 +42,7 @@ which is the famous **Gibbs equation** for $\Delta G$. Using Definition \@ref(de
 (\#eq:gibbseq2)
 \end{equation}
 
-where $\Delta_{\mathrm{f}} H_i^\standardstate$ are the standard enthalpies of formation, $S_i^\standardstate$ are the standard entropies, and $\nu_i$ are the stoichiometric coefficients for every species $i$ involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \@ref(Thermochemistry) and \@ref(thirdlaw), respectively.^[It is not uncommon to see values of $\Delta_{\text{f}} G^\standardstate$ tabulated alongside $\Delta_{\mathrm{f}} H^\standardstate$ and $S_i^\standardstate$, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book \@ref{appendix}. For cases where $\Delta_{\text{f}} G^\standardstate$ are not reported, they can always be calculated by their constituents.]
+where $\Delta_{\mathrm{f}} H_i^\standardstate$ are the standard enthalpies of formation, $S_i^\standardstate$ are the standard entropies, and $\nu_i$ are the stoichiometric coefficients for every species $i$ involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \@ref(Thermochemistry) and \@ref(thirdlaw), respectively.^[It is not uncommon to see values of $\Delta_{\text{f}} G^\standardstate$ tabulated alongside $\Delta_{\mathrm{f}} H^\standardstate$ and $S_i^\standardstate$, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book \@ref(appendix). For cases where $\Delta_{\text{f}} G^\standardstate$ are not reported, they can always be calculated by their constituents.]
 
 The following four options are possible for $\Delta G^\standardstate$ of a chemical reaction:
 
@@ -67,7 +67,7 @@ A simple criterion to evaluate the entropic contribution of a reaction is to loo
 As we saw in section \@ref(thermpot), the natural variables of the Gibbs free energy are the temperature, $T$, the pressure, $P$, and chemical composition, as the number of moles $\{n_i\}$. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. \@ref(eq:dhagchem2)):
 
 \begin{equation}
-dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i\;.
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 (\#eq:dgtotdiff)
 \end{equation}
 
@@ -152,7 +152,7 @@ which is the differential equation that we were looking for. To study changes of
 (\#eq:dgconsttpintegral1)
 \end{equation}
 
-If we take $P_i = P^\standardstate = 1 \, \text{bar}$, we can rewrite eq. \@ref(eq:dgconsttp) as:
+If we take $P_i = P^\standardstate = 1 \, \text{bar}$, we can rewrite eq. \@ref(eq:dgconsttpintegral1) as:
 
 \begin{equation}
 G = G^\standardstate + nRT \ln \frac{P_f}{P^\standardstate},

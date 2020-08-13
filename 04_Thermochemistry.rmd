@@ -86,7 +86,7 @@ For example, the standard enthalpies of formation of some common compounds at $T
 (\#eq:someDfH)
 \end{equation}
 
-A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix \@ref{appendix}.
+A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix \@ref(appendix).
 
 ## Hess's Law {#hessslaw}
 The calculation of a standard reaction enthalpy can be performed using the following cycle:
@@ -190,15 +190,17 @@ $$
 *Solution:* Using eq. \@ref(eq:DrxnHneq298f) we obtain:
 
 $$
- \Delta_{\text{rxn}} H_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^\standardstate} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
+ \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^\standardstate} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
 $$
 
 which, assuming that the heat capacities does not depend on the temperature, becomes:
 
-$$
- \Delta_{\text{rxn}} H_{398} = -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) = -283.6 \; \text{kJ/mol}.
-$$
+\begin{equation}
+\begin{aligned}
+ \Delta_{\text{rxn}} H^{398} &= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &= -283.6 \; \text{kJ/mol}.
+\end{aligned}
+\end{equation}
 
-As we notice from this result, a difference in temperature of 100 K translates into a change in $\Delta_{\text{rxn}}H^\standardstate$ of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of $\Delta_{\text{rxn}}H$ are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for $\Delta_{\text{rxn}}H^{398}$ of this reaction, which is -283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. \@ref(eq:DrxnHneq298f), confirming that the heat capacities are mostly independent of temperature. 
+As we notice from this result, a difference in temperature of 100 K translates into a change in $\Delta_{\text{rxn}}H^\standardstate$ of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of $\Delta_{\text{rxn}}H$ are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for $\Delta_{\text{rxn}}H^{398}$ of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. \@ref(eq:DrxnHneq298f), confirming that the heat capacities are mostly independent of temperature. 
 
 ```

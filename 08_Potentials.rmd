@@ -97,9 +97,9 @@ dG &= dU -SdT -TdS +VdP +PdV \\
 
 The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
 
-A summary of the four thermodynamic potentials is given in the following table.^[For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the [thermodynamic square](https://en.wikipedia.org/wiki/Thermodynamic_square).]
+A summary of the four thermodynamic potentials is given in the following table.
 
-\scriptsize
+\tiny
 |          **Name**         | **Symbol** |    **Fundamental Equation**    | **Natural Variables** |
 |:-------------------------:|:----------:|:------------------------------:|:---------------------:|
 | **Energy**                |     $U$    |  $dU=TdS-PdV+\sum_i\mu_i dn_i$ |      $S,V,\{n_i\}$      |
@@ -108,12 +108,13 @@ A summary of the four thermodynamic potentials is given in the following table.^
 | **Gibbs Free Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
 \normalsize
 
+
 The thermodynamic potentials are the analog of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:
 
 - Internal energy ($U$) is the capacity to do work plus the capacity to release heat.
 - Enthalpy ($H$) is the capacity to do non-mechanical work plus the capacity to release heat.
 - Gibbs free energy ($G$) is the capacity to do non-mechanical work.
-- Helmholtz free energy ($A$) is the capacity to do mechanical plus non-mechanical work.
+- Helmholtz free energy ($A$) is the capacity to do mechanical plus non-mechanical work.^[For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the [thermodynamic square](https://en.wikipedia.org/wiki/Thermodynamic_square).]
 
 Where non-mechanical work is defined as any type of work that is not expansion or compression ($PV$–work). A typical example of non-mechanical work is electrical work.
 
@@ -246,10 +247,10 @@ From the knowledge of the natural variable of each potential, we could reconstru
 
 \begin{equation}
 \begin{aligned}
-dU(S,V,\{n_i\}) &= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dH(S,P,\{n_i\}) &= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dA(T,V,\{n_i\}) &= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dG(T,P,\{n_i\}) &= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
+dU &= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dH &= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dA &= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dG &= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
 \end{aligned}
 (\#eq:dhagchem2)
 \end{equation}

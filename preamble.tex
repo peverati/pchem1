@@ -2,6 +2,18 @@
 \usepackage{pdfpages}
 \usepackage{amsthm}
 \usepackage{cancel}
+
+%change to a smaller page:
+\usepackage[paperwidth=6in, paperheight=9in]{geometry}
+
+%fancyhdr to set custom headers for the book:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\slshape\nouppercase{\rightmark}}
+\fancyhead[RE]{\slshape\nouppercase{\leftmark}}
+\fancyhead[RO,LE]{\thepage}
+
 \makeatletter
 \def\thm@space@setup{%
   \thm@preskip=8pt plus 2pt minus 4pt

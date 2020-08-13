@@ -208,14 +208,14 @@ While $K_P$ is independent of both temperature and number of moles for an ideal 
 For example, it is easy to look at eq. \@ref(eq:kxkcdef3) and determine that $K_y$ usually depends on $P$.^[$K_y$  becomes independent of $P$ in the particular case where $\Delta \nu=0$, i.e., for reactions where the total number of moles of reactants is the same as the total number of moles of the products.] Using Dalton's Law, eq. \@ref(eq:daltonlaw), we can also notice that the equilibrium partial pressures of the reactants and products in a gas-phase reaction can be expressed in terms of their equilibrium mole fractions $y_i$ and the total pressure $P$. As such, we can use $K_y$ to demonstrate that the equilibrium mole fractions will change when $P$ changes,^[Keep in mind that $K_P$ will *not* change.] as it is demonstrated by the following exercise.
 
 > ```{exercise, kpkx}
-Calculate the mole fraction change for the dissociation of $\mathrm{Cl}_{2(g)}$ when the pressure is increased from $P^\standardstate$ to $P_f=2.5 \;\text{bar}$ at constant $T=2298\;\mathrm{K}$, knowing that $\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}$ and $\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}$, and remembering that both of these values are tabulated at $T=298\;\text{K}$.
+Calculate the mole fraction change for the dissociation of $\mathrm{Cl}_{2(g)}$ when the pressure is increased from $P^\standardstate$ to $P_f=2.5 \;\text{bar}$ at constant $T=2\,298\;\mathrm{K}$, knowing that $\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}$ and $\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}$, and remembering that both of these values are tabulated at $T=298\;\text{K}$.
 
 *Solution:* Let's consider the reaction:
 $$
 \mathrm{Cl}_{2(g)} \rightleftarrows 2 \mathrm{Cl}_{(g)}
 $$
 
-We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at $T=2298\;\mathrm{K}$ from the data at $T=298\;\mathrm{K}$. In the second one, we will calculate the change in mole fraction when the pressure is increased from $P^\standardstate=1\;\text{bar}$ to $P_f=2.5 \;\text{bar}$. 
+We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at $T=2\,298\;\mathrm{K}$ from the data at $T=298\;\mathrm{K}$. In the second one, we will calculate the change in mole fraction when the pressure is increased from $P^\standardstate=1\;\text{bar}$ to $P_f=2.5 \;\text{bar}$. 
 
 - Let's begin the first part by calculating $\Delta_{\text{rxn}} G^\standardstate$ and $\Delta_{\text{rxn}} H^\standardstate$ from:
 \begin{equation}
@@ -235,35 +235,41 @@ Using eq. \@ref(eq:chemeqdg0) to calculate $K_P (P^\standardstate,298\;\text{K})
 \begin{equation}
 \ln [ K_P (P^\standardstate,298\;\text{K}) ] =  \frac{ - \Delta_{\text{rxn}} G^\standardstate}{RT}  =  \frac{-210.6\times10^3}{8.31 \cdot 298} = - 85.0.
 \end{equation}
-We can now use the integrated van 't Hoff equation, eq. \@ref(eq:vthoffeqI), to calculate $K_P$ at $T=2298\;\text{K}$:
+We can now use the integrated van 't Hoff equation, eq. \@ref(eq:vthoffeqI), to calculate $K_P$ at $T=2\,298\;\text{K}$:
 \begin{equation}
-\ln [K_P (P^\standardstate,2298\;\text{K})] = \ln [K_P (P^\standardstate,298\;\text{K})] -\frac{\Delta_{\text{rxn}} H^\standardstate}{R} \left(\frac{1}{2298}-\frac{1}{298} \right),
+\begin{aligned}
+\ln [K_P (P^\standardstate,&2\,298\;\text{K})] = \ln [K_P (P^\standardstate,298\;\text{K})] \;+ \\ &-\frac{\Delta_{\text{rxn}} H^\standardstate}{R} \left(\frac{1}{2\,298}-\frac{1}{298} \right),
+\end{aligned}
 \end{equation}
 which becomes:
 \begin{equation}
-\ln [K_P (P^\standardstate,2298\;\text{K})] = - 85.0 -\frac{242.6\times 10^{3}}{8.31} \left(\frac{1}{2298}-\frac{1}{298} \right) = 0.262\;,
+\begin{aligned}
+\ln [K_P (P^\standardstate,&2\,298\;\text{K})] = - 85.0 \;+\\&-\frac{242.6\times 10^{3}}{8.31} \left(\frac{1}{2\,298}-\frac{1}{298} \right) = 0.262\;,
+\end{aligned}
 \end{equation}
 which corresponds to:
 \begin{equation}
-K_P (P^\standardstate,2298\;\text{K}) = \exp (0.262)=1.30.
+K_P (P^\standardstate,2\,298\;\text{K}) = \exp (0.262)=1.30.
 \end{equation}
 
-- Let's now move to the second part of the exercise, where we increase the pressure from $1\;\text{bar}$ to $2.5\;\text{bar}$ at constant $T=2298\;\text{K}$. We start by writing the definition of $K_P$ and $K_y$:
+- Let's now move to the second part of the exercise, where we increase the pressure from $1\;\text{bar}$ to $2.5\;\text{bar}$ at constant $T=2\,298\;\text{K}$. We start by writing the definition of $K_P$ and $K_y$:
 \begin{equation}
 K_P=\frac{P_\mathrm{Cl_{(g)}}^2}{P_{\mathrm{Cl}_{2(g)}}} \qquad \qquad  K_y=\frac{y_\mathrm{Cl_{(g)}}^2}{y_{\mathrm{Cl}_{2(g)}}},
 \end{equation}
 and using eq. \@ref(eq:kxkcdef3):
 \begin{equation}
-\Delta \nu = 2 - 1 = 1 \\
-K_P = K_y \cdot \frac{P}{P^\standardstate} \quad \xrightarrow \qquad K_y=K_P \left( \frac{P}{P^\standardstate} \right)^{-1},
+\begin{aligned}
+\Delta \nu &= 2 - 1 = 1 \\
+K_P &= K_y \cdot \frac{P}{P^\standardstate} \quad \xrightarrow \qquad K_y=K_P \left( \frac{P}{P^\standardstate} \right)^{-1},
+\end{aligned}
 \end{equation}
 we can calculate the initial $K_y$ at $P_i=P^\standardstate$, using:
 \begin{equation}
-K_y (P^\standardstate,2298\;\text{K}) = 1.30 =\frac{1.30}{1}.
+K_y (P^\standardstate,2\,298\;\text{K}) = 1.30 =\frac{1.30}{1}.
 \end{equation}
 and calculate the initial concentration of $\mathrm{Cl}_{(g)}$ and $\mathrm{Cl}_{(g)}$ at $P^\standardstate$, recalling that $y_{\mathrm{Cl}_{2(g)}}=1-y_{\mathrm{Cl}_{(g)}}:$
 \begin{equation}
-K_y (P_i,2298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
+K_y (P_i,2\,298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
 \end{equation}
 Solving the quadratic equation, we obtain one negative answer—which is unphysical—,^[Concentration cannot be negative.] and:
 \begin{equation}
@@ -271,17 +277,17 @@ y_{\mathrm{Cl}_{(g)}}^i= 0.662 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^
 \end{equation}
 At the end of the process, $P_f=2.5\;\text{bar}$, and we obtain:
 \begin{equation}
-K_y (P_f,2298\;\text{K}) = 0.520 = K_P \frac{P^\standardstate}{P_f} = \frac{1.30}{2.5},
+K_y (P_f,2\,298\;\text{K}) = 0.520 = K_P \frac{P^\standardstate}{P_f} = \frac{1.30}{2.5},
 \end{equation}
 and, using the same technique used before to solve the quadratic equation:
 \begin{equation}
-K_y (P_f,2298\;\text{K})=\frac{\left(y^f_{\mathrm{Cl}_{(g)}}\right)^2}{y^f_{\mathrm{Cl}_{(g)}}} = 0.520,
+K_y (P_f,2\,298\;\text{K})=\frac{\left(y^f_{\mathrm{Cl}_{(g)}}\right)^2}{y^f_{\mathrm{Cl}_{(g)}}} = 0.520,
 \end{equation}
 gives:
 \begin{equation}
 y_{\mathrm{Cl}_{(g)}}^f=0.507 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^i=1-0.507 = 0.493.
 \end{equation}
-To summarize, when we increase the pressure from $1\;\text{bar}$ to $2.5\;\text{bar}$ at $T=2298\;\text{K}$, the equilibrium constant in terms of the mole fraction decreases from $K_y(P^\standardstate,2298\;\text{K})=1.30$ to $K_y(P_f=2.5\;\text{bar},2298\;\text{K})=0.520$. This reduction is causing a shift of the equilibrium towards the reactants, with the concentration of  $\text{Cl}_{2(g)}$ increasing from $y_{\text{Cl}_{2(g)}}^i = 0.338$ to $y_{\text{Cl}_{2(g)}}^f = 0.493$ and the concentration of $\text{Cl}_{(g)}$ decreasing from $y_{\text{Cl}_{2(g)}}^i = 0.662$ to $y_{\text{Cl}_{(g)}}^f = 0.507$.
+To summarize, when we increase the pressure from $1\;\text{bar}$ to $2.5\;\text{bar}$ at $T=2\,298\;\text{K}$, the equilibrium constant in terms of the mole fraction decreases from $K_y(P^\standardstate,2\,298\;\text{K})=1.30$ to $K_y(P_f=2.5\;\text{bar},2\,298\;\text{K})=0.520$. This reduction is causing a shift of the equilibrium towards the reactants, with the concentration of  $\text{Cl}_{2(g)}$ increasing from $y_{\text{Cl}_{2(g)}}^i = 0.338$ to $y_{\text{Cl}_{2(g)}}^f = 0.493$ and the concentration of $\text{Cl}_{(g)}$ decreasing from $y_{\text{Cl}_{2(g)}}^i = 0.662$ to $y_{\text{Cl}_{(g)}}^f = 0.507$.
 
 ```
 

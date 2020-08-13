@@ -160,7 +160,7 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 ### Calculation of $| W_{\text{max}} |$ and  $| W_{\text{min}} |$
 Let's go back to the calculation of the work in a process at constant temperature. We can use the formulas obtained in section \@ref(workint) to understand a little bit better the meaning of a *path function*. Let's consider the following PV diagram, obtained from an ideal gas at constant $T=298$ K:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
 x <- seq(0,1.25,0.01)
 i <- 0.25
 f <- 1
@@ -189,7 +189,7 @@ arrows(f, 0.081*298/f, -10, 0.081*298/f , length=0, angle=90, code=3, lty="dotte
 ```
 
 where the isothermal expansion happens between $P_i$ and $P_f$. If the expansion happens in a one-step fast process, for example against a constant pressure $P_f=P_{\text{ext}}$, the work is given by eq. \@ref(eq:WintF). On the plot, the absolute value of the work^[we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition \@ref(def:chemistryconv).] is represented by the red area:
-```{r, echo=FALSE, fig.align='center',fig.asp = .62}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -229,7 +229,7 @@ rect(i,i, f, 0.081*298/f, density = 20, angle = 45,
 \end{equation}
 
 However, if the process happens in two steps, by pausing at position (1) until equilibrium is reached, then we should calculate the work by dividing the process into two. The first process is an expansion between $P$ and $P_1$, whose absolute value of the work, $W_A$, is represented by the blue area:
-```{r, echo=FALSE, fig.align='center',fig.asp = .62}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -267,7 +267,7 @@ rect(i,i, p1, 0.081*298/p1, density = 20, angle = 45,
    
 
 
- legend(0.215,35, expression(P[1]*(V[1]-V[i])),box.col = "white", bg = "white", adj=0.15)
+ legend(0.205,35, expression(P[1]*(V[1]-V[i])),box.col = "white", bg = "white", adj=0.15)
 
 ```
 \begin{equation}
@@ -278,7 +278,7 @@ rect(i,i, p1, 0.081*298/p1, density = 20, angle = 45,
 
 The second process is an expansion between $P_1$ and $P_{\text{ext}}$, whose absolute value of the work is represented by the green area:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -316,7 +316,7 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
    
 
 
- legend(0.65,22, expression(P[f]*(V[f]-V[1])),box.col = "white", bg = "white", adj=0.15)
+ legend(0.63,22, expression(P[f]*(V[f]-V[1])),box.col = "white", bg = "white", adj=0.15)
 
 ```
 
@@ -328,7 +328,7 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1

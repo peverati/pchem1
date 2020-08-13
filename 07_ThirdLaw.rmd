@@ -169,7 +169,7 @@ Don't be confused by the fact that $\Delta S^{\text{sys}}$ is negative. This is 
 \begin{equation}
 \begin{aligned}
 Q^{\text{sys}} & = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
-& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) = -5.6 \; \text{kJ/mol}. \\
+& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) \\ &= -5.6 \; \text{kJ/mol}. \\
 \\
 \Delta S^{\text{surr}} & = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
 \end{aligned}
@@ -225,7 +225,7 @@ In chapter \@ref(Thermochemistry), we have discussed how to calculate reaction e
 
 This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive.   This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences. 
 
-In simpler terms, given a substance $i$, we are not able to measure absolute values of its enthalpy $H_i$ (and we must resort to known enthalpy differences, such as  $\Delta_{\mathrm{f}} H^\standardstate$ at standard pressure). At the same time, for entropy, we can measure $S_i$ thanks to the third law, and we usually report them as $S_i^\standardstate$. A comprehensive list of standard entropies of inorganic and organic compounds is reported in appendix \@ref{appendix}. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
+In simpler terms, given a substance $i$, we are not able to measure absolute values of its enthalpy $H_i$ (and we must resort to known enthalpy differences, such as  $\Delta_{\mathrm{f}} H^\standardstate$ at standard pressure). At the same time, for entropy, we can measure $S_i$ thanks to the third law, and we usually report them as $S_i^\standardstate$. A comprehensive list of standard entropies of inorganic and organic compounds is reported in appendix \@ref(appendix). Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
 
 \begin{equation}
 \Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S_i^\standardstate,

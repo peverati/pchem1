@@ -3,7 +3,8 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-]{book}
+  9pt,
+]{extbook}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -71,6 +72,18 @@
 \usepackage{pdfpages}
 \usepackage{amsthm}
 \usepackage{cancel}
+
+%change to a smaller page:
+\usepackage[paperwidth=6in, paperheight=9in]{geometry}
+
+%fancyhdr to set custom headers for the book:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\slshape\nouppercase{\rightmark}}
+\fancyhead[RE]{\slshape\nouppercase{\leftmark}}
+\fancyhead[RO,LE]{\thepage}
+
 \makeatletter
 \def\thm@space@setup{%
   \thm@preskip=8pt plus 2pt minus 4pt
@@ -87,7 +100,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{11 August 2020}
+\date{12 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -107,15 +120,22 @@
 \begin{document}
 \maketitle
 
-\includepdf[pages={1}, scale=1]{cover_pdf.pdf}
+\includepdf[pages={1}, scale=1]{FrontPage_6x9.pdf}
 \newpage
 
 \let\maketitle\oldmaketitle
+
+% Let's change \thepage so it prints one less than
+% the real page number; \pagenumbering{arabic}
+% will redefine it to the right meaning afterwards.
+\renewcommand\thepage{\romannumeral\numexpr\value{page}-1\relax}
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\renewcommand{\arraystretch}{1.8}
+
 \hypertarget{preface}{%
 \chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
@@ -126,7 +146,7 @@ This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 
 
 The instructor for this course and author of this textbook is Dr.~Roberto Peverati.
 
-CONTACTS: \href{mailto:rpeverati@fit.edu}{\nolinkurl{rpeverati@fit.edu}}, Office: OPS 333, (321) 674-7735
+\textbf{Contacts}: \href{mailto:rpeverati@fit.edu}{\nolinkurl{rpeverati@fit.edu}}, Office: OPS 333, (321) 674-7735
 
 Chemistry Program, Department of Biomedical and Chemical Engineering and Science
 Florida Institute of Technology, Melbourne, FL.
@@ -154,7 +174,8 @@ Each chapter of this book represents one week of work in the classroom and at ho
 If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati@fit.edu}{email} and you will receive a credit of up to three points towards your final score, once the typo has been verified and corrected.
 \end{quote}
 
-\renewcommand{\arraystretch}{2}
+\cleardoublepage
+\pagenumbering{arabic}
 
 \hypertarget{SystemVariables}{%
 \chapter{Systems and Variables}\label{SystemVariables}}
@@ -166,7 +187,7 @@ A thermodynamic system---or just simply a system---is a portion of space with de
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.001} 
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_Figures.001} 
 
 }
 
@@ -176,6 +197,8 @@ A thermodynamic system---or just simply a system---is a portion of space with de
 In the first case, a liquid is contained in a typical Erlenmeyer flask. The boundaries of the system are the glass walls of the beaker. The second system is represented by the gas contained in a balloon. The boundary is a physical barrier also in this case, being the plastic of the balloon. The third case is that of a thunder cloud. The boundary is not a well-defined physical barrier, but rather some condition of pressure and chemical composition at the interface between the cloud and the atmosphere. Finally, the fourth case is the case of an open flame. In this case, the boundary is again non-physical, and possibly even harder to define than for a cloud. For example, we can choose to define the flame based on some temperature threshold, color criterion, or even some chemical one. Despite the lack of physical boundaries, the cloud and the flame---as portions of space containing matter---can be defined as a thermodynamic system.
 
 A system can exchange exclusively mass, exclusively energy, or both mass and energy with its surroundings. Depending on the boundaries' ability to transfer these quantities, a system is defined as open, closed, or isolated. An open system exchanges both mass and energy. A closed system exchanges only energy, but not mass. Finally, an isolated system does not exchange mass nor energy.
+
+When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let's consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of --100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be --100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and --100 to the ingoing one, and the overall total would have stayed the same: +100--100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
@@ -187,8 +210,6 @@ A system can exchange exclusively mass, exclusively energy, or both mass and ene
 \textbf{Isolated} & N & N\tabularnewline
 \bottomrule
 \end{longtable}
-
-When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let's consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of --100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be --100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and --100 to the ingoing one, and the overall total would have stayed the same: +100--100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?
 
 \begin{quote}
 Here is another example. Let's consider a system that is composed of your body. When you exercise, you lose mass in the form of water (sweat) and CO\textsubscript{2} (from respiration). This mass loss can be easily measured by stepping on a scale before and after exercise. The number you observe on the scale will go down. Hence you have lost weight. After exercise, you will reintegrate the lost mass by drinking and eating. If you have reinstated the same amount you have lost, your weight will be the same as before the exercise (no weight loss). Nevertheless, which label do you attach to the amounts that you have lost and gained? Let's say that you are running a 5km race without drinking nor eating, and you measure your weight dropping 2 kg after the race. After the race, you drink 1.5 kg of water and eat a 500 g energy bar. Overall you did not lose any weight, and it would seem reasonable to label the 2 kg that you've lost as negative (--2) and the 1.5 kg of water that you drank and the 500 g bar that you ate as positive (+1.5 +0.5 = +2). But is it the only way? After all, you didn't gain nor lose any weight, so why not calling the 2 kg due to exercise +2 and the 2 that you've ingested as --2? It might seem silly, but mathematically it would not make any difference, the total would still be zero. Now, let's consider energy instead of mass. To run the 5km race, you have spent 500 kcal, which then you reintegrate precisely by eating the energy bar. Which sign would you put in front of the kilocalories that you ``burned'' during the race? In principle, you've lost them, so if you want to be consistent, you should use a negative sign. But if you think about it, you've put quite an effort to ``lose'' those kilocalories, so it might not feel bad to assign them a positive sign instead. After all, it's perfectly OK to say, ``I've done a 500 kcal run today'', while it might sound quite awkward to say, ``I've done a --500 kcal run today.'' Our previous exercise with mass demonstrates that it doesn't really matter which sign you put in front of the quantities. As long as you are consistent throughout the process, the signs will cancel out. If you've done a +500 kcal run, you've eaten a bar for --500 kcal, resulting in a total zero loss/gain. Alternatively, if you've done a --500 kcal run, you would have eaten a +500 kcal bar, for a total of again zero loss/gain.
@@ -314,7 +335,7 @@ We will return on exact and inexact differential when we discuss heat and work, 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.002} 
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_Figures.002} 
 
 }
 
@@ -721,11 +742,11 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 
 Let's go back to the calculation of the work in a process at constant temperature. We can use the formulas obtained in section \ref{workint} to understand a little bit better the meaning of a \emph{path function}. Let's consider the following PV diagram, obtained from an ideal gas at constant \(T=298\) K:
 
-\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-2-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 where the isothermal expansion happens between \(P_i\) and \(P_f\). If the expansion happens in a one-step fast process, for example against a constant pressure \(P_f=P_{\text{ext}}\), the work is given by eq. \eqref{eq:WintF}. On the plot, the absolute value of the work\footnote{we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition \ref{def:chemistryconv}.} is represented by the red area:
 
-\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \begin{equation}
 \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
@@ -734,7 +755,7 @@ where the isothermal expansion happens between \(P_i\) and \(P_f\). If the expan
 
 However, if the process happens in two steps, by pausing at position (1) until equilibrium is reached, then we should calculate the work by dividing the process into two. The first process is an expansion between \(P\) and \(P_1\), whose absolute value of the work, \(W_A\), is represented by the blue area:
 
-\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \begin{equation}
 \left| W_A \right| = P_1 (V_1-V_i)
@@ -743,7 +764,7 @@ However, if the process happens in two steps, by pausing at position (1) until e
 
 The second process is an expansion between \(P_1\) and \(P_{\text{ext}}\), whose absolute value of the work is represented by the green area:
 
-\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \begin{equation}
 \left| W_B \right| = P_f (V_f-V_1)
@@ -752,7 +773,7 @@ The second process is an expansion between \(P_1\) and \(P_{\text{ext}}\), whose
 
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
-\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{equation}
   \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
@@ -970,7 +991,7 @@ For example, the standard enthalpies of formation of some common compounds at \(
 \label{eq:someDfH}
 \end{equation}
 
-A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix @ref\{appendix\}.
+A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix \ref{appendix}.
 
 \hypertarget{hessslaw}{%
 \section{Hess's Law}\label{hessslaw}}
@@ -1080,16 +1101,18 @@ with \(\Delta C_P = \sum_i \nu_i C_{P,i}\).
 \emph{Solution:} Using eq. \eqref{eq:DrxnHneq298f} we obtain:
 
 \[
- \Delta_{\text{rxn}} H_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
+ \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
 \]
 
 which, assuming that the heat capacities does not depend on the temperature, becomes:
 
-\[
- \Delta_{\text{rxn}} H_{398} = -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) = -283.6 \; \text{kJ/mol}.
-\]
+\begin{equation}
+\begin{aligned}
+ \Delta_{\text{rxn}} H^{398} &= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &= -283.6 \; \text{kJ/mol}.
+\end{aligned}
+\end{equation}
 
-As we notice from this result, a difference in temperature of 100 K translates into a change in \(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\) of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of \(\Delta_{\text{rxn}}H\) are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for \(\Delta_{\text{rxn}}H^{398}\) of this reaction, which is -283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. \eqref{eq:DrxnHneq298f}, confirming that the heat capacities are mostly independent of temperature.
+As we notice from this result, a difference in temperature of 100 K translates into a change in \(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\) of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of \(\Delta_{\text{rxn}}H\) are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for \(\Delta_{\text{rxn}}H^{398}\) of this reaction, which is --283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. \eqref{eq:DrxnHneq298f}, confirming that the heat capacities are mostly independent of temperature.
 \end{exercise}
 \end{quote}
 
@@ -1134,7 +1157,7 @@ A Carnot cycle connects two ``heat reservoirs'' at temperatures \(T_h\) (hot) an
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/FigCarnotPV-1} 
+{\centering \includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/FigCarnotPV-1} 
 
 }
 
@@ -1367,7 +1390,7 @@ or alternatively:
 
 The left hand side of eq. \eqref{eq:effcQTrearr2} contains the sum of two quantities around the Carnot cycle, each calculated as \(\frac{Q_{\mathrm{REV}}}{T}\), with \(Q_{\mathrm{REV}}\) being the heat exchanged at reversible conditions (recall that according to Definition \ref{def:carnotcycle} each transformation in a Carnot cycle is reversible). Eq. \eqref{eq:effcQTrearr} can be generalized to a sequence of connected Carnot cycles joining more than two isotherms by taking the summation across different temperatures:
 
-\begin{center}\includegraphics{pchem1_files/figure-latex/unnamed-chunk-12-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
 \begin{equation}
 \sum_i \frac{Q_{\mathrm{REV}}}{T_i} = 0,
@@ -1668,7 +1691,7 @@ Don't be confused by the fact that \(\Delta S^{\text{sys}}\) is negative. This i
 \begin{equation}
 \begin{aligned}
 Q^{\text{sys}} & = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
-& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) = -5.6 \; \text{kJ/mol}. \\
+& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) \\ &= -5.6 \; \text{kJ/mol}. \\
 \\
 \Delta S^{\text{surr}} & = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
 \end{aligned}
@@ -1729,7 +1752,7 @@ In chapter \ref{Thermochemistry}, we have discussed how to calculate reaction en
 
 This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive. This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences.
 
-In simpler terms, given a substance \(i\), we are not able to measure absolute values of its enthalpy \(H_i\) (and we must resort to known enthalpy differences, such as \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) at standard pressure). At the same time, for entropy, we can measure \(S_i\) thanks to the third law, and we usually report them as \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\). A comprehensive list of standard entropies of inorganic and organic compounds is reported in appendix @ref\{appendix\}. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
+In simpler terms, given a substance \(i\), we are not able to measure absolute values of its enthalpy \(H_i\) (and we must resort to known enthalpy differences, such as \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) at standard pressure). At the same time, for entropy, we can measure \(S_i\) thanks to the third law, and we usually report them as \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\). A comprehensive list of standard entropies of inorganic and organic compounds is reported in appendix \ref{appendix}. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
 
 \begin{equation}
 \Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
@@ -1844,9 +1867,9 @@ dG &= dU -SdT -TdS +VdP +PdV \\
 
 The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
 
-A summary of the four thermodynamic potentials is given in the following table.\footnote{For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the \href{https://en.wikipedia.org/wiki/Thermodynamic_square}{thermodynamic square}.}
+A summary of the four thermodynamic potentials is given in the following table.
 
-\scriptsize
+\tiny
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
@@ -1873,7 +1896,7 @@ The thermodynamic potentials are the analog of the potential energy in classical
 \item
   Gibbs free energy (\(G\)) is the capacity to do non-mechanical work.
 \item
-  Helmholtz free energy (\(A\)) is the capacity to do mechanical plus non-mechanical work.
+  Helmholtz free energy (\(A\)) is the capacity to do mechanical plus non-mechanical work.\footnote{For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the \href{https://en.wikipedia.org/wiki/Thermodynamic_square}{thermodynamic square}.}
 \end{itemize}
 
 Where non-mechanical work is defined as any type of work that is not expansion or compression (\(PV\)--work). A typical example of non-mechanical work is electrical work.
@@ -1989,10 +2012,10 @@ From the knowledge of the natural variable of each potential, we could reconstru
 
 \begin{equation}
 \begin{aligned}
-dU(S,V,\{n_i\}) &= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dH(S,P,\{n_i\}) &= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dA(T,V,\{n_i\}) &= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dG(T,P,\{n_i\}) &= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
+dU &= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dH &= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dA &= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dG &= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
 \end{aligned}
 \label{eq:dhagchem2}
 \end{equation}
@@ -2067,7 +2090,7 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{GibbsFree}{%
-\chapter{The Gibbs Free Energy}\label{GibbsFree}}
+\chapter{Gibbs Free Energy}\label{GibbsFree}}
 
 In this chapter, we will concentrate on chemical processes that happen at constant \(T\) and constant \(P\).\footnote{The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.} As such, we will focus our attention on the Gibbs free energy.
 
@@ -2110,7 +2133,7 @@ which is the famous \textbf{Gibbs equation} for \(\Delta G\). Using Definition \
 \label{eq:gibbseq2}
 \end{equation}
 
-where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard enthalpies of formation, \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard entropies, and \(\nu_i\) are the stoichiometric coefficients for every species \(i\) involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \ref{Thermochemistry} and \ref{thirdlaw}, respectively.\footnote{It is not uncommon to see values of \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) tabulated alongside \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) and \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\), which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book @ref\{appendix\}. For cases where \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) are not reported, they can always be calculated by their constituents.}
+where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard enthalpies of formation, \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard entropies, and \(\nu_i\) are the stoichiometric coefficients for every species \(i\) involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \ref{Thermochemistry} and \ref{thirdlaw}, respectively.\footnote{It is not uncommon to see values of \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) tabulated alongside \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) and \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\), which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book \ref{appendix}. For cases where \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) are not reported, they can always be calculated by their constituents.}
 
 The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\) of a chemical reaction:
 
@@ -2201,7 +2224,7 @@ A simple criterion to evaluate the entropic contribution of a reaction is to loo
 As we saw in section \ref{thermpot}, the natural variables of the Gibbs free energy are the temperature, \(T\), the pressure, \(P\), and chemical composition, as the number of moles \(\{n_i\}\). The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. \eqref{eq:dhagchem2}):
 
 \begin{equation}
-dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i\;.
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 \label{eq:dgtotdiff}
 \end{equation}
 
@@ -2289,7 +2312,7 @@ which is the differential equation that we were looking for. To study changes of
 \label{eq:dgconsttpintegral1}
 \end{equation}
 
-If we take \(P_i = P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \, \text{bar}\), we can rewrite eq. \eqref{eq:dgconsttp} as:
+If we take \(P_i = P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \, \text{bar}\), we can rewrite eq. \eqref{eq:dgconsttpintegral1} as:
 
 \begin{equation}
 G = G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
@@ -2600,14 +2623,14 @@ For example, it is easy to look at eq. \eqref{eq:kxkcdef3} and determine that \(
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:kpkx}{}{\label{exr:kpkx} }Calculate the mole fraction change for the dissociation of \(\mathrm{Cl}_{2(g)}\) when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) to \(P_f=2.5 \;\text{bar}\) at constant \(T=2298\;\mathrm{K}\), knowing that \(\Delta_{\mathrm{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\) and \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\), and remembering that both of these values are tabulated at \(T=298\;\text{K}\).
+\protect\hypertarget{exr:kpkx}{}{\label{exr:kpkx} }Calculate the mole fraction change for the dissociation of \(\mathrm{Cl}_{2(g)}\) when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) to \(P_f=2.5 \;\text{bar}\) at constant \(T=2\,298\;\mathrm{K}\), knowing that \(\Delta_{\mathrm{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\) and \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\), and remembering that both of these values are tabulated at \(T=298\;\text{K}\).
 
 \emph{Solution:} Let's consider the reaction:
 \[
 \mathrm{Cl}_{2(g)} \rightleftarrows 2 \mathrm{Cl}_{(g)}
 \]
 
-We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at \(T=2298\;\mathrm{K}\) from the data at \(T=298\;\mathrm{K}\). In the second one, we will calculate the change in mole fraction when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}=1\;\text{bar}\) to \(P_f=2.5 \;\text{bar}\).
+We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at \(T=2\,298\;\mathrm{K}\) from the data at \(T=298\;\mathrm{K}\). In the second one, we will calculate the change in mole fraction when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}=1\;\text{bar}\) to \(P_f=2.5 \;\text{bar}\).
 
 \begin{itemize}
 \item
@@ -2629,35 +2652,41 @@ We can divide the exercise into two parts. In the first one, we will deal with c
   \begin{equation}
   \ln [ K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},298\;\text{K}) ] =  \frac{ - \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}}{RT}  =  \frac{-210.6\times10^3}{8.31 \cdot 298} = - 85.0.
   \end{equation}
-  We can now use the integrated van 't Hoff equation, eq. \eqref{eq:vthoffeqI}, to calculate \(K_P\) at \(T=2298\;\text{K}\):
+  We can now use the integrated van 't Hoff equation, eq. \eqref{eq:vthoffeqI}, to calculate \(K_P\) at \(T=2\,298\;\text{K}\):
   \begin{equation}
-  \ln [K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},2298\;\text{K})] = \ln [K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},298\;\text{K})] -\frac{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}}{R} \left(\frac{1}{2298}-\frac{1}{298} \right),
+  \begin{aligned}
+  \ln [K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},&2\,298\;\text{K})] = \ln [K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},298\;\text{K})] \;+ \\ &-\frac{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}}{R} \left(\frac{1}{2\,298}-\frac{1}{298} \right),
+  \end{aligned}
   \end{equation}
   which becomes:
   \begin{equation}
-  \ln [K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},2298\;\text{K})] = - 85.0 -\frac{242.6\times 10^{3}}{8.31} \left(\frac{1}{2298}-\frac{1}{298} \right) = 0.262\;,
+  \begin{aligned}
+  \ln [K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},&2\,298\;\text{K})] = - 85.0 \;+\\&-\frac{242.6\times 10^{3}}{8.31} \left(\frac{1}{2\,298}-\frac{1}{298} \right) = 0.262\;,
+  \end{aligned}
   \end{equation}
   which corresponds to:
   \begin{equation}
-  K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},2298\;\text{K}) = \exp (0.262)=1.30.
+  K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},2\,298\;\text{K}) = \exp (0.262)=1.30.
   \end{equation}
 \item
-  Let's now move to the second part of the exercise, where we increase the pressure from \(1\;\text{bar}\) to \(2.5\;\text{bar}\) at constant \(T=2298\;\text{K}\). We start by writing the definition of \(K_P\) and \(K_y\):
+  Let's now move to the second part of the exercise, where we increase the pressure from \(1\;\text{bar}\) to \(2.5\;\text{bar}\) at constant \(T=2\,298\;\text{K}\). We start by writing the definition of \(K_P\) and \(K_y\):
   \begin{equation}
   K_P=\frac{P_\mathrm{Cl_{(g)}}^2}{P_{\mathrm{Cl}_{2(g)}}} \qquad \qquad  K_y=\frac{y_\mathrm{Cl_{(g)}}^2}{y_{\mathrm{Cl}_{2(g)}}},
   \end{equation}
   and using eq. \eqref{eq:kxkcdef3}:
   \begin{equation}
-  \Delta \nu = 2 - 1 = 1 \\
-  K_P = K_y \cdot \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \xrightarrow \qquad K_y=K_P \left( \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}} \right)^{-1},
+  \begin{aligned}
+  \Delta \nu &= 2 - 1 = 1 \\
+  K_P &= K_y \cdot \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \xrightarrow \qquad K_y=K_P \left( \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}} \right)^{-1},
+  \end{aligned}
   \end{equation}
   we can calculate the initial \(K_y\) at \(P_i=P^{-\kern-6pt{\ominus}\kern-6pt-}\), using:
   \begin{equation}
-  K_y (P^{-\kern-6pt{\ominus}\kern-6pt-},2298\;\text{K}) = 1.30 =\frac{1.30}{1}.
+  K_y (P^{-\kern-6pt{\ominus}\kern-6pt-},2\,298\;\text{K}) = 1.30 =\frac{1.30}{1}.
   \end{equation}
   and calculate the initial concentration of \(\mathrm{Cl}_{(g)}\) and \(\mathrm{Cl}_{(g)}\) at \(P^{-\kern-6pt{\ominus}\kern-6pt-}\), recalling that \(y_{\mathrm{Cl}_{2(g)}}=1-y_{\mathrm{Cl}_{(g)}}:\)
   \begin{equation}
-  K_y (P_i,2298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
+  K_y (P_i,2\,298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
   \end{equation}
   Solving the quadratic equation, we obtain one negative answer---which is unphysical---,\footnote{Concentration cannot be negative.} and:
   \begin{equation}
@@ -2665,17 +2694,17 @@ We can divide the exercise into two parts. In the first one, we will deal with c
   \end{equation}
   At the end of the process, \(P_f=2.5\;\text{bar}\), and we obtain:
   \begin{equation}
-  K_y (P_f,2298\;\text{K}) = 0.520 = K_P \frac{P^{-\kern-6pt{\ominus}\kern-6pt-}}{P_f} = \frac{1.30}{2.5},
+  K_y (P_f,2\,298\;\text{K}) = 0.520 = K_P \frac{P^{-\kern-6pt{\ominus}\kern-6pt-}}{P_f} = \frac{1.30}{2.5},
   \end{equation}
   and, using the same technique used before to solve the quadratic equation:
   \begin{equation}
-  K_y (P_f,2298\;\text{K})=\frac{\left(y^f_{\mathrm{Cl}_{(g)}}\right)^2}{y^f_{\mathrm{Cl}_{(g)}}} = 0.520,
+  K_y (P_f,2\,298\;\text{K})=\frac{\left(y^f_{\mathrm{Cl}_{(g)}}\right)^2}{y^f_{\mathrm{Cl}_{(g)}}} = 0.520,
   \end{equation}
   gives:
   \begin{equation}
   y_{\mathrm{Cl}_{(g)}}^f=0.507 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^i=1-0.507 = 0.493.
   \end{equation}
-  To summarize, when we increase the pressure from \(1\;\text{bar}\) to \(2.5\;\text{bar}\) at \(T=2298\;\text{K}\), the equilibrium constant in terms of the mole fraction decreases from \(K_y(P^{-\kern-6pt{\ominus}\kern-6pt-},2298\;\text{K})=1.30\) to \(K_y(P_f=2.5\;\text{bar},2298\;\text{K})=0.520\). This reduction is causing a shift of the equilibrium towards the reactants, with the concentration of \(\text{Cl}_{2(g)}\) increasing from \(y_{\text{Cl}_{2(g)}}^i = 0.338\) to \(y_{\text{Cl}_{2(g)}}^f = 0.493\) and the concentration of \(\text{Cl}_{(g)}\) decreasing from \(y_{\text{Cl}_{2(g)}}^i = 0.662\) to \(y_{\text{Cl}_{(g)}}^f = 0.507\).
+  To summarize, when we increase the pressure from \(1\;\text{bar}\) to \(2.5\;\text{bar}\) at \(T=2\,298\;\text{K}\), the equilibrium constant in terms of the mole fraction decreases from \(K_y(P^{-\kern-6pt{\ominus}\kern-6pt-},2\,298\;\text{K})=1.30\) to \(K_y(P_f=2.5\;\text{bar},2\,298\;\text{K})=0.520\). This reduction is causing a shift of the equilibrium towards the reactants, with the concentration of \(\text{Cl}_{2(g)}\) increasing from \(y_{\text{Cl}_{2(g)}}^i = 0.338\) to \(y_{\text{Cl}_{2(g)}}^f = 0.493\) and the concentration of \(\text{Cl}_{(g)}\) decreasing from \(y_{\text{Cl}_{2(g)}}^i = 0.662\) to \(y_{\text{Cl}_{(g)}}^f = 0.507\).
 \end{itemize}
 \end{exercise}
 \end{quote}
@@ -2688,11 +2717,13 @@ The dependence of \(K_{\text{eq}}\) on \(P\) highlighted above is another mathem
   If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total amount of moles (the equilibrium in exercise \ref{exr:kpkx} shifts toward the reactant).
 \end{itemize}
 
+\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+
 \hypertarget{RealGases}{%
 \chapter{Ideal and Non-Ideal Gases}\label{RealGases}}
 
-\hypertarget{ideal-gases}{%
-\section{Ideal Gases}\label{ideal-gases}}
+\hypertarget{the-ideal-gas-equation}{%
+\section{The Ideal Gas Equation}\label{the-ideal-gas-equation}}
 
 assumptions:
 
@@ -2708,19 +2739,54 @@ assumptions:
 \hypertarget{the-ideal-gas-law}{%
 \subsection{The ideal gas Law}\label{the-ideal-gas-law}}
 
-\hypertarget{non-ideal-gases}{%
-\section{Non-Ideal Gases}\label{non-ideal-gases}}
+\hypertarget{behaviors-of-non-ideal-gases}{%
+\section{Behaviors of Non-Ideal Gases}\label{behaviors-of-non-ideal-gases}}
 
-Non-ideal gases (sometimes also referred to as ``real gases''), do not behave as ideal gases because one or more od the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a \(P\) \emph{vs.} \(V\) diagram, or a \(PV\) \emph{vs.} \(P\) diagram:
+Non-ideal gases (sometimes also referred to as ``real gases''), do not behave as ideal gases because one or more of the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a \(P\) \emph{vs.} \(V\) diagram, or a \(PV\) \emph{vs.} \(P\) diagram:
 
 \hypertarget{the-van-der-waals-equation}{%
 \subsection{The van der Waals equation}\label{the-van-der-waals-equation}}
 
-\hypertarget{the-virial-equation}{%
-\subsection{The virial equation}\label{the-virial-equation}}
+\hypertarget{joulethomson-effect}{%
+\subsection{Joule--Thomson effect}\label{joulethomson-effect}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.015} 
+
+}
+
+\caption{The Joule–Thomson Experiment.}\label{fig:FigJT}
+\end{figure}
+
+xxx describe the apparatus xxx
+
+The \emph{Joule--Thomson coefficient}, \(\mu_{\mathrm{JT}}\), measures the rate of change of temperature of a gas with respect to pressure in the Joule--Thomson process:
+
+\begin{equation}
+\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H
+\label{eq:muJT}
+\end{equation}
+
+The value of \(\mu_{\mathrm{JT}}\) depends on the type of gas and on the temperature and pressure before expansion. The temperature at which \(\mu_{\mathrm{JT}}\) changes sign is called the ``Joule--Thomson inversion temperature''. Since the pressure decreases during an expansion, \(\partial P\) is negative by definition, and the following possibilities are available for \(\mu_{\mathrm{JT}}\):
+
+\begin{longtable}[]{@{}lcccc@{}}
+\toprule
+Gas temperature: & \(\partial P\) & \(\mu_{\mathrm{JT}}\) & \(\partial T\) & The gas will:\tabularnewline
+\midrule
+\endhead
+\emph{Below the inversion temperature} & -- & + & -- & cool\tabularnewline
+\emph{Above the inversion temperature} & -- & -- & + & warm\tabularnewline
+\bottomrule
+\end{longtable}
+
+For example, helium has a very low Joule--Thomson inversion temperatures at standard pressure \((T=45\;\text{K})\) and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures (\(T=621\;\text{K}\) and \(T=764\;\text{K}\), respectively) and they both cool when expanded at room temperature. As such, it is possible to use the Joule--Thomson effect in refrigeration processes such as air conditioning.\footnote{Nitrogen and oxygen are the two most abundant gases in air. A sequence of Joule--Thomson expansions are also used for the industrial liquefaction of air.} As we already discussed in chapter \ref{FirstLaw}, the temperature of an ideal gases stays constant in an adiabatic expansion, therefore its Joule--Thomson coefficient is always equal to zero.
+
+\hypertarget{critical-phenomena}{%
+\section{Critical Phenomena}\label{critical-phenomena}}
 
 \hypertarget{compressibility-factors}{%
-\section{Compressibility Factors}\label{compressibility-factors}}
+\subsection{Compressibility factors}\label{compressibility-factors}}
 
 The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behaviour. It is usually represented with the symbol \(z\), and is calculated as:
 
@@ -2729,14 +2795,210 @@ z=\frac{V_m}{V_m^{\text{ideal}}} = \frac{P V_m}{RT}.
 \label{eq:comprdef}
 \end{equation}
 
-It is obvious from eq. \eqref{eq:comprdef} that the compressibility factor is dependent on the pressure and for an an ideal gas it is \(z=1\) at any pressure. For a real gas, \(z\) might be either greater or smaller than one at any given pressure. The behavior of the compressibility factor against pressure is represented in Fig. XXX.
+It is evident from eq. \eqref{eq:comprdef} that the compressibility factor is dependent on the pressure, and for an ideal gas \(z=1\) always. For a non-ideal gas at any given pressure, \(z\) can be higher or lower than one, separating their behaviors into two possibilities. The dependence of the compressibility factor against pressure is represented for \(\mathrm{H}_2\) and \(\mathrm{CO}_2\) in Figure \ref{fig:FigZb}.
 
-Fig XXX
+\begin{figure}
 
-Two situation are common, exemplified by the behavior of \(\mathrm{H}_2\) and \(\mathrm{CO}_2\) in Fig. XXX.
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.012} 
+
+}
+
+\caption{Non-Ideal Gases Behaviors.}\label{fig:FigZb}
+\end{figure}
+
+The two types of possible behaviors are differentiated based on the compressibility factor at \(P\rightarrow 0\). To analyze these situations we can use the vdW equation to calculate the compressibility factor as:
+
+\begin{equation}
+z= \frac{V_m}{RT} \left( \frac{RT}{V_m-b} -\frac{a}{V_m^2} \right).
+\label{eq:compr1}
+\end{equation}
+
+and then we can differentiate this equation at constant temperature with respect to changes in the pressure near \(P=0\), to obtain:
+
+\begin{equation}
+\left. \left( \frac{\partial z}{\partial P}\right)_T \right|_{P=0} = \frac{1}{RT} \left( b -\frac{a}{RT} \right).
+\label{eq:compr2}
+\end{equation}
+
+which is then interpreted as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Type I gases}: \(b>\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} > 0\) \emph{molecular size} dominates (\(\mathrm{H}_2-\)like behavior).
+\item
+  \textbf{Type II gases}: \(b<\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} < 0\) \emph{attractive forces} dominates (\(\mathrm{CO}_2-\)like behavior).
+\end{itemize}
+
+The dependence of the compressibility factor as a function of temperature (Figure \ref(fig:Fig1Zb2)) results in different plots for each of the two types of behavior.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/OEP_Figures.013} 
+
+}
+
+\caption{Temperature Dependence of the Compressibility Factor.}\label{fig:Fig1Zb2}
+\end{figure}
+
+Both type I and type II non-ideal gases will approach the ideal gas behavior as \(T\rightarrow \infty\), because \(\frac{1}{RT}\rightarrow 0\) as \(T\rightarrow \infty\). For type II gases, there are three interesting situations:
+
+\begin{itemize}
+\tightlist
+\item
+  At low \(T\): \(b<\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} < 0,\) which is the behavior described above.
+\item
+  At high \(T\): \(b>\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} > 0,\) which is the same behavior of type I gases.
+\item
+  At a very specific temperature, inversion will occur (i.e., at \(T=713 \; \mathrm{K}\) for \(\mathrm{CO}_2\)). This temperature is called the \textbf{Boyle temperature}, \(T_{\mathrm{B}}\), and is the temperature at which the attractive and repulsive forces balance out. It can be calculated from the vdW equation, since \(b-\frac{a}{RT_{\mathrm{B}}}=0 \; \Rightarrow \; T_{\mathrm{B}}=\frac{a}{bR}.\) At the Boyle's temperature a type II gas shows ideal gas behavior over a large range of pressure.
+\end{itemize}
+
+\hypertarget{phase-diagram-of-a-non-ideal-gas}{%
+\subsection{Phase diagram of a non-ideal gas}\label{phase-diagram-of-a-non-ideal-gas}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.014} 
+
+}
+
+\caption{The Pressure–Volume Diagram of a Non-Ideal Gas.}\label{fig:FigPVni}
+\end{figure}
+
+Let's now turn our attention to the \(PV\) phase diagram of a non-ideal gas, reported in Figure \ref{fig:FigPVni}. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas (\(T_5\) and \(T_4\) in Figure \ref{fig:FigPVni}). Lowering the temperature, we start to see the deviation from ideality getting more prominent (\(T_3\) in Figure \ref{fig:FigPVni}) until we reach a particular temperature called the critical temperature, \(T_c\).
+
+\begin{quote}
+\begin{definition}
+\protect\hypertarget{def:criticalT}{}{\label{def:criticalT} }\emph{Critical Temperature:} The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.
+\end{definition}
+\end{quote}
+
+At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a \emph{critical phenomenon}.
+
+The critical temperature is the coordinate of a unique point, called the \textbf{critical point}, that can be visualized in the three-dimensional \(T,P,V\) diagram of each gas (Figure \ref{FigTPVd}\footnote{This diagram is taken from \href{https://en.wikipedia.org}{Wikipedia} and distributed under CC-BY-SA license.}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{./img/PVT_3D_diagram} 
+
+}
+
+\caption{The three-dimensional diagram.}\label{fig:FigTPVd}
+\end{figure}
+
+The critical point has coordinates \({T_c,P_c, V_{m,c}}\). These critical coordinates can be determined from the vdW equation at \(T_c\), as:
+
+\begin{equation}
+T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad V_{m,c}=3b, 
+\label{eq:criticpt}
+\end{equation}
+
+These relations are used, in practice, to determine the vdW constants \(a,b\) from the experimentally measured critical isotherms.
+
+The critical compressibility factor, \(z_c\), is predicted from the vdW equation at:
+
+\begin{equation}
+z_c=\frac{P_c V_{m,c}}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{a} \right) = \frac{3}{8} = 0.375,
+\label{eq:critiz}
+\end{equation}
+
+a value that is independent of the gas. Experimentally measured values of \(z_c\) for different non-ideal gases are in the range of 0.2--0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental \(z_c\) is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume.
 
 \hypertarget{fugacity}{%
 \section{Fugacity}\label{fugacity}}
+
+The chemical potential of a pure ideal gas can be calculated using eq. \eqref{eq:dgconstn4}. Since we are not interested in mixture, we can drop the asterisk in \(\mu^*\), and rewrite eq. \eqref{eq:dgconstn4} as:
+
+\begin{equation}
+\mu_{\text{ideal}} = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}}.
+\label{eq:dcpig}
+\end{equation}
+
+For a non-ideal gas, the pressure cannot be used in eq. \eqref{eq:dcpig} because each gas response to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in eq. \eqref{eq:dcpig} and call it fugacity (\(f\)).
+
+\begin{quote}
+\begin{definition}
+\protect\hypertarget{def:fugacitydef}{}{\label{def:fugacitydef} }\emph{Fugacity:} The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.
+\end{definition}
+
+Eq. \eqref{eq:dcpig} then becomes:
+\end{quote}
+
+\begin{equation}
+\mu_{\text{non-ideal}} = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln \frac{f}{P^{-\kern-6pt{\ominus}\kern-6pt-}}.
+\label{eq:dcpnig}
+\end{equation}
+
+Since the chemical potential of a gas \(\mu\) is equal to the standard chemical potential \(\mu^{-\kern-6pt{\ominus}\kern-6pt-}\) when \(P=P^{-\kern-6pt{\ominus}\kern-6pt-}\), it is easy to use eq. \eqref{eq:dcpnig} to demonstrate that:
+
+\begin{equation}
+\lim_{P\rightarrow 0} \frac{f}{P} = 1,
+\label{eq:dcpnigL}
+\end{equation}
+
+in other words, any non-ideal gas will approach the ideal gas behavior as \(P\rightarrow 0\). This condition, in conjunction with the \(T\rightarrow \infty\) behavior obtained in the previous section, results in the following statement:
+
+\begin{quote}
+The highest chances for any gas to behave ideally happen at high temperature and low pressure.
+\end{quote}
+
+We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs free energy of a substance, we can write:
+
+\begin{equation}
+d \mu_{\text{ideal}} = V_{m,\text{ideal}}dP,
+\label{eq:dmufug1}
+\end{equation}
+
+and:
+
+\begin{equation}
+d \mu_{\text{non-ideal}} = V_{m,\text{non-ideal}}dP,
+\label{eq:dmufug2}
+\end{equation}
+
+Subtracting eq. \eqref{eq:dmufug1} from eq. \eqref{eq:dmufug2}, we obtain:
+
+\begin{equation}
+d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP,
+\label{eq:dmufug3}
+\end{equation}
+
+which we can then integrate between \(0\) and \(P\):
+
+\begin{equation}
+\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP.
+\label{eq:dmufug4}
+\end{equation}
+
+Using eqs. @ref(eq.dcpig) and @ref(eq.dcpnig) we can then replace the definition of chemical potentials, resulting into:
+
+\begin{equation}
+\ln f - \ln P = \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}} - V_{m,\text{ideal}} \right) dP,
+\label{eq:dmufug5}
+\end{equation}
+
+which gives us a mathematical definition of the fugacity, as:
+
+\begin{equation}
+f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
+\label{eq:dmufug6}
+\end{equation}
+
+The exponential term in eq. \eqref{eq:dmufug6} is complicated to write, but it can be interpreted as a coefficient---unique to each non-ideal gas---that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the \emph{fugacity coefficients}. Using letter \(\phi\) to represent the fugacity coefficient, we can rewrite eq. \eqref{eq:dmufug6} as:
+
+\begin{equation}
+f = \phi P,
+\label{eq:dmufug7}
+\end{equation}
+
+which gives us a straightforward interpretation of the fugacity as an effective pressure. As such, the fugacity will have the same unit as the pressure, while the fugacity coefficients will be adimensional.
+
+As we already saw in chapter \ref(ChemicalEquilibrium), the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called \(K_f\), and is obtained from:
+
+\begin{equation}
+K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
+\label{eq:kfdef}
+\end{equation}
 
 \hypertarget{PhaseEquilibrium}{%
 \chapter{Phase Equilibrium}\label{PhaseEquilibrium}}
@@ -2746,6 +3008,15 @@ Two situation are common, exemplified by the behavior of \(\mathrm{H}_2\) and \(
 
 \hypertarget{Solutions}{%
 \chapter{Solutions}\label{Solutions}}
+
+\hypertarget{activity}{%
+\section{Activity}\label{activity}}
+
+\hypertarget{colligative-properties}{%
+\section{Colligative Properties}\label{colligative-properties}}
+
+\hypertarget{binding-equilibria}{%
+\section{Binding Equilibria}\label{binding-equilibria}}
 
 \hypertarget{Kinetics}{%
 \chapter{Chemical Kinetics}\label{Kinetics}}
@@ -3638,7 +3909,7 @@ CaCN(s)\strut
 \strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.10\columnwidth}\raggedright
-CaCO\textsubscript{3}(s,aragon.)\strut
+CaCO\textsubscript{3}(s,arag.)\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 --1207.8\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
@@ -3649,7 +3920,7 @@ CaCO\textsubscript{3}(s,aragon.)\strut
 82.3\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.10\columnwidth}\raggedright
-CaCO\textsubscript{3}(s,calcite)\strut
+CaCO\textsubscript{3}(s,calc.)\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 --1207.6\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
@@ -6212,7 +6483,7 @@ PbO(s,litharge)\strut
 45.8\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.10\columnwidth}\raggedright
-PbO(s,massicot)\strut
+PbO(s,massic.)\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 --217.3\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
@@ -6432,7 +6703,7 @@ SiC(s,cubic)\strut
 26.9\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.10\columnwidth}\raggedright
-SiC(s,hexagonal)\strut
+SiC(s,hexag.)\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 --62.8\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
@@ -6861,7 +7132,7 @@ Zn(NO\textsubscript{3})\textsubscript{2}(s)\strut
 \strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.10\columnwidth}\raggedright
-ZnS(s,sphalerite)\strut
+ZnS(s,sphaler.)\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 --206.0\strut
 \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright
@@ -6935,7 +7206,7 @@ ZrCl\textsubscript{4}(s)\strut
 \begin{longtable}[]{@{}llllll@{}}
 \toprule
 \begin{minipage}[b]{0.07\columnwidth}\raggedright
-Formula :\strut
+Formula:\strut
 \end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
 Name:\strut
 \end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\raggedright

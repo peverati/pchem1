@@ -1,6 +1,8 @@
+\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+
 # Ideal and Non-Ideal Gases {#RealGases}
 
-## Ideal Gases
+## The Ideal Gas Equation
 
 assumptions:
 
@@ -9,15 +11,39 @@ assumptions:
 ### Avogadro's Law
 ### The ideal gas Law
 
-## Non-Ideal Gases
-Non-ideal gases (sometimes also referred to as "real gases"), do not behave as ideal gases because one or more od the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a $P$ *vs.* $V$ diagram, or a $PV$ *vs.* $P$  diagram:
+## Behaviors of Non-Ideal Gases
+Non-ideal gases (sometimes also referred to as "real gases"), do not behave as ideal gases because one or more of the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a $P$ *vs.* $V$ diagram, or a $PV$ *vs.* $P$  diagram:
 
 
 ### The van der Waals equation
 
-### The virial equation
+### Joule–Thomson effect
 
-## Compressibility Factors
+```{r FigJT, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule–Thomson Experiment.'}
+knitr::include_graphics('./img/OEP_Figures.015.jpeg')
+```
+
+xxx describe the apparatus xxx
+
+
+The *Joule–Thomson coefficient*, $\mu_{\mathrm{JT}}$, measures the rate of change of temperature of a gas with respect to pressure in the Joule–Thomson process:
+
+\begin{equation}
+\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H
+(\#eq:muJT)
+\end{equation}
+
+The value of $\mu_{\mathrm{JT}}$ depends on the type of gas and on the temperature and pressure before expansion. The temperature at which $\mu_{\mathrm{JT}}$ changes sign is called the "Joule–Thomson inversion temperature". Since the pressure decreases during an expansion, $\partial P$ is negative by definition, and the following possibilities are available for $\mu_{\mathrm{JT}}$:
+
+| Gas temperature:                  | $\partial P$ | $\mu_{\mathrm{JT}}$ | $\partial T$ | The gas will: |
+|-----------------------------------|:------------:|:-------------------:|:------------:|:-------------:|
+| *Below the inversion temperature* |       –      |          +          |       –      |      cool     |
+| *Above the inversion temperature* |       –      |          –          |       +      |      warm     |
+
+For example, helium has a very low Joule–Thomson inversion temperatures at standard pressure $(T=45\;\text{K})$ and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures ($T=621\;\text{K}$ and $T=764\;\text{K}$, respectively) and they both cool when expanded at room temperature. As such, it is possible to use the Joule–Thomson effect in refrigeration processes such as air conditioning.^[Nitrogen and oxygen are the two most abundant gases in air. A sequence of Joule–Thomson expansions are also used for the industrial liquefaction of air.] As we already discussed in chapter \@ref(FirstLaw), the temperature of an ideal gases stays constant in an adiabatic expansion, therefore its Joule–Thomson coefficient is always equal to zero.
+
+## Critical Phenomena
+### Compressibility factors
 The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behaviour. It is usually represented with the symbol $z$, and is calculated as:
 
 \begin{equation}
@@ -25,11 +51,173 @@ z=\frac{V_m}{V_m^{\text{ideal}}} = \frac{P V_m}{RT}.
 (\#eq:comprdef)
 \end{equation}
 
-It is obvious from eq. \@ref(eq:comprdef) that the compressibility factor is dependent on the pressure and for an an ideal gas it is $z=1$ at any pressure. For a real gas, $z$ might be either greater or smaller than one at any given pressure. The behavior of the compressibility factor against pressure is represented in Fig. XXX. 
+It is evident from eq. \@ref(eq:comprdef) that the compressibility factor is dependent on the pressure, and for an ideal gas $z=1$ always. For a non-ideal gas at any given pressure, $z$ can be higher or lower than one, separating their behaviors into two possibilities. The dependence of the compressibility factor against pressure is represented for $\mathrm{H}_2$ and $\mathrm{CO}_2$ in Figure \@ref(fig:FigZb).
 
-Fig XXX
+```{r FigZb, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Non-Ideal Gases Behaviors.'}
+knitr::include_graphics('./img/OEP_Figures.012.jpeg')
+```
 
-Two situation are common, exemplified by the behavior of $\mathrm{H}_2$ and $\mathrm{CO}_2$ in Fig. XXX. 
+The two types of possible behaviors are differentiated based on the compressibility factor at $P\rightarrow 0$. To analyze these situations we can use the vdW equation to calculate the compressibility factor as:
+
+\begin{equation}
+z= \frac{V_m}{RT} \left( \frac{RT}{V_m-b} -\frac{a}{V_m^2} \right).
+(\#eq:compr1)
+\end{equation}
+
+and then we can differentiate this equation at constant temperature with respect to changes in the pressure near $P=0$, to obtain:
+
+\begin{equation}
+\left. \left( \frac{\partial z}{\partial P}\right)_T \right|_{P=0} = \frac{1}{RT} \left( b -\frac{a}{RT} \right).
+(\#eq:compr2)
+\end{equation}
+
+which is then interpreted as follows:
+
+- **Type I gases**: $b>\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} > 0$ *molecular size* dominates ($\mathrm{H}_2-$like behavior).
+- **Type II gases**: $b<\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} < 0$ *attractive forces* dominates ($\mathrm{CO}_2-$like behavior).
+
+The dependence of the compressibility factor as a function of temperature (Figure \ref(fig:Fig1Zb2)) results in different plots for each of the two types of behavior.
+
+```{r Fig1Zb2, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Temperature Dependence of the Compressibility Factor.'}
+knitr::include_graphics('./img/OEP_Figures.013.jpeg')
+```
+
+Both type I and type II non-ideal gases will approach the ideal gas behavior as $T\rightarrow \infty$, because $\frac{1}{RT}\rightarrow 0$ as $T\rightarrow \infty$. For type II gases, there are three interesting situations:
+
+- At low $T$: $b<\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} < 0,$ which is the behavior described above.
+- At high $T$: $b>\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} > 0,$ which is the same behavior of type I gases.
+- At a very specific temperature, inversion will occur (i.e., at $T=713 \; \mathrm{K}$ for $\mathrm{CO}_2$). This temperature is called the **Boyle temperature**, $T_{\mathrm{B}}$, and is the temperature at which the attractive and repulsive forces balance out. It can be calculated from the vdW equation, since $b-\frac{a}{RT_{\mathrm{B}}}=0 \; \Rightarrow \; T_{\mathrm{B}}=\frac{a}{bR}.$ At the Boyle's temperature a type II gas shows ideal gas behavior over a large range of pressure.
+
+### Phase diagram of a non-ideal gas
+
+```{r FigPVni, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Volume Diagram of a Non-Ideal Gas.'}
+knitr::include_graphics('./img/OEP_Figures.014.jpeg')
+```
+
+Let's now turn our attention to the $PV$ phase diagram of a non-ideal gas, reported in Figure \@ref(fig:FigPVni). We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas ($T_5$ and $T_4$ in Figure \@ref(fig:FigPVni)). Lowering the temperature, we start to see the deviation from ideality getting more prominent ($T_3$ in Figure \@ref(fig:FigPVni)) until we reach a particular temperature called the critical temperature, $T_c$. 
+
+> ```{definition, criticalT}
+*Critical Temperature:* The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.
+
+```
+
+At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a *critical phenomenon*.
+
+The critical temperature is the coordinate of a unique point, called the **critical point**, that can be visualized in the three-dimensional $T,P,V$ diagram of each gas (Figure \@ref(FigTPVd)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) and distributed under CC-BY-SA license.]).
+
+```{r FigTPVd, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The three-dimensional diagram.'}
+knitr::include_graphics('./img/PVT_3D_diagram.png')
+```
+
+The critical point has coordinates ${T_c,P_c, V_{m,c}}$. These critical coordinates can be determined from the vdW equation at $T_c$, as:
+
+\begin{equation}
+T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad V_{m,c}=3b, 
+(\#eq:criticpt)
+\end{equation}
+
+These relations are used, in practice, to determine the vdW constants $a,b$ from the experimentally measured critical isotherms.
+
+The critical compressibility factor, $z_c$, is predicted from the vdW equation at:
+
+\begin{equation}
+z_c=\frac{P_c V_{m,c}}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{8a} \right) = \frac{3}{8} = 0.375,
+(\#eq:critiz)
+\end{equation}
+
+a value that is independent of the gas. Experimentally measured values of $z_c$ for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental $z_c$ is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume. 
+
 
 ## Fugacity
 
+The chemical potential of a pure ideal gas can be calculated using eq. \@ref(eq:dgconstn4). Since we are not interested in mixture, we can drop the asterisk in $\mu^*$, and rewrite eq. \@ref(eq:dgconstn4) as:
+
+\begin{equation}
+\mu_{\text{ideal}} = \mu^\standardstate + RT \ln \frac{P}{P^\standardstate}.
+(\#eq:dcpig)
+\end{equation}
+
+For a non-ideal gas, the pressure cannot be used in eq. \@ref(eq:dcpig) because each gas response to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in eq. \@ref(eq:dcpig) and call it fugacity ($f$). 
+
+> ```{definition, fugacitydef}
+*Fugacity:* The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one. 
+
+
+```
+Eq. \@ref(eq:dcpig) then becomes:
+
+\begin{equation}
+\mu_{\text{non-ideal}} = \mu^\standardstate + RT \ln \frac{f}{P^\standardstate}.
+(\#eq:dcpnig)
+\end{equation}
+
+Since the chemical potential of a gas $\mu$ is equal to the standard chemical potential $\mu^\standardstate$ when $P=P^\standardstate$, it is easy to use eq. \@ref(eq:dcpnig) to demonstrate that:
+
+\begin{equation}
+\lim_{P\rightarrow 0} \frac{f}{P} = 1,
+(\#eq:dcpnigL)
+\end{equation}
+
+in other words, any non-ideal gas will approach the ideal gas behavior as $P\rightarrow 0$. This condition, in conjunction with the $T\rightarrow \infty$ behavior obtained in the previous section, results in the following statement:
+
+> The highest chances for any gas to behave ideally happen at high temperature and low pressure.
+
+We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs free energy of a substance, we can write:
+
+\begin{equation}
+d \mu_{\text{ideal}} = V_{m,\text{ideal}}dP,
+(\#eq:dmufug1)
+\end{equation}
+
+and:
+
+\begin{equation}
+d \mu_{\text{non-ideal}} = V_{m,\text{non-ideal}}dP,
+(\#eq:dmufug2)
+\end{equation}
+
+Subtracting eq. \@ref(eq:dmufug1) from eq. \@ref(eq:dmufug2), we obtain:
+
+\begin{equation}
+d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP,
+(\#eq:dmufug3)
+\end{equation}
+
+which we can then integrate between $0$ and $P$:
+
+\begin{equation}
+\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP.
+(\#eq:dmufug4)
+\end{equation}
+
+Using eqs. \@ref(eq.dcpig) and \@ref(eq.dcpnig) we can then replace the definition of chemical potentials, resulting into:
+
+\begin{equation}
+\ln f - \ln P = \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}} - V_{m,\text{ideal}} \right) dP,
+(\#eq:dmufug5)
+\end{equation}
+
+which gives us a mathematical definition of the fugacity, as:
+
+\begin{equation}
+f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
+(\#eq:dmufug6)
+\end{equation}
+
+The exponential term in eq. \@ref(eq:dmufug6) is complicated to write, but it can be interpreted as a coefficient—unique to each non-ideal gas—that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the *fugacity coefficients*. Using letter $\phi$ to represent the fugacity coefficient, we can rewrite eq. \@ref(eq:dmufug6) as:
+
+\begin{equation}
+f = \phi P,
+(\#eq:dmufug7)
+\end{equation}
+
+which gives us a straightforward interpretation of the fugacity as an effective pressure. As such, the fugacity will have the same unit as the pressure, while the fugacity coefficients will be adimensional.
+
+As we already saw in chapter \ref(ChemicalEquilibrium), the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called $K_f$, and is obtained from:
+
+\begin{equation}
+K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
+(\#eq:kfdef)
+\end{equation}
+
+[//]: ## Law of Corresponding States

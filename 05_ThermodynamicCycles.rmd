@@ -30,7 +30,7 @@ A *Carnot cycle* is an idealized process composed of two isothermal and two adia
 
 A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T_l$ (low), respectively. The reservoirs have a large thermal capacity so that their temperatures are unaffected by the cycle. The system is composed exclusively by the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformations of a Carnot cycle on a $PV$ diagram, we obtain the following plot:
 
-```{r FigCarnotPV, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of a Carnot Cycle.'}
+```{r FigCarnotPV, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of a Carnot Cycle.', out.width="70%"}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
