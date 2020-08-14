@@ -24,7 +24,7 @@ When a system exchanges mass or energy with its surroundings, some of its parame
 These simple examples demonstrate that the sign that we assign to quantities that flow through a boundary is arbitrary (i.e., we can define it any way we want, as long as we are always consistent with ourselves). There is no best way to assign those signs. If you ask two different people, you might obtain two different answers. But we are scientists, and we must make sure to be rigorous. For this reason, chemists have established a convention for the signs that we will follow throughout this course. If we are consistent in following the convention, we are guaranteed to never make any mistake with the signs. 
 
 > ```{definition, chemistryconv}
-*The chemistry convention of the sign is system-centric:*^[Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that they might have a different sign than what is used in this course. Obviously, the science will not change, but you need to be ALWAYS consistent, so if you decide that you want to use the physics convention, make sure to ALWAYS use the physics convention. In this course, on the other hand, we will ALWAYS use the chemistry one, as introduced above.]
+*The chemistry convention of the sign is system-centric:*^[Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be *always* consistent, so if you decide that you want to use the physics convention, make sure to *always* use the physics convention. In this course, on the other hand, we will *always* use the chemistry one, as introduced above.]
 
 
 - *If something (energy or mass) goes **into** the system it has a **positive** sign (the system is gaining)*
@@ -60,14 +60,14 @@ Another useful classification is:
 When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between the two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:
 
 \begin{equation}
-  V_m=\frac{V}{n}.   
+  \overline{V}=\frac{V}{n}.   
   (\#eq:Vmdef)
 \end{equation}
 
 We can then recast eq. \@ref(eq:idealgaslaworiginal) as:
 
 \begin{equation}
-  PV_m=RT,
+  P\overline{V}=RT,
   (\#eq:idealgaslaw)
 \end{equation}
 
@@ -75,25 +75,25 @@ which is the preferred equation that we will use for the remainder of this cours
 The ideal gas equation connects the 3 variables pressure, molar volume, and temperature, reducing the number of independent variables to just 2. In other words, once 2 of the 3 variables are known, the other one can be easily obtained using these simple relations:
 
 \begin{equation}
-  P(T,V_m)=\frac{RT}{V_m},
+  P(T,\overline{V})=\frac{RT}{\overline{V}},
   (\#eq:PTVm)
 \end{equation}
 
 \begin{equation}
-  V_m(T,P)=\frac{RT}{P},
+  \overline{V}(T,P)=\frac{RT}{P},
   (\#eq:VmTP)
  \end{equation}
  
 \begin{equation}
-  T(P,V_m)=\frac{PV_m}{R}.
+  T(P,\overline{V})=\frac{P\overline{V}}{R}.
   (\#eq:TPVm)
 \end{equation}
 
   
-These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. \@ref(eq:PTVm) defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. \@ref(eq:VmTP) defines the “molar volume” as a function of temperature and pressure, and eq. \@ref(eq:TPVm) defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure $P(T, V_m)$:
+These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. \@ref(eq:PTVm) defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. \@ref(eq:VmTP) defines the “molar volume” as a function of temperature and pressure, and eq. \@ref(eq:TPVm) defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure $P(T, \overline{V})$:
 
 \begin{equation}
-  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial V_m} \right)dV_m
+  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
   (\#eq:totaldifferentialP)
 \end{equation}
 
@@ -101,21 +101,21 @@ These equations define three state functions, each one expressed in terms of two
 Recalling Schwartz’s theorem, the mixed partial second derivatives that can be obtained from eq. 1.2.7 are the same:
  
 \begin{equation}
-  \frac{\partial^2 P}{\partial T \partial V_m}=\frac{\partial}{\partial V_m}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial V_M}=\frac{\partial^2 P}{\partial V_m \partial T}
+  \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
   (\#eq:schwartzP)
 \end{equation}
 
 Which can be easily verified considering that:
 
 \begin{equation}
-  \frac{\partial}{\partial V_m} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial V_m} \left(\frac{R}{V_m}\right) = -\frac{R}{V_m^2} 
+  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2} 
   (\#eq:secondderPA)
 \end{equation}
 
 and 
 
 \begin{equation}
-  \frac{\partial}{\partial T} \frac{\partial P}{\partial V_m}  = \frac{\partial}{\partial T} \left(\frac{-RT}{V_m^2}\right) = -\frac{R}{V_m^2} 
+  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2} 
   (\#eq:secondderPB)
 \end{equation}
 

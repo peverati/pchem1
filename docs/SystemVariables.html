@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-12" />
+<meta name="date" content="2020-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -301,46 +301,46 @@ Variables can be classified according to numerous criteria, each with its advant
 </ul>
 <p>When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between the two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:</p>
 <p><span class="math display" id="eq:Vmdef">\[\begin{equation}
-  V_m=\frac{V}{n}.   
+  \overline{V}=\frac{V}{n}.   
   \tag{1.2}
 \end{equation}\]</span></p>
 <p>We can then recast eq. <a href="SystemVariables.html#eq:idealgaslaworiginal">(1.1)</a> as:</p>
 <p><span class="math display" id="eq:idealgaslaw">\[\begin{equation}
-  PV_m=RT,
+  P\overline{V}=RT,
   \tag{1.3}
 \end{equation}\]</span></p>
 <p>which is the preferred equation that we will use for the remainder of this course.
 The ideal gas equation connects the 3 variables pressure, molar volume, and temperature, reducing the number of independent variables to just 2. In other words, once 2 of the 3 variables are known, the other one can be easily obtained using these simple relations:</p>
 <p><span class="math display" id="eq:PTVm">\[\begin{equation}
-  P(T,V_m)=\frac{RT}{V_m},
+  P(T,\overline{V})=\frac{RT}{\overline{V}},
   \tag{1.4}
 \end{equation}\]</span></p>
 <p><span class="math display" id="eq:VmTP">\[\begin{equation}
-  V_m(T,P)=\frac{RT}{P},
+  \overline{V}(T,P)=\frac{RT}{P},
   \tag{1.5}
  \end{equation}\]</span></p>
 <p><span class="math display" id="eq:TPVm">\[\begin{equation}
-  T(P,V_m)=\frac{PV_m}{R}.
+  T(P,\overline{V})=\frac{P\overline{V}}{R}.
   \tag{1.6}
 \end{equation}\]</span></p>
-<p>These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. <a href="SystemVariables.html#eq:PTVm">(1.4)</a> defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. <a href="SystemVariables.html#eq:VmTP">(1.5)</a> defines the “molar volume” as a function of temperature and pressure, and eq. <a href="SystemVariables.html#eq:TPVm">(1.6)</a> defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure <span class="math inline">\(P(T, V_m)\)</span>:</p>
+<p>These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. <a href="SystemVariables.html#eq:PTVm">(1.4)</a> defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. <a href="SystemVariables.html#eq:VmTP">(1.5)</a> defines the “molar volume” as a function of temperature and pressure, and eq. <a href="SystemVariables.html#eq:TPVm">(1.6)</a> defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure <span class="math inline">\(P(T, \overline{V})\)</span>:</p>
 <p><span class="math display" id="eq:totaldifferentialP">\[\begin{equation}
-  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial V_m} \right)dV_m
+  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
   \tag{1.7}
 \end{equation}\]</span></p>
 <p>Recalling Schwartz’s theorem, the mixed partial second derivatives that can be obtained from eq. 1.2.7 are the same:</p>
 <p><span class="math display" id="eq:schwartzP">\[\begin{equation}
-  \frac{\partial^2 P}{\partial T \partial V_m}=\frac{\partial}{\partial V_m}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial V_M}=\frac{\partial^2 P}{\partial V_m \partial T}
+  \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
   \tag{1.8}
 \end{equation}\]</span></p>
 <p>Which can be easily verified considering that:</p>
 <p><span class="math display" id="eq:secondderPA">\[\begin{equation}
-  \frac{\partial}{\partial V_m} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial V_m} \left(\frac{R}{V_m}\right) = -\frac{R}{V_m^2} 
+  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2} 
   \tag{1.9}
 \end{equation}\]</span></p>
 <p>and</p>
 <p><span class="math display" id="eq:secondderPB">\[\begin{equation}
-  \frac{\partial}{\partial T} \frac{\partial P}{\partial V_m}  = \frac{\partial}{\partial T} \left(\frac{-RT}{V_m^2}\right) = -\frac{R}{V_m^2} 
+  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2} 
   \tag{1.10}
 \end{equation}\]</span></p>
 <p>While for the ideal gas law, all the variables are “well-behaved” and always satisfy Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold. Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. Thus, these functions are called path functions; that is, they depend on the path rather than the state. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we cannot define exact differentials <span class="math inline">\(dQ\)</span> and <span class="math inline">\(dW\)</span>, and we must introduce a new notation to define their “inexact differentials” <span class="math inline">\(đ Q\)</span> and <span class="math inline">\(đ W\)</span>.</p>
@@ -360,7 +360,7 @@ Figure 1.2: State Functions vs. Path Functions.
 <hr />
 <ol start="1">
 <li id="fn1"><p>The photos depicted in this figure are taken from <a href="https://en.wikipedia.org">Wikipedia</a> and distributed under CC-BY-SA license.<a href="SystemVariables.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that they might have a different sign than what is used in this course. Obviously, the science will not change, but you need to be ALWAYS consistent, so if you decide that you want to use the physics convention, make sure to ALWAYS use the physics convention. In this course, on the other hand, we will ALWAYS use the chemistry one, as introduced above.<a href="SystemVariables.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be <em>always</em> consistent, so if you decide that you want to use the physics convention, make sure to <em>always</em> use the physics convention. In this course, on the other hand, we will <em>always</em> use the chemistry one, as introduced above.<a href="SystemVariables.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -100,7 +100,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{12 August 2020}
+\date{13 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -219,7 +219,7 @@ These simple examples demonstrate that the sign that we assign to quantities tha
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:chemistryconv}{}{\label{def:chemistryconv} }\emph{The chemistry convention of the sign is system-centric:}\footnote{Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that they might have a different sign than what is used in this course. Obviously, the science will not change, but you need to be ALWAYS consistent, so if you decide that you want to use the physics convention, make sure to ALWAYS use the physics convention. In this course, on the other hand, we will ALWAYS use the chemistry one, as introduced above.}
+\protect\hypertarget{def:chemistryconv}{}{\label{def:chemistryconv} }\emph{The chemistry convention of the sign is system-centric:}\footnote{Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be \emph{always} consistent, so if you decide that you want to use the physics convention, make sure to \emph{always} use the physics convention. In this course, on the other hand, we will \emph{always} use the chemistry one, as introduced above.}
 
 \begin{itemize}
 \tightlist
@@ -270,14 +270,14 @@ Another useful classification is:
 When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between the two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:
 
 \begin{equation}
-  V_m=\frac{V}{n}.   
+  \overline{V}=\frac{V}{n}.   
   \label{eq:Vmdef}
 \end{equation}
 
 We can then recast eq. \eqref{eq:idealgaslaworiginal} as:
 
 \begin{equation}
-  PV_m=RT,
+  P\overline{V}=RT,
   \label{eq:idealgaslaw}
 \end{equation}
 
@@ -285,45 +285,45 @@ which is the preferred equation that we will use for the remainder of this cours
 The ideal gas equation connects the 3 variables pressure, molar volume, and temperature, reducing the number of independent variables to just 2. In other words, once 2 of the 3 variables are known, the other one can be easily obtained using these simple relations:
 
 \begin{equation}
-  P(T,V_m)=\frac{RT}{V_m},
+  P(T,\overline{V})=\frac{RT}{\overline{V}},
   \label{eq:PTVm}
 \end{equation}
 
 \begin{equation}
-  V_m(T,P)=\frac{RT}{P},
+  \overline{V}(T,P)=\frac{RT}{P},
   \label{eq:VmTP}
  \end{equation}
 
 \begin{equation}
-  T(P,V_m)=\frac{PV_m}{R}.
+  T(P,\overline{V})=\frac{P\overline{V}}{R}.
   \label{eq:TPVm}
 \end{equation}
 
-These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. \eqref{eq:PTVm} defines the state function called ``pressure'', expressed as a function of temperature and molar volume. Similarly, eq. \eqref{eq:VmTP} defines the ``molar volume'' as a function of temperature and pressure, and eq. \eqref{eq:TPVm} defines the ``temperature'' as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure \(P(T, V_m)\):
+These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. \eqref{eq:PTVm} defines the state function called ``pressure'', expressed as a function of temperature and molar volume. Similarly, eq. \eqref{eq:VmTP} defines the ``molar volume'' as a function of temperature and pressure, and eq. \eqref{eq:TPVm} defines the ``temperature'' as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure \(P(T, \overline{V})\):
 
 \begin{equation}
-  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial V_m} \right)dV_m
+  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
   \label{eq:totaldifferentialP}
 \end{equation}
 
 Recalling Schwartz's theorem, the mixed partial second derivatives that can be obtained from eq. 1.2.7 are the same:
 
 \begin{equation}
-  \frac{\partial^2 P}{\partial T \partial V_m}=\frac{\partial}{\partial V_m}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial V_M}=\frac{\partial^2 P}{\partial V_m \partial T}
+  \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
   \label{eq:schwartzP}
 \end{equation}
 
 Which can be easily verified considering that:
 
 \begin{equation}
-  \frac{\partial}{\partial V_m} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial V_m} \left(\frac{R}{V_m}\right) = -\frac{R}{V_m^2} 
+  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2} 
   \label{eq:secondderPA}
 \end{equation}
 
 and
 
 \begin{equation}
-  \frac{\partial}{\partial T} \frac{\partial P}{\partial V_m}  = \frac{\partial}{\partial T} \left(\frac{-RT}{V_m^2}\right) = -\frac{R}{V_m^2} 
+  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2} 
   \label{eq:secondderPB}
 \end{equation}
 
@@ -2725,27 +2725,282 @@ The dependence of \(K_{\text{eq}}\) on \(P\) highlighted above is another mathem
 \hypertarget{the-ideal-gas-equation}{%
 \section{The Ideal Gas Equation}\label{the-ideal-gas-equation}}
 
-assumptions:
+The concept of an ideal gas is a theoretical construct that allows for simple treatment and interpretation of the behavior of gases. As such, the ideal gas is a simplified \emph{model} that we use to understand nature, and it does not correspond to any real system. The following two assumptions define the ideal gas model:
+
+\begin{quote}
+\begin{definition}
+\protect\hypertarget{def:iedalgas}{}{\label{def:iedalgas} }
+
+\begin{itemize}
+\tightlist
+\item
+  The molecules that compose an ideal gas do not occupy any volume.
+\item
+  The molecules that compose an ideal gas do not interact with each other.
+\end{itemize}
+\end{definition}
+\end{quote}
 
 \hypertarget{boyles-law}{%
 \subsection{Boyle's Law}\label{boyles-law}}
 
+In 1662 Robert Boyle (1627--1691) found that the pressure and the volume of an ideal gas are inversely related at constant temperature. Boyle's Law has the following mathematical description:
+
+\begin{equation}
+P\propto\frac{1}{V}\quad\text{at const.}\;T,
+\label{eq:boylelaw1}
+\end{equation}
+
+or, in other terms:
+
+\begin{equation}
+PV=k_1\quad\text{at const.}\;T,
+\label{eq:boylelaw2}
+\end{equation}
+
+which results in a the familiar \(PV\) plots of Figure XXX. As we already discussed in chapter \ref{ZerothLaw}, each of the curves in Figure XXX is obtained at constant temperature, and it is therefore called \emph{``isotherm.''}
+
+Fig. XXX
+
 \hypertarget{charless-and-gay-lussacs-laws}{%
 \subsection{Charles's and Gay-Lussac's Laws}\label{charless-and-gay-lussacs-laws}}
+
+It took scientists more than a century to expand Boyle's work and study the relationship between volume and temperature. In 1787 Jacques Alexandre César Charles (1746--1823) wrote the relationship that is now known as Charles's Law:
+
+\begin{equation}
+V\propto T\quad\text{at const.}\;P,
+\label{eq:charleslaw1}
+\end{equation}
+
+or, in other terms:
+
+\begin{equation}
+V=k_2 T\quad\text{at const.}\;P,
+\label{eq:charleslaw2}
+\end{equation}
+
+which results in the plots of figure XXX. Each of the curves is obtained at constant pressure, and it is termed \emph{``isobar.''}
+
+Fig. XXX
+
+The interesting thing about isobars is that each line seems to converge to a very specific point along the temperature line when we extrapolate them to \(V\rightarrow 0\). This led to the introduction of the absolute temperature scale, suggesting the fact that the temperature will never get smaller than \(-273.15^\circ\mathrm{C}\).
+
+It took an additional 21 years to write a formal relationship between pressure and temperature. The following relationships were proposed Joseph Louis Gay-Lussac (1778--1850) in 1808:
+
+\begin{equation}
+P\propto T\quad\text{at const.}\;V,
+\label{eq:gaylussac1}
+\end{equation}
+
+or, in other terms:
+
+\begin{equation}
+P=k_3 T\quad\text{at const.}\;V,
+\label{eq:gaylussac2}
+\end{equation}
+
+which results in the plots of figure XXX. Each of the curves is obtained at constant volume, and it is termed \emph{``isochor.''}
+
+Fig. XXX
 
 \hypertarget{avogadros-law}{%
 \subsection{Avogadro's Law}\label{avogadros-law}}
 
+Ten years later, Amedeo Avogadro (1776--1856) discovered a seemingly unrelated principle by studying the composition of matter. His Avoadro's Law encodes the relationship between the number of moles in an ideal gas and its volume as:
+
+\begin{equation}
+V\propto n\quad\text{at const.}\;P,T,
+\label{eq:avogadrolaw1}
+\end{equation}
+
+or in other terms:
+
+\begin{equation}
+V=k_4 n\quad\text{at const.}\;P,T,
+\label{eq:avogadrolaw2}
+\end{equation}
+
 \hypertarget{the-ideal-gas-law}{%
 \subsection{The ideal gas Law}\label{the-ideal-gas-law}}
+
+Despite all of the ingredients being available since more than 20 years, it's only in 1834 that Benoît Paul Émile Clapeyron (1799--1864) was finally able to combine all of them into what is now known as the \textbf{ideal gas Law}. Using the same formulas obtained above, we can write:
+
+\begin{equation}
+PV=\underbrace{k_3 T}_{\text{from Gay-Lussac's}} \cdot \underbrace{k_4 n,}_{\text{from Avogadro's}}
+\label{eq:ideallaw1}
+\end{equation}
+
+which by renaming the product of the two constants \(k_3\) and \(k_4\) as \(R\), becomes:
+
+\begin{equation}
+PV=nRT
+\label{eq:ideallaw}
+\end{equation}
+
+The value of the constant \(R\) can be determined experimentally by measuring the volume that 1 mol of an ideal gas occupies at a constant temperature (e.g., at \(T=0^\circ\mathrm{C}\)) and a constant pressure (e.g., atmospheric pressure \(P=1\;\mathrm{atm}\)). At those conditions, the volume is measured at 22.4 L, resulting in the following value of \(R\):
+
+\begin{equation}
+R=\frac{VP}{nT}=\frac{22.4 \cdot 1}{1 \cdot 273}=0.082 \;\frac{\text{L atm}}{\text{mol K}},
+\label{eq:ideallaw}
+\end{equation}
+
+which a simple conversion to SI units transforms into:
+
+\begin{equation}
+R=8.31\;\frac{\text{J}}{\text{mol K}}.
+\label{eq:RvalueSI}
+\end{equation}
 
 \hypertarget{behaviors-of-non-ideal-gases}{%
 \section{Behaviors of Non-Ideal Gases}\label{behaviors-of-non-ideal-gases}}
 
-Non-ideal gases (sometimes also referred to as ``real gases''), do not behave as ideal gases because one or more of the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a \(P\) \emph{vs.} \(V\) diagram, or a \(PV\) \emph{vs.} \(P\) diagram:
+Non-ideal gases (sometimes also referred to as ``real gases''), do not behave as ideal gases because one or more of the assumptions in XXX are violated. To study how their behavior differs from an ideal gas we can use either a \(P\) \emph{vs.} \(V\) diagram, or a \(PV\) \emph{vs.} \(P\) diagram:
 
 \hypertarget{the-van-der-waals-equation}{%
 \subsection{The van der Waals equation}\label{the-van-der-waals-equation}}
+
+What characterize non-ideal gases is the fact that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental equations, none of which is superior to the other. THe simplest of the experimental equations was obtained in 1873 by Johannes Diderik van der Waals (1837--1923), and it's the only equation that we are going to analyze in details here because of its simple interpretation. However, the van der Waals (vdW) equation is far from being universal, and for several non-ideal gases it is severely inaccurate.
+
+The vdW equation includes two empirical parameters (\(a\) and \(b\)) that assume different values for each non-ideal gas. Each of the parameter corresponds to a correction for the breaking of the two conditions that define the ideal gas behavior (definition \ref{def:idealgas}). The vdW equation is obtained from the following simple substitutions to the ideal gas equation:
+
+\begin{equation}
+\begin{aligned}
+P & \;\rightarrow\;\left( P + \frac{a}{\overline{V}^2} \right)\\
+\overline{V} & \;\rightarrow\;\left( \overline{V} - b\right),\\
+\end{aligned}
+\label{eq:vdWeq1}
+\end{equation}
+
+which results in:
+
+\begin{equation}
+\begin{aligned}
+P\overline{V} &=RT \; \rightarrow \; \left( P + \frac{a}{\overline{V}^2} \right)\left( \overline{V} - b\right)=RT\\
+P &=\frac{RT}{\overline{V} - b}-\frac{a}{\overline{V}^2}.
+\end{aligned}
+\label{eq:vdWeq2}
+\end{equation}
+
+The parameter \(a\) accounts for the presence of intermolecular interactions, while the parameter \(b\) accounts for the non-negligible volume of the gas molecules. Despite the parameters have simple interpretations, their values for each gas must be determined experimentally. Values for these parameters for some significant non-ideal gas are reported below:
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+\begin{minipage}[b]{0.11\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[b]{0.46\columnwidth}\centering
+\(a \left[ \frac{\mathrm{L}^2\mathrm{bar}}{\mathrm{mol}^2} \right]\)\strut
+\end{minipage} & \begin{minipage}[b]{0.34\columnwidth}\centering
+\(b \left[ \frac{\mathrm{L}}{\mathrm{mol}} \right]\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Ammonia\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+4.225\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.0371\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Argon\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+1.355\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.03201\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Carbon dioxide\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+3.640\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.04267\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Carbon monoxide\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+1.505\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.03985\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Chlorine\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+6.579\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.05622\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Freon\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+10.78\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.0998\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Helium\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+0.0346\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.0238\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Hydrogen\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+0.2476\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.02661\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Mercury\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+8.200\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.01696\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Methane\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+2.283\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.04278\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Neon\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+0.2135\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.01709\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Nitrogen\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+1.370\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.0387\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Oxygen\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+1.382\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.03186\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Radon\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+6.601\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.06239\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Xenon\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
+4.250\strut
+\end{minipage} & \begin{minipage}[t]{0.34\columnwidth}\centering
+0.05105\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{joulethomson-effect}{%
 \subsection{Joule--Thomson effect}\label{joulethomson-effect}}
@@ -2759,16 +3014,74 @@ Non-ideal gases (sometimes also referred to as ``real gases''), do not behave as
 \caption{The Joule–Thomson Experiment.}\label{fig:FigJT}
 \end{figure}
 
-xxx describe the apparatus xxx
+We have already met William Thomson, also known as Lord Kelvin, and his seminal work on the second law of thermodynamics. In conjunction with that work, Thomson is famous for having developed a sensitive method for measuring the temperature changes related to the expansion of a gas. These experiments improved on the earlier work by James Joule, and Lord Kelvin's improved instrument depicted in Figure \ref{fig:FigJT} is named the Joule--Thomson apparatus. The apparatus is composed of two chambers, each with its own mobile piston. The chambers are connected via a valve or porous plug. The entire apparatus is also thermally isolated from the surroundings. This instrument is a more sensitive version of the Joule expansion apparatus that we already described in section \ref{FirstLaw} (compare with Figure \ref{fig:FigJexp}).
 
-The \emph{Joule--Thomson coefficient}, \(\mu_{\mathrm{JT}}\), measures the rate of change of temperature of a gas with respect to pressure in the Joule--Thomson process:
+Thomson realized that a gas flowing through an obstruction experience a drop in pressure. If the entire apparatus is insulated, it will not exchange heat with its surroundings (\(Q=0\)), and each transformation will happen at adiabatic conditions. Let's consider an initial condition with 1 mol of gas in the left chamber, occupying a volume \(V_l\), and a completely closed left chamber, for which \(V_r^i=0\). After the process completes, the volume of the right chamber will redice to \(V_l^f=0\), while the volume of the right chamber will be \(V_r\). Using the first law of thermodynamics, we can write:
 
 \begin{equation}
-\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H
+\Delta U=U_r-U_l=\underbrace{Q}_{=0}+W=W_l+W_r,
+\label{eq:JT1}
+\end{equation}
+
+with:
+
+\begin{equation}
+\begin{aligned}
+W_l &=-\int_{V_l}^0 P_l dV = P_l V_l\\
+W_r &=-\int_0^{V_r} P_r dV = - P_r V_r.
+\end{aligned}
+\label{eq:JT2}
+\end{equation}
+
+Replacing \eqref{eq:JT2} into eq. \eqref{eq:JT1}, results in:
+
+\begin{equation}
+\begin{aligned}
+U_r-U_l &=P_l V_l-P_r V_r \\
+\underbrace{U_r+P_r V_r}_{H_r} &= \underbrace{U_l + P_l V_l}_{H_l},
+\end{aligned}
+\label{eq:JT3}
+\end{equation}
+
+which, replacing the definition of enthalpy \(H=U+PV\), we obtain:
+
+\begin{equation}
+\begin{aligned}
+H_r &=H_l \\
+\Delta H &=0,
+\end{aligned}
+\label{eq:JT4}
+\end{equation}
+
+or, in other words, the process is \textbf{isenthalpic}. Using the total differential of \(H\):
+
+\begin{equation}
+dH=\left(\frac{\partial H}{\partial T} \right)_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP,
+\label{eq:JT5}
+\end{equation}
+
+we obtain:
+
+\begin{equation}
+\Delta H=\int dH = \int C_P dT + \int \left(\frac{\partial H}{\partial P} \right)_T dP =0,
+\label{eq:JT6b}
+\end{equation}
+
+or, in purely differential form:
+
+\begin{equation}
+dH = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP =0,
+\label{eq:JT6}
+\end{equation}
+
+From eq. \eqref{eq:JT6} we can define a new coefficient, called the \emph{Joule--Thomson coefficient}, \(\mu_{\mathrm{JT}}\), that measures the rate of change of temperature of a gas with respect to pressure in the Joule--Thomson process:
+
+\begin{equation}
+\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H=-\frac{1}{C_P} \left( \frac{\partial H}{\partial T} \right)_P
 \label{eq:muJT}
 \end{equation}
 
-The value of \(\mu_{\mathrm{JT}}\) depends on the type of gas and on the temperature and pressure before expansion. The temperature at which \(\mu_{\mathrm{JT}}\) changes sign is called the ``Joule--Thomson inversion temperature''. Since the pressure decreases during an expansion, \(\partial P\) is negative by definition, and the following possibilities are available for \(\mu_{\mathrm{JT}}\):
+The value of \(\mu_{\mathrm{JT}}\) depends on the type of gas and on the temperature and pressure before expansion and the heat capacity at constant pressure of the gas. The temperature at which \(\mu_{\mathrm{JT}}\) changes sign is called the ``Joule--Thomson inversion temperature''. Since the pressure decreases during an expansion, \(\partial P\) is negative by definition, and the following possibilities are available for \(\mu_{\mathrm{JT}}\):
 
 \begin{longtable}[]{@{}lcccc@{}}
 \toprule
@@ -2791,7 +3104,7 @@ For example, helium has a very low Joule--Thomson inversion temperatures at stan
 The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behaviour. It is usually represented with the symbol \(z\), and is calculated as:
 
 \begin{equation}
-z=\frac{V_m}{V_m^{\text{ideal}}} = \frac{P V_m}{RT}.
+z=\frac{\overline{V}}{\overline{V}_{\text{ideal}}} = \frac{P \overline{V}}{RT}.
 \label{eq:comprdef}
 \end{equation}
 
@@ -2809,7 +3122,7 @@ It is evident from eq. \eqref{eq:comprdef} that the compressibility factor is de
 The two types of possible behaviors are differentiated based on the compressibility factor at \(P\rightarrow 0\). To analyze these situations we can use the vdW equation to calculate the compressibility factor as:
 
 \begin{equation}
-z= \frac{V_m}{RT} \left( \frac{RT}{V_m-b} -\frac{a}{V_m^2} \right).
+z= \frac{\overline{V}}{RT} \left( \frac{RT}{\overline{V}-b} -\frac{a}{\overline{V}^2} \right).
 \label{eq:compr1}
 \end{equation}
 
@@ -2875,7 +3188,7 @@ Let's now turn our attention to the \(PV\) phase diagram of a non-ideal gas, rep
 
 At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a \emph{critical phenomenon}.
 
-The critical temperature is the coordinate of a unique point, called the \textbf{critical point}, that can be visualized in the three-dimensional \(T,P,V\) diagram of each gas (Figure \ref{FigTPVd}\footnote{This diagram is taken from \href{https://en.wikipedia.org}{Wikipedia} and distributed under CC-BY-SA license.}).
+The critical temperature is the coordinate of a unique point, called the \textbf{critical point}, that can be visualized in the three-dimensional \(T,P,V\) diagram of each gas (Figure \ref{Fig:FigTPVd}\footnote{This diagram is taken from \href{https://en.wikipedia.org}{Wikipedia} and distributed under CC-BY-SA license.}).
 
 \begin{figure}
 
@@ -2886,10 +3199,10 @@ The critical temperature is the coordinate of a unique point, called the \textbf
 \caption{The three-dimensional diagram.}\label{fig:FigTPVd}
 \end{figure}
 
-The critical point has coordinates \({T_c,P_c, V_{m,c}}\). These critical coordinates can be determined from the vdW equation at \(T_c\), as:
+The critical point has coordinates \({T_c,P_c, \overline{V}_c}\). These critical coordinates can be determined from the vdW equation at \(T_c\), as:
 
 \begin{equation}
-T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad V_{m,c}=3b, 
+T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad \overline{V}_c=3b, 
 \label{eq:criticpt}
 \end{equation}
 
@@ -2898,7 +3211,7 @@ These relations are used, in practice, to determine the vdW constants \(a,b\) fr
 The critical compressibility factor, \(z_c\), is predicted from the vdW equation at:
 
 \begin{equation}
-z_c=\frac{P_c V_{m,c}}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{a} \right) = \frac{3}{8} = 0.375,
+z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{8a} \right) = \frac{3}{8} = 0.375,
 \label{eq:critiz}
 \end{equation}
 
@@ -2945,42 +3258,42 @@ The highest chances for any gas to behave ideally happen at high temperature and
 We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs free energy of a substance, we can write:
 
 \begin{equation}
-d \mu_{\text{ideal}} = V_{m,\text{ideal}}dP,
+d \mu_{\text{ideal}} = \overline{V}_{\text{ideal}}dP,
 \label{eq:dmufug1}
 \end{equation}
 
 and:
 
 \begin{equation}
-d \mu_{\text{non-ideal}} = V_{m,\text{non-ideal}}dP,
+d \mu_{\text{non-ideal}} = \overline{V}_{\text{non-ideal}}dP,
 \label{eq:dmufug2}
 \end{equation}
 
 Subtracting eq. \eqref{eq:dmufug1} from eq. \eqref{eq:dmufug2}, we obtain:
 
 \begin{equation}
-d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP,
+d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP,
 \label{eq:dmufug3}
 \end{equation}
 
 which we can then integrate between \(0\) and \(P\):
 
 \begin{equation}
-\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP.
+\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP.
 \label{eq:dmufug4}
 \end{equation}
 
 Using eqs. @ref(eq.dcpig) and @ref(eq.dcpnig) we can then replace the definition of chemical potentials, resulting into:
 
 \begin{equation}
-\ln f - \ln P = \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}} - V_{m,\text{ideal}} \right) dP,
+\ln f - \ln P = \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}} - \overline{V}_{\text{ideal}} \right) dP,
 \label{eq:dmufug5}
 \end{equation}
 
 which gives us a mathematical definition of the fugacity, as:
 
 \begin{equation}
-f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
+f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
 \label{eq:dmufug6}
 \end{equation}
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-12" />
+<meta name="date" content="2020-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,25 +227,211 @@
 <h1><span class="header-section-number">11</span> Ideal and Non-Ideal Gases</h1>
 <div id="the-ideal-gas-equation" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> The Ideal Gas Equation</h2>
-<p>assumptions:</p>
+<p>The concept of an ideal gas is a theoretical construct that allows for simple treatment and interpretation of the behavior of gases. As such, the ideal gas is a simplified <em>model</em> that we use to understand nature, and it does not correspond to any real system. The following two assumptions define the ideal gas model:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:iedalgas" class="definition"><strong>Definition 11.1  </strong></span></p>
+<ul>
+<li>The molecules that compose an ideal gas do not occupy any volume.</li>
+<li>The molecules that compose an ideal gas do not interact with each other.</li>
+</ul>
+</div>
+</blockquote>
 <div id="boyles-law" class="section level3" number="11.1.1">
 <h3><span class="header-section-number">11.1.1</span> Boyle’s Law</h3>
+<p>In 1662 Robert Boyle (1627–1691) found that the pressure and the volume of an ideal gas are inversely related at constant temperature. Boyle’s Law has the following mathematical description:</p>
+<p><span class="math display" id="eq:boylelaw1">\[\begin{equation}
+P\propto\frac{1}{V}\quad\text{at const.}\;T,
+\tag{11.1}
+\end{equation}\]</span></p>
+<p>or, in other terms:</p>
+<p><span class="math display" id="eq:boylelaw2">\[\begin{equation}
+PV=k_1\quad\text{at const.}\;T,
+\tag{11.2}
+\end{equation}\]</span></p>
+<p>which results in a the familiar <span class="math inline">\(PV\)</span> plots of Figure XXX. As we already discussed in chapter <a href="ZerothLaw.html#ZerothLaw">2</a>, each of the curves in Figure XXX is obtained at constant temperature, and it is therefore called <em>“isotherm.”</em></p>
+<p>Fig. XXX</p>
 </div>
 <div id="charless-and-gay-lussacs-laws" class="section level3" number="11.1.2">
 <h3><span class="header-section-number">11.1.2</span> Charles’s and Gay-Lussac’s Laws</h3>
+<p>It took scientists more than a century to expand Boyle’s work and study the relationship between volume and temperature. In 1787 Jacques Alexandre César Charles (1746–1823) wrote the relationship that is now known as Charles’s Law:</p>
+<p><span class="math display" id="eq:charleslaw1">\[\begin{equation}
+V\propto T\quad\text{at const.}\;P,
+\tag{11.3}
+\end{equation}\]</span></p>
+<p>or, in other terms:</p>
+<p><span class="math display" id="eq:charleslaw2">\[\begin{equation}
+V=k_2 T\quad\text{at const.}\;P,
+\tag{11.4}
+\end{equation}\]</span></p>
+<p>which results in the plots of figure XXX. Each of the curves is obtained at constant pressure, and it is termed <em>“isobar.”</em></p>
+<p>Fig. XXX</p>
+<p>The interesting thing about isobars is that each line seems to converge to a very specific point along the temperature line when we extrapolate them to <span class="math inline">\(V\rightarrow 0\)</span>. This led to the introduction of the absolute temperature scale, suggesting the fact that the temperature will never get smaller than <span class="math inline">\(-273.15^\circ\mathrm{C}\)</span>.</p>
+<p>It took an additional 21 years to write a formal relationship between pressure and temperature. The following relationships were proposed Joseph Louis Gay-Lussac (1778–1850) in 1808:</p>
+<p><span class="math display" id="eq:gaylussac1">\[\begin{equation}
+P\propto T\quad\text{at const.}\;V,
+\tag{11.5}
+\end{equation}\]</span></p>
+<p>or, in other terms:</p>
+<p><span class="math display" id="eq:gaylussac2">\[\begin{equation}
+P=k_3 T\quad\text{at const.}\;V,
+\tag{11.6}
+\end{equation}\]</span></p>
+<p>which results in the plots of figure XXX. Each of the curves is obtained at constant volume, and it is termed <em>“isochor.”</em></p>
+<p>Fig. XXX</p>
 </div>
 <div id="avogadros-law" class="section level3" number="11.1.3">
 <h3><span class="header-section-number">11.1.3</span> Avogadro’s Law</h3>
+<p>Ten years later, Amedeo Avogadro (1776–1856) discovered a seemingly unrelated principle by studying the composition of matter. His Avoadro’s Law encodes the relationship between the number of moles in an ideal gas and its volume as:</p>
+<p><span class="math display" id="eq:avogadrolaw1">\[\begin{equation}
+V\propto n\quad\text{at const.}\;P,T,
+\tag{11.7}
+\end{equation}\]</span></p>
+<p>or in other terms:</p>
+<p><span class="math display" id="eq:avogadrolaw2">\[\begin{equation}
+V=k_4 n\quad\text{at const.}\;P,T,
+\tag{11.8}
+\end{equation}\]</span></p>
 </div>
 <div id="the-ideal-gas-law" class="section level3" number="11.1.4">
 <h3><span class="header-section-number">11.1.4</span> The ideal gas Law</h3>
+<p>Despite all of the ingredients being available since more than 20 years, it’s only in 1834 that Benoît Paul Émile Clapeyron (1799–1864) was finally able to combine all of them into what is now known as the <strong>ideal gas Law</strong>. Using the same formulas obtained above, we can write:</p>
+<p><span class="math display" id="eq:ideallaw1">\[\begin{equation}
+PV=\underbrace{k_3 T}_{\text{from Gay-Lussac&#39;s}} \cdot \underbrace{k_4 n,}_{\text{from Avogadro&#39;s}}
+\tag{11.9}
+\end{equation}\]</span></p>
+<p>which by renaming the product of the two constants <span class="math inline">\(k_3\)</span> and <span class="math inline">\(k_4\)</span> as <span class="math inline">\(R\)</span>, becomes:</p>
+<p><span class="math display" id="eq:ideallaw">\[\begin{equation}
+PV=nRT
+\tag{11.10}
+\end{equation}\]</span></p>
+<p>The value of the constant <span class="math inline">\(R\)</span> can be determined experimentally by measuring the volume that 1 mol of an ideal gas occupies at a constant temperature (e.g., at <span class="math inline">\(T=0^\circ\mathrm{C}\)</span>) and a constant pressure (e.g., atmospheric pressure <span class="math inline">\(P=1\;\mathrm{atm}\)</span>). At those conditions, the volume is measured at 22.4 L, resulting in the following value of <span class="math inline">\(R\)</span>:</p>
+<p><span class="math display" id="eq:ideallaw">\[\begin{equation}
+R=\frac{VP}{nT}=\frac{22.4 \cdot 1}{1 \cdot 273}=0.082 \;\frac{\text{L atm}}{\text{mol K}},
+\tag{11.10}
+\end{equation}\]</span></p>
+<p>which a simple conversion to SI units transforms into:</p>
+<p><span class="math display" id="eq:RvalueSI">\[\begin{equation}
+R=8.31\;\frac{\text{J}}{\text{mol K}}.
+\tag{11.11}
+\end{equation}\]</span></p>
 </div>
 </div>
 <div id="behaviors-of-non-ideal-gases" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Behaviors of Non-Ideal Gases</h2>
-<p>Non-ideal gases (sometimes also referred to as “real gases”), do not behave as ideal gases because one or more of the assumptions XXX are violated. To study how their behavior differs from an ideal gas we can use either a <span class="math inline">\(P\)</span> <em>vs.</em> <span class="math inline">\(V\)</span> diagram, or a <span class="math inline">\(PV\)</span> <em>vs.</em> <span class="math inline">\(P\)</span> diagram:</p>
+<p>Non-ideal gases (sometimes also referred to as “real gases”), do not behave as ideal gases because one or more of the assumptions in XXX are violated. To study how their behavior differs from an ideal gas we can use either a <span class="math inline">\(P\)</span> <em>vs.</em> <span class="math inline">\(V\)</span> diagram, or a <span class="math inline">\(PV\)</span> <em>vs.</em> <span class="math inline">\(P\)</span> diagram:</p>
 <div id="the-van-der-waals-equation" class="section level3" number="11.2.1">
 <h3><span class="header-section-number">11.2.1</span> The van der Waals equation</h3>
+<p>What characterize non-ideal gases is the fact that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental equations, none of which is superior to the other. THe simplest of the experimental equations was obtained in 1873 by Johannes Diderik van der Waals (1837–1923), and it’s the only equation that we are going to analyze in details here because of its simple interpretation. However, the van der Waals (vdW) equation is far from being universal, and for several non-ideal gases it is severely inaccurate.</p>
+<p>The vdW equation includes two empirical parameters (<span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>) that assume different values for each non-ideal gas. Each of the parameter corresponds to a correction for the breaking of the two conditions that define the ideal gas behavior (definition <a href="#def:idealgas"><strong>??</strong></a>). The vdW equation is obtained from the following simple substitutions to the ideal gas equation:</p>
+<p><span class="math display" id="eq:vdWeq1">\[\begin{equation}
+\begin{aligned}
+P &amp; \;\rightarrow\;\left( P + \frac{a}{\overline{V}^2} \right)\\
+\overline{V} &amp; \;\rightarrow\;\left( \overline{V} - b\right),\\
+\end{aligned}
+\tag{11.12}
+\end{equation}\]</span></p>
+<p>which results in:</p>
+<p><span class="math display" id="eq:vdWeq2">\[\begin{equation}
+\begin{aligned}
+P\overline{V} &amp;=RT \; \rightarrow \; \left( P + \frac{a}{\overline{V}^2} \right)\left( \overline{V} - b\right)=RT\\
+P &amp;=\frac{RT}{\overline{V} - b}-\frac{a}{\overline{V}^2}.
+\end{aligned}
+\tag{11.13}
+\end{equation}\]</span></p>
+<p>The parameter <span class="math inline">\(a\)</span> accounts for the presence of intermolecular interactions, while the parameter <span class="math inline">\(b\)</span> accounts for the non-negligible volume of the gas molecules. Despite the parameters have simple interpretations, their values for each gas must be determined experimentally. Values for these parameters for some significant non-ideal gas are reported below:</p>
+<table>
+<colgroup>
+<col width="12%" />
+<col width="50%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(a \left[ \frac{\mathrm{L}^2\mathrm{bar}}{\mathrm{mol}^2} \right]\)</span></th>
+<th align="center"><span class="math inline">\(b \left[ \frac{\mathrm{L}}{\mathrm{mol}} \right]\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ammonia</td>
+<td align="center">4.225</td>
+<td align="center">0.0371</td>
+</tr>
+<tr class="even">
+<td>Argon</td>
+<td align="center">1.355</td>
+<td align="center">0.03201</td>
+</tr>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td align="center">3.640</td>
+<td align="center">0.04267</td>
+</tr>
+<tr class="even">
+<td>Carbon monoxide</td>
+<td align="center">1.505</td>
+<td align="center">0.03985</td>
+</tr>
+<tr class="odd">
+<td>Chlorine</td>
+<td align="center">6.579</td>
+<td align="center">0.05622</td>
+</tr>
+<tr class="even">
+<td>Freon</td>
+<td align="center">10.78</td>
+<td align="center">0.0998</td>
+</tr>
+<tr class="odd">
+<td>Helium</td>
+<td align="center">0.0346</td>
+<td align="center">0.0238</td>
+</tr>
+<tr class="even">
+<td>Hydrogen</td>
+<td align="center">0.2476</td>
+<td align="center">0.02661</td>
+</tr>
+<tr class="odd">
+<td>Mercury</td>
+<td align="center">8.200</td>
+<td align="center">0.01696</td>
+</tr>
+<tr class="even">
+<td>Methane</td>
+<td align="center">2.283</td>
+<td align="center">0.04278</td>
+</tr>
+<tr class="odd">
+<td>Neon</td>
+<td align="center">0.2135</td>
+<td align="center">0.01709</td>
+</tr>
+<tr class="even">
+<td>Nitrogen</td>
+<td align="center">1.370</td>
+<td align="center">0.0387</td>
+</tr>
+<tr class="odd">
+<td>Oxygen</td>
+<td align="center">1.382</td>
+<td align="center">0.03186</td>
+</tr>
+<tr class="even">
+<td>Radon</td>
+<td align="center">6.601</td>
+<td align="center">0.06239</td>
+</tr>
+<tr class="odd">
+<td>Xenon</td>
+<td align="center">4.250</td>
+<td align="center">0.05105</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="joulethomson-effect" class="section level3" number="11.2.2">
 <h3><span class="header-section-number">11.2.2</span> Joule–Thomson effect</h3>
@@ -255,13 +441,57 @@
 Figure 11.1: The Joule–Thomson Experiment.
 </p>
 </div>
-<p>xxx describe the apparatus xxx</p>
-<p>The <em>Joule–Thomson coefficient</em>, <span class="math inline">\(\mu_{\mathrm{JT}}\)</span>, measures the rate of change of temperature of a gas with respect to pressure in the Joule–Thomson process:</p>
-<p><span class="math display" id="eq:muJT">\[\begin{equation}
-\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H
-\tag{11.1}
+<p>We have already met William Thomson, also known as Lord Kelvin, and his seminal work on the second law of thermodynamics. In conjunction with that work, Thomson is famous for having developed a sensitive method for measuring the temperature changes related to the expansion of a gas. These experiments improved on the earlier work by James Joule, and Lord Kelvin’s improved instrument depicted in Figure <a href="RealGases.html#fig:FigJT">11.1</a> is named the Joule–Thomson apparatus. The apparatus is composed of two chambers, each with its own mobile piston. The chambers are connected via a valve or porous plug. The entire apparatus is also thermally isolated from the surroundings. This instrument is a more sensitive version of the Joule expansion apparatus that we already described in section <a href="FirstLaw.html#FirstLaw">3</a> (compare with Figure <a href="FirstLaw.html#fig:FigJexp">3.1</a>).</p>
+<p>Thomson realized that a gas flowing through an obstruction experience a drop in pressure. If the entire apparatus is insulated, it will not exchange heat with its surroundings (<span class="math inline">\(Q=0\)</span>), and each transformation will happen at adiabatic conditions. Let’s consider an initial condition with 1 mol of gas in the left chamber, occupying a volume <span class="math inline">\(V_l\)</span>, and a completely closed left chamber, for which <span class="math inline">\(V_r^i=0\)</span>. After the process completes, the volume of the right chamber will redice to <span class="math inline">\(V_l^f=0\)</span>, while the volume of the right chamber will be <span class="math inline">\(V_r\)</span>. Using the first law of thermodynamics, we can write:</p>
+<p><span class="math display" id="eq:JT1">\[\begin{equation}
+\Delta U=U_r-U_l=\underbrace{Q}_{=0}+W=W_l+W_r,
+\tag{11.14}
 \end{equation}\]</span></p>
-<p>The value of <span class="math inline">\(\mu_{\mathrm{JT}}\)</span> depends on the type of gas and on the temperature and pressure before expansion. The temperature at which <span class="math inline">\(\mu_{\mathrm{JT}}\)</span> changes sign is called the “Joule–Thomson inversion temperature”. Since the pressure decreases during an expansion, <span class="math inline">\(\partial P\)</span> is negative by definition, and the following possibilities are available for <span class="math inline">\(\mu_{\mathrm{JT}}\)</span>:</p>
+<p>with:</p>
+<p><span class="math display" id="eq:JT2">\[\begin{equation}
+\begin{aligned}
+W_l &amp;=-\int_{V_l}^0 P_l dV = P_l V_l\\
+W_r &amp;=-\int_0^{V_r} P_r dV = - P_r V_r.
+\end{aligned}
+\tag{11.15}
+\end{equation}\]</span></p>
+<p>Replacing <a href="RealGases.html#eq:JT2">(11.15)</a> into eq. <a href="RealGases.html#eq:JT1">(11.14)</a>, results in:</p>
+<p><span class="math display" id="eq:JT3">\[\begin{equation}
+\begin{aligned}
+U_r-U_l &amp;=P_l V_l-P_r V_r \\
+\underbrace{U_r+P_r V_r}_{H_r} &amp;= \underbrace{U_l + P_l V_l}_{H_l},
+\end{aligned}
+\tag{11.16}
+\end{equation}\]</span></p>
+<p>which, replacing the definition of enthalpy <span class="math inline">\(H=U+PV\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:JT4">\[\begin{equation}
+\begin{aligned}
+H_r &amp;=H_l \\
+\Delta H &amp;=0,
+\end{aligned}
+\tag{11.17}
+\end{equation}\]</span></p>
+<p>or, in other words, the process is <strong>isenthalpic</strong>. Using the total differential of <span class="math inline">\(H\)</span>:</p>
+<p><span class="math display" id="eq:JT5">\[\begin{equation}
+dH=\left(\frac{\partial H}{\partial T} \right)_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP,
+\tag{11.18}
+\end{equation}\]</span></p>
+<p>we obtain:</p>
+<p><span class="math display" id="eq:JT6b">\[\begin{equation}
+\Delta H=\int dH = \int C_P dT + \int \left(\frac{\partial H}{\partial P} \right)_T dP =0,
+\tag{11.19}
+\end{equation}\]</span></p>
+<p>or, in purely differential form:</p>
+<p><span class="math display" id="eq:JT6">\[\begin{equation}
+dH = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP =0,
+\tag{11.20}
+\end{equation}\]</span></p>
+<p>From eq. <a href="RealGases.html#eq:JT6">(11.20)</a> we can define a new coefficient, called the <em>Joule–Thomson coefficient</em>, <span class="math inline">\(\mu_{\mathrm{JT}}\)</span>, that measures the rate of change of temperature of a gas with respect to pressure in the Joule–Thomson process:</p>
+<p><span class="math display" id="eq:muJT">\[\begin{equation}
+\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H=-\frac{1}{C_P} \left( \frac{\partial H}{\partial T} \right)_P
+\tag{11.21}
+\end{equation}\]</span></p>
+<p>The value of <span class="math inline">\(\mu_{\mathrm{JT}}\)</span> depends on the type of gas and on the temperature and pressure before expansion and the heat capacity at constant pressure of the gas. The temperature at which <span class="math inline">\(\mu_{\mathrm{JT}}\)</span> changes sign is called the “Joule–Thomson inversion temperature”. Since the pressure decreases during an expansion, <span class="math inline">\(\partial P\)</span> is negative by definition, and the following possibilities are available for <span class="math inline">\(\mu_{\mathrm{JT}}\)</span>:</p>
 <table>
 <thead>
 <tr class="header">
@@ -298,10 +528,10 @@ Figure 11.1: The Joule–Thomson Experiment.
 <h3><span class="header-section-number">11.3.1</span> Compressibility factors</h3>
 <p>The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behaviour. It is usually represented with the symbol <span class="math inline">\(z\)</span>, and is calculated as:</p>
 <p><span class="math display" id="eq:comprdef">\[\begin{equation}
-z=\frac{V_m}{V_m^{\text{ideal}}} = \frac{P V_m}{RT}.
-\tag{11.2}
+z=\frac{\overline{V}}{\overline{V}_{\text{ideal}}} = \frac{P \overline{V}}{RT}.
+\tag{11.22}
 \end{equation}\]</span></p>
-<p>It is evident from eq. <a href="RealGases.html#eq:comprdef">(11.2)</a> that the compressibility factor is dependent on the pressure, and for an ideal gas <span class="math inline">\(z=1\)</span> always. For a non-ideal gas at any given pressure, <span class="math inline">\(z\)</span> can be higher or lower than one, separating their behaviors into two possibilities. The dependence of the compressibility factor against pressure is represented for <span class="math inline">\(\mathrm{H}_2\)</span> and <span class="math inline">\(\mathrm{CO}_2\)</span> in Figure <a href="RealGases.html#fig:FigZb">11.2</a>.</p>
+<p>It is evident from eq. <a href="RealGases.html#eq:comprdef">(11.22)</a> that the compressibility factor is dependent on the pressure, and for an ideal gas <span class="math inline">\(z=1\)</span> always. For a non-ideal gas at any given pressure, <span class="math inline">\(z\)</span> can be higher or lower than one, separating their behaviors into two possibilities. The dependence of the compressibility factor against pressure is represented for <span class="math inline">\(\mathrm{H}_2\)</span> and <span class="math inline">\(\mathrm{CO}_2\)</span> in Figure <a href="RealGases.html#fig:FigZb">11.2</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:FigZb"></span>
 <img src="img/OEP_Figures.012.jpeg" alt="Non-Ideal Gases Behaviors." width="80%" />
 <p class="caption">
@@ -310,13 +540,13 @@ Figure 11.2: Non-Ideal Gases Behaviors.
 </div>
 <p>The two types of possible behaviors are differentiated based on the compressibility factor at <span class="math inline">\(P\rightarrow 0\)</span>. To analyze these situations we can use the vdW equation to calculate the compressibility factor as:</p>
 <p><span class="math display" id="eq:compr1">\[\begin{equation}
-z= \frac{V_m}{RT} \left( \frac{RT}{V_m-b} -\frac{a}{V_m^2} \right).
-\tag{11.3}
+z= \frac{\overline{V}}{RT} \left( \frac{RT}{\overline{V}-b} -\frac{a}{\overline{V}^2} \right).
+\tag{11.23}
 \end{equation}\]</span></p>
 <p>and then we can differentiate this equation at constant temperature with respect to changes in the pressure near <span class="math inline">\(P=0\)</span>, to obtain:</p>
 <p><span class="math display" id="eq:compr2">\[\begin{equation}
 \left. \left( \frac{\partial z}{\partial P}\right)_T \right|_{P=0} = \frac{1}{RT} \left( b -\frac{a}{RT} \right).
-\tag{11.4}
+\tag{11.24}
 \end{equation}\]</span></p>
 <p>which is then interpreted as follows:</p>
 <ul>
@@ -349,27 +579,27 @@ Figure 11.4: The Pressure–Volume Diagram of a Non-Ideal Gas.
 <blockquote>
 
 <div class="definition">
-<p><span id="def:criticalT" class="definition"><strong>Definition 11.1  </strong></span><em>Critical Temperature:</em> The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.</p>
+<p><span id="def:criticalT" class="definition"><strong>Definition 11.2  </strong></span><em>Critical Temperature:</em> The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.</p>
 </div>
 </blockquote>
 <p>At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a <em>critical phenomenon</em>.</p>
-<p>The critical temperature is the coordinate of a unique point, called the <strong>critical point</strong>, that can be visualized in the three-dimensional <span class="math inline">\(T,P,V\)</span> diagram of each gas (Figure <a href="#FigTPVd"><strong>??</strong></a><a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a>).</p>
+<p>The critical temperature is the coordinate of a unique point, called the <strong>critical point</strong>, that can be visualized in the three-dimensional <span class="math inline">\(T,P,V\)</span> diagram of each gas (Figure <a href="#Fig:FigTPVd"><strong>??</strong></a><a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:FigTPVd"></span>
 <img src="img/PVT_3D_diagram.png" alt="The three-dimensional diagram." width="50%" />
 <p class="caption">
 Figure 11.5: The three-dimensional diagram.
 </p>
 </div>
-<p>The critical point has coordinates <span class="math inline">\({T_c,P_c, V_{m,c}}\)</span>. These critical coordinates can be determined from the vdW equation at <span class="math inline">\(T_c\)</span>, as:</p>
+<p>The critical point has coordinates <span class="math inline">\({T_c,P_c, \overline{V}_c}\)</span>. These critical coordinates can be determined from the vdW equation at <span class="math inline">\(T_c\)</span>, as:</p>
 <p><span class="math display" id="eq:criticpt">\[\begin{equation}
-T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad V_{m,c}=3b, 
-\tag{11.5}
+T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad \overline{V}_c=3b, 
+\tag{11.25}
 \end{equation}\]</span></p>
 <p>These relations are used, in practice, to determine the vdW constants <span class="math inline">\(a,b\)</span> from the experimentally measured critical isotherms.</p>
 <p>The critical compressibility factor, <span class="math inline">\(z_c\)</span>, is predicted from the vdW equation at:</p>
 <p><span class="math display" id="eq:critiz">\[\begin{equation}
-z_c=\frac{P_c V_{m,c}}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{a} \right) = \frac{3}{8} = 0.375,
-\tag{11.6}
+z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{8a} \right) = \frac{3}{8} = 0.375,
+\tag{11.26}
 \end{equation}\]</span></p>
 <p>a value that is independent of the gas. Experimentally measured values of <span class="math inline">\(z_c\)</span> for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental <span class="math inline">\(z_c\)</span> is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume.</p>
 </div>
@@ -379,24 +609,24 @@ z_c=\frac{P_c V_{m,c}}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R}
 <p>The chemical potential of a pure ideal gas can be calculated using eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a>. Since we are not interested in mixture, we can drop the asterisk in <span class="math inline">\(\mu^*\)</span>, and rewrite eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a> as:</p>
 <p><span class="math display" id="eq:dcpig">\[\begin{equation}
 \mu_{\text{ideal}} = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}}.
-\tag{11.7}
+\tag{11.27}
 \end{equation}\]</span></p>
-<p>For a non-ideal gas, the pressure cannot be used in eq. <a href="RealGases.html#eq:dcpig">(11.7)</a> because each gas response to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in eq. <a href="RealGases.html#eq:dcpig">(11.7)</a> and call it fugacity (<span class="math inline">\(f\)</span>).</p>
+<p>For a non-ideal gas, the pressure cannot be used in eq. <a href="RealGases.html#eq:dcpig">(11.27)</a> because each gas response to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in eq. <a href="RealGases.html#eq:dcpig">(11.27)</a> and call it fugacity (<span class="math inline">\(f\)</span>).</p>
 <blockquote>
 
 <div class="definition">
-<p><span id="def:fugacitydef" class="definition"><strong>Definition 11.2  </strong></span><em>Fugacity:</em> The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.</p>
+<p><span id="def:fugacitydef" class="definition"><strong>Definition 11.3  </strong></span><em>Fugacity:</em> The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.</p>
 </div>
-<p>Eq. <a href="RealGases.html#eq:dcpig">(11.7)</a> then becomes:</p>
+<p>Eq. <a href="RealGases.html#eq:dcpig">(11.27)</a> then becomes:</p>
 </blockquote>
 <p><span class="math display" id="eq:dcpnig">\[\begin{equation}
 \mu_{\text{non-ideal}} = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln \frac{f}{P^{-\kern-6pt{\ominus}\kern-6pt-}}.
-\tag{11.8}
+\tag{11.28}
 \end{equation}\]</span></p>
-<p>Since the chemical potential of a gas <span class="math inline">\(\mu\)</span> is equal to the standard chemical potential <span class="math inline">\(\mu^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> when <span class="math inline">\(P=P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, it is easy to use eq. <a href="RealGases.html#eq:dcpnig">(11.8)</a> to demonstrate that:</p>
+<p>Since the chemical potential of a gas <span class="math inline">\(\mu\)</span> is equal to the standard chemical potential <span class="math inline">\(\mu^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> when <span class="math inline">\(P=P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, it is easy to use eq. <a href="RealGases.html#eq:dcpnig">(11.28)</a> to demonstrate that:</p>
 <p><span class="math display" id="eq:dcpnigL">\[\begin{equation}
 \lim_{P\rightarrow 0} \frac{f}{P} = 1,
-\tag{11.9}
+\tag{11.29}
 \end{equation}\]</span></p>
 <p>in other words, any non-ideal gas will approach the ideal gas behavior as <span class="math inline">\(P\rightarrow 0\)</span>. This condition, in conjunction with the <span class="math inline">\(T\rightarrow \infty\)</span> behavior obtained in the previous section, results in the following statement:</p>
 <blockquote>
@@ -404,44 +634,44 @@ z_c=\frac{P_c V_{m,c}}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R}
 </blockquote>
 <p>We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs free energy of a substance, we can write:</p>
 <p><span class="math display" id="eq:dmufug1">\[\begin{equation}
-d \mu_{\text{ideal}} = V_{m,\text{ideal}}dP,
-\tag{11.10}
+d \mu_{\text{ideal}} = \overline{V}_{\text{ideal}}dP,
+\tag{11.30}
 \end{equation}\]</span></p>
 <p>and:</p>
 <p><span class="math display" id="eq:dmufug2">\[\begin{equation}
-d \mu_{\text{non-ideal}} = V_{m,\text{non-ideal}}dP,
-\tag{11.11}
+d \mu_{\text{non-ideal}} = \overline{V}_{\text{non-ideal}}dP,
+\tag{11.31}
 \end{equation}\]</span></p>
-<p>Subtracting eq. <a href="RealGases.html#eq:dmufug1">(11.10)</a> from eq. <a href="RealGases.html#eq:dmufug2">(11.11)</a>, we obtain:</p>
+<p>Subtracting eq. <a href="RealGases.html#eq:dmufug1">(11.30)</a> from eq. <a href="RealGases.html#eq:dmufug2">(11.31)</a>, we obtain:</p>
 <p><span class="math display" id="eq:dmufug3">\[\begin{equation}
-d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP,
-\tag{11.12}
+d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP,
+\tag{11.32}
 \end{equation}\]</span></p>
 <p>which we can then integrate between <span class="math inline">\(0\)</span> and <span class="math inline">\(P\)</span>:</p>
 <p><span class="math display" id="eq:dmufug4">\[\begin{equation}
-\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP.
-\tag{11.13}
+\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP.
+\tag{11.33}
 \end{equation}\]</span></p>
 <p>Using eqs. @ref(eq.dcpig) and @ref(eq.dcpnig) we can then replace the definition of chemical potentials, resulting into:</p>
 <p><span class="math display" id="eq:dmufug5">\[\begin{equation}
-\ln f - \ln P = \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}} - V_{m,\text{ideal}} \right) dP,
-\tag{11.14}
+\ln f - \ln P = \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}} - \overline{V}_{\text{ideal}} \right) dP,
+\tag{11.34}
 \end{equation}\]</span></p>
 <p>which gives us a mathematical definition of the fugacity, as:</p>
 <p><span class="math display" id="eq:dmufug6">\[\begin{equation}
-f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(V_{m,\text{non-ideal}}-V_{m,\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
-\tag{11.15}
+f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
+\tag{11.35}
 \end{equation}\]</span></p>
-<p>The exponential term in eq. <a href="RealGases.html#eq:dmufug6">(11.15)</a> is complicated to write, but it can be interpreted as a coefficient—unique to each non-ideal gas—that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the <em>fugacity coefficients</em>. Using letter <span class="math inline">\(\phi\)</span> to represent the fugacity coefficient, we can rewrite eq. <a href="RealGases.html#eq:dmufug6">(11.15)</a> as:</p>
+<p>The exponential term in eq. <a href="RealGases.html#eq:dmufug6">(11.35)</a> is complicated to write, but it can be interpreted as a coefficient—unique to each non-ideal gas—that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the <em>fugacity coefficients</em>. Using letter <span class="math inline">\(\phi\)</span> to represent the fugacity coefficient, we can rewrite eq. <a href="RealGases.html#eq:dmufug6">(11.35)</a> as:</p>
 <p><span class="math display" id="eq:dmufug7">\[\begin{equation}
 f = \phi P,
-\tag{11.16}
+\tag{11.36}
 \end{equation}\]</span></p>
 <p>which gives us a straightforward interpretation of the fugacity as an effective pressure. As such, the fugacity will have the same unit as the pressure, while the fugacity coefficients will be adimensional.</p>
 <p>As we already saw in chapter (ChemicalEquilibrium), the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called <span class="math inline">\(K_f\)</span>, and is obtained from:</p>
 <p><span class="math display" id="eq:kfdef">\[\begin{equation}
 K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
-\tag{11.17}
+\tag{11.37}
 \end{equation}\]</span></p>
 
 </div>
