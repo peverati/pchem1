@@ -38,56 +38,56 @@ plot(x, 0.081*298/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*350/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*400/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*450/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*500/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*550/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*600/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
 par(new=TRUE)
 plot(x, 0.081*650/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 
      
 par(new=TRUE)
@@ -95,49 +95,49 @@ plot(x, 0.4/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 0.55/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 0.75/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 0.95/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 1.2/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 1.5/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 0.3/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 
 
@@ -154,49 +154,49 @@ plot(seq(0.2753,0.303,0.001), 0.081*500/seq(0.2753,0.303,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.294,0.315,0.001), 0.081*550/seq(0.294,0.315,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.307,0.329,0.001), 0.081*600/seq(0.307,0.329,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.336,0.358,0.001), 0.081*450/seq(0.336,0.358,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.324,0.347,0.001), 0.081*400/seq(0.324,0.347,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.279,0.336,0.001), 0.081*350/seq(0.279,0.336,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.259,0.284,0.001), 0.081*450/seq(0.259,0.284,0.001),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 
 
@@ -205,49 +205,49 @@ plot(seq(0.294,0.302,0.001), 0.75/seq(0.294,0.302,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.307,0.315,0.001), 0.95/seq(0.307,0.315,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
      
 par(new=TRUE)
 plot(seq(0.329,0.358,0.001), 1.2/seq(0.329,0.358,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.336,0.347,0.001), 0.95/seq(0.336,0.347,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.324,0.336,0.001), 0.75/seq(0.324,0.336,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.259,0.279,0.001), 0.4/seq(0.259,0.279,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 
 par(new=TRUE)
 plot(seq(0.2753,0.285,0.001), 0.55/seq(0.2753,0.285,0.001)^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "black", lwd=3)
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "black", lwd=3)
 ```
 
 \begin{equation}

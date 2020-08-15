@@ -1,21 +1,21 @@
-.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
+.Rmdcaution, .Rmdimportant, .Rmdnote, .Rmdtip, .Rmdwarning {
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
   background: #f5f5f5 5px center/3em no-repeat;
 }
-.rmdcaution {
+.Rmdcaution {
   background-image: url("../images/caution.png");
 }
-.rmdimportant {
+.Rmdimportant {
   background-image: url("../images/important.png");
 }
-.rmdnote {
+.Rmdnote {
   background-image: url("../images/note.png");
 }
-.rmdtip {
+.Rmdtip {
   background-image: url("../images/tip.png");
 }
-.rmdwarning {
+.Rmdwarning {
   background-image: url("../images/warning.png");
 }
 p.caption {

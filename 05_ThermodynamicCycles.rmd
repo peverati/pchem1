@@ -40,28 +40,28 @@ plot(x, 0.081*298/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
      
 par(new=TRUE)
 plot(x, 0.081*600/x,
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
      
 par(new=TRUE)
 plot(x, 0.4/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 par(new=TRUE)
 plot(x, 1.2/x^(13/3),
      xlim=c(0.2, 0.45),
      ylim=c(50, 230),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "blue")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "blue")
 
 text(0.41,135, "isotherm", col = "#2E9FDF")
 text(0.425,123, expression('T'[h]), col = "#2E9FDF")

@@ -6,7 +6,7 @@
 
 The concept of an ideal gas is a theoretical construct that allows for straightforward treatment and interpretation of gases' behavior. As such, the ideal gas is a simplified *model* that we use to understand nature, and it does not correspond to any real system. The following two assumptions define the ideal gas model:
 
-> ```{definition, iedalgas}
+> ```{definition, iedalgasdef}
 
 
 - The particles that compose an ideal gas do not occupy any volume.
@@ -31,9 +31,33 @@ PV=k_1\quad\text{at const.}\;T,
 (\#eq:boylelaw2)
 \end{equation}
 
-which results in the familiar $PV$ plots of Figure XXX. As we already discussed in chapter \@ref(ZerothLaw), each of the curves in Figure XXX is obtained at constant temperature, and it is therefore called *"isotherm."*
+which results in the familiar $PV$ plots of Figure \@ref(gig:FigPVideal). As we already discussed in chapter \@ref(ZerothLaw), each of the curves in Figure \@ref(gig:FigPVideal) is obtained at constant temperature, and it is therefore called *"isotherm."*
 
-Fig. XXX
+```{r FigPVideal, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of an ideal Gas.', out.width="70%"}
+x <- seq(0,1.25,0.01)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+
+plot(x, 0.081*298/x,
+     xlim=c(0, 1.25),
+     ylim=c(0, 600),
+     type="l",
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF",lwd=3)
+     
+par(new=TRUE)
+plot(x, 0.081*1200/x,
+     xlim=c(0, 1.25),
+     ylim=c(0, 600),
+     type="l",
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF",lwd=3)
+     
+text(1.1,150, "isotherms", col = "#2E9FDF")
+text(0.02,500, expression('T'[1]), col = "#2E9FDF")
+text(0.26,500, expression('T'[2]>'T'[1]), col = "#2E9FDF")
+legend("topright", inset=.03, "constant T ",box.col = "white", bg = "white", adj=0.15)
+
+```
 
 ### Charles's and Gay-Lussac's Laws
 It took scientists more than a century to expand Boyle's work and study the relationship between volume and temperature. In 1787 Jacques Alexandre César Charles (1746–1823) wrote the relationship known as Charles's Law:
@@ -50,9 +74,37 @@ V=k_2 T\quad\text{at const.}\;P,
 (\#eq:charleslaw2)
 \end{equation}
 
-which results in the plots of figure XXX. Each of the curves is obtained at constant pressure, and it is termed *"isobar."*
+which results in the plots of Figure \@ref(fig:FigTVideal). Each of the curves is obtained at constant pressure, and it is termed *"isobar."*
 
-Fig. XXX
+```{r FigTVideal, echo=FALSE, fig.align='center', fig.cap='VT-Diagram of an ideal Gas.', out.width="70%"}
+x <- seq(-273,200,1)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+
+plot(x, 0.1*(x+273),
+     xlim=c(-273,200),
+     ylim=c(0, 100),
+     type="l",
+     ylab = "Volume [L]", xlab = "Temperature [°C]", col = "Darkgreen",lwd=3)
+     
+par(new=TRUE)
+plot(x, 0.2*(x+273),
+     xlim=c(-273,200),
+     ylim=c(0, 100),
+     type="l",
+     ylab = "Volume [L]", xlab = "Temperature [°C]", col = "DarkGreen",lwd=3)
+
+arrows(0.237,205, 0.237, -10 , length=0, angle=90, code=3, lwd=1.5)
+points(-273, 0, col="black", pch=19)
+
+text(-260,10, "-273.15", col = "black")
+     
+text(-40,60, "isobars", col = "DarkGreen")
+text(20,20, expression('P'[1]), col = "DarkGreen")
+text(38,75, expression('P'[2]>'P'[1]), col = "DarkGreen")
+legend("topright", inset=.03, "constant P ",box.col = "white", bg = "white", adj=0.15)
+```
 
 The interesting thing about isobars is that each line seems to converge to a specific point along the temperature line when we extrapolate them to $V\rightarrow 0$. This led to the introduction of the absolute temperature scale, suggesting that the temperature will never get smaller than $-273.15^\circ\mathrm{C}$.
 
@@ -70,9 +122,37 @@ P=k_3 T\quad\text{at const.}\;V,
 (\#eq:gaylussac2)
 \end{equation}
 
-which results in the plots of figure XXX. Each of the curves is obtained at constant volume, and it is termed *"isochor."*
+which results in the plots of Figure \@ref(fig:FigTPideal). Each of the curves is obtained at constant volume, and it is termed *"isochor."*
 
-Fig. XXX
+```{r FigTPideal, echo=FALSE, fig.align='center', fig.cap='PT-Diagram of an ideal Gas.', out.width="70%"}
+x <- seq(-273,200,1)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+
+plot(x, 0.1*(x+273),
+     xlim=c(-273,200),
+     ylim=c(0, 100),
+     type="l",
+     ylab = "Pressure [bar]", xlab = "Temperature [°C]", col = "orange",lwd=3)
+     
+par(new=TRUE)
+plot(x, 0.2*(x+273),
+     xlim=c(-273,200),
+     ylim=c(0, 100),
+     type="l",
+     ylab = "Pressure [bar]", xlab = "Temperature [°C]", col = "orange",lwd=3)
+
+arrows(0.237,205, 0.237, -10 , length=0, angle=90, code=3, lwd=1.5)
+points(-273, 0, col="black", pch=19)
+
+text(-260,10, "-273.15", col = "black")
+     
+text(-40,60, "isochors", col = "orange")
+text(30,70, expression('V'[1]), col = "orange")
+text(40,20, expression('V'[2]>'V'[1]), col = "orange")
+legend("topright", inset=.03, "constant V ",box.col = "white", bg = "white", adj=0.15)
+```
 
 ### Avogadro's Law
 Ten years later, Amedeo Avogadro (1776–1856) discovered a seemingly unrelated principle by studying the composition of matter. His Avogadro's Law encodes the relationship between the number of moles in an ideal gas and its volume as:
@@ -101,14 +181,14 @@ which by renaming the product of the two constants $k_3$ and $k_4$ as $R$, becom
 
 \begin{equation}
 PV=nRT
-(\#eq:ideallaw)
+(\#eq:ideallaw2)
 \end{equation}
 
 The value of the constant $R$ can be determined experimentally by measuring the volume that 1 mol of an ideal gas occupies at a constant temperature (e.g., at $T=0^\circ\mathrm{C}$) and a constant pressure (e.g., atmospheric pressure $P=1\;\mathrm{atm}$). At those conditions, the volume is measured at 22.4 L, resulting in the following value of $R$:
 
 \begin{equation}
 R=\frac{VP}{nT}=\frac{22.4 \cdot 1}{1 \cdot 273}=0.082 \;\frac{\text{L atm}}{\text{mol K}},
-(\#eq:ideallaw)
+(\#eq:ideallaw3)
 \end{equation}
 
 which a simple conversion to SI units transforms into: 
@@ -119,12 +199,10 @@ R=8.31\;\frac{\text{J}}{\text{mol K}}.
 \end{equation}
 
 ## Behaviors of Non-Ideal Gases
-Non-ideal gases (sometimes also referred to as "real gases"), do not behave as ideal gases because one or more of the assumptions in XXX are violated. To study how their behavior differs from an ideal gas we can use either a $P$ *vs.* $V$ diagram, or a $PV$ *vs.* $P$  diagram:
+Non-ideal gases (sometimes also referred to as "real gases"), do not behave as ideal gases because at least one of the assumptions in definition \@ref(def:iedalgasdef) is violated. What characterizes non-ideal gases is that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental models, none of which is superior to the other. The van der Waals (vdW) equation is the only model that we will analyze in detail because of its simple interpretation. However, it is far from universal, and for several non-ideal gases, it is severely inaccurate. Other popular non-ideal gases equations are the Clausius equation, the virial equation, the Redlich–Kwong equation and several others.^[For more information on empirical equations for non-ideal gases see [this Wikipedia page](https://en.wikipedia.org/wiki/Real_gas).]
 
 ### The van der Waals equation
-What characterizes non-ideal gases is that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental equations, none of which is superior to the other. The simplest of such empirical equations was obtained in 1873 by Johannes Diderik van der Waals (1837–1923). The van der Waals (vdW) equation is the only one that we will analyze in detail because of its simple interpretation. However, it is far from universal, and for several non-ideal gases, it is severely inaccurate. Other popular non-ideal gases equations are the Clausius equation, the virial equation, the Redlich–Kwong model and several others.^[For more information on empirical equations for non-ideal gases see [this Wikipedia page](https://en.wikipedia.org/wiki/Real_gas).]
-
-The vdW equation includes two empirical parameters ($a$ and $b$) that assume different values for each non-ideal gas. Each of the parameter corresponds to a correction for the breaking of the two conditions that define the ideal gas behavior (definition \@ref(def:idealgas)). The vdW equation is obtained from the following simple substitutions to the ideal gas equation:
+One of the simplest empirical equation that describes non-ideal gases was obtained in 1873 by Johannes Diderik van der Waals (1837–1923). The vdW equation includes two empirical parameters ($a$ and $b$) with different values for different non-ideal gases. Each of the parameters corresponds to a correction for the breaking of one of the two conditions that define the ideal gas behavior (definition \@ref(def:iedalgasdef)). The vdW equation is obtained from the ideal gas equation performing the following simple substitutions:
 
 \begin{equation}
 \begin{aligned}
@@ -146,6 +224,7 @@ P &=\frac{RT}{\overline{V} - b}-\frac{a}{\overline{V}^2}.
 
 The parameter $a$ accounts for the presence of intermolecular interactions, while the parameter $b$ accounts for the non-negligible volume of the gas molecules. Despite the parameters have simple interpretations, their values for each gas must be determined experimentally. Values for these parameters for some significant non-ideal gas are reported below:
 
+\scriptsize
 |                 | $a \left[ \frac{\mathrm{L}^2\mathrm{bar}}{\mathrm{mol}^2} \right]$ | $b \left[ \frac{\mathrm{L}}{\mathrm{mol}} \right]$ |
 |-----------------|:------------------------------------------------------------------:|:-------------------------------------------------:|
 | Ammonia         |                                4.225                               |                       0.0371                      |
@@ -163,6 +242,7 @@ The parameter $a$ accounts for the presence of intermolecular interactions, whil
 | Oxygen          |                                1.382                               |                      0.03186                      |
 | Radon           |                                6.601                               |                      0.06239                      |
 | Xenon           |                                4.250                               |                      0.05105                      |
+\normalsize
 
 ### Joule–Thomson effect
 
@@ -307,7 +387,7 @@ Let's now turn our attention to the $PV$ phase diagram of a non-ideal gas, repor
 
 At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a *critical phenomenon*.
 
-The critical temperature is the coordinate of a unique point, called the **critical point**, that can be visualized in the three-dimensional $T,P,V$ diagram of each gas (Figure \@ref(Fig:FigTPVd)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) and distributed under CC-BY-SA license.]).
+The critical temperature is the coordinate of a unique point, called the **critical point**, that can be visualized in the three-dimensional $T,P,V$ diagram of each gas (Figure \@ref(fig:FigTPVd)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) and distributed under CC-BY-SA license.]).
 
 ```{r FigTPVd, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The three-dimensional diagram.'}
 knitr::include_graphics('./img/PVT_3D_diagram.png')
@@ -331,6 +411,7 @@ z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac
 
 a value that is independent of the gas. Experimentally measured values of $z_c$ for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental $z_c$ is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume. 
 
+Notice how slicing the $PT\overline{V}$ diagram at constant $T$ results in the $PV$ diagram that we reported in Figure \@ref(fig:FigTPVd). On the other hand, slicing the $PT\overline{V}$ diagram at constant $P$ results in the $PT$ diagram that we will examine in detail in the next chapter.
 
 ## Fugacity
 

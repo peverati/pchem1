@@ -168,7 +168,7 @@ par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 
@@ -197,7 +197,7 @@ par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 
@@ -238,7 +238,7 @@ par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 points(p1, 0.081*298/p1, col="red", pch=19)
@@ -287,7 +287,7 @@ par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 points(p1, 0.081*298/p1, col="red", pch=19)
@@ -337,7 +337,7 @@ par(mar=c(4,4,1,4))
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 points(p1, 0.081*298/p1, col="red", pch=19)
@@ -399,7 +399,7 @@ p7 <- 0.9
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 
@@ -431,7 +431,7 @@ rect(i,i, f, 0.081*298/f, density = 20, angle = 45,
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 points(p1, 0.081*298/p1, col="red", pch=19)
@@ -469,7 +469,7 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 
@@ -517,7 +517,7 @@ rect(p7,p7, f, 0.081*298/f, density = 20, angle = 45,
 plot(x, 0.081*298/x,
      ylim=c(0, 150),
      type="l",
-     ylab = "Pressure [atm]", xlab = "Volume [L]", col = "#2E9FDF")
+     ylab = "Pressure [bar]", xlab = "Volume [L]", col = "#2E9FDF")
 points(i, 0.081*298/i, col="red", pch=19)
 points(f, 0.081*298/f, col="red", pch=19)
 
