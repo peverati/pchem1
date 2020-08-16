@@ -202,7 +202,17 @@
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams</a></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a></li>
+</ul></li>
 <li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
@@ -237,7 +247,195 @@
             <section class="normal" id="section-">
 <div id="MCPhaseDiagrams" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> Multi-Component Phase Diagrams</h1>
+<p>We now move from studying 1-component systems to multi-component ones. Systems that include two or more chemical species are usually called <em>solutions</em>. Solutions are possible for all three states of matter:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Type:</th>
+<th align="center">Solvent</th>
+<th align="center">Solute</th>
+<th>Examples:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Solid solutions</td>
+<td align="center">Solid</td>
+<td align="center">Solid</td>
+<td>Alloys: brass, bronze</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Solid</td>
+<td align="center">Liquid</td>
+<td>Dental amalgam</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">Solid</td>
+<td align="center">Gas</td>
+<td>Hydrogen stored in Palladium</td>
+</tr>
+<tr class="even">
+<td>Liquid solutions</td>
+<td align="center">Liquid</td>
+<td align="center">Solid</td>
+<td>Saltwater, bleach</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">Liquid</td>
+<td align="center">Liquid</td>
+<td>Alcoholic beverages, vinegar</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Liquid</td>
+<td align="center">Gas</td>
+<td>Carbonated drinks</td>
+</tr>
+<tr class="odd">
+<td>Gaseous solutions</td>
+<td align="center">Gas</td>
+<td align="center">Solid</td>
+<td>Smoke, smog</td>
+</tr>
+<tr class="even">
+<td></td>
+<td align="center">Gas</td>
+<td align="center">Liquid</td>
+<td>Aerosols and perfumes</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td align="center">Gas</td>
+<td align="center">Gas</td>
+<td>Air</td>
+</tr>
+</tbody>
+</table>
+<p>The number of degrees of freedom for binary solutions (solutions containing two components) is calculated from the Gibbs phase rules at <span class="math inline">\(f=2-p+2=4-p\)</span>. When one phase is present, binary solutions require <span class="math inline">\(4-1=3\)</span> variables to be described, usually temperature (<span class="math inline">\(T\)</span>), pressure (<span class="math inline">\(P\)</span>), and mole fraction (<span class="math inline">\(y_i\)</span> in the gas phase and <span class="math inline">\(x_i\)</span> in the liquid phase). Single-phase, 1-component systems require three-dimensional <span class="math inline">\(T,P,x_i\)</span> diagram to be described. When two phases are present (e.g., gas and liquid), only two variables are independent: pressure and concentration. Thus, we can study the behavior of the partial pressure of a gas–liquid solution in a 2-dimensional plot. If the gas phase in a solution exhibits properties similar to those of a mixture of ideal gases, it is called an <em>ideal solution</em>. The obvious difference between ideal solutions and ideal gases is that the intermolecular interactions in the liquid phase cannot be neglected as for the gas phase. The main advantage of ideal solutions is that the interactions between particles in the liquid phase have similar mean strength throughout the entire phase. We will consider ideal solutions first, and then we’ll discuss deviation from ideal behavior and non-ideal solutions.</p>
+<div id="raoults-law-and-phase-diagrams-of-ideal-solutions" class="section level2" number="13.1">
+<h2><span class="header-section-number">13.1</span> Raoult’s Law and Phase Diagrams of Ideal Solutions</h2>
+<p>The behavior of the vapor pressure of an ideal solution can be mathematically described by a simple law established by François-Marie Raoult (1830–1901). <strong>Raoult’s law</strong> states that the partial pressure of each component, <span class="math inline">\(i\)</span>, of an ideal mixture of liquids, <span class="math inline">\(P_i\)</span>, is equal to the vapor pressure of the pure component <span class="math inline">\(P_i^*\)</span> multiplied by its mole fraction in the mixture <span class="math inline">\(x_i\)</span>:</p>
+<p><span class="math display" id="eq:mc1">\[\begin{equation}
+P_i=x_i P_i^*.
+\tag{13.1}
+\end{equation}\]</span></p>
+<div id="one-volatile-component" class="section level3" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> One volatile component</h3>
+<p>Raoult’s law applied to a system containing only one volatile component describes a line in the <span class="math inline">\(P,x_{\text{B}}\)</span> plot, as in Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC1"></span>
+<img src="img/OEP_Figures.019.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
+<p class="caption">
+Figure 13.1: The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.
+</p>
+</div>
+<p>As emerges from Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>, Raoult’s law divides the diagram into two distinct areas, each with three degrees of freedom.<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a> Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult’s law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.</p>
+</div>
+<div id="two-volatile-components" class="section level3" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Two volatile components</h3>
+<p>In an ideal solution, every volatile component follows Raoult’s law. Since the vapors in the gas phase behave ideally, the total pressure can be simply calculated using Dalton’s law as the sum of the partial pressures of the two components <span class="math inline">\(P_{\text{TOT}}=P_{\text{A}}+P_{\text{B}}\)</span>. The corresponding diagram is reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC2">13.2</a>. The total vapor pressure, calculated using Dalton’s law, is reported in red. The Raoult’s behaviors of each of the two components are also reported using black dashed lines.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC2"></span>
+<img src="img/OEP_Figures.020.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature." width="60%" />
+<p class="caption">
+Figure 13.2: The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature.
+</p>
+</div>
+<blockquote>
 
+<div class="exercise">
+<span id="exr:xaya" class="exercise"><strong>Exercise 13.1  </strong></span>Calculate the mole fraction in the vapor phase of a liquid solution composed of 67% of toluene (<span class="math inline">\(\mathrm{A}\)</span>) and 33% of benzene (<span class="math inline">\(\mathrm{B}\)</span>), given the vapor pressures of the pure substances: <span class="math inline">\(P_{\text{A}}^*=0.03\;\text{bar}\)</span>, and <span class="math inline">\(P_{\text{B}}^*=0.10\;\text{bar}\)</span>.
+<em>Solution:</em> The data available for the systems are summarized as follwos:
+<span class="math display" id="eq:mc2">\[\begin{equation}
+\begin{aligned}
+x_{\text{A}}=0.67  \qquad &amp; \qquad x_{\text{B}}=0.33 \\
+P_{\text{A}}^* = 0.03\;\text{bar} \qquad &amp; \qquad P_{\text{B}}^* = 0.10\;\text{bar} \\
+&amp; P_{\text{TOT}}^* = ? \\
+y_{\text{A}}=? \qquad &amp; \qquad y_{\text{B}}=?
+\end{aligned}
+\tag{13.2}
+\end{equation}\]</span>
+The total pressure of the vapors can be calculated combining Dalton’s and Roult’s laws:
+<span class="math display" id="eq:mc3">\[\begin{equation}
+\begin{aligned}
+P_{\text{TOT}} &amp;= P_{\text{A}}+P_{\text{B}}=x_{\text{A}} P_{\text{A}}^* + x_{\text{B}} P_{\text{B}}^* \\
+&amp;= 0.67\cdot 0.03+0.33\cdot 0.10 \\
+&amp;= 0.02 + 0.03 = 0.05 \;\text{bar}
+\end{aligned}
+\tag{13.3}
+\end{equation}\]</span>
+We can then calculate the mole fraction of the components in the vapor phase as:
+<span class="math display" id="eq:mc4">\[\begin{equation}
+\begin{aligned}
+y_{\text{A}}=\frac{P_{\text{A}}}{P_{\text{TOT}}} &amp; \qquad y_{\text{B}}=\frac{P_{\text{B}}}{P_{\text{TOT}}} \\
+y_{\text{A}}=\frac{0.02}{0.05}=0.40 &amp; \qquad y_{\text{B}}=\frac{0.03}{0.05}=0.60
+\end{aligned}
+\tag{13.4}
+\end{equation}\]</span>
+Notice how the mole fraction of toluene is m uch higher in the liquid phase, <span class="math inline">\(x_{\text{A}}=0.67\)</span>, than in the vapor phase, <span class="math inline">\(y_{\text{A}}=0.40\)</span>.
+</div>
+</blockquote>
+<p>As is clear from the results of Exercise <a href="MCPhaseDiagrams.html#exr:xaya">13.1</a>, the concentration of the components in the gas and vapor phases are different. We can also report the mole fraction in the vapor phase as an additional line in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC2">13.2</a>. When both concentrations are reported in one diagram—as in Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>—the line where <span class="math inline">\(x_{\text{B}}\)</span> is obtained is called the <em>liquidus line</em>, while the line where the <span class="math inline">\(y_{\text{B}}\)</span> is reported is called the <em>Dew point line</em>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC3"></span>
+<img src="img/OEP_Figures.021.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot." width="60%" />
+<p class="caption">
+Figure 13.3: The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot.
+</p>
+</div>
+<p>The liquidus and Dew point lines determine a new section in the phase diagram where the liquid and vapor phases coexist. Since the degrees of freedom inside the area are only 2, for a system at constant temperature, a point inside the coexistence area has fixed mole fractions for both phases. We can reduce the pressure on top of a liquid solution with concentration <span class="math inline">\(x^i_{\text{B}}\)</span> (see Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>) until the solution hits the liquidus line. At this pressure, the solution forms a vapor phase with mole fraction given by the corresponding point on the Dew point line, <span class="math inline">\(y^f_{\text{B}}\)</span>.</p>
+</div>
+<div id="t_textb-phase-diagrams-and-fractional-distillation" class="section level3" number="13.1.3">
+<h3><span class="header-section-number">13.1.3</span> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</h3>
+<p>We can now consider the phase diagram of a 2-component ideal solution as a function of temperature at constant pressure. The <span class="math inline">\(T_{\text{B}}\)</span> diagram for two volatile components is reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC4"></span>
+<img src="img/OEP_Figures.022.jpeg" alt="The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure." width="60%" />
+<p class="caption">
+Figure 13.4: The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.
+</p>
+</div>
+<p>Compared to the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there is only one degree of freedom inside the lens. As such, a liquid solution of initial composition <span class="math inline">\(x_{\text{B}}^i\)</span> can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration <span class="math inline">\(y_{\text{B}}^f\)</span>. As is clear from Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>, the mole fraction of the <span class="math inline">\(\text{B}\)</span> component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporation and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component <span class="math inline">\(\text{B}\)</span>. This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigMC5">13.5</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC5"></span>
+<img src="img/OEP_Figures.023.jpeg" alt="The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram." width="60%" />
+<p class="caption">
+Figure 13.5: The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram.
+</p>
+</div>
+<p>Each of the horizontal lines in the lens region of the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC5">13.5</a> corresponds to a condensation/evaporation process and is called a <em>theoretical plate</em>. These plates are industrially realized on large columns with several floors equipped with condensation trays. The temperature decreases with the height of the column. A condensation/evaporation process will happen on each level, and a solution concentrated in the most volatile component is collected. The theoretical plates and the <span class="math inline">\(Tx_{\text{B}}\)</span> are crucial for sizing the industrial fractional distillation columns.</p>
+</div>
+</div>
+<div id="phase-diagrams-of-non-ideal-solutions" class="section level2" number="13.2">
+<h2><span class="header-section-number">13.2</span> Phase Diagrams of Non-Ideal Solutions</h2>
+<p>Non-ideal solutions follow Raoult’s law for only a small amount of concentrations. The typical behavior of a non-ideal solution with a single volatile component is reported in the <span class="math inline">\(Px_{\text{B}}\)</span> plot in Figure <a href="MCPhaseDiagrams.html#fig:FigMC6">13.6</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC6"></span>
+<img src="img/OEP_Figures.024.jpeg" alt="The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
+<p class="caption">
+Figure 13.6: The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.
+</p>
+</div>
+<p>Raoult’s behavior is observed for high concentrations of the volatile component. This behavior is observed at <span class="math inline">\(x_{\text{B}} \rightarrow 0\)</span> in Figure <a href="MCPhaseDiagrams.html#fig:FigMC6">13.6</a>, since the volatile component in this diagram is <span class="math inline">\(\mathrm{A}\)</span>. At low concentrations of the volatile component <span class="math inline">\(x_{\text{B}} \rightarrow 1\)</span> in Figure <a href="MCPhaseDiagrams.html#fig:FigMC6">13.6</a>, the solution follows a behavior along a steeper line, which is known as <strong>Henry’s law</strong>. William Henry (1774–1836) has extensively studied the behavior of gases dissolved in liquids. His studies resulted in a simple law that relates the vapor pressure of a solution to a constant, called Henry’s law solubility constants:</p>
+<p><span class="math display" id="eq:mc1">\[\begin{equation}
+P_{\text{B}}=k_{\text{AB}} P_i^* x_{\text{B}},
+\tag{13.1}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(k_{\text{AB}}\)</span> depends on the chemical nature of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>. The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviation on Raoult’s ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit less prominent. An example of negative deviation is reported in the right panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC7"></span>
+<img src="img/OEP_Figures.025.jpeg" alt="The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
+<p class="caption">
+Figure 13.7: The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.
+</p>
+</div>
+</div>
+<div id="phase-diagrams-of-2-components2-condensed-phases-systems" class="section level2" number="13.3">
+<h2><span class="header-section-number">13.3</span> Phase Diagrams of 2-Components/2-Condensed Phases Systems</h2>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="54">
+<li id="fn54"><p>Only two degrees of freedom are visible in the <span class="math inline">\(P,x_{\text{B}}\)</span> diagram. Temperature represents the third independent variable.<a href="MCPhaseDiagrams.html#fnref54" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
