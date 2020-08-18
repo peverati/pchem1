@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-15" />
+<meta name="date" content="2020-08-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -211,7 +211,13 @@
 <li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
 </ul></li>
 <li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
-<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-miscible"><i class="fa fa-check"></i><b>13.3.1</b> Totally miscible</a></li>
+<li class="chapter" data-level="13.3.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-immiscible"><i class="fa fa-check"></i><b>13.3.2</b> Totally immiscible</a></li>
+<li class="chapter" data-level="13.3.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#partially-miscible"><i class="fa fa-check"></i><b>13.3.3</b> Partially miscible</a></li>
+<li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
@@ -303,7 +309,7 @@ Figure 1.1: Examples of Thermodynamic Systems.
 </div>
 <div id="thermodynamic-variables" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Thermodynamic Variables</h2>
-<p>The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, they don’t be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the “relevant variables” of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the “relevant variables” are called natural variables.</p>
+<p>The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don’t be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the “relevant variables” of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the “relevant variables” are called natural variables.</p>
 <p>What are the “relevant variables” of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:</p>
 <p><span class="math display" id="eq:idealgaslaworiginal">\[\begin{equation}
   PV=nRT       
@@ -313,12 +319,12 @@ Figure 1.1: Examples of Thermodynamic Systems.
 We will use the ideal gas equation and its variables as an example to discuss variables and functions in this chapter. We will analyze more complicated cases in the next chapters.
 Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:</p>
 <ul>
-<li><strong>Physical variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent on the chemical composition of the system.</li>
+<li><strong>Physical variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent of the chemical composition of the system.</li>
 <li><strong>Chemical variables</strong> (<span class="math inline">\(n\)</span> in the ideal gas law): dependent on the chemical composition of the system.</li>
 </ul>
 <p>Another useful classification is:</p>
 <ul>
-<li><strong>Intensive variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent on the physical size (extension) of the system.</li>
+<li><strong>Intensive variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent of the physical size (extension) of the system.</li>
 <li><strong>Extensive variables</strong> (<span class="math inline">\(V\)</span>, <span class="math inline">\(n\)</span> in the ideal gas law): dependent on the physical size (extension) of the system.</li>
 </ul>
 <p>When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between the two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:</p>
@@ -367,10 +373,10 @@ The ideal gas equation connects the 3 variables pressure, molar volume, and temp
 \end{equation}\]</span></p>
 <p>While for the ideal gas law, all the variables are “well-behaved” and always satisfy Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold. Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. Thus, these functions are called path functions; that is, they depend on the path rather than the state. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we cannot define exact differentials <span class="math inline">\(dQ\)</span> and <span class="math inline">\(dW\)</span>, and we must introduce a new notation to define their “inexact differentials” <span class="math inline">\(đ Q\)</span> and <span class="math inline">\(đ W\)</span>.</p>
 <blockquote>
-<p>We will return on exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs. car vs. train vs. boat vs. …). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure <a href="SystemVariables.html#fig:Fig2c1">1.2</a>.</p>
+<p>We will return to exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs. car vs. train vs. boat vs. …). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure <a href="SystemVariables.html#fig:Fig2c1">1.2</a>.</p>
 </blockquote>
 <div class="figure" style="text-align: center"><span id="fig:Fig2c1"></span>
-<img src="img/OEP_Figures.002.jpeg" alt="State Functions vs. Path Functions." width="70%" />
+<img src="img/OEP_Figures.002.jpeg" alt="State Functions vs. Path Functions." width="60%" />
 <p class="caption">
 Figure 1.2: State Functions vs. Path Functions.
 </p>

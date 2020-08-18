@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-15" />
+<meta name="date" content="2020-08-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -211,7 +211,13 @@
 <li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
 </ul></li>
 <li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
-<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-miscible"><i class="fa fa-check"></i><b>13.3.1</b> Totally miscible</a></li>
+<li class="chapter" data-level="13.3.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-immiscible"><i class="fa fa-check"></i><b>13.3.2</b> Totally immiscible</a></li>
+<li class="chapter" data-level="13.3.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#partially-miscible"><i class="fa fa-check"></i><b>13.3.3</b> Partially miscible</a></li>
+<li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
@@ -324,7 +330,7 @@ P_i=x_i P_i^*.
 \end{equation}\]</span></p>
 <div id="one-volatile-component" class="section level3" number="13.1.1">
 <h3><span class="header-section-number">13.1.1</span> One volatile component</h3>
-<p>Raoult’s law applied to a system containing only one volatile component describes a line in the <span class="math inline">\(P,x_{\text{B}}\)</span> plot, as in Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>.</p>
+<p>Raoult’s law applied to a system containing only one volatile component describes a line in the <span class="math inline">\(Px_{\text{B}}\)</span> plot, as in Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:FigMC1"></span>
 <img src="img/OEP_Figures.019.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
 <p class="caption">
@@ -415,26 +421,93 @@ Figure 13.6: The Pressure–Composition Phase Diagram of a Non-Ideal Solution Co
 </div>
 <p>Raoult’s behavior is observed for high concentrations of the volatile component. This behavior is observed at <span class="math inline">\(x_{\text{B}} \rightarrow 0\)</span> in Figure <a href="MCPhaseDiagrams.html#fig:FigMC6">13.6</a>, since the volatile component in this diagram is <span class="math inline">\(\mathrm{A}\)</span>. At low concentrations of the volatile component <span class="math inline">\(x_{\text{B}} \rightarrow 1\)</span> in Figure <a href="MCPhaseDiagrams.html#fig:FigMC6">13.6</a>, the solution follows a behavior along a steeper line, which is known as <strong>Henry’s law</strong>. William Henry (1774–1836) has extensively studied the behavior of gases dissolved in liquids. His studies resulted in a simple law that relates the vapor pressure of a solution to a constant, called Henry’s law solubility constants:</p>
 <p><span class="math display" id="eq:mc1">\[\begin{equation}
-P_{\text{B}}=k_{\text{AB}} P_i^* x_{\text{B}},
+P_{\text{B}}=k_{\text{AB}} x_{\text{B}},
 \tag{13.1}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(k_{\text{AB}}\)</span> depends on the chemical nature of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>. The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviation on Raoult’s ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit less prominent. An example of negative deviation is reported in the right panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>.</p>
+<p>where <span class="math inline">\(k_{\text{AB}}\)</span> depends on the chemical nature of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>. The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviations on Raoult’s ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit slightly less common. An example of a negative deviation is reported in the right panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:FigMC7"></span>
-<img src="img/OEP_Figures.025.jpeg" alt="The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
+<img src="img/OEP_Figures.025.jpeg" alt="The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature." width="80%" />
 <p class="caption">
-Figure 13.7: The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.
+Figure 13.7: The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature.
 </p>
 </div>
+<p>If we move from the <span class="math inline">\(Px_{\text{B}}\)</span> diagram to the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram, the behaviors observed in Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a> will correspond to the diagram in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC8"></span>
+<img src="img/OEP_Figures.026.jpeg" alt="The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure." width="80%" />
+<p class="caption">
+Figure 13.8: The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure.
+</p>
+</div>
+<p>The minimum (left plot) and maximum (right plot) points in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a> represent the so-called <em>azeotrope</em>.</p>
+<p>An azeotrope is a constant boiling point solution whose composition cannot be altered or changed by simple distillation. This happens because the liquidus and Dew point lines coincide at this point. Therefore, the liquid and the vapor phases have the same composition, and distillation cannot occur. Two types of azeotropes exist, representative of the two types of non-ideal behavior of solutions. The first type is the positive azeotrope (left plot in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a>). A notorious example of this behavior at atmospheric pressure is the ethanol/water mixture, with composition 95.63% ethanol by mass. This positive azeotrope boils at <span class="math inline">\(T=78.2\;^\circ \text{C}\)</span>, a temperature that is lower than the boiling points of the pure constituents, since ethanol boils at <span class="math inline">\(T=78.4\;^\circ \text{C}\)</span> and water at <span class="math inline">\(T=100\;^\circ \text{C}\)</span>. The second type is the negative azeotrope (right plot in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a>). An example of this behavior at atmospheric pressure is the hydrochloric acid/water mixture with composition 20.2% hydrochloric acid by mass. This negative azeotrope boils at <span class="math inline">\(T=110\;^\circ \text{C}\)</span>, a temperature that is higher than the boiling points of the pure constituents, since hydrochloric acid boils at <span class="math inline">\(T=-84\;^\circ \text{C}\)</span> and water at <span class="math inline">\(T=100\;^\circ \text{C}\)</span>.</p>
 </div>
 <div id="phase-diagrams-of-2-components2-condensed-phases-systems" class="section level2" number="13.3">
 <h2><span class="header-section-number">13.3</span> Phase Diagrams of 2-Components/2-Condensed Phases Systems</h2>
+<p>We now consider equilibria between two condensed phases: liquid/liquid, liquid/solid, and solid/solid. These equilibria usually occur in the low-temperature region of a phase diagram (or high pressure). Three situations are possible, depending on the constituents and concentration of the mixture.</p>
+<div id="totally-miscible" class="section level3" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Totally miscible</h3>
+<p>We have already encountered the situation where the components of a solution mix entirely in the liquid phase. All the diagrams that we’ve discussed up to this point belong to this category.</p>
+</div>
+<div id="totally-immiscible" class="section level3" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> Totally immiscible</h3>
+<p>A more complicated case is that for components that do not mix in the liquid phase. The liquid region of the temperature–composition phase diagram for a solution with components that do not mix in the liquid phase below a specific temperature is reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC9">13.9</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC9"></span>
+<img src="img/OEP_Figures.027.jpeg" alt="The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Completely Immiscible in the Liquid Phase." width="60%" />
+<p class="caption">
+Figure 13.9: The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Completely Immiscible in the Liquid Phase.
+</p>
+</div>
+<p>While the liquid 1+liquid 2 region (white area in Figure <a href="MCPhaseDiagrams.html#fig:FigMC9">13.9</a>) might seem similar to the liquid region that sits on top of it (blue area in Figure <a href="MCPhaseDiagrams.html#fig:FigMC9">13.9</a>), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have <span class="math inline">\(f=2-1+1=2\)</span>. In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have #f=2-2+1=1$, which means that only one variable is independent of the others. The white region in Figure <a href="MCPhaseDiagrams.html#fig:FigMC9">13.9</a> is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>. In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquid will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100% <span class="math inline">\(\mathrm{A}\)</span> and 100% <span class="math inline">\(\mathrm{B}\)</span>, respectively).</p>
+</div>
+<div id="partially-miscible" class="section level3" number="13.3.3">
+<h3><span class="header-section-number">13.3.3</span> Partially miscible</h3>
+<p>The third and final case is undoubtedly the most interesting since several behaviors are possible. In fact, there might be components that are partially miscible at low temperatures but totally miscible at higher temperatures, for which the diagram will assume the general shape depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigMC10">13.10</a>. A typical example of this behavior is the mixture between water and phenol, whose liquids are completely miscible at <span class="math inline">\(T&gt;66\;^\circ \text{C}\)</span>, and only partially miscible below this temperature. The composition of the 2-phases region (white area in Figure <a href="MCPhaseDiagrams.html#fig:FigMC10">13.10</a>) is determined by tracing a horizontal line and reading the mole fraction on the line that delimits the area, as for the previous case.<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a></p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC10"></span>
+<img src="img/OEP_Figures.028.jpeg" alt="The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at Low Temperature in the Liquid Phase, but Completely Miscible at High Temperatures" width="60%" />
+<p class="caption">
+Figure 13.10: The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at Low Temperature in the Liquid Phase, but Completely Miscible at High Temperatures
+</p>
+</div>
+<p>On the opposite side of the spectrum, the diagram for a mixture whose components are partially miscible at high temperature, but completely miscible at lower temperatures is depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigMC11">13.11</a>. A typical example of this behavior is the mixture between water and triethylamine, whose liquids are completely miscible at <span class="math inline">\(T&lt;18.5\;^\circ \text{C}\)</span>, and only partially miscible above this temperature.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC11"></span>
+<img src="img/OEP_Figures.029.jpeg" alt="The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at High Temperature in the Liquid Phase, but Completely Miscible at Low Temperatures." width="60%" />
+<p class="caption">
+Figure 13.11: The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at High Temperature in the Liquid Phase, but Completely Miscible at Low Temperatures.
+</p>
+</div>
+<p>Finally, both situations described above are possible simultaneously. For some particular solutions, there exists a range of temperature where the two components are only partially miscible. A typical example of this behavior is given by the water/nicotine mixture, whose liquids are completely miscible at <span class="math inline">\(T&gt;210\;^\circ \text{C}\)</span> and <span class="math inline">\(T&lt;61\;^\circ \text{C}\)</span>, but only partially miscible in between these two temperatures, as in the diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC12">13.12</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC12"></span>
+<img src="img/OEP_Figures.030.jpeg" alt="The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible Only Between Two Temperatures." width="60%" />
+<p class="caption">
+Figure 13.12: The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible Only Between Two Temperatures.
+</p>
+</div>
+</div>
+<div id="eutectic-systems" class="section level3" number="13.3.4">
+<h3><span class="header-section-number">13.3.4</span> Eutectic systems</h3>
+<p>For some particular mixture, the temperature of partial miscibility in the liquid/liquid region might be close to the azeotrope temperature. In some cases, these two regions might even overlap. These characteristic behaviors are reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC13">13.13</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC13"></span>
+<img src="img/OEP_Figures.031.jpeg" alt="Interaction Between the Liquid/Gas and Liquid/Liquid Equilibria." width="80%" />
+<p class="caption">
+Figure 13.13: Interaction Between the Liquid/Gas and Liquid/Liquid Equilibria.
+</p>
+</div>
+<p>When the azeotrope and partially miscibility temperature overlap, the system forms what is known as an <em>eutectic</em>. Eutectic diagrams are possible at the liquid/gas equilibrium. Still, they are widespread at the liquid/solid equilibrium, where two components are completely miscible in the liquid phase, but only partially miscible in the solid phase. Eutectics with completely immiscible components in the solid phase are also very common, as the diagram reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC14">13.14</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigMC14"></span>
+<img src="img/OEP_Figures.032.jpeg" alt="Typical Eutectic System with Components that are Completely Miscible in the Liquid Phase and Completely Immiscible in the Solid Phase." width="60%" />
+<p class="caption">
+Figure 13.14: Typical Eutectic System with Components that are Completely Miscible in the Liquid Phase and Completely Immiscible in the Solid Phase.
+</p>
+</div>
 
+</div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="54">
-<li id="fn54"><p>Only two degrees of freedom are visible in the <span class="math inline">\(P,x_{\text{B}}\)</span> diagram. Temperature represents the third independent variable.<a href="MCPhaseDiagrams.html#fnref54" class="footnote-back">↩︎</a></p></li>
+<li id="fn54"><p>Only two degrees of freedom are visible in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram. Temperature represents the third independent variable.<a href="MCPhaseDiagrams.html#fnref54" class="footnote-back">↩︎</a></p></li>
+<li id="fn55"><p>The only noticeable difference, in this case, is that the two concentrations will be different than 0 and 100% since the component mix partially.<a href="MCPhaseDiagrams.html#fnref55" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

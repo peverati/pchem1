@@ -75,6 +75,8 @@
 
 %change to a smaller page:
 \usepackage[paperwidth=6in, paperheight=9in]{geometry}
+% this is to change the size of text: headsep=10pt, textheight=550pt
+%\usepackage[textwidth=456pt]{geometry}
 
 %fancyhdr to set custom headers for the book:
 \usepackage{fancyhdr}
@@ -100,7 +102,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{15 August 2020}
+\date{18 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -120,7 +122,10 @@
 \begin{document}
 \maketitle
 
+%Frontpage for 6x9:
 \includepdf[pages={1}, scale=1]{FrontPage_6x9.pdf}
+%Frontpage for USLetter:
+%\includepdf[pages={1}, scale=1]{FrontPage.pdf}
 \newpage
 
 \let\maketitle\oldmaketitle
@@ -129,6 +134,7 @@
 % the real page number; \pagenumbering{arabic}
 % will redefine it to the right meaning afterwards.
 \renewcommand\thepage{\romannumeral\numexpr\value{page}-1\relax}
+
 
 {
 \setcounter{tocdepth}{1}
@@ -236,7 +242,7 @@ If you want a trick to remember the convention, use the weight loss/gain during 
 \hypertarget{thermodynamic-variables}{%
 \section{Thermodynamic Variables}\label{thermodynamic-variables}}
 
-The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, they don't be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the ``relevant variables'' of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the ``relevant variables'' are called natural variables.
+The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don't be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the ``relevant variables'' of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the ``relevant variables'' are called natural variables.
 
 What are the ``relevant variables'' of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:
 
@@ -252,7 +258,7 @@ Variables can be classified according to numerous criteria, each with its advant
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Physical variables} (\(P\), \(V\), \(T\) in the ideal gas law): independent on the chemical composition of the system.
+  \textbf{Physical variables} (\(P\), \(V\), \(T\) in the ideal gas law): independent of the chemical composition of the system.
 \item
   \textbf{Chemical variables} (\(n\) in the ideal gas law): dependent on the chemical composition of the system.
 \end{itemize}
@@ -262,7 +268,7 @@ Another useful classification is:
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Intensive variables} (\(P\), \(T\) in the ideal gas law): independent on the physical size (extension) of the system.
+  \textbf{Intensive variables} (\(P\), \(T\) in the ideal gas law): independent of the physical size (extension) of the system.
 \item
   \textbf{Extensive variables} (\(V\), \(n\) in the ideal gas law): dependent on the physical size (extension) of the system.
 \end{itemize}
@@ -330,12 +336,12 @@ and
 While for the ideal gas law, all the variables are ``well-behaved'' and always satisfy Schwartz's theorem, we will encounter some variable for which Schwartz's theorem does not hold. Mathematically, if the Schwartz's theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. Thus, these functions are called path functions; that is, they depend on the path rather than the state. The most typical examples of path functions that we will encounter in the next chapters are heat (\(Q\)) and work (\(W\)). For these functions, we cannot define exact differentials \(dQ\) and \(dW\), and we must introduce a new notation to define their ``inexact differentials'' \(đ Q\) and \(đ W\).
 
 \begin{quote}
-We will return on exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let's, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This ``air distance'' depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities' positions depend uniquely on their latitudes and longitudes, the ``air distance'' is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the ``air distance'' is not the distance that I will practically have to drive when I go from NYC to LA. Such ``travel distance'' depends on the method of transportation that I decide to take (airplane vs.~car vs.~train vs.~boat vs.~\ldots). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical ``travel distance'' by car is, for example, about 4,500 km, which is about 12\% more than the ``air distance.'' Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a ``travel distance'' of 8,000 km or even more (200\% of the ``air distance''). The ``travel distance'' is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure \ref{fig:Fig2c1}.
+We will return to exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let's, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This ``air distance'' depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities' positions depend uniquely on their latitudes and longitudes, the ``air distance'' is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the ``air distance'' is not the distance that I will practically have to drive when I go from NYC to LA. Such ``travel distance'' depends on the method of transportation that I decide to take (airplane vs.~car vs.~train vs.~boat vs.~\ldots). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical ``travel distance'' by car is, for example, about 4,500 km, which is about 12\% more than the ``air distance.'' Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a ``travel distance'' of 8,000 km or even more (200\% of the ``air distance''). The ``travel distance'' is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure \ref{fig:Fig2c1}.
 \end{quote}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_Figures.002} 
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.002} 
 
 }
 
@@ -365,7 +371,7 @@ Before we even discuss the definition of energy and how it relates to heat and w
 \hypertarget{the-zeroth-law-of-thermodynamics}{%
 \section{The Zeroth Law of Thermodynamics}\label{the-zeroth-law-of-thermodynamics}}
 
-The mathematical definition that guaranteer that the thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
+The mathematical definition that guarantees that thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
 
 \begin{quote}
 \begin{definition}
@@ -3634,7 +3640,7 @@ P_i=x_i P_i^*.
 \hypertarget{one-volatile-component}{%
 \subsection{One volatile component}\label{one-volatile-component}}
 
-Raoult's law applied to a system containing only one volatile component describes a line in the \(P,x_{\text{B}}\) plot, as in Figure \ref{fig:FigMC1}.
+Raoult's law applied to a system containing only one volatile component describes a line in the \(Px_{\text{B}}\) plot, as in Figure \ref{fig:FigMC1}.
 
 \begin{figure}
 
@@ -3645,7 +3651,7 @@ Raoult's law applied to a system containing only one volatile component describe
 \caption{The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.}\label{fig:FigMC1}
 \end{figure}
 
-As emerges from Figure \ref{fig:FigMC1}, Raoult's law divides the diagram into two distinct areas, each with three degrees of freedom.\footnote{Only two degrees of freedom are visible in the \(P,x_{\text{B}}\) diagram. Temperature represents the third independent variable.} Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult's law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.
+As emerges from Figure \ref{fig:FigMC1}, Raoult's law divides the diagram into two distinct areas, each with three degrees of freedom.\footnote{Only two degrees of freedom are visible in the \(Px_{\text{B}}\) diagram. Temperature represents the third independent variable.} Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult's law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.
 
 \hypertarget{two-volatile-components}{%
 \subsection{Two volatile components}\label{two-volatile-components}}
@@ -3752,23 +3758,122 @@ Non-ideal solutions follow Raoult's law for only a small amount of concentration
 Raoult's behavior is observed for high concentrations of the volatile component. This behavior is observed at \(x_{\text{B}} \rightarrow 0\) in Figure \ref{fig:FigMC6}, since the volatile component in this diagram is \(\mathrm{A}\). At low concentrations of the volatile component \(x_{\text{B}} \rightarrow 1\) in Figure \ref{fig:FigMC6}, the solution follows a behavior along a steeper line, which is known as \textbf{Henry's law}. William Henry (1774--1836) has extensively studied the behavior of gases dissolved in liquids. His studies resulted in a simple law that relates the vapor pressure of a solution to a constant, called Henry's law solubility constants:
 
 \begin{equation}
-P_{\text{B}}=k_{\text{AB}} P_i^* x_{\text{B}},
+P_{\text{B}}=k_{\text{AB}} x_{\text{B}},
 \label{eq:mc1}
 \end{equation}
 
-where \(k_{\text{AB}}\) depends on the chemical nature of \(\mathrm{A}\) and \(\mathrm{B}\). The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure \ref{fig:FigMC7}. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviation on Raoult's ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit less prominent. An example of negative deviation is reported in the right panel of Figure \ref{fig:FigMC7}.
+where \(k_{\text{AB}}\) depends on the chemical nature of \(\mathrm{A}\) and \(\mathrm{B}\). The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure \ref{fig:FigMC7}. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviations on Raoult's ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit slightly less common. An example of a negative deviation is reported in the right panel of Figure \ref{fig:FigMC7}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.025} 
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.025} 
 
 }
 
-\caption{The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.}\label{fig:FigMC7}
+\caption{The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature.}\label{fig:FigMC7}
 \end{figure}
+
+If we move from the \(Px_{\text{B}}\) diagram to the \(Tx_{\text{B}}\) diagram, the behaviors observed in Figure \ref{fig:FigMC7} will correspond to the diagram in Figure \ref{fig:FigMC8}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.026} 
+
+}
+
+\caption{The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure.}\label{fig:FigMC8}
+\end{figure}
+
+The minimum (left plot) and maximum (right plot) points in Figure \ref{fig:FigMC8} represent the so-called \emph{azeotrope}.
+
+An azeotrope is a constant boiling point solution whose composition cannot be altered or changed by simple distillation. This happens because the liquidus and Dew point lines coincide at this point. Therefore, the liquid and the vapor phases have the same composition, and distillation cannot occur. Two types of azeotropes exist, representative of the two types of non-ideal behavior of solutions. The first type is the positive azeotrope (left plot in Figure \ref{fig:FigMC8}). A notorious example of this behavior at atmospheric pressure is the ethanol/water mixture, with composition 95.63\% ethanol by mass. This positive azeotrope boils at \(T=78.2\;^\circ \text{C}\), a temperature that is lower than the boiling points of the pure constituents, since ethanol boils at \(T=78.4\;^\circ \text{C}\) and water at \(T=100\;^\circ \text{C}\). The second type is the negative azeotrope (right plot in Figure \ref{fig:FigMC8}). An example of this behavior at atmospheric pressure is the hydrochloric acid/water mixture with composition 20.2\% hydrochloric acid by mass. This negative azeotrope boils at \(T=110\;^\circ \text{C}\), a temperature that is higher than the boiling points of the pure constituents, since hydrochloric acid boils at \(T=-84\;^\circ \text{C}\) and water at \(T=100\;^\circ \text{C}\).
 
 \hypertarget{phase-diagrams-of-2-components2-condensed-phases-systems}{%
 \section{Phase Diagrams of 2-Components/2-Condensed Phases Systems}\label{phase-diagrams-of-2-components2-condensed-phases-systems}}
+
+We now consider equilibria between two condensed phases: liquid/liquid, liquid/solid, and solid/solid. These equilibria usually occur in the low-temperature region of a phase diagram (or high pressure). Three situations are possible, depending on the constituents and concentration of the mixture.
+
+\hypertarget{totally-miscible}{%
+\subsection{Totally miscible}\label{totally-miscible}}
+
+We have already encountered the situation where the components of a solution mix entirely in the liquid phase. All the diagrams that we've discussed up to this point belong to this category.
+
+\hypertarget{totally-immiscible}{%
+\subsection{Totally immiscible}\label{totally-immiscible}}
+
+A more complicated case is that for components that do not mix in the liquid phase. The liquid region of the temperature--composition phase diagram for a solution with components that do not mix in the liquid phase below a specific temperature is reported in Figure \ref{fig:FigMC9}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.027} 
+
+}
+
+\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Completely Immiscible in the Liquid Phase.}\label{fig:FigMC9}
+\end{figure}
+
+While the liquid 1+liquid 2 region (white area in Figure \ref{fig:FigMC9}) might seem similar to the liquid region that sits on top of it (blue area in Figure \ref{fig:FigMC9}), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have \(f=2-1+1=2\). In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have \#f=2-2+1=1\$, which means that only one variable is independent of the others. The white region in Figure \ref{fig:FigMC9} is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure \ref{fig:FigMC4}. In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquid will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100\% \(\mathrm{A}\) and 100\% \(\mathrm{B}\), respectively).
+
+\hypertarget{partially-miscible}{%
+\subsection{Partially miscible}\label{partially-miscible}}
+
+The third and final case is undoubtedly the most interesting since several behaviors are possible. In fact, there might be components that are partially miscible at low temperatures but totally miscible at higher temperatures, for which the diagram will assume the general shape depicted in Figure \ref{fig:FigMC10}. A typical example of this behavior is the mixture between water and phenol, whose liquids are completely miscible at \(T>66\;^\circ \text{C}\), and only partially miscible below this temperature. The composition of the 2-phases region (white area in Figure \ref{fig:FigMC10}) is determined by tracing a horizontal line and reading the mole fraction on the line that delimits the area, as for the previous case.\footnote{The only noticeable difference, in this case, is that the two concentrations will be different than 0 and 100\% since the component mix partially.}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.028} 
+
+}
+
+\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at Low Temperature in the Liquid Phase, but Completely Miscible at High Temperatures}\label{fig:FigMC10}
+\end{figure}
+
+On the opposite side of the spectrum, the diagram for a mixture whose components are partially miscible at high temperature, but completely miscible at lower temperatures is depicted in Figure \ref{fig:FigMC11}. A typical example of this behavior is the mixture between water and triethylamine, whose liquids are completely miscible at \(T<18.5\;^\circ \text{C}\), and only partially miscible above this temperature.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.029} 
+
+}
+
+\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at High Temperature in the Liquid Phase, but Completely Miscible at Low Temperatures.}\label{fig:FigMC11}
+\end{figure}
+
+Finally, both situations described above are possible simultaneously. For some particular solutions, there exists a range of temperature where the two components are only partially miscible. A typical example of this behavior is given by the water/nicotine mixture, whose liquids are completely miscible at \(T>210\;^\circ \text{C}\) and \(T<61\;^\circ \text{C}\), but only partially miscible in between these two temperatures, as in the diagram of Figure \ref{fig:FigMC12}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.030} 
+
+}
+
+\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible Only Between Two Temperatures.}\label{fig:FigMC12}
+\end{figure}
+
+\hypertarget{eutectic-systems}{%
+\subsection{Eutectic systems}\label{eutectic-systems}}
+
+For some particular mixture, the temperature of partial miscibility in the liquid/liquid region might be close to the azeotrope temperature. In some cases, these two regions might even overlap. These characteristic behaviors are reported in Figure \ref{fig:FigMC13}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.031} 
+
+}
+
+\caption{Interaction Between the Liquid/Gas and Liquid/Liquid Equilibria.}\label{fig:FigMC13}
+\end{figure}
+
+When the azeotrope and partially miscibility temperature overlap, the system forms what is known as an \emph{eutectic}. Eutectic diagrams are possible at the liquid/gas equilibrium. Still, they are widespread at the liquid/solid equilibrium, where two components are completely miscible in the liquid phase, but only partially miscible in the solid phase. Eutectics with completely immiscible components in the solid phase are also very common, as the diagram reported in Figure \ref{fig:FigMC14}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.032} 
+
+}
+
+\caption{Typical Eutectic System with Components that are Completely Miscible in the Liquid Phase and Completely Immiscible in the Solid Phase.}\label{fig:FigMC14}
+\end{figure}
 
 \hypertarget{Solutions}{%
 \chapter{Solutions}\label{Solutions}}

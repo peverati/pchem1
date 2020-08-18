@@ -1,4 +1,7 @@
+%Frontpage for 6x9:
 \includepdf[pages={1}, scale=1]{FrontPage_6x9.pdf}
+%Frontpage for USLetter:
+%\includepdf[pages={1}, scale=1]{FrontPage.pdf}
 \newpage
 
 \let\maketitle\oldmaketitle
@@ -7,3 +10,4 @@
 % the real page number; \pagenumbering{arabic}
 % will redefine it to the right meaning afterwards.
 \renewcommand\thepage{\romannumeral\numexpr\value{page}-1\relax}
+
