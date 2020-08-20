@@ -102,7 +102,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{18 August 2020}
+\date{19 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -218,7 +218,7 @@ When a system exchanges mass or energy with its surroundings, some of its parame
 \end{longtable}
 
 \begin{quote}
-Here is another example. Let's consider a system that is composed of your body. When you exercise, you lose mass in the form of water (sweat) and CO\textsubscript{2} (from respiration). This mass loss can be easily measured by stepping on a scale before and after exercise. The number you observe on the scale will go down. Hence you have lost weight. After exercise, you will reintegrate the lost mass by drinking and eating. If you have reinstated the same amount you have lost, your weight will be the same as before the exercise (no weight loss). Nevertheless, which label do you attach to the amounts that you have lost and gained? Let's say that you are running a 5km race without drinking nor eating, and you measure your weight dropping 2 kg after the race. After the race, you drink 1.5 kg of water and eat a 500 g energy bar. Overall you did not lose any weight, and it would seem reasonable to label the 2 kg that you've lost as negative (--2) and the 1.5 kg of water that you drank and the 500 g bar that you ate as positive (+1.5 +0.5 = +2). But is it the only way? After all, you didn't gain nor lose any weight, so why not calling the 2 kg due to exercise +2 and the 2 that you've ingested as --2? It might seem silly, but mathematically it would not make any difference, the total would still be zero. Now, let's consider energy instead of mass. To run the 5km race, you have spent 500 kcal, which then you reintegrate precisely by eating the energy bar. Which sign would you put in front of the kilocalories that you ``burned'' during the race? In principle, you've lost them, so if you want to be consistent, you should use a negative sign. But if you think about it, you've put quite an effort to ``lose'' those kilocalories, so it might not feel bad to assign them a positive sign instead. After all, it's perfectly OK to say, ``I've done a 500 kcal run today'', while it might sound quite awkward to say, ``I've done a --500 kcal run today.'' Our previous exercise with mass demonstrates that it doesn't really matter which sign you put in front of the quantities. As long as you are consistent throughout the process, the signs will cancel out. If you've done a +500 kcal run, you've eaten a bar for --500 kcal, resulting in a total zero loss/gain. Alternatively, if you've done a --500 kcal run, you would have eaten a +500 kcal bar, for a total of again zero loss/gain.
+Here is another example. Let's consider a system that is composed of your body. When you exercise, you lose mass in the form of water (sweat) and CO\textsubscript{2} (from respiration). This mass loss can be easily measured by stepping on a scale before and after exercise. The number you observe on the scale will go down. Hence you have lost weight. After exercise, you will reintegrate the lost mass by drinking and eating. If you have reinstated the same amount you have lost, your weight will be the same as before the exercise (no weight loss). Nevertheless, which label do you attach to the amounts that you have lost and gained? Let's say that you are running a 5 km race without drinking nor eating, and you measure your weight dropping 2 kg after the race. After the race, you drink 1.5 kg of water and eat a 500 g energy bar. Overall you did not lose any weight, and it would seem reasonable to label the 2 kg that you've lost as negative (--2) and the 1.5 kg of water that you drank and the 500 g bar that you ate as positive (+1.5 +0.5 = +2). But is it the only way? After all, you didn't gain nor lose any weight, so why not calling the 2 kg due to exercise +2 and the 2 that you've ingested as --2? It might seem silly, but mathematically it would not make any difference, the total would still be zero. Now, let's consider energy instead of mass. To run the 5km race, you have spent 500 kcal, which then you reintegrate precisely by eating the energy bar. Which sign would you put in front of the kilocalories that you ``burned'' during the race? In principle, you've lost them, so if you want to be consistent, you should use a negative sign. But if you think about it, you've put quite an effort to ``lose'' those kilocalories, so it might not feel bad to assign them a positive sign instead. After all, it's perfectly OK to say, ``I've done a 500 kcal run today'', while it might sound quite awkward to say, ``I've done a --500 kcal run today.'' Our previous exercise with mass demonstrates that it doesn't really matter which sign you put in front of the quantities. As long as you are consistent throughout the process, the signs will cancel out. If you've done a +500 kcal run, you've eaten a bar for --500 kcal, resulting in a total zero loss/gain. Alternatively, if you've done a --500 kcal run, you would have eaten a +500 kcal bar, for a total of again zero loss/gain.
 \end{quote}
 
 These simple examples demonstrate that the sign that we assign to quantities that flow through a boundary is arbitrary (i.e., we can define it any way we want, as long as we are always consistent with ourselves). There is no best way to assign those signs. If you ask two different people, you might obtain two different answers. But we are scientists, and we must make sure to be rigorous. For this reason, chemists have established a convention for the signs that we will follow throughout this course. If we are consistent in following the convention, we are guaranteed to never make any mistake with the signs.
@@ -3339,7 +3339,7 @@ f = \phi P,
 
 which gives us a straightforward interpretation of the fugacity as an effective pressure. As such, the fugacity will have the same unit as the pressure, while the fugacity coefficients will be adimensional.
 
-As we already saw in chapter \ref(ChemicalEquilibrium), the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called \(K_f\), and is obtained from:
+As we already saw in chapter \ref{ChemicalEquilibrium}, the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called \(K_f\), and is obtained from:
 
 \begin{equation}
 K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
@@ -3875,11 +3875,93 @@ When the azeotrope and partially miscibility temperature overlap, the system for
 \caption{Typical Eutectic System with Components that are Completely Miscible in the Liquid Phase and Completely Immiscible in the Solid Phase.}\label{fig:FigMC14}
 \end{figure}
 
+\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+
 \hypertarget{Solutions}{%
 \chapter{Solutions}\label{Solutions}}
 
+In the previous chapter, we have qualitatively described the deviation of real solutions from ideal behavior. In this section, we are discussing it quantitatively. We will be able to do so by using a concept that we have already encountered in chapter \ref{ChemicalEquilibrium}: Lewis's activity.
+
 \hypertarget{activity}{%
 \section{Activity}\label{activity}}
+
+For non-ideal gases, we introduced in chapter \ref{RealGases} the concept of \emph{fugacity} as an \emph{effective pressure} that accounts for non-ideal behavior. If we extend this concept to non-ideal solution, we can introduce the \emph{activity} of a liquid or a solid, \(a\), as:
+
+\begin{equation}
+\mu_{\text{non-ideal}} = \mu^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln a,
+\label{eq:act1}
+\end{equation}
+
+where \(\mu\) is the chemical potential of the substance or the mixture, and \(\mu^{{-\kern-6pt{\ominus}\kern-6pt-}}\) is the chemical potential at standard state. Comparing this definition to eq. \eqref{eq:dcpnig}, it is clear that the activity is equal to the fugacity for a non-ideal gas (which, in turn, is equal to the pressure for an ideal gas). However, for a liquid and a liquid mixture, it depends on the chemical potential at standard state. This means that the activity is not an absolute quantity, but rather a relative term describing how ``active'' a compound is compared to standard state conditions. The choice of the standard state is, in principle, arbitrary, but conventions are often chosen out of mathematical or experimental convenience. We already discussed the convention that standard state for a gas is at \(P^standardstate=1\;\text{bar}\), so the activity is equal to the fugacity. The standard state for a component in a solution is the pure component at the temperature and pressure of the solution. This definition is equivalent to setting the activity of a pure component, \(i\), at \(a_i=1\).
+
+For a component in a solution we can use eq. \eqref{eq:dcpnig} to write the chemical potential in the gas phase as:
+
+\begin{equation}
+\mu_i^{\text{vapor}} = \mu_i^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln \frac{P_i}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}.
+\label{eq:act2}
+\end{equation}
+
+If the gas phase is in equilibrium with the liquid solution, then:
+
+\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^{\text{vapor}} = \mu_i^*,
+\label{eq:act3}
+\end{equation}
+
+where \(\mu_i^*\) is the chemical potential of the pure element. Subtracting eq. \eqref{eq:act3} from eq. \eqref{eq:act2}, we obtain:
+
+\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \frac{P_i}{P^*_i}.
+\label{eq:act4}
+\end{equation}
+
+For an ideal solution, we can use Raoult's law, eq. \eqref{eq:mc1}, to rewrite eq. \eqref{eq:act4} as:
+
+\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln x_i,
+\label{eq:act5}
+\end{equation}
+
+which relates the chemical potential of a component in an ideal solution to the chemical potential of the pure liquid and its mole fraction in the solution. For a non-ideal solution, the partial pressure in eq. \eqref{eq:act4} is either larger (positive deviation) or smaller (negative deviation) than the pressure calculated using Raoult's law. The chemical potential of a component in the mixture is then calculated using:
+
+\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \left(\gamma_i x_i\right),
+\label{eq:act6}
+\end{equation}
+
+where \(\gamma_i\) is a positive coefficient that accounts for deviations from ideality. This coefficient is either larger than one (for positive deviations), or smaller than one (for negative deviations). The activity of component \(i\) can be calculated as an \emph{effective mole fraction}, using:
+
+\begin{equation}
+a_i = \gamma_i x_i,
+\label{eq:act7}
+\end{equation}
+
+where \(\gamma_i\) is defined as the \emph{activity coefficient}. The partial pressure of the component can then be related to its vapor pressure, using:
+
+\begin{equation}
+P_i = a_i P_i^*.
+\label{eq:act8}
+\end{equation}
+
+Comparing eq. \eqref{eq:act8} with Raoult's law, we can calculate the activity coefficient as:
+
+\begin{equation}
+\gamma_i = \frac{P_i}{x_i P_i^*} = \frac{P_i}{P_i^{\text{R}}},
+\label{eq:act9}
+\end{equation}
+
+where \(P_i^{\text{R}}\) is the partial pressure calculated using Raoult's law. This result also proves that for an ideal solution, \(\gamma=1\). Eq. \eqref{eq:act9} can also be used experimentally to obtain the activity coefficient from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in Figure \ref{fig:FigSol1}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.033} 
+
+}
+
+\caption{Positive and Negative Deviation from Raoult's Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.}\label{fig:FigSol1}
+\end{figure}
+
+As we already discussed in chapter \ref{ChemicalEquilibrium}, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). This is because the activity is defined for ideal and non-ideal gases and mixture of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.\footnote{Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to \(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) using Gibbs' relation. This is why the definition of a universally agreed-upon \href{https://en.wikipedia.org/wiki/Standard_state}{standard state} is such an essential concept in chemistry, and why it is defined by the \href{https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry}{International Union of Pure and Applied Chemistry (IUPAC)} and followed systematically by chemists around the globe.}
 
 \hypertarget{colligative-properties}{%
 \section{Colligative Properties}\label{colligative-properties}}

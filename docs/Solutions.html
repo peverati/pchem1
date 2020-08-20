@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -253,8 +253,63 @@
             <section class="normal" id="section-">
 <div id="Solutions" class="section level1" number="14">
 <h1><span class="header-section-number">14</span> Solutions</h1>
+<p>In the previous chapter, we have qualitatively described the deviation of real solutions from ideal behavior. In this section, we are discussing it quantitatively. We will be able to do so by using a concept that we have already encountered in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>: Lewis’s activity.</p>
 <div id="activity" class="section level2" number="14.1">
 <h2><span class="header-section-number">14.1</span> Activity</h2>
+<p>For non-ideal gases, we introduced in chapter <a href="RealGases.html#RealGases">11</a> the concept of <em>fugacity</em> as an <em>effective pressure</em> that accounts for non-ideal behavior. If we extend this concept to non-ideal solution, we can introduce the <em>activity</em> of a liquid or a solid, <span class="math inline">\(a\)</span>, as:</p>
+<p><span class="math display" id="eq:act1">\[\begin{equation}
+\mu_{\text{non-ideal}} = \mu^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln a,
+\tag{14.1}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the chemical potential of the substance or the mixture, and <span class="math inline">\(\mu^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> is the chemical potential at standard state. Comparing this definition to eq. <a href="RealGases.html#eq:dcpnig">(11.29)</a>, it is clear that the activity is equal to the fugacity for a non-ideal gas (which, in turn, is equal to the pressure for an ideal gas). However, for a liquid and a liquid mixture, it depends on the chemical potential at standard state. This means that the activity is not an absolute quantity, but rather a relative term describing how “active” a compound is compared to standard state conditions. The choice of the standard state is, in principle, arbitrary, but conventions are often chosen out of mathematical or experimental convenience. We already discussed the convention that standard state for a gas is at <span class="math inline">\(P^standardstate=1\;\text{bar}\)</span>, so the activity is equal to the fugacity. The standard state for a component in a solution is the pure component at the temperature and pressure of the solution. This definition is equivalent to setting the activity of a pure component, <span class="math inline">\(i\)</span>, at <span class="math inline">\(a_i=1\)</span>.</p>
+<p>For a component in a solution we can use eq. <a href="RealGases.html#eq:dcpnig">(11.29)</a> to write the chemical potential in the gas phase as:</p>
+<p><span class="math display" id="eq:act2">\[\begin{equation}
+\mu_i^{\text{vapor}} = \mu_i^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln \frac{P_i}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}.
+\tag{14.2}
+\end{equation}\]</span></p>
+<p>If the gas phase is in equilibrium with the liquid solution, then:</p>
+<p><span class="math display" id="eq:act3">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^{\text{vapor}} = \mu_i^*,
+\tag{14.3}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\mu_i^*\)</span> is the chemical potential of the pure element. Subtracting eq. <a href="Solutions.html#eq:act3">(14.3)</a> from eq. <a href="Solutions.html#eq:act2">(14.2)</a>, we obtain:</p>
+<p><span class="math display" id="eq:act4">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \frac{P_i}{P^*_i}.
+\tag{14.4}
+\end{equation}\]</span></p>
+<p>For an ideal solution, we can use Raoult’s law, eq. <a href="MCPhaseDiagrams.html#eq:mc1">(13.1)</a>, to rewrite eq. <a href="Solutions.html#eq:act4">(14.4)</a> as:</p>
+<p><span class="math display" id="eq:act5">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln x_i,
+\tag{14.5}
+\end{equation}\]</span></p>
+<p>which relates the chemical potential of a component in an ideal solution to the chemical potential of the pure liquid and its mole fraction in the solution. For a non-ideal solution, the partial pressure in eq. <a href="Solutions.html#eq:act4">(14.4)</a> is either larger (positive deviation) or smaller (negative deviation) than the pressure calculated using Raoult’s law. The chemical potential of a component in the mixture is then calculated using:</p>
+<p><span class="math display" id="eq:act6">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \left(\gamma_i x_i\right),
+\tag{14.6}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\gamma_i\)</span> is a positive coefficient that accounts for deviations from ideality. This coefficient is either larger than one (for positive deviations), or smaller than one (for negative deviations). The activity of component <span class="math inline">\(i\)</span> can be calculated as an <em>effective mole fraction</em>, using:</p>
+<p><span class="math display" id="eq:act7">\[\begin{equation}
+a_i = \gamma_i x_i,
+\tag{14.7}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\gamma_i\)</span> is defined as the <em>activity coefficient</em>. The partial pressure of the component can then be related to its vapor pressure, using:</p>
+<p><span class="math display" id="eq:act8">\[\begin{equation}
+P_i = a_i P_i^*.
+\tag{14.8}
+\end{equation}\]</span></p>
+<p>Comparing eq. <a href="Solutions.html#eq:act8">(14.8)</a> with Raoult’s law, we can calculate the activity coefficient as:</p>
+<p><span class="math display" id="eq:act9">\[\begin{equation}
+\gamma_i = \frac{P_i}{x_i P_i^*} = \frac{P_i}{P_i^{\text{R}}},
+\tag{14.9}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(P_i^{\text{R}}\)</span> is the partial pressure calculated using Raoult’s law. This result also proves that for an ideal solution, <span class="math inline">\(\gamma=1\)</span>. Eq. <a href="Solutions.html#eq:act9">(14.9)</a> can also be used experimentally to obtain the activity coefficient from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in Figure <a href="Solutions.html#fig:FigSol1">14.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigSol1"></span>
+<img src="img/OEP_Figures.033.jpeg" alt="Positive and Negative Deviation from Raoult's Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature." width="80%" />
+<p class="caption">
+Figure 14.1: Positive and Negative Deviation from Raoult’s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.
+</p>
+</div>
+<p>As we already discussed in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). This is because the activity is defined for ideal and non-ideal gases and mixture of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a></p>
 </div>
 <div id="colligative-properties" class="section level2" number="14.2">
 <h2><span class="header-section-number">14.2</span> Colligative Properties</h2>
@@ -263,6 +318,12 @@
 <h2><span class="header-section-number">14.3</span> Binding Equilibria</h2>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="56">
+<li id="fn56"><p>Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to <span class="math inline">\(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> using Gibbs’ relation. This is why the definition of a universally agreed-upon <a href="https://en.wikipedia.org/wiki/Standard_state">standard state</a> is such an essential concept in chemistry, and why it is defined by the <a href="https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry">International Union of Pure and Applied Chemistry (IUPAC)</a> and followed systematically by chemists around the globe.<a href="Solutions.html#fnref56" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
