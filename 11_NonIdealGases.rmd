@@ -31,7 +31,7 @@ PV=k_1\quad\text{at const.}\;T,
 (\#eq:boylelaw2)
 \end{equation}
 
-which results in the familiar $PV$ plots of Figure \@ref(gig:FigPVideal). As we already discussed in chapter \@ref(ZerothLaw), each of the curves in Figure \@ref(gig:FigPVideal) is obtained at constant temperature, and it is therefore called *"isotherm."*
+which results in the familiar $PV$ plots of Figure \@ref(fig:FigPVideal). As we already discussed in chapter \@ref(ZerothLaw), each of the curves in Figure \@ref(fig:FigPVideal) is obtained at constant temperature, and it is therefore called *"isotherm."*
 
 ```{r FigPVideal, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of an ideal Gas.', out.width="70%"}
 x <- seq(0,1.25,0.01)
@@ -360,7 +360,7 @@ which is then interpreted as follows:
 - **Type I gases**: $b>\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} > 0$ *molecular size* dominates ($\mathrm{H}_2-$like behavior).
 - **Type II gases**: $b<\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} < 0$ *attractive forces* dominates ($\mathrm{CO}_2-$like behavior).
 
-The dependence of the compressibility factor as a function of temperature (Figure \ref(fig:Fig1Zb2)) results in different plots for each of the two types of behavior.
+The dependence of the compressibility factor as a function of temperature (Figure \@ref(fig:Fig1Zb2)) results in different plots for each of the two types of behavior.
 
 ```{r Fig1Zb2, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Temperature Dependence of the Compressibility Factor.'}
 knitr::include_graphics('./img/OEP_Figures.013.jpeg')
@@ -475,7 +475,7 @@ which we can then integrate between $0$ and $P$:
 (\#eq:dmufug4)
 \end{equation}
 
-Using eqs. \@ref(eq.dcpig) and \@ref(eq.dcpnig) we can then replace the definition of chemical potentials, resulting into:
+Using eqs. \@ref(eq:dcpig) and \@ref(eq:dcpnig) we can then replace the definition of chemical potentials, resulting into:
 
 \begin{equation}
 \ln f - \ln P = \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}} - \overline{V}_{\text{ideal}} \right) dP,

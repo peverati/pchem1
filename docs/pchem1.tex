@@ -102,7 +102,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{19 August 2020}
+\date{20 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2766,7 +2766,7 @@ PV=k_1\quad\text{at const.}\;T,
 \label{eq:boylelaw2}
 \end{equation}
 
-which results in the familiar \(PV\) plots of Figure \ref{gig:FigPVideal}. As we already discussed in chapter \ref{ZerothLaw}, each of the curves in Figure \ref{gig:FigPVideal} is obtained at constant temperature, and it is therefore called \emph{``isotherm.''}
+which results in the familiar \(PV\) plots of Figure \ref{fig:FigPVideal}. As we already discussed in chapter \ref{ZerothLaw}, each of the curves in Figure \ref{fig:FigPVideal} is obtained at constant temperature, and it is therefore called \emph{``isotherm.''}
 
 \begin{figure}
 
@@ -3174,7 +3174,7 @@ which is then interpreted as follows:
   \textbf{Type II gases}: \(b<\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} < 0\) \emph{attractive forces} dominates (\(\mathrm{CO}_2-\)like behavior).
 \end{itemize}
 
-The dependence of the compressibility factor as a function of temperature (Figure \ref(fig:Fig1Zb2)) results in different plots for each of the two types of behavior.
+The dependence of the compressibility factor as a function of temperature (Figure \ref{fig:Fig1Zb2}) results in different plots for each of the two types of behavior.
 
 \begin{figure}
 
@@ -3316,7 +3316,7 @@ which we can then integrate between \(0\) and \(P\):
 \label{eq:dmufug4}
 \end{equation}
 
-Using eqs. @ref(eq.dcpig) and @ref(eq.dcpnig) we can then replace the definition of chemical potentials, resulting into:
+Using eqs. \eqref{eq:dcpig} and \eqref{eq:dcpnig} we can then replace the definition of chemical potentials, resulting into:
 
 \begin{equation}
 \ln f - \ln P = \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}} - \overline{V}_{\text{ideal}} \right) dP,
@@ -3383,7 +3383,7 @@ We can use these definitions to study the dependence of the chemical potential w
 
 \begin{equation}
 \left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
-\label{eq:muequal2}
+\label{eq:muequal3}
 \end{equation}
 
 and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (\(S_{\text{g}} \gg S_{\text{l}}>S_{\text{s}}\)), we obtain three lines with different angular coefficients that intersect each other. At each temperature, the phase with the lowest chemical potential will be the most stable (see red segments in Figure \ref{fig:FigPhase1}). At each intersection between two lines, the two phases have the same chemical potential, representing the temperature at which they coexist. This temperature is the temperature at which the phase change happens. Recalling from general chemistry, at the junction between the solid and the liquid lines, the fusion (fus) process occurs, and the corresponding temperature is called the melting point \(T_{\text{m}}\). At the junction between the liquid and the gas lines, the vaporization (vap) process happens, and the corresponding temperature is called the boiling point \(T_{\text{b}}\). Depending on the substance and the pressure at which the process happens, the solid line might intersect the gas line before the liquid line. When that occurs, the liquid phase is never observed, and only the sublimation (subl) process happens at the sublimation point \(T_{\text{subl}}\).
@@ -3961,13 +3961,133 @@ where \(P_i^{\text{R}}\) is the partial pressure calculated using Raoult's law. 
 \caption{Positive and Negative Deviation from Raoult's Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.}\label{fig:FigSol1}
 \end{figure}
 
-As we already discussed in chapter \ref{ChemicalEquilibrium}, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). This is because the activity is defined for ideal and non-ideal gases and mixture of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.\footnote{Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to \(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) using Gibbs' relation. This is why the definition of a universally agreed-upon \href{https://en.wikipedia.org/wiki/Standard_state}{standard state} is such an essential concept in chemistry, and why it is defined by the \href{https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry}{International Union of Pure and Applied Chemistry (IUPAC)} and followed systematically by chemists around the globe.}
+As we already discussed in chapter \ref{ChemicalEquilibrium}, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it's defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.\footnote{Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of the activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to \(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) using Gibbs' relation. This is why the definition of a universally agreed-upon \href{https://en.wikipedia.org/wiki/Standard_state}{standard state} is such an essential concept in chemistry, and why it is defined by the \href{https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry}{International Union of Pure and Applied Chemistry (IUPAC)} and followed systematically by chemists around the globe.}
 
 \hypertarget{colligative-properties}{%
 \section{Colligative Properties}\label{colligative-properties}}
 
-\hypertarget{binding-equilibria}{%
-\section{Binding Equilibria}\label{binding-equilibria}}
+Colligative properties are properties of solutions that depend on the number of particles in the solution and not on the nature of the chemical species. More specifically, a colligative property depends on the ratio between the number of particles of the solute and the number of particles of the solvent. This ratio can be measured using any unit of concentration, such as mole fraction, molarity, and normality. For diluted solutions, however, the most useful concentration for studying colligative properties is the molality, \(m\), which measures the ratio between the number of particles of the solute (in moles) and the mass of the solvent (in kg):
+
+\begin{equation}
+m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
+\label{eq:coll1}
+\end{equation}
+
+Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the freezing point, and osmotic pressure.
+
+\hypertarget{vapor-pressure-lowering}{%
+\subsection{Vapor pressure lowering}\label{vapor-pressure-lowering}}
+
+As we have already discussed in chapter \ref{MCPhaseDiagrams}, the vapor pressure of an ideal solution follows Raoult's law. Its difference with respect to the vapor pressure of the pure solvent can be calculated as:
+
+\begin{equation}
+\begin{aligned}
+P_{\text{solvent}}^* &- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{solvent}} P_{\text{solvent}}^* \\ 
+& = \left( 1-x_{\text{solvent}}\right)P_{\text{solvent}}^* =x_{\text{solute}} P_{\text{solvent}}^*,
+\end{aligned}
+\label{eq:coll2}
+\end{equation}
+
+which shows that the vapor pressure lowering depends only on the concentration of the solute. As such, it is a colligative property.
+
+\hypertarget{boiling-point-elevation-and-melting-point-depression}{%
+\subsection{Boiling point elevation and melting point depression}\label{boiling-point-elevation-and-melting-point-depression}}
+
+The following two colligative properties are explained by reporting the changes due to the solute molecules in the plot of the chemical potential as a function of temperature (Figure \ref{fig:FigPhase1}).
+
+At the boiling point, the chemical potential of the solution is equal to the chemical potential of the vapor, and the following relation can be obtained:
+
+\begin{equation}
+\begin{aligned}
+\mu_{\text{solution}} &=\mu_{\text{vap}}=\mu_{\text{solvent}}^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln P_{\text{solvent}} \\
+&= \mu_{\text{solvent}}^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln \left(x_{\text{solvent}} P_{\text{solvent}}^* \right)\\
+&= \underbrace{\mu_{\text{solvent}}^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln P_{\text{solvent}}^*}_{\mu_{\text{solvent}}^*} + RT \ln x_{\text{solvent}} \\
+&= \mu_{\text{solvent}}^* + RT \ln x_{\text{solvent}},
+\end{aligned}
+\label{eq:collA}
+\end{equation}
+
+and since \(x_{\text{solvent}}<1\), the logarithmic term in the last expression is negative, and:
+
+\begin{equation}
+\mu_{\text{solution}} < \mu_{\text{solvent}}^*. 
+\label{eq:collB}
+\end{equation}
+
+Eq. \eqref{eq:collA} proves that the addition of a solute always stabilizes the solvent in the liquid phase, and lowers its chemical potential, as shown in Figure \ref{fig:FigSol2}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.034} 
+
+}
+
+\caption{Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute.}\label{fig:FigSol2}
+\end{figure}
+
+The elevation of the boiling point can be quantified using:
+
+\begin{equation}
+\Delta T_{\text{b}}=T_{\text{b}}^{\text{solution}}-T_{\text{b}}^{\text{solvent}}=iK_{\text{b}}m,
+\label{eq:coll3}
+\end{equation}
+
+where \(i\) is the \emph{van 't Hoff factor}, a coefficient that measures the number of solute particles for each formula unit, \(K_{\text{b}}\) is the ebullioscopic constant of the solvent, and \(m\) is the molality of the solution, as introduced in eq. \eqref{eq:coll1} above. For a solute that does not dissociate in solution, \(i=1\). For a solute that dissociates in solution, the number of particles in solutions depends on how many particles it dissociates into, and \(i>1\). For example, the strong electrolyte \(\mathrm{Ca}\mathrm{Cl}_2\) completely dissociates into three particles in solution, one \(\mathrm{Ca}^{2+}\) and two \(\mathrm{Cl}^-\), and \(i=3\). For cases of partial dissociation, such as weak acids, weak bases, and their salts, \(i\) can assume non-integer values.
+
+If we assume ideal solution behavior,the ebullioscopic constant can be obtained from the thermodynamic condition for liquid-vapor equilibrium. At the boiling point of the solution, the chemical potential of the solvent in the solution phase equals the chemical potential in the pure vapor phase above the solution:
+
+\begin{equation}
+\mu_{\text{solution}} (T_{\text{b}})  = \mu_{\text{solvent}}^*(T_b)  + RT\ln x_{\text{solvent}},
+\label{eq:coll4}
+\end{equation}
+
+from which we can derive, using the Gibbs--Helmholtz equation, eq. \eqref{eq:gibbshelm}:
+
+\begin{equation}
+K_{\text{b}}=\frac{RMT_{\text{b}}^{2}}{\Delta_{\mathrm{vap}} H},
+\label{eq:coll5}
+\end{equation}
+
+where \(R\) is the ideal gas constant, \(M\) is the molar mass of the solvent, and \(\Delta_{\mathrm{vap}} H\) is its molar enthalpy of vaporization.
+
+The reduction of the melting point is similarly obtained by:
+
+\begin{equation}
+\Delta T_{\text{m}}=T_{\text{m}}^{\text{solution}}-T_{\text{m}}^{\text{solvent}}=-iK_{\text{m}}m,
+\label{eq:coll6}
+\end{equation}
+
+where \(i\) is the van 't Hoff factor introduced above, \(K_{\text{m}}\) is the \emph{cryoscopic constant} of the solvent, \(m\) is the molality, and the minus sign accounts for the fact that the melting temperature of the solution is lower than the melting temperature of the pure solvent (\(\Delta T_{\text{f}}\) is defined as a negative quantity, while \(i\), \(K_{\text{f}}\), and \(m\) are all positive). Similarly to the previous case, the cryoscopic constant can be related to the molar enthalpy of fusion of the solvent using the equivalence of the chemical potential of the solid and the liquid phases at the melting point, and employing the Gibbs--Helmholtz equation:
+
+\begin{equation}
+K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
+\label{eq:coll7}
+\end{equation}
+
+Notice from Figure \ref{fig:FigSol2} how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water \(K_{\text{f}} = 1.86\; \text{K kg/mol}\), while \(K_{\text{b}} = 0.512 \text{K kg/mol}\). This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
+
+\hypertarget{osmotic-pressure}{%
+\subsection{Osmotic pressure}\label{osmotic-pressure}}
+
+The osmotic pressure of a solution is defined as the difference in pressure between the solution and the pure liquid solvent when the two are in equilibrium across a semi-permeable (osmotic) membrane. The osmotic membrane is made of a porous material that allows the flow of solvent molecules but blocks the flow of the solute ones. The osmosis process is depicted in Figure \ref{fig:FigSol3}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.035} 
+
+}
+
+\caption{Osmotic Pressure of a Solution.}\label{fig:FigSol3}
+\end{figure}
+
+Starting from a solvent at atmospheric pressure in the apparatus depicted in Figure \ref{fig:FigSol3}, we can add solute particles to the left side of the apparatus. The increase in concentration on the left causes a net transfer of solvent across the membrane. This flow stops when the pressure difference equals the osmotic pressure, \(\pi\). The formula that governs the osmotic pressure was initially proposed by van 't Hoff and later refined by Harmon Northrop Morse (1848--1920). The Morse formula reads:
+
+\begin{equation}
+\pi = imRT,
+\label{eq:coll8}
+\end{equation}
+
+where \(i\) is the van 't Hoff factor introduced above, \(m\) is the molality of the solution, \(R\) is the ideal gas constant, and \(T\) the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.\footnote{For a derivation, see the osmotic pressure \href{https://en.wikipedia.org/wiki/Osmotic_pressure}{Wikipedia page}.}
 
 \hypertarget{Kinetics}{%
 \chapter{Chemical Kinetics}\label{Kinetics}}
