@@ -152,7 +152,7 @@ which leads to the linear equation:
 
 which is the equation that produces the so-called **van 't Hoff plots**, from which $\Delta H^\standardstate$ can be experimentally determined:
 
-```{r vthoffplt, echo=FALSE, fig.align='center', fig.cap='Van \'t Hoff Plots for an Endothermic (Reft, Blue) and an Exothermic (Right, Red) Reactions at Constant P.'}
+```{r vthoffplt, echo=FALSE, fig.align='center', fig.cap='Van \'t Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reactions at Constant P.'}
 x <- seq(0.2,0.8,0.01)
 i <- 0.2
 f <- 1

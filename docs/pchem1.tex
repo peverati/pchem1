@@ -102,7 +102,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{20 August 2020}
+\date{23 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1107,7 +1107,7 @@ with \(\Delta C_P = \sum_i \nu_i C_{P,i}\).
 \emph{Solution:} Using eq. \eqref{eq:DrxnHneq298f} we obtain:
 
 \[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
+ \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
 \]
 
 which, assuming that the heat capacities does not depend on the temperature, becomes:
@@ -1329,7 +1329,7 @@ or, in other words, more heat is extracted from the hot reservoir than it is put
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:CarnotEx}{}{\label{exr:CarnotEx} }Up to this point, we have discussed Carnot cycles working in the hot \(rightarrow\) cold direction (\(A\) \(\rightarrow\) \(B\) \(\rightarrow\) \(C\) \(\rightarrow\) \(D\) \(\rightarrow\) \(A\)), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also---in principle---work in the reversed cold \(rightarrow\) hot direction (\(A\) \(\rightarrow\) \(D\) \(\rightarrow\) \(C\) \(\rightarrow\) \(B\) \(\rightarrow\) \(A\)). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections \ref{carnotcyclesect} and \ref{UWQCarnot}.
+\protect\hypertarget{exr:CarnotEx}{}{\label{exr:CarnotEx} }Up to this point, we have discussed Carnot cycles working in the hot \(\rightarrow\) cold direction (\(A\) \(\rightarrow\) \(B\) \(\rightarrow\) \(C\) \(\rightarrow\) \(D\) \(\rightarrow\) \(A\)), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also---in principle---work in the reversed cold \(rightarrow\) hot direction (\(A\) \(\rightarrow\) \(D\) \(\rightarrow\) \(C\) \(\rightarrow\) \(B\) \(\rightarrow\) \(A\)). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections \ref{carnotcyclesect} and \ref{UWQCarnot}.
 
 \emph{Solution:} When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of \(Q\), \(W\), and \(U\) will be reversed. In this case, the total work would get \textbf{into} the systems, and heat would be transferred from the cold reservoir to the hot one. Figure \ref{fig:FigCarnotEff} would be modified as:
 \end{exercise}
@@ -2612,7 +2612,7 @@ which is the equation that produces the so-called \textbf{van 't Hoff plots}, fr
 
 }
 
-\caption{Van 't Hoff Plots for an Endothermic (Reft, Blue) and an Exothermic (Right, Red) Reactions at Constant P.}\label{fig:vthoffplt}
+\caption{Van 't Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reactions at Constant P.}\label{fig:vthoffplt}
 \end{figure}
 
 \hypertarget{pressure-and-composition-dependence-of-k_texteq}{%
@@ -4064,7 +4064,7 @@ K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
 \label{eq:coll7}
 \end{equation}
 
-Notice from Figure \ref{fig:FigSol2} how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water \(K_{\text{f}} = 1.86\; \text{K kg/mol}\), while \(K_{\text{b}} = 0.512 \text{K kg/mol}\). This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
+Notice from Figure \ref{fig:FigSol2} how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water \(K_{\text{f}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\), while \(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\). This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
 
 \hypertarget{osmotic-pressure}{%
 \subsection{Osmotic pressure}\label{osmotic-pressure}}
@@ -4091,6 +4091,264 @@ where \(i\) is the van 't Hoff factor introduced above, \(m\) is the molality of
 
 \hypertarget{Kinetics}{%
 \chapter{Chemical Kinetics}\label{Kinetics}}
+
+From thermodynamics, we can determine the spontaneity of a reaction and its extent, using \(\Delta G\) and \(K\), respectively. However, thermodynamics does not provide any information on how \emph{fast} the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.
+
+A chemical kinetics study aims to find the \emph{rate} of a reaction and to find the microscopic steps that compose it, determining its \emph{mechanism}.
+
+\hypertarget{differential-and-integrated-rate-laws}{%
+\section{Differential and integrated rate laws}\label{differential-and-integrated-rate-laws}}
+
+The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, \(k\), called the \emph{rate coefficient}, and several parameters found at the exponent of the concentrations of the reactants, and are called \emph{reaction orders}. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The reaction rate is usually represented with the lowercase letter \(k\), and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter \(K\). Another useful concept in kinetics is the half-life, usually abbreviated with \(t_{1/2}\). The half-life is defined as the time required to reach half of the initial reactant concentration.
+
+A reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant's individual orders and is, at most, equal to three. We examine in detail the four most common reaction orders below.
+
+\hypertarget{zeroth-order-reaction}{%
+\subsection{Zeroth-order reaction}\label{zeroth-order-reaction}}
+
+For a zeroth-order reaction, the reaction rate is independent of the concentration of a reactant. In other words, if we have a reaction of the type:
+
+\begin{equation}
+\text{A}\longrightarrow\text{products}
+\label{eq:kin1}
+\end{equation}
+
+the differential rate law can be written:
+
+\begin{equation}
+- \frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0,
+\label{eq:kin2}
+\end{equation}
+
+which shows that any change in the concentration of \(\mathrm{A}\) will have no effect on the speed of the reaction. The minus sign at the right-hand-side is required because the rate is always defined as a positive quantity, while the derivative is negative because the concentration of the reactant is diminishing with time. Separating the variables \([\mathrm{A}]\) and \(t\) of eq. \eqref{eq:kin2} and integrating both sides, we obtain the integrated rate law for a zeroth-order reaction as:
+
+\begin{equation}
+\begin{aligned}
+\int_{[\mathrm{A}]_0}^{[A]} d[\mathrm{A}] &= -k_0 \int_{t=0}^{t} dt \\
+[\mathrm{A}]-[\mathrm{A}]_0 &= -k_0 t \\ \\
+[\mathrm{A}]&=[\mathrm{A}]_0 -k_0 t.
+\end{aligned}
+\label{eq:kin3}
+\end{equation}
+
+Using the integrated rate law we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of \([\mathrm{A}]\) as a function of \(t\), therefore, will result in a straight line with angular coefficient equal to \(-k_0\), as in the plot of Figure XXX.
+The half-life of a zero order reaction can be calculated from eq. \eqref{eq:kin3}, by replacing \([\mathrm{A}]\) with \(\frac{1}{2}[\mathrm{A}]_0\):
+
+\begin{equation}
+\begin{aligned}
+\frac{1}{2}[\mathrm{A}]_0 &=[\mathrm{A}]_0 -k_0 t_{1/2} \\
+t_{1/2} &= \frac{[\mathrm{A}]_0}{2k_0}.
+\end{aligned}
+\label{eq:kin4}
+\end{equation}
+
+Zeroth-order reactions are common in several biochemical processes catalyzed by enzymes, such as the oxidation of ethanol to acetaldehyde in the liver by the alcohol dehydrogenase enzyme, which is zero-order in ethanol.
+
+\hypertarget{first-order-reaction}{%
+\subsection{First-order reaction}\label{first-order-reaction}}
+
+A first-order reaction depends on the concentration of only one reactant, and is therefore also called a \emph{unimolecular reaction}. As for the previous case, if we consider a reaction of the type:
+
+\begin{equation}
+\text{A}\longrightarrow\text{products}
+\label{eq:kin5}
+\end{equation}
+
+the differential rate law for a first-order reaction is:
+
+\begin{equation}
+- \frac{d[\mathrm{A}]}{dt}=k_1 [\mathrm{A}].
+\label{eq:kin6}
+\end{equation}
+
+Following the usual blueprint of separating the variables, and integrating both sides, we obtain the integrated rate law as:
+
+\begin{equation}
+\begin{aligned}
+\int_{[\mathrm{A}]_0}^{[A]} \frac{d[\mathrm{A}]}{[\mathrm{A}]} &= -k_1 \int_{t=0}^{t} dt \\
+\ln \frac{[\mathrm{A}]}{[\mathrm{A}]_0}&=-k_1 t\\ \\
+[\mathrm{A}] &= [\mathrm{A}]_0 \exp(-k_1 t).
+\end{aligned}
+\label{eq:kin7}
+\end{equation}
+
+Using the integrated rate law to plot the concentration of the reactant, \([\mathrm{A}]\), as a function of time, \(t\), we obtain an exponential decay, as in Figure XXX. However, if we plot the logarithm of the concentration, \(\ln[\mathrm{A}]\), as a function of time, we obtain a line with angular coefficient \(-k_1\), as in the plot of Figure XXX.
+
+The half-life of a first-order reaction is:
+
+\begin{equation}
+\begin{aligned}
+\ln \frac{\frac{1}{2}[\mathrm{A}]_0}{[\mathrm{A}]_0}&=-k_1 t_{1/2}\\
+t_{1/2} &= \frac{\ln 2}{k_1}.
+\end{aligned}
+\label{eq:kin8}
+\end{equation}
+
+The half-life of a first-order reaction is independent of the initial concentration of the reactant. Therefore, the half-life can be used in place of the rate coefficient to describe the reaction rate. Typical examples of first-order reactions are radioactive decays. For radioactive isotopes, it is common to report their rate of decay in terms of their half-life. For example, the most stable uranium nucleotide, \(^{238}\mathrm{U}\), has a half-life of \(4.468\times 10^9\) years, while the most common fissile isotope of uranium, \(^{235}\mathrm{U}\), has a half-life of \(7.038\times 10^8\) years.\footnote{Notice how large these numbers are for uranium. To put these numbers in perspective, we can compare them with the half-life of the most unstable isotope of plutonium, \(^{241}\mathrm{Pu}\), which is \(t_{1/2}=14.1\) years.} Other examples of first-order reactions in chemistry are the class of S\textsubscript{N}1 nucleophilic substitution reactions in organic chemistry.
+
+\hypertarget{second-order-reaction}{%
+\subsection{Second-order reaction}\label{second-order-reaction}}
+
+A reaction is second-order when the sum of the reaction orders is two. Elementary second-order reactions are also called \emph{bimolecular reactions}. There are two possibilities, a simple one, where the reaction order of one reagent is two, or a more complicated one, with two reagents having each a reaction order of one.
+
+\begin{itemize}
+\item
+  For the simple case, we can write the reaction as:
+  \begin{equation}
+  2\text{A}\longrightarrow\text{products}
+  \label{eq:kin9}
+  \end{equation}
+  the differential rate law for a first-order reaction is:
+  \begin{equation}
+  -\frac{d[\mathrm{A}]}{dt}=k_2 [\mathrm{A}]^2.
+  \label{eq:kin10}
+  \end{equation}
+  Following the same procedure used for the two previous cases, we can obtain the integrated rate law as:
+  \begin{equation}
+  \begin{aligned}
+  \int_{[\mathrm{A}]_0}^{[A]} \frac{d[\mathrm{A}]}{[\mathrm{A}]^2} &= -k_2 \int_{t=0}^{t} dt \\
+  \frac{1}{[\mathrm{A}]}-\frac{1}{[\mathrm{A}]_0} &= k_2 t\\ \\
+  \frac{1}{[\mathrm{A}]}&=\frac{1}{[\mathrm{A}]_0} + k_2 t.
+  \end{aligned}
+  \label{eq:kin11}
+  \end{equation}
+  As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, \(\frac{1}{[\mathrm{A}]}\), as a function of time, \(t\), we obtain a line with angular coefficient \(+k_2\), as in the plot of Figure XXX. Notice that the line has a \emph{positive} angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative.
+  The half-life of a simple second-order reaction is:
+  \begin{equation}
+  \begin{aligned}
+  \frac{1}{\frac{1}{2}[\mathrm{A}]_0}-\frac{1}{[\mathrm{A}]_0} &= k_2 t_{1/2} \\
+  t_{1/2} &= \frac{1}{k_2 [\mathrm{A}]_0},
+  \end{aligned}
+  \label{eq:kin12}
+  \end{equation}
+  which, perhaps not surprisingly, depends on the initial concentration of the reactant, \([\mathrm{A}]_0\). Therefore, if we start with a higher concentration of the reactant, the half-life will be shorter and the reaction will be faster. An example of simple second-order behavior is the reaction \(\mathrm{NO}_2 + \mathrm{CO} \rightarrow \mathrm{NO} + \mathrm{CO}_2\), which is second-order in \(\mathrm{NO}_2\) and zeroth-order in \(\mathrm{CO}\).
+\item
+  For the complex second-order case, the reaction is:
+  \begin{equation}
+  \text{A}+\text{B}\longrightarrow\text{products}
+  \label{eq:kin13}
+  \end{equation}
+  and the differential rate law is:
+  \begin{equation}
+  -\frac{d[\mathrm{A}]}{dt}=k'_2 [\mathrm{A}][\mathrm{B}].
+  \label{eq:kin14}
+  \end{equation}
+  The differential equation in eq. \eqref{eq:kin14} has two variables, and cannot be solved exactly unless an additional relationship is specified. If we assume that the initial concentration of the two reactants are equal, then \([\mathrm{A}]=[\mathrm{B}]\) at any time \(t\), and eq. \eqref{eq:kin14} reduces to eq. \eqref{eq:kin9}. If the concentration of the reactants are different, then the integrated rate law will assume the following shape:
+  \begin{equation}
+  \frac{\mathrm{[A]}}{\mathrm{[B]}} = \frac{\mathrm{[A]_0}}{\mathrm{[B]_0}} \exp \left\{ \left(\mathrm{[A]_0} - \mathrm{[B]_0}\right) k'_2t \right\}.
+  \label{eq:kin15}
+  \end{equation}
+  The half-life of a complex second-order reaction cannot be easily written, since two different half-lifes could in principle be defined for each of the corresponding reactant.
+\end{itemize}
+
+\hypertarget{third-and-higher-orders-reaction}{%
+\subsection{Third and higher orders reaction}\label{third-and-higher-orders-reaction}}
+
+Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called \emph{termolelucar reactions}. While termolelucar reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
+
+\begin{equation}
+2\text{NO}_{(g)}+\text{O}_{2(g)}\longrightarrow 2\text{NO}_{2(g)}
+\label{eq:kin16}
+\end{equation}
+
+for which the differential rate law can be written as:
+
+\begin{equation}
+-\frac{dP_{\mathrm{O}_2}}{dt}=k_3 P_{\mathrm{NO}}^2 P_{\mathrm{O}_2}.
+\label{eq:kin17}
+\end{equation}
+
+A summary of all elementary reactions is available in the following table:
+
+\scriptsize
+
+\begin{longtable}[]{@{}lcccc@{}}
+\toprule
+\begin{minipage}[b]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\centering
+\emph{Zeroth-Order}\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\centering
+\emph{First-Order}\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering
+\emph{Simple Second-Order}\strut
+\end{minipage} & \begin{minipage}[b]{0.35\columnwidth}\centering
+\emph{Complex Second-Order}\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+\textbf{Differential Rate Law}\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\(-\frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0\)\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+\(-\frac{d[\mathrm{A}]}{dt}=k_1 [\mathrm{A}]\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+\(-\frac{d[\mathrm{A}]}{dt}=k_2 [\mathrm{A}]^2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\centering
+\(-\frac{d[\mathrm{A}]}{dt}=k'_2 [\mathrm{A}][\mathrm{B}]\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+\textbf{Integrated Rate Law}\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\([\mathrm{A}]=[\mathrm{A}]_0 -k_0 t\)\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+\([\mathrm{A}]=[\mathrm{A}]_0 e^{-k_1 t}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+\(\frac{1}{[\mathrm{A}]}=\frac{1}{[\mathrm{A}]_0} + k_2 t\)\strut
+\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\centering
+\(\frac{\mathrm{[A]}}{\mathrm{[B]}}=\frac{\mathrm{[A]_0}}{\mathrm{[B]_0}}e^{\left(\mathrm{[A]_0}-\mathrm{[B]_0}\right)k'_2t}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+\textbf{Units of \(k\)}\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\(\frac{\mathrm{M}}{\mathrm{s}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+\(\frac{1}{\mathrm{s}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\centering
+\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+\textbf{Linear Plot vs.~\(t\)}\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\([\mathrm{A}]\)\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+\(\ln [\mathrm{A}]\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+\(\frac{1}{[\mathrm{A}]}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\centering
+\(\ln \frac{[\mathrm{A}]_0[\mathrm{B}]}{[\mathrm{B}]_0[\mathrm{A}]}\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.07\columnwidth}\raggedright
+\textbf{Half-life}\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\(t_{1/2}=\frac{[\mathrm{A}]_0}{2k_0}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+\(t_{1/2}=\frac{\ln 2}{k_1}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+\(t_{1/2}=\frac{1}{k_2 [\mathrm{A}]_0}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.35\columnwidth}\centering
+not easily defined\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\normalsize
+
+\hypertarget{complex-laws}{%
+\section{Complex Laws}\label{complex-laws}}
+
+It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants.
+
+\hypertarget{experimental-methods-for-determination-of-reaction-order}{%
+\section{Experimental Methods for Determination of Reaction Order}\label{experimental-methods-for-determination-of-reaction-order}}
+
+\hypertarget{arrhenius-equation}{%
+\section{Arrhenius Equation}\label{arrhenius-equation}}
+
+Svante August Arrhenius (1859--1927)
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
