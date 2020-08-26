@@ -71,6 +71,7 @@
 \usepackage{booktabs}
 \usepackage{pdfpages}
 \usepackage{amsthm}
+\usepackage[version=4]{mhchem}
 \usepackage{cancel}
 
 %change to a smaller page:
@@ -102,7 +103,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{23 August 2020}
+\date{25 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -364,9 +365,9 @@ Thermodynamics is the branch of science that deals with heat and work, and their
   Heat is exchanged if only internal parameters are changed during the process.
 \end{itemize}
 
-As we saw in chapter \ref{SystemVariables}, though, heat and work are not ``well-behaved'' quantities because they are path functions. On the one hand, it might be simple to measure the amount of heat and/or work experimentally, these measured quantities cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the seventeenth century when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related to each other, and how they were related to the other variables that they were able to measure, such as temperature and volume.
+As we saw in chapter \ref{SystemVariables}, heat and work are not ``well-behaved'' quantities because they are path functions. On the one hand, it might be simple to measure the amount of heat and/or work experimentally, these measured quantities cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the seventeenth century when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related to each other, and how they were related to the other variables that they were able to measure, such as temperature and volume.
 
-Before we even discuss the definition of energy and how it relates to heat and work, it is crucial to introduce the essential concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition at the microscopic level.\footnote{In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.} However, for all our purposes, it is not essential to have a microscopic definition of temperature, as long as we have the guarantee that this quantity can be measured unambiguously. In other words, we need a mathematical definition of temperature that agrees with the physical existence of thermometers.
+Before we even discuss the definition of energy and how it relates to heat and work, it is crucial to introduce the essential concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition at the microscopic level.\footnote{In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.} However, for all our purposes, it is not essential to have a microscopic definition of temperature, as long as we have the guarantee that this quantity can be measured unambiguously. In other words, we only need a mathematical definition of temperature that agrees with the physical existence of thermometers.
 
 \hypertarget{the-zeroth-law-of-thermodynamics}{%
 \section{The Zeroth Law of Thermodynamics}\label{the-zeroth-law-of-thermodynamics}}
@@ -379,7 +380,7 @@ The mathematical definition that guarantees that thermal equilibrium is an equiv
 \end{definition}
 \end{quote}
 
-Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let's, for example, consider a pot of boiling water at \(P=\) 1 atm. Its temperature, \(T_{H_2O}\), is about 373 K. Let's now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature \(T_W = T_{H_2O}\). Similarly, the metal coin will also be in thermal equilibrium with the water, hence \(T_M = T_{H_2O}\). According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same \(T_W = T_M\), even if they are not in direct contact with each other. Now here's the catch: since wood and metal transmit heat in different manners if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.
+Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let's, for example, consider a pot of boiling water at \(P=1\;\mathrm{bar}\). Its temperature, \(T_{H_2O}\), is about 373 K. Let's now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature \(T_W = T_{H_2O}\). Similarly, the metal coin will also be in thermal equilibrium with the water, hence \(T_M = T_{H_2O}\). According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same \(T_W = T_M = 373\;\mathrm{K}\), even if they are not in direct contact with each other. Now here's the catch: since wood and metal transmit heat in different manners if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.
 
 \hypertarget{workint}{%
 \section{Calculation of Work}\label{workint}}
@@ -3759,7 +3760,7 @@ Raoult's behavior is observed for high concentrations of the volatile component.
 
 \begin{equation}
 P_{\text{B}}=k_{\text{AB}} x_{\text{B}},
-\label{eq:mc1}
+\label{eq:mc1b}
 \end{equation}
 
 where \(k_{\text{AB}}\) depends on the chemical nature of \(\mathrm{A}\) and \(\mathrm{B}\). The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure \ref{fig:FigMC7}. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviations on Raoult's ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit slightly less common. An example of a negative deviation is reported in the right panel of Figure \ref{fig:FigMC7}.
@@ -4096,8 +4097,8 @@ From thermodynamics, we can determine the spontaneity of a reaction and its exte
 
 A chemical kinetics study aims to find the \emph{rate} of a reaction and to find the microscopic steps that compose it, determining its \emph{mechanism}.
 
-\hypertarget{differential-and-integrated-rate-laws}{%
-\section{Differential and integrated rate laws}\label{differential-and-integrated-rate-laws}}
+\hypertarget{diffintk}{%
+\section{Differential and integrated rate laws}\label{diffintk}}
 
 The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, \(k\), called the \emph{rate coefficient}, and several parameters found at the exponent of the concentrations of the reactants, and are called \emph{reaction orders}. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The reaction rate is usually represented with the lowercase letter \(k\), and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter \(K\). Another useful concept in kinetics is the half-life, usually abbreviated with \(t_{1/2}\). The half-life is defined as the time required to reach half of the initial reactant concentration.
 
@@ -4110,7 +4111,6 @@ For a zeroth-order reaction, the reaction rate is independent of the concentrati
 
 \begin{equation}
 \text{A}\longrightarrow\text{products}
-\label{eq:kin1}
 \end{equation}
 
 the differential rate law can be written:
@@ -4120,7 +4120,8 @@ the differential rate law can be written:
 \label{eq:kin2}
 \end{equation}
 
-which shows that any change in the concentration of \(\mathrm{A}\) will have no effect on the speed of the reaction. The minus sign at the right-hand-side is required because the rate is always defined as a positive quantity, while the derivative is negative because the concentration of the reactant is diminishing with time. Separating the variables \([\mathrm{A}]\) and \(t\) of eq. \eqref{eq:kin2} and integrating both sides, we obtain the integrated rate law for a zeroth-order reaction as:
+which shows that any change in the concentration of \(\mathrm{A}\) will have no effect on the speed of the reaction. The minus sign at the right-hand-side is required because the rate is always defined as a positive quantity, while the derivative is negative because the concentration of the reactant is diminishing with time.
+Separating the variables \([\mathrm{A}]\) and \(t\) of eq. \eqref{eq:kin2} and integrating both sides, we obtain the integrated rate law for a zeroth-order reaction as:
 
 \begin{equation}
 \begin{aligned}
@@ -4131,7 +4132,7 @@ which shows that any change in the concentration of \(\mathrm{A}\) will have no 
 \label{eq:kin3}
 \end{equation}
 
-Using the integrated rate law we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of \([\mathrm{A}]\) as a function of \(t\), therefore, will result in a straight line with angular coefficient equal to \(-k_0\), as in the plot of Figure XXX.
+Using the integrated rate law, we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of \([\mathrm{A}]\) as a function of \(t\), therefore, will result in a straight line with an angular coefficient equal to \(-k_0\), as in the plot of Figure XXX. Eq. \eqref{eq:kin3} also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically \(\frac{\mathrm{M}}{\mathrm{s}}\), with \(\mathrm{M}\) being the molar concentration in \(\frac{\mathrm{mol}}{\mathrm{L}}\) and \(s\) the time in seconds.
 The half-life of a zero order reaction can be calculated from eq. \eqref{eq:kin3}, by replacing \([\mathrm{A}]\) with \(\frac{1}{2}[\mathrm{A}]_0\):
 
 \begin{equation}
@@ -4150,8 +4151,7 @@ Zeroth-order reactions are common in several biochemical processes catalyzed by 
 A first-order reaction depends on the concentration of only one reactant, and is therefore also called a \emph{unimolecular reaction}. As for the previous case, if we consider a reaction of the type:
 
 \begin{equation}
-\text{A}\longrightarrow\text{products}
-\label{eq:kin5}
+\mathrm{A}\rightarrow \text{products}
 \end{equation}
 
 the differential rate law for a first-order reaction is:
@@ -4172,8 +4172,7 @@ Following the usual blueprint of separating the variables, and integrating both 
 \label{eq:kin7}
 \end{equation}
 
-Using the integrated rate law to plot the concentration of the reactant, \([\mathrm{A}]\), as a function of time, \(t\), we obtain an exponential decay, as in Figure XXX. However, if we plot the logarithm of the concentration, \(\ln[\mathrm{A}]\), as a function of time, we obtain a line with angular coefficient \(-k_1\), as in the plot of Figure XXX.
-
+Using the integrated rate law to plot the concentration of the reactant, \([\mathrm{A}]\), as a function of time, \(t\), we obtain an exponential decay, as in Figure XXX. However, if we plot the logarithm of the concentration, \(\ln[\mathrm{A}]\), as a function of time, we obtain a line with angular coefficient \(-k_1\), as in the plot of Figure XXX. From eq. \eqref{eq:kin7}, we can also obtain the units for the rate coefficient for a first-order reaction, which typically is \(\frac{1}{\mathrm{s}}\), independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.
 The half-life of a first-order reaction is:
 
 \begin{equation}
@@ -4195,8 +4194,7 @@ A reaction is second-order when the sum of the reaction orders is two. Elementar
 \item
   For the simple case, we can write the reaction as:
   \begin{equation}
-  2\text{A}\longrightarrow\text{products}
-  \label{eq:kin9}
+  2\mathrm{A}\rightarrow \text{products}
   \end{equation}
   the differential rate law for a first-order reaction is:
   \begin{equation}
@@ -4212,7 +4210,7 @@ A reaction is second-order when the sum of the reaction orders is two. Elementar
   \end{aligned}
   \label{eq:kin11}
   \end{equation}
-  As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, \(\frac{1}{[\mathrm{A}]}\), as a function of time, \(t\), we obtain a line with angular coefficient \(+k_2\), as in the plot of Figure XXX. Notice that the line has a \emph{positive} angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative.
+  As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, \(\frac{1}{[\mathrm{A}]}\), as a function of time, \(t\), we obtain a line with angular coefficient \(+k_2\), as in the plot of Figure XXX. Notice that the line has a \emph{positive} angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of \(k\) for a simple second order reaction are calculated from eq. \eqref{eq:kin11} and typically are \(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\).
   The half-life of a simple second-order reaction is:
   \begin{equation}
   \begin{aligned}
@@ -4221,24 +4219,24 @@ A reaction is second-order when the sum of the reaction orders is two. Elementar
   \end{aligned}
   \label{eq:kin12}
   \end{equation}
-  which, perhaps not surprisingly, depends on the initial concentration of the reactant, \([\mathrm{A}]_0\). Therefore, if we start with a higher concentration of the reactant, the half-life will be shorter and the reaction will be faster. An example of simple second-order behavior is the reaction \(\mathrm{NO}_2 + \mathrm{CO} \rightarrow \mathrm{NO} + \mathrm{CO}_2\), which is second-order in \(\mathrm{NO}_2\) and zeroth-order in \(\mathrm{CO}\).
+  which, perhaps not surprisingly, depends on the initial concentration of the reactant, \([\mathrm{A}]_0\). Therefore, if we start with a higher concentration of the reactant, the half-life will be shorter, and the reaction will be faster. An example of simple second-order behavior is the reaction \(\mathrm{NO}_2 + \mathrm{CO} \rightarrow \mathrm{NO} + \mathrm{CO}_2\), which is second-order in \(\mathrm{NO}_2\) and zeroth-order in \(\mathrm{CO}\).
 \item
   For the complex second-order case, the reaction is:
   \begin{equation}
-  \text{A}+\text{B}\longrightarrow\text{products}
-  \label{eq:kin13}
+  \mathrm{A}+\mathrm{B}\rightarrow \text{products}
   \end{equation}
   and the differential rate law is:
   \begin{equation}
   -\frac{d[\mathrm{A}]}{dt}=k'_2 [\mathrm{A}][\mathrm{B}].
   \label{eq:kin14}
   \end{equation}
-  The differential equation in eq. \eqref{eq:kin14} has two variables, and cannot be solved exactly unless an additional relationship is specified. If we assume that the initial concentration of the two reactants are equal, then \([\mathrm{A}]=[\mathrm{B}]\) at any time \(t\), and eq. \eqref{eq:kin14} reduces to eq. \eqref{eq:kin9}. If the concentration of the reactants are different, then the integrated rate law will assume the following shape:
+  The differential equation in eq. \eqref{eq:kin14} has two variables, and cannot be solved exactly unless an additional relationship is specified. If we assume that the initial concentration of the two reactants are equal, then \([\mathrm{A}]=[\mathrm{B}]\) at any time \(t\), and eq. \eqref{eq:kin14} reduces to eq. \eqref{eq:kin10}. If the concentration of the reactants are different, then the integrated rate law will assume the following shape:
   \begin{equation}
   \frac{\mathrm{[A]}}{\mathrm{[B]}} = \frac{\mathrm{[A]_0}}{\mathrm{[B]_0}} \exp \left\{ \left(\mathrm{[A]_0} - \mathrm{[B]_0}\right) k'_2t \right\}.
   \label{eq:kin15}
   \end{equation}
-  The half-life of a complex second-order reaction cannot be easily written, since two different half-lifes could in principle be defined for each of the corresponding reactant.
+  The units of \(k\) for a complex second order reaction can be calculated from eq. \eqref{eq:kin15}, and are the same as those for the simple case, \(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\).
+  The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.
 \end{itemize}
 
 \hypertarget{third-and-higher-orders-reaction}{%
@@ -4248,7 +4246,6 @@ Although elementary reactions with order higher than two are possible, they are 
 
 \begin{equation}
 2\text{NO}_{(g)}+\text{O}_{2(g)}\longrightarrow 2\text{NO}_{2(g)}
-\label{eq:kin16}
 \end{equation}
 
 for which the differential rate law can be written as:
@@ -4258,7 +4255,185 @@ for which the differential rate law can be written as:
 \label{eq:kin17}
 \end{equation}
 
-A summary of all elementary reactions is available in the following table:
+\hypertarget{complex-rate-laws}{%
+\section{Complex Rate Laws}\label{complex-rate-laws}}
+
+It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants.
+
+\hypertarget{consecutive-reactions}{%
+\subsection{Consecutive reactions}\label{consecutive-reactions}}
+
+A reaction that happens following a sequence of two elementary steps can be written as follows:
+
+\begin{equation}
+\text{A}\xrightarrow{\;k_1\;}\text{B}\xrightarrow{\;k_2\;}\text{C}
+\end{equation}
+
+Assuming that each of the steps follows a first order kinetic law, and that only the reagent \(\mathrm{A}\) is present at the beginning of the reaction, we can write the differential change in concentration of each species with respect to infinitesimal time \(dt\), using the following formulas:
+
+\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]}{dt}&=k_1 [\mathrm{A}] \Rightarrow [\mathrm{A}] = [\mathrm{A}]_0 \exp(-k_1 t) \\
+\frac{d[\mathrm{B}]}{dt} &=k_1 [\mathrm{A}]-k_2 [\mathrm{B}] \\
+\frac{d[\mathrm{C}]}{dt} &=k_2 [\mathrm{B}].
+\end{aligned}
+\label{eq:kincomp2}
+\end{equation}
+
+These three equations represent a system of differential equations with three unknown variables. Unfortunately, these equations are linearly dependent on each other, and they are not sufficient to solve the system for each variable. To do so, we need to include a fourth equation, coming from the conservation of mass:
+
+\begin{equation}
+[\mathrm{A}]_0=[\mathrm{A}]+[\mathrm{B}]+[\mathrm{C}].
+\label{eq:kincomp3}
+\end{equation}
+
+Using the first equation in eq. \eqref{eq:kincomp2}, we can now replace the concentration \([\mathrm{A}]\) in the second equation and solve for \([\mathrm{B}]\):
+
+\begin{equation}
+\frac{d[\mathrm{B}]}{dt}+k_2 [\mathrm{B}]=k_1 [\mathrm{A}]_0 \exp(-k_1 t),
+\label{eq:kincomp4}
+\end{equation}
+
+which can be simplified by multiplying both sides by \(\exp (k_2t)\):
+
+\begin{equation}
+\begin{aligned}
+\left( \frac{d[\mathrm{B}]}{dt}+k_2 [\mathrm{B}] \right) \exp (k_2t) &= k_1 [\mathrm{A}]_0 \exp[(k_2-k_1) t] \\
+\Rightarrow \frac{d\left\{[\mathrm{B}]\exp (k_2t)\right\}}{dt} &= k_1 [\mathrm{A}]_0 \exp[(k_2-k_1) t],
+\end{aligned}
+\label{eq:kincomp5}
+\end{equation}
+
+which can then be integrated remembering that \([B]_0=0\), and \(\int \exp(kx)=\frac{1}{k}\exp(kx)\):
+
+\begin{equation}
+[\mathrm{B}] = \frac{k_1}{k_2-k_1} [\mathrm{A}]_0 [\exp(-k_1t)-\exp(-k_2t)].
+\label{eq:kincomp6}
+\end{equation}
+
+We can then use both \([\mathrm{A}]\), from eq. \eqref{eq:kincomp2}, and \([\mathrm{B}]\), from eq. \eqref{eq:kincomp6}, in eq. \eqref{eq:kincomp3} to solve for \([\mathrm{C}]\):
+
+\begin{equation}
+\begin{aligned}
+\left[\mathrm{C}\right] &= [\mathrm{A}]_0-[\mathrm{A}]-[\mathrm{B}] \\
+&= [\mathrm{A}]_0-[\mathrm{A}]_0 \exp(-k_1 t)-\frac{k_1}{k_2-k_1} [\mathrm{A}]_0 [\exp(-k_1t)-\exp(-k_2t)] \\
+&= [\mathrm{A}]_0\left\{1+\frac{1}{k_2-k_1} [-k_2 \exp(-k_1t)+ k_1 \exp(-k_2t)] \right\}.
+\end{aligned}
+\label{eq:kincomp7}
+\end{equation}
+
+From these results, we can distinguish two extreme behaviors. The first one is observed when \(k_1 \gg k_2\), and it produces a plot of the concentration of species with respect to time reported in Figure XXX. This behavior is observed when a process undergoing a series of consecutive reactions present a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equate the rate of the slowest step.
+
+Figure XXX
+
+The second behavior is observed when \(k_1\ll k_2\), and it produces the plot in Figure XXX. In this case, the concentration of the intermediate species \(B\) is not relevant throughout the process. This process is a reaction going directly from \(A\) to \(C\).
+
+Figure XXX.
+
+Since the concentration of \(B\) is small and relatively constant throughout the process, \(\frac{d[\mathrm{B}]}{dT}=0\). We can then simplify the mathematical treatment of these reactions by eliminating it from the process altogether. This simplification is known as the \emph{steady-state approximation}. It is used in chemical kinetics to study processes that undergo a series of reactions producing intermediate species whose concentrations are constants throughout the entire process.
+
+\begin{equation}
+\begin{aligned}
+\text{A} &\xrightarrow{\;k_1\;} \text{I}_1 \xrightarrow{\;k_2\;} \text{I}_2 \xrightarrow{\quad} \cdots \xrightarrow{\;k_n\;}\text{products} \\
+& \text{Steady State Approximation:} \\
+\text{A}&\xrightarrow{\qquad\qquad\qquad\qquad\quad\quad\;\;}\text{products}
+\end{aligned}
+\label{eq:kincomp8}
+\end{equation}
+
+\hypertarget{competitive-reactions}{%
+\subsection{Competitive reactions}\label{competitive-reactions}}
+
+A process where two elementary reactions happen in parallel, competing with each can be written as follows:
+
+\begin{equation}
+\begin{matrix}
+ &_{k_1}  & B\\
+ &\nearrow & \\
+A &   & \\
+ &\searrow& \\
+  &_{k_2}  & C
+\end{matrix}
+\end{equation}
+
+Assuming that each step follows first order kinetic, we can write:
+
+\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]}{dt} &=k_1 [\mathrm{A}]+k_2 [\mathrm{A}] \Rightarrow [\mathrm{A}]=[\mathrm{A}]_0\exp \left[ -(k_1+k_2)t \right] \\
+\frac{d[\mathrm{B}]}{dt} &=k_1 [\mathrm{A}] \Rightarrow [\mathrm{B}]=\frac{k_1}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\} \\
+\frac{d[\mathrm{C}]}{dt} &=k_2 [\mathrm{A}]\Rightarrow [\mathrm{C}]=\frac{k_2}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\}.
+\end{aligned}
+\label{eq:kincomp2}
+\end{equation}
+
+The concentration of each of the species can then be plot against time, obtaining the three different behaviors reported in Figure XXX. An important relationship that can be derived from eq. \eqref{eq:kincomp2} is that:
+
+\begin{equation}
+\frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
+\label{eq:kincomp3}
+\end{equation}
+
+\hypertarget{opposed-reactions}{%
+\subsection{Opposed reactions}\label{opposed-reactions}}
+
+Another case of complex kinetic law happens when a pair of forward and reverse reactions occur simultaneously:
+
+\begin{equation}
+\mathrm{A}\ce{<=>[k_1][k_{-1}]}\mathrm{B}
+\end{equation}
+
+where the rate coefficients for the forward and backwards reaction, \(k_1\) and \(k_{-1}\) respectively, are not necessarily equal to each other, but comparable in magnitude. We can write the rate laws for each of these elementary steps as:
+
+\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]}{dt} &=k_1 [\mathrm{A}]-k_{-1} [\mathrm{B}] = k_1 [\mathrm{A}]-k_{-1}\left([\mathrm{A}]_0-[\mathrm{A}]\right) \\
+\frac{d[\mathrm{A}]}{dt} &=-(k_1+k_{-1})[\mathrm{A}] + k_{-1}[\mathrm{A}]_0,
+\end{aligned}
+\label{eq:kinopp1}
+\end{equation}
+
+which can then be integrated to:
+
+\begin{equation}
+\begin{aligned}
+\left[\mathrm{A}\right] &=[\mathrm{A}]_0\frac{k_{-1}+k_1\exp[-(k_1+k_{-1})t]}{k_1+k_{-1}} \\
+\left[\mathrm{B}\right] &=[\mathrm{A}]_0\left\{ 1-\frac{k_{-1}+k_1\exp[-(k_1+k_{-1})t]}{k_1+k_{-1}}\right\}.
+\end{aligned}
+\label{eq:kinopp2}
+\end{equation}
+
+These formulas can then be used to obtain the plots in Figure XXX.
+
+Figure XXX.
+
+As can be seen from the plots in Figure XXX, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of \(\mathrm{A}\) and \(\mathrm{B}\) don't change. These equilibrium concentrations can be calculated replacing \(t=\infty\) in eq. \eqref{eq:kinopp1}:
+
+\begin{equation}
+\begin{aligned}
+\left[\mathrm{A} \right] _{\mathrm{eq}} &= [\mathrm{A}]_0 \frac{k_{-1}}{k_1+k_{-1}} \\
+[\mathrm{B}]_{\mathrm{eq}} &= [\mathrm{A}]_0 \frac{k_{1}}{k_1+k_{-1}}.
+\end{aligned}
+\label{eq:kinopp3}
+\end{equation}
+
+Considering that the concentrations of the species don't change at equilibrium:
+
+\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]_{\mathrm{eq}}}{dt} &= \frac{d[\mathrm{B}]_{\mathrm{eq}}}{dt} = 0\\
+& \Rightarrow \; k_1[\mathrm{A}]_{\mathrm{eq}} = k_{-1}[\mathrm{B}]_{\mathrm{eq}} \\
+& \Rightarrow \;  \frac{k_1}{k_{-1}} =  \frac{[\mathrm{B}]_{\mathrm{eq}}}{[\mathrm{A}]_{\mathrm{eq}}} = K_C, \\
+\end{aligned}
+\label{eq:kinopp4}
+\end{equation}
+
+where \(K_C\) is the equilibrium constant as defined in chapter \ref{ChemicalEquilibrium}. This is a rare link between kinetics and thermodynamics and appears only for opposed reactions after sufficient time has passed so that the system can reach the dynamic equilibrium.
+
+\hypertarget{experimental-methods-for-determination-of-reaction-orders}{%
+\section{Experimental Methods for Determination of Reaction Orders}\label{experimental-methods-for-determination-of-reaction-orders}}
+
+To experimentally measure the reaction rate, we need a method to measure concentration changes with respect to time. The simplest way to determine the reaction rate is to monitor the entire reaction as it proceeds and then plot the resulting data differently until a linear plot is found. A summary of the results obtained in section \ref{diffintk} and that is useful for this task is reported in the following table:
 
 \scriptsize
 
@@ -4337,18 +4512,155 @@ not easily defined\strut
 
 \normalsize
 
-\hypertarget{complex-laws}{%
-\section{Complex Laws}\label{complex-laws}}
+However, this method works only if the reaction has few reactants, and it requires several measurements, each of which might be complicated to make. More useful methods to determine the reaction rate are the \emph{initial rate} and the \emph{isolation} methods that we describe below.
 
-It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants.
+\hypertarget{initial-rates-method}{%
+\subsection{Initial rates method}\label{initial-rates-method}}
 
-\hypertarget{experimental-methods-for-determination-of-reaction-order}{%
-\section{Experimental Methods for Determination of Reaction Order}\label{experimental-methods-for-determination-of-reaction-order}}
+The \emph{initial rates method} involves measuring the rate of a reaction as soon as it starts before any significant change in the concentrations of the reactants occurs. The initial rate method is practical only if the reaction is reasonably slow, but it can measure the rate unambiguously when more than one reactant is involved. For example, if we have a reaction with the following stoichiometry:
 
-\hypertarget{arrhenius-equation}{%
-\section{Arrhenius Equation}\label{arrhenius-equation}}
+\begin{equation}
+\alpha \mathrm{A} + \beta \mathrm{B} \xrightarrow{k} \text{products}
+\end{equation}
 
-Svante August Arrhenius (1859--1927)
+the initial rate method can be used to determine the coefficients of the rate law:
+
+\begin{equation}
+\text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}
+\label{eq:kinini1}
+\end{equation}
+
+by designing three experiment, where the initial concentrations of \(\mathrm{A}\) and \(\mathrm{B}\) are appropriately changed. For example, let's consider the following experimental data:
+
+\begin{longtable}[]{@{}lccc@{}}
+\toprule
+\begin{minipage}[b]{0.10\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[b]{0.24\columnwidth}\centering
+\([\mathrm{A}]_0 \; (\text{M})\)\strut
+\end{minipage} & \begin{minipage}[b]{0.24\columnwidth}\centering
+\([\mathrm{A}]_0 \; (\text{M})\)\strut
+\end{minipage} & \begin{minipage}[b]{0.31\columnwidth}\centering
+Initial rate \(\left(\frac{M}{s}\right)\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Experiment 1:\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering
+0.10\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering
+0.10\strut
+\end{minipage} & \begin{minipage}[t]{0.31\columnwidth}\centering
+4.32\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Experiment 2:\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering
+0.15\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering
+0.10\strut
+\end{minipage} & \begin{minipage}[t]{0.31\columnwidth}\centering
+9.70\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedright
+Experiment 3:\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering
+0.10\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering
+0.20\strut
+\end{minipage} & \begin{minipage}[t]{0.31\columnwidth}\centering
+4.29\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+we can calculate \(\alpha\) by taking the ratio of the rates measured in experiment 1 and 2:
+
+\begin{equation}
+\begin{aligned}
+\frac{\text{Rate}(1)}{\text{Rate}(2)}&=\frac{k(0.10\;\text{M})^\alpha(0.10\;\text{M})^\beta}{k(0.15\;\text{M})^\alpha(0.10\;\text{M})^\beta} \\
+\frac{4.32}{9.70}&=\frac{(0.10\;\text{M})^\alpha}{(0.15\;\text{M})^\alpha} \\
+0.445&=0.667^\alpha \;\rightarrow\; \ln0.445=\alpha \ln0.667 \\
+\alpha &= \frac{-0.81}{-0.405}=2.
+\end{aligned}
+\label{eq:kiniso1}
+\end{equation}
+
+\(\beta\) can be calculated similarly by taking the ratio between experiments 1 and 3. Alternatively, we can also notice that the reaction rate does not change when the initial concentration \([\mathrm{B}]_0\) is doubled, therefore \(\beta=0\).
+
+\hypertarget{isolation-method}{%
+\subsection{Isolation method}\label{isolation-method}}
+
+Another method that is widely used to determine reaction orders is the \emph{isolation method}. This method is performed by using large excess concentrations of all reactants but one. For example, if we have the following reaction with three reagents and unknown rate law:
+
+\begin{equation}
+\alpha \mathrm{A} + \beta \mathrm{B} + \gamma \mathrm{C} \xrightarrow{k} \text{products}
+\end{equation}
+
+we can perform three different experiments, in each of which we use an excessive amount of one of the two reagents, such as:
+
+\begin{itemize}
+\item
+  Experiment 1: \([\mathrm{A}]_0=1\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},\) in which the reaction order with respect to \(\mathrm{A}\) is measured.
+\item
+  Experiment 2: \([\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},\) in which the reaction order with respect to \(\mathrm{B}\) is measured.
+\item
+  Experiment 3: \([\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1\;\text{M},\) in which the reaction order with respect to \(\mathrm{C}\) is measured.
+\end{itemize}
+
+From each experiment we can determine the \emph{pseudo-order} of the reaction with respect to the reagent that is in minority concentration. For example, for the reaction above, we can write the rate law as:
+
+\begin{equation}
+\text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}
+\label{eq:kiniso1}
+\end{equation}
+
+and we can write the initial concentrations, \([X]_0\), and the final concentrations, \([X]_f\), of each of the species in experiment 1, as:
+
+\begin{equation}
+\begin{aligned}
+\left[\mathrm{A}\right]_0 =1\;\text{M}\;\longrightarrow &[\mathrm{A}]_f=0\;\text{M} \qquad &\text{(100\% change)} \\
+\left[\mathrm{B}\right]_0 =1000\;\text{M}\;\longrightarrow &[\mathrm{B}]_f=1000-1=999\;\text{M}\cong [\mathrm{B}]_0\qquad &\text{(0.1\% change)}\\
+\left[\mathrm{C}\right]_0 =1000\;\text{M}\;\longrightarrow &[\mathrm{C}]_f=1000-1=999\;\text{M} \cong \left[\mathrm{C}\right]_0. \qquad &\text{(0.1\% change)}
+\end{aligned}
+\end{equation}
+
+The coefficient \(\alpha\) can then be determined by incorporating the concentration of the reactants in excess into the rate constant as:
+
+\begin{equation}
+\begin{aligned}
+\text{rate}&=k[\mathrm{A}]^{\alpha}\underbrace{[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}}_{\text{constant}} \\
+&= k'[\mathrm{A}]^{\alpha}
+\end{aligned}
+\end{equation}
+
+and then determine \(\alpha\) by verifying which order the data collected for \([\mathrm{A}]\) at various time fit. This can be simply achieved by using the zero-, first-, and second-order kinetic plots, as reported in the table above. We can determine \(\beta\) and \(\gamma\) by repeating the same procedure for the data from the other two experiments. For example, if we find for a specific reaction that \(\alpha=\) 1, \(\beta=2\), and \(\gamma=0\), we can then say that the reaction is pseudo-order one in \(\mathrm{A}\), pseudo-order two in \(\mathrm{B}\), and pseudo-order zero in \(\mathrm{C}\), with an overall reaction order of three.
+
+\hypertarget{temperature-dependence-of-the-rate-coefficients}{%
+\section{Temperature Dependence of the Rate Coefficients}\label{temperature-dependence-of-the-rate-coefficients}}
+
+The dependence of the rate coefficient, \(k\), on the temperature is given by the \textbf{Arrhenius equation}. This formula was derived by Svante August Arrhenius (1859--1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van 't Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of \(k\) when \(T\) is increased:
+
+\begin{equation}
+k=A\exp\left( \frac{E_a}{RT}\right),
+\label{eq:Arr1}
+\end{equation}
+
+where \(A\) is the so-called Arrhenius pre-exponential factor, and \(E_a\) is the activation energy. Both of these terms are independent of temperature,\footnote{In theory, both \(A\) and \(E_a\) show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.} and they represent experimental quantities that are unique to each individual reaction. Since there is no known exception to the fact that a temperature increase speeds up chemical reactions, both \(A\) and \(E_a\) are always positive. The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, \(\frac{\mathrm{J}}{\mathrm{mol}}\) in SI.
+
+The Arrhenius equation is experimentally useful in its linearized form, which is obtained from two Arrhenius experiments, taken at different temperatures. Applying eq. \eqref{eq:Arr1} to two different experiments, and taking the ratio between the results, we obtain:
+
+\begin{equation}
+\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{RT}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+\label{eq:Arr2}
+\end{equation}
+
+which gives the plot of Figure XXX, from which \(E_a\) can be determined.
+
+Figure XXX
+
+From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure XXX. The reaction coordinate is defined as the minimum energy path that connects the reactants with the products.
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
