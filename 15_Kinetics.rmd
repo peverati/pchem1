@@ -643,7 +643,6 @@ arrows(f, -0.4*f+2, -10, -0.4*f+2 , length=0, angle=90, code=3, lty="dotted")
 
 From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form  any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure \@ref(fig:figk9).^[This plot is taken from [Wikipedia](https://en.wikipedia.org/wiki/Transition_state_theory) and distributed under CC-BY-SA license.] The reaction coordinate is defined as the minimum  energy path that connects the reactants with the products.
 
-
 ```{r figk9, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Reaction Coordinate Diagram for a Typical Reaction.'}
 knitr::include_graphics('./img/Rxn_coordinate_diagram_5.PNG')
 ```
