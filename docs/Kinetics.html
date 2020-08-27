@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -314,7 +314,14 @@ Separating the variables <span class="math inline">\([\mathrm{A}]\)</span> and <
 \end{aligned}
 \tag{15.2}
 \end{equation}\]</span></p>
-<p>Using the integrated rate law, we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of <span class="math inline">\([\mathrm{A}]\)</span> as a function of <span class="math inline">\(t\)</span>, therefore, will result in a straight line with an angular coefficient equal to <span class="math inline">\(-k_0\)</span>, as in the plot of Figure XXX. Eq. <a href="Kinetics.html#eq:kin3">(15.2)</a> also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically <span class="math inline">\(\frac{\mathrm{M}}{\mathrm{s}}\)</span>, with <span class="math inline">\(\mathrm{M}\)</span> being the molar concentration in <span class="math inline">\(\frac{\mathrm{mol}}{\mathrm{L}}\)</span> and <span class="math inline">\(s\)</span> the time in seconds.
+<p>Using the integrated rate law, we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of <span class="math inline">\([\mathrm{A}]\)</span> as a function of <span class="math inline">\(t\)</span>, therefore, will result in a straight line with an angular coefficient equal to <span class="math inline">\(-k_0\)</span>, as in the plot of Figure <a href="Kinetics.html#fig:figk1">15.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk1"></span>
+<img src="pchem1_files/figure-html/figk1-1.png" alt="Reaction Rate Plot for a Zeroth-Order Reaction." width="672" />
+<p class="caption">
+Figure 15.1: Reaction Rate Plot for a Zeroth-Order Reaction.
+</p>
+</div>
+<p>Eq. <a href="Kinetics.html#eq:kin3">(15.2)</a> also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically <span class="math inline">\(\frac{\mathrm{M}}{\mathrm{s}}\)</span>, with <span class="math inline">\(\mathrm{M}\)</span> being the molar concentration in <span class="math inline">\(\frac{\mathrm{mol}}{\mathrm{L}}\)</span> and <span class="math inline">\(s\)</span> the time in seconds.
 The half-life of a zero order reaction can be calculated from eq. <a href="Kinetics.html#eq:kin3">(15.2)</a>, by replacing <span class="math inline">\([\mathrm{A}]\)</span> with <span class="math inline">\(\frac{1}{2}[\mathrm{A}]_0\)</span>:</p>
 <p><span class="math display" id="eq:kin4">\[\begin{equation}
 \begin{aligned}
@@ -345,8 +352,21 @@ t_{1/2} &amp;= \frac{[\mathrm{A}]_0}{2k_0}.
 \end{aligned}
 \tag{15.5}
 \end{equation}\]</span></p>
-<p>Using the integrated rate law to plot the concentration of the reactant, <span class="math inline">\([\mathrm{A}]\)</span>, as a function of time, <span class="math inline">\(t\)</span>, we obtain an exponential decay, as in Figure XXX. However, if we plot the logarithm of the concentration, <span class="math inline">\(\ln[\mathrm{A}]\)</span>, as a function of time, we obtain a line with angular coefficient <span class="math inline">\(-k_1\)</span>, as in the plot of Figure XXX. From eq. <a href="Kinetics.html#eq:kin7">(15.5)</a>, we can also obtain the units for the rate coefficient for a first-order reaction, which typically is <span class="math inline">\(\frac{1}{\mathrm{s}}\)</span>, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.
-The half-life of a first-order reaction is:</p>
+<p>Using the integrated rate law to plot the concentration of the reactant, <span class="math inline">\([\mathrm{A}]\)</span>, as a function of time, <span class="math inline">\(t\)</span>, we obtain an exponential decay, as in Figure <a href="Kinetics.html#fig:figk2">15.2</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk2"></span>
+<img src="pchem1_files/figure-html/figk2-1.png" alt="Reaction Rate Plot for a First-Order Reaction." width="672" />
+<p class="caption">
+Figure 15.2: Reaction Rate Plot for a First-Order Reaction.
+</p>
+</div>
+<p>However, if we plot the logarithm of the concentration, <span class="math inline">\(\ln[\mathrm{A}]\)</span>, as a function of time, we obtain a line with angular coefficient <span class="math inline">\(-k_1\)</span>, as in the plot of Figure <a href="Kinetics.html#fig:figk3">15.3</a>. From eq. <a href="Kinetics.html#eq:kin7">(15.5)</a>, we can also obtain the units for the rate coefficient for a first-order reaction, which typically is <span class="math inline">\(\frac{1}{\mathrm{s}}\)</span>, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk3"></span>
+<img src="pchem1_files/figure-html/figk3-1.png" alt="Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axes is ln[A]." width="672" />
+<p class="caption">
+Figure 15.3: Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axes is ln[A].
+</p>
+</div>
+<p>The half-life of a first-order reaction is:</p>
 <p><span class="math display" id="eq:kin8">\[\begin{equation}
 \begin{aligned}
 \ln \frac{\frac{1}{2}[\mathrm{A}]_0}{[\mathrm{A}]_0}&amp;=-k_1 t_{1/2}\\
@@ -360,7 +380,7 @@ t_{1/2} &amp;= \frac{\ln 2}{k_1}.
 <h3><span class="header-section-number">15.1.3</span> Second-order reaction</h3>
 <p>A reaction is second-order when the sum of the reaction orders is two. Elementary second-order reactions are also called <em>bimolecular reactions</em>. There are two possibilities, a simple one, where the reaction order of one reagent is two, or a more complicated one, with two reagents having each a reaction order of one.</p>
 <ul>
-<li><p>For the simple case, we can write the reaction as:
+<li>For the simple case, we can write the reaction as:
 <span class="math display">\[\begin{equation}
 2\mathrm{A}\rightarrow \text{products}
 \end{equation}\]</span>
@@ -378,7 +398,15 @@ Following the same procedure used for the two previous cases, we can obtain the 
 \end{aligned}
 \tag{15.8}
 \end{equation}\]</span>
-As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, <span class="math inline">\(\frac{1}{[\mathrm{A}]}\)</span>, as a function of time, <span class="math inline">\(t\)</span>, we obtain a line with angular coefficient <span class="math inline">\(+k_2\)</span>, as in the plot of Figure XXX. Notice that the line has a <em>positive</em> angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of <span class="math inline">\(k\)</span> for a simple second order reaction are calculated from eq. <a href="Kinetics.html#eq:kin11">(15.8)</a> and typically are <span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span>.
+As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, <span class="math inline">\(\frac{1}{[\mathrm{A}]}\)</span>, as a function of time, <span class="math inline">\(t\)</span>, we obtain a line with angular coefficient <span class="math inline">\(+k_2\)</span>, as in the plot of Figure <a href="Kinetics.html#fig:figk4">15.4</a>.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:figk4"></span>
+<img src="pchem1_files/figure-html/figk4-1.png" alt="Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axes is 1/[A]." width="672" />
+<p class="caption">
+Figure 15.4: Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axes is 1/[A].
+</p>
+</div>
+<p>Notice that the line has a <em>positive</em> angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of <span class="math inline">\(k\)</span> for a simple second order reaction are calculated from eq. <a href="Kinetics.html#eq:kin11">(15.8)</a> and typically are <span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span>.
 The half-life of a simple second-order reaction is:
 <span class="math display" id="eq:kin12">\[\begin{equation}
 \begin{aligned}
@@ -387,8 +415,9 @@ t_{1/2} &amp;= \frac{1}{k_2 [\mathrm{A}]_0},
 \end{aligned}
 \tag{15.9}
 \end{equation}\]</span>
-which, perhaps not surprisingly, depends on the initial concentration of the reactant, <span class="math inline">\([\mathrm{A}]_0\)</span>. Therefore, if we start with a higher concentration of the reactant, the half-life will be shorter, and the reaction will be faster. An example of simple second-order behavior is the reaction <span class="math inline">\(\mathrm{NO}_2 + \mathrm{CO} \rightarrow \mathrm{NO} + \mathrm{CO}_2\)</span>, which is second-order in <span class="math inline">\(\mathrm{NO}_2\)</span> and zeroth-order in <span class="math inline">\(\mathrm{CO}\)</span>.</p></li>
-<li><p>For the complex second-order case, the reaction is:
+which, perhaps not surprisingly, depends on the initial concentration of the reactant, <span class="math inline">\([\mathrm{A}]_0\)</span>. Therefore, if we start with a higher concentration of the reactant, the half-life will be shorter, and the reaction will be faster. An example of simple second-order behavior is the reaction <span class="math inline">\(\mathrm{NO}_2 + \mathrm{CO} \rightarrow \mathrm{NO} + \mathrm{CO}_2\)</span>, which is second-order in <span class="math inline">\(\mathrm{NO}_2\)</span> and zeroth-order in <span class="math inline">\(\mathrm{CO}\)</span>.</p>
+<ul>
+<li>For the complex second-order case, the reaction is:
 <span class="math display">\[\begin{equation}
 \mathrm{A}+\mathrm{B}\rightarrow \text{products}
 \end{equation}\]</span>
@@ -403,7 +432,7 @@ The differential equation in eq. <a href="Kinetics.html#eq:kin14">(15.10)</a> ha
 \tag{15.11}
 \end{equation}\]</span>
 The units of <span class="math inline">\(k\)</span> for a complex second order reaction can be calculated from eq. <a href="Kinetics.html#eq:kin15">(15.11)</a>, and are the same as those for the simple case, <span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span>.
-The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.</p></li>
+The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.</li>
 </ul>
 </div>
 <div id="third-and-higher-orders-reaction" class="section level3" number="15.1.4">
@@ -465,14 +494,24 @@ The half-life of a complex second-order reaction cannot be easily written since 
 \begin{aligned}
 \left[\mathrm{C}\right] &amp;= [\mathrm{A}]_0-[\mathrm{A}]-[\mathrm{B}] \\
 &amp;= [\mathrm{A}]_0-[\mathrm{A}]_0 \exp(-k_1 t)-\frac{k_1}{k_2-k_1} [\mathrm{A}]_0 [\exp(-k_1t)-\exp(-k_2t)] \\
-&amp;= [\mathrm{A}]_0\left\{1+\frac{1}{k_2-k_1} [-k_2 \exp(-k_1t)+ k_1 \exp(-k_2t)] \right\}.
+&amp;= [\mathrm{A}]_0\left\{1+\frac{-k_2 \exp(-k_1t)+ k_1 \exp(-k_2t)}{k_2-k_1} \right\}.
 \end{aligned}
 \tag{15.18}
 \end{equation}\]</span></p>
-<p>From these results, we can distinguish two extreme behaviors. The first one is observed when <span class="math inline">\(k_1 \gg k_2\)</span>, and it produces a plot of the concentration of species with respect to time reported in Figure XXX. This behavior is observed when a process undergoing a series of consecutive reactions present a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equate the rate of the slowest step.</p>
-<p>Figure XXX</p>
-<p>The second behavior is observed when <span class="math inline">\(k_1\ll k_2\)</span>, and it produces the plot in Figure XXX. In this case, the concentration of the intermediate species <span class="math inline">\(B\)</span> is not relevant throughout the process. This process is a reaction going directly from <span class="math inline">\(A\)</span> to <span class="math inline">\(C\)</span>.</p>
-<p>Figure XXX.</p>
+<p>From these results, we can distinguish two extreme behaviors. The first one is observed when <span class="math inline">\(k_1 \cong k_2\)</span>, and it produces a plot of the concentration of species with respect to time reported in Figure <a href="Kinetics.html#fig:figk5">15.5</a>. This behavior is observed when a process undergoing a series of consecutive reactions present a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equate the rate of the slowest step.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk5"></span>
+<img src="pchem1_files/figure-html/figk5-1.png" alt="Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step." width="672" />
+<p class="caption">
+Figure 15.5: Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step.
+</p>
+</div>
+<p>The second behavior is observed when <span class="math inline">\(k_1\ll k_2\)</span>, and it produces the plot in Figure <a href="Kinetics.html#fig:figk6">15.6</a> In this case, the concentration of the intermediate species <span class="math inline">\(B\)</span> is not relevant throughout the process, and the rate-determining step is the first reaction. As such, the process has the same rate law as an elementary reaction going directly from <span class="math inline">\(A\)</span> to <span class="math inline">\(C\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk6"></span>
+<img src="pchem1_files/figure-html/figk6-1.png" alt="Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step.." width="672" />
+<p class="caption">
+Figure 15.6: Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step..
+</p>
+</div>
 <p>Since the concentration of <span class="math inline">\(B\)</span> is small and relatively constant throughout the process, <span class="math inline">\(\frac{d[\mathrm{B}]}{dT}=0\)</span>. We can then simplify the mathematical treatment of these reactions by eliminating it from the process altogether. This simplification is known as the <em>steady-state approximation</em>. It is used in chemical kinetics to study processes that undergo a series of reactions producing intermediate species whose concentrations are constants throughout the entire process.</p>
 <p><span class="math display" id="eq:kincomp8">\[\begin{equation}
 \begin{aligned}
@@ -504,7 +543,14 @@ A &amp;   &amp; \\
 \end{aligned}
 \tag{15.13}
 \end{equation}\]</span></p>
-<p>The concentration of each of the species can then be plot against time, obtaining the three different behaviors reported in Figure XXX. An important relationship that can be derived from eq. <a href="Kinetics.html#eq:kincomp2">(15.13)</a> is that:</p>
+<p>The concentration of each of the species can then be plotted against time, obtaining the diagram reported in Figure <a href="Kinetics.html#fig:figk7">15.7</a>. The final concentrations of the products, <span class="math inline">\([\mathrm{B}]_f\)</span> and <span class="math inline">\([\mathrm{C}]_f\)</span>, will depend on the values of the two rate coefficients. For example, if <span class="math inline">\(k_1&gt;k_2\)</span>, <span class="math inline">\([\mathrm{B}]_f&gt;[\mathrm{C}]_f\)</span>, as in Figure <a href="Kinetics.html#fig:figk7">15.7</a>, but if <span class="math inline">\(k_1&lt;k_2\)</span>, <span class="math inline">\([\mathrm{B}]_f&lt;[\mathrm{C}]_f\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk7"></span>
+<img src="pchem1_files/figure-html/figk7-1.png" alt="Concentration Plot for a Process with Two Competitive Reactions." width="672" />
+<p class="caption">
+Figure 15.7: Concentration Plot for a Process with Two Competitive Reactions.
+</p>
+</div>
+<p>An important relationship that can be derived from eq. <a href="Kinetics.html#eq:kincomp2">(15.13)</a> is that:</p>
 <p><span class="math display" id="eq:kincomp3">\[\begin{equation}
 \frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
 \tag{15.14}
@@ -532,9 +578,14 @@ A &amp;   &amp; \\
 \end{aligned}
 \tag{15.21}
 \end{equation}\]</span></p>
-<p>These formulas can then be used to obtain the plots in Figure XXX.</p>
-<p>Figure XXX.</p>
-<p>As can be seen from the plots in Figure XXX, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> don’t change. These equilibrium concentrations can be calculated replacing <span class="math inline">\(t=\infty\)</span> in eq. <a href="Kinetics.html#eq:kinopp1">(15.20)</a>:</p>
+<p>These formulas can then be used to obtain the plots in Figure <a href="Kinetics.html#fig:figkK">15.8</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:figkK"></span>
+<img src="pchem1_files/figure-html/figkK-1.png" alt="Concentration Plot for a Process with Two Opposed Reactions." width="672" />
+<p class="caption">
+Figure 15.8: Concentration Plot for a Process with Two Opposed Reactions.
+</p>
+</div>
+<p>As can be seen from the plots in Figure <a href="Kinetics.html#fig:figkK">15.8</a>, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> don’t change. These equilibrium concentrations can be calculated replacing <span class="math inline">\(t=\infty\)</span> in eq. <a href="Kinetics.html#eq:kinopp1">(15.20)</a>:</p>
 <p><span class="math display" id="eq:kinopp3">\[\begin{equation}
 \begin{aligned}
 \left[\mathrm{A} \right] _{\mathrm{eq}} &amp;= [\mathrm{A}]_0 \frac{k_{-1}}{k_1+k_{-1}} \\
@@ -624,37 +675,37 @@ A &amp;   &amp; \\
 \text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}
 \tag{15.24}
 \end{equation}\]</span></p>
-<p>by designing three experiment, where the initial concentrations of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> are appropriately changed. For example, let’s consider the following experimental data:</p>
+<p>by designing three experiment, where the initial concentrations of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> are appropriately changed. For example, let’s consider the following experimental data from three different experiments:</p>
 <table>
 <colgroup>
-<col width="11%" />
-<col width="26%" />
-<col width="26%" />
-<col width="35%" />
+<col width="17%" />
+<col width="23%" />
+<col width="23%" />
+<col width="36%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
 <th align="center"><span class="math inline">\([\mathrm{A}]_0 \; (\text{M})\)</span></th>
 <th align="center"><span class="math inline">\([\mathrm{A}]_0 \; (\text{M})\)</span></th>
-<th align="center">Initial rate <span class="math inline">\(\left(\frac{M}{s}\right)\)</span></th>
+<th align="center"><span class="math inline">\(\text{initial rate}\;\left(\frac{M}{s}\right)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Experiment 1:</td>
+<td align="left"><span class="math inline">\(\text{Experiment 1:}\)</span></td>
 <td align="center">0.10</td>
 <td align="center">0.10</td>
 <td align="center">4.32</td>
 </tr>
 <tr class="even">
-<td align="left">Experiment 2:</td>
+<td align="left"><span class="math inline">\(\text{Experiment 2:}\)</span></td>
 <td align="center">0.15</td>
 <td align="center">0.10</td>
 <td align="center">9.70</td>
 </tr>
 <tr class="odd">
-<td align="left">Experiment 3:</td>
+<td align="left"><span class="math inline">\(\text{Experiment 3:}\)</span></td>
 <td align="center">0.10</td>
 <td align="center">0.20</td>
 <td align="center">4.29</td>
@@ -721,9 +772,20 @@ k=A\exp\left( \frac{E_a}{RT}\right),
 \ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{RT}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
 \tag{15.27}
 \end{equation}\]</span></p>
-<p>which gives the plot of Figure XXX, from which <span class="math inline">\(E_a\)</span> can be determined.</p>
-<p>Figure XXX</p>
-<p>From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure XXX. The reaction coordinate is defined as the minimum energy path that connects the reactants with the products.</p>
+<p>which gives the plot of Figure <a href="Kinetics.html#fig:figk8">15.9</a>, from which <span class="math inline">\(E_a\)</span> can be determined.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk8"></span>
+<img src="pchem1_files/figure-html/figk8-1.png" alt="Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures." width="672" />
+<p class="caption">
+Figure 15.9: Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures.
+</p>
+</div>
+<p>From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure <a href="Kinetics.html#fig:figk9">15.10</a>.<a href="#fn60" class="footnote-ref" id="fnref60"><sup>60</sup></a> The reaction coordinate is defined as the minimum energy path that connects the reactants with the products.</p>
+<div class="figure" style="text-align: center"><span id="fig:figk9"></span>
+<img src="img/Rxn_coordinate_diagram_5.PNG" alt="Reaction Coordinate Diagram for a Typical Reaction." width="70%" />
+<p class="caption">
+Figure 15.10: Reaction Coordinate Diagram for a Typical Reaction.
+</p>
+</div>
 
 </div>
 </div>
@@ -732,6 +794,7 @@ k=A\exp\left( \frac{E_a}{RT}\right),
 <ol start="58">
 <li id="fn58"><p>Notice how large these numbers are for uranium. To put these numbers in perspective, we can compare them with the half-life of the most unstable isotope of plutonium, <span class="math inline">\(^{241}\mathrm{Pu}\)</span>, which is <span class="math inline">\(t_{1/2}=14.1\)</span> years.<a href="Kinetics.html#fnref58" class="footnote-back">↩︎</a></p></li>
 <li id="fn59"><p>In theory, both <span class="math inline">\(A\)</span> and <span class="math inline">\(E_a\)</span> show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.<a href="Kinetics.html#fnref59" class="footnote-back">↩︎</a></p></li>
+<li id="fn60"><p>This plot is taken from <a href="https://en.wikipedia.org/wiki/Transition_state_theory">Wikipedia</a> and distributed under CC-BY-SA license.<a href="Kinetics.html#fnref60" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

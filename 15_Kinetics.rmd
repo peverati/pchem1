@@ -34,7 +34,25 @@ Separating the variables $[\mathrm{A}]$ and $t$ of eq. \@ref(eq:kin2) and integr
 (\#eq:kin3)
 \end{equation}
 
-Using the integrated rate law, we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of $[\mathrm{A}]$ as a function of $t$, therefore, will result in a straight line with an angular coefficient equal to $-k_0$, as in the plot of Figure XXX. Eq. \@ref(eq:kin3) also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically $\frac{\mathrm{M}}{\mathrm{s}}$, with $\mathrm{M}$ being the molar concentration in $\frac{\mathrm{mol}}{\mathrm{L}}$ and $s$ the time in seconds.
+Using the integrated rate law, we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of $[\mathrm{A}]$ as a function of $t$, therefore, will result in a straight line with an angular coefficient equal to $-k_0$, as in the plot of Figure \@ref(fig:figk1). 
+
+```{r figk1, echo=FALSE, fig.align='center', fig.cap='Reaction Rate Plot for a Zeroth-Order Reaction.',fig.asp = .62}
+x <- seq(0,4,0.1)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+par(mar=c(4,4,1,4))
+plot(x, -0.4*x+1.6,
+     xlim=c(0, 4),
+     ylim=c(0, 2),
+     type="l",
+     ylab = "[A]", xlab = "t", col = "#2E9FDF")
+arrows(1, 0.75,2.5,0.75 , length=0, angle=90, code=3, lty="dotted")
+text(1.5,0.85, expression(paste('-k'[0])), col = "black")
+legend("topleft", inset=.03, expression(paste("zeroth-order reaction")),box.col = "white", bg = "white", adj=0.15)
+```
+
+Eq. \@ref(eq:kin3) also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically $\frac{\mathrm{M}}{\mathrm{s}}$, with $\mathrm{M}$ being the molar concentration in $\frac{\mathrm{mol}}{\mathrm{L}}$ and $s$ the time in seconds.
 The half-life of a zero order reaction can be calculated from eq. \@ref(eq:kin3), by replacing $[\mathrm{A}]$ with $\frac{1}{2}[\mathrm{A}]_0$:
 
 \begin{equation}
@@ -72,7 +90,40 @@ Following the usual blueprint of separating the variables, and integrating both 
 (\#eq:kin7)
 \end{equation}
 
-Using the integrated rate law to plot the concentration of the reactant, $[\mathrm{A}]$, as a function of time, $t$, we obtain an exponential decay, as in Figure XXX. However, if we plot the logarithm of the concentration, $\ln[\mathrm{A}]$, as a function of time, we obtain a line with angular coefficient $-k_1$, as in the plot of Figure XXX. From eq. \@ref(eq:kin7), we can also obtain the units for the rate coefficient for a first-order reaction, which typically is $\frac{1}{\mathrm{s}}$, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.
+Using the integrated rate law to plot the concentration of the reactant, $[\mathrm{A}]$, as a function of time, $t$, we obtain an exponential decay, as in Figure \@ref(fig:figk2). 
+
+```{r figk2, echo=FALSE, fig.align='center', fig.cap='Reaction Rate Plot for a First-Order Reaction.',fig.asp = .62}
+x <- seq(0,4,0.1)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+par(mar=c(4,4,1,4))
+plot(x, 1.6*exp(-0.8*x),
+     xlim=c(0, 4),
+     ylim=c(0, 2),
+     type="l",
+     ylab = "[A]", xlab = "t", col = "#2E9FDF")
+legend("topleft", inset=.03, expression(paste("first-order reaction")),box.col = "white", bg = "white", adj=0.15)
+```
+
+However, if we plot the logarithm of the concentration, $\ln[\mathrm{A}]$, as a function of time, we obtain a line with angular coefficient $-k_1$, as in the plot of Figure \@ref(fig:figk3). From eq. \@ref(eq:kin7), we can also obtain the units for the rate coefficient for a first-order reaction, which typically is $\frac{1}{\mathrm{s}}$, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.
+
+```{r figk3, echo=FALSE, fig.align='center', fig.cap='Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axes is ln[A].',fig.asp = .62}
+x <- seq(0,4,0.1)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+par(mar=c(4,4,1,4))
+plot(x, -0.4*x+1.6,
+     xlim=c(0, 4),
+     ylim=c(0, 2),
+     type="l",
+     ylab = "ln[A]", xlab = "t", col = "darkgreen")
+arrows(1, 0.75,2.5,0.75 , length=0, angle=90, code=3, lty="dotted")
+text(1.5,0.85, expression(paste('-k'[1])), col = "black")
+legend("topleft", inset=.03, expression(paste("first-order reaction")),box.col = "white", bg = "white", adj=0.15)
+```
+
 The half-life of a first-order reaction is:
 
 \begin{equation}
@@ -106,7 +157,25 @@ Following the same procedure used for the two previous cases, we can obtain the 
 \end{aligned}
 (\#eq:kin11)
 \end{equation}
-As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, $\frac{1}{[\mathrm{A}]}$, as a function of time, $t$, we obtain a line with angular coefficient $+k_2$, as in the plot of Figure XXX. Notice that the line has a *positive* angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of $k$ for a simple second order reaction are calculated from eq. \@ref(eq:kin11) and typically are $\frac{1}{\mathrm{M}\cdot \mathrm{s}}$.
+As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, $\frac{1}{[\mathrm{A}]}$, as a function of time, $t$, we obtain a line with angular coefficient $+k_2$, as in the plot of Figure \@ref(fig:figk4). 
+
+```{r figk4, echo=FALSE, fig.align='center', fig.cap='Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axes is 1/[A].',fig.asp = .62}
+x <- seq(0,4,0.1)
+i <- 0.2
+f <- 1
+p1 <- 0.5
+par(mar=c(4,4,1,4))
+plot(x, ((1/3)+0.4*x),
+     xlim=c(0, 4),
+     ylim=c(0, 2),
+     type="l",
+     ylab = "1/[A]", xlab = "t", col = "orange")
+arrows(0.8, 0.75,2.5,0.75 , length=0, angle=90, code=3, lty="dotted")
+text(1.7,0.85, expression(paste('+k'[2])), col = "black")
+legend("topleft", inset=.03, expression(paste("second-order reaction")),box.col = "white", bg = "white", adj=0.15)
+```
+
+Notice that the line has a *positive* angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of $k$ for a simple second order reaction are calculated from eq. \@ref(eq:kin11) and typically are $\frac{1}{\mathrm{M}\cdot \mathrm{s}}$.
 The half-life of a simple second-order reaction is:
 \begin{equation}
 \begin{aligned}
@@ -206,19 +275,73 @@ We can then use both $[\mathrm{A}]$, from eq. \@ref(eq:kincomp2), and $[\mathrm{
 \begin{aligned}
 \left[\mathrm{C}\right] &= [\mathrm{A}]_0-[\mathrm{A}]-[\mathrm{B}] \\
 &= [\mathrm{A}]_0-[\mathrm{A}]_0 \exp(-k_1 t)-\frac{k_1}{k_2-k_1} [\mathrm{A}]_0 [\exp(-k_1t)-\exp(-k_2t)] \\
-&= [\mathrm{A}]_0\left\{1+\frac{1}{k_2-k_1} [-k_2 \exp(-k_1t)+ k_1 \exp(-k_2t)] \right\}.
+&= [\mathrm{A}]_0\left\{1+\frac{-k_2 \exp(-k_1t)+ k_1 \exp(-k_2t)}{k_2-k_1} \right\}.
 \end{aligned}
 (\#eq:kincomp7)
 \end{equation}
 
-From these results, we can distinguish two extreme behaviors. The first one is observed when $k_1 \gg k_2$, and it produces a plot of the concentration of species with respect to time reported in Figure XXX. This behavior is observed when a process undergoing a series of consecutive reactions present a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equate the rate of the slowest step.
+From these results, we can distinguish two extreme behaviors. The first one is observed when $k_1 \cong k_2$, and it produces a plot of the concentration of species with respect to time reported in Figure \@ref(fig:figk5). This behavior is observed when a process undergoing a series of consecutive reactions present a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equate the rate of the slowest step.
 
-Figure XXX
+```{r figk5, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step.',fig.asp = .62}
+x <- seq(0,100,0.1)
+i <- 0.2
+f <- 1
+k1 <- 0.08
+k2 <- k1/2
+par(mar=c(4,4,1,4))
+plot(x, exp(-k1*x),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "#2E9FDF")
+par(new=TRUE)
+plot(x, k1/(k2-k1)*(exp(-k1*x)-exp(-k2*x)),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "red")
+par(new=TRUE)
+plot(x, (-k2*exp(-k1*x)+k1*exp(-k2*x))/(k2-k1)+1,
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "green")
+text(5,0.9, expression(paste('[A]')), col = "#2E9FDF")
+text(20,0.55, expression(paste('[B]')), col = "red")
+text(95,0.9, expression(paste('[C]')), col = "green")
+legend(25,1, inset=.03, expression(paste(k[1]," = 2",k[2]," = 0.08 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
+```
+The second behavior is observed when $k_1\ll k_2$, and it produces the plot in Figure \@ref(fig:figk6) In this case, the concentration of the intermediate species $B$ is not relevant throughout the process, and the rate-determining step is the first reaction. As such, the process has the same rate law as an elementary reaction going directly from $A$ to $C$.
 
-The second behavior is observed when $k_1\ll k_2$, and it produces the plot in Figure XXX. In this case, the concentration of the intermediate species $B$ is not relevant throughout the process. This process is a reaction going directly from $A$ to $C$. 
-
-Figure XXX. 
-
+```{r figk6, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step..',fig.asp = .62}
+x <- seq(0,100,0.1)
+i <- 0.2
+f <- 1
+k1 <- 0.08
+k2 <- k1/0.04
+par(mar=c(4,4,1,4))
+plot(x, exp(-k1*x),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "#2E9FDF")
+par(new=TRUE)
+plot(x, k1/(k2-k1)*(exp(-k1*x)-exp(-k2*x)),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "red")
+par(new=TRUE)
+plot(x, (-k2*exp(-k1*x)+k1*exp(-k2*x))/(k2-k1)+1,
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "green")
+text(5,0.9, expression(paste('[A]')), col = "#2E9FDF")
+text(10,0.08, expression(paste('[B]')), col = "red")
+text(95,0.95, expression(paste('[C]')), col = "green")
+legend(40,0.95, inset=.03, expression(paste(k[1]," = 0.04",k[2]," = 0.08 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
+```
 Since the concentration of $B$ is small and relatively constant throughout the process, $\frac{d[\mathrm{B}]}{dT}=0$. We can then simplify the mathematical treatment of these reactions by eliminating it from the process altogether. This simplification is known as the *steady-state approximation*. It is used in chemical kinetics to study processes that undergo a series of reactions producing intermediate species whose concentrations are constants throughout the entire process.
 
 \begin{equation}
@@ -255,7 +378,39 @@ Assuming that each step follows first order kinetic, we can write:
 (\#eq:kincomp2)
 \end{equation}
 
-The concentration of each of the species can then be plot against time, obtaining the three different behaviors reported in Figure XXX. An important relationship that can be derived from eq. \@ref(eq:kincomp2) is that:
+The concentration of each of the species can then be plotted against time, obtaining the diagram reported in Figure \@ref(fig:figk7). The final concentrations of the products, $[\mathrm{B}]_f$ and $[\mathrm{C}]_f$, will depend on the values of the two rate coefficients. For example, if $k_1>k_2$, $[\mathrm{B}]_f>[\mathrm{C}]_f$, as in Figure \@ref(fig:figk7), but if $k_1<k_2$, $[\mathrm{B}]_f<[\mathrm{C}]_f$.
+
+```{r figk7, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Competitive Reactions.',fig.asp = .62}
+x <- seq(0,100,0.1)
+i <- 0.2
+f <- 1
+k1 <- 0.08
+k2 <- k1/2
+par(mar=c(4,4,1,4))
+plot(x, exp((-k1+k2)*x),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "#2E9FDF")
+par(new=TRUE)
+plot(x, k1/(k1+k2)*(1-exp((-k1+k2)*x)),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "red")
+par(new=TRUE)
+plot(x, k2/(k1+k2)*(1-exp((-k1+k2)*x)),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "green")
+text(8,0.9, expression(paste('[A]')), col = "#2E9FDF")
+text(95,0.7, expression(paste('[B]')), col = "red")
+text(95,0.38, expression(paste('[C]')), col = "green")
+legend("top", inset=.03, expression(paste(k[1]," = 2",k[2]," = 0.08 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
+```
+
+An important relationship that can be derived from eq. \@ref(eq:kincomp2) is that:
 
 \begin{equation}
 \frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
@@ -290,11 +445,33 @@ which can then be integrated to:
 (\#eq:kinopp2)
 \end{equation}
 
-These formulas can then be used to obtain the plots in Figure XXX.
+These formulas can then be used to obtain the plots in Figure \@ref(fig:figkK).
 
-Figure XXX.
-
-As can be seen from the plots in Figure XXX, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of $\mathrm{A}$ and $\mathrm{B}$ don't change. These equilibrium concentrations can be calculated replacing $t=\infty$ in eq. \@ref(eq:kinopp1):
+```{r figkK, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Opposed Reactions.',fig.asp = .62}
+x <- seq(0,100,0.1)
+i <- 0.2
+f <- 1
+k1 <- 0.2
+k2 <- k1/2
+par(mar=c(4,4,1,4))
+plot(x, (k2+k1*(exp((-k1+k2)*x)))/(k1+k2),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "#2E9FDF")
+par(new=TRUE)
+plot(x, 1-(k2+k1*(exp((-k1+k2)*x)))/(k1+k2),
+     xlim=c(0, 100),
+     ylim=c(0, 1),
+     type="l",
+     ylab = "[X]/[A]o", xlab = "t", col = "red")
+text(95,0.38, expression(paste('[A]')), col = "#2E9FDF")
+text(95,0.7, expression(paste('[B]')), col = "red")
+text(50,0, expression(paste('t'[eq])), col = "black")
+arrows(45,0,45,1 , length=0, angle=90, code=3, lty="dotted")
+legend(50,1, inset=.03, expression(paste(k[1]," = 2",k[-1]," = 0.2 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
+```
+As can be seen from the plots in Figure \@ref(fig:figkK), after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of $\mathrm{A}$ and $\mathrm{B}$ don't change. These equilibrium concentrations can be calculated replacing $t=\infty$ in eq. \@ref(eq:kinopp1):
 
 \begin{equation}
 \begin{aligned}
@@ -348,13 +525,13 @@ the initial rate method can be used to determine the coefficients of the rate la
 \end{equation}
 
 
-by designing three experiment, where the initial concentrations of $\mathrm{A}$ and $\mathrm{B}$ are appropriately changed. For example, let's consider the following experimental data:
+by designing three experiment, where the initial concentrations of $\mathrm{A}$ and $\mathrm{B}$ are appropriately changed. For example, let's consider the following experimental data from three different experiments:
 
-|               | $[\mathrm{A}]_0 \; (\text{M})$ | $[\mathrm{A}]_0 \; (\text{M})$ | Initial rate  $\left(\frac{M}{s}\right)$ |
-| :------------ | :----------------------------: | :----------------------------: | :--------------------------------------: |
-| Experiment 1: |              0.10              |              0.10              |                   4.32                   |
-| Experiment 2: |              0.15              |              0.10              |                   9.70                   |
-| Experiment 3: |              0.10              |              0.20              |                   4.29                   |
+|                        | $[\mathrm{A}]_0 \; (\text{M})$ | $[\mathrm{A}]_0 \; (\text{M})$ | $\text{initial rate}\;\left(\frac{M}{s}\right)$ |
+| :--------------------- | :----------------------------: | :----------------------------: | :---------------------------------------------: |
+| $\text{Experiment 1:}$ |              0.10              |              0.10              |                      4.32                       |
+| $\text{Experiment 2:}$ |              0.15              |              0.10              |                      9.70                       |
+| $\text{Experiment 3:}$ |              0.10              |              0.20              |                      4.29                       |
 
 we can calculate $\alpha$ by taking the ratio of the rates measured in experiment 1 and 2:
 
@@ -432,8 +609,41 @@ The Arrhenius equation is experimentally useful in its linearized form, which is
 (\#eq:Arr2)
 \end{equation}
 
-which gives the plot of Figure XXX, from which $E_a$ can be determined.
+which gives the plot of Figure \@ref(fig:figk8), from which $E_a$ can be determined.
 
-Figure XXX
+```{r figk8, echo=FALSE, fig.align='center', fig.cap='Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures.',fig.asp = .62}
+x <- seq(0,4,0.1)
+i <- 1
+f <- 3
+p1 <- 0.5
+par(mar=c(4,4,1,4))
+plot(x, -0.4*x+2,
+     xlim=c(0, 4),
+     ylim=c(0, 2),
+     type="l",
+     ylab = "ln k", xlab = "1/T", col = "#2E9FDF",xaxt='n',yaxt='n')
+arrows(1.4,1.1,2.4,1.1 , length=0, angle=90, code=3, lty="dotted")
+text(1.6,1.2, expression(paste("-Ea/R")), col = "black")
 
-From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form  any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure XXX. The reaction coordinate is defined as the minimum  energy path that connects the reactants with the products.
+points(i, -0.4*i+2, col="red", pch=19)
+points(f, -0.4*f+2, col="red", pch=19)
+text(.1+i, .1-0.4*i+2, "1")
+text(.1+f, .1-0.4*f+2, "2")
+
+text(i+0.15,0, expression(paste("1/T"[1])), col = "black")
+text(f+0.15,0, expression(paste("1/T"[2])), col = "black")
+
+
+arrows(i, -0.4*i+2, i, -10 , length=0, angle=90, code=3, lty="dotted")
+arrows(i, -0.4*i+2, -10, -0.4*i+2 , length=0, angle=90, code=3, lty="dotted")
+arrows(f, -0.4*f+2, f, -10 , length=0, angle=90, code=3, lty="dotted")
+arrows(f, -0.4*f+2, -10, -0.4*f+2 , length=0, angle=90, code=3, lty="dotted")
+
+```
+
+From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form  any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure \@ref(fig:figk9).^[This plot is taken from [Wikipedia](https://en.wikipedia.org/wiki/Transition_state_theory) and distributed under CC-BY-SA license.] The reaction coordinate is defined as the minimum  energy path that connects the reactants with the products.
+
+
+```{r figk9, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Reaction Coordinate Diagram for a Typical Reaction.'}
+knitr::include_graphics('./img/Rxn_coordinate_diagram_5.PNG')
+```
