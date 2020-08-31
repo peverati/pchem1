@@ -103,7 +103,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{30 August 2020}
+\date{31 August 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -669,9 +669,7 @@ where we have replaced the total derivative \(d\) with a partial one \(\partial\
 \hypertarget{enthalpy}{%
 \subsection{Internal energy in isobaric processes}\label{enthalpy}}
 
-In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \(P\). \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \eqref{eq:cvstatefunc} gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_V\)?
-
-In order to do so, we can introduce a new state function, called the enthalpy (\(H\)), as:
+In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \(P\). \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \eqref{eq:cvstatefunc} gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_P\)? In order to do so, we can introduce a new state function, called the enthalpy (\(H\)), as:
 
 \begin{equation}
   H = U + PV,
@@ -1885,7 +1883,7 @@ A summary of the four thermodynamic potentials is given in the following table.
 \endhead
 \textbf{Energy} & \(U\) & \(dU=TdS-PdV+\sum_i\mu_i dn_i\) & \(S,V,\{n_i\}\)\tabularnewline
 \textbf{Enthalpy} & \(H\) & \(dH=TdS+VdP+\sum_i\mu_i dn_i\) & \(S,P,\{n_i\}\)\tabularnewline
-\textbf{Helmholtz Free Energy} & \(A\) & \(dA=-Sdt-PdV+\sum_i\mu_i dn_i\) & \(T,V,\{n_i\}\)\tabularnewline
+\textbf{Helmholtz Free Energy} & \(A\) & \(dA=-SdT-PdV+\sum_i\mu_i dn_i\) & \(T,V,\{n_i\}\)\tabularnewline
 \textbf{Gibbs Free Energy} & \(G\) & \(dG=VdP-SdT+\sum_i\mu_i dn_i\) & \(T,P,\{n_i\}\)\tabularnewline
 \bottomrule
 \end{longtable}

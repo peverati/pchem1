@@ -104,7 +104,7 @@ A summary of the four thermodynamic potentials is given in the following table.
 |:-------------------------:|:----------:|:------------------------------:|:---------------------:|
 | **Energy**                |     $U$    |  $dU=TdS-PdV+\sum_i\mu_i dn_i$ |      $S,V,\{n_i\}$      |
 | **Enthalpy**              |     $H$    |  $dH=TdS+VdP+\sum_i\mu_i dn_i$ |      $S,P,\{n_i\}$      |
-| **Helmholtz Free Energy** |     $A$    | $dA=-Sdt-PdV+\sum_i\mu_i dn_i$ |      $T,V,\{n_i\}$      |
+| **Helmholtz Free Energy** |     $A$    | $dA=-SdT-PdV+\sum_i\mu_i dn_i$ |      $T,V,\{n_i\}$      |
 | **Gibbs Free Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
 \normalsize
 
