@@ -113,7 +113,7 @@ legend(0.45,22, expression(abs(W[2-step])),box.col = "white", bg = "white", adj=
 knitr::include_graphics('./img/OEP_Figures.007a.png')
 ```
 
-Starting the analysis of the cycle from point $A$ in Figure \@ref(fig:FigCarnotPV),^[The stages of a Carnot depicted at the beginning of each of this section and the following three ones are taken from [Wikipedia](https://en.wikipedia.org/wiki/Carnot_cycle) and distributed under CC-BY-SA license.] the first transformation we encounter is an isothermal expansion at $T_h$. Since the transformation is isothermal:
+Starting the analysis of the cycle from point $A$ in Figure \@ref(fig:FigCarnotPV),^[The stages of a Carnot depicted at the beginning of each of this section and the following three ones are genetaken from [Wikipedia](https://en.wikipedia.org/wiki/Carnot_cycle), and have been generated and distributed by Author BlyumJ under CC-BY-SA license.] the first transformation we encounter is an isothermal expansion at $T_h$. Since the transformation is isothermal:
 
 \begin{equation}
 U_1 = \overbrace{W_1}^{<0} + \overbrace{Q_1}^{>0} = 0 \Rightarrow Q_1 = -W_1,
