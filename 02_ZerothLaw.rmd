@@ -24,7 +24,7 @@ Notice that when we state the zeroth law, it appears intuitive. However, this is
 ## Calculation of Work {#workint}
 In thermodynamics, work ($W$) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because *work is a path function*. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.  
 
-### Free expansion at constant temperature
+### Free expansion at constant temperature XXX merge with next and change title and figure XXX
 ```{r Fig1c3, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Free Expansion at Constant Temperature of an Ideal Gas.'}
 knitr::include_graphics('./img/OEP_Figures.003.jpeg')
 ```
@@ -81,22 +81,10 @@ where the integration is performed along the *path*. Using eq. \@ref(eq:Wdiff2),
 \end{equation}
 
 where the integral on the left-hand side is taken along the path,^[from here on we will replace the notation $\int_{\text{path}}$ with the more convenient $\int$ and we will keep in mind that the integral of an inexact differential must be taken along the path.] while the integral on the right-hand side can be taken between the initial and final states, since $dV$ is a state function.
-How do we solve the integral in eq. \@ref(eq:Wint)? The pressure in this process is not constant since it decreases throughout the process. Therefore $P$ cannot be moved outside the integral. However, if our gas is ideal, we can calculate the pressure using the ideal gas law $P=\frac{nRT}{V}$, and solve the integral because $n$, $R$, and $T$ are constant:
 
-\begin{equation}
-  W = - nRT \int_{i}^{f} \frac{dV}{V} = -nRT \ln \frac{V_f}{V_i},
-  (\#eq:WintsolvedV)
-\end{equation}
+XXX
 
-which, considering that $P_iV_i=P_fV_f$, can be also written as:
-
-\begin{equation}
-  W = -nRT \ln \frac{P_i}{P_f}.
-  (\#eq:WintsolvedP)
-\end{equation}
-
-
-### Isothermal expansion against a constant external pressure
+### Isothermal expansion against a constant external pressure XXX Remove this and replace with compression. Also show the difference on the PV-plot XXX
 
 ```{r Fig2c3, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.'}
 knitr::include_graphics('./img/OEP_Figures.004.jpeg')

@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-09-01" />
+<meta name="date" content="2020-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,8 +94,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
 <li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Work</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#free-expansion-at-constant-temperature"><i class="fa fa-check"></i><b>2.3.1</b> Free expansion at constant temperature</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#isothermal-expansion-against-a-constant-external-pressure"><i class="fa fa-check"></i><b>2.3.2</b> Isothermal expansion against a constant external pressure</a></li>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#free-expansion-at-constant-temperature-xxx-merge-with-next-and-change-title-and-figure-xxx"><i class="fa fa-check"></i><b>2.3.1</b> Free expansion at constant temperature XXX merge with next and change title and figure XXX</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#isothermal-expansion-against-a-constant-external-pressure-xxx-remove-this-and-replace-with-compression.-also-show-the-difference-on-the-pv-plot-xxx"><i class="fa fa-check"></i><b>2.3.2</b> Isothermal expansion against a constant external pressure XXX Remove this and replace with compression. Also show the difference on the PV-plot XXX</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Heat</a>
 <ul>
@@ -314,7 +314,7 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S_{\text{sys}} } \quad P_
 <div id="entropy-in-isothermal-processes" class="section level3" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Entropy in isothermal processes</h3>
 <ul>
-<li><p>For an ideal gas at constant temperature <span class="math inline">\(\Delta U =0\)</span>, and <span class="math inline">\(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\)</span>. Using the formula for <span class="math inline">\(W_{\mathrm{REV}}\)</span> in either eq. <a href="ZerothLaw.html#eq:WintsolvedV">(2.8)</a> or eq. <a href="ZerothLaw.html#eq:WintsolvedP">(2.9)</a>, we obtain:
+<li><p>For an ideal gas at constant temperature <span class="math inline">\(\Delta U =0\)</span>, and <span class="math inline">\(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\)</span>. Using the formula for <span class="math inline">\(W_{\mathrm{REV}}\)</span> in either eq. <a href="FirstLaw.html#eq:WintsolvedV">(3.22)</a> or eq. <a href="FirstLaw.html#eq:WintsolvedP">(3.23)</a>, we obtain:
 <span class="math display" id="eq:sigconsttV">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
 \tag{7.4}
@@ -363,7 +363,7 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 </div>
 <div id="entropy-in-isochoric-processes" class="section level3" number="7.1.3">
 <h3><span class="header-section-number">7.1.3</span> Entropy in isochoric processes</h3>
-<p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using eq. <a href="ZerothLaw.html#eq:Cvint1">(2.14)</a>. Since the heat exchanged at those conditions equals the energy (eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
+<p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using eq. <a href="ZerothLaw.html#eq:Cvint1">(2.12)</a>. Since the heat exchanged at those conditions equals the energy (eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
 <p><span class="math display" id="eq:sconstV1">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T} dT,
 \tag{7.10}
@@ -376,7 +376,7 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 </div>
 <div id="entropy-in-isobaric-processes" class="section level3" number="7.1.4">
 <h3><span class="header-section-number">7.1.4</span> Entropy in isobaric processes</h3>
-<p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.16)</a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
+<p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.14)</a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
 <p><span class="math display" id="eq:sconstP1">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
 \tag{7.12}
@@ -424,7 +424,7 @@ d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\tex
 \end{aligned}
 \tag{7.17}
 \end{equation}\]</span></p>
-<p>Don’t be confused by the fact that <span class="math inline">\(\Delta S^{\text{sys}}\)</span> is negative. This is <strong><em>not</em></strong> the entropy of the universe! Hence it tells <strong><em>nothing</em></strong> about spontaneity! We can now calculate <span class="math inline">\(\Delta S^{\text{surr}}\)</span> from <span class="math inline">\(Q_{\text{sys}}\)</span>, noting that we can calculate the enthalpy around the same cycle in eq. <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a>. To do that, we already have <span class="math inline">\(\Delta_{\mathrm{fus}}H\)</span> from the given data, and we can calculate <span class="math inline">\(\Delta H_1\)</span> and <span class="math inline">\(\Delta H_3\)</span> using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.16)</a>.</p>
+<p>Don’t be confused by the fact that <span class="math inline">\(\Delta S^{\text{sys}}\)</span> is negative. This is <strong><em>not</em></strong> the entropy of the universe! Hence it tells <strong><em>nothing</em></strong> about spontaneity! We can now calculate <span class="math inline">\(\Delta S^{\text{surr}}\)</span> from <span class="math inline">\(Q_{\text{sys}}\)</span>, noting that we can calculate the enthalpy around the same cycle in eq. <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a>. To do that, we already have <span class="math inline">\(\Delta_{\mathrm{fus}}H\)</span> from the given data, and we can calculate <span class="math inline">\(\Delta H_1\)</span> and <span class="math inline">\(\Delta H_3\)</span> using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.14)</a>.</p>
 <p><span class="math display" id="eq:supercooledsurr">\[\begin{equation}
 \begin{aligned}
 Q^{\text{sys}} &amp; = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\

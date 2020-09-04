@@ -103,7 +103,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{01 September 2020}
+\date{04 September 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -387,8 +387,8 @@ Notice that when we state the zeroth law, it appears intuitive. However, this is
 
 In thermodynamics, work (\(W\)) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because \emph{work is a path function}. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.
 
-\hypertarget{free-expansion-at-constant-temperature}{%
-\subsection{Free expansion at constant temperature}\label{free-expansion-at-constant-temperature}}
+\hypertarget{free-expansion-at-constant-temperature-xxx-merge-with-next-and-change-title-and-figure-xxx}{%
+\subsection{Free expansion at constant temperature XXX merge with next and change title and figure XXX}\label{free-expansion-at-constant-temperature-xxx-merge-with-next-and-change-title-and-figure-xxx}}
 
 \begin{figure}
 
@@ -451,22 +451,11 @@ where the integration is performed along the \emph{path}. Using eq. \eqref{eq:Wd
 \end{equation}
 
 where the integral on the left-hand side is taken along the path,\footnote{from here on we will replace the notation \(\int_{\text{path}}\) with the more convenient \(\int\) and we will keep in mind that the integral of an inexact differential must be taken along the path.} while the integral on the right-hand side can be taken between the initial and final states, since \(dV\) is a state function.
-How do we solve the integral in eq. \eqref{eq:Wint}? The pressure in this process is not constant since it decreases throughout the process. Therefore \(P\) cannot be moved outside the integral. However, if our gas is ideal, we can calculate the pressure using the ideal gas law \(P=\frac{nRT}{V}\), and solve the integral because \(n\), \(R\), and \(T\) are constant:
 
-\begin{equation}
-  W = - nRT \int_{i}^{f} \frac{dV}{V} = -nRT \ln \frac{V_f}{V_i},
-  \label{eq:WintsolvedV}
-\end{equation}
+XXX
 
-which, considering that \(P_iV_i=P_fV_f\), can be also written as:
-
-\begin{equation}
-  W = -nRT \ln \frac{P_i}{P_f}.
-  \label{eq:WintsolvedP}
-\end{equation}
-
-\hypertarget{isothermal-expansion-against-a-constant-external-pressure}{%
-\subsection{Isothermal expansion against a constant external pressure}\label{isothermal-expansion-against-a-constant-external-pressure}}
+\hypertarget{isothermal-expansion-against-a-constant-external-pressure-xxx-remove-this-and-replace-with-compression.-also-show-the-difference-on-the-pv-plot-xxx}{%
+\subsection{Isothermal expansion against a constant external pressure XXX Remove this and replace with compression. Also show the difference on the PV-plot XXX}\label{isothermal-expansion-against-a-constant-external-pressure-xxx-remove-this-and-replace-with-compression.-also-show-the-difference-on-the-pv-plot-xxx}}
 
 \begin{figure}
 
@@ -754,7 +743,7 @@ where the isothermal expansion happens between \(P_i\) and \(P_f\). If the expan
 \begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \begin{equation}
-\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
+\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i) = P_{\text{ext}} \Delta V.
   \label{eq:Warea1}
 \end{equation}
 
@@ -763,7 +752,7 @@ However, if the process happens in two steps, by pausing at position (1) until e
 \begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \begin{equation}
-\left| W_A \right| = P_1 (V_1-V_i)
+\left| W_A \right| = P_1 (V_1-V_i) = P_1 \Delta V_A.
   \label{eq:Warea2}
 \end{equation}
 
@@ -772,7 +761,7 @@ The second process is an expansion between \(P_1\) and \(P_{\text{ext}}\), whose
 \begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \begin{equation}
-\left| W_B \right| = P_f (V_f-V_1)
+\left| W_B \right| = P_f (V_f-V_1) = P_{\text{ext}} \Delta V_B.
   \label{eq:Warea3}
 \end{equation}
 
@@ -781,29 +770,45 @@ The total absolute value of the work for the 2-step process is given by the sum 
 \begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{equation}
-  \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
+  \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 \Delta V_A+P_f \Delta V_B.
   \label{eq:Warea4}
 \end{equation}
 
 As can be easily verified by comparing the shaded areas in the plots, \(\left| W_{\text{2-step}} \right| > \left| W_{\text{1-step}} \right|\).
 
-We can easily extend this procedure to consider processes that happens in 3, 4, 5, \ldots, \(n\) steps. What is the limit of this procedure? In other words, what happens when \(n \rightarrow \infty\)? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve \(\left| W_{\text{max}}\right|\) is achieved in an \(\infty\)-step process, for which the work is calculated as:
+We can easily extend this procedure to consider processes that happens in 3, 4, 5, \ldots, \(n\) steps:
 
 \begin{equation}
-  \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
+  \left| W_{\text{n-step}} \right| = \sum_n P_n \Delta V_n.
+  \label{eq:Wareasum}
+\end{equation}
+
+What is the limit of this procedure? In other words, what happens when \(n \rightarrow \infty\)? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve \(\left| W_{\text{max}}\right|\) is achieved in an \(\infty\)-step process, for which the work is calculated as:
+
+\begin{equation}
+  \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \lim_{\Delta V_n\rightarrow 0} \sum_n^\infty P_n \Delta V = \int_{i}^{f} PdV.
   \label{eq:WintsolvedV2}
 \end{equation}
 
 \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-1} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-2} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-3} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-4}
 
-The integral on the right hand side of eq. \eqref{eq:WintsolvedV2} is similar to the integral that we already solved for eq. \eqref{eq:WintsolvedV}. Using the same trick, we can solve eq. \eqref{eq:WintsolvedV2} for an ideal gas as:
+How do we solve the integral in eq. \eqref{eq:WintsolvedV2}? The pressure in this process is not constant since it changes at each microscopic step throughout the process. Therefore \(P\) cannot be moved outside the integral, as we did in the previous chapter for eq. \eqref{eq:Wint3}. However, if our gas is ideal, we can replace \(P\) using the ideal gas law \(P=\frac{nRT}{V}\), and solve the integral considering that \(n\), \(R\), and \(T\) are constant:
 
 \begin{equation}
-  \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
-  \label{eq:WmaxV}
+  W_{\infty \text{-step}} = - nRT \int_{i}^{f} \frac{dV}{V} = -nRT \ln \frac{V_f}{V_i},
+  \label{eq:WintsolvedV}
 \end{equation}
 
-This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an \(\infty\)-step process.
+which, considering that \(P_iV_i=P_fV_f\), can be also written as:
+
+\begin{equation}
+  W_{\infty \text{-step}} = -nRT \ln \frac{P_i}{P_f}.
+  \label{eq:WintsolvedP}
+\end{equation}
+
+Comparing eq. \eqref{eq:Warea1} to eq. \eqref{eq:WintF} for two processes with the same values of initial and final volume shows how different the values of the work associated with them can be. This fact explains why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an \(\infty\)-step process.
+
+XXX exercise XXX
 
 The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.\footnote{In contrast to a lower bound for expansion processes.} \(\left| W_{\text{min}} \right|\) for compressions is calculated as the area underneath the PV curve, exactly as \(\left| W_{\text{min}} \right|\) for expansions in eq. \eqref{eq:WintsolvedV2}.
 
@@ -844,7 +849,7 @@ For instance, if we perform the expansion in one step, the work associated with 
 and if we also perform the compression in 1-step:\footnote{notice that the work for the compression is positive, as it should be.}
 
 \begin{equation}
-  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_2-V_1}_{<0})>0.
+  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_1-V_2}_{<0})>0.
   \label{eq:Wcomp1}
 \end{equation}
 
