@@ -224,7 +224,7 @@ rect(i,i, f, 0.081*298/f, density = 20, angle = 45,
 ```
 
 \begin{equation}
-\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i) = P_{\text{ext}} \Delta V.
+\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
   (\#eq:Warea1)
 \end{equation}
 
@@ -273,7 +273,7 @@ rect(i,i, p1, 0.081*298/p1, density = 20, angle = 45,
 ```
 
 \begin{equation}
-\left| W_A \right| = P_1 (V_1-V_i) = P_1 \Delta V_A.
+\left| W_A \right| = P_1 (V_1-V_i)
   (\#eq:Warea2)
 \end{equation}
 
@@ -323,7 +323,7 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 ```
 
 \begin{equation}
-\left| W_B \right| = P_f (V_f-V_1) = P_{\text{ext}} \Delta V_B.
+\left| W_B \right| = P_f (V_f-V_1)
   (\#eq:Warea3)
 \end{equation}
 
@@ -372,23 +372,16 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 ```
 
 \begin{equation}
-  \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 \Delta V_A+P_f \Delta V_B.
+  \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
   (\#eq:Warea4)
 \end{equation}
 
 As can be easily verified by comparing the shaded areas in the plots, $\left| W_{\text{2-step}} \right| > \left| W_{\text{1-step}} \right|$.
 
-We can easily extend this procedure to consider processes that happens in 3, 4, 5, ..., $n$ steps:
+We can easily extend this procedure to consider processes that happens in 3, 4, 5, ..., $n$ steps. What is the limit of this procedure? In other words, what happens when $n \rightarrow \infty$? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve $\left| W_{\text{max}}\right|$ is achieved in an $\infty$-step process, for which the work is calculated as:
 
 \begin{equation}
-  \left| W_{\text{n-step}} \right| = \sum_n P_n \Delta V_n.
-  (\#eq:Wareasum)
-\end{equation}
-
-What is the limit of this procedure? In other words, what happens when $n \rightarrow \infty$? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve $\left| W_{\text{max}}\right|$ is achieved in an $\infty$-step process, for which the work is calculated as:
-
-\begin{equation}
-  \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \lim_{\Delta V_n\rightarrow 0} \sum_n^\infty P_n \Delta V = \int_{i}^{f} PdV.
+  \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
   (\#eq:WintsolvedV2)
 \end{equation}
 
@@ -557,24 +550,14 @@ polygon(cord.1x,cord.1y,col='grey60')
 
 ```
 
-
-How do we solve the integral in eq. \@ref(eq:WintsolvedV2)? The pressure in this process is not constant since it changes at each microscopic step throughout the process. Therefore $P$ cannot be moved outside the integral, as we did in the previous chapter for eq. \@ref(eq:Wint3). However, if our gas is ideal, we can replace $P$ using the ideal gas law $P=\frac{nRT}{V}$, and solve the integral considering that $n$, $R$, and $T$ are constant:
-
-\begin{equation}
-  W_{\infty \text{-step}} = - nRT \int_{i}^{f} \frac{dV}{V} = -nRT \ln \frac{V_f}{V_i},
-  (\#eq:WintsolvedV)
-\end{equation}
-
-which, considering that $P_iV_i=P_fV_f$, can be also written as:
+The integral on the right hand side of eq. \@ref(eq:WintsolvedV2) is similar to the integral that we already solved for eq.  \@ref(eq:WintsolvedV). Using the same trick, we can solve eq. \@ref(eq:WintsolvedV2) for an ideal gas as:
 
 \begin{equation}
-  W_{\infty \text{-step}} = -nRT \ln \frac{P_i}{P_f}.
-  (\#eq:WintsolvedP)
+  \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
+  (\#eq:WmaxV)
 \end{equation}
 
-Comparing eq. \@ref(eq:Warea1) to eq. \@ref(eq:WintF) for two processes with the same values of initial and final volume shows how different the values of the work associated with them can be. This fact explains why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an $\infty$-step process.
-
-XXX exercise XXX
+This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an $\infty$-step process.
 
 The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.^[In contrast to a lower bound for expansion processes.] $\left| W_{\text{min}} \right|$ for compressions is calculated as the area underneath the PV curve, exactly as $\left| W_{\text{min}} \right|$ for expansions in eq. \@ref(eq:WintsolvedV2).
 
@@ -610,7 +593,7 @@ For instance, if we perform the expansion in one step, the work associated with 
 and if we also perform the compression in 1-step:^[notice that the work for the compression is positive, as it should be.]
 
 \begin{equation}
-  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_1-V_2}_{<0})>0.
+  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_2-V_1}_{<0})>0.
   (\#eq:Wcomp1)
 \end{equation}
 

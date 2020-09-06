@@ -24,15 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<meta name="date" content="2020-09-05" />
-=======
-<meta name="date" content="2020-08-31" />
->>>>>>> parent of 0e96fae... Fixing pdf, hopefully...
-=======
-<meta name="date" content="2020-08-31" />
->>>>>>> parent of 0e96fae... Fixing pdf, hopefully...
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -102,8 +94,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
 <li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Work</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#free-expansion-at-constant-temperature-xxx-merge-with-next-and-change-title-and-figure-xxx"><i class="fa fa-check"></i><b>2.3.1</b> Free expansion at constant temperature XXX merge with next and change title and figure XXX</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#isothermal-expansion-against-a-constant-external-pressure-xxx-remove-this-and-replace-with-compression.-also-show-the-difference-on-the-pv-plot-xxx"><i class="fa fa-check"></i><b>2.3.2</b> Isothermal expansion against a constant external pressure XXX Remove this and replace with compression. Also show the difference on the PV-plot XXX</a></li>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#free-expansion-at-constant-temperature"><i class="fa fa-check"></i><b>2.3.1</b> Free expansion at constant temperature</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#isothermal-expansion-against-a-constant-external-pressure"><i class="fa fa-check"></i><b>2.3.2</b> Isothermal expansion against a constant external pressure</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Heat</a>
 <ul>
@@ -319,8 +311,8 @@ MathJax.Hub.Config({
 <div id="workint" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Calculation of Work</h2>
 <p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
-<div id="free-expansion-at-constant-temperature-xxx-merge-with-next-and-change-title-and-figure-xxx" class="section level3" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Free expansion at constant temperature XXX merge with next and change title and figure XXX</h3>
+<div id="free-expansion-at-constant-temperature" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Free expansion at constant temperature</h3>
 <div class="figure" style="text-align: center"><span id="fig:Fig1c3"></span>
 <img src="img/OEP_Figures.003.jpeg" alt="Free Expansion at Constant Temperature of an Ideal Gas." width="50%" />
 <p class="caption">
@@ -363,11 +355,20 @@ Figure 2.1: Free Expansion at Constant Temperature of an Ideal Gas.
   \int đ W = W = - \int_{i}^{f} PdV,
   \tag{2.7}
 \end{equation}\]</span></p>
-<p>where the integral on the left-hand side is taken along the path,<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(dV\)</span> is a state function.</p>
-<p>XXX</p>
+<p>where the integral on the left-hand side is taken along the path,<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(dV\)</span> is a state function.
+How do we solve the integral in eq. <a href="ZerothLaw.html#eq:Wint">(2.7)</a>? The pressure in this process is not constant since it decreases throughout the process. Therefore <span class="math inline">\(P\)</span> cannot be moved outside the integral. However, if our gas is ideal, we can calculate the pressure using the ideal gas law <span class="math inline">\(P=\frac{nRT}{V}\)</span>, and solve the integral because <span class="math inline">\(n\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(T\)</span> are constant:</p>
+<p><span class="math display" id="eq:WintsolvedV">\[\begin{equation}
+  W = - nRT \int_{i}^{f} \frac{dV}{V} = -nRT \ln \frac{V_f}{V_i},
+  \tag{2.8}
+\end{equation}\]</span></p>
+<p>which, considering that <span class="math inline">\(P_iV_i=P_fV_f\)</span>, can be also written as:</p>
+<p><span class="math display" id="eq:WintsolvedP">\[\begin{equation}
+  W = -nRT \ln \frac{P_i}{P_f}.
+  \tag{2.9}
+\end{equation}\]</span></p>
 </div>
-<div id="isothermal-expansion-against-a-constant-external-pressure-xxx-remove-this-and-replace-with-compression.-also-show-the-difference-on-the-pv-plot-xxx" class="section level3" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Isothermal expansion against a constant external pressure XXX Remove this and replace with compression. Also show the difference on the PV-plot XXX</h3>
+<div id="isothermal-expansion-against-a-constant-external-pressure" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Isothermal expansion against a constant external pressure</h3>
 <div class="figure" style="text-align: center"><span id="fig:Fig2c3"></span>
 <img src="img/OEP_Figures.004.jpeg" alt="Isothermal Expansion of an Ideal Gas Against a Constant External Pressure." width="50%" />
 <p class="caption">
@@ -378,19 +379,19 @@ Figure 2.2: Isothermal Expansion of an Ideal Gas Against a Constant External Pre
 <p>The integral that describes the work performed by the system in this case involves a transformation at constant external pressure:</p>
 <p><span class="math display" id="eq:Wint2">\[\begin{equation}
   \int đ W = W = - \int_{i}^{f} P_{\text{ext}}dV,
-  \tag{2.8}
+  \tag{2.10}
 \end{equation}\]</span></p>
 <p>which can be easily simplified as:</p>
 <p><span class="math display" id="eq:Wint3">\[\begin{equation}
   W = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i),
-  \tag{2.9}
+  \tag{2.11}
 \end{equation}\]</span></p>
 <p>resulting in the following simple formula to calculate <span class="math inline">\(W\)</span>:</p>
 <p><span class="math display" id="eq:WintF">\[\begin{equation}
   W = -P_{\text{ext}} \Delta V,
-  \tag{2.10}
+  \tag{2.12}
 \end{equation}\]</span></p>
-<p>Comparing eq. <a href="ZerothLaw.html#eq:WintF">(2.10)</a> with eq. <a href="FirstLaw.html#eq:WintsolvedP">(3.23)</a> shows how different this case is from the previous one.</p>
+<p>Comparing eq. <a href="ZerothLaw.html#eq:WintF">(2.12)</a> with eq. <a href="ZerothLaw.html#eq:WintsolvedP">(2.9)</a> shows how different this case is from the previous one.</p>
 </div>
 </div>
 <div id="heatint" class="section level2" number="2.4">
@@ -406,17 +407,17 @@ As you probably recall from general chemistry, the ability of a substance to abs
 <p>This simple definition can be written in mathematical terms as:</p>
 <p><span class="math display" id="eq:Cvdef">\[\begin{equation}
   C_V = \frac{đ Q_V}{n dT} \Rightarrow đ Q_V = n C_V dT.
-  \tag{2.11}
+  \tag{2.13}
 \end{equation}\]</span></p>
-<p>Given a known value of <span class="math inline">\(C_V\)</span>, the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. <a href="ZerothLaw.html#eq:Cvdef">(2.11)</a>:</p>
+<p>Given a known value of <span class="math inline">\(C_V\)</span>, the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. <a href="ZerothLaw.html#eq:Cvdef">(2.13)</a>:</p>
 <p><span class="math display" id="eq:Cvint1">\[\begin{equation}
   đ Q_V = n C_V dT \rightarrow \int đ Q_V = n \int_{T_i}^{T_F}C_V dT \rightarrow Q_V = n C_V \int_{T_i}^{T_F}dT,
-  \tag{2.12}
+  \tag{2.14}
 \end{equation}\]</span></p>
 <p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature, simply becomes:</p>
 <p><span class="math display" id="eq:Cvint">\[\begin{equation}
   Q_V \cong n C_V \Delta T.
-  \tag{2.13}
+  \tag{2.15}
 \end{equation}\]</span></p>
 </div>
 <div id="heatconstp" class="section level3" number="2.4.2">
@@ -428,12 +429,12 @@ As you probably recall from general chemistry, the ability of a substance to abs
 <p>And once again, this mathematical treatment follows:</p>
 <p><span class="math display" id="eq:Cpdef">\[\begin{equation}
   C_P = \frac{đ Q_P}{n dT} \Rightarrow đ Q_P = n C_P dT \rightarrow \int đ Q_P = n \int_{T_i}^{T_F}C_P dT,
-  \tag{2.14}
+  \tag{2.16}
 \end{equation}\]</span></p>
 <p>which result in the simple formula:</p>
 <p><span class="math display" id="eq:Cpint">\[\begin{equation}
   Q_P \cong n C_P \Delta T.
-  \tag{2.15}
+  \tag{2.17}
 \end{equation}\]</span></p>
 
 </div>
