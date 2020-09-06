@@ -593,7 +593,7 @@ For instance, if we perform the expansion in one step, the work associated with 
 and if we also perform the compression in 1-step:^[notice that the work for the compression is positive, as it should be.]
 
 \begin{equation}
-  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_2-V_1}_{<0})>0.
+  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_1-V_2}_{<0})>0.
   (\#eq:Wcomp1)
 \end{equation}
 
