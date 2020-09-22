@@ -289,7 +289,7 @@ Up to this point, we have discussed *reversible* cycles only. Notice that the he
 and, following the same procedure used in section \@ref(entropyint), we can rewrite eq. \@ref(eq:effcIRR) as:
 
 \begin{equation}
-\frac{Q_3}{Q_1} < - \frac{T_l}{T_h} \longrightarrow \frac{Q_3}{T_l} + \frac{Q_1}{T_h} < 0 \longrightarrow \sum_i \frac{Q}{T} < 0,
+\frac{Q^{\text{IRR}}_3}{Q^{\text{IRR}}_1} < - \frac{T_l}{T_h} \longrightarrow \frac{Q^{\text{IRR}}_3}{T_l} + \frac{Q^{\text{IRR}}_1}{T_h} < 0 \longrightarrow \sum_i \frac{Q_{\text{IRR}}}{T_i} < 0,
 (\#eq:effcIRR2)
 \end{equation}
 
