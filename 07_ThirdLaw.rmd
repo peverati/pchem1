@@ -169,7 +169,7 @@ Don't be confused by the fact that $\Delta S^{\text{sys}}$ is negative. This is 
 \begin{equation}
 \begin{aligned}
 Q^{\text{sys}} & = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
-& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) \\ &= -5.6 \; \text{kJ/mol}. \\
+& = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) \\ &= -5.6 \; \text{kJ}. \\
 \\
 \Delta S^{\text{surr}} & = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
 \end{aligned}
@@ -179,7 +179,7 @@ Q^{\text{sys}} & = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)
 Bringing \@ref(eq:supercooledsyst) and \@ref(eq:supercooledsurr) results together, we obtain:
 
 \begin{equation}
-\Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=-0.7 \; \text{J/K}.
+\Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=+0.7 \; \text{J/K}.
 (\#eq:supercooledfinal)
 \end{equation}
 
