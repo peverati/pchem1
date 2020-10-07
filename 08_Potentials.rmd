@@ -33,7 +33,7 @@ dU = TdS-PdV+\sum_i\mu_i dn_i,
 
 where $dn_i$ is the differential change in the number of moles of substance $i$, and the summation extends over all chemical species in the system. 
 
-According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, $S$, volume, $V$, and the numbers of moles $\{n_i\}$.^[In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.] Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.^[For example, we don't always have a simple way to calculate or to measure the entropy]. To emphasize the important connections given by the fundamental equation, we can use the notation $U(S,V,\{n_i\})$ and we can term $S$, $V$, and $\{n_i\}$ **natural variables** of the energy.
+According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, $S$, volume, $V$, and the numbers of moles $\{n_i\}$.^[In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.] Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.^[For example, we don't always have a simple way to calculate or to measure the entropy.] To emphasize the important connections given by the fundamental equation, we can use the notation $U(S,V,\{n_i\})$ and we can term $S$, $V$, and $\{n_i\}$ **natural variables** of the energy.
 
 ## Thermodynamic Potentials {#thermpot}
 
@@ -138,7 +138,7 @@ dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 (\#eq:dhagchem)
 \end{equation}
 
-The latter two cases are particularly interesting since most of chemistry happens at either constant volume (for example, several industrial processes in chemical plants), or constant pressure (for example, most processes in a chemistry lab). Since $dS=0$ is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isenthalpic processes. If a process is not isenthalpic, it increases the entropy of the universe or decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies. 
+The latter two cases are particularly interesting since most of chemistry happens at either constant volume,^[for example, several industrial processes in chemical plants.] or constant pressure.^[for example, most processes in a chemistry lab.] Since $dS=0$ is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies. 
 
 Recalling Clausius theorem:
 
