@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -391,10 +391,10 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
 \]</span></p>
-<p>Let’s analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to <span class="math inline">\(-S\)</span> and the entropy is always positive, <span class="math inline">\(G\)</span> must decrease when <span class="math inline">\(T\)</span> increases at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and vice versa.</p>
+<p>Let’s analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to <span class="math inline">\(-S\)</span> and the entropy is always positive, <span class="math inline">\(G\)</span> must decrease when <span class="math inline">\(T\)</span> increases at constant <span class="math inline">\(P\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and vice versa.</p>
 <p>If we replace this coefficient for <span class="math inline">\(-S\)</span> in the Gibbs equation, eq. <a href="GibbsFree.html#eq:gibbseq">(9.3)</a>, we obtain:</p>
 <p><span class="math display" id="eq:dgconsttt">\[\begin{equation}
-\Delta G = \Delta H + T \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}},
+\Delta G = \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}},
 \tag{9.6}
 \end{equation}\]</span></p>
 <p>and since eq. <a href="GibbsFree.html#eq:dgconsttt">(9.6)</a> includes both <span class="math inline">\(\Delta G\)</span> and its partial derivative with respect to temperature <span class="math inline">\(\left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}}\)</span> we need to rearrange it to include the temperature derivative only. To do so, we can start by evaluating the partial derivative of <span class="math inline">\(\left( \frac{\Delta G}{T} \right)\)</span> using the chain rule:</p>
@@ -405,8 +405,8 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 <p>which, replacing <span class="math inline">\(\Delta G\)</span> from eq. <a href="GibbsFree.html#eq:dgconsttt">(9.6)</a> into eq. <a href="GibbsFree.html#eq:dgconsttt1">(9.7)</a>, becomes:</p>
 <p><span class="math display" id="eq:dgconsttt2">\[\begin{equation}
 \begin{aligned}
-\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[  \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2}\Delta G \right] \\
-&amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}}-\frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{\Delta H}{T^2},
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[ \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}} \right] \\
+&amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}}- \frac{\Delta H}{T^2}-\frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}},
 \end{aligned}
 \tag{9.8}
 \end{equation}\]</span></p>

@@ -103,7 +103,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{09 October 2020}
+\date{14 October 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -2242,12 +2242,12 @@ If we know the behavior of \(G\) as we vary each of the three natural variables 
 \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
 \]
 
-Let's analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to \(-S\) and the entropy is always positive, \(G\) must decrease when \(T\) increases at constant \(T\) and \(\{n_i\}\), and vice versa.
+Let's analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to \(-S\) and the entropy is always positive, \(G\) must decrease when \(T\) increases at constant \(P\) and \(\{n_i\}\), and vice versa.
 
 If we replace this coefficient for \(-S\) in the Gibbs equation, eq. \eqref{eq:gibbseq}, we obtain:
 
 \begin{equation}
-\Delta G = \Delta H + T \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}},
+\Delta G = \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}},
 \label{eq:dgconsttt}
 \end{equation}
 
@@ -2262,8 +2262,8 @@ which, replacing \(\Delta G\) from eq. \eqref{eq:dgconsttt} into eq. \eqref{eq:d
 
 \begin{equation}
 \begin{aligned}
-\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[  \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2}\Delta G \right] \\
-&= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}}-\frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{\Delta H}{T^2},
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[ \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}} \right] \\
+&= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}}- \frac{\Delta H}{T^2}-\frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}},
 \end{aligned}
 \label{eq:dgconsttt2}
 \end{equation}
