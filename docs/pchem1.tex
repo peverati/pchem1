@@ -103,7 +103,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{14 October 2020}
+\date{21 October 2020}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1605,7 +1605,7 @@ Since adiabatic processes happen without the exchange of heat, \(đQ=0\), it wou
 
 \begin{equation}
 \begin{aligned}
-\text{reversible:} \qquad & \frac{đQ_{\mathrm{REV}}}{T} = 0 \longrightarrow \Delta S^{\mathrm{sys}} = 0 \quad \text{(isenthalpic),}\\
+\text{reversible:} \qquad & \frac{đQ_{\mathrm{REV}}}{T} = 0 \longrightarrow \Delta S^{\mathrm{sys}} = 0 \quad \text{(isentropic),}\\
 \text{irreversible:} \qquad & \frac{đQ_{\mathrm{IRR}}}{T}  = 0 \longrightarrow \Delta S^{\mathrm{sys}} \neq 0. \\
 \end{aligned}
 \label{eq:adiabaticent}
@@ -2565,10 +2565,10 @@ To study the temperature dependence of \(K_{\text{eq}}\) we can use eq. \eqref{e
 \label{eq:kptemp1}
 \end{equation}
 
-which we can then differentiate with respect to \(dT\) at constant \(P,\{n_i\}\) on both sides:
+which we can then differentiate with respect to temperature at constant \(P,\{n_i\}\) on both sides:
 
 \begin{equation}
-\left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R} \left[ \partial \left( \frac{\partial \frac{\Delta F^{-\kern-6pt{\ominus}\kern-6pt-}}{RT}}{\partial T} \right) \right]_{P,\{n_i\}},
+\left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R}  \left[ \frac{\partial \left( \frac{\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}}{T} \right)}{\partial T} \right]_{P,\{n_i\}},
 \label{eq:kptemp2}
 \end{equation}
 

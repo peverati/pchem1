@@ -117,10 +117,10 @@ To study the temperature dependence of $K_{\text{eq}}$ we can use eq. \@ref(eq:c
 (\#eq:kptemp1)
 \end{equation}
 
-which we can then differentiate with respect to $dT$ at constant $P,\{n_i\}$ on both sides:
+which we can then differentiate with respect to temperature at constant $P,\{n_i\}$ on both sides:
 
 \begin{equation}
-\left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R} \left[ \partial \left( \frac{\partial \frac{\Delta F^\standardstate}{RT}}{\partial T} \right) \right]_{P,\{n_i\}},
+\left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R}  \left[ \frac{\partial \left( \frac{\Delta G^\standardstate}{T} \right)}{\partial T} \right]_{P,\{n_i\}},
 (\#eq:kptemp2)
 \end{equation}
 
