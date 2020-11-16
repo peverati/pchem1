@@ -51,7 +51,7 @@ Calculate the mole fraction in the vapor phase of a liquid solution composed of 
 \begin{aligned}
 x_{\text{A}}=0.67  \qquad & \qquad x_{\text{B}}=0.33 \\
 P_{\text{A}}^* = 0.03\;\text{bar} \qquad & \qquad P_{\text{B}}^* = 0.10\;\text{bar} \\
-& P_{\text{TOT}}^* = ? \\
+& P_{\text{TOT}} = ? \\
 y_{\text{A}}=? \qquad & \qquad y_{\text{B}}=?
 \end{aligned}
 (\#eq:mc2)
@@ -73,7 +73,7 @@ y_{\text{A}}=\frac{0.02}{0.05}=0.40 & \qquad y_{\text{B}}=\frac{0.03}{0.05}=0.60
 \end{aligned}
 (\#eq:mc4)
 \end{equation}
-Notice how the mole fraction of toluene is m uch higher in the liquid phase, $x_{\text{A}}=0.67$, than in the vapor phase, $y_{\text{A}}=0.40$.
+Notice how the mole fraction of toluene is much higher in the liquid phase, $x_{\text{A}}=0.67$, than in the vapor phase, $y_{\text{A}}=0.40$.
 ```
 
 As is clear from the results of Exercise \@ref(exr:xaya), the concentration of the components in the gas and vapor phases are different. We can also report the mole fraction in the vapor phase as an additional line in the $Px_{\text{B}}$ diagram of Figure \@ref(fig:FigMC2). When both concentrations are reported in one diagram—as in Figure \@ref(fig:FigMC3)—the line where $x_{\text{B}}$ is obtained is called the *liquidus line*, while the line where the $y_{\text{B}}$ is reported is called the *Dew point line*.
@@ -152,7 +152,7 @@ knitr::include_graphics('./img/OEP_Figures.027.jpeg')
 
 ```
 
-While the liquid 1+liquid 2 region (white area in Figure \@ref(fig:FigMC9)) might seem similar to the liquid region that sits on top of it (blue area in Figure \@ref(fig:FigMC9)), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have $f=2-1+1=2$. In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have #f=2-2+1=1$, which means that only one variable is independent of the others. The white region in Figure \@ref(fig:FigMC9) is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure \@ref(fig:FigMC4). In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquid will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100% $\mathrm{A}$ and 100% $\mathrm{B}$, respectively).
+While the liquid 1+liquid 2 region (white area in Figure \@ref(fig:FigMC9)) might seem similar to the liquid region that sits on top of it (blue area in Figure \@ref(fig:FigMC9)), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have $f=2-1+1=2$. In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have $f=2-2+1=1$, which means that only one variable is independent of the others. The white region in Figure \@ref(fig:FigMC9) is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure \@ref(fig:FigMC4). In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquid will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100% $\mathrm{A}$ and 100% $\mathrm{B}$, respectively).
 
 ### Partially miscible 
 The third and final case is undoubtedly the most interesting since several behaviors are possible. In fact, there might be components that are partially miscible at low temperatures but totally miscible at higher temperatures, for which the diagram will assume the general shape depicted in Figure \@ref(fig:FigMC10). A typical example of this behavior is the mixture between water and phenol, whose liquids are completely miscible at $T>66\;^\circ \text{C}$, and only partially miscible below this temperature. The composition of the 2-phases region (white area in Figure \@ref(fig:FigMC10)) is determined by tracing a horizontal line and reading the mole fraction on the line that delimits the area, as for the previous case.^[The only noticeable difference, in this case, is that the two concentrations will be different than 0 and 100% since the component mix partially.] 
