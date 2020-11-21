@@ -108,15 +108,15 @@ At the boiling point, the chemical potential of the solution is equal to the che
 
 \begin{equation}
 \begin{aligned}
-\mu_{\text{solution}} &=\mu_{\text{vap}}=\mu_{\text{solvent}}^{\standardstate} + RT \ln P_{\text{solvent}} \\
-&= \mu_{\text{solvent}}^{\standardstate} + RT \ln \left(x_{\text{solvent}} P_{\text{solvent}}^* \right)\\
-&= \underbrace{\mu_{\text{solvent}}^{\standardstate} + RT \ln P_{\text{solvent}}^*}_{\mu_{\text{solvent}}^*} + RT \ln x_{\text{solvent}} \\
-&= \mu_{\text{solvent}}^* + RT \ln x_{\text{solvent}},
+\mu_{\text{solution}} &=\mu_{\text{vap}}=\mu_{\text{solvent}}^{\standardstate} + RT \ln P_{\text{solution}} \\
+&= \mu_{\text{solvent}}^{\standardstate} + RT \ln \left(x_{\text{solution}} P_{\text{solvent}}^* \right)\\
+&= \underbrace{\mu_{\text{solvent}}^{\standardstate} + RT \ln P_{\text{solvent}}^*}_{\mu_{\text{solvent}}^*} + RT \ln x_{\text{solution}} \\
+&= \mu_{\text{solvent}}^* + RT \ln x_{\text{solution}},
 \end{aligned}
 (\#eq:collA)
 \end{equation}
 
-and since $x_{\text{solvent}}<1$, the logarithmic term in the last expression is negative, and:
+and since $x_{\text{solution}}<1$, the logarithmic term in the last expression is negative, and:
 
 \begin{equation}
 \mu_{\text{solution}} < \mu_{\text{solvent}}^*. 
