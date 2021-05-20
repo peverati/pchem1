@@ -40,7 +40,7 @@ knitr::include_graphics('./img/OEP_Figures.006.jpeg')
 The left side of the Joule apparatus's inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, to guarantee isolation from the environment. When the communication channel between the chambers is open, the gas expands and equilibrates. The work associated with the transformation is:
 
 \begin{equation}
-  đ W=P_{\text{ext}}dV = 0,
+  đ W=-P_{\text{ext}}dV = 0,
   (\#eq:JexpW)
 \end{equation}
 
@@ -60,7 +60,7 @@ From this simple experiment, we can conclude that the internal energy of an idea
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, $đ Q=0$, and the work associated with an adiabatic process becomes a state function:
 
 \begin{equation}
-  dU=đ W=PdV,
+  dU=đ W=-PdV,
   (\#eq:dUadiabatic)
 \end{equation}
 

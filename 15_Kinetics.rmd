@@ -314,7 +314,7 @@ legend(25,1, inset=.03, expression(paste(k[1]," = 2",k[2]," = 0.08 ",s^-1)),box.
 ```
 The second behavior is observed when $k_1\ll k_2$, and it produces the plot in Figure \@ref(fig:figk6) In this case, the concentration of the intermediate species $B$ is not relevant throughout the process, and the rate-determining step is the first reaction. As such, the process has the same rate law as an elementary reaction going directly from $A$ to $C$.
 
-```{r figk6, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step..',fig.asp = .62}
+```{r figk6, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step.',fig.asp = .62}
 x <- seq(0,100,0.1)
 i <- 0.2
 f <- 1
@@ -498,7 +498,7 @@ where $K_C$ is the equilibrium constant as defined in chapter \@ref(ChemicalEqui
 ## Experimental Methods for Determination of Reaction Orders
 To experimentally measure the reaction rate, we need a method to measure concentration changes with respect to time. The simplest way to determine the reaction rate is to monitor the entire reaction as it proceeds and then plot the resulting data differently until a linear plot is found. A summary of the results obtained in section \@ref(diffintk) and that is useful for this task is reported in the following table:
 
-\scriptsize
+\tiny
 |                           |                    *Zeroth-Order*                    |                 *First-Order*                |                   *Simple Second-Order*                   |                                                    *Complex Second-Order*                                                    |
 |---------------------------|:----------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------:|
 | **Differential Rate Law** | $-\frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0$ | $-\frac{d[\mathrm{A}]}{dt}=k_1 [\mathrm{A}]$ |       $-\frac{d[\mathrm{A}]}{dt}=k_2 [\mathrm{A}]^2$      |                                   $-\frac{d[\mathrm{A}]}{dt}=k'_2 [\mathrm{A}][\mathrm{B}]$                                  |

@@ -16,6 +16,14 @@
 \fancyhead[LO]{\slshape\nouppercase{\rightmark}}
 \fancyhead[RE]{\slshape\nouppercase{\leftmark}}
 \fancyhead[RO,LE]{\thepage}
+%no page numbers on empty pages
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+
 
 \makeatletter
 \def\thm@space@setup{%
