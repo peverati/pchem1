@@ -173,7 +173,7 @@ points(0.25,90-90*0.25, col="black", pch=19)
 points(0.75,90-90*0.75, col="black", pch=19)
 text(0.28,90-90*0.25+5, "1", col="black")
 text(0.78,90-90*0.75+5, "2", col="black")
-text(0.4,42, expression(paste(-Delta, H^o,"/T")), col = "black")
+text(0.4,42, expression(paste(-Delta, H^o,"/R")), col = "black")
 legend("topright", inset=.02, "Endothermic",, bg = "white", adj=0.15, box.col = "white")
 
 par(mar=c(0,2,0,2))
@@ -190,7 +190,7 @@ points(0.25,10+90*0.25, col="black", pch=19)
 points(0.75,10+90*0.75, col="black", pch=19)
 text(0.23,10+90*0.25+5, "1", col="black")
 text(0.73,10+90*0.75+5, "2", col="black")
-text(0.5,47, expression(paste(-Delta, H^o,"/T")), col = "black")
+text(0.5,47, expression(paste(-Delta, H^o,"/R")), col = "black")
 legend("topright", inset=.02, "Exothermic",, bg = "white", adj=0.15, box.col = "white")
 par(old.par)
 ```
@@ -201,7 +201,7 @@ par(old.par)
 While $K_P$ is independent of both temperature and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants. 
 
 \begin{equation}
-\left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i}=0 \right)_{T,P}.
+\left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i} \right)_{T,P} =0.
 (\#eq:kppni)
 \end{equation}
 

@@ -67,7 +67,7 @@ A simple criterion to evaluate the entropic contribution of a reaction is to loo
 As we saw in section \@ref(thermpot), the natural variables of the Gibbs free energy are the temperature, $T$, the pressure, $P$, and chemical composition, as the number of moles $\{n_i\}$. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. \@ref(eq:dhagchem2)):
 
 \begin{equation}
-dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 (\#eq:dgtotdiff)
 \end{equation}
 
@@ -233,7 +233,7 @@ dividing both sides by $n$, we obtain:
 which, for a pure substance at $P^\standardstate = 1 \;\text{bar}$, becomes:
 
 \begin{equation}
-\mu^* = \mu^\standardstate + RT \ln P.
+\mu^* - \mu^\standardstate =      RT \ln P.
 (\#eq:dgconstn4)
 \end{equation}
 

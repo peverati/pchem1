@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-11-30" />
+<meta name="date" content="2021-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -325,7 +325,7 @@ Figure 5.2: PV-Diagram of a Carnot Cycle.
 <p><img src="img/OEP_Figures.007a.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Starting the analysis of the cycle from point <span class="math inline">\(A\)</span> in Figure <a href="ThermodynamicCycles.html#fig:FigCarnotPV">5.2</a>,<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> the first transformation we encounter is an isothermal expansion at <span class="math inline">\(T_h\)</span>. Since the transformation is isothermal:</p>
 <p><span class="math display" id="eq:CCst1">\[\begin{equation}
-U_1 = \overbrace{W_1}^{&lt;0} + \overbrace{Q_1}^{&gt;0} = 0 \Rightarrow Q_1 = -W_1,
+\Delta U_1 = \overbrace{W_1}^{&lt;0} + \overbrace{Q_1}^{&gt;0} = 0 \Rightarrow Q_1 = -W_1,
   \tag{5.2}
 \end{equation}\]</span></p>
 <p>and heat and work can be calculated for this stage using either eqs. <a href="ZerothLaw.html#eq:WintsolvedV">(2.8)</a> or <a href="ZerothLaw.html#eq:WintsolvedP">(2.9)</a>:</p>
@@ -343,12 +343,12 @@ U_1 = \overbrace{W_1}^{&lt;0} + \overbrace{Q_1}^{&gt;0} = 0 \Rightarrow Q_1 = -W
 <p><img src="img/OEP_Figures.007b.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The second transformation is an adiabatic expansion between <span class="math inline">\(T_h\)</span> and <span class="math inline">\(T_l\)</span>. Since we are at adiabatic conditions:</p>
 <p><span class="math display" id="eq:CCst2">\[\begin{equation}
-Q_2 = 0 \Rightarrow U_2 = W_2,
+Q_2 = 0 \Rightarrow \Delta U_2 = W_2,
   \tag{5.4}
 \end{equation}\]</span></p>
 <p>and the negative energy (expansion work) can be calculated using:</p>
 <p><span class="math display" id="eq:CCst2b">\[\begin{equation}
-U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{&lt;0 \text{ since } T_\mathrm{l}&lt;T_\mathrm{h}} &lt; 0.
+\Delta U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{&lt;0 \text{ since } T_\mathrm{l}&lt;T_\mathrm{h}} &lt; 0.
   \tag{5.5}
 \end{equation}\]</span></p>
 </div>
@@ -357,7 +357,7 @@ U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{&lt;0 \text{ since } T_\math
 <p><img src="img/OEP_Figures.007c.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The third transformation is an isothermal compression at <span class="math inline">\(T_l\)</span>. The formulas are the same as those used for stage 1, but they will results in heat and work with reversed signs (since this is a compression):</p>
 <p><span class="math display" id="eq:CCst3">\[\begin{equation}
-U_3 = \overbrace{W_3}^{&gt;0} + \overbrace{Q_3}^{&lt;0} = 0 \Rightarrow Q_3 = -W_3,
+\Delta U_3 = \overbrace{W_3}^{&gt;0} + \overbrace{Q_3}^{&lt;0} = 0 \Rightarrow Q_3 = -W_3,
   \tag{5.6}
 \end{equation}\]</span></p>
 <p>and:</p>
@@ -375,15 +375,15 @@ U_3 = \overbrace{W_3}^{&gt;0} + \overbrace{Q_3}^{&lt;0} = 0 \Rightarrow Q_3 = -W
 <p><img src="img/OEP_Figures.007d.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The fourth and final transformation is an adiabatic comprssion that restores the system to point <span class="math inline">\(A\)</span>, bringing it from <span class="math inline">\(T_l\)</span> to <span class="math inline">\(T_h\)</span>. Similarly to stage 3:</p>
 <p><span class="math display" id="eq:CCst4">\[\begin{equation}
-Q_4 = 0 \Rightarrow U_4 = W_4,
+Q_4 = 0 \Rightarrow \Delta U_4 = W_4,
   \tag{5.8}
 \end{equation}\]</span></p>
 <p>Since we are at adiabatic conditions. The energy associated with this process is now positive (compression work), and can be calculated using:</p>
 <p><span class="math display" id="eq:CCst4b">\[\begin{equation}
-U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{&gt;0 \text{ since } T_\mathrm{h}&gt;T_\mathrm{l}} &gt; 0.
+\Delta U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{&gt;0 \text{ since } T_\mathrm{h}&gt;T_\mathrm{l}} &gt; 0.
   \tag{5.9}
 \end{equation}\]</span></p>
-<p>Notice how <span class="math inline">\(U_4 = -U_2\)</span> because <span class="math inline">\(\int_x^y=-\int_y^x\)</span>.</p>
+<p>Notice how <span class="math inline">\(\Delta U_4 = - \Delta U_2\)</span> because <span class="math inline">\(\int_x^y=-\int_y^x\)</span>.</p>
 </div>
 </div>
 <div id="UWQCarnot" class="section level2" number="5.2">
@@ -391,7 +391,7 @@ U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{&gt;0 \text{ since } T_\math
 <p>Summarizing the results of the previous sections, the total amount of energy for a Carnot cycle is:</p>
 <p><span class="math display" id="eq:UtotCC">\[\begin{equation}
 \begin{aligned}
-  U_{\text{TOT}} &amp; = U_1+U_2+U_3+U_4 \\
+  \Delta U_{\text{TOT}} &amp; = \Delta U_1+\Delta U_2+\Delta U_3+\Delta U_4 \\
                  &amp; = 0 + n \int_{T_h}^{T_l} C_V dT + 0 + n \int_{T_l}^{T_h} C_V dT  \\
                  &amp; = n \int_{T_h}^{T_l} C_V dT - n \int_{T_h}^{T_l} C_V dT = 0 \\
 \end{aligned}

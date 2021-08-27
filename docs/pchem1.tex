@@ -88,6 +88,14 @@
 \fancyhead[LO]{\slshape\nouppercase{\rightmark}}
 \fancyhead[RE]{\slshape\nouppercase{\leftmark}}
 \fancyhead[RO,LE]{\thepage}
+%no page numbers on empty pages
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+
 
 \makeatletter
 \def\thm@space@setup{%
@@ -105,7 +113,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{30 November 2020}
+\date{27 August 2021}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -315,7 +323,7 @@ These equations define three state functions, each one expressed in terms of two
   \label{eq:totaldifferentialP}
 \end{equation}
 
-Recalling Schwartz's theorem, the mixed partial second derivatives that can be obtained from eq. 1.2.7 are the same:
+Recalling Schwartz's theorem, the mixed partial second derivatives that can be obtained from eq. \eqref{eq:totaldifferentialP} are the same:
 
 \begin{equation}
   \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
@@ -614,7 +622,7 @@ To study the behavior of the internal energy in a process at constant temperatur
 The left side of the Joule apparatus's inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, to guarantee isolation from the environment. When the communication channel between the chambers is open, the gas expands and equilibrates. The work associated with the transformation is:
 
 \begin{equation}
-  đ W=P_{\text{ext}}dV = 0,
+  đ W=-P_{\text{ext}}dV = 0,
   \label{eq:JexpW}
 \end{equation}
 
@@ -637,7 +645,7 @@ From this simple experiment, we can conclude that the internal energy of an idea
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, \(đ Q=0\), and the work associated with an adiabatic process becomes a state function:
 
 \begin{equation}
-  dU=đ W=PdV,
+  dU=đ W=-PdV,
   \label{eq:dUadiabatic}
 \end{equation}
 
@@ -1057,7 +1065,7 @@ where the negative sign indicates that the reaction is exothermic (see \ref{def:
 \begin{aligned}
 \mathrm{CH}_{4(g)} + & 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
   \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}} & \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}}\\
-  & \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{s,\text{graphite}}, \mathrm{O}_{2(g)}
+  & \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
 \end{aligned}
 \end{equation}
 
@@ -1179,7 +1187,7 @@ A Carnot cycle connects two ``heat reservoirs'' at temperatures \(T_h\) (hot) an
 Starting the analysis of the cycle from point \(A\) in Figure \ref{fig:FigCarnotPV},\footnote{The stages of a Carnot depicted at the beginning of each of this section and the following three ones are genetaken from \href{https://en.wikipedia.org/wiki/Carnot_cycle}{Wikipedia}, and have been generated and distributed by Author BlyumJ under CC-BY-SA license.} the first transformation we encounter is an isothermal expansion at \(T_h\). Since the transformation is isothermal:
 
 \begin{equation}
-U_1 = \overbrace{W_1}^{<0} + \overbrace{Q_1}^{>0} = 0 \Rightarrow Q_1 = -W_1,
+\Delta U_1 = \overbrace{W_1}^{<0} + \overbrace{Q_1}^{>0} = 0 \Rightarrow Q_1 = -W_1,
   \label{eq:CCst1}
 \end{equation}
 
@@ -1203,14 +1211,14 @@ where we denoted \(\left| Q_h \right|\) the absolute value of the heat that gets
 The second transformation is an adiabatic expansion between \(T_h\) and \(T_l\). Since we are at adiabatic conditions:
 
 \begin{equation}
-Q_2 = 0 \Rightarrow U_2 = W_2,
+Q_2 = 0 \Rightarrow \Delta U_2 = W_2,
   \label{eq:CCst2}
 \end{equation}
 
 and the negative energy (expansion work) can be calculated using:
 
 \begin{equation}
-U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{<0 \text{ since } T_\mathrm{l}<T_\mathrm{h}} < 0.
+\Delta U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{<0 \text{ since } T_\mathrm{l}<T_\mathrm{h}} < 0.
   \label{eq:CCst2b}
 \end{equation}
 
@@ -1222,7 +1230,7 @@ U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{<0 \text{ since } T_\mathrm{
 The third transformation is an isothermal compression at \(T_l\). The formulas are the same as those used for stage 1, but they will results in heat and work with reversed signs (since this is a compression):
 
 \begin{equation}
-U_3 = \overbrace{W_3}^{>0} + \overbrace{Q_3}^{<0} = 0 \Rightarrow Q_3 = -W_3,
+\Delta U_3 = \overbrace{W_3}^{>0} + \overbrace{Q_3}^{<0} = 0 \Rightarrow Q_3 = -W_3,
   \label{eq:CCst3}
 \end{equation}
 
@@ -1246,18 +1254,18 @@ where \(\left| Q_l \right|\) is the absolute value of the heat that gets \textbf
 The fourth and final transformation is an adiabatic comprssion that restores the system to point \(A\), bringing it from \(T_l\) to \(T_h\). Similarly to stage 3:
 
 \begin{equation}
-Q_4 = 0 \Rightarrow U_4 = W_4,
+Q_4 = 0 \Rightarrow \Delta U_4 = W_4,
   \label{eq:CCst4}
 \end{equation}
 
 Since we are at adiabatic conditions. The energy associated with this process is now positive (compression work), and can be calculated using:
 
 \begin{equation}
-U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{>0 \text{ since } T_\mathrm{h}>T_\mathrm{l}} > 0.
+\Delta U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{>0 \text{ since } T_\mathrm{h}>T_\mathrm{l}} > 0.
   \label{eq:CCst4b}
 \end{equation}
 
-Notice how \(U_4 = -U_2\) because \(\int_x^y=-\int_y^x\).
+Notice how \(\Delta U_4 = - \Delta U_2\) because \(\int_x^y=-\int_y^x\).
 
 \hypertarget{UWQCarnot}{%
 \section{Energy, Heat, and Work in the Carnot Cycle}\label{UWQCarnot}}
@@ -1266,7 +1274,7 @@ Summarizing the results of the previous sections, the total amount of energy for
 
 \begin{equation}
 \begin{aligned}
-  U_{\text{TOT}} & = U_1+U_2+U_3+U_4 \\
+  \Delta U_{\text{TOT}} & = \Delta U_1+\Delta U_2+\Delta U_3+\Delta U_4 \\
                  & = 0 + n \int_{T_h}^{T_l} C_V dT + 0 + n \int_{T_l}^{T_h} C_V dT  \\
                  & = n \int_{T_h}^{T_l} C_V dT - n \int_{T_h}^{T_l} C_V dT = 0 \\
 \end{aligned}
@@ -1957,9 +1965,9 @@ we can then simplify the definition of free energies, eqs. \eqref{eq:dadef2} and
 \begin{aligned}
 \text{constant} & \; T,V:           & \qquad & \qquad &     \text{constant} & \; T,P: \\
 \\
-d(A)_{T,V} &= dU -TdS     & &   &       d(G)_{T,P} &= dH - TdS \\ 
+(dA)_{T,V} &= dU -TdS     & &   &       (dG)_{T,P} &= dH - TdS \\ 
 \\
-dU = d(A)_{T,V} &+TdS       & &   &       dH = d(G)_{T,P} &+TdS
+dU = (dA)_{T,V} &+TdS       & &   &       dH = (dG)_{T,P} &+TdS
 \end{aligned}
 \label{eq:dadgder3}
 \end{equation}
@@ -1968,9 +1976,9 @@ and by merging \(dU\) and \(dH\) from eqs. \eqref{eq:dadgder3} into Clausius the
 
 \begin{equation}
 \begin{aligned}
-TdS -d(A)_{T,V} &- TdS \geq 0 & \qquad & \qquad & TdS -d(G)_{T,P} &- TdS \geq 0 \\
+TdS -(dA)_{T,V} &- TdS \geq 0 & \qquad & \qquad & TdS -(dG)_{T,P} &- TdS \geq 0 \\
 \\
-d(A)_{T,V} & \leq 0 & \qquad & \qquad & d(G)_{T,P} & \leq 0. \\
+(dA)_{T,V} & \leq 0 & \qquad & \qquad & (dG)_{T,P} & \leq 0. \\
 \end{aligned}
 \label{eq:dadgcond}
 \end{equation}
@@ -2231,7 +2239,7 @@ A simple criterion to evaluate the entropic contribution of a reaction is to loo
 As we saw in section \ref{thermpot}, the natural variables of the Gibbs free energy are the temperature, \(T\), the pressure, \(P\), and chemical composition, as the number of moles \(\{n_i\}\). The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. \eqref{eq:dhagchem2}):
 
 \begin{equation}
-dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 \label{eq:dgtotdiff}
 \end{equation}
 
@@ -2391,7 +2399,7 @@ dividing both sides by \(n\), we obtain:
 which, for a pure substance at \(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\), becomes:
 
 \begin{equation}
-\mu^* = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P.
+\mu^* - \mu^{-\kern-6pt{\ominus}\kern-6pt-}=      RT \ln P.
 \label{eq:dgconstn4}
 \end{equation}
 
@@ -2622,7 +2630,7 @@ which is the equation that produces the so-called \textbf{van 't Hoff plots}, fr
 While \(K_P\) is independent of both temperature and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants.
 
 \begin{equation}
-\left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i}=0 \right)_{T,P}.
+\left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i} \right)_{T,P} =0.
 \label{eq:kppni}
 \end{equation}
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2020-11-30" />
+<meta name="date" content="2021-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -383,7 +383,7 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 <p>A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &gt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &lt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, the entropy will also reduce.</p>
 <p>As we saw in section <a href="Potentials.html#thermpot">8.2</a>, the natural variables of the Gibbs free energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. <a href="Potentials.html#eq:dhagchem2">(8.16)</a>):</p>
 <p><span class="math display" id="eq:dgtotdiff">\[\begin{equation}
-dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 \tag{9.5}
 \end{equation}\]</span></p>
 <p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in eq. <a href="GibbsFree.html#eq:dgtotdiff">(9.5)</a>, which are given in eq. <a href="Potentials.html#eq:dhagchem3">(8.17)</a>.</p>
@@ -501,7 +501,7 @@ G - G^{-\kern-6pt{\ominus}\kern-6pt-}= nRT \ln \frac{P}{P^{-\kern-6pt{\ominus}\k
 \end{equation}\]</span></p>
 <p>which, for a pure substance at <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\)</span>, becomes:</p>
 <p><span class="math display" id="eq:dgconstn4">\[\begin{equation}
-\mu^* = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P.
+\mu^* - \mu^{-\kern-6pt{\ominus}\kern-6pt-}=      RT \ln P.
 \tag{9.21}
 \end{equation}\]</span></p>
 <p>Notice that, while we use the pressure of the gas inside the logarithm in eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a>, the quantity is formally divided by the standard pressure <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\)</span>, and therefore it is a dimensionless quantity, as it should be. For simplicity of notation, however, we will omit the division by <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> in the remaining of this textbook, especially wherever it does not create confusion.

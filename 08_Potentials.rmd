@@ -167,9 +167,9 @@ we can then simplify the definition of free energies, eqs. \@ref(eq:dadef2) and 
 \begin{aligned}
 \text{constant} & \; T,V:           & \qquad & \qquad &     \text{constant} & \; T,P: \\
 \\
-d(A)_{T,V} &= dU -TdS     & &   &       d(G)_{T,P} &= dH - TdS \\ 
+(dA)_{T,V} &= dU -TdS     & &   &       (dG)_{T,P} &= dH - TdS \\ 
 \\
-dU = d(A)_{T,V} &+TdS       & &   &       dH = d(G)_{T,P} &+TdS
+dU = (dA)_{T,V} &+TdS       & &   &       dH = (dG)_{T,P} &+TdS
 \end{aligned}
 (\#eq:dadgder3)
 \end{equation}
@@ -178,9 +178,9 @@ and by merging $dU$ and $dH$ from eqs. \@ref(eq:dadgder3) into Clausius theorem 
 
 \begin{equation}
 \begin{aligned}
-TdS -d(A)_{T,V} &- TdS \geq 0 & \qquad & \qquad & TdS -d(G)_{T,P} &- TdS \geq 0 \\
+TdS -(dA)_{T,V} &- TdS \geq 0 & \qquad & \qquad & TdS -(dG)_{T,P} &- TdS \geq 0 \\
 \\
-d(A)_{T,V} & \leq 0 & \qquad & \qquad & d(G)_{T,P} & \leq 0. \\
+(dA)_{T,V} & \leq 0 & \qquad & \qquad & (dG)_{T,P} & \leq 0. \\
 \end{aligned}
 (\#eq:dadgcond)
 \end{equation}

@@ -98,7 +98,7 @@ These equations define three state functions, each one expressed in terms of two
 \end{equation}
 
 
-Recalling Schwartz’s theorem, the mixed partial second derivatives that can be obtained from eq. 1.2.7 are the same:
+Recalling Schwartz’s theorem, the mixed partial second derivatives that can be obtained from eq. \@ref(eq:totaldifferentialP) are the same:
  
 \begin{equation}
   \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
