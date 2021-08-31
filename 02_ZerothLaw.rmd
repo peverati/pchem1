@@ -133,7 +133,7 @@ where the integral on the left-hand side is taken along the path,^[from here on 
 How do we solve the integral in eq. \@ref(eq:Wint)? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.
 
 
-### $| W_{\text{max}} |$ and  $| W_{\text{min}} |$ in isothermal processes
+### $| W_{\text{max}} |$ and  $| W_{\text{min}} |$ in processes at constant temperature (isothermal)
 At constant temperature, the piston in Figure \@ref(fig:Fig2c3) moves along the following PV diagram (this curve is obtained from an ideal gas at constant $T=298$ K):
 
 ```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
