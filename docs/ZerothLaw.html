@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-08-27" />
+<meta name="date" content="2021-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,15 +94,14 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
 <li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
-<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Work</a>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#free-expansion-at-constant-temperature"><i class="fa fa-check"></i><b>2.3.1</b> Free expansion at constant temperature</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#isothermal-expansion-against-a-constant-external-pressure"><i class="fa fa-check"></i><b>2.3.2</b> Isothermal expansion against a constant external pressure</a></li>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Heat</a>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.4.1</b> Processes at constant volume (isochoric)</a></li>
-<li class="chapter" data-level="2.4.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.4.2</b> Processes at constant pressure (isobaric)</a></li>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-isothermal-processes"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in isothermal processes</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
@@ -115,11 +114,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
-<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#calculation-of-w_textmax-and-w_textmin"><i class="fa fa-check"></i><b>3.3.1</b> Calculation of <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span></a></li>
-<li class="chapter" data-level="3.3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#cycles-and-reversibility"><i class="fa fa-check"></i><b>3.3.2</b> Cycles and reversibility</a></li>
-</ul></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
 <ul>
@@ -310,98 +305,12 @@ MathJax.Hub.Config({
 </blockquote>
 <p>Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at <span class="math inline">\(P=1\;\mathrm{bar}\)</span>. Its temperature, <span class="math inline">\(T_{H_2O}\)</span>, is about 373 K. Let’s now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature <span class="math inline">\(T_W = T_{H_2O}\)</span>. Similarly, the metal coin will also be in thermal equilibrium with the water, hence <span class="math inline">\(T_M = T_{H_2O}\)</span>. According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same <span class="math inline">\(T_W = T_M = 373\;\mathrm{K}\)</span>, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.</p>
 </div>
-<div id="workint" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Calculation of Work</h2>
-<p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
-<div id="free-expansion-at-constant-temperature" class="section level3" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Free expansion at constant temperature</h3>
-<div class="figure" style="text-align: center"><span id="fig:Fig1c3"></span>
-<img src="img/OEP_Figures.003.jpeg" alt="Free Expansion at Constant Temperature of an Ideal Gas." width="50%" />
-<p class="caption">
-Figure 2.1: Free Expansion at Constant Temperature of an Ideal Gas.
-</p>
-</div>
-<p>Let’s consider the situation in Figure <a href="ZerothLaw.html#fig:Fig1c3">2.1</a>, where a special beaker with a piston that is free to move is filled with an ideal gas. The beaker sits in a horizontal position on a desk, so the piston is not subject to any external forces<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. The piston is initially compressed to a position that is not in equilibrium <span class="math inline">\((i)\)</span>. After the process, the piston reaches a final equilibrium position <span class="math inline">\((f)\)</span>. We assume that the only force acting on the piston is the pressure of the ideal gas, <span class="math inline">\(P\)</span>. How do we calculate the work (<span class="math inline">\(W\)</span>) performed by the system?</p>
-<p>From basic physics, we recall that the infinitesimal amount of work associated with an object moving in space is given by the force acting on the object (<span class="math inline">\(F\)</span>) multiplied by the infinitesimal amount it gets displaced (<span class="math inline">\(d h\)</span>):</p>
-<p><span class="math display" id="eq:Wphysics">\[\begin{equation}
-  đ W = - Fdh,
-  \tag{2.1}
-\end{equation}\]</span></p>
-<p>where the negative sign comes from the chemistry sign convention, Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, since the work in Figure <a href="ZerothLaw.html#fig:Fig1c3">2.1</a> is <em>performed</em> by the system (expansion). What kind of force is moving the piston? It is the force due to the pressure of the gas. Relying upon another definition from physics, the pressure is the ratio between the force (<span class="math inline">\(F\)</span>) and the area (<span class="math inline">\(A\)</span>) that such force acts upon:</p>
-<p><span class="math display" id="eq:Pphysics">\[\begin{equation}
-  P = F/A.
-  \tag{2.2}
-\end{equation}\]</span></p>
-<p>Obtaining <span class="math inline">\(F\)</span> from eq. <a href="ZerothLaw.html#eq:Pphysics">(2.2)</a> and replacing it in eq. <a href="ZerothLaw.html#eq:Wphysics">(2.1)</a>, we obtain:</p>
-<p><span class="math display" id="eq:Wphysics2">\[\begin{equation}
-  đ W = - P \underbrace{Adh}_{dV},
-  \tag{2.3}
-\end{equation}\]</span></p>
-<p>and considering that <span class="math inline">\(Adh\)</span> (area times infinitesimal height) is the definition of an infinitesimal volume <span class="math inline">\(dV\)</span>, we obtain:</p>
-<p><span class="math display" id="eq:Wdef">\[\begin{equation}
-  đ W = - PdV,
-  \tag{2.4}
-\end{equation}\]</span></p>
-<p>If we want to calculate the amount of work performed by a system, <span class="math inline">\(W\)</span>, from eq. <a href="ZerothLaw.html#eq:Wdef">(2.4)</a>, we need to recall that <span class="math inline">\(đ W\)</span> is an inexact differential. As such, we cannot integrate it from initial to final as for the (exact) differential of a state function, because:</p>
-<p><span class="math display" id="eq:Wdiff">\[\begin{equation}
-  \int_{i}^{f}đ W \neq W_f - W_i,
-  \tag{2.5}
-\end{equation}\]</span></p>
-<p>but rather:</p>
-<p><span class="math display" id="eq:Wdiff2">\[\begin{equation}
-  \int_{\text{path}} đ W = W,
-  \tag{2.6}
-\end{equation}\]</span></p>
-<p>where the integration is performed along the <em>path</em>. Using eq. <a href="ZerothLaw.html#eq:Wdiff2">(2.6)</a>, we can integrate eq. <a href="ZerothLaw.html#eq:Wdef">(2.4)</a> as:</p>
-<p><span class="math display" id="eq:Wint">\[\begin{equation}
-  \int đ W = W = - \int_{i}^{f} PdV,
-  \tag{2.7}
-\end{equation}\]</span></p>
-<p>where the integral on the left-hand side is taken along the path,<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(dV\)</span> is a state function.
-How do we solve the integral in eq. <a href="ZerothLaw.html#eq:Wint">(2.7)</a>? The pressure in this process is not constant since it decreases throughout the process. Therefore <span class="math inline">\(P\)</span> cannot be moved outside the integral. However, if our gas is ideal, we can calculate the pressure using the ideal gas law <span class="math inline">\(P=\frac{nRT}{V}\)</span>, and solve the integral because <span class="math inline">\(n\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(T\)</span> are constant:</p>
-<p><span class="math display" id="eq:WintsolvedV">\[\begin{equation}
-  W = - nRT \int_{i}^{f} \frac{dV}{V} = -nRT \ln \frac{V_f}{V_i},
-  \tag{2.8}
-\end{equation}\]</span></p>
-<p>which, considering that <span class="math inline">\(P_iV_i=P_fV_f\)</span>, can be also written as:</p>
-<p><span class="math display" id="eq:WintsolvedP">\[\begin{equation}
-  W = -nRT \ln \frac{P_i}{P_f}.
-  \tag{2.9}
-\end{equation}\]</span></p>
-</div>
-<div id="isothermal-expansion-against-a-constant-external-pressure" class="section level3" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Isothermal expansion against a constant external pressure</h3>
-<div class="figure" style="text-align: center"><span id="fig:Fig2c3"></span>
-<img src="img/OEP_Figures.004.jpeg" alt="Isothermal Expansion of an Ideal Gas Against a Constant External Pressure." width="50%" />
-<p class="caption">
-Figure 2.2: Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.
-</p>
-</div>
-<p>The process that we are analyzing here (Figure <a href="ZerothLaw.html#fig:Fig2c3">2.2</a>) is apparently similar to the case we have seen in the previous section, with the noticeable difference that the beaker now sits vertically on the workbench. In this case, when the piston moves upwards, it is no longer moving freely, but it moves against the force due to the constant external pressure <span class="math inline">\(P_{\text{ext}}\)</span>.</p>
-<p>The integral that describes the work performed by the system in this case involves a transformation at constant external pressure:</p>
-<p><span class="math display" id="eq:Wint2">\[\begin{equation}
-  \int đ W = W = - \int_{i}^{f} P_{\text{ext}}dV,
-  \tag{2.10}
-\end{equation}\]</span></p>
-<p>which can be easily simplified as:</p>
-<p><span class="math display" id="eq:Wint3">\[\begin{equation}
-  W = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i),
-  \tag{2.11}
-\end{equation}\]</span></p>
-<p>resulting in the following simple formula to calculate <span class="math inline">\(W\)</span>:</p>
-<p><span class="math display" id="eq:WintF">\[\begin{equation}
-  W = -P_{\text{ext}} \Delta V,
-  \tag{2.12}
-\end{equation}\]</span></p>
-<p>Comparing eq. <a href="ZerothLaw.html#eq:WintF">(2.12)</a> with eq. <a href="ZerothLaw.html#eq:WintsolvedP">(2.9)</a> shows how different this case is from the previous one.</p>
-</div>
-</div>
-<div id="heatint" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Calculation of Heat</h2>
+<div id="heatint" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Calculation of Heat</h2>
 <p>Heat (<span class="math inline">\(Q\)</span>) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because <em>heat is a path function</em>.
 As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in <span class="math inline">\(\frac{\text{J}}{\text{mol K}}\)</span>. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.</p>
-<div id="processes-at-constant-volume-isochoric" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Processes at constant volume (isochoric)</h3>
+<div id="processes-at-constant-volume-isochoric" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Processes at constant volume (isochoric)</h3>
 <p>The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recasting from general chemistry:</p>
 <blockquote>
 <p>The molar heat capacity at constant volume is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</p>
@@ -409,21 +318,21 @@ As you probably recall from general chemistry, the ability of a substance to abs
 <p>This simple definition can be written in mathematical terms as:</p>
 <p><span class="math display" id="eq:Cvdef">\[\begin{equation}
   C_V = \frac{đ Q_V}{n dT} \Rightarrow đ Q_V = n C_V dT.
-  \tag{2.13}
+  \tag{2.1}
 \end{equation}\]</span></p>
-<p>Given a known value of <span class="math inline">\(C_V\)</span>, the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. <a href="ZerothLaw.html#eq:Cvdef">(2.13)</a>:</p>
+<p>Given a known value of <span class="math inline">\(C_V\)</span>, the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. <a href="ZerothLaw.html#eq:Cvdef">(2.1)</a>:</p>
 <p><span class="math display" id="eq:Cvint1">\[\begin{equation}
   đ Q_V = n C_V dT \rightarrow \int đ Q_V = n \int_{T_i}^{T_F}C_V dT \rightarrow Q_V = n C_V \int_{T_i}^{T_F}dT,
-  \tag{2.14}
+  \tag{2.2}
 \end{equation}\]</span></p>
 <p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature, simply becomes:</p>
 <p><span class="math display" id="eq:Cvint">\[\begin{equation}
   Q_V \cong n C_V \Delta T.
-  \tag{2.15}
+  \tag{2.3}
 \end{equation}\]</span></p>
 </div>
-<div id="heatconstp" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Processes at constant pressure (isobaric)</h3>
+<div id="heatconstp" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Processes at constant pressure (isobaric)</h3>
 <p>Similarly to the previous case, the heat capacity at constant pressure measures the ability of a substance to absorb heat at constant pressure. Recasting again from general chemistry:</p>
 <blockquote>
 <p>The molar heat capacity at constant pressure is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</p>
@@ -431,13 +340,109 @@ As you probably recall from general chemistry, the ability of a substance to abs
 <p>And once again, this mathematical treatment follows:</p>
 <p><span class="math display" id="eq:Cpdef">\[\begin{equation}
   C_P = \frac{đ Q_P}{n dT} \Rightarrow đ Q_P = n C_P dT \rightarrow \int đ Q_P = n \int_{T_i}^{T_F}C_P dT,
-  \tag{2.16}
+  \tag{2.4}
 \end{equation}\]</span></p>
 <p>which result in the simple formula:</p>
 <p><span class="math display" id="eq:Cpint">\[\begin{equation}
   Q_P \cong n C_P \Delta T.
+  \tag{2.5}
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="workint" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Calculation of Work</h2>
+<p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
+<div class="figure" style="text-align: center"><span id="fig:Fig2c3"></span>
+<img src="img/OEP_Figures.004.jpeg" alt="Isothermal Expansion of an Ideal Gas Against a Constant External Pressure." width="50%" />
+<p class="caption">
+Figure 2.1: Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.
+</p>
+</div>
+<p>Let’s consider the situation in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a>, where a special beaker with a piston that is free to move is filled with an ideal gas. The beaker sits on a desk, so the piston is not subject to any external forces other than the external pressure, <span class="math inline">\(P_{\text{ext}}\)</span>, and the internal pressure of the gas, <span class="math inline">\(P\)</span>.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> The piston is initially compressed to a position that is not in equilibrium <span class="math inline">\((i)\)</span>. After the process, the piston reaches a final equilibrium position <span class="math inline">\((f)\)</span>. How do we calculate the work (<span class="math inline">\(W\)</span>) performed by the system?</p>
+<p>From basic physics, we recall that the infinitesimal amount of work associated with an object moving in space is given by the force acting on the object (<span class="math inline">\(F\)</span>) multiplied by the infinitesimal amount it gets displaced (<span class="math inline">\(d h\)</span>):</p>
+<p><span class="math display" id="eq:Wphysics">\[\begin{equation}
+  đ W = - Fdh,
+  \tag{2.6}
+\end{equation}\]</span></p>
+<p>where the negative sign comes from the chemistry sign convention, Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, since the work in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a> is <em>performed</em> by the system (expansion). What kind of force is moving the piston? It is the force due to the pressure of the gas. Relying upon another definition from physics, the pressure is the ratio between the force (<span class="math inline">\(F\)</span>) and the area (<span class="math inline">\(A\)</span>) that such force acts upon:</p>
+<p><span class="math display" id="eq:Pphysics">\[\begin{equation}
+  P = F/A.
+  \tag{2.7}
+\end{equation}\]</span></p>
+<p>Obtaining <span class="math inline">\(F\)</span> from eq. <a href="ZerothLaw.html#eq:Pphysics">(2.7)</a> and replacing it in eq. <a href="ZerothLaw.html#eq:Wphysics">(2.6)</a>, we obtain:</p>
+<p><span class="math display" id="eq:Wphysics2">\[\begin{equation}
+  đ W = - P \underbrace{Adh}_{dV},
+  \tag{2.8}
+\end{equation}\]</span></p>
+<p>and considering that <span class="math inline">\(Adh\)</span> (area times infinitesimal height) is the definition of an infinitesimal volume <span class="math inline">\(dV\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:Wdef">\[\begin{equation}
+  đ W = - PdV,
+  \tag{2.9}
+\end{equation}\]</span></p>
+<p>If we want to calculate the amount of work performed by a system, <span class="math inline">\(W\)</span>, from eq. <a href="ZerothLaw.html#eq:Wdef">(2.9)</a>, we need to recall that <span class="math inline">\(đ W\)</span> is an inexact differential. As such, we cannot integrate it from initial to final as for the (exact) differential of a state function, because:</p>
+<p><span class="math display" id="eq:Wdiff">\[\begin{equation}
+  \int_{i}^{f}đ W \neq W_f - W_i,
+  \tag{2.10}
+\end{equation}\]</span></p>
+<p>but rather:</p>
+<p><span class="math display" id="eq:Wdiff2">\[\begin{equation}
+  \int_{\text{path}} đ W = W,
+  \tag{2.11}
+\end{equation}\]</span></p>
+<p>where the integration is performed along the <em>path</em>. Using eq. <a href="ZerothLaw.html#eq:Wdiff2">(2.11)</a>, we can integrate eq. <a href="ZerothLaw.html#eq:Wdef">(2.9)</a> as:</p>
+<p><span class="math display" id="eq:Wint">\[\begin{equation}
+  \int đ W = W = - \int_{i}^{f} PdV,
+  \tag{2.12}
+\end{equation}\]</span></p>
+<p>where the integral on the left-hand side is taken along the path,<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(dV\)</span> is a state function.
+How do we solve the integral in eq. <a href="ZerothLaw.html#eq:Wint">(2.12)</a>? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.</p>
+<div id="w_textmax-and-w_textmin-in-isothermal-processes" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in isothermal processes</h3>
+<p>At constant temperature, the piston in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a> moves along the following PV diagram (this curve is obtained from an ideal gas at constant <span class="math inline">\(T=298\)</span> K):</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>An expansion of the gas will happen between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example <span class="math inline">\(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)</span>), and solve the integral as:</p>
+<p><span class="math display" id="eq:Wint3">\[\begin{equation}
+  W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i),
+  \tag{2.13}
+\end{equation}\]</span></p>
+<p>Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> represents the red area of the PV-diagram:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-3-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea1">\[\begin{equation}
+\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
+  \tag{2.14}
+\end{equation}\]</span></p>
+<p>If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, and solve each one as we did in the previous case. The first process is an expansion between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_1\)</span>, with <span class="math inline">\(P_1\)</span> constant. The absolute value of the work, <span class="math inline">\(W_A\)</span>, is represented by the blue area:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-4-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea2">\[\begin{equation}
+\left| W_A \right| = P_1 (V_1-V_i)
+  \tag{2.15}
+\end{equation}\]</span></p>
+<p>The second process is an expansion between <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_f\)</span>, with <span class="math inline">\(P_f=P_{\text{ext}}\)</span> constant. The absolute value of the work for this second process is represented by the green area:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea3">\[\begin{equation}
+\left| W_B \right| = P_f (V_f-V_1)
+  \tag{2.16}
+\end{equation}\]</span></p>
+<p>The total absolute value of the work for the 2-step process is given by the sum of the two areas:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea4">\[\begin{equation}
+  \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
   \tag{2.17}
 \end{equation}\]</span></p>
+<p>As can be easily verified by comparing the shaded areas in the plots, <span class="math inline">\(\left| W_{\text{2-step}} \right| &gt; \left| W_{\text{1-step}} \right|\)</span>.</p>
+<p>We can easily extend this procedure to consider processes that happens in 3, 4, 5, …, <span class="math inline">\(n\)</span> steps. What is the limit of this procedure? In other words, what happens when <span class="math inline">\(n \rightarrow \infty\)</span>? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve <span class="math inline">\(\left| W_{\text{max}}\right|\)</span> is achieved in an <span class="math inline">\(\infty\)</span>-step process, for which the work is calculated as:</p>
+<p><span class="math display" id="eq:WintsolvedV2">\[\begin{equation}
+  \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
+  \tag{2.18}
+\end{equation}\]</span></p>
+<p><img src="pchem1_files/figure-html/figures-side-1.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-2.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-3.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-4.png" width="50%" height="100%" /></p>
+<p>The integral on the right hand side of eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a> can be solved for an ideal gas by calculating the pressure using the ideal gas law <span class="math inline">\(P=\frac{nRT}{V}\)</span>, and solving the integral since <span class="math inline">\(n\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(T\)</span> are constant:</p>
+<p><span class="math display" id="eq:WmaxV">\[\begin{equation}
+  \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
+  \tag{2.19}
+\end{equation}\]</span></p>
+<p>This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an <span class="math inline">\(\infty\)</span>-step process.</p>
+<p>The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> <span class="math inline">\(\left| W_{\text{min}} \right|\)</span> for compressions is calculated as the area underneath the PV curve, exactly as <span class="math inline">\(\left| W_{\text{min}} \right|\)</span> for expansions in eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a>.</p>
 
 </div>
 </div>
@@ -448,6 +453,8 @@ As you probably recall from general chemistry, the ability of a substance to abs
 <li id="fn3"><p>In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.<a href="ZerothLaw.html#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>For this simple thought experiment, we will ignore any external force that is not significant. In other words, we will not consider the friction of the piston on the beaker walls or any other foreign influence.<a href="ZerothLaw.html#fnref4" class="footnote-back">↩︎</a></p></li>
 <li id="fn5"><p>from here on we will replace the notation <span class="math inline">\(\int_{\text{path}}\)</span> with the more convenient <span class="math inline">\(\int\)</span> and we will keep in mind that the integral of an inexact differential must be taken along the path.<a href="ZerothLaw.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>.<a href="ZerothLaw.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>In contrast to a lower bound for expansion processes.<a href="ZerothLaw.html#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
