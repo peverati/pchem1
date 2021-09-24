@@ -221,7 +221,7 @@ which is obviously zero, since $\oint dU=0$. The amounts of work and heat, howev
 \begin{aligned}
   W_{\text{TOT}} & = W_1+W_2+W_3+W_4 \\
                  & = - nRT_h \ln \frac{V_B}{V_A} + n \int_{T_h}^{T_l} C_V dT - nRT_l \ln \frac{V_D}{V_C} + n \int_{T_l}^{T_h} C_V dT \\
-                 & = nRT_h \ln \frac{V_B}{V_A} + nRT_l \ln \frac{V_D}{V_C}, \\
+                 & = - nRT_h \ln \frac{V_B}{V_A} - nRT_l \ln \frac{V_D}{V_C}, \\
 \end{aligned}
   (\#eq:WtotCC)
 \end{equation}
