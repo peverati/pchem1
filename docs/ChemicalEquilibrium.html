@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-09-23" />
+<meta name="date" content="2021-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="GibbsFree.html"/>
 <link rel="next" href="RealGases.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
 
 
 
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -141,7 +139,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
 <li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Third Law of Thermodynamics</a>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
 <ul>
@@ -339,7 +337,7 @@ K_P=\prod_i P_{i,\text{eq}}^{\nu_i},
 K_{\text{eq}} =\prod_i a_{i,\text{eq}}^{\nu_i},
 \tag{10.10}
 \end{equation}\]</span></p>
-<p>where we have replaced the partial pressure at equilibrium, <span class="math inline">\(P_{i,\text{eq}}\)</span>, with a new concept introduced initially by Gilbert Newton Lewis (1875–1946),<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> that he termed <strong>activiy</strong>, and represented by the letter <span class="math inline">\(a\)</span>. For ideal gases, it is clear that <span class="math inline">\(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. For non-ideal gases, the activity is equal to the fugacity <span class="math inline">\(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply <span class="math inline">\(a_i=1\)</span>. For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction <span class="math inline">\(x_i\)</span> in the liquid phase, and <span class="math inline">\(y_i\)</span> in the gas phase, or the molar concentration <span class="math inline">\([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> with <span class="math inline">\([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)</span>). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter <a href="Solutions.html#Solutions">14</a>, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:</p>
+<p>where we have replaced the partial pressure at equilibrium, <span class="math inline">\(P_{i,\text{eq}}\)</span>, with a new concept introduced initially by Gilbert Newton Lewis (1875–1946),<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> that he termed <strong>activity</strong>, and represented by the letter <span class="math inline">\(a\)</span>. For ideal gases, it is clear that <span class="math inline">\(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. For non-ideal gases, the activity is equal to the fugacity <span class="math inline">\(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply <span class="math inline">\(a_i=1\)</span>. For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction <span class="math inline">\(x_i\)</span> in the liquid phase, and <span class="math inline">\(y_i\)</span> in the gas phase, or the molar concentration <span class="math inline">\([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> with <span class="math inline">\([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)</span>). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter <a href="Solutions.html#Solutions">14</a>, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:</p>
 <p><span class="math display" id="eq:kxkcdef">\[\begin{equation}
 K_y =\prod_i \left( y_{i,\text{eq}} \right)^{\nu_i} \qquad \qquad \qquad \qquad K_C =\left( \prod_i [i]_{\text{eq}}/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\right)^{\nu_i},
 \tag{10.11}

@@ -5,6 +5,10 @@
 \documentclass[
   9pt,
 ]{extbook}
+\title{The Live Textbook of Physical Chemistry 1}
+\author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
+\date{26 October 2021}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -109,10 +113,6 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-
-\title{The Live Textbook of Physical Chemistry 1}
-\author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{23 September 2021}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1142,7 +1142,7 @@ Starting the analysis of the cycle from point \(A\) in Figure \ref{fig:FigCarnot
   \label{eq:CCst1}
 \end{equation}
 
-and heat and work can be calculated for this stage using either eqs. \eqref{eq:WintsolvedV} or \eqref{eq:WintsolvedP}:
+and heat and work can be calculated for this stage using eq. \eqref{eq:WmaxV}:
 
 \begin{equation}
 \begin{aligned}
@@ -1475,7 +1475,7 @@ which proves that for any irreversible process in an isolated system, the entrop
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{thirdlaw}{%
-\chapter{Third Law of Thermodynamics}\label{thirdlaw}}
+\chapter{Calculation of Entropy and the Third Law of Thermodynamics}\label{thirdlaw}}
 
 The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to \emph{always} consider changes in entropy in \emph{both} the system (sys) and its surroundings (surr):
 
@@ -2104,11 +2104,11 @@ where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standa
 The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\) of a chemical reaction:
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0382}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4459}}@{}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.04}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.45}}@{}}
 \toprule
 \begin{minipage}[b]{\linewidth}\centering
 \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)
@@ -2448,7 +2448,7 @@ K_{\text{eq}} =\prod_i a_{i,\text{eq}}^{\nu_i},
 \label{eq:kdef}
 \end{equation}
 
-where we have replaced the partial pressure at equilibrium, \(P_{i,\text{eq}}\), with a new concept introduced initially by Gilbert Newton Lewis (1875--1946),\footnote{Gilber Lewis is the same scientist that invented the concept of Lewis Structures.} that he termed \textbf{activiy}, and represented by the letter \(a\). For ideal gases, it is clear that \(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\). For non-ideal gases, the activity is equal to the fugacity \(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\), a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply \(a_i=1\). For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction \(x_i\) in the liquid phase, and \(y_i\) in the gas phase, or the molar concentration \([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\) with \([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter \ref{Solutions}, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:
+where we have replaced the partial pressure at equilibrium, \(P_{i,\text{eq}}\), with a new concept introduced initially by Gilbert Newton Lewis (1875--1946),\footnote{Gilber Lewis is the same scientist that invented the concept of Lewis Structures.} that he termed \textbf{activity}, and represented by the letter \(a\). For ideal gases, it is clear that \(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\). For non-ideal gases, the activity is equal to the fugacity \(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\), a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply \(a_i=1\). For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction \(x_i\) in the liquid phase, and \(y_i\) in the gas phase, or the molar concentration \([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\) with \([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter \ref{Solutions}, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:
 
 \begin{equation}
 K_y =\prod_i \left( y_{i,\text{eq}} \right)^{\nu_i} \qquad \qquad \qquad \qquad K_C =\left( \prod_i [i]_{\text{eq}}/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\right)^{\nu_i},
@@ -2837,9 +2837,9 @@ The parameter \(a\) accounts for the presence of intermolecular interactions, wh
 \scriptsize
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1250}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5000}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.50}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.38}}@{}}
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -4355,11 +4355,11 @@ To experimentally measure the reaction rate, we need a method to measure concent
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0865}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1731}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1474}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1891}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4038}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.09}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.15}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.19}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.40}}@{}}
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -4404,10 +4404,10 @@ the initial rate method can be used to determine the coefficients of the rate la
 by designing three experiment, where the initial concentrations of \(\mathrm{A}\) and \(\mathrm{B}\) are appropriately changed. For example, let's consider the following experimental data from three different experiments:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1705}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2326}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2326}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3643}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.17}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.23}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.23}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.36}}@{}}
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -4539,11 +4539,11 @@ From empirical arguments, Arrhenius proposed the idea that reactants must acquir
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1156}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2254}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2312}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2139}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2139}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.12}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.23}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.23}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.21}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.21}}@{}}
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Substance:
@@ -4946,12 +4946,12 @@ ZrCl\textsubscript{4}(s) & --980.5 & --889.9 & 181.6 & 119.8 \\
 \section{Thermodynamic Data of Organic Substances at 298 K}\label{thermodynamic-data-of-organic-substances-at-298-k}}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0837}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2093}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1814}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1814}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1721}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1721}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.08}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.21}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.18}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.18}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Formula:
