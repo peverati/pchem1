@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Thermodynamic Cycles | The Live Textbook of Physical Chemistry 1</title>
+  <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Thermodynamic Cycles | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem1" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Thermodynamic Cycles | The Live Textbook of Physical Chemistry 1" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2021-10-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Thermochemistry.html"/>
+<link rel="next" href="SecondLaw.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 1</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="SystemVariables.html"><a href="SystemVariables.html"><i class="fa fa-check"></i><b>1</b> Systems and Variables</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.1</b> Thermodynamic Systems</a></li>
+<li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ZerothLaw.html"><a href="ZerothLaw.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energyint"><i class="fa fa-check"></i><b>3.1</b> Calculation of Internal Energy Changes</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermalE"><i class="fa fa-check"></i><b>3.1.1</b> Internal energy in isothermal processes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-adiabatic-processes"><i class="fa fa-check"></i><b>3.1.2</b> Internal energy in adiabatic processes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-isochoric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Internal energy in isochoric processes</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rxnenthalpy"><i class="fa fa-check"></i><b>4.1</b> Reaction Enthalpies</a></li>
+<li class="chapter" data-level="4.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#formenthalpy"><i class="fa fa-check"></i><b>4.2</b> Standard Enthalpies of Formation</a></li>
+<li class="chapter" data-level="4.3" data-path="Thermochemistry.html"><a href="Thermochemistry.html#hessslaw"><i class="fa fa-check"></i><b>4.3</b> Hess’s Law</a></li>
+<li class="chapter" data-level="4.4" data-path="Thermochemistry.html"><a href="Thermochemistry.html#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><i class="fa fa-check"></i><b>4.4</b> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html"><i class="fa fa-check"></i><b>5</b> Thermodynamic Cycles</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#carnotcyclesect"><i class="fa fa-check"></i><b>5.1</b> Carnot Cycle</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage1"><i class="fa fa-check"></i><b>5.1.1</b> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage2"><i class="fa fa-check"></i><b>5.1.2</b> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage3"><i class="fa fa-check"></i><b>5.1.3</b> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage4"><i class="fa fa-check"></i><b>5.1.4</b> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#UWQCarnot"><i class="fa fa-check"></i><b>5.2</b> Energy, Heat, and Work in the Carnot Cycle</a></li>
+<li class="chapter" data-level="5.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle"><i class="fa fa-check"></i><b>5.3</b> Efficiency of a Carnot Cycle</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isothermal-processes"><i class="fa fa-check"></i><b>7.1.1</b> Entropy in isothermal processes</a></li>
+<li class="chapter" data-level="7.1.2" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-adiabatic-processes"><i class="fa fa-check"></i><b>7.1.2</b> Entropy in adiabatic processes</a></li>
+<li class="chapter" data-level="7.1.3" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isochoric-processes"><i class="fa fa-check"></i><b>7.1.3</b> Entropy in isochoric processes</a></li>
+<li class="chapter" data-level="7.1.4" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isobaric-processes"><i class="fa fa-check"></i><b>7.1.4</b> Entropy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="thirdlaw.html"><a href="thirdlaw.html#dssurr"><i class="fa fa-check"></i><b>7.2</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
+<li class="chapter" data-level="7.3" data-path="thirdlaw.html"><a href="thirdlaw.html#spontS"><i class="fa fa-check"></i><b>7.3</b> Clausius Theorem</a></li>
+<li class="chapter" data-level="7.4" data-path="thirdlaw.html"><a href="thirdlaw.html#thirdlawsect"><i class="fa fa-check"></i><b>7.4</b> The Third Law of Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
+<li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Free Energy</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.3" data-path="GibbsFree.html"><a href="GibbsFree.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.3</b> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.4" data-path="GibbsFree.html"><a href="GibbsFree.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.4</b> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>10</b> Chemical Equilibrium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#reaction-quotient-and-equilibrium-constant"><i class="fa fa-check"></i><b>10.1</b> Reaction Quotient and Equilibrium Constant</a></li>
+<li class="chapter" data-level="10.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.2</b> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.3</b> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>11</b> Ideal and Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-equation"><i class="fa fa-check"></i><b>11.1</b> The Ideal Gas Equation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="RealGases.html"><a href="RealGases.html#boyles-law"><i class="fa fa-check"></i><b>11.1.1</b> Boyle’s Law</a></li>
+<li class="chapter" data-level="11.1.2" data-path="RealGases.html"><a href="RealGases.html#charless-and-gay-lussacs-laws"><i class="fa fa-check"></i><b>11.1.2</b> Charles’s and Gay-Lussac’s Laws</a></li>
+<li class="chapter" data-level="11.1.3" data-path="RealGases.html"><a href="RealGases.html#avogadros-law"><i class="fa fa-check"></i><b>11.1.3</b> Avogadro’s Law</a></li>
+<li class="chapter" data-level="11.1.4" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-law"><i class="fa fa-check"></i><b>11.1.4</b> The ideal gas Law</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="RealGases.html"><a href="RealGases.html#behaviors-of-non-ideal-gases"><i class="fa fa-check"></i><b>11.2</b> Behaviors of Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="RealGases.html"><a href="RealGases.html#the-van-der-waals-equation"><i class="fa fa-check"></i><b>11.2.1</b> The van der Waals equation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="RealGases.html"><a href="RealGases.html#joulethomson-effect"><i class="fa fa-check"></i><b>11.2.2</b> Joule–Thomson effect</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="RealGases.html"><a href="RealGases.html#critical-phenomena"><i class="fa fa-check"></i><b>11.3</b> Critical Phenomena</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="RealGases.html"><a href="RealGases.html#compressibility-factors"><i class="fa fa-check"></i><b>11.3.1</b> Compressibility factors</a></li>
+<li class="chapter" data-level="11.3.2" data-path="RealGases.html"><a href="RealGases.html#phase-diagram-of-a-non-ideal-gas"><i class="fa fa-check"></i><b>11.3.2</b> Phase diagram of a non-ideal gas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="RealGases.html"><a href="RealGases.html#fugacity"><i class="fa fa-check"></i><b>11.4</b> Fugacity</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>12</b> Phase Equilibrium</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#phase-stability"><i class="fa fa-check"></i><b>12.1</b> Phase Stability</a></li>
+<li class="chapter" data-level="12.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#gibbs-phase-rule"><i class="fa fa-check"></i><b>12.2</b> Gibbs Phase Rule</a></li>
+<li class="chapter" data-level="12.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#pt-phase-diagrams"><i class="fa fa-check"></i><b>12.3</b> <span class="math inline">\(PT\)</span> Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#liquid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.1</b> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.2</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-liquid-equilibrium"><i class="fa fa-check"></i><b>12.3.3</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</a></li>
+<li class="chapter" data-level="12.3.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-triple-point-and-the-critical-point"><i class="fa fa-check"></i><b>12.3.4</b> The triple point and the critical point</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-miscible"><i class="fa fa-check"></i><b>13.3.1</b> Totally miscible</a></li>
+<li class="chapter" data-level="13.3.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-immiscible"><i class="fa fa-check"></i><b>13.3.2</b> Totally immiscible</a></li>
+<li class="chapter" data-level="13.3.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#partially-miscible"><i class="fa fa-check"></i><b>13.3.3</b> Partially miscible</a></li>
+<li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
+<li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Solutions.html"><a href="Solutions.html#vapor-pressure-lowering"><i class="fa fa-check"></i><b>14.2.1</b> Vapor pressure lowering</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Solutions.html"><a href="Solutions.html#boiling-point-elevation-and-melting-point-depression"><i class="fa fa-check"></i><b>14.2.2</b> Boiling point elevation and melting point depression</a></li>
+<li class="chapter" data-level="14.2.3" data-path="Solutions.html"><a href="Solutions.html#osmotic-pressure"><i class="fa fa-check"></i><b>14.2.3</b> Osmotic pressure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="Kinetics.html"><a href="Kinetics.html"><i class="fa fa-check"></i><b>15</b> Chemical Kinetics</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="Kinetics.html"><a href="Kinetics.html#diffintk"><i class="fa fa-check"></i><b>15.1</b> Differential and integrated rate laws</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="Kinetics.html"><a href="Kinetics.html#zeroth-order-reaction"><i class="fa fa-check"></i><b>15.1.1</b> Zeroth-order reaction</a></li>
+<li class="chapter" data-level="15.1.2" data-path="Kinetics.html"><a href="Kinetics.html#first-order-reaction"><i class="fa fa-check"></i><b>15.1.2</b> First-order reaction</a></li>
+<li class="chapter" data-level="15.1.3" data-path="Kinetics.html"><a href="Kinetics.html#second-order-reaction"><i class="fa fa-check"></i><b>15.1.3</b> Second-order reaction</a></li>
+<li class="chapter" data-level="15.1.4" data-path="Kinetics.html"><a href="Kinetics.html#third-and-higher-orders-reaction"><i class="fa fa-check"></i><b>15.1.4</b> Third and higher orders reaction</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="Kinetics.html"><a href="Kinetics.html#complex-rate-laws"><i class="fa fa-check"></i><b>15.2</b> Complex Rate Laws</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="Kinetics.html"><a href="Kinetics.html#consecutive-reactions"><i class="fa fa-check"></i><b>15.2.1</b> Consecutive reactions</a></li>
+<li class="chapter" data-level="15.2.2" data-path="Kinetics.html"><a href="Kinetics.html#competitive-reactions"><i class="fa fa-check"></i><b>15.2.2</b> Competitive reactions</a></li>
+<li class="chapter" data-level="15.2.3" data-path="Kinetics.html"><a href="Kinetics.html#opposed-reactions"><i class="fa fa-check"></i><b>15.2.3</b> Opposed reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="Kinetics.html"><a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders"><i class="fa fa-check"></i><b>15.3</b> Experimental Methods for Determination of Reaction Orders</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="Kinetics.html"><a href="Kinetics.html#initial-rates-method"><i class="fa fa-check"></i><b>15.3.1</b> Initial rates method</a></li>
+<li class="chapter" data-level="15.3.2" data-path="Kinetics.html"><a href="Kinetics.html#isolation-method"><i class="fa fa-check"></i><b>15.3.2</b> Isolation method</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="Kinetics.html"><a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients"><i class="fa fa-check"></i><b>15.4</b> Temperature Dependence of the Rate Coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>16</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-inorganic-substances-at-298-k"><i class="fa fa-check"></i><b>16.1</b> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+<li class="chapter" data-level="16.2" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-organic-substances-at-298-k"><i class="fa fa-check"></i><b>16.2</b> Thermodynamic Data of Organic Substances at 298 K</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ThermodynamicCycles" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Thermodynamic Cycles</h1>
+<p>The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let’s consider once again the Joule experiment (Figure <a href="FirstLaw.html#fig:FigJexp">3.1</a>). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in Figure <a href="ThermodynamicCycles.html#fig:FigJexpC">5.1</a>, there are no restrictions imposed on this hypothetical cycle by the first law.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigJexpC"></span>
+<img src="img/OEP_Figures.008.jpeg" alt="Closing the Cycle in The Joule Expansion Experiment." width="80%" />
+<p class="caption">
+Figure 5.1: Closing the Cycle in The Joule Expansion Experiment.
+</p>
+</div>
+<p>As we saw in section <a href="FirstLaw.html#isothermalE">3.1.1</a>, states 1 and 2 have exactly the same energy at constant temperature. Restricting the analysis to the information contained in the first law, the ideal gas could hypothetically go from state 1 (all gas in the left chamber) to state 2 (gas in both chambers), as well as spontaneously close the cycle back from state 2 to state 1, without external intervention. While the transformation from 1 <span class="math inline">\(\rightarrow\)</span> 2 is intuitively spontaneous (it’s the same transformation that we considered in section <a href="FirstLaw.html#isothermalE">3.1.1</a>), the backward transformation from 2 <span class="math inline">\(\rightarrow\)</span> 1 is clearly not as intuitive. In this case, the gas should spontaneously compress back to the left side, leaving a vacuum on the right chambers, without interventions from the outside. This transformation is clearly never observed. A gas just does not spontaneously concentrate on one side of a room, leaving a vacuum on the other side. In fact, when we need to create a vacuum, a lot of energy must be spent. Suppose we use exclusively information contained in the first law. In this case, there is nothing that might suggest a system’s preference to perform the transformation 1 <span class="math inline">\(\rightarrow\)</span> 2, while restricting the 2 <span class="math inline">\(\rightarrow\)</span> 1 from happening spontaneously. Both states have the same energy, and</p>
+<p><span class="math display" id="eq:de0c">\[\begin{equation}
+  \oint dU=0,
+  \tag{5.1}
+\end{equation}\]</span></p>
+<p>James Joule himself was indeed convinced that this must be the case and that we don’t observe the backward transformation in practice only because we cannot build ideal machines.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> Another scientist of that era was not convinced. William Thomson, the 1<sup>st</sup> Baron Kelvin (1824–1907), was unsure about this idea, and invested substantial resources to try to prove Joule’s wrong.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p>A few years later, the controversy between Joule and Kelvin was redeemed in favor of the latter, thanks to the experiments of French military engineer Nicolas Léonard Sadi Carnot (1796–1832). The work of Carnot began in France several years before Joule and Kelvin’s time.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency.</p>
+<div id="carnotcyclesect" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Carnot Cycle</h2>
+<p>The main contribution of Carnot to thermodynamics is his abstraction of the steam engine’s essential features into a more general and idealized heat engine. The definition of Carnot’s idealized cycle is as follows:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:carnotcycle" class="definition"><strong>Definition 5.1  </strong></span>
+A <em>Carnot cycle</em> is an idealized process composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an <em>ideal gas</em>. All transformations are assumed to be <em>reversible</em>, and no energy is lost to mechanical friction.</p>
+</div>
+</blockquote>
+<p>A Carnot cycle connects two “heat reservoirs” at temperatures <span class="math inline">\(T_h\)</span> (hot) and <span class="math inline">\(T_l\)</span> (low), respectively. The reservoirs have a large thermal capacity so that their temperatures are unaffected by the cycle. The system is composed exclusively by the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformations of a Carnot cycle on a <span class="math inline">\(PV\)</span> diagram, we obtain the following plot:</p>
+<div class="figure" style="text-align: center"><span id="fig:FigCarnotPV"></span>
+<img src="pchem1_files/figure-html/FigCarnotPV-1.png" alt="PV-Diagram of a Carnot Cycle." width="70%" />
+<p class="caption">
+Figure 5.2: PV-Diagram of a Carnot Cycle.
+</p>
+</div>
+<div id="CCstage1" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></h3>
+<p><img src="img/OEP_Figures.007a.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Starting the analysis of the cycle from point <span class="math inline">\(A\)</span> in Figure <a href="ThermodynamicCycles.html#fig:FigCarnotPV">5.2</a>,<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> the first transformation we encounter is an isothermal expansion at <span class="math inline">\(T_h\)</span>. Since the transformation is isothermal:</p>
+<p><span class="math display" id="eq:CCst1">\[\begin{equation}
+\Delta U_1 = \overbrace{W_1}^{&lt;0} + \overbrace{Q_1}^{&gt;0} = 0 \Rightarrow Q_1 = -W_1,
+  \tag{5.2}
+\end{equation}\]</span></p>
+<p>and heat and work can be calculated for this stage using eq. <a href="ZerothLaw.html#eq:WmaxV">(2.19)</a>:</p>
+<p><span class="math display" id="eq:CCst1b">\[\begin{equation}
+\begin{aligned}
+ Q_1 &amp; = \left| Q_h \right|  = nRT_h \overbrace{\ln \frac{V_B}{V_A}}^{&gt;0 \text{ since } V_B&gt;V_A} &gt; 0, \\
+ W_1 &amp; = -Q_1 = - nRT_h \ln \frac{V_B}{V_A} &lt; 0,
+\end{aligned}
+  \tag{5.3}
+\end{equation}\]</span></p>
+<p>where we denoted <span class="math inline">\(\left| Q_h \right|\)</span> the absolute value of the heat that gets <strong>into</strong> the system from the hot reservoir.</p>
+</div>
+<div id="CCstage2" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></h3>
+<p><img src="img/OEP_Figures.007b.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>The second transformation is an adiabatic expansion between <span class="math inline">\(T_h\)</span> and <span class="math inline">\(T_l\)</span>. Since we are at adiabatic conditions:</p>
+<p><span class="math display" id="eq:CCst2">\[\begin{equation}
+Q_2 = 0 \Rightarrow \Delta U_2 = W_2,
+  \tag{5.4}
+\end{equation}\]</span></p>
+<p>and the negative energy (expansion work) can be calculated using:</p>
+<p><span class="math display" id="eq:CCst2b">\[\begin{equation}
+\Delta U_2 = W_2 = n \underbrace{\int_{T_h}^{T_l} C_V dT}_{&lt;0 \text{ since } T_\mathrm{l}&lt;T_\mathrm{h}} &lt; 0.
+  \tag{5.5}
+\end{equation}\]</span></p>
+</div>
+<div id="CCstage3" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></h3>
+<p><img src="img/OEP_Figures.007c.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>The third transformation is an isothermal compression at <span class="math inline">\(T_l\)</span>. The formulas are the same as those used for stage 1, but they will results in heat and work with reversed signs (since this is a compression):</p>
+<p><span class="math display" id="eq:CCst3">\[\begin{equation}
+\Delta U_3 = \overbrace{W_3}^{&gt;0} + \overbrace{Q_3}^{&lt;0} = 0 \Rightarrow Q_3 = -W_3,
+  \tag{5.6}
+\end{equation}\]</span></p>
+<p>and:</p>
+<p><span class="math display" id="eq:CCst3b">\[\begin{equation}
+\begin{aligned}
+ Q_3 &amp; = \left| Q_l \right|  = nRT_l \overbrace{\ln \frac{V_D}{V_C}}^{&lt;0 \text{ since } V_D&lt;V_C} &lt; 0 , \\
+ W_3 &amp; = -Q_3 = - nRT_l \ln \frac{V_D}{V_C} &gt; 0,
+\end{aligned}
+  \tag{5.7}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\left| Q_l \right|\)</span> is the absolute value of the heat that gets <strong>out of</strong> the system to the cold reservoir (<span class="math inline">\(\left| Q_l \right|\)</span> being the heat entering the system).</p>
+</div>
+<div id="CCstage4" class="section level3" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></h3>
+<p><img src="img/OEP_Figures.007d.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>The fourth and final transformation is an adiabatic comprssion that restores the system to point <span class="math inline">\(A\)</span>, bringing it from <span class="math inline">\(T_l\)</span> to <span class="math inline">\(T_h\)</span>. Similarly to stage 3:</p>
+<p><span class="math display" id="eq:CCst4">\[\begin{equation}
+Q_4 = 0 \Rightarrow \Delta U_4 = W_4,
+  \tag{5.8}
+\end{equation}\]</span></p>
+<p>Since we are at adiabatic conditions. The energy associated with this process is now positive (compression work), and can be calculated using:</p>
+<p><span class="math display" id="eq:CCst4b">\[\begin{equation}
+\Delta U_4 = W_4 = n \underbrace{\int_{T_l}^{T_h} C_V dT}_{&gt;0 \text{ since } T_\mathrm{h}&gt;T_\mathrm{l}} &gt; 0.
+  \tag{5.9}
+\end{equation}\]</span></p>
+<p>Notice how <span class="math inline">\(\Delta U_4 = - \Delta U_2\)</span> because <span class="math inline">\(\int_x^y=-\int_y^x\)</span>.</p>
+</div>
+</div>
+<div id="UWQCarnot" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Energy, Heat, and Work in the Carnot Cycle</h2>
+<p>Summarizing the results of the previous sections, the total amount of energy for a Carnot cycle is:</p>
+<p><span class="math display" id="eq:UtotCC">\[\begin{equation}
+\begin{aligned}
+  \Delta U_{\text{TOT}} &amp; = \Delta U_1+\Delta U_2+\Delta U_3+\Delta U_4 \\
+                 &amp; = 0 + n \int_{T_h}^{T_l} C_V dT + 0 + n \int_{T_l}^{T_h} C_V dT  \\
+                 &amp; = n \int_{T_h}^{T_l} C_V dT - n \int_{T_h}^{T_l} C_V dT = 0 \\
+\end{aligned}
+  \tag{5.10}
+\end{equation}\]</span></p>
+<p>which is obviously zero, since <span class="math inline">\(\oint dU=0\)</span>. The amounts of work and heat, however, are not zero, since <span class="math inline">\(Q\)</span> and <span class="math inline">\(W\)</span> are path functions. Therefore:</p>
+<p><span class="math display" id="eq:WtotCC">\[\begin{equation}
+\begin{aligned}
+  W_{\text{TOT}} &amp; = W_1+W_2+W_3+W_4 \\
+                 &amp; = - nRT_h \ln \frac{V_B}{V_A} + n \int_{T_h}^{T_l} C_V dT - nRT_l \ln \frac{V_D}{V_C} + n \int_{T_l}^{T_h} C_V dT \\
+                 &amp; = - nRT_h \ln \frac{V_B}{V_A} - nRT_l \ln \frac{V_D}{V_C}, \\
+\end{aligned}
+  \tag{5.11}
+\end{equation}\]</span></p>
+<p>which, considering that <span class="math inline">\(V_C/V_D=V_B/V_A\)</span>, reduces to:</p>
+<p><span class="math display" id="eq:WtotCC2">\[\begin{equation}
+  W_{\text{TOT}} = - nR \left( T_h-T_l \right) \ln \frac{V_B}{V_A} &lt; 0,
+  \tag{5.12}
+\end{equation}\]</span></p>
+<p>which is negative, because <span class="math inline">\(T_h&gt;T_l\)</span> and <span class="math inline">\(V_B&gt;V_A\)</span>. Negative work means that the work is done by the system. In other words, the system is performing <span class="math inline">\(PV\)</span>-work by transferring heat from a hot reservoir to a cold one via a Carnot cycle. On the other hand, for the heat:</p>
+<p><span class="math display" id="eq:QtotCC">\[\begin{equation}
+\begin{aligned}
+  Q_{\text{TOT}} &amp; = Q_1+Q_2+Q_3+Q_4 \\
+                 &amp; = Q_h + 0 + Q_l + 0    \\
+                 &amp; = nRT_h \ln \frac{V_B}{V_A} + nRT_l \ln \frac{V_D}{V_C} \\
+                 &amp; = nR \left( T_h-T_l \right) \ln \frac{V_B}{V_A} = -W_{\text{TOT}},
+\end{aligned}
+  \tag{5.13}
+\end{equation}\]</span></p>
+<p>which, simplifies to:</p>
+<p><span class="math display" id="eq:WtotCC3">\[\begin{equation}
+W_{\text{TOT}}=-(Q_1+Q_3),
+  \tag{5.14}
+\end{equation}\]</span></p>
+<p>and, replacing <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_3\)</span> with the absolute values of the heats drawn from the hot and cold reservoirs, <span class="math inline">\(\left| Q_h \right|\)</span>, and <span class="math inline">\(\left| Q_l \right|\)</span> respectively:</p>
+<p><span class="math display" id="eq:QtotCC2">\[\begin{equation}
+\left| W_{\text{TOT}} \right| = \left| Q_h \right| - \left| Q_l \right|,
+  \tag{5.15}
+\end{equation}\]</span></p>
+<p>or, in other words, more heat is extracted from the hot reservoir than it is put into the cold one. The difference between the absolute value of these amounts of heat gives the total work of the cycle. This process is depicted in Figure <a href="ThermodynamicCycles.html#fig:FigCarnotEff">5.3</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigCarnotEff"></span>
+<img src="img/OEP_Figures.009.jpeg" alt="Carnot Cycle Diagram." width="80%" />
+<p class="caption">
+Figure 5.3: Carnot Cycle Diagram.
+</p>
+</div>
+<blockquote>
+
+<div class="exercise">
+<p><span id="exr:CarnotEx" class="exercise"><strong>Exercise 5.1  </strong></span>Up to this point, we have discussed Carnot cycles working in the hot <span class="math inline">\(\rightarrow\)</span> cold direction (<span class="math inline">\(A\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(B\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(D\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(A\)</span>), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold <span class="math inline">\(rightarrow\)</span> hot direction (<span class="math inline">\(A\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(D\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(B\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(A\)</span>). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections <a href="ThermodynamicCycles.html#carnotcyclesect">5.1</a> and <a href="ThermodynamicCycles.html#UWQCarnot">5.2</a>.</p>
+<em>Solution:</em> When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of <span class="math inline">\(Q\)</span>, <span class="math inline">\(W\)</span>, and <span class="math inline">\(U\)</span> will be reversed. In this case, the total work would get <strong>into</strong> the systems, and heat would be transferred from the cold reservoir to the hot one. Figure <a href="ThermodynamicCycles.html#fig:FigCarnotEff">5.3</a> would be modified as:
+</div>
+<p><img src="img/OEP_Figures.010.jpeg" width="60%" style="display: block; margin: auto 0 auto auto;" />
+This reversed mode of operation is the basic principle behind refrigerators and air conditioning.</p>
+</blockquote>
+</div>
+<div id="efficiency-of-a-carnot-cycle" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Efficiency of a Carnot Cycle</h2>
+<p>The efficiency (<span class="math inline">\(\varepsilon\)</span>) of a cycle is defined as the ratio between the absolute value of the work extracted from the cycle (<span class="math inline">\(\left| W_{\text{TOT}} \right|\)</span>) and the heat that gets into the system (<span class="math inline">\(\left| Q_h \right|\)</span>):</p>
+<p><span class="math display" id="eq:effCC1">\[\begin{equation}
+\varepsilon = \frac{\left| W_{\text{TOT}} \right|}{\left| Q_h \right|} =\frac{-W_{\text{TOT}}}{Q_1}
+\tag{5.16}
+\end{equation}\]</span></p>
+<p>where the minus sign in front of the work is necessary because the efficiency is defined as a positive number. Replacing eq. <a href="ThermodynamicCycles.html#eq:WtotCC3">(5.14)</a> into <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a>, we obtain:</p>
+<p><span class="math display" id="eq:effCC2">\[\begin{equation}
+\varepsilon = \frac{Q_3+Q_1}{Q_1} = 1+\frac{Q_3}{Q_1}.
+\tag{5.17}
+\end{equation}\]</span></p>
+<p>If we go back to eq. <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a> and we replace eq. <a href="ThermodynamicCycles.html#eq:WtotCC2">(5.12)</a> for <span class="math inline">\(W_{\mathrm{TOT}}\)</span> and eq. <a href="ThermodynamicCycles.html#eq:CCst1b">(5.3)</a> for <span class="math inline">\(Q_1\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:effCC3">\[\begin{equation}
+\varepsilon = \frac{nR \left( T_h - T_l \right) \ln V_B/V_A}{nRT_h \ln V_B/V_A} = \frac{T_h-T_l}{T_h}=1-\frac{T_l}{T_h }&lt;1,
+\tag{5.18}
+\end{equation}\]</span></p>
+<p>which proves that the efficiency of a Carnot cycle is strictly smaller than 1.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> In other words, no cycle can convert 100% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a> and <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a> for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement “It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects.”<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> This statement conclusively disproved Joule’s original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="15">
+<li id="fn15"><p>Either because we don’t really have ideal gases, or because we are unable to construct mechanical devices without loss, or in general because of other experimental factors<a href="ThermodynamicCycles.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<li id="fn16"><p>Interestingly enough, both Joule and Lord Kelvin are now recognized as key figures in the development of thermodynamics and science in general. So much so, that the energy unit and the temperature unit in the SI system are named after them.<a href="ThermodynamicCycles.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn17"><p>Carnot’s lone book, the <a href="https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire"><em>Réflexions sur la Puissance Motrice du Feu</em> (“Reflections on the Motive Power of Fire”)</a> was published in France in 1824, the same year Kelvin was born and just 6 years after Joule’s birth.<a href="ThermodynamicCycles.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p>The stages of a Carnot depicted at the beginning of each of this section and the following three ones are genetaken from <a href="https://en.wikipedia.org/wiki/Carnot_cycle">Wikipedia</a>, and have been generated and distributed by Author BlyumJ under CC-BY-SA license.<a href="ThermodynamicCycles.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<li id="fn19"><p>Eq. <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a> can be equal to 1 only if <span class="math inline">\(T_l=0 \; \text{K}\)</span> or <span class="math inline">\(T_h=\infty\)</span>, two conditions that are both equally impossible.<a href="ThermodynamicCycles.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>Thomson W. <a href="https://www.biodiversitylibrary.org/item/126047#page/295/mode/1up">Transactions of the Royal Society of Edinburgh. 1851 XX 261–268, 289–298.</a>.<a href="ThermodynamicCycles.html#fnref20" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Thermochemistry.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="SecondLaw.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem1/edit/master/05_ThermodynamicCycles.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem1.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

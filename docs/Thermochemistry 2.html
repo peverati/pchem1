@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Thermochemistry | The Live Textbook of Physical Chemistry 1</title>
+  <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem1" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2021-10-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="FirstLaw.html"/>
+<link rel="next" href="ThermodynamicCycles.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 1</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="SystemVariables.html"><a href="SystemVariables.html"><i class="fa fa-check"></i><b>1</b> Systems and Variables</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.1</b> Thermodynamic Systems</a></li>
+<li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ZerothLaw.html"><a href="ZerothLaw.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energyint"><i class="fa fa-check"></i><b>3.1</b> Calculation of Internal Energy Changes</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermalE"><i class="fa fa-check"></i><b>3.1.1</b> Internal energy in isothermal processes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-adiabatic-processes"><i class="fa fa-check"></i><b>3.1.2</b> Internal energy in adiabatic processes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-isochoric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Internal energy in isochoric processes</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rxnenthalpy"><i class="fa fa-check"></i><b>4.1</b> Reaction Enthalpies</a></li>
+<li class="chapter" data-level="4.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#formenthalpy"><i class="fa fa-check"></i><b>4.2</b> Standard Enthalpies of Formation</a></li>
+<li class="chapter" data-level="4.3" data-path="Thermochemistry.html"><a href="Thermochemistry.html#hessslaw"><i class="fa fa-check"></i><b>4.3</b> Hess’s Law</a></li>
+<li class="chapter" data-level="4.4" data-path="Thermochemistry.html"><a href="Thermochemistry.html#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><i class="fa fa-check"></i><b>4.4</b> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html"><i class="fa fa-check"></i><b>5</b> Thermodynamic Cycles</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#carnotcyclesect"><i class="fa fa-check"></i><b>5.1</b> Carnot Cycle</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage1"><i class="fa fa-check"></i><b>5.1.1</b> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage2"><i class="fa fa-check"></i><b>5.1.2</b> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage3"><i class="fa fa-check"></i><b>5.1.3</b> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage4"><i class="fa fa-check"></i><b>5.1.4</b> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#UWQCarnot"><i class="fa fa-check"></i><b>5.2</b> Energy, Heat, and Work in the Carnot Cycle</a></li>
+<li class="chapter" data-level="5.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle"><i class="fa fa-check"></i><b>5.3</b> Efficiency of a Carnot Cycle</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isothermal-processes"><i class="fa fa-check"></i><b>7.1.1</b> Entropy in isothermal processes</a></li>
+<li class="chapter" data-level="7.1.2" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-adiabatic-processes"><i class="fa fa-check"></i><b>7.1.2</b> Entropy in adiabatic processes</a></li>
+<li class="chapter" data-level="7.1.3" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isochoric-processes"><i class="fa fa-check"></i><b>7.1.3</b> Entropy in isochoric processes</a></li>
+<li class="chapter" data-level="7.1.4" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isobaric-processes"><i class="fa fa-check"></i><b>7.1.4</b> Entropy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="thirdlaw.html"><a href="thirdlaw.html#dssurr"><i class="fa fa-check"></i><b>7.2</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
+<li class="chapter" data-level="7.3" data-path="thirdlaw.html"><a href="thirdlaw.html#spontS"><i class="fa fa-check"></i><b>7.3</b> Clausius Theorem</a></li>
+<li class="chapter" data-level="7.4" data-path="thirdlaw.html"><a href="thirdlaw.html#thirdlawsect"><i class="fa fa-check"></i><b>7.4</b> The Third Law of Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
+<li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Free Energy</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.3" data-path="GibbsFree.html"><a href="GibbsFree.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.3</b> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.4" data-path="GibbsFree.html"><a href="GibbsFree.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.4</b> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>10</b> Chemical Equilibrium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#reaction-quotient-and-equilibrium-constant"><i class="fa fa-check"></i><b>10.1</b> Reaction Quotient and Equilibrium Constant</a></li>
+<li class="chapter" data-level="10.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.2</b> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.3</b> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>11</b> Ideal and Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-equation"><i class="fa fa-check"></i><b>11.1</b> The Ideal Gas Equation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="RealGases.html"><a href="RealGases.html#boyles-law"><i class="fa fa-check"></i><b>11.1.1</b> Boyle’s Law</a></li>
+<li class="chapter" data-level="11.1.2" data-path="RealGases.html"><a href="RealGases.html#charless-and-gay-lussacs-laws"><i class="fa fa-check"></i><b>11.1.2</b> Charles’s and Gay-Lussac’s Laws</a></li>
+<li class="chapter" data-level="11.1.3" data-path="RealGases.html"><a href="RealGases.html#avogadros-law"><i class="fa fa-check"></i><b>11.1.3</b> Avogadro’s Law</a></li>
+<li class="chapter" data-level="11.1.4" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-law"><i class="fa fa-check"></i><b>11.1.4</b> The ideal gas Law</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="RealGases.html"><a href="RealGases.html#behaviors-of-non-ideal-gases"><i class="fa fa-check"></i><b>11.2</b> Behaviors of Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="RealGases.html"><a href="RealGases.html#the-van-der-waals-equation"><i class="fa fa-check"></i><b>11.2.1</b> The van der Waals equation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="RealGases.html"><a href="RealGases.html#joulethomson-effect"><i class="fa fa-check"></i><b>11.2.2</b> Joule–Thomson effect</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="RealGases.html"><a href="RealGases.html#critical-phenomena"><i class="fa fa-check"></i><b>11.3</b> Critical Phenomena</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="RealGases.html"><a href="RealGases.html#compressibility-factors"><i class="fa fa-check"></i><b>11.3.1</b> Compressibility factors</a></li>
+<li class="chapter" data-level="11.3.2" data-path="RealGases.html"><a href="RealGases.html#phase-diagram-of-a-non-ideal-gas"><i class="fa fa-check"></i><b>11.3.2</b> Phase diagram of a non-ideal gas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="RealGases.html"><a href="RealGases.html#fugacity"><i class="fa fa-check"></i><b>11.4</b> Fugacity</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>12</b> Phase Equilibrium</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#phase-stability"><i class="fa fa-check"></i><b>12.1</b> Phase Stability</a></li>
+<li class="chapter" data-level="12.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#gibbs-phase-rule"><i class="fa fa-check"></i><b>12.2</b> Gibbs Phase Rule</a></li>
+<li class="chapter" data-level="12.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#pt-phase-diagrams"><i class="fa fa-check"></i><b>12.3</b> <span class="math inline">\(PT\)</span> Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#liquid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.1</b> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.2</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-liquid-equilibrium"><i class="fa fa-check"></i><b>12.3.3</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</a></li>
+<li class="chapter" data-level="12.3.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-triple-point-and-the-critical-point"><i class="fa fa-check"></i><b>12.3.4</b> The triple point and the critical point</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-miscible"><i class="fa fa-check"></i><b>13.3.1</b> Totally miscible</a></li>
+<li class="chapter" data-level="13.3.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-immiscible"><i class="fa fa-check"></i><b>13.3.2</b> Totally immiscible</a></li>
+<li class="chapter" data-level="13.3.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#partially-miscible"><i class="fa fa-check"></i><b>13.3.3</b> Partially miscible</a></li>
+<li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
+<li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Solutions.html"><a href="Solutions.html#vapor-pressure-lowering"><i class="fa fa-check"></i><b>14.2.1</b> Vapor pressure lowering</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Solutions.html"><a href="Solutions.html#boiling-point-elevation-and-melting-point-depression"><i class="fa fa-check"></i><b>14.2.2</b> Boiling point elevation and melting point depression</a></li>
+<li class="chapter" data-level="14.2.3" data-path="Solutions.html"><a href="Solutions.html#osmotic-pressure"><i class="fa fa-check"></i><b>14.2.3</b> Osmotic pressure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="Kinetics.html"><a href="Kinetics.html"><i class="fa fa-check"></i><b>15</b> Chemical Kinetics</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="Kinetics.html"><a href="Kinetics.html#diffintk"><i class="fa fa-check"></i><b>15.1</b> Differential and integrated rate laws</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="Kinetics.html"><a href="Kinetics.html#zeroth-order-reaction"><i class="fa fa-check"></i><b>15.1.1</b> Zeroth-order reaction</a></li>
+<li class="chapter" data-level="15.1.2" data-path="Kinetics.html"><a href="Kinetics.html#first-order-reaction"><i class="fa fa-check"></i><b>15.1.2</b> First-order reaction</a></li>
+<li class="chapter" data-level="15.1.3" data-path="Kinetics.html"><a href="Kinetics.html#second-order-reaction"><i class="fa fa-check"></i><b>15.1.3</b> Second-order reaction</a></li>
+<li class="chapter" data-level="15.1.4" data-path="Kinetics.html"><a href="Kinetics.html#third-and-higher-orders-reaction"><i class="fa fa-check"></i><b>15.1.4</b> Third and higher orders reaction</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="Kinetics.html"><a href="Kinetics.html#complex-rate-laws"><i class="fa fa-check"></i><b>15.2</b> Complex Rate Laws</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="Kinetics.html"><a href="Kinetics.html#consecutive-reactions"><i class="fa fa-check"></i><b>15.2.1</b> Consecutive reactions</a></li>
+<li class="chapter" data-level="15.2.2" data-path="Kinetics.html"><a href="Kinetics.html#competitive-reactions"><i class="fa fa-check"></i><b>15.2.2</b> Competitive reactions</a></li>
+<li class="chapter" data-level="15.2.3" data-path="Kinetics.html"><a href="Kinetics.html#opposed-reactions"><i class="fa fa-check"></i><b>15.2.3</b> Opposed reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="Kinetics.html"><a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders"><i class="fa fa-check"></i><b>15.3</b> Experimental Methods for Determination of Reaction Orders</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="Kinetics.html"><a href="Kinetics.html#initial-rates-method"><i class="fa fa-check"></i><b>15.3.1</b> Initial rates method</a></li>
+<li class="chapter" data-level="15.3.2" data-path="Kinetics.html"><a href="Kinetics.html#isolation-method"><i class="fa fa-check"></i><b>15.3.2</b> Isolation method</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="Kinetics.html"><a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients"><i class="fa fa-check"></i><b>15.4</b> Temperature Dependence of the Rate Coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>16</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-inorganic-substances-at-298-k"><i class="fa fa-check"></i><b>16.1</b> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+<li class="chapter" data-level="16.2" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-organic-substances-at-298-k"><i class="fa fa-check"></i><b>16.2</b> Thermodynamic Data of Organic Substances at 298 K</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Thermochemistry" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Thermochemistry</h1>
+<div id="rxnenthalpy" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Reaction Enthalpies</h2>
+<p>In the previous chapter, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.</p>
+<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="FirstLaw.html#eq:dh2">(3.13)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
+<p><span class="math display" id="eq:DHrxn1">\[\begin{equation}
+  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
+  \tag{4.1}
+\end{equation}\]</span></p>
+<p>For example, if we take a simple reaction of the form:</p>
+<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
+<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
+<p><span class="math display" id="eq:DHrxn2">\[\begin{equation}
+  Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
+  \tag{4.2}
+\end{equation}\]</span></p>
+<p>Using the chemistry sign convention, Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:exoendo" class="definition"><strong>Definition 4.1  </strong></span><span class="math inline">\(\;\)</span></p>
+<ul>
+<li><span class="math inline">\(\Delta_{\text{rxn}} H &gt; 0 \Rightarrow\)</span> <em>Endothermic reaction</em> (heat is gained by the system).</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
+</ul>
+</div>
+</blockquote>
+<p>If we expand the sample reaction to account for its stoichiometry:</p>
+<p><span class="math display">\[ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , \]</span></p>
+<p>where <span class="math inline">\(a,b,c,d\)</span> are the stoichiometric coefficients of species <span class="math inline">\(\mathrm{A,B,C,D}\)</span>. Eq. <a href="Thermochemistry.html#eq:DHrxn2">(4.2)</a> can be rewritten as:</p>
+<p><span class="math display" id="eq:DHrxn3">\[\begin{equation}
+  Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
+  \tag{4.3}
+\end{equation}\]</span></p>
+<p>while for the most general case we can write it:</p>
+<p><span class="math display" id="eq:DHrxn4">\[\begin{equation}
+  \Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
+  \tag{4.4}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math inline">\(i\)</span> with its own sign. The signs of the stoichiometric are defined according to eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> as:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:nui" class="definition"><strong>Definition 4.2  </strong></span><em>Signs of the stoichiometric coefficients:</em></p>
+<ul>
+<li><span class="math inline">\(\nu_i\)</span> is <strong>positive</strong> if <span class="math inline">\(i\)</span> is a <strong>product</strong>.</li>
+<li><span class="math inline">\(\nu_i\)</span> is <strong>negative</strong> if <span class="math inline">\(i\)</span> is a <strong>reactant</strong>.</li>
+</ul>
+</div>
+</blockquote>
+</div>
+<div id="formenthalpy" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Standard Enthalpies of Formation</h2>
+<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:stdenthapies" class="definition"><strong>Definition 4.3  </strong></span>
+The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
+</div>
+</blockquote>
+<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+<p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
+<p><span class="math display" id="eq:someDfH">\[\begin{equation}
+\begin{aligned}
+  \mathrm{C}_{(s,\text{graphite})}+\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CO}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -394 \; \text{kJ/mol} \\
+   \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -75 \; \text{kJ/mol} \\ 
+   \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -286 \; \text{kJ/mol} 
+\end{aligned}
+\tag{4.5}
+\end{equation}\]</span></p>
+<p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix <a href="appendix.html#appendix">16</a>.</p>
+</div>
+<div id="hessslaw" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Hess’s Law</h2>
+<p>The calculation of a standard reaction enthalpy can be performed using the following cycle:</p>
+<p><span class="math display" id="eq:Hesscycle">\[\begin{equation}
+\begin{aligned}
+ \text{reactants} &amp; \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \text{products} \\
+\scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}} \\
+ \text{&quot;elements in } &amp; \text{their standard reference state&quot;}
+\end{aligned}
+\tag{4.6}
+\end{equation}\]</span></p>
+<p>This process is summarized by the simple formula:</p>
+<p><span class="math display" id="eq:Hess1">\[\begin{equation}
+  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\mathrm{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}- \Delta_{\mathrm{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}.
+  \tag{4.7}
+\end{equation}\]</span></p>
+<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in eq. <a href="Thermochemistry.html#eq:Hesscycle">(4.6)</a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Eq. <a href="Thermochemistry.html#eq:Hess1">(4.7)</a> can be generalized using the same technique used to derive eq. <a href="Thermochemistry.html#eq:DHrxn4">(4.4)</a>, resulting in:</p>
+<p><span class="math display" id="eq:Hess">\[\begin{equation}
+  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-},
+  \tag{4.8}
+\end{equation}\]</span></p>
+<p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
+<blockquote>
+
+<div class="exercise">
+<p><span id="exr:HessLawEx" class="exercise"><strong>Exercise 4.1  </strong></span>Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>.</p>
+<p><em>Solution:</em> The reaction that is under consideration is:
+<span class="math display">\[\begin{equation}
+  \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= ?
+\end{equation}\]</span></p>
+<p>Using Hess’s Law, <a href="Thermochemistry.html#eq:Hess">(4.8)</a>, the enthalpy of formation for methane is:</p>
+<p><span class="math display">\[\begin{equation}
+ \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{O}_{2(g)}}}_{=0}
+\end{equation}\]</span></p>
+<p>whose values are reported in eqs. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>. Notice that the formation enthalpy of <span class="math inline">\(O_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
+<p><span class="math display">\[\begin{equation}
+ \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \overbrace{-394}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}}}  = -891 \mathrm{kJ/mol}.
+\end{equation}\]</span></p>
+<p>where the negative sign indicates that the reaction is exothermic (see <a href="Thermochemistry.html#def:exoendo">4.1</a>), as we should expect. The cycle that we used to solve this exercise can be summarized with :</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+\mathrm{CH}_{4(g)} + &amp; 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
+  \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}} &amp; \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}}\\
+  &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
+\end{aligned}
+\end{equation}\]</span></p>
+<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} = -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O} &amp; = \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} \\
+&amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
+\end{aligned}
+\end{equation}\]</span></p>
+which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).
+</div>
+</blockquote>
+</div>
+<div id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
+<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a> and <a href="FirstLaw.html#eq:dh2">(3.13)</a>:</p>
+<p><span class="math display" id="eq:DrxnHneq298">\[\begin{equation}
+\begin{aligned}
+dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T&#39;}} dH =  \int_{T=298}^{T&#39;} C_P dT \\
+            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}- H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}= \int_{T=298}^{T&#39;} C_P dT \\
+            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} C_P dT,
+\end{aligned}
+  \tag{4.9}
+\end{equation}\]</span></p>
+<p>which, in conjunction with Hess’s Law (eq. <a href="Thermochemistry.html#eq:Hess">(4.8)</a>), results in:</p>
+<p><span class="math display" id="eq:DrxnHneq298f">\[\begin{equation}
+ \Delta_{\text{rxn}} H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\text{rxn}} H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} \Delta C_P dT,
+  \tag{4.10}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>.</p>
+<blockquote>
+
+<div class="exercise">
+<p><span id="exr:DHtdiff298" class="exercise"><strong>Exercise 4.2  </strong></span>Calculate <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at 298 K is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
+<p><span class="math display">\[
+\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
+\]</span></p>
+<p><em>Solution:</em> Using eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a> we obtain:</p>
+<p><span class="math display">\[
+ \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
+\]</span></p>
+<p>which, assuming that the heat capacities does not depend on the temperature, becomes:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+ \Delta_{\text{rxn}} H^{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
+\end{aligned}
+\end{equation}\]</span></p>
+<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a>, confirming that the heat capacities are mostly independent of temperature.</p>
+</div>
+</blockquote>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="12">
+<li id="fn12"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref14" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="FirstLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ThermodynamicCycles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem1/edit/master/04_Thermochemistry.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem1.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

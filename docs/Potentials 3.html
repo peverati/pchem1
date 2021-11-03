@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1</title>
+  <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem1" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2021-09-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="thirdlaw.html"/>
+<link rel="next" href="GibbsFree.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 1</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="SystemVariables.html"><a href="SystemVariables.html"><i class="fa fa-check"></i><b>1</b> Systems and Variables</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.1</b> Thermodynamic Systems</a></li>
+<li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ZerothLaw.html"><a href="ZerothLaw.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energyint"><i class="fa fa-check"></i><b>3.1</b> Calculation of Internal Energy Changes</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermalE"><i class="fa fa-check"></i><b>3.1.1</b> Internal energy in isothermal processes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-adiabatic-processes"><i class="fa fa-check"></i><b>3.1.2</b> Internal energy in adiabatic processes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-isochoric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Internal energy in isochoric processes</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rxnenthalpy"><i class="fa fa-check"></i><b>4.1</b> Reaction Enthalpies</a></li>
+<li class="chapter" data-level="4.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#formenthalpy"><i class="fa fa-check"></i><b>4.2</b> Standard Enthalpies of Formation</a></li>
+<li class="chapter" data-level="4.3" data-path="Thermochemistry.html"><a href="Thermochemistry.html#hessslaw"><i class="fa fa-check"></i><b>4.3</b> Hess’s Law</a></li>
+<li class="chapter" data-level="4.4" data-path="Thermochemistry.html"><a href="Thermochemistry.html#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><i class="fa fa-check"></i><b>4.4</b> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html"><i class="fa fa-check"></i><b>5</b> Thermodynamic Cycles</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#carnotcyclesect"><i class="fa fa-check"></i><b>5.1</b> Carnot Cycle</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage1"><i class="fa fa-check"></i><b>5.1.1</b> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage2"><i class="fa fa-check"></i><b>5.1.2</b> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage3"><i class="fa fa-check"></i><b>5.1.3</b> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage4"><i class="fa fa-check"></i><b>5.1.4</b> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#UWQCarnot"><i class="fa fa-check"></i><b>5.2</b> Energy, Heat, and Work in the Carnot Cycle</a></li>
+<li class="chapter" data-level="5.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle"><i class="fa fa-check"></i><b>5.3</b> Efficiency of a Carnot Cycle</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Third Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isothermal-processes"><i class="fa fa-check"></i><b>7.1.1</b> Entropy in isothermal processes</a></li>
+<li class="chapter" data-level="7.1.2" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-adiabatic-processes"><i class="fa fa-check"></i><b>7.1.2</b> Entropy in adiabatic processes</a></li>
+<li class="chapter" data-level="7.1.3" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isochoric-processes"><i class="fa fa-check"></i><b>7.1.3</b> Entropy in isochoric processes</a></li>
+<li class="chapter" data-level="7.1.4" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isobaric-processes"><i class="fa fa-check"></i><b>7.1.4</b> Entropy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="thirdlaw.html"><a href="thirdlaw.html#dssurr"><i class="fa fa-check"></i><b>7.2</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
+<li class="chapter" data-level="7.3" data-path="thirdlaw.html"><a href="thirdlaw.html#spontS"><i class="fa fa-check"></i><b>7.3</b> Clausius Theorem</a></li>
+<li class="chapter" data-level="7.4" data-path="thirdlaw.html"><a href="thirdlaw.html#thirdlawsect"><i class="fa fa-check"></i><b>7.4</b> The Third Law of Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
+<li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Free Energy</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.3" data-path="GibbsFree.html"><a href="GibbsFree.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.3</b> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.4" data-path="GibbsFree.html"><a href="GibbsFree.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.4</b> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>10</b> Chemical Equilibrium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#reaction-quotient-and-equilibrium-constant"><i class="fa fa-check"></i><b>10.1</b> Reaction Quotient and Equilibrium Constant</a></li>
+<li class="chapter" data-level="10.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.2</b> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.3</b> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>11</b> Ideal and Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-equation"><i class="fa fa-check"></i><b>11.1</b> The Ideal Gas Equation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="RealGases.html"><a href="RealGases.html#boyles-law"><i class="fa fa-check"></i><b>11.1.1</b> Boyle’s Law</a></li>
+<li class="chapter" data-level="11.1.2" data-path="RealGases.html"><a href="RealGases.html#charless-and-gay-lussacs-laws"><i class="fa fa-check"></i><b>11.1.2</b> Charles’s and Gay-Lussac’s Laws</a></li>
+<li class="chapter" data-level="11.1.3" data-path="RealGases.html"><a href="RealGases.html#avogadros-law"><i class="fa fa-check"></i><b>11.1.3</b> Avogadro’s Law</a></li>
+<li class="chapter" data-level="11.1.4" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-law"><i class="fa fa-check"></i><b>11.1.4</b> The ideal gas Law</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="RealGases.html"><a href="RealGases.html#behaviors-of-non-ideal-gases"><i class="fa fa-check"></i><b>11.2</b> Behaviors of Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="RealGases.html"><a href="RealGases.html#the-van-der-waals-equation"><i class="fa fa-check"></i><b>11.2.1</b> The van der Waals equation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="RealGases.html"><a href="RealGases.html#joulethomson-effect"><i class="fa fa-check"></i><b>11.2.2</b> Joule–Thomson effect</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="RealGases.html"><a href="RealGases.html#critical-phenomena"><i class="fa fa-check"></i><b>11.3</b> Critical Phenomena</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="RealGases.html"><a href="RealGases.html#compressibility-factors"><i class="fa fa-check"></i><b>11.3.1</b> Compressibility factors</a></li>
+<li class="chapter" data-level="11.3.2" data-path="RealGases.html"><a href="RealGases.html#phase-diagram-of-a-non-ideal-gas"><i class="fa fa-check"></i><b>11.3.2</b> Phase diagram of a non-ideal gas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="RealGases.html"><a href="RealGases.html#fugacity"><i class="fa fa-check"></i><b>11.4</b> Fugacity</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>12</b> Phase Equilibrium</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#phase-stability"><i class="fa fa-check"></i><b>12.1</b> Phase Stability</a></li>
+<li class="chapter" data-level="12.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#gibbs-phase-rule"><i class="fa fa-check"></i><b>12.2</b> Gibbs Phase Rule</a></li>
+<li class="chapter" data-level="12.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#pt-phase-diagrams"><i class="fa fa-check"></i><b>12.3</b> <span class="math inline">\(PT\)</span> Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#liquid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.1</b> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.2</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-liquid-equilibrium"><i class="fa fa-check"></i><b>12.3.3</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</a></li>
+<li class="chapter" data-level="12.3.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-triple-point-and-the-critical-point"><i class="fa fa-check"></i><b>12.3.4</b> The triple point and the critical point</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-2-components2-condensed-phases-systems"><i class="fa fa-check"></i><b>13.3</b> Phase Diagrams of 2-Components/2-Condensed Phases Systems</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-miscible"><i class="fa fa-check"></i><b>13.3.1</b> Totally miscible</a></li>
+<li class="chapter" data-level="13.3.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#totally-immiscible"><i class="fa fa-check"></i><b>13.3.2</b> Totally immiscible</a></li>
+<li class="chapter" data-level="13.3.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#partially-miscible"><i class="fa fa-check"></i><b>13.3.3</b> Partially miscible</a></li>
+<li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
+<li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Solutions.html"><a href="Solutions.html#vapor-pressure-lowering"><i class="fa fa-check"></i><b>14.2.1</b> Vapor pressure lowering</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Solutions.html"><a href="Solutions.html#boiling-point-elevation-and-melting-point-depression"><i class="fa fa-check"></i><b>14.2.2</b> Boiling point elevation and melting point depression</a></li>
+<li class="chapter" data-level="14.2.3" data-path="Solutions.html"><a href="Solutions.html#osmotic-pressure"><i class="fa fa-check"></i><b>14.2.3</b> Osmotic pressure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="Kinetics.html"><a href="Kinetics.html"><i class="fa fa-check"></i><b>15</b> Chemical Kinetics</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="Kinetics.html"><a href="Kinetics.html#diffintk"><i class="fa fa-check"></i><b>15.1</b> Differential and integrated rate laws</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="Kinetics.html"><a href="Kinetics.html#zeroth-order-reaction"><i class="fa fa-check"></i><b>15.1.1</b> Zeroth-order reaction</a></li>
+<li class="chapter" data-level="15.1.2" data-path="Kinetics.html"><a href="Kinetics.html#first-order-reaction"><i class="fa fa-check"></i><b>15.1.2</b> First-order reaction</a></li>
+<li class="chapter" data-level="15.1.3" data-path="Kinetics.html"><a href="Kinetics.html#second-order-reaction"><i class="fa fa-check"></i><b>15.1.3</b> Second-order reaction</a></li>
+<li class="chapter" data-level="15.1.4" data-path="Kinetics.html"><a href="Kinetics.html#third-and-higher-orders-reaction"><i class="fa fa-check"></i><b>15.1.4</b> Third and higher orders reaction</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="Kinetics.html"><a href="Kinetics.html#complex-rate-laws"><i class="fa fa-check"></i><b>15.2</b> Complex Rate Laws</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="Kinetics.html"><a href="Kinetics.html#consecutive-reactions"><i class="fa fa-check"></i><b>15.2.1</b> Consecutive reactions</a></li>
+<li class="chapter" data-level="15.2.2" data-path="Kinetics.html"><a href="Kinetics.html#competitive-reactions"><i class="fa fa-check"></i><b>15.2.2</b> Competitive reactions</a></li>
+<li class="chapter" data-level="15.2.3" data-path="Kinetics.html"><a href="Kinetics.html#opposed-reactions"><i class="fa fa-check"></i><b>15.2.3</b> Opposed reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="Kinetics.html"><a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders"><i class="fa fa-check"></i><b>15.3</b> Experimental Methods for Determination of Reaction Orders</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="Kinetics.html"><a href="Kinetics.html#initial-rates-method"><i class="fa fa-check"></i><b>15.3.1</b> Initial rates method</a></li>
+<li class="chapter" data-level="15.3.2" data-path="Kinetics.html"><a href="Kinetics.html#isolation-method"><i class="fa fa-check"></i><b>15.3.2</b> Isolation method</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="Kinetics.html"><a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients"><i class="fa fa-check"></i><b>15.4</b> Temperature Dependence of the Rate Coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>16</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-inorganic-substances-at-298-k"><i class="fa fa-check"></i><b>16.1</b> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+<li class="chapter" data-level="16.2" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-organic-substances-at-298-k"><i class="fa fa-check"></i><b>16.2</b> Thermodynamic Data of Organic Substances at 298 K</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Potentials" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Thermodynamic Potentials</h1>
+<div id="fundeq" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Fundamental Equation of Thermodynamics</h2>
+<p>Let’s summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems:</p>
+<p><span class="math display" id="eq:dunv">\[\begin{equation}
+\begin{aligned}
+\text{From 1}^{\text{st}} \text{ Law:} \qquad \quad &amp; dU = đQ_{\mathrm{REV}}-PdV \\
+\text{From The Definition of Entropy:} \qquad \quad &amp; dS = \frac{đQ_{\mathrm{REV}}}{T} \rightarrow đQ_{\mathrm{REV}} = TdS \\
+\\
+\Rightarrow \quad &amp; dU = TdS - PdV.
+\end{aligned}
+\tag{8.1}
+\end{equation}\]</span></p>
+<p>Eq. <a href="Potentials.html#eq:dunv">(8.1)</a> is called the <strong>fundamental equation of thermodynamics</strong> since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed.</p>
+<p>At the end of the 19<sup>th</sup> century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the chemical potential:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:chemicalpot" class="definition"><strong>Definition 8.1  </strong></span>The <em>chemical potential</em> is the amount of energy absorbed or released due to a change of the particle number of a given chemical species.</p>
+</div>
+</blockquote>
+<p>The chemical potential of species <span class="math inline">\(i\)</span> is usually abbreviated as <span class="math inline">\(\mu_i\)</span>, and it enters the fundamental equation of thermodynamics as:</p>
+<p><span class="math display" id="eq:dunv2">\[\begin{equation}
+dU = TdS-PdV+\sum_i\mu_i dn_i,
+\tag{8.2}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(dn_i\)</span> is the differential change in the number of moles of substance <span class="math inline">\(i\)</span>, and the summation extends over all chemical species in the system.</p>
+<p>According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, <span class="math inline">\(S\)</span>, volume, <span class="math inline">\(V\)</span>, and the numbers of moles <span class="math inline">\(\{n_i\}\)</span>.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> To emphasize the important connections given by the fundamental equation, we can use the notation <span class="math inline">\(U(S,V,\{n_i\})\)</span> and we can term <span class="math inline">\(S\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\{n_i\}\)</span> <strong>natural variables</strong> of the energy.</p>
+</div>
+<div id="thermpot" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Thermodynamic Potentials</h2>
+<p>Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p>
+<p>Taking the internal energy as defined in eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we can perform such procedure by subtracting products of the following conjugate variables pairs: <span class="math inline">\(T \text{ and } S\)</span> or <span class="math inline">\(-P \text{ and } V\)</span>. This procedure aims to define new state functions that depend on more convenient natural variables.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> The new functions are called “thermodynamic potential energies,” or simply <strong>thermodynamic potentials</strong>.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> An example of this procedure is given by the definition of enthalpy that we have already seen in section <a href="FirstLaw.html#enthalpy">3.1.4</a>. If we take the internal energy and subtract the product of two conjugate variables (<span class="math inline">\(-P\)</span> and <span class="math inline">\(V\)</span>), we obtain a new state function called enthalpy, as we did in eq. <a href="FirstLaw.html#eq:enthalpydef">(3.9)</a>). Taking the differential of this definition, we obtain:</p>
+<p><span class="math display" id="eq:dhdef1">\[\begin{equation}
+dH = dU +VdP +PdV,
+\tag{8.3}
+\end{equation}\]</span></p>
+<p>and using the fundamental equation, eq. <a href="Potentials.html#eq:dunv2">(8.2)</a>, to replace <span class="math inline">\(dU\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:dhdef2">\[\begin{equation}
+\begin{aligned}
+dH &amp; = TdS -PdV +\sum_i\mu_i dn_i +VdP +PdV  \\
+   &amp; = TdS +VdP +\sum_i\mu_i dn_i.
+\end{aligned}
+\tag{8.4}
+\end{equation}\]</span></p>
+<p>which is the fundamental equation for enthalpy. The natural variables of the enthalpy are <span class="math inline">\(S\)</span>, <span class="math inline">\(P\)</span>, and <span class="math inline">\(\{n_i\}\)</span>. The Legendre transformation has allowed us to go from <span class="math inline">\(U(S,V,\{n_i\})\)</span> to <span class="math inline">\(H(S,P,\{n_i\})\)</span> by replacing the dependence on the extensive variable, <span class="math inline">\(V\)</span>, with an intensive one, <span class="math inline">\(P\)</span>.</p>
+<p>Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, <span class="math inline">\(A\)</span>, as:</p>
+<p><span class="math display" id="eq:dadef1">\[\begin{equation}
+A = U -TS
+\tag{8.5}
+\end{equation}\]</span></p>
+<p>which, taking the differential and using the fundamental equation (eq. <a href="Potentials.html#eq:dunv2">(8.2)</a>) becomes:</p>
+<p><span class="math display" id="eq:dadef2">\[\begin{equation}
+\begin{aligned}
+dA &amp;= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
+   &amp;= -SdT -PdV +\sum_i \mu_i dn_i.
+\end{aligned}
+\tag{8.6}
+\end{equation}\]</span></p>
+<p>The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.</p>
+<p>Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs free energy, <span class="math inline">\(G\)</span>, as:</p>
+<p><span class="math display" id="eq:dgdef1">\[\begin{equation}
+G = U -TS +PV
+\tag{8.7}
+\end{equation}\]</span></p>
+<p>which, taking again the differential and using eq. <a href="Potentials.html#eq:dunv2">(8.2)</a> becomes:</p>
+<p><span class="math display" id="eq:dgdef2">\[\begin{equation}
+\begin{aligned}
+dG &amp;= dU -SdT -TdS +VdP +PdV \\
+   &amp;= TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS +VdP +PdV \\
+   &amp;= VdP -SdT +\sum_i\mu_i dn_i.
+\end{aligned}
+\tag{8.8}
+\end{equation}\]</span></p>
+<p>The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.</p>
+<p>A summary of the four thermodynamic potentials is given in the following table.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Name</strong></th>
+<th align="center"><strong>Symbol</strong></th>
+<th align="center"><strong>Fundamental Equation</strong></th>
+<th align="center"><strong>Natural Variables</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Energy</strong></td>
+<td align="center"><span class="math inline">\(U\)</span></td>
+<td align="center"><span class="math inline">\(dU=TdS-PdV+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(S,V,\{n_i\}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Enthalpy</strong></td>
+<td align="center"><span class="math inline">\(H\)</span></td>
+<td align="center"><span class="math inline">\(dH=TdS+VdP+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(S,P,\{n_i\}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Helmholtz Free Energy</strong></td>
+<td align="center"><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(dA=-SdT-PdV+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(T,V,\{n_i\}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Gibbs Free Energy</strong></td>
+<td align="center"><span class="math inline">\(G\)</span></td>
+<td align="center"><span class="math inline">\(dG=VdP-SdT+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(T,P,\{n_i\}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The thermodynamic potentials are the analog of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:</p>
+<ul>
+<li>Internal energy (<span class="math inline">\(U\)</span>) is the capacity to do work plus the capacity to release heat.</li>
+<li>Enthalpy (<span class="math inline">\(H\)</span>) is the capacity to do non-mechanical work plus the capacity to release heat.</li>
+<li>Gibbs free energy (<span class="math inline">\(G\)</span>) is the capacity to do non-mechanical work.</li>
+<li>Helmholtz free energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></li>
+</ul>
+<p>Where non-mechanical work is defined as any type of work that is not expansion or compression (<span class="math inline">\(PV\)</span>–work). A typical example of non-mechanical work is electrical work.</p>
+</div>
+<div id="freeenergies" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Free Energies</h2>
+<p>The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, <span class="math inline">\(H(S,P,\{n_i\})\)</span>, <span class="math inline">\(A(T,V,\{n_i\})\)</span>, and <span class="math inline">\(G(T,P,\{n_i\})\)</span> all contain the same information that is in <span class="math inline">\(U(S,V,\{n_i\})\)</span>. However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term <span class="math inline">\(\sum_i\mu_i dn_i\)</span> that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant <span class="math inline">\(S\)</span> and constant <span class="math inline">\(V\)</span>:</p>
+<p><span class="math display" id="eq:duchem">\[\begin{equation}
+dU(S,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dS=dV=0.
+\tag{8.9}
+\end{equation}\]</span></p>
+<p>Similarly:</p>
+<p><span class="math display" id="eq:dhagchem">\[\begin{equation}
+\begin{aligned}
+dH(S,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dS=dP=0, \\
+dA(T,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dV=0, \\
+dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
+\end{aligned}
+\tag{8.10}
+\end{equation}\]</span></p>
+<p>The latter two cases are particularly interesting since most of chemistry happens at either constant volume,<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> or constant pressure.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Since <span class="math inline">\(dS=0\)</span> is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies.</p>
+<p>Recalling Clausius theorem:</p>
+<p><span class="math display" id="eq:dssyscrit">\[\begin{equation}
+d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
+\tag{8.11}
+\end{equation}\]</span></p>
+<p>we can consider the two cases: constant <span class="math inline">\(V\)</span> (<span class="math inline">\(đQ_V=dU\)</span>, left), and constant <span class="math inline">\(P\)</span> (<span class="math inline">\(đQ_P=dH\)</span>, right):</p>
+<p><span class="math display" id="eq:dadgder1">\[\begin{equation}
+\begin{aligned}
+\text{constant} &amp; \; V:           &amp; \qquad \qquad &amp; \qquad \qquad &amp;     \text{constant} &amp; \; P: \\
+\\
+TdS &amp; \geq dU           &amp; &amp;   &amp;     TdS &amp; \geq dH \\
+\\
+TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
+\end{aligned}
+\tag{8.12}
+\end{equation}\]</span></p>
+<p>we can then simplify the definition of free energies, eqs. <a href="Potentials.html#eq:dadef2">(8.6)</a> and <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
+<p><span class="math display" id="eq:dadgder3">\[\begin{equation}
+\begin{aligned}
+\text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\
+\\
+(dA)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       (dG)_{T,P} &amp;= dH - TdS \\ 
+\\
+dU = (dA)_{T,V} &amp;+TdS       &amp; &amp;   &amp;       dH = (dG)_{T,P} &amp;+TdS
+\end{aligned}
+\tag{8.13}
+\end{equation}\]</span></p>
+<p>and by merging <span class="math inline">\(dU\)</span> and <span class="math inline">\(dH\)</span> from eqs. <a href="Potentials.html#eq:dadgder3">(8.13)</a> into Clausius theorem expressed using eqs. <a href="Potentials.html#eq:dadgder1">(8.12)</a>, we obtain:</p>
+<p><span class="math display" id="eq:dadgcond">\[\begin{equation}
+\begin{aligned}
+TdS -(dA)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -(dG)_{T,P} &amp;- TdS \geq 0 \\
+\\
+(dA)_{T,V} &amp; \leq 0 &amp; \qquad &amp; \qquad &amp; (dG)_{T,P} &amp; \leq 0. \\
+\end{aligned}
+\tag{8.14}
+\end{equation}\]</span></p>
+<p>These equations represent the conditions on <span class="math inline">\(dA\)</span> and <span class="math inline">\(dG\)</span> for inferring the spontaneity of a process, and can be summarized as follows:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:helmgibbsminimum" class="definition"><strong>Definition 8.2  </strong></span><span class="math inline">\(\;\)</span></p>
+<ul>
+<li>During a spontaneous process at constant <em>temperature</em> and <em>volume</em>, the <em>Helmholtz free energy</em> will decrease <span class="math inline">\((dA&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dA=0)\)</span>.</li>
+<li>During a spontaneous process at constant <em>temperature</em> and <em>pressure</em>, the <em>Gibbs free energy</em> will decrease <span class="math inline">\((dG&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dG=0)\)</span>.</li>
+</ul>
+</div>
+</blockquote>
+<div class="figure" style="text-align: center"><span id="fig:agfig"></span>
+<img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right)." width="672" />
+<p class="caption">
+Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant <span class="math inline">\(T,V\)</span> (left) and Constant <span class="math inline">\(T,P\)</span> (right).
+</p>
+</div>
+</div>
+<div id="maxwell" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Maxwell Relations</h2>
+<p>Let’s consider the fundamental equations for the thermodynamic potentials that we have derived in section <a href="Potentials.html#fundeq">8.1</a>:</p>
+<p><span class="math display" id="eq:dhagchem1">\[\begin{equation}
+\begin{aligned}
+dU(S,V,\{n_i\}) &amp;= \enspace T dS -P dV + \sum_i \mu_i dn_i \\
+dH(S,P,\{n_i\}) &amp;= \enspace T dS + V dP + \sum_i \mu_i dn_i \\
+dA(T,V,\{n_i\}) &amp;= -S dT -P dV + \sum_i \mu_i dn_i \\
+dG(T,P,\{n_i\}) &amp;= -S dT + V dP + \sum_i \mu_i dn_i\;.
+\end{aligned}
+\tag{8.15}
+\end{equation}\]</span></p>
+<p>From the knowledge of the natural variable of each potential, we could reconstruct these formulas by using the total differential formula:</p>
+<p><span class="math display" id="eq:dhagchem2">\[\begin{equation}
+\begin{aligned}
+dU &amp;= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dH &amp;= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dA &amp;= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dG &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
+\end{aligned}
+\tag{8.16}
+\end{equation}\]</span></p>
+<p>we can derive the following new definitions:</p>
+<p><span class="math display" id="eq:dhagchem3">\[\begin{equation}
+\begin{aligned}
+ T &amp;= \left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}} = \left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}  \\
+-P &amp;= \left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}} = \left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}  \\
+ V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}  \\
+-S &amp;= \left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}} = \left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}  \\
+\text{and:}
+\\
+ \mu_i &amp;=  \left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}} =  \left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}} \\
+       &amp;= \left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}} = \left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}\;.
+\end{aligned}
+\tag{8.17}
+\end{equation}\]</span></p>
+<p>Since <span class="math inline">\(T\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(S\)</span> are now defined as partial first derivatives of a thermodynamic potential, we can now take a second partial derivation with respect to a separate variable, and rely on Schwartz’s theorem to derive the following relations:</p>
+<p><span class="math display" id="eq:maxrelf">\[\begin{equation}
+\begin{aligned}
+\frac{\partial^2 U }{\partial S \partial V} &amp;=&amp; +\left(\frac{\partial T}{\partial V}\right)_{S,\{n_{j \neq i}\}} &amp;=&amp; -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_{j \neq i}\}}   \\
+\frac{\partial^2 H }{\partial S \partial P} &amp;=&amp; +\left(\frac{\partial T}{\partial P}\right)_{S,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial V}{\partial S}\right)_{P,\{n_{j \neq i}\}}  \\
+-\frac{\partial^2 A }{\partial T \partial V} &amp;=&amp; +\left(\frac{\partial S}{\partial V}\right)_{T,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial P}{\partial T}\right)_{V,\{n_{j \neq i}\}}  \\
+\frac{\partial^2 G }{\partial T \partial P} &amp;=&amp; -\left(\frac{\partial S}{\partial P}\right)_{T,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial V}{\partial T}\right)_{P,\{n_{j \neq i}\}}
+\end{aligned}
+\tag{8.18}
+\end{equation}\]</span></p>
+<p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relations</strong>,<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
+<blockquote>
+
+<div class="exercise">
+<p><span id="exr:maxwellEx" class="exercise"><strong>Exercise 8.1  </strong></span>Derive the last Maxwell relation in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>.</p>
+<p><em>Solution:</em> We can start our derivation from the definition of <span class="math inline">\(V\)</span> and <span class="math inline">\(S\)</span> as a partial derivative of <span class="math inline">\(G\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}},
+\end{equation}\]</span></p>
+<p>and then take a second partial derivative of each quantity with respect to the second variable:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+ \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;=\frac{\partial}{\partial T}\left[ \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \right]_{P,\{n_i\}} \\
+\\
+-\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}} &amp;=\frac{\partial}{\partial P}\left[ \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}} \right]_{T,\{n_i\}} \;.
+\end{aligned}
+\end{equation}\]</span></p>
+<p>These two derivatives are mixed partial second derivatives of <span class="math inline">\(G\)</span> with respect to <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, and therefore, according to Schwartz’s theorem, they are equal to each other:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+\frac{\partial}{\partial T}\left[ \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \right]_{P,\{n_i\}} &amp;=
+\frac{\partial}{\partial P}\left[ \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}} \right]_{T,\{n_i\}}, \\
+\\
+\text{hence:} \\
+\\
+ \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;= -\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}},
+\end{aligned}
+\end{equation}\]</span></p>
+which is the last of Maxwell relations, as defined in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>. This relation is particularly useful because it connects the quantity <span class="math inline">\(\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}\)</span>—which is impossible to measure in a lab—with the quantity <span class="math inline">\(\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}\)</span>—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
+</div>
+</blockquote>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="25">
+<li id="fn25"><p>In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.<a href="Potentials.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<li id="fn26"><p>For example, we don’t always have a simple way to calculate or to measure the entropy.<a href="Potentials.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p>The mathematical condition that is fulfilled when performing a Legendre transformation is that the first derivatives of the original function and its transformation are inverse functions of each other.<a href="Potentials.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p>The rigorous mathematical definition of conjugate variables is unimportant at this stage. However, we can relate the variables in a pair with basic physics by noticing how the first variable in a pair is always intensive (<span class="math inline">\(T\)</span> and <span class="math inline">\(-P\)</span>), while the second one is always extensive (<span class="math inline">\(S\)</span> and <span class="math inline">\(V\)</span>). The intensive variables represent thermodynamic drivinng forces (as compared with mechanical forces in classical mechanics), while the extensive ones are the thermodynamic displacements (as compared with spatial displacements in classical mechanics). Similarly to classical mechanics, the product of two conjugate variables in a pair yields an energy. The minus sign in front of <span class="math inline">\(P\)</span> is explained by the fact that an increase in the force should always correspond to an increase in the displacement (while <span class="math inline">\(P\)</span> and <span class="math inline">\(V\)</span> are inversely related).<a href="Potentials.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn29"><p>Even if we introduced both concepts in the same chapter, it is important to never confuse the <em>thermodynamic potentials</em>—which are potential energy functions—with the <em>chemical potential</em>—which have been introduced by Gibbs to study heat in chemical reactions.<a href="Potentials.html#fnref29" class="footnote-back">↩︎</a></p></li>
+<li id="fn30"><p>For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the <a href="https://en.wikipedia.org/wiki/Thermodynamic_square">thermodynamic square</a>.<a href="Potentials.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<li id="fn31"><p>for example, several industrial processes in chemical plants.<a href="Potentials.html#fnref31" class="footnote-back">↩︎</a></p></li>
+<li id="fn32"><p>for example, most processes in a chemistry lab.<a href="Potentials.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<li id="fn33"><p>Maxwell relations should not be confused with the Maxwell equations of electromagnetism.<a href="Potentials.html#fnref33" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="thirdlaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="GibbsFree.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem1/edit/master/08_Potentials.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem1.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
