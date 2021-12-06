@@ -1,6 +1,6 @@
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-# Solutions {#Solutions}
+# Properties of Solutions {#Solutions}
 In chapter \@ref(MCPhaseDiagrams), we have qualitatively described the deviation of real solutions from ideal behavior. In this section, we are discussing it quantitatively. We will be able to do so by using a concept that we have already encountered in chapter \@ref(ChemicalEquilibrium): Lewis's activity. 
 
 ## Activity
@@ -162,14 +162,14 @@ The reduction of the melting point is similarly obtained by:
 (\#eq:coll6)
 \end{equation}
 
-where $i$ is the van 't Hoff factor introduced above, $K_{\text{m}}$ is the *cryoscopic constant* of the solvent, $m$ is the molality, and the minus sign accounts for the fact that the melting temperature of the solution is lower than the melting temperature of the pure solvent ($\Delta T_{\text{f}}$ is defined as a negative quantity, while $i$, $K_{\text{f}}$, and $m$ are all positive). Similarly to the previous case, the cryoscopic constant can be related to the molar enthalpy of fusion of the solvent using the equivalence of the chemical potential of the solid and the liquid phases at the melting point, and employing the Gibbs–Helmholtz equation:
+where $i$ is the van 't Hoff factor introduced above, $K_{\text{m}}$ is the *cryoscopic constant* of the solvent, $m$ is the molality, and the minus sign accounts for the fact that the melting temperature of the solution is lower than the melting temperature of the pure solvent ($\Delta T_{\text{m}}$ is defined as a negative quantity, while $i$, $K_{\text{m}}$, and $m$ are all positive). Similarly to the previous case, the cryoscopic constant can be related to the molar enthalpy of fusion of the solvent using the equivalence of the chemical potential of the solid and the liquid phases at the melting point, and employing the Gibbs–Helmholtz equation:
 
 \begin{equation}
 K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
 (\#eq:coll7)
 \end{equation}
 
-Notice from Figure \@ref(fig:FigSol2) how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water $K_{\text{f}} = 1.86\; \frac{\text{K kg}}{\text{mol}}$, while $K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}$. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
+Notice from Figure \@ref(fig:FigSol2) how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water $K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}$, while $K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}$. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
 
 ### Osmotic pressure
 
