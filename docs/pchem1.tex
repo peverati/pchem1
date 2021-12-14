@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{06 December 2021}
+\date{14 December 2021}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -1067,7 +1067,7 @@ with \(\Delta C_P = \sum_i \nu_i C_{P,i}\).
 \emph{Solution:} Using eq. \eqref{eq:DrxnHneq298f} we obtain:
 
 \[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
+ \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,
 \]
 
 which, assuming that the heat capacities does not depend on the temperature, becomes:
@@ -1390,7 +1390,7 @@ then we can extend the summation across temperatures of eq. \eqref{eq:effQrevT} 
 \hypertarget{irreversible-cycles}{%
 \section{Irreversible Cycles}\label{irreversible-cycles}}
 
-Up to this point, we have discussed \emph{reversible} cycles only. Notice that the heat that enters the definition of entropy (Definition \ref{def:entropy} is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. \eqref{eq:dentropy} becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. \eqref{eq:effCC3} is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. \eqref{eq:effcQT} for an \emph{irreversible} cycle will not hold anymore and must be rewritten as:
+Up to this point, we have discussed \emph{reversible} cycles only. Notice that the heat that enters the definition of entropy (Definition \ref{def:entropy}) is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. \eqref{eq:dentropy} becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. \eqref{eq:effCC3} is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. \eqref{eq:effcQT} for an \emph{irreversible} cycle will not hold anymore and must be rewritten as:
 
 \begin{equation}
 \overbrace{1+\frac{Q_3}{Q_1}}^{\varepsilon_{\mathrm{IRR}}} < \overbrace{1-\frac{T_l}{T_h}}^{\varepsilon_{\mathrm{REV}}},
@@ -1775,7 +1775,7 @@ According to the fundamental equation, the internal energy of a system is a func
 
 Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.\footnote{The mathematical condition that is fulfilled when performing a Legendre transformation is that the first derivatives of the original function and its transformation are inverse functions of each other.}
 
-Taking the internal energy as defined in eq. \eqref{eq:dunv}, we can perform such procedure by subtracting products of the following conjugate variables pairs: \(T \text{ and } S\) or \(-P \text{ and } V\). This procedure aims to define new state functions that depend on more convenient natural variables.\footnote{The rigorous mathematical definition of conjugate variables is unimportant at this stage. However, we can relate the variables in a pair with basic physics by noticing how the first variable in a pair is always intensive (\(T\) and \(-P\)), while the second one is always extensive (\(S\) and \(V\)). The intensive variables represent thermodynamic drivinng forces (as compared with mechanical forces in classical mechanics), while the extensive ones are the thermodynamic displacements (as compared with spatial displacements in classical mechanics). Similarly to classical mechanics, the product of two conjugate variables in a pair yields an energy. The minus sign in front of \(P\) is explained by the fact that an increase in the force should always correspond to an increase in the displacement (while \(P\) and \(V\) are inversely related).} The new functions are called ``thermodynamic potential energies,'' or simply \textbf{thermodynamic potentials}.\footnote{Even if we introduced both concepts in the same chapter, it is important to never confuse the \emph{thermodynamic potentials}---which are potential energy functions---with the \emph{chemical potential}---which have been introduced by Gibbs to study heat in chemical reactions.} An example of this procedure is given by the definition of enthalpy that we have already seen in section \ref{enthalpy}. If we take the internal energy and subtract the product of two conjugate variables (\(-P\) and \(V\)), we obtain a new state function called enthalpy, as we did in eq. \eqref{eq:enthalpydef}). Taking the differential of this definition, we obtain:
+Taking the internal energy as defined in eq. \eqref{eq:dunv}, we can perform such procedure by subtracting products of the following conjugate variables pairs: \(T \text{ and } S\) or \(-P \text{ and } V\). This procedure aims to define new state functions that depend on more convenient natural variables.\footnote{The rigorous mathematical definition of conjugate variables is unimportant at this stage. However, we can relate the variables in a pair with basic physics by noticing how the first variable in a pair is always intensive (\(T\) and \(-P\)), while the second one is always extensive (\(S\) and \(V\)). The intensive variables represent thermodynamic driving forces (as compared with mechanical forces in classical mechanics), while the extensive ones are the thermodynamic displacements (as compared with spatial displacements in classical mechanics). Similarly to classical mechanics, the product of two conjugate variables in a pair yields an energy. The minus sign in front of \(P\) is explained by the fact that an increase in the force should always correspond to an increase in the displacement (while \(P\) and \(V\) are inversely related).} The new functions are called ``thermodynamic potential energies,'' or simply \textbf{thermodynamic potentials}.\footnote{Even if we introduced both concepts in the same chapter, it is important to never confuse the \emph{thermodynamic potentials}---which are potential energy functions---with the \emph{chemical potential}---which have been introduced by Gibbs to study heat in chemical reactions.} An example of this procedure is given by the definition of enthalpy that we have already seen in section \ref{enthalpy}. If we take the internal energy and subtract the product of two conjugate variables (\(-P\) and \(V\)), we obtain a new state function called enthalpy, as we did in eq. \eqref{eq:enthalpydef}). Taking the differential of this definition, we obtain:
 
 \begin{equation}
 dH = dU +VdP +PdV,
@@ -2960,7 +2960,7 @@ Gas temperature: & \(\partial P\) & \(\mu_{\mathrm{JT}}\) & \(\partial T\) & The
 \bottomrule
 \end{longtable}
 
-For example, helium has a very low Joule--Thomson inversion temperatures at standard pressure \((T=45\;\text{K})\), and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures (\(T=621\;\text{K}\) and \(T=764\;\text{K}\), respectively), and they both cool when expanded at room temperature. Therefore, it is possible to use the Joule--Thomson effect in refrigeration processes such as air conditioning.\footnote{Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule--Thomson expansions are also used for the industrial liquefaction of air.} As we already discussed in chapter \ref{FirstLaw}, the temperature of an ideal gases stays constant in an adiabatic expansion, therefore its Joule--Thomson coefficient is always equal to zero.
+For example, helium has a very low Joule--Thomson inversion temperature at standard pressure \((T=45\;\text{K})\), and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures (\(T=621\;\text{K}\) and \(T=764\;\text{K}\), respectively), and they both cool when expanded at room temperature. Therefore, it is possible to use the Joule--Thomson effect in refrigeration processes such as air conditioning.\footnote{Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule--Thomson expansions are also used for the industrial liquefaction of air.} As we already discussed in chapter \ref{FirstLaw}, the temperature of an ideal gases stays constant in an adiabatic expansion, therefore its Joule--Thomson coefficient is always equal to zero.
 
 \hypertarget{critical-phenomena}{%
 \section{Critical Phenomena}\label{critical-phenomena}}
@@ -3506,7 +3506,7 @@ In an ideal solution, every volatile component follows Raoult's law. Since the v
 \begin{quote}
 \begin{exercise}
 \protect\hypertarget{exr:xaya}{}{\label{exr:xaya} }Calculate the mole fraction in the vapor phase of a liquid solution composed of 67\% of toluene (\(\mathrm{A}\)) and 33\% of benzene (\(\mathrm{B}\)), given the vapor pressures of the pure substances: \(P_{\text{A}}^*=0.03\;\text{bar}\), and \(P_{\text{B}}^*=0.10\;\text{bar}\).
-\emph{Solution:} The data available for the systems are summarized as follwos:
+\emph{Solution:} The data available for the systems are summarized as follows:
 \begin{equation}
 \begin{aligned}
 x_{\text{A}}=0.67  \qquad & \qquad x_{\text{B}}=0.33 \\
@@ -3564,7 +3564,7 @@ We can now consider the phase diagram of a 2-component ideal solution as a funct
 \caption{The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.}\label{fig:FigMC4}
 \end{figure}
 
-Compared to the \(Px_{\text{B}}\) diagram of Figure \ref{fig:FigMC3}, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there is only one degree of freedom inside the lens. As such, a liquid solution of initial composition \(x_{\text{B}}^i\) can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration \(y_{\text{B}}^f\). As is clear from Figure \ref{fig:FigMC4}, the mole fraction of the \(\text{B}\) component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporation and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component \(\text{B}\). This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure \ref{fig:FigMC5}.
+Compared to the \(Px_{\text{B}}\) diagram of Figure \ref{fig:FigMC3}, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there is only one degree of freedom inside the lens. As such, a liquid solution of initial composition \(x_{\text{B}}^i\) can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration \(y_{\text{B}}^f\). As is clear from Figure \ref{fig:FigMC4}, the mole fraction of the \(\text{B}\) component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component \(\text{B}\). This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure \ref{fig:FigMC5}.
 
 \begin{figure}
 
@@ -3648,7 +3648,7 @@ A more complicated case is that for components that do not mix in the liquid pha
 \caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Completely Immiscible in the Liquid Phase.}\label{fig:FigMC9}
 \end{figure}
 
-While the liquid 1+liquid 2 region (white area in Figure \ref{fig:FigMC9}) might seem similar to the liquid region that sits on top of it (blue area in Figure \ref{fig:FigMC9}), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have \(f=2-1+1=2\). In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have \(f=2-2+1=1\), which means that only one variable is independent of the others. The white region in Figure \ref{fig:FigMC9} is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure \ref{fig:FigMC4}. In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquid will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100\% \(\mathrm{A}\) and 100\% \(\mathrm{B}\), respectively).
+While the liquid 1+liquid 2 region (white area in Figure \ref{fig:FigMC9}) might seem similar to the liquid region that sits on top of it (blue area in Figure \ref{fig:FigMC9}), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have \(f=2-1+1=2\). In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have \(f=2-2+1=1\), which means that only one variable is independent of the others. The white region in Figure \ref{fig:FigMC9} is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure \ref{fig:FigMC4}. In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquids will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100\% \(\mathrm{A}\) and 100\% \(\mathrm{B}\), respectively).
 
 \hypertarget{partially-miscible}{%
 \subsection{Partially miscible}\label{partially-miscible}}
@@ -3809,7 +3809,7 @@ m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
 \label{eq:coll1}
 \end{equation}
 
-Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the freezing point, and osmotic pressure.
+Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the melting point, and osmotic pressure.
 
 \hypertarget{vapor-pressure-lowering}{%
 \subsection{Vapor pressure lowering}\label{vapor-pressure-lowering}}
@@ -3928,9 +3928,7 @@ where \(i\) is the van 't Hoff factor introduced above, \(m\) is the molality of
 \hypertarget{Kinetics}{%
 \chapter{Chemical Kinetics}\label{Kinetics}}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-From thermodynamics, we can determine the spontaneity of a reaction and its extent, using \(\Delta G\) and \(K\), respectively. However, thermodynamics does not provide any information on how \emph{fast} the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.
+From thermodynamics, we can determine the spontaneity of a reaction and its extent, using \(\Delta G\) and \(K_{\text{eq}}\), respectively. However, thermodynamics does not provide any information on how \emph{fast} the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.
 
 A chemical kinetics study aims to find the \emph{rate} of a reaction and to find the microscopic steps that compose it, determining its \emph{mechanism}.
 
@@ -4413,7 +4411,7 @@ by designing three experiment, where the initial concentrations of \(\mathrm{A}\
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \([\mathrm{A}]_0 \; (\text{M})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\([\mathrm{A}]_0 \; (\text{M})\)
+\([\mathrm{B}]_0 \; (\text{M})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \(\text{initial rate}\;\left(\frac{M}{s}\right)\)
 \end{minipage} \\
