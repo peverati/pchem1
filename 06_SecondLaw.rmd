@@ -279,7 +279,7 @@ then we can extend the summation across temperatures of eq. \@ref(eq:effQrevT) t
 
 ## Irreversible Cycles
 
-Up to this point, we have discussed *reversible* cycles only. Notice that the heat that enters the definition of entropy (Definition \@ref(def:entropy) is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. \@ref(eq:dentropy) becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. \@ref(eq:effCC3) is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. \@ref(eq:effcQT) for an *irreversible* cycle will not hold anymore and must be rewritten as:
+Up to this point, we have discussed *reversible* cycles only. Notice that the heat that enters the definition of entropy (Definition \@ref(def:entropy)) is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. \@ref(eq:dentropy) becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. \@ref(eq:effCC3) is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. \@ref(eq:effcQT) for an *irreversible* cycle will not hold anymore and must be rewritten as:
 
 \begin{equation}
 \overbrace{1+\frac{Q_3}{Q_1}}^{\varepsilon_{\mathrm{IRR}}} < \overbrace{1-\frac{T_l}{T_h}}^{\varepsilon_{\mathrm{REV}}},

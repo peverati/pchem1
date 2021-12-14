@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Thermochemistry | The Live Textbook of Physical Chemistry 1</title>
+  <title>14 Solutions | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="14 Solutions | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="14 Solutions | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-12-14" />
+<meta name="date" content="2021-11-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="FirstLaw.html"/>
-<link rel="next" href="ThermodynamicCycles.html"/>
+<link rel="prev" href="MCPhaseDiagrams.html"/>
+<link rel="next" href="Kinetics.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -221,7 +221,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Properties of Solutions</a>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
 <li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
@@ -278,183 +278,164 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Thermochemistry" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Thermochemistry</h1>
-<div id="rxnenthalpy" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Reaction Enthalpies</h2>
-<p>In chapter <a href="FirstLaw.html#FirstLaw">3</a>, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.</p>
-<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="#eq:dh2">(<strong>??</strong>)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
-<p><span class="math display" id="eq:DHrxn1">\[\begin{equation}
-  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
-  \tag{4.1}
+<div id="Solutions" class="section level1" number="14">
+<h1><span class="header-section-number">14</span> Solutions</h1>
+<p>In chapter <a href="MCPhaseDiagrams.html#MCPhaseDiagrams">13</a>, we have qualitatively described the deviation of real solutions from ideal behavior. In this section, we are discussing it quantitatively. We will be able to do so by using a concept that we have already encountered in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>: Lewis’s activity.</p>
+<div id="activity" class="section level2" number="14.1">
+<h2><span class="header-section-number">14.1</span> Activity</h2>
+<p>For non-ideal gases, we introduced in chapter <a href="RealGases.html#RealGases">11</a> the concept of <em>fugacity</em> as an <em>effective pressure</em> that accounts for non-ideal behavior. If we extend this concept to non-ideal solution, we can introduce the <em>activity</em> of a liquid or a solid, <span class="math inline">\(a\)</span>, as:</p>
+<p><span class="math display" id="eq:act1">\[\begin{equation}
+\mu_{\text{non-ideal}} = \mu^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln a,
+\tag{14.1}
 \end{equation}\]</span></p>
-<p>For example, if we take a simple reaction of the form:</p>
-<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
-<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
-<p><span class="math display" id="eq:DHrxn2">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
-  \tag{4.2}
+<p>where <span class="math inline">\(\mu\)</span> is the chemical potential of the substance or the mixture, and <span class="math inline">\(\mu^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> is the chemical potential at standard state. Comparing this definition to eq. <a href="#eq:dcpnig">(<strong>??</strong>)</a>, it is clear that the activity is equal to the fugacity for a non-ideal gas (which, in turn, is equal to the pressure for an ideal gas). However, for a liquid and a liquid mixture, it depends on the chemical potential at standard state. This means that the activity is not an absolute quantity, but rather a relative term describing how “active” a compound is compared to standard state conditions. The choice of the standard state is, in principle, arbitrary, but conventions are often chosen out of mathematical or experimental convenience. We already discussed the convention that standard state for a gas is at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}}=1\;\text{bar}\)</span>, so the activity is equal to the fugacity. The standard state for a component in a solution is the pure component at the temperature and pressure of the solution. This definition is equivalent to setting the activity of a pure component, <span class="math inline">\(i\)</span>, at <span class="math inline">\(a_i=1\)</span>.</p>
+<p>For a component in a solution we can use eq. <a href="#eq:dcpnig">(<strong>??</strong>)</a> to write the chemical potential in the gas phase as:</p>
+<p><span class="math display" id="eq:act2">\[\begin{equation}
+\mu_i^{\text{vapor}} = \mu_i^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln \frac{P_i}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}.
+\tag{14.2}
 \end{equation}\]</span></p>
-<p>Using the chemistry sign convention, Definition <a href="#def:chemistryconv"><strong>??</strong></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:exoendo" class="definition"><strong>Definition 4.1  </strong></span><span class="math inline">\(\;\)</span></p>
-<ul>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &gt; 0 \Rightarrow\)</span> <em>Endothermic reaction</em> (heat is gained by the system).</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
-</ul>
-</div>
-</blockquote>
-<p>If we expand the sample reaction to account for its stoichiometry:</p>
-<p><span class="math display">\[ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , \]</span></p>
-<p>where <span class="math inline">\(a,b,c,d\)</span> are the stoichiometric coefficients of species <span class="math inline">\(\mathrm{A,B,C,D}\)</span>. Eq. <a href="Thermochemistry.html#eq:DHrxn2">(4.2)</a> can be rewritten as:</p>
-<p><span class="math display" id="eq:DHrxn3">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
-  \tag{4.3}
+<p>If the gas phase is in equilibrium with the liquid solution, then:</p>
+<p><span class="math display" id="eq:act3">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^{\text{vapor}} = \mu_i^*,
+\tag{14.3}
 \end{equation}\]</span></p>
-<p>while for the most general case we can write it:</p>
-<p><span class="math display" id="eq:DHrxn4">\[\begin{equation}
-  \Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
-  \tag{4.4}
+<p>where <span class="math inline">\(\mu_i^*\)</span> is the chemical potential of the pure element. Subtracting eq. <a href="Solutions.html#eq:act3">(14.3)</a> from eq. <a href="Solutions.html#eq:act2">(14.2)</a>, we obtain:</p>
+<p><span class="math display" id="eq:act4">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \frac{P_i}{P^*_i}.
+\tag{14.4}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math inline">\(i\)</span> with its own sign. The signs of the stoichiometric are defined according to eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> as:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:nui" class="definition"><strong>Definition 4.2  </strong></span><em>Signs of the stoichiometric coefficients:</em></p>
-<ul>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>positive</strong> if <span class="math inline">\(i\)</span> is a <strong>product</strong>.</li>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>negative</strong> if <span class="math inline">\(i\)</span> is a <strong>reactant</strong>.</li>
-</ul>
+<p>For an ideal solution, we can use Raoult’s law, eq. <a href="#eq:mc1">(<strong>??</strong>)</a>, to rewrite eq. <a href="Solutions.html#eq:act4">(14.4)</a> as:</p>
+<p><span class="math display" id="eq:act5">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln x_i,
+\tag{14.5}
+\end{equation}\]</span></p>
+<p>which relates the chemical potential of a component in an ideal solution to the chemical potential of the pure liquid and its mole fraction in the solution. For a non-ideal solution, the partial pressure in eq. <a href="Solutions.html#eq:act4">(14.4)</a> is either larger (positive deviation) or smaller (negative deviation) than the pressure calculated using Raoult’s law. The chemical potential of a component in the mixture is then calculated using:</p>
+<p><span class="math display" id="eq:act6">\[\begin{equation}
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \left(\gamma_i x_i\right),
+\tag{14.6}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\gamma_i\)</span> is a positive coefficient that accounts for deviations from ideality. This coefficient is either larger than one (for positive deviations), or smaller than one (for negative deviations). The activity of component <span class="math inline">\(i\)</span> can be calculated as an <em>effective mole fraction</em>, using:</p>
+<p><span class="math display" id="eq:act7">\[\begin{equation}
+a_i = \gamma_i x_i,
+\tag{14.7}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\gamma_i\)</span> is defined as the <em>activity coefficient</em>. The partial pressure of the component can then be related to its vapor pressure, using:</p>
+<p><span class="math display" id="eq:act8">\[\begin{equation}
+P_i = a_i P_i^*.
+\tag{14.8}
+\end{equation}\]</span></p>
+<p>Comparing eq. <a href="Solutions.html#eq:act8">(14.8)</a> with Raoult’s law, we can calculate the activity coefficient as:</p>
+<p><span class="math display" id="eq:act9">\[\begin{equation}
+\gamma_i = \frac{P_i}{x_i P_i^*} = \frac{P_i}{P_i^{\text{R}}},
+\tag{14.9}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(P_i^{\text{R}}\)</span> is the partial pressure calculated using Raoult’s law. This result also proves that for an ideal solution, <span class="math inline">\(\gamma=1\)</span>. Eq. <a href="Solutions.html#eq:act9">(14.9)</a> can also be used experimentally to obtain the activity coefficient from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in Figure <a href="Solutions.html#fig:FigSol1">14.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigSol1"></span>
+<img src="img/OEP_Figures.033.jpeg" alt="Positive and Negative Deviation from Raoult's Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature." width="80%" />
+<p class="caption">
+Figure 14.1: Positive and Negative Deviation from Raoult’s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.
+</p>
 </div>
-</blockquote>
+<p>As we already discussed in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it’s defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </div>
-<div id="formenthalpy" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Standard Enthalpies of Formation</h2>
-<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:stdenthapies" class="definition"><strong>Definition 4.3  </strong></span>
-The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
-</div>
-</blockquote>
-<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
-<p><span class="math display" id="eq:someDfH">\[\begin{equation}
+<div id="colligative-properties" class="section level2" number="14.2">
+<h2><span class="header-section-number">14.2</span> Colligative Properties</h2>
+<p>Colligative properties are properties of solutions that depend on the number of particles in the solution and not on the nature of the chemical species. More specifically, a colligative property depends on the ratio between the number of particles of the solute and the number of particles of the solvent. This ratio can be measured using any unit of concentration, such as mole fraction, molarity, and normality. For diluted solutions, however, the most useful concentration for studying colligative properties is the molality, <span class="math inline">\(m\)</span>, which measures the ratio between the number of particles of the solute (in moles) and the mass of the solvent (in kg):</p>
+<p><span class="math display" id="eq:coll1">\[\begin{equation}
+m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
+\tag{14.10}
+\end{equation}\]</span></p>
+<p>Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the freezing point, and osmotic pressure.</p>
+<div id="vapor-pressure-lowering" class="section level3" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> Vapor pressure lowering</h3>
+<p>As we have already discussed in chapter <a href="MCPhaseDiagrams.html#MCPhaseDiagrams">13</a>, the vapor pressure of an ideal solution follows Raoult’s law. Its difference with respect to the vapor pressure of the pure solvent can be calculated as:</p>
+<p><span class="math display" id="eq:coll2">\[\begin{equation}
 \begin{aligned}
-  \mathrm{C}_{(s,\text{graphite})}+\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CO}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -394 \; \text{kJ/mol} \\
-   \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -75 \; \text{kJ/mol} \\ 
-   \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -286 \; \text{kJ/mol} 
+P_{\text{solvent}}^* &amp;- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{solvent}} P_{\text{solvent}}^* \\ 
+&amp; = \left( 1-x_{\text{solvent}}\right)P_{\text{solvent}}^* =x_{\text{solute}} P_{\text{solvent}}^*,
 \end{aligned}
-\tag{4.5}
+\tag{14.11}
 \end{equation}\]</span></p>
-<p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix <a href="appendix.html#appendix">16</a>.</p>
+<p>which shows that the vapor pressure lowering depends only on the concentration of the solute. As such, it is a colligative property.</p>
 </div>
-<div id="hessslaw" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Hess’s Law</h2>
-<p>The calculation of a standard reaction enthalpy can be performed using the following cycle:</p>
-<p><span class="math display" id="eq:Hesscycle">\[\begin{equation}
+<div id="boiling-point-elevation-and-melting-point-depression" class="section level3" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Boiling point elevation and melting point depression</h3>
+<p>The following two colligative properties are explained by reporting the changes due to the solute molecules in the plot of the chemical potential as a function of temperature (Figure <a href="#fig:FigPhase1"><strong>??</strong></a>).</p>
+<p>At the boiling point, the chemical potential of the solution is equal to the chemical potential of the vapor, and the following relation can be obtained:</p>
+<p><span class="math display" id="eq:collA">\[\begin{equation}
 \begin{aligned}
- \text{reactants} &amp; \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \text{products} \\
-\scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}} \\
- \text{&quot;elements in } &amp; \text{their standard reference state&quot;}
+\mu_{\text{solution}} &amp;=\mu_{\text{vap}}=\mu_{\text{solvent}}^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln P_{\text{solution}} \\
+&amp;= \mu_{\text{solvent}}^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln \left(x_{\text{solution}} P_{\text{solvent}}^* \right)\\
+&amp;= \underbrace{\mu_{\text{solvent}}^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln P_{\text{solvent}}^*}_{\mu_{\text{solvent}}^*} + RT \ln x_{\text{solution}} \\
+&amp;= \mu_{\text{solvent}}^* + RT \ln x_{\text{solution}},
 \end{aligned}
-\tag{4.6}
+\tag{14.12}
 \end{equation}\]</span></p>
-<p>This process is summarized by the simple formula:</p>
-<p><span class="math display" id="eq:Hess1">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\mathrm{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}- \Delta_{\mathrm{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}.
-  \tag{4.7}
+<p>and since <span class="math inline">\(x_{\text{solution}}&lt;1\)</span>, the logarithmic term in the last expression is negative, and:</p>
+<p><span class="math display" id="eq:collB">\[\begin{equation}
+\mu_{\text{solution}} &lt; \mu_{\text{solvent}}^*. 
+\tag{14.13}
 \end{equation}\]</span></p>
-<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in eq. <a href="Thermochemistry.html#eq:Hesscycle">(4.6)</a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Eq. <a href="Thermochemistry.html#eq:Hess1">(4.7)</a> can be generalized using the same technique used to derive eq. <a href="Thermochemistry.html#eq:DHrxn4">(4.4)</a>, resulting in:</p>
-<p><span class="math display" id="eq:Hess">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-},
-  \tag{4.8}
+<p>Eq. <a href="Solutions.html#eq:collA">(14.12)</a> proves that the addition of a solute always stabilizes the solvent in the liquid phase, and lowers its chemical potential, as shown in Figure <a href="Solutions.html#fig:FigSol2">14.2</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigSol2"></span>
+<img src="img/OEP_Figures.034.jpeg" alt="Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute." width="60%" />
+<p class="caption">
+Figure 14.2: Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute.
+</p>
+</div>
+<p>The elevation of the boiling point can be quantified using:</p>
+<p><span class="math display" id="eq:coll3">\[\begin{equation}
+\Delta T_{\text{b}}=T_{\text{b}}^{\text{solution}}-T_{\text{b}}^{\text{solvent}}=iK_{\text{b}}m,
+\tag{14.14}
 \end{equation}\]</span></p>
-<p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
-<blockquote>
+<p>where <span class="math inline">\(i\)</span> is the <em>van ’t Hoff factor</em>, a coefficient that measures the number of solute particles for each formula unit, <span class="math inline">\(K_{\text{b}}\)</span> is the ebullioscopic constant of the solvent, and <span class="math inline">\(m\)</span> is the molality of the solution, as introduced in eq. <a href="Solutions.html#eq:coll1">(14.10)</a> above. For a solute that does not dissociate in solution, <span class="math inline">\(i=1\)</span>. For a solute that dissociates in solution, the number of particles in solutions depends on how many particles it dissociates into, and <span class="math inline">\(i&gt;1\)</span>. For example, the strong electrolyte <span class="math inline">\(\mathrm{Ca}\mathrm{Cl}_2\)</span> completely dissociates into three particles in solution, one <span class="math inline">\(\mathrm{Ca}^{2+}\)</span> and two <span class="math inline">\(\mathrm{Cl}^-\)</span>, and <span class="math inline">\(i=3\)</span>. For cases of partial dissociation, such as weak acids, weak bases, and their salts, <span class="math inline">\(i\)</span> can assume non-integer values.</p>
+<p>If we assume ideal solution behavior,the ebullioscopic constant can be obtained from the thermodynamic condition for liquid-vapor equilibrium. At the boiling point of the solution, the chemical potential of the solvent in the solution phase equals the chemical potential in the pure vapor phase above the solution:</p>
+<p><span class="math display" id="eq:coll4">\[\begin{equation}
+\mu_{\text{solution}} (T_{\text{b}})  = \mu_{\text{solvent}}^*(T_b)  + RT\ln x_{\text{solvent}},
+\tag{14.15}
+\end{equation}\]</span></p>
+<p>from which we can derive, using the Gibbs–Helmholtz equation, eq. <a href="#eq:gibbshelm">(<strong>??</strong>)</a>:</p>
+<p><span class="math display" id="eq:coll5">\[\begin{equation}
+K_{\text{b}}=\frac{RMT_{\text{b}}^{2}}{\Delta_{\mathrm{vap}} H},
+\tag{14.16}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(R\)</span> is the ideal gas constant, <span class="math inline">\(M\)</span> is the molar mass of the solvent, and <span class="math inline">\(\Delta_{\mathrm{vap}} H\)</span> is its molar enthalpy of vaporization.</p>
+<p>The reduction of the melting point is similarly obtained by:</p>
+<p><span class="math display" id="eq:coll6">\[\begin{equation}
+\Delta T_{\text{m}}=T_{\text{m}}^{\text{solution}}-T_{\text{m}}^{\text{solvent}}=-iK_{\text{m}}m,
+\tag{14.17}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(K_{\text{m}}\)</span> is the <em>cryoscopic constant</em> of the solvent, <span class="math inline">\(m\)</span> is the molality, and the minus sign accounts for the fact that the melting temperature of the solution is lower than the melting temperature of the pure solvent (<span class="math inline">\(\Delta T_{\text{f}}\)</span> is defined as a negative quantity, while <span class="math inline">\(i\)</span>, <span class="math inline">\(K_{\text{f}}\)</span>, and <span class="math inline">\(m\)</span> are all positive). Similarly to the previous case, the cryoscopic constant can be related to the molar enthalpy of fusion of the solvent using the equivalence of the chemical potential of the solid and the liquid phases at the melting point, and employing the Gibbs–Helmholtz equation:</p>
+<p><span class="math display" id="eq:coll7">\[\begin{equation}
+K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
+\tag{14.18}
+\end{equation}\]</span></p>
+<p>Notice from Figure <a href="Solutions.html#fig:FigSol2">14.2</a> how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water <span class="math inline">\(K_{\text{f}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\)</span>, while <span class="math inline">\(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\)</span>. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.</p>
+</div>
+<div id="osmotic-pressure" class="section level3" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> Osmotic pressure</h3>
+<p>The osmotic pressure of a solution is defined as the difference in pressure between the solution and the pure liquid solvent when the two are in equilibrium across a semi-permeable (osmotic) membrane. The osmotic membrane is made of a porous material that allows the flow of solvent molecules but blocks the flow of the solute ones. The osmosis process is depicted in Figure <a href="Solutions.html#fig:FigSol3">14.3</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigSol3"></span>
+<img src="img/OEP_Figures.035.jpeg" alt="Osmotic Pressure of a Solution." width="80%" />
+<p class="caption">
+Figure 14.3: Osmotic Pressure of a Solution.
+</p>
+</div>
+<p>Starting from a solvent at atmospheric pressure in the apparatus depicted in Figure <a href="Solutions.html#fig:FigSol3">14.3</a>, we can add solute particles to the left side of the apparatus. The increase in concentration on the left causes a net transfer of solvent across the membrane. This flow stops when the pressure difference equals the osmotic pressure, <span class="math inline">\(\pi\)</span>. The formula that governs the osmotic pressure was initially proposed by van ’t Hoff and later refined by Harmon Northrop Morse (1848–1920). The Morse formula reads:</p>
+<p><span class="math display" id="eq:coll8">\[\begin{equation}
+\pi = imRT,
+\tag{14.19}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(m\)</span> is the molality of the solution, <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(T\)</span> the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 
-<div class="exercise">
-<p><span id="exr:HessLawEx" class="exercise"><strong>Exercise 4.1  </strong></span>Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>.</p>
-<p><em>Solution:</em> The reaction that is under consideration is:
-<span class="math display">\[\begin{equation}
-  \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= ?
-\end{equation}\]</span></p>
-<p>Using Hess’s Law, <a href="Thermochemistry.html#eq:Hess">(4.8)</a>, the enthalpy of formation for methane is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{O}_{2(g)}}}_{=0}
-\end{equation}\]</span></p>
-<p>whose values are reported in eqs. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>. Notice that the formation enthalpy of <span class="math inline">\(O_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \overbrace{-394}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}}}  = -891 \mathrm{kJ/mol}.
-\end{equation}\]</span></p>
-<p>where the negative sign indicates that the reaction is exothermic (see <a href="Thermochemistry.html#def:exoendo">4.1</a>), as we should expect. The cycle that we used to solve this exercise can be summarized with :</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-\mathrm{CH}_{4(g)} + &amp; 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
-  \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}} &amp; \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}}\\
-  &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
-\end{aligned}
-\end{equation}\]</span></p>
-<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} = -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O} &amp; = \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} \\
-&amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
-\end{aligned}
-\end{equation}\]</span></p>
-which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).
 </div>
-</blockquote>
-</div>
-<div id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
-<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="#eq:Cpdef">(<strong>??</strong>)</a> and <a href="#eq:dh2">(<strong>??</strong>)</a>:</p>
-<p><span class="math display" id="eq:DrxnHneq298">\[\begin{equation}
-\begin{aligned}
-dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T&#39;}} dH =  \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}- H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}= \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} C_P dT,
-\end{aligned}
-  \tag{4.9}
-\end{equation}\]</span></p>
-<p>which, in conjunction with Hess’s Law (eq. <a href="Thermochemistry.html#eq:Hess">(4.8)</a>), results in:</p>
-<p><span class="math display" id="eq:DrxnHneq298f">\[\begin{equation}
- \Delta_{\text{rxn}} H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\text{rxn}} H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} \Delta C_P dT,
-  \tag{4.10}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>.</p>
-<blockquote>
-
-<div class="exercise">
-<p><span id="exr:DHtdiff298" class="exercise"><strong>Exercise 4.2  </strong></span>Calculate <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at 298 K is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
-<p><span class="math display">\[
-\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
-\]</span></p>
-<p><em>Solution:</em> Using eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a> we obtain:</p>
-<p><span class="math display">\[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
-\]</span></p>
-<p>which, assuming that the heat capacities does not depend on the temperature, becomes:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
- \Delta_{\text{rxn}} H^{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
-\end{aligned}
-\end{equation}\]</span></p>
-<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a>, confirming that the heat capacities are mostly independent of temperature.</p>
-</div>
-</blockquote>
-
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of the activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to <span class="math inline">\(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> using Gibbs’ relation. This is why the definition of a universally agreed-upon <a href="https://en.wikipedia.org/wiki/Standard_state">standard state</a> is such an essential concept in chemistry, and why it is defined by the <a href="https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry">International Union of Pure and Applied Chemistry (IUPAC)</a> and followed systematically by chemists around the globe.<a href="Solutions.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>For a derivation, see the osmotic pressure <a href="https://en.wikipedia.org/wiki/Osmotic_pressure">Wikipedia page</a>.<a href="Solutions.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -462,8 +443,8 @@ dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{
           </div>
         </div>
       </div>
-<a href="FirstLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ThermodynamicCycles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="MCPhaseDiagrams.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Kinetics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -494,7 +475,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/04_Thermochemistry.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/14_Solutions.rmd",
 "text": "Edit"
 },
 "history": {

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Thermochemistry | The Live Textbook of Physical Chemistry 1</title>
+  <title>7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-12-14" />
+<meta name="date" content="2021-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="FirstLaw.html"/>
-<link rel="next" href="ThermodynamicCycles.html"/>
+<link rel="prev" href="SecondLaw.html"/>
+<link rel="next" href="Potentials.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,6 +136,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
 <ul>
@@ -221,7 +223,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Properties of Solutions</a>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
 <li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
@@ -278,183 +280,215 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Thermochemistry" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Thermochemistry</h1>
-<div id="rxnenthalpy" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Reaction Enthalpies</h2>
-<p>In chapter <a href="FirstLaw.html#FirstLaw">3</a>, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.</p>
-<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="#eq:dh2">(<strong>??</strong>)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
-<p><span class="math display" id="eq:DHrxn1">\[\begin{equation}
-  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
-  \tag{4.1}
+<div id="thirdlaw" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Calculation of Entropy and the Third Law of Thermodynamics</h1>
+<p>The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to <em>always</em> consider changes in entropy in <em>both</em> the system (sys) and its surroundings (surr):</p>
+<p><span class="math display" id="eq:dsuniv">\[\begin{equation}
+\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}},
+\tag{7.1}
 \end{equation}\]</span></p>
-<p>For example, if we take a simple reaction of the form:</p>
-<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
-<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
-<p><span class="math display" id="eq:DHrxn2">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
-  \tag{4.2}
+<p>or, in differential form:</p>
+<p><span class="math display" id="eq:dsunivd">\[\begin{equation}
+d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}},
+\tag{7.2}
 \end{equation}\]</span></p>
-<p>Using the chemistry sign convention, Definition <a href="#def:chemistryconv"><strong>??</strong></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:exoendo" class="definition"><strong>Definition 4.1  </strong></span><span class="math inline">\(\;\)</span></p>
-<ul>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &gt; 0 \Rightarrow\)</span> <em>Endothermic reaction</em> (heat is gained by the system).</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
-</ul>
-</div>
-</blockquote>
-<p>If we expand the sample reaction to account for its stoichiometry:</p>
-<p><span class="math display">\[ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , \]</span></p>
-<p>where <span class="math inline">\(a,b,c,d\)</span> are the stoichiometric coefficients of species <span class="math inline">\(\mathrm{A,B,C,D}\)</span>. Eq. <a href="Thermochemistry.html#eq:DHrxn2">(4.2)</a> can be rewritten as:</p>
-<p><span class="math display" id="eq:DHrxn3">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
-  \tag{4.3}
-\end{equation}\]</span></p>
-<p>while for the most general case we can write it:</p>
-<p><span class="math display" id="eq:DHrxn4">\[\begin{equation}
-  \Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
-  \tag{4.4}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math inline">\(i\)</span> with its own sign. The signs of the stoichiometric are defined according to eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> as:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:nui" class="definition"><strong>Definition 4.2  </strong></span><em>Signs of the stoichiometric coefficients:</em></p>
-<ul>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>positive</strong> if <span class="math inline">\(i\)</span> is a <strong>product</strong>.</li>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>negative</strong> if <span class="math inline">\(i\)</span> is a <strong>reactant</strong>.</li>
-</ul>
-</div>
-</blockquote>
-</div>
-<div id="formenthalpy" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Standard Enthalpies of Formation</h2>
-<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:stdenthapies" class="definition"><strong>Definition 4.3  </strong></span>
-The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
-</div>
-</blockquote>
-<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
-<p><span class="math display" id="eq:someDfH">\[\begin{equation}
+<div id="dssys" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></h2>
+<p>In general <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> can be calculated using either its Definition <a href="SecondLaw.html#def:entropy">6.1</a>, or its differential formula, eq. <a href="SecondLaw.html#eq:dentropy">(6.5)</a>. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:</p>
+<p><span class="math display" id="eq:entropycycle">\[\begin{equation}
 \begin{aligned}
-  \mathrm{C}_{(s,\text{graphite})}+\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CO}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -394 \; \text{kJ/mol} \\
-   \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -75 \; \text{kJ/mol} \\ 
-   \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -286 \; \text{kJ/mol} 
+P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S_{\text{sys}} } \quad P_f, T_f \\
+  \scriptstyle{\Delta_1 S^{\text{sys}}} &amp; \searrow \qquad  \qquad \nearrow \; \scriptstyle{\Delta_2 S^{\text{sys}}} \\
+&amp; \qquad P_i, T_f \\
+\\
+\Delta_{\text{TOT}} S^{\text{sys}} &amp; = \Delta_1 S^{\text{sys}} + \Delta_2 S^{\text{sys}},
 \end{aligned}
-\tag{4.5}
+\tag{7.3}
 \end{equation}\]</span></p>
-<p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix <a href="appendix.html#appendix">16</a>.</p>
-</div>
-<div id="hessslaw" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Hess’s Law</h2>
-<p>The calculation of a standard reaction enthalpy can be performed using the following cycle:</p>
-<p><span class="math display" id="eq:Hesscycle">\[\begin{equation}
-\begin{aligned}
- \text{reactants} &amp; \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \text{products} \\
-\scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}} \\
- \text{&quot;elements in } &amp; \text{their standard reference state&quot;}
-\end{aligned}
-\tag{4.6}
+<p>with <span class="math inline">\(\Delta_1 S^{\text{sys}}\)</span> calculated at constant <span class="math inline">\(P\)</span>, and <span class="math inline">\(\Delta_2 S^{\text{sys}}\)</span> at constant <span class="math inline">\(T\)</span>. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in section <a href="FirstLaw.html#energyint">3.1</a>.</p>
+<div id="entropy-in-isothermal-processes" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Entropy in isothermal processes</h3>
+<ul>
+<li><p>For an ideal gas at constant temperature <span class="math inline">\(\Delta U =0\)</span>, and <span class="math inline">\(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\)</span>. Using the formula for <span class="math inline">\(W_{\mathrm{REV}}\)</span> in either eq. <a href="#eq:WintsolvedV">(<strong>??</strong>)</a> or eq. <a href="#eq:WintsolvedP">(<strong>??</strong>)</a>, we obtain:
+<span class="math display" id="eq:sigconsttV">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
+\tag{7.4}
+\end{equation}\]</span>
+or, similarly:
+<span class="math display" id="eq:sigconsttP">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = nR \ln \frac{P_i}{P_f}.
+\tag{7.5}
+\end{equation}\]</span></p></li>
+<li><p>A phase change is a particular case of an isothermal process that does not follow the formulas introduced above since an ideal gas never liquefies. The entropy associated with a phase change at constant pressure can be calculated from its definition, remembering that <span class="math inline">\(Q_{\mathrm{rev}}= \Delta H\)</span>. For example for vaporizations:</p></li>
+</ul>
+<p><span class="math display" id="eq:spc">\[\begin{equation}
+\Delta_{\mathrm{vap}} S = \frac{\Delta_{\mathrm{vap}}H}{T_B},
+\tag{7.6}
 \end{equation}\]</span></p>
-<p>This process is summarized by the simple formula:</p>
-<p><span class="math display" id="eq:Hess1">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\mathrm{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}- \Delta_{\mathrm{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}.
-  \tag{4.7}
+<p>with <span class="math inline">\(\Delta_{\mathrm{vap}}H\)</span> being the enthalpy of vaporization of a substance, and <span class="math inline">\(T_B\)</span> its boiling temperature.</p>
+<p>It is experimentally observed that the entropies of vaporization of many liquids have almost the same value of:</p>
+<p><span class="math display" id="eq:trouton">\[\begin{equation}
+\Delta_{\mathrm{vap}} S \approx 10.5 R,
+\tag{7.7}
 \end{equation}\]</span></p>
-<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in eq. <a href="Thermochemistry.html#eq:Hesscycle">(4.6)</a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Eq. <a href="Thermochemistry.html#eq:Hess1">(4.7)</a> can be generalized using the same technique used to derive eq. <a href="Thermochemistry.html#eq:DHrxn4">(4.4)</a>, resulting in:</p>
-<p><span class="math display" id="eq:Hess">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-},
-  \tag{4.8}
-\end{equation}\]</span></p>
-<p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
+<p>which corresponds in SI to the range of about 85–88 J/(mol K). This simple rule is named <strong>Trouton’s rule</strong>, after the French scientist that discovered it, Frederick Thomas Trouton (1863-1922).</p>
 <blockquote>
 
 <div class="exercise">
-<p><span id="exr:HessLawEx" class="exercise"><strong>Exercise 4.1  </strong></span>Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>.</p>
-<p><em>Solution:</em> The reaction that is under consideration is:
-<span class="math display">\[\begin{equation}
-  \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= ?
+<p><span id="exr:troutonex" class="exercise"><strong>Exercise 7.1  </strong></span>Calculate the standard entropy of vaporization of water knowing <span class="math inline">\(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= 44 \  \text{kJ/mol}\)</span>, as calculated in Exercise <a href="Thermochemistry.html#exr:HessLawEx">4.1</a>.</p>
+<p><em>Solution:</em> Using eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>—and knowing that at standard conditions of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \  \text{bar}\)</span> the boiling temperature of water is 373 K—we calculate:</p>
+<p><span class="math display" id="eq:trouton1">\[\begin{equation}
+\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
+\tag{7.8}
 \end{equation}\]</span></p>
-<p>Using Hess’s Law, <a href="Thermochemistry.html#eq:Hess">(4.8)</a>, the enthalpy of formation for methane is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{O}_{2(g)}}}_{=0}
-\end{equation}\]</span></p>
-<p>whose values are reported in eqs. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>. Notice that the formation enthalpy of <span class="math inline">\(O_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \overbrace{-394}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}}}  = -891 \mathrm{kJ/mol}.
-\end{equation}\]</span></p>
-<p>where the negative sign indicates that the reaction is exothermic (see <a href="Thermochemistry.html#def:exoendo">4.1</a>), as we should expect. The cycle that we used to solve this exercise can be summarized with :</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-\mathrm{CH}_{4(g)} + &amp; 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
-  \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}} &amp; \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}}\\
-  &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
-\end{aligned}
-\end{equation}\]</span></p>
-<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} = -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O} &amp; = \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} \\
-&amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
-\end{aligned}
-\end{equation}\]</span></p>
-which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).
+The entropy of vaporization of water is far from Trouton’s rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.
 </div>
 </blockquote>
 </div>
-<div id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
-<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="#eq:Cpdef">(<strong>??</strong>)</a> and <a href="#eq:dh2">(<strong>??</strong>)</a>:</p>
-<p><span class="math display" id="eq:DrxnHneq298">\[\begin{equation}
+<div id="entropy-in-adiabatic-processes" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Entropy in adiabatic processes</h3>
+<p>Since adiabatic processes happen without the exchange of heat, <span class="math inline">\(đQ=0\)</span>, it would be tempting to think that <span class="math inline">\(\Delta S^{\mathrm{sys}} = 0\)</span> for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes <span class="math inline">\(\Delta S^{\mathrm{sys}} \neq 0\)</span>. The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:</p>
+<p><span class="math display" id="eq:adiabaticent">\[\begin{equation}
 \begin{aligned}
-dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T&#39;}} dH =  \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}- H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}= \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} C_P dT,
+\text{reversible:} \qquad &amp; \frac{đQ_{\mathrm{REV}}}{T} = 0 \longrightarrow \Delta S^{\mathrm{sys}} = 0 \quad \text{(isentropic),}\\
+\text{irreversible:} \qquad &amp; \frac{đQ_{\mathrm{IRR}}}{T}  = 0 \longrightarrow \Delta S^{\mathrm{sys}} \neq 0. \\
 \end{aligned}
-  \tag{4.9}
+\tag{7.9}
 \end{equation}\]</span></p>
-<p>which, in conjunction with Hess’s Law (eq. <a href="Thermochemistry.html#eq:Hess">(4.8)</a>), results in:</p>
-<p><span class="math display" id="eq:DrxnHneq298f">\[\begin{equation}
- \Delta_{\text{rxn}} H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\text{rxn}} H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} \Delta C_P dT,
-  \tag{4.10}
+</div>
+<div id="entropy-in-isochoric-processes" class="section level3" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Entropy in isochoric processes</h3>
+<p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using eq. <a href="ZerothLaw.html#eq:Cvint1">(2.2)</a>. Since the heat exchanged at those conditions equals the energy (eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
+<p><span class="math display" id="eq:sconstV1">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T},
+\tag{7.10}
 \end{equation}\]</span></p>
-<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>.</p>
+<p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature and solving the integral on the right-hand side, becomes:</p>
+<p><span class="math display" id="eq:sconstV">\[\begin{equation}
+\Delta S^{\mathrm{sys}} \approx n C_V \ln \frac{T_f}{T_i}.
+\tag{7.11}
+\end{equation}\]</span></p>
+</div>
+<div id="entropy-in-isobaric-processes" class="section level3" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> Entropy in isobaric processes</h3>
+<p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
+<p><span class="math display" id="eq:sconstP1">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
+\tag{7.12}
+\end{equation}\]</span></p>
+<p>which, assuming <span class="math inline">\(C_P\)</span> independent of temperature and solving the integral on the right-hand side, becomes:</p>
+<p><span class="math display" id="eq:sconstP">\[\begin{equation}
+\Delta S^{\mathrm{sys}} \approx n C_P \ln \frac{T_f}{T_i}.
+\tag{7.13}
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="dssurr" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></h2>
+<p>While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:</p>
+<p><span class="math display" id="eq:dssurr">\[\begin{equation}
+\Delta S^{\mathrm{surr}} = \frac{Q_{\text{surr}}}{T_{\text{surr}}}=\frac{-Q_{\text{sys}}}{T_{\text{surr}}},
+\tag{7.14}
+\end{equation}\]</span></p>
+<p>or, in differential form:</p>
+<p><span class="math display" id="eq:dssurrd">\[\begin{equation}
+d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
+\tag{7.15}
+\end{equation}\]</span></p>
+<p>where the substitution <span class="math inline">\(Q_{\text{surr}}=-Q_{\text{sys}}\)</span> can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, <span class="math inline">\(T_{\text{surr}}\)</span> will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.</p>
 <blockquote>
 
 <div class="exercise">
-<p><span id="exr:DHtdiff298" class="exercise"><strong>Exercise 4.2  </strong></span>Calculate <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at 298 K is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
-<p><span class="math display">\[
-\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
-\]</span></p>
-<p><em>Solution:</em> Using eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a> we obtain:</p>
-<p><span class="math display">\[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
-\]</span></p>
-<p>which, assuming that the heat capacities does not depend on the temperature, becomes:</p>
-<p><span class="math display">\[\begin{equation}
+<p><span id="exr:supercooledEx" class="exercise"><strong>Exercise 7.2  </strong></span>Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: <span class="math inline">\(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}\)</span>, and assuming both <span class="math inline">\(C_P\)</span> to be independent on temperature.</p>
+<p><em>Solution:</em> <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> for the process under consideration can be calculated using the following cycle:</p>
+<p><span class="math display" id="eq:supercooledsyst">\[\begin{equation}
 \begin{aligned}
- \Delta_{\text{rxn}} H^{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
+\mathrm{H}_2 \mathrm{O}_{(l)} &amp; \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad \quad T=263\;K\\
+\scriptstyle{\Delta S_1} \; \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta S_3} \\
+\mathrm{H}_2 \mathrm{O}_{(l)} &amp; \quad \xrightarrow{\quad \Delta S_2 \qquad} \quad \mathrm{H}_2\mathrm{O}_{(s)} \qquad \; T=273\;K\\
+\\
+\Delta S^{\text{sys}} &amp; = \Delta S_1 + \Delta S_2 + \Delta S_3
 \end{aligned}
+\tag{7.16}
 \end{equation}\]</span></p>
-<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a>, confirming that the heat capacities are mostly independent of temperature.</p>
+<p><span class="math inline">\(\Delta S_1\)</span> and <span class="math inline">\(\Delta S_3\)</span> are the isochoric heating and cooling processes of liquid and solid water, respectively, and can be calculated filling the given data into eq. <a href="thirdlaw.html#eq:sconstP1">(7.12)</a>. <span class="math inline">\(\Delta S_2\)</span> is a phase change (isothermal process) and can be calculated translating eq. <a href="thirdlaw.html#eq:spc">(7.6)</a> to the freezing transformation. Overall:</p>
+<p><span class="math display" id="eq:supercooledsyst2">\[\begin{equation}
+\begin{aligned}
+\Delta S^{\text{sys}} &amp; = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
+&amp; = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\end{aligned}
+\tag{7.17}
+\end{equation}\]</span></p>
+<p>Don’t be confused by the fact that <span class="math inline">\(\Delta S^{\text{sys}}\)</span> is negative. This is <strong><em>not</em></strong> the entropy of the universe! Hence it tells <strong><em>nothing</em></strong> about spontaneity! We can now calculate <span class="math inline">\(\Delta S^{\text{surr}}\)</span> from <span class="math inline">\(Q_{\text{sys}}\)</span>, noting that we can calculate the enthalpy around the same cycle in eq. <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a>. To do that, we already have <span class="math inline">\(\Delta_{\mathrm{fus}}H\)</span> from the given data, and we can calculate <span class="math inline">\(\Delta H_1\)</span> and <span class="math inline">\(\Delta H_3\)</span> using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a>.</p>
+<p><span class="math display" id="eq:supercooledsurr">\[\begin{equation}
+\begin{aligned}
+Q^{\text{sys}} &amp; = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
+&amp; = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) \\ &amp;= -5.6 \; \text{kJ}. \\
+\\
+\Delta S^{\text{surr}} &amp; = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
+\end{aligned}
+\tag{7.18}
+\end{equation}\]</span></p>
+<p>Bringing <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a> and <a href="thirdlaw.html#eq:supercooledsurr">(7.18)</a> results together, we obtain:</p>
+<p><span class="math display" id="eq:supercooledfinal">\[\begin{equation}
+\Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=+0.7 \; \text{J/K}.
+\tag{7.19}
+\end{equation}\]</span></p>
+Since the entropy changes in the universe are positive, the process is spontaneous, as expected.
 </div>
 </blockquote>
+</div>
+<div id="spontS" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Clausius Theorem</h2>
+<p>By replacing eq. <a href="thirdlaw.html#eq:dssurrd">(7.15)</a> into <a href="thirdlaw.html#eq:dsunivd">(7.2)</a> we can write the differential change in the entropy of the system as:</p>
+<p><span class="math display" id="eq:dssysd">\[\begin{equation}
+d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T}.
+\tag{7.20}
+\end{equation}\]</span></p>
+<p>According to the second law, for any spontaneous process <span class="math inline">\(d S^{\mathrm{universe}}\geq0\)</span>, and therefore, replacing it into eq. <a href="thirdlaw.html#eq:dssysd">(7.20)</a>:</p>
+<p><span class="math display" id="eq:dssyscrit7">\[\begin{equation}
+d S^{\mathrm{sys}} \geq \frac{đQ}{T},
+\tag{7.21}
+\end{equation}\]</span></p>
+<p>which is the mathematical expression of the so-called <strong>Clausius theorem</strong>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> distinguishes between three conditions:</p>
+<p><span class="math display" id="eq:dssyscond">\[\begin{equation}
+\begin{aligned}
+d S^{\mathrm{sys}} &gt; \frac{đQ}{T} \qquad &amp;\text{spontaneous, irreversible transformation} \\
+d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &amp;\text{reversible transformation} \\
+d S^{\mathrm{sys}} &lt; \frac{đQ}{T} \qquad &amp;\text{non-spontaneous, irreversible transformation}, 
+\end{aligned}
+\tag{7.22}
+\end{equation}\]</span></p>
+<p>Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it’s hard to calculate <span class="math inline">\(\Delta S^{\mathrm{universe}}\)</span>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> requires knowledge of quantities that are dependent on the system exclusively, such as the difference in entropy, the amount of heat that crosses the boundaries, and the temperature at which the process happens.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> If a process produces more entropy than the amount of heat that crosses the boundaries divided by the absolute temperature, it will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the absolute temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.</p>
+</div>
+<div id="thirdlawsect" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> The Third Law of Thermodynamics</h2>
+<p>In chapter <a href="Thermochemistry.html#Thermochemistry">4</a>, we have discussed how to calculate reaction enthalpies for any reaction, given the formation enthalpies of reactants and products. In this section, we will try to do the same for reaction entropies. In this case, however, our task is simplified by a fundamental law of thermodynamics, introduced by Walther Hermann Nernst (1864–1941) in 1906.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> The statement that was initially known as Nernst’s Theorem is now officially recognized as the third fundamental law of thermodynamics, and it has the following definition:</p>
+<blockquote>
+
+<div class="definition">
+<span id="def:thirdlawdef" class="definition"><strong>Definition 7.1  </strong></span><em>Third Law of Thermodynamics:</em> The entropy of a perfectly ordered, pure, crystalline substance is zero at <span class="math inline">\(T=0 \; \text{K}\)</span>.
+</div>
+</blockquote>
+<p>This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive. This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences.</p>
+<p>In simpler terms, given a substance <span class="math inline">\(i\)</span>, we are not able to measure absolute values of its enthalpy <span class="math inline">\(H_i\)</span> (and we must resort to known enthalpy differences, such as <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at standard pressure). At the same time, for entropy, we can measure <span class="math inline">\(S_i\)</span> thanks to the third law, and we usually report them as <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. A comprehensive list of standard entropies of inorganic and organic compounds is reported in appendix <a href="appendix.html#appendix">16</a>. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:</p>
+<p><span class="math display" id="eq:thirdlaweq">\[\begin{equation}
+\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
+\tag{7.23}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(\nu_i\)</span> being the usual stoichiometric coefficients with their signs given in Definition <a href="Thermochemistry.html#def:nui">4.2</a>.</p>
+<p>The careful wording in the definition of the third law <a href="thirdlaw.html#def:thirdlawdef">7.1</a> allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at <span class="math inline">\(T=0 \; \text{K}\)</span>. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
+<p>An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to <span class="math inline">\(T=0 \; \text{K}\)</span> in a finite number of steps.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<ol start="21">
+<li id="fn21"><p>Even if we think at the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.<a href="thirdlaw.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>In cases where the temperature of the system changes throughout the process, <span class="math inline">\(T\)</span> is just the (constant) temperature of its immediate surroundings, <span class="math inline">\(T_{\text{surr}}\)</span>, as explained in section <a href="thirdlaw.html#dssurr">7.2</a>.<a href="thirdlaw.html#fnref22" class="footnote-back">↩︎</a></p></li>
+<li id="fn23"><p>Walther Nernst was awarded the 1920 Nobel Prize in Chemistry for his work in thermochemistry.<a href="thirdlaw.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p>A procedure that—in practice—might be extremely difficult to achieve.<a href="thirdlaw.html#fnref24" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -462,8 +496,8 @@ dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{
           </div>
         </div>
       </div>
-<a href="FirstLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ThermodynamicCycles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="SecondLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Potentials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -494,7 +528,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/04_Thermochemistry.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/07_ThirdLaw.Rmd",
 "text": "Edit"
 },
 "history": {

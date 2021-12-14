@@ -1,7 +1,6 @@
 # Chemical Kinetics {#Kinetics}
-___
 
-From thermodynamics, we can determine the spontaneity of a reaction and its extent, using $\Delta G$ and $K$, respectively. However, thermodynamics does not provide any information on how *fast* the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics. 
+From thermodynamics, we can determine the spontaneity of a reaction and its extent, using $\Delta G$ and $K_{\text{eq}}$, respectively. However, thermodynamics does not provide any information on how *fast* the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics. 
 
 A chemical kinetics study aims to find the *rate* of a reaction and to find the microscopic steps that compose it, determining its *mechanism*. 
 
@@ -528,7 +527,7 @@ the initial rate method can be used to determine the coefficients of the rate la
 
 by designing three experiment, where the initial concentrations of $\mathrm{A}$ and $\mathrm{B}$ are appropriately changed. For example, let's consider the following experimental data from three different experiments:
 
-|                        | $[\mathrm{A}]_0 \; (\text{M})$ | $[\mathrm{A}]_0 \; (\text{M})$ | $\text{initial rate}\;\left(\frac{M}{s}\right)$ |
+|                        | $[\mathrm{A}]_0 \; (\text{M})$ | $[\mathrm{B}]_0 \; (\text{M})$ | $\text{initial rate}\;\left(\frac{M}{s}\right)$ |
 | :--------------------- | :----------------------------: | :----------------------------: | :---------------------------------------------: |
 | $\text{Experiment 1:}$ |              0.10              |              0.10              |                      4.32                       |
 | $\text{Experiment 2:}$ |              0.15              |              0.10              |                      9.70                       |

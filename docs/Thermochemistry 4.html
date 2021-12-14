@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-12-14" />
+<meta name="date" content="2021-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -136,6 +136,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
 <ul>
@@ -221,7 +223,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Properties of Solutions</a>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
 <li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
@@ -283,7 +285,7 @@ MathJax.Hub.Config({
 <div id="rxnenthalpy" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Reaction Enthalpies</h2>
 <p>In chapter <a href="FirstLaw.html#FirstLaw">3</a>, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.</p>
-<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="#eq:dh2">(<strong>??</strong>)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
+<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="FirstLaw.html#eq:dh2">(3.13)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
 <p><span class="math display" id="eq:DHrxn1">\[\begin{equation}
   \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
   \tag{4.1}
@@ -295,7 +297,7 @@ MathJax.Hub.Config({
   Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
   \tag{4.2}
 \end{equation}\]</span></p>
-<p>Using the chemistry sign convention, Definition <a href="#def:chemistryconv"><strong>??</strong></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
+<p>Using the chemistry sign convention, Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
 <blockquote>
 
 <div class="definition">
@@ -332,7 +334,7 @@ MathJax.Hub.Config({
 </div>
 <div id="formenthalpy" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Standard Enthalpies of Formation</h2>
-<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
+<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
 <blockquote>
 
 <div class="definition">
@@ -340,7 +342,7 @@ MathJax.Hub.Config({
 The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
 </div>
 </blockquote>
-<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
 <p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
 <p><span class="math display" id="eq:someDfH">\[\begin{equation}
 \begin{aligned}
@@ -411,7 +413,7 @@ which is the latent heat of vaporization for water, <span class="math inline">\(
 </div>
 <div id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
-<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="#eq:Cpdef">(<strong>??</strong>)</a> and <a href="#eq:dh2">(<strong>??</strong>)</a>:</p>
+<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a> and <a href="FirstLaw.html#eq:dh2">(3.13)</a>:</p>
 <p><span class="math display" id="eq:DrxnHneq298">\[\begin{equation}
 \begin{aligned}
 dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T&#39;}} dH =  \int_{T=298}^{T&#39;} C_P dT \\
@@ -451,10 +453,10 @@ dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<ol start="12">
+<li id="fn12"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref14" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Thermochemistry | The Live Textbook of Physical Chemistry 1</title>
+  <title>8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-12-14" />
+<meta name="date" content="2021-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="FirstLaw.html"/>
-<link rel="next" href="ThermodynamicCycles.html"/>
+<link rel="prev" href="thirdlaw.html"/>
+<link rel="next" href="GibbsFree.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,6 +136,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
 <ul>
@@ -221,7 +223,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Properties of Solutions</a>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
 <li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
@@ -278,172 +280,274 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Thermochemistry" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Thermochemistry</h1>
-<div id="rxnenthalpy" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Reaction Enthalpies</h2>
-<p>In chapter <a href="FirstLaw.html#FirstLaw">3</a>, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.</p>
-<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="#eq:dh2">(<strong>??</strong>)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
-<p><span class="math display" id="eq:DHrxn1">\[\begin{equation}
-  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
-  \tag{4.1}
+<div id="Potentials" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Thermodynamic Potentials</h1>
+<div id="fundeq" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Fundamental Equation of Thermodynamics</h2>
+<p>Let’s summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems:</p>
+<p><span class="math display" id="eq:dunv">\[\begin{equation}
+\begin{aligned}
+\text{From 1}^{\text{st}} \text{ Law:} \qquad \quad &amp; dU = đQ_{\mathrm{REV}}-PdV \\
+\text{From The Definition of Entropy:} \qquad \quad &amp; dS = \frac{đQ_{\mathrm{REV}}}{T} \rightarrow đQ_{\mathrm{REV}} = TdS \\
+\\
+\Rightarrow \quad &amp; dU = TdS - PdV.
+\end{aligned}
+\tag{8.1}
 \end{equation}\]</span></p>
-<p>For example, if we take a simple reaction of the form:</p>
-<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
-<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
-<p><span class="math display" id="eq:DHrxn2">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
-  \tag{4.2}
-\end{equation}\]</span></p>
-<p>Using the chemistry sign convention, Definition <a href="#def:chemistryconv"><strong>??</strong></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
+<p>Eq. <a href="Potentials.html#eq:dunv">(8.1)</a> is called the <strong>fundamental equation of thermodynamics</strong> since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the mass in the system will change, and the system is no longer closed.</p>
+<p>At the end of the 19<sup>th</sup> century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the chemical potential:</p>
 <blockquote>
 
 <div class="definition">
-<p><span id="def:exoendo" class="definition"><strong>Definition 4.1  </strong></span><span class="math inline">\(\;\)</span></p>
+<p><span id="def:chemicalpot" class="definition"><strong>Definition 8.1  </strong></span>The <em>chemical potential</em> is the amount of energy absorbed or released due to a change of the particle number of a given chemical species.</p>
+</div>
+</blockquote>
+<p>The chemical potential of species <span class="math inline">\(i\)</span> is usually abbreviated as <span class="math inline">\(\mu_i\)</span>, and it enters the fundamental equation of thermodynamics as:</p>
+<p><span class="math display" id="eq:dunv2">\[\begin{equation}
+dU = TdS-PdV+\sum_i\mu_i dn_i,
+\tag{8.2}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(dn_i\)</span> is the differential change in the number of moles of substance <span class="math inline">\(i\)</span>, and the summation extends over all chemical species in the system.</p>
+<p>According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, <span class="math inline">\(S\)</span>, volume, <span class="math inline">\(V\)</span>, and the numbers of moles <span class="math inline">\(\{n_i\}\)</span>.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> To emphasize the important connections given by the fundamental equation, we can use the notation <span class="math inline">\(U(S,V,\{n_i\})\)</span> and we can term <span class="math inline">\(S\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\{n_i\}\)</span> <strong>natural variables</strong> of the energy.</p>
+</div>
+<div id="thermpot" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Thermodynamic Potentials</h2>
+<p>Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p>
+<p>Taking the internal energy as defined in eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we can perform such procedure by subtracting products of the following conjugate variables pairs: <span class="math inline">\(T \text{ and } S\)</span> or <span class="math inline">\(-P \text{ and } V\)</span>. This procedure aims to define new state functions that depend on more convenient natural variables.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> The new functions are called “thermodynamic potential energies,” or simply <strong>thermodynamic potentials</strong>.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> An example of this procedure is given by the definition of enthalpy that we have already seen in section <a href="FirstLaw.html#enthalpy">3.1.4</a>. If we take the internal energy and subtract the product of two conjugate variables (<span class="math inline">\(-P\)</span> and <span class="math inline">\(V\)</span>), we obtain a new state function called enthalpy, as we did in eq. <a href="FirstLaw.html#eq:enthalpydef">(3.9)</a>). Taking the differential of this definition, we obtain:</p>
+<p><span class="math display" id="eq:dhdef1">\[\begin{equation}
+dH = dU +VdP +PdV,
+\tag{8.3}
+\end{equation}\]</span></p>
+<p>and using the fundamental equation, eq. <a href="Potentials.html#eq:dunv2">(8.2)</a>, to replace <span class="math inline">\(dU\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:dhdef2">\[\begin{equation}
+\begin{aligned}
+dH &amp; = TdS -PdV +\sum_i\mu_i dn_i +VdP +PdV  \\
+   &amp; = TdS +VdP +\sum_i\mu_i dn_i.
+\end{aligned}
+\tag{8.4}
+\end{equation}\]</span></p>
+<p>which is the fundamental equation for enthalpy. The natural variables of the enthalpy are <span class="math inline">\(S\)</span>, <span class="math inline">\(P\)</span>, and <span class="math inline">\(\{n_i\}\)</span>. The Legendre transformation has allowed us to go from <span class="math inline">\(U(S,V,\{n_i\})\)</span> to <span class="math inline">\(H(S,P,\{n_i\})\)</span> by replacing the dependence on the extensive variable, <span class="math inline">\(V\)</span>, with an intensive one, <span class="math inline">\(P\)</span>.</p>
+<p>Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, <span class="math inline">\(A\)</span>, as:</p>
+<p><span class="math display" id="eq:dadef1">\[\begin{equation}
+A = U -TS
+\tag{8.5}
+\end{equation}\]</span></p>
+<p>which, taking the differential and using the fundamental equation (eq. <a href="Potentials.html#eq:dunv2">(8.2)</a>) becomes:</p>
+<p><span class="math display" id="eq:dadef2">\[\begin{equation}
+\begin{aligned}
+dA &amp;= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
+   &amp;= -SdT -PdV +\sum_i \mu_i dn_i.
+\end{aligned}
+\tag{8.6}
+\end{equation}\]</span></p>
+<p>The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.</p>
+<p>Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs free energy, <span class="math inline">\(G\)</span>, as:</p>
+<p><span class="math display" id="eq:dgdef1">\[\begin{equation}
+G = U -TS +PV
+\tag{8.7}
+\end{equation}\]</span></p>
+<p>which, taking again the differential and using eq. <a href="Potentials.html#eq:dunv2">(8.2)</a> becomes:</p>
+<p><span class="math display" id="eq:dgdef2">\[\begin{equation}
+\begin{aligned}
+dG &amp;= dU -SdT -TdS +VdP +PdV \\
+   &amp;= TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS +VdP +PdV \\
+   &amp;= VdP -SdT +\sum_i\mu_i dn_i.
+\end{aligned}
+\tag{8.8}
+\end{equation}\]</span></p>
+<p>The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.</p>
+<p>A summary of the four thermodynamic potentials is given in the following table.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Name</strong></th>
+<th align="center"><strong>Symbol</strong></th>
+<th align="center"><strong>Fundamental Equation</strong></th>
+<th align="center"><strong>Natural Variables</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Energy</strong></td>
+<td align="center"><span class="math inline">\(U\)</span></td>
+<td align="center"><span class="math inline">\(dU=TdS-PdV+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(S,V,\{n_i\}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Enthalpy</strong></td>
+<td align="center"><span class="math inline">\(H\)</span></td>
+<td align="center"><span class="math inline">\(dH=TdS+VdP+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(S,P,\{n_i\}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Helmholtz Free Energy</strong></td>
+<td align="center"><span class="math inline">\(A\)</span></td>
+<td align="center"><span class="math inline">\(dA=-SdT-PdV+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(T,V,\{n_i\}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Gibbs Free Energy</strong></td>
+<td align="center"><span class="math inline">\(G\)</span></td>
+<td align="center"><span class="math inline">\(dG=VdP-SdT+\sum_i\mu_i dn_i\)</span></td>
+<td align="center"><span class="math inline">\(T,P,\{n_i\}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The thermodynamic potentials are the analog of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:</p>
 <ul>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &gt; 0 \Rightarrow\)</span> <em>Endothermic reaction</em> (heat is gained by the system).</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
+<li>Internal energy (<span class="math inline">\(U\)</span>) is the capacity to do work plus the capacity to release heat.</li>
+<li>Enthalpy (<span class="math inline">\(H\)</span>) is the capacity to do non-mechanical work plus the capacity to release heat.</li>
+<li>Gibbs free energy (<span class="math inline">\(G\)</span>) is the capacity to do non-mechanical work.</li>
+<li>Helmholtz free energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></li>
+</ul>
+<p>Where non-mechanical work is defined as any type of work that is not expansion or compression (<span class="math inline">\(PV\)</span>–work). A typical example of non-mechanical work is electrical work.</p>
+</div>
+<div id="freeenergies" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Free Energies</h2>
+<p>The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, <span class="math inline">\(H(S,P,\{n_i\})\)</span>, <span class="math inline">\(A(T,V,\{n_i\})\)</span>, and <span class="math inline">\(G(T,P,\{n_i\})\)</span> all contain the same information that is in <span class="math inline">\(U(S,V,\{n_i\})\)</span>. However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term <span class="math inline">\(\sum_i\mu_i dn_i\)</span> that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant <span class="math inline">\(S\)</span> and constant <span class="math inline">\(V\)</span>:</p>
+<p><span class="math display" id="eq:duchem">\[\begin{equation}
+dU(S,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dS=dV=0.
+\tag{8.9}
+\end{equation}\]</span></p>
+<p>Similarly:</p>
+<p><span class="math display" id="eq:dhagchem">\[\begin{equation}
+\begin{aligned}
+dH(S,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dS=dP=0, \\
+dA(T,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dV=0, \\
+dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
+\end{aligned}
+\tag{8.10}
+\end{equation}\]</span></p>
+<p>The latter two cases are particularly interesting since most of chemistry happens at either constant volume,<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> or constant pressure.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Since <span class="math inline">\(dS=0\)</span> is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies.</p>
+<p>Recalling Clausius theorem:</p>
+<p><span class="math display" id="eq:dssyscrit">\[\begin{equation}
+d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
+\tag{8.11}
+\end{equation}\]</span></p>
+<p>we can consider the two cases: constant <span class="math inline">\(V\)</span> (<span class="math inline">\(đQ_V=dU\)</span>, left), and constant <span class="math inline">\(P\)</span> (<span class="math inline">\(đQ_P=dH\)</span>, right):</p>
+<p><span class="math display" id="eq:dadgder1">\[\begin{equation}
+\begin{aligned}
+\text{constant} &amp; \; V:           &amp; \qquad \qquad &amp; \qquad \qquad &amp;     \text{constant} &amp; \; P: \\
+\\
+TdS &amp; \geq dU           &amp; &amp;   &amp;     TdS &amp; \geq dH \\
+\\
+TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
+\end{aligned}
+\tag{8.12}
+\end{equation}\]</span></p>
+<p>we can then simplify the definition of free energies, eqs. <a href="Potentials.html#eq:dadef2">(8.6)</a> and <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
+<p><span class="math display" id="eq:dadgder3">\[\begin{equation}
+\begin{aligned}
+\text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\
+\\
+(dA)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       (dG)_{T,P} &amp;= dH - TdS \\ 
+\\
+dU = (dA)_{T,V} &amp;+TdS       &amp; &amp;   &amp;       dH = (dG)_{T,P} &amp;+TdS
+\end{aligned}
+\tag{8.13}
+\end{equation}\]</span></p>
+<p>and by merging <span class="math inline">\(dU\)</span> and <span class="math inline">\(dH\)</span> from eqs. <a href="Potentials.html#eq:dadgder3">(8.13)</a> into Clausius theorem expressed using eqs. <a href="Potentials.html#eq:dadgder1">(8.12)</a>, we obtain:</p>
+<p><span class="math display" id="eq:dadgcond">\[\begin{equation}
+\begin{aligned}
+TdS -(dA)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -(dG)_{T,P} &amp;- TdS \geq 0 \\
+\\
+(dA)_{T,V} &amp; \leq 0 &amp; \qquad &amp; \qquad &amp; (dG)_{T,P} &amp; \leq 0. \\
+\end{aligned}
+\tag{8.14}
+\end{equation}\]</span></p>
+<p>These equations represent the conditions on <span class="math inline">\(dA\)</span> and <span class="math inline">\(dG\)</span> for inferring the spontaneity of a process, and can be summarized as follows:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:helmgibbsminimum" class="definition"><strong>Definition 8.2  </strong></span><span class="math inline">\(\;\)</span></p>
+<ul>
+<li>During a spontaneous process at constant <em>temperature</em> and <em>volume</em>, the <em>Helmholtz free energy</em> will decrease <span class="math inline">\((dA&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dA=0)\)</span>.</li>
+<li>During a spontaneous process at constant <em>temperature</em> and <em>pressure</em>, the <em>Gibbs free energy</em> will decrease <span class="math inline">\((dG&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dG=0)\)</span>.</li>
 </ul>
 </div>
 </blockquote>
-<p>If we expand the sample reaction to account for its stoichiometry:</p>
-<p><span class="math display">\[ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , \]</span></p>
-<p>where <span class="math inline">\(a,b,c,d\)</span> are the stoichiometric coefficients of species <span class="math inline">\(\mathrm{A,B,C,D}\)</span>. Eq. <a href="Thermochemistry.html#eq:DHrxn2">(4.2)</a> can be rewritten as:</p>
-<p><span class="math display" id="eq:DHrxn3">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
-  \tag{4.3}
-\end{equation}\]</span></p>
-<p>while for the most general case we can write it:</p>
-<p><span class="math display" id="eq:DHrxn4">\[\begin{equation}
-  \Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
-  \tag{4.4}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math inline">\(i\)</span> with its own sign. The signs of the stoichiometric are defined according to eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> as:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:nui" class="definition"><strong>Definition 4.2  </strong></span><em>Signs of the stoichiometric coefficients:</em></p>
-<ul>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>positive</strong> if <span class="math inline">\(i\)</span> is a <strong>product</strong>.</li>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>negative</strong> if <span class="math inline">\(i\)</span> is a <strong>reactant</strong>.</li>
-</ul>
+<div class="figure" style="text-align: center"><span id="fig:agfig"></span>
+<img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right)." width="672" />
+<p class="caption">
+Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant <span class="math inline">\(T,V\)</span> (left) and Constant <span class="math inline">\(T,P\)</span> (right).
+</p>
 </div>
-</blockquote>
 </div>
-<div id="formenthalpy" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Standard Enthalpies of Formation</h2>
-<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:stdenthapies" class="definition"><strong>Definition 4.3  </strong></span>
-The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
-</div>
-</blockquote>
-<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
-<p><span class="math display" id="eq:someDfH">\[\begin{equation}
+<div id="maxwell" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Maxwell Relations</h2>
+<p>Let’s consider the fundamental equations for the thermodynamic potentials that we have derived in section <a href="Potentials.html#fundeq">8.1</a>:</p>
+<p><span class="math display" id="eq:dhagchem1">\[\begin{equation}
 \begin{aligned}
-  \mathrm{C}_{(s,\text{graphite})}+\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CO}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -394 \; \text{kJ/mol} \\
-   \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -75 \; \text{kJ/mol} \\ 
-   \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -286 \; \text{kJ/mol} 
+dU(S,V,\{n_i\}) &amp;= \enspace T dS -P dV + \sum_i \mu_i dn_i \\
+dH(S,P,\{n_i\}) &amp;= \enspace T dS + V dP + \sum_i \mu_i dn_i \\
+dA(T,V,\{n_i\}) &amp;= -S dT -P dV + \sum_i \mu_i dn_i \\
+dG(T,P,\{n_i\}) &amp;= -S dT + V dP + \sum_i \mu_i dn_i\;.
 \end{aligned}
-\tag{4.5}
+\tag{8.15}
 \end{equation}\]</span></p>
-<p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix <a href="appendix.html#appendix">16</a>.</p>
-</div>
-<div id="hessslaw" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Hess’s Law</h2>
-<p>The calculation of a standard reaction enthalpy can be performed using the following cycle:</p>
-<p><span class="math display" id="eq:Hesscycle">\[\begin{equation}
+<p>From the knowledge of the natural variable of each potential, we could reconstruct these formulas by using the total differential formula:</p>
+<p><span class="math display" id="eq:dhagchem2">\[\begin{equation}
 \begin{aligned}
- \text{reactants} &amp; \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \text{products} \\
-\scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}} \\
- \text{&quot;elements in } &amp; \text{their standard reference state&quot;}
+dU &amp;= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dH &amp;= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dA &amp;= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
+dG &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
 \end{aligned}
-\tag{4.6}
+\tag{8.16}
 \end{equation}\]</span></p>
-<p>This process is summarized by the simple formula:</p>
-<p><span class="math display" id="eq:Hess1">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\mathrm{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}- \Delta_{\mathrm{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}.
-  \tag{4.7}
+<p>we can derive the following new definitions:</p>
+<p><span class="math display" id="eq:dhagchem3">\[\begin{equation}
+\begin{aligned}
+ T &amp;= \left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}} = \left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}  \\
+-P &amp;= \left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}} = \left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}  \\
+ V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}  \\
+-S &amp;= \left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}} = \left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}  \\
+\text{and:}
+\\
+ \mu_i &amp;=  \left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}} =  \left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}} \\
+       &amp;= \left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}} = \left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}\;.
+\end{aligned}
+\tag{8.17}
 \end{equation}\]</span></p>
-<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in eq. <a href="Thermochemistry.html#eq:Hesscycle">(4.6)</a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Eq. <a href="Thermochemistry.html#eq:Hess1">(4.7)</a> can be generalized using the same technique used to derive eq. <a href="Thermochemistry.html#eq:DHrxn4">(4.4)</a>, resulting in:</p>
-<p><span class="math display" id="eq:Hess">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-},
-  \tag{4.8}
+<p>Since <span class="math inline">\(T\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(S\)</span> are now defined as partial first derivatives of a thermodynamic potential, we can now take a second partial derivation with respect to a separate variable, and rely on Schwartz’s theorem to derive the following relations:</p>
+<p><span class="math display" id="eq:maxrelf">\[\begin{equation}
+\begin{aligned}
+\frac{\partial^2 U }{\partial S \partial V} &amp;=&amp; +\left(\frac{\partial T}{\partial V}\right)_{S,\{n_{j \neq i}\}} &amp;=&amp; -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_{j \neq i}\}}   \\
+\frac{\partial^2 H }{\partial S \partial P} &amp;=&amp; +\left(\frac{\partial T}{\partial P}\right)_{S,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial V}{\partial S}\right)_{P,\{n_{j \neq i}\}}  \\
+-\frac{\partial^2 A }{\partial T \partial V} &amp;=&amp; +\left(\frac{\partial S}{\partial V}\right)_{T,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial P}{\partial T}\right)_{V,\{n_{j \neq i}\}}  \\
+\frac{\partial^2 G }{\partial T \partial P} &amp;=&amp; -\left(\frac{\partial S}{\partial P}\right)_{T,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial V}{\partial T}\right)_{P,\{n_{j \neq i}\}}
+\end{aligned}
+\tag{8.18}
 \end{equation}\]</span></p>
-<p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
+<p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relations</strong>,<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
 <blockquote>
 
 <div class="exercise">
-<p><span id="exr:HessLawEx" class="exercise"><strong>Exercise 4.1  </strong></span>Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>.</p>
-<p><em>Solution:</em> The reaction that is under consideration is:
-<span class="math display">\[\begin{equation}
-  \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= ?
-\end{equation}\]</span></p>
-<p>Using Hess’s Law, <a href="Thermochemistry.html#eq:Hess">(4.8)</a>, the enthalpy of formation for methane is:</p>
+<p><span id="exr:maxwellEx" class="exercise"><strong>Exercise 8.1  </strong></span>Derive the last Maxwell relation in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>.</p>
+<p><em>Solution:</em> We can start our derivation from the definition of <span class="math inline">\(V\)</span> and <span class="math inline">\(S\)</span> as a partial derivative of <span class="math inline">\(G\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{O}_{2(g)}}}_{=0}
+ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}},
 \end{equation}\]</span></p>
-<p>whose values are reported in eqs. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>. Notice that the formation enthalpy of <span class="math inline">\(O_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \overbrace{-394}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}}}  = -891 \mathrm{kJ/mol}.
-\end{equation}\]</span></p>
-<p>where the negative sign indicates that the reaction is exothermic (see <a href="Thermochemistry.html#def:exoendo">4.1</a>), as we should expect. The cycle that we used to solve this exercise can be summarized with :</p>
+<p>and then take a second partial derivative of each quantity with respect to the second variable:</p>
 <p><span class="math display">\[\begin{equation}
 \begin{aligned}
-\mathrm{CH}_{4(g)} + &amp; 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
-  \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}} &amp; \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}}\\
-  &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
+ \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;=\frac{\partial}{\partial T}\left[ \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \right]_{P,\{n_i\}} \\
+\\
+-\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}} &amp;=\frac{\partial}{\partial P}\left[ \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}} \right]_{T,\{n_i\}} \;.
 \end{aligned}
 \end{equation}\]</span></p>
-<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} = -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
+<p>These two derivatives are mixed partial second derivatives of <span class="math inline">\(G\)</span> with respect to <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, and therefore, according to Schwartz’s theorem, they are equal to each other:</p>
 <p><span class="math display">\[\begin{equation}
 \begin{aligned}
-\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O} &amp; = \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} \\
-&amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
+\frac{\partial}{\partial T}\left[ \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \right]_{P,\{n_i\}} &amp;=
+\frac{\partial}{\partial P}\left[ \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}} \right]_{T,\{n_i\}}, \\
+\\
+\text{hence:} \\
+\\
+ \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;= -\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}},
 \end{aligned}
 \end{equation}\]</span></p>
-which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).
-</div>
-</blockquote>
-</div>
-<div id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
-<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="#eq:Cpdef">(<strong>??</strong>)</a> and <a href="#eq:dh2">(<strong>??</strong>)</a>:</p>
-<p><span class="math display" id="eq:DrxnHneq298">\[\begin{equation}
-\begin{aligned}
-dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T&#39;}} dH =  \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}- H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}= \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} C_P dT,
-\end{aligned}
-  \tag{4.9}
-\end{equation}\]</span></p>
-<p>which, in conjunction with Hess’s Law (eq. <a href="Thermochemistry.html#eq:Hess">(4.8)</a>), results in:</p>
-<p><span class="math display" id="eq:DrxnHneq298f">\[\begin{equation}
- \Delta_{\text{rxn}} H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\text{rxn}} H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} \Delta C_P dT,
-  \tag{4.10}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>.</p>
-<blockquote>
-
-<div class="exercise">
-<p><span id="exr:DHtdiff298" class="exercise"><strong>Exercise 4.2  </strong></span>Calculate <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at 298 K is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
-<p><span class="math display">\[
-\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
-\]</span></p>
-<p><em>Solution:</em> Using eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a> we obtain:</p>
-<p><span class="math display">\[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
-\]</span></p>
-<p>which, assuming that the heat capacities does not depend on the temperature, becomes:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
- \Delta_{\text{rxn}} H^{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
-\end{aligned}
-\end{equation}\]</span></p>
-<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a>, confirming that the heat capacities are mostly independent of temperature.</p>
+which is the last of Maxwell relations, as defined in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>. This relation is particularly useful because it connects the quantity <span class="math inline">\(\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}\)</span>—which is impossible to measure in a lab—with the quantity <span class="math inline">\(\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}\)</span>—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
 </div>
 </blockquote>
 
@@ -451,10 +555,16 @@ dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<ol start="25">
+<li id="fn25"><p>In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.<a href="Potentials.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<li id="fn26"><p>For example, we don’t always have a simple way to calculate or to measure the entropy.<a href="Potentials.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p>The mathematical condition that is fulfilled when performing a Legendre transformation is that the first derivatives of the original function and its transformation are inverse functions of each other.<a href="Potentials.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p>The rigorous mathematical definition of conjugate variables is unimportant at this stage. However, we can relate the variables in a pair with basic physics by noticing how the first variable in a pair is always intensive (<span class="math inline">\(T\)</span> and <span class="math inline">\(-P\)</span>), while the second one is always extensive (<span class="math inline">\(S\)</span> and <span class="math inline">\(V\)</span>). The intensive variables represent thermodynamic drivinng forces (as compared with mechanical forces in classical mechanics), while the extensive ones are the thermodynamic displacements (as compared with spatial displacements in classical mechanics). Similarly to classical mechanics, the product of two conjugate variables in a pair yields an energy. The minus sign in front of <span class="math inline">\(P\)</span> is explained by the fact that an increase in the force should always correspond to an increase in the displacement (while <span class="math inline">\(P\)</span> and <span class="math inline">\(V\)</span> are inversely related).<a href="Potentials.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn29"><p>Even if we introduced both concepts in the same chapter, it is important to never confuse the <em>thermodynamic potentials</em>—which are potential energy functions—with the <em>chemical potential</em>—which have been introduced by Gibbs to study heat in chemical reactions.<a href="Potentials.html#fnref29" class="footnote-back">↩︎</a></p></li>
+<li id="fn30"><p>For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the <a href="https://en.wikipedia.org/wiki/Thermodynamic_square">thermodynamic square</a>.<a href="Potentials.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<li id="fn31"><p>for example, several industrial processes in chemical plants.<a href="Potentials.html#fnref31" class="footnote-back">↩︎</a></p></li>
+<li id="fn32"><p>for example, most processes in a chemistry lab.<a href="Potentials.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<li id="fn33"><p>Maxwell relations should not be confused with the Maxwell equations of electromagnetism.<a href="Potentials.html#fnref33" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -462,8 +572,8 @@ dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{
           </div>
         </div>
       </div>
-<a href="FirstLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ThermodynamicCycles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="thirdlaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="GibbsFree.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -494,7 +604,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/04_Thermochemistry.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/08_Potentials.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Thermochemistry | The Live Textbook of Physical Chemistry 1</title>
+  <title>1 Systems and Variables | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="1 Systems and Variables | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Thermochemistry | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="1 Systems and Variables | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-12-14" />
+<meta name="date" content="2021-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="FirstLaw.html"/>
-<link rel="next" href="ThermodynamicCycles.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="ZerothLaw.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,6 +136,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
 <ul>
@@ -221,7 +223,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="13.3.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#eutectic-systems"><i class="fa fa-check"></i><b>13.3.4</b> Eutectic systems</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Properties of Solutions</a>
+<li class="chapter" data-level="14" data-path="Solutions.html"><a href="Solutions.html"><i class="fa fa-check"></i><b>14</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="Solutions.html"><a href="Solutions.html#activity"><i class="fa fa-check"></i><b>14.1</b> Activity</a></li>
 <li class="chapter" data-level="14.2" data-path="Solutions.html"><a href="Solutions.html#colligative-properties"><i class="fa fa-check"></i><b>14.2</b> Colligative Properties</a>
@@ -278,183 +280,144 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Thermochemistry" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Thermochemistry</h1>
-<div id="rxnenthalpy" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Reaction Enthalpies</h2>
-<p>In chapter <a href="FirstLaw.html#FirstLaw">3</a>, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.</p>
-<p>In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use eq. <a href="#eq:dh2">(<strong>??</strong>)</a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction “reactants” and the molecules at the end of the reaction “products,” the heat associated with the reaction (rxn) is defined as:</p>
-<p><span class="math display" id="eq:DHrxn1">\[\begin{equation}
-  \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
-  \tag{4.1}
-\end{equation}\]</span></p>
-<p>For example, if we take a simple reaction of the form:</p>
-<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
-<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
-<p><span class="math display" id="eq:DHrxn2">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
-  \tag{4.2}
-\end{equation}\]</span></p>
-<p>Using the chemistry sign convention, Definition <a href="#def:chemistryconv"><strong>??</strong></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
+<div id="SystemVariables" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Systems and Variables</h1>
+<div id="thermodynamic-systems" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Thermodynamic Systems</h2>
+A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure <a href="SystemVariables.html#fig:Fig1c1">1.1</a> below.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<div class="figure" style="text-align: center"><span id="fig:Fig1c1"></span>
+<img src="img/OEP_Figures.001.jpeg" alt="Examples of Thermodynamic Systems." width="70%" />
+<p class="caption">
+Figure 1.1: Examples of Thermodynamic Systems.
+</p>
+</div>
+<p>In the first case, a liquid is contained in a typical Erlenmeyer flask. The boundaries of the system are the glass walls of the beaker. The second system is represented by the gas contained in a balloon. The boundary is a physical barrier also in this case, being the plastic of the balloon. The third case is that of a thunder cloud. The boundary is not a well-defined physical barrier, but rather some condition of pressure and chemical composition at the interface between the cloud and the atmosphere. Finally, the fourth case is the case of an open flame. In this case, the boundary is again non-physical, and possibly even harder to define than for a cloud. For example, we can choose to define the flame based on some temperature threshold, color criterion, or even some chemical one. Despite the lack of physical boundaries, the cloud and the flame—as portions of space containing matter—can be defined as a thermodynamic system.</p>
+<p>A system can exchange exclusively mass, exclusively energy, or both mass and energy with its surroundings. Depending on the boundaries’ ability to transfer these quantities, a system is defined as open, closed, or isolated. An open system exchanges both mass and energy. A closed system exchanges only energy, but not mass. Finally, an isolated system does not exchange mass nor energy.</p>
+<p>When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let’s consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of –100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be –100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and –100 to the ingoing one, and the overall total would have stayed the same: +100–100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Type of System</strong></th>
+<th align="center"><strong>Mass</strong></th>
+<th align="center"><strong>Energy</strong> <br> (either heat or work)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Open</strong></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+</tr>
+<tr class="even">
+<td><strong>Closed</strong></td>
+<td align="center">N</td>
+<td align="center">Y</td>
+</tr>
+<tr class="odd">
+<td><strong>Isolated</strong></td>
+<td align="center">N</td>
+<td align="center">N</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Here is another example. Let’s consider a system that is composed of your body. When you exercise, you lose mass in the form of water (sweat) and CO<sub>2</sub> (from respiration). This mass loss can be easily measured by stepping on a scale before and after exercise. The number you observe on the scale will go down. Hence you have lost weight. After exercise, you will reintegrate the lost mass by drinking and eating. If you have reinstated the same amount you have lost, your weight will be the same as before the exercise (no weight loss). Nevertheless, which label do you attach to the amounts that you have lost and gained? Let’s say that you are running a 5 km race without drinking nor eating, and you measure your weight dropping 2 kg after the race. After the race, you drink 1.5 kg of water and eat a 500 g energy bar. Overall you did not lose any weight, and it would seem reasonable to label the 2 kg that you’ve lost as negative (–2) and the 1.5 kg of water that you drank and the 500 g bar that you ate as positive (+1.5 +0.5 = +2). But is it the only way? After all, you didn’t gain nor lose any weight, so why not calling the 2 kg due to exercise +2 and the 2 that you’ve ingested as –2? It might seem silly, but mathematically it would not make any difference, the total would still be zero. Now, let’s consider energy instead of mass. To run the 5km race, you have spent 500 kcal, which then you reintegrate precisely by eating the energy bar. Which sign would you put in front of the kilocalories that you “burned” during the race? In principle, you’ve lost them, so if you want to be consistent, you should use a negative sign. But if you think about it, you’ve put quite an effort to “lose” those kilocalories, so it might not feel bad to assign them a positive sign instead. After all, it’s perfectly OK to say, “I’ve done a 500 kcal run today”, while it might sound quite awkward to say, “I’ve done a –500 kcal run today.” Our previous exercise with mass demonstrates that it doesn’t really matter which sign you put in front of the quantities. As long as you are consistent throughout the process, the signs will cancel out. If you’ve done a +500 kcal run, you’ve eaten a bar for –500 kcal, resulting in a total zero loss/gain. Alternatively, if you’ve done a –500 kcal run, you would have eaten a +500 kcal bar, for a total of again zero loss/gain.</p>
+</blockquote>
+<p>These simple examples demonstrate that the sign that we assign to quantities that flow through a boundary is arbitrary (i.e., we can define it any way we want, as long as we are always consistent with ourselves). There is no best way to assign those signs. If you ask two different people, you might obtain two different answers. But we are scientists, and we must make sure to be rigorous. For this reason, chemists have established a convention for the signs that we will follow throughout this course. If we are consistent in following the convention, we are guaranteed to never make any mistake with the signs.</p>
 <blockquote>
 
 <div class="definition">
-<p><span id="def:exoendo" class="definition"><strong>Definition 4.1  </strong></span><span class="math inline">\(\;\)</span></p>
+<p><span id="def:chemistryconv" class="definition"><strong>Definition 1.1  </strong></span><em>The chemistry convention of the sign is system-centric:</em><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <ul>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &gt; 0 \Rightarrow\)</span> <em>Endothermic reaction</em> (heat is gained by the system).</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
+<li><em>If something (energy or mass) goes <strong>into</strong> the system it has a <strong>positive</strong> sign (the system is gaining)</em></li>
+<li><em>If something (energy or mass) goes <strong>out of</strong> the system it has a <strong>negative</strong> sign (the system is losing)</em></li>
 </ul>
 </div>
 </blockquote>
-<p>If we expand the sample reaction to account for its stoichiometry:</p>
-<p><span class="math display">\[ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , \]</span></p>
-<p>where <span class="math inline">\(a,b,c,d\)</span> are the stoichiometric coefficients of species <span class="math inline">\(\mathrm{A,B,C,D}\)</span>. Eq. <a href="Thermochemistry.html#eq:DHrxn2">(4.2)</a> can be rewritten as:</p>
-<p><span class="math display" id="eq:DHrxn3">\[\begin{equation}
-  Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
-  \tag{4.3}
+<p>If you want a trick to remember the convention, use the weight loss/gain during the exercise example above. You are the system, if you lose weight, the kilograms will be negative (–2 kg), while if you gain weight, they will be positive (+2 kg). Similarly, if you eat an energy bar, you are the system, and you will have increased your energy by +500 kcal (positive). In contrast, if you burned energy during exercise, you are the system, and you will have lost energy, hence –500 kcal (negative). If the system is a balloon filled with gas, and the balloon is losing mass, you are the balloon, and you are losing weight; hence the mass will be negative. If the balloon is absorbing heat (likely increasing its temperature and increasing its volume), you are the system, and you are gaining heat; hence heat will be positive.</p>
+</div>
+<div id="thermodynamic-variables" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Thermodynamic Variables</h2>
+<p>The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don’t be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the “relevant variables” of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the “relevant variables” are called natural variables.</p>
+<p>What are the “relevant variables” of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:</p>
+<p><span class="math display" id="eq:idealgaslaworiginal">\[\begin{equation}
+  PV=nRT       
+  \tag{1.1}
 \end{equation}\]</span></p>
-<p>while for the most general case we can write it:</p>
-<p><span class="math display" id="eq:DHrxn4">\[\begin{equation}
-  \Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
-  \tag{4.4}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric coefficient of species <span class="math inline">\(i\)</span> with its own sign. The signs of the stoichiometric are defined according to eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> as:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:nui" class="definition"><strong>Definition 4.2  </strong></span><em>Signs of the stoichiometric coefficients:</em></p>
+<p>Therefore, the natural variables for an ideal gas are the pressure P, the volume V, the number of moles n, and the temperature T, with R being the ideal gas constant. Recalling from the general chemistry courses, R is a universal dimensional constant which has the values of R = 8.31 kJ/mol in SI units.<br />
+We will use the ideal gas equation and its variables as an example to discuss variables and functions in this chapter. We will analyze more complicated cases in the next chapters.
+Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:</p>
 <ul>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>positive</strong> if <span class="math inline">\(i\)</span> is a <strong>product</strong>.</li>
-<li><span class="math inline">\(\nu_i\)</span> is <strong>negative</strong> if <span class="math inline">\(i\)</span> is a <strong>reactant</strong>.</li>
+<li><strong>Physical variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent of the chemical composition of the system.</li>
+<li><strong>Chemical variables</strong> (<span class="math inline">\(n\)</span> in the ideal gas law): dependent on the chemical composition of the system.</li>
 </ul>
-</div>
-</blockquote>
-</div>
-<div id="formenthalpy" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Standard Enthalpies of Formation</h2>
-<p>In principle, we could use eq. <a href="Thermochemistry.html#eq:DHrxn3">(4.3)</a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called <strong>standard enthalpies of formation</strong>.</p>
+<p>Another useful classification is:</p>
+<ul>
+<li><strong>Intensive variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent of the physical size (extension) of the system.</li>
+<li><strong>Extensive variables</strong> (<span class="math inline">\(V\)</span>, <span class="math inline">\(n\)</span> in the ideal gas law): dependent on the physical size (extension) of the system.</li>
+</ul>
+<p>When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between the two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:</p>
+<p><span class="math display" id="eq:Vmdef">\[\begin{equation}
+  \overline{V}=\frac{V}{n}.   
+  \tag{1.2}
+\end{equation}\]</span></p>
+<p>We can then recast eq. <a href="SystemVariables.html#eq:idealgaslaworiginal">(1.1)</a> as:</p>
+<p><span class="math display" id="eq:idealgaslaw">\[\begin{equation}
+  P\overline{V}=RT,
+  \tag{1.3}
+\end{equation}\]</span></p>
+<p>which is the preferred equation that we will use for the remainder of this course.
+The ideal gas equation connects the 3 variables pressure, molar volume, and temperature, reducing the number of independent variables to just 2. In other words, once 2 of the 3 variables are known, the other one can be easily obtained using these simple relations:</p>
+<p><span class="math display" id="eq:PTVm">\[\begin{equation}
+  P(T,\overline{V})=\frac{RT}{\overline{V}},
+  \tag{1.4}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:VmTP">\[\begin{equation}
+  \overline{V}(T,P)=\frac{RT}{P},
+  \tag{1.5}
+ \end{equation}\]</span></p>
+<p><span class="math display" id="eq:TPVm">\[\begin{equation}
+  T(P,\overline{V})=\frac{P\overline{V}}{R}.
+  \tag{1.6}
+\end{equation}\]</span></p>
+<p>These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. <a href="SystemVariables.html#eq:PTVm">(1.4)</a> defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. <a href="SystemVariables.html#eq:VmTP">(1.5)</a> defines the “molar volume” as a function of temperature and pressure, and eq. <a href="SystemVariables.html#eq:TPVm">(1.6)</a> defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure <span class="math inline">\(P(T, \overline{V})\)</span>:</p>
+<p><span class="math display" id="eq:totaldifferentialP">\[\begin{equation}
+  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
+  \tag{1.7}
+\end{equation}\]</span></p>
+<p>Recalling Schwartz’s theorem, the mixed partial second derivatives that can be obtained from eq. <a href="SystemVariables.html#eq:totaldifferentialP">(1.7)</a> are the same:</p>
+<p><span class="math display" id="eq:schwartzP">\[\begin{equation}
+  \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
+  \tag{1.8}
+\end{equation}\]</span></p>
+<p>Which can be easily verified considering that:</p>
+<p><span class="math display" id="eq:secondderPA">\[\begin{equation}
+  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2} 
+  \tag{1.9}
+\end{equation}\]</span></p>
+<p>and</p>
+<p><span class="math display" id="eq:secondderPB">\[\begin{equation}
+  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2} 
+  \tag{1.10}
+\end{equation}\]</span></p>
+<p>While for the ideal gas law, all the variables are “well-behaved” and always satisfy Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold. Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. Thus, these functions are called path functions; that is, they depend on the path rather than the state. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we cannot define exact differentials <span class="math inline">\(dQ\)</span> and <span class="math inline">\(dW\)</span>, and we must introduce a new notation to define their “inexact differentials” <span class="math inline">\(đ Q\)</span> and <span class="math inline">\(đ W\)</span>.</p>
 <blockquote>
-
-<div class="definition">
-<p><span id="def:stdenthapies" class="definition"><strong>Definition 4.3  </strong></span>
-The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
-</div>
+<p>We will return to exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs. car vs. train vs. boat vs. …). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure <a href="SystemVariables.html#fig:Fig2c1">1.2</a>.</p>
 </blockquote>
-<p>The standard pressure is defined at <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. Standard states are indicated with the symbol <span class="math inline">\({-\kern-6pt{\ominus}\kern-6pt-}\)</span> and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively).<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
-<p><span class="math display" id="eq:someDfH">\[\begin{equation}
-\begin{aligned}
-  \mathrm{C}_{(s,\text{graphite})}+\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CO}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -394 \; \text{kJ/mol} \\
-   \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -75 \; \text{kJ/mol} \\ 
-   \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^{-\kern-6pt{\ominus}\kern-6pt-}= -286 \; \text{kJ/mol} 
-\end{aligned}
-\tag{4.5}
-\end{equation}\]</span></p>
-<p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix <a href="appendix.html#appendix">16</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:Fig2c1"></span>
+<img src="img/OEP_Figures.002.jpeg" alt="State Functions vs. Path Functions." width="60%" />
+<p class="caption">
+Figure 1.2: State Functions vs. Path Functions.
+</p>
 </div>
-<div id="hessslaw" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Hess’s Law</h2>
-<p>The calculation of a standard reaction enthalpy can be performed using the following cycle:</p>
-<p><span class="math display" id="eq:Hesscycle">\[\begin{equation}
-\begin{aligned}
- \text{reactants} &amp; \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \text{products} \\
-\scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}} \\
- \text{&quot;elements in } &amp; \text{their standard reference state&quot;}
-\end{aligned}
-\tag{4.6}
-\end{equation}\]</span></p>
-<p>This process is summarized by the simple formula:</p>
-<p><span class="math display" id="eq:Hess1">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\mathrm{f}} H_{\text{products}}^{-\kern-6pt{\ominus}\kern-6pt-}- \Delta_{\mathrm{f}} H_{\text{reactants}}^{-\kern-6pt{\ominus}\kern-6pt-}.
-  \tag{4.7}
-\end{equation}\]</span></p>
-<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in eq. <a href="Thermochemistry.html#eq:Hesscycle">(4.6)</a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Eq. <a href="Thermochemistry.html#eq:Hess1">(4.7)</a> can be generalized using the same technique used to derive eq. <a href="Thermochemistry.html#eq:DHrxn4">(4.4)</a>, resulting in:</p>
-<p><span class="math display" id="eq:Hess">\[\begin{equation}
-  \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-},
-  \tag{4.8}
-\end{equation}\]</span></p>
-<p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
-<blockquote>
-
-<div class="exercise">
-<p><span id="exr:HessLawEx" class="exercise"><strong>Exercise 4.1  </strong></span>Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>.</p>
-<p><em>Solution:</em> The reaction that is under consideration is:
-<span class="math display">\[\begin{equation}
-  \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}= ?
-\end{equation}\]</span></p>
-<p>Using Hess’s Law, <a href="Thermochemistry.html#eq:Hess">(4.8)</a>, the enthalpy of formation for methane is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{O}_{2(g)}}}_{=0}
-\end{equation}\]</span></p>
-<p>whose values are reported in eqs. <a href="Thermochemistry.html#eq:someDfH">(4.5)</a>. Notice that the formation enthalpy of <span class="math inline">\(O_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
-<p><span class="math display">\[\begin{equation}
- \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}=  \overbrace{-394}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{CH}_{4(g)}}}  = -891 \mathrm{kJ/mol}.
-\end{equation}\]</span></p>
-<p>where the negative sign indicates that the reaction is exothermic (see <a href="Thermochemistry.html#def:exoendo">4.1</a>), as we should expect. The cycle that we used to solve this exercise can be summarized with :</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-\mathrm{CH}_{4(g)} + &amp; 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
-  \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}} &amp; \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2(g)}}^{-\kern-6pt{\ominus}\kern-6pt-}}\\
-  &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
-\end{aligned}
-\end{equation}\]</span></p>
-<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} = -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O} &amp; = \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} \\
-&amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
-\end{aligned}
-\end{equation}\]</span></p>
-which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_2O}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).
-</div>
-</blockquote>
-</div>
-<div id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
-<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T&#39;\)</span> can be calculated from the values at 298 K using eqs. <a href="#eq:Cpdef">(<strong>??</strong>)</a> and <a href="#eq:dh2">(<strong>??</strong>)</a>:</p>
-<p><span class="math display" id="eq:DrxnHneq298">\[\begin{equation}
-\begin{aligned}
-dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T&#39;}} dH =  \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}- H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}= \int_{T=298}^{T&#39;} C_P dT \\
-            &amp; H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} C_P dT,
-\end{aligned}
-  \tag{4.9}
-\end{equation}\]</span></p>
-<p>which, in conjunction with Hess’s Law (eq. <a href="Thermochemistry.html#eq:Hess">(4.8)</a>), results in:</p>
-<p><span class="math display" id="eq:DrxnHneq298f">\[\begin{equation}
- \Delta_{\text{rxn}} H_{T&#39;}^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\text{rxn}} H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T&#39;} \Delta C_P dT,
-  \tag{4.10}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>.</p>
-<blockquote>
-
-<div class="exercise">
-<p><span id="exr:DHtdiff298" class="exercise"><strong>Exercise 4.2  </strong></span>Calculate <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at 298 K is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
-<p><span class="math display">\[
-\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
-\]</span></p>
-<p><em>Solution:</em> Using eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a> we obtain:</p>
-<p><span class="math display">\[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{3} dT,
-\]</span></p>
-<p>which, assuming that the heat capacities does not depend on the temperature, becomes:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
- \Delta_{\text{rxn}} H^{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
-\end{aligned}
-\end{equation}\]</span></p>
-<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. <a href="Thermochemistry.html#eq:DrxnHneq298f">(4.10)</a>, confirming that the heat capacities are mostly independent of temperature.</p>
-</div>
-</blockquote>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.<a href="Thermochemistry.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>prior to 1982 the value of <span class="math inline">\(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\)</span> was used. The two values of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are within 1% of each other, since 1 atm = 101.325 kPa.<a href="Thermochemistry.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="Thermochemistry.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>The photos depicted in this figure are taken from <a href="https://en.wikipedia.org">Wikipedia</a>: the Erlenmeyer flasks photo was taken by user Maytouch L., and distributed under CC-BY-SA license; the cloud photo was taken by user <a href="https://commons.wikimedia.org/wiki/User:Matthew_T_Rader">Mathew T Rader</a>, and distributed under CC-BY-SA license; the flame picture was taken by user <a href="https://commons.wikimedia.org/wiki/User:Oscar">Oscar</a>, and distributed under CC-BY-SA license; the balloon photo is in the public domain.<a href="SystemVariables.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be <em>always</em> consistent, so if you decide that you want to use the physics convention, make sure to <em>always</em> use the physics convention. In this course, on the other hand, we will <em>always</em> use the chemistry one, as introduced above.<a href="SystemVariables.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -462,8 +425,8 @@ dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{
           </div>
         </div>
       </div>
-<a href="FirstLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ThermodynamicCycles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ZerothLaw.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -494,7 +457,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/04_Thermochemistry.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/01_Basis.rmd",
 "text": "Edit"
 },
 "history": {
