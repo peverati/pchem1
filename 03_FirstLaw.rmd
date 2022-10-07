@@ -67,7 +67,7 @@ An adiabatic process is defined as a process that happens without the exchange o
 which can then be calculated using the formulas that we derived in section \@ref(workint). Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
 ### Internal energy in isochoric processes
-An isocoric process is a process in which the volume does not change. Therefore, $đ W=0$, and $dU = đ Q_V$, which for 1 mol of substance and using eq. \@ref(eq:Cvdef), becomes:
+An isochoric process is a process in which the volume does not change. Therefore, $đ W=0$, and $dU = đ Q_V$, which using eq. \@ref(eq:Cvdef), becomes:
 
 \begin{equation}
   dU = đ Q_V = n C_V dT.
@@ -77,7 +77,7 @@ An isocoric process is a process in which the volume does not change. Therefore,
 Since no work is performed at these conditions, the heat becomes a state function. Eq. \@ref(eq:dUqv) also gives a mathematical justification of the concept of heat capacity at constant volume. $C_V$ can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):
 
 \begin{equation}
-  C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n},
+  C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n=1},
   (\#eq:cvstatefunc)
 \end{equation}
 
@@ -126,7 +126,7 @@ which simplifies to:
 Eq. \@ref(eq:dh2) establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by eq. \@ref(eq:enthalpydef). It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to $C_V$, $C_P$ can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):
 
 \begin{equation}
-  C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n},
+  C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n=1},
   (\#eq:cpstatefunc)
 \end{equation}
 
