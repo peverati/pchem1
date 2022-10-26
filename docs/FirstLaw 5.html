@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1</title>
+  <title>3 First Law of Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="3 First Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="3 First Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-10-26" />
+<meta name="date" content="2021-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="RealGases.html"/>
-<link rel="next" href="MCPhaseDiagrams.html"/>
+<link rel="prev" href="ZerothLaw.html"/>
+<link rel="next" href="Thermochemistry.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -280,204 +280,216 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="PhaseEquilibrium" class="section level1" number="12">
-<h1><span class="header-section-number">12</span> Phase Equilibrium</h1>
-<div id="phase-stability" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Phase Stability</h2>
-<p>We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a> For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of “phase” is necessary to discuss several concepts in this chapter and the following ones:</p>
+<div id="FirstLaw" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> First Law of Thermodynamics</h1>
+<div id="energyint" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Calculation of Internal Energy Changes</h2>
+<p>The internal energy (<span class="math inline">\(U\)</span>) of a system is a thermodynamic state function defined as:</p>
 <blockquote>
 
 <div class="definition">
-<p><span id="def:phasedef" class="definition"><strong>Definition 12.1  </strong></span><em>Phase:</em> A region of the system with homogeneous chemical composition and physical state.</p>
+<p><span id="def:energy" class="definition"><strong>Definition 3.1  </strong></span><em>Internal Energy:</em> Property of a system that can be either transferred or converted.</p>
 </div>
 </blockquote>
-<p>Let’s now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:</p>
-<p><span class="math display" id="eq:muequal1">\[\begin{equation}
-\begin{aligned}
-d\mu &amp;= \left( \frac{\partial \mu}{\partial T} \right)_P dT + \left( \frac{\partial \mu}{\partial P} \right)_T dP \\
-d\mu &amp;= -SdT+\overline{V}dP,
-\end{aligned}
-\tag{12.1}
+<p>In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, which gives the convention for the signs of heat and work, the internal energy of a system can be written as:</p>
+<p><span class="math display" id="eq:U">\[\begin{equation}
+  U = Q + W,
+  \tag{3.1}
 \end{equation}\]</span></p>
-<p>to write:</p>
-<p><span class="math display" id="eq:muequal2">\[\begin{equation}
-\left( \frac{\partial \mu}{\partial T} \right)_P=-S \qquad \left( \frac{\partial \mu}{\partial P} \right)_T =\overline{V}.
-\tag{12.2}
+<p>which we can write in differential form by considering that the internal energy is a state function, as:
+<span class="math display" id="eq:dU">\[\begin{equation}
+  dU = đ Q + đ W,
+  \tag{3.2}
 \end{equation}\]</span></p>
-<p>We can use these definitions to study the dependence of the chemical potential with respect to changes in pressure and temperature. If we plot <span class="math inline">\(\mu\)</span> as a function of <span class="math inline">\(T\)</span> using the first coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>, we obtain the diagram in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>. The diagram presents three curves, each corresponding to one of the three most common states of matter – solid, liquid, and gas. As we saw in several previous chapters, the entropy of a phase is almost constant with respect to temperature,<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a> and therefore the three curves are essentially straight, with negative angular coefficients <span class="math inline">\(-S\)</span>. This also explains why the solid phase has a basically flat line since, according to the third law, the entropy of a perfect solid is zero and close to zero if the solid is not perfect. The difference between the three lines’ angular coefficients is explained by the fact that each of these states has a different value of entropy:</p>
-<p><span class="math display" id="eq:muequal3">\[\begin{equation}
-\left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
-\tag{12.3}
+<p>which, using eq. <a href="ZerothLaw.html#eq:Wdef">(2.9)</a> becomes:</p>
+<p><span class="math display" id="eq:dUpdv">\[\begin{equation}
+  dU = đ Q - PdV.
+  \tag{3.3}
 \end{equation}\]</span></p>
-<p>and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (<span class="math inline">\(S_{\text{g}} \gg S_{\text{l}}&gt;S_{\text{s}}\)</span>), we obtain three lines with different angular coefficients that intersect each other. At each temperature, the phase with the lowest chemical potential will be the most stable (see red segments in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>). At each intersection between two lines, the two phases have the same chemical potential, representing the temperature at which they coexist. This temperature is the temperature at which the phase change happens. Recalling from general chemistry, at the junction between the solid and the liquid lines, the fusion (fus) process occurs, and the corresponding temperature is called the melting point <span class="math inline">\(T_{\text{m}}\)</span>. At the junction between the liquid and the gas lines, the vaporization (vap) process happens, and the corresponding temperature is called the boiling point <span class="math inline">\(T_{\text{b}}\)</span>. Depending on the substance and the pressure at which the process happens, the solid line might intersect the gas line before the liquid line. When that occurs, the liquid phase is never observed, and only the sublimation (subl) process happens at the sublimation point <span class="math inline">\(T_{\text{subl}}\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase1"></span>
-<img src="img/OEP_Figures.016.jpeg" alt="Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure." width="60%" />
+<div id="isothermalE" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Internal energy in isothermal processes</h3>
+<p>To study the behavior of the internal energy in a process at constant temperature (<span class="math inline">\(dT=0\)</span>), James Prescott Joule (1818–1889) created the apparatus depicted in Figure <a href="FirstLaw.html#fig:FigJexp">3.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:FigJexp"></span>
+<img src="img/OEP_Figures.006.jpeg" alt="The Joule Expansion Experiment." width="80%" />
 <p class="caption">
-Figure 12.1: Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure.
+Figure 3.1: The Joule Expansion Experiment.
 </p>
 </div>
-<p>The effects of pressure on this diagram can be studied using the second coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>. For the majority of substances, <span class="math inline">\(\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} &gt; \overline{V}_{\text{s}}\)</span>, hence the curves will shift to lower values when the pressure is reduced, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a>. Notice also that since <span class="math inline">\(\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}\)</span>, the shifts for both the solid and liquid lines is much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point.
-Water is a noticeable exception to these trend because <span class="math inline">\(\overline{V}_{\mathrm{H}_2\mathrm{O,l}} &lt; \overline{V}_{\text{ice}}\)</span>. This explains the experimental observation that increasing the pressure on ice causes the ice to melt<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a></p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase2"></span>
-<img src="img/OEP_Figures.017.jpeg" alt="Effect of Pressure on the Chemical Potential Diagram." width="60%" />
-<p class="caption">
-Figure 12.2: Effect of Pressure on the Chemical Potential Diagram.
-</p>
+<p>The left side of the Joule apparatus’s inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, to guarantee isolation from the environment. When the communication channel between the chambers is open, the gas expands and equilibrates. The work associated with the transformation is:</p>
+<p><span class="math display" id="eq:JexpW">\[\begin{equation}
+  đ W=-P_{\text{ext}}dV = 0,
+  \tag{3.4}
+\end{equation}\]</span></p>
+<p>since the chambers are not in communication with the environment, <span class="math inline">\(P_{\text{ext}}=0\)</span>. Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, <span class="math inline">\(T_i\)</span>, and at the end of the experiment <span class="math inline">\(T_f\)</span>. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature would not change <span class="math inline">\(T_i = T_f\)</span>. Since the temperature doesn’t change, there is no heat transfer, and therefore the internal energy stays constant:</p>
+<p><span class="math display" id="eq:JexpQU">\[\begin{equation}
+  dU = đ Q = 0.
+  \tag{3.5}
+\end{equation}\]</span></p>
+<blockquote>
+<p>Notice that Joule’s conclusion is valid only for an ideal gas. If we expand a real gas, we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in chapter <a href="RealGases.html#RealGases">11</a> when we will study non-ideal gases.</p>
+</blockquote>
+<p>From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature.</p>
 </div>
-<p>Considering the intersections between two lines, two phases are in equilibrium with each other at each of these points. Therefore their chemical potentials must be equal:</p>
-<p>For two or more phases to be in equilibrium, their chemical potential must be equal:</p>
-<p><span class="math display" id="eq:muequal">\[\begin{equation}
-\mu_{\alpha} = \mu_{\beta}.
-\tag{12.4}
+<div id="internal-energy-in-adiabatic-processes" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Internal energy in adiabatic processes</h3>
+<p>An adiabatic process is defined as a process that happens without the exchange of heat. As such, <span class="math inline">\(đ Q=0\)</span>, and the work associated with an adiabatic process becomes a state function:</p>
+<p><span class="math display" id="eq:dUadiabatic">\[\begin{equation}
+  dU=đ W=-PdV,
+  \tag{3.6}
 \end{equation}\]</span></p>
-<p>If we now change either the temperature or the pressure, the location of the intersection will be shifted (see again Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a> and the discussion above). For infinitesimal changes in variables, the new location will be:</p>
-<p><span class="math display" id="eq:muequalA">\[\begin{equation}
-\mu_{\alpha} + d\mu_{\alpha}= \mu_{\beta}+d\mu_{\beta},
-\tag{12.5}
-\end{equation}\]</span></p>
-<p>which using eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>, simply becomes:</p>
-<p><span class="math display" id="eq:muequalB">\[\begin{equation}
-d\mu_{\alpha}= d\mu_{\beta}.
-\tag{12.6}
-\end{equation}\]</span></p>
-<p>Replacing the differential with the definition of chemical potential in eq. <a href="PhaseEquilibrium.html#eq:muequal1">(12.1)</a>, we obtain:</p>
-<p><span class="math display" id="eq:muequalC">\[\begin{equation}
-\begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &amp;= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &amp;= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
-\end{aligned}
-\tag{12.7}
-\end{equation}\]</span></p>
-<p>which can be rearranged into:</p>
-<p><span class="math display" id="eq:ClapeyronEq">\[\begin{equation}
-\frac{dP}{dT}=\frac{\Delta S}{\Delta \overline{V}}.
-\tag{12.8}
-\end{equation}\]</span></p>
-<p>This equation is known as the <strong>Clapeyron equation</strong>, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a> on a <span class="math inline">\(PT\)</span> phase diagram for common substances results in three lines representing the equilibrium between two different phases. These diagrams are useful to study the relationship between the phases of a substance.</p>
+<p>which can then be calculated using the formulas that we derived in section <a href="ZerothLaw.html#workint">2.4</a>. Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system’s boundaries, this does not mean that the system’s temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.</p>
 </div>
-<div id="gibbs-phase-rule" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Gibbs Phase Rule</h2>
-<p>In chapter <a href="SystemVariables.html#SystemVariables">1</a>, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables <span class="math inline">\((3: P,\overline{V},T)\)</span>, and reduce it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of <span class="math inline">\(c\)</span> components (chemical substances) and <span class="math inline">\(p\)</span> phases, the number of independent variables, <span class="math inline">\(f\)</span>, is given by the Gibbs phase rule:</p>
-<p><span class="math display" id="eq:Gibbsrule">\[\begin{equation}
-f=c-p+2.
-\tag{12.9}
+<div id="internal-energy-in-isochoric-processes" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Internal energy in isochoric processes</h3>
+<p>An isocoric process is a process in which the volume does not change. Therefore, <span class="math inline">\(đ W=0\)</span>, and <span class="math inline">\(dU = đ Q_V\)</span>, which for 1 mol of substance and using eq. <a href="ZerothLaw.html#eq:Cvdef">(2.1)</a>, becomes:</p>
+<p><span class="math display" id="eq:dUqv">\[\begin{equation}
+  dU = đ Q_V = n C_V dT.
+  \tag{3.7}
 \end{equation}\]</span></p>
-<p>The Gibbs phase rule derives from the fact that different phases are in equilibrium with each other at some conditions, resulting in the reduction of the number of independent variables at those conditions. More rigorously, when two phases are in thermodynamic equilibrium, their chemical potentials are equal (see eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>). For each equality, the number of independent variables—also called the number of <em>degrees of freedom</em>—is reduced by one. For example, the chemical potentials of the liquid and its vapor depend on both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. But when these phases are in equilibrium with each other, their chemical potentials must be equal. If either the pressure or the temperature is fixed, the other variable will be uniquely determined by the equality relation. In other terms, when a liquid is in equilibrium with its vapor at a given pressure, the temperature is determined by the fact that the chemical potentials of the two phases is the same, and is denoted as the boiling temperature <span class="math inline">\(T_{\text{b}}\)</span>. Similarly, at a given temperature, the pressure of the vapor is uniquely determined by the same equality relation and is denoted as the vapor pressure, <span class="math inline">\(P^*\)</span>.</p>
-<p>The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by <span class="math inline">\((c-1)\)</span> variables.<a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> The number of constraints is determined by the number of possible equilibrium relations, which is <span class="math inline">\(c(p-1)\)</span> since the chemical potential of each component must be equal in all phases. The number of degrees of freedom <span class="math inline">\(f\)</span> is then given by <span class="math inline">\(f=(c-1)p+2-c(p-1)\)</span> <span class="math inline">\(=c-p+2\)</span>, which is the Gibbs phase rule, as in eq. <a href="PhaseEquilibrium.html#eq:Gibbsrule">(12.9)</a>.</p>
+<p>Since no work is performed at these conditions, the heat becomes a state function. Eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a> also gives a mathematical justification of the concept of heat capacity at constant volume. <span class="math inline">\(C_V\)</span> can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):</p>
+<p><span class="math display" id="eq:cvstatefunc">\[\begin{equation}
+  C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n},
+  \tag{3.8}
+\end{equation}\]</span></p>
+<p>where we have replaced the total derivative <span class="math inline">\(d\)</span> with a partial one <span class="math inline">\(\partial\)</span>, and we have specified that the derivation happens at constant volume and number of moles. Eq. <a href="FirstLaw.html#eq:cvstatefunc">(3.8)</a> equation brings a rigorous definition of heat capacity at constant volume for 1 mol of substance:</p>
+<blockquote>
+
+<div class="definition">
+<span id="def:newdefcv" class="definition"><strong>Definition 3.2  </strong></span><em>The heat capacity of a substance, <span class="math inline">\(C_V\)</span>, represents its ability to absorb <strong>energy</strong> at constant <strong>volume</strong>.</em>
 </div>
-<div id="pt-phase-diagrams" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> <span class="math inline">\(PT\)</span> Phase Diagrams</h2>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase3"></span>
-<img src="img/OEP_Figures.018.jpeg" alt="The Pressure–Temperature Phase Diagram." width="60%" />
-<p class="caption">
-Figure 12.3: The Pressure–Temperature Phase Diagram.
-</p>
+</blockquote>
 </div>
-<p>Let’s now discuss the pressure–temperature diagram of a typical substance, as reported in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a>. The interpretation of each line is as follows:</p>
-<div id="liquid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>For this equilibrium we can use Trouton’s rule, eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>, and write:
-<span class="math display" id="eq:PTdia1">\[\begin{equation}
-\Delta_{\text{vap}} S = S_{\text{g}}-S_{\text{l}} \cong 88 \; \frac{\text{kJ}}{\text{mol}} &gt; 0\quad \text{always},
-\tag{12.10}
+<div id="enthalpy" class="section level3" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> Internal energy in isobaric processes</h3>
+<p>In an isobaric process, the pressure does not change, hence <span class="math inline">\(dP=0\)</span>. Unfortunately, eq. <a href="FirstLaw.html#eq:dU">(3.2)</a> for this case does not simplify further, as happened in the two previous cases. However, in section <a href="ZerothLaw.html#heatconstp">2.3.2</a>, we have introduced the useful concept of heat capacity at constant <span class="math inline">\(P\)</span>. <span class="math inline">\(C_P\)</span> was used in an adiabatic process in the same manner as <span class="math inline">\(C_V\)</span> was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. <a href="FirstLaw.html#eq:cvstatefunc">(3.8)</a> gave a mathematical definition of <span class="math inline">\(C_V\)</span> as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain <span class="math inline">\(C_P\)</span>? In order to do so, we can introduce a new state function, called the enthalpy (<span class="math inline">\(H\)</span>), as:</p>
+<p><span class="math display" id="eq:enthalpydef">\[\begin{equation}
+  H = U + PV,
+  \tag{3.9}
 \end{equation}\]</span></p>
-<p>where the entropy of vaporization is always positive, even for cases where the Trouton’s rule is violated. The difference in molar volumes is easily obtained, since the volume of the gas is always much greater than the volume of the liquid:</p>
-<p><span class="math display" id="eq:PTdia2">\[\begin{equation}
-\overline{V}_{\text{g}} - \overline{V}_{\text{l}} \cong \overline{V}_{\text{g}} = 22.4\; \frac{\text{L}}{\text{mol}} &gt;0\quad \text{always}.
-\tag{12.11}
-\end{equation}\]</span></p>
-<p>Replacing these values in the Clapeyron equation, we obtain:</p>
-<p><span class="math display" id="eq:PTdia3">\[\begin{equation}
-\frac{dP}{dT}=\frac{88}{22.4}\left( \frac{0.0831}{8.31} \right) = 0.004\;\text{bar} &gt; 0 \quad \text{always},
-\tag{12.12}
-\end{equation}\]</span></p>
-<p>which is always positive,regardless of violations to the Trouton’s rule. Notice how small this value is, meaning that the liquid–gas equilibrium curve is mostly flat as <span class="math inline">\(T\rightarrow 0\)</span>.</p>
-</div>
-<div id="solid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.2">
-<h3><span class="header-section-number">12.3.2</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>If we look at the signs of each quantity, this case is similar to the previous one:
-<span class="math display" id="eq:PTdi1">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{subl}} S &amp;&gt; 0 \quad \text{always} \\
-\Delta_{\text{subl}} \overline{V }&amp;&gt; 0 \quad \text{always} \\
-\\
-\frac{dP}{dT} &amp;&gt; 0 \quad \text{always}.
-\end{aligned}
-\tag{12.13}
-\end{equation}\]</span></p>
-<p>However, the Trouton’s rule is not valid for the solid–gas equilibrium, and <span class="math inline">\(\frac{dP}{dT}\)</span> will be larger than for the previous case.</p>
-</div>
-<div id="solid-rightleftarrows-liquid-equilibrium" class="section level3" number="12.3.3">
-<h3><span class="header-section-number">12.3.3</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</h3>
-<p>The final curve is for the solid-liquid equilibrium, for which we have:</p>
-<p><span class="math display" id="eq:PTd1">\[\begin{equation}
-\Delta_{\text{fus}} S = \frac{\Delta_{\text{fusion}} H}{T_{\text{m}}} &gt; 0 \quad \text{always},
-\tag{12.14}
-\end{equation}\]</span></p>
-<p>since fusion is always an exothermic process, <span class="math inline">\((\Delta_{\text{fus}} H&gt;0)\)</span>. On the other side:</p>
-<p><span class="math display">\[\begin{equation}
-\Delta_{\text{fusion}} \overline{V} = \overline{V}_{\text{l}} - \overline{V}_{\text{s}} &gt; 0 \quad \text{generally}.
-\end{equation}\]</span></p>
-<p>In other words, the difference of the molar volume of the liquid and that of the solid is positive for most substances, but it might be negative (for example for <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span>). As such:</p>
-<p><span class="math display" id="eq:PTd2">\[\begin{equation}
- \frac{dP}{dT} &gt; 0 \quad \text{generally}.
-\tag{12.15}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> and a few other substances, <span class="math inline">\(\frac{dP}{dT}&lt;0\)</span>, an anomalous behavior that has crucial consequences for the existence of life on earth.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a> For this importance, this behavior is also depicted in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a> using a dashed green line.</p>
-<p>Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of <span class="math inline">\(10^{-3}\;\mathrm{L}\)</span>), <span class="math inline">\(\frac{dP}{dT}\)</span> is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are still almost vertical, regardless of the signs of their angular coefficients.</p>
-</div>
-<div id="the-triple-point-and-the-critical-point" class="section level3" number="12.3.4">
-<h3><span class="header-section-number">12.3.4</span> The triple point and the critical point</h3>
-<p>The only point in the <span class="math inline">\(PT\)</span> diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is <span class="math inline">\(f=1-3+2=0\)</span>. The fact that the triple point has zero degrees of freedom means that its coordinates, <span class="math inline">\({T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}}\)</span>, are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition—rather than measured—until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the Kelvin).<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a></p>
-<p>In addition to the triple point where the solid, liquid, and gas phases meet, a triple point may involve more than one condensed phase. Triple points are common for substances with multiple solid phases (polymorphs), involving either two solid phases and a liquid one or three solid phases. Helium is a special case that presents a triple point involving two different fluid phases, called the lambda point. Since the number of degrees of freedom cannot be negative, the Gibbs phase rule for a 1-component diagram sets the limit to how many phases can coexist to just three. Therefore, quadruple points (or higher coexistence points) are not possible for pure substances, even for polymorphs.<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a></p>
-<p>Another point with a fixed position in the <span class="math inline">\(PT\)</span> diagram is the critical point, <span class="math inline">\({T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}}\)</span>. We have already given the definition of the critical temperature in <a href="RealGases.html#def:criticalT">11.2</a>. This point represents the end of the liquid–gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. A gas whose pressure and temperature are below the critical point is called a <em>vapor</em>. A gas whose temperature is above the critical one and the pressure is below its critical one is called a <em>supercritical fluid</em>. Finally, a liquid whose pressure is above the critical point is called a <em>compressible liquid</em>.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a></p>
-</div>
-</div>
-<div id="the-clausiusclapeyron-equation" class="section level2" number="12.4">
-<h2><span class="header-section-number">12.4</span> The Clausius–Clapeyron Equation</h2>
-<p>Let’s now take a closer look at the equilibrium between a condensed phase and the gas phase. For both the vaporization and sublimation processes, Clausius showed that the Clapeyron equation can be simplified by using:</p>
-<p><span class="math display" id="eq:clacla1">\[\begin{equation}
- \Delta_{\text{vap}} S = \frac{\Delta_{\text{vap}} H}{T} \qquad \Delta \overline{V}= \overline{V}_{\mathrm{g}} -\overline{V}_{\mathrm{l}} \cong \overline{V}_{\mathrm{g}},
-\tag{12.16}
-\end{equation}\]</span></p>
-<p>resulting in:</p>
-<p><span class="math display" id="eq:clacla2">\[\begin{equation}
- \frac{dP}{dT} = \frac{ \Delta_{\text{vap}} S}{\Delta \overline{V}} \cong \frac{ \Delta_{\text{vap}} H}{T \overline{V}_{\mathrm{g}}}.
-\tag{12.17}
-\end{equation}\]</span></p>
-<p>Using the ideal gas law to replace the molar volume of the gas, we obtain:</p>
-<p><span class="math display" id="eq:clacla3">\[\begin{equation}
- \frac{dP}{dT} = \frac{P \Delta_{\text{vap}} H}{RT^2},
-\tag{12.18}
+<p>and its differential, calculated as:</p>
+<p><span class="math display" id="eq:enthalpydefdiff">\[\begin{equation}
+  dH = dU + d(PV) = dU + PdV + \overbrace{VdP}^{0},
+  \tag{3.10}
 \end{equation}\]</span></p>
 <p>which can be rearranged as:</p>
-<p><span class="math display" id="eq:clacla">\[\begin{equation}
- \frac{dP}{P} = \frac{\Delta_{\text{vap}} H}{R} \frac{dT}{T^2}.
-\tag{12.19}
+<p><span class="math display" id="eq:enthalpydefdiffu">\[\begin{equation}
+  dU = dH -PdV,
+  \tag{3.11}
 \end{equation}\]</span></p>
-<p>Eq. <a href="PhaseEquilibrium.html#eq:clacla">(12.19)</a> is known as the <strong>Clausius–Clapeyron equation</strong>, and it measures the dependence of the vapor pressure of a substance as a function of the temperature. The Clausius–Clapeyron equation can be integrated to obtain:</p>
-<p><span class="math display" id="eq:clacla4">\[\begin{equation}
+<p>Replacing eq. <a href="FirstLaw.html#eq:enthalpydefdiffu">(3.11)</a> into eq. <a href="FirstLaw.html#eq:dUpdv">(3.3)</a>:</p>
+<p><span class="math display" id="eq:dh1">\[\begin{equation}
+  dH -PdV = đ Q_P - PdV,
+  \tag{3.12}
+\end{equation}\]</span></p>
+<p>which simplifies to:</p>
+<p><span class="math display" id="eq:dh2">\[\begin{equation}
+  dH = đ Q_P.
+  \tag{3.13}
+\end{equation}\]</span></p>
+<p>Eq. <a href="FirstLaw.html#eq:dh2">(3.13)</a> establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by eq. <a href="FirstLaw.html#eq:enthalpydef">(3.9)</a>. It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to <span class="math inline">\(C_V\)</span>, <span class="math inline">\(C_P\)</span> can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):</p>
+<p><span class="math display" id="eq:cpstatefunc">\[\begin{equation}
+  C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n},
+  \tag{3.14}
+\end{equation}\]</span></p>
+<p>Eq. <a href="FirstLaw.html#eq:cpstatefunc">(3.14)</a> brings also a rigorous definition of heat capacity at constant pressure for 1 mol of substance:</p>
+<blockquote>
+
+<div class="definition">
+<span id="def:newdefcp" class="definition"><strong>Definition 3.3  </strong></span><em>The heat capacity of a substance, <span class="math inline">\(C_P\)</span>, represents its ability to absorb <strong>enthalpy</strong> at constant <strong>pressure</strong>.</em>
+</div>
+</blockquote>
+</div>
+</div>
+<div id="the-first-law-of-thermodynamics" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> The First Law of Thermodynamics</h2>
+<p>We finally come to a working definition of the first law. If we take an isolated system—i.e., a system that does not exchange heat nor mass with its surroundings—its internal energy is conserved. If the internal energy is conserved, <span class="math inline">\(dU=0\)</span>. Therefore, for an isolated system:</p>
+<p><span class="math display" id="eq:heateqwork">\[\begin{equation}
+  đ Q = -đ W,
+  \tag{3.15}
+\end{equation}\]</span></p>
+<p>and heat and work can be easily calculated using any of the appropriate formulas introduced in either section <a href="ZerothLaw.html#workint">2.4</a> or <a href="ZerothLaw.html#heatint">2.3</a>.</p>
+<p>The first law is a conservation law. It is intuitive since it comes directly from Lavoisier’s principle of “nothing is lost, nothing is created, everything is transformed.” Considering that the only system that is truly isolated is the universe, we can condense the first law in one simple sentence:</p>
+<blockquote>
+
+<div class="definition">
+<span id="def:firstlaw" class="definition"><strong>Definition 3.4  </strong></span><em>First Law of Thermodynamics:</em> The energy of the universe is conserved.
+</div>
+</blockquote>
+</div>
+<div id="reversible-and-irreversible-processes" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Reversible and Irreversible processes</h2>
+<p>Let’s now consider the cycle in Figure <a href="FirstLaw.html#fig:FigRevCyc">3.2</a>. The process in this case starts from state 1 (system at <span class="math inline">\(P_1V_1\)</span>), expands to state 2 (system at <span class="math inline">\(P_2V_2\)</span>), and compresses back to state 1 (system back to <span class="math inline">\(P_1V_1\)</span>).</p>
+<div class="figure" style="text-align: center"><span id="fig:FigRevCyc"></span>
+<img src="img/OEP_Figures.005.jpeg" alt="Expansion/Compression Cycle of an Ideal Gas." width="80%" />
+<p class="caption">
+Figure 3.2: Expansion/Compression Cycle of an Ideal Gas.
+</p>
+</div>
+<p>Since the process starts and finishes at the same state, the value of the internal energy at the end of the process will be the same as its value at the beginning, regardless of the path:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+<p><span class="math display" id="eq:de0">\[\begin{equation}
+  \oint dU=0,
+  \tag{3.16}
+\end{equation}\]</span></p>
+<p>where the symbol <span class="math inline">\(\oint\)</span> indicates an integral around a cycle. Considering the work associated with the cycle, however, the situation is radically different because it depends on the path that the system is taking, and in general
+<span class="math display" id="eq:dw0">\[\begin{equation}
+\oint_{\text{path}} đW \neq 0.
+  \tag{3.17}
+\end{equation}\]</span></p>
+<p>For instance, if we perform the expansion in one step, the work associated with it will be (using eq. <a href="ZerothLaw.html#eq:Wint3">(2.13)</a>):<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
+<p><span class="math display" id="eq:Wexp1">\[\begin{equation}
+  W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{&gt;0})&lt;0,
+  \tag{3.18}
+\end{equation}\]</span></p>
+<p>and if we also perform the compression in 1-step:<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></p>
+<p><span class="math display" id="eq:Wcomp1">\[\begin{equation}
+  W^{\text{compression}}_{\text{1-step}}=-P_1(\underbrace{V_1-V_2}_{&lt;0})&gt;0.
+  \tag{3.19}
+\end{equation}\]</span></p>
+<p>With a little bit of math, it is easy to prove that the total work for the entire cycle is:</p>
+<p><span class="math display" id="eq:Wtot1">\[\begin{equation}
 \begin{aligned}
-\int_{P_i}^{P_f} \frac{dP}{P} &amp;= \frac{\Delta_{\text{vap}} H}{R} \int_{T_i}^{T_f} \frac{dT}{T^2} \\
-\ln \frac{P_f}{P_i} &amp;=-\frac{\Delta_{\text{vap}} H}{R} \left( \frac{1}{T_f}-\frac{1}{T_i} \right).
+W^{\text{cycle}}_{\text{1-step}} {} &amp; =  W^{\text{expansion}}_{\text{1-step}}+W^{\text{compression}}_{\text{1-step}} \\
+ &amp; = -P_2(V_2-V_1)-P_1(V_1-V_2) \\
+ &amp; = -P_2(V_2-V_1)+P_1(V_2-V_1) \\
+ &amp; = (\underbrace{V_2-V_1}_{&gt;0})(\underbrace{P_1-P_2}_{&gt;0}) &gt; 0,
 \end{aligned}
-\tag{12.20}
+  \tag{3.20}
 \end{equation}\]</span></p>
-<p>The integrated Clausius–Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from <span class="math inline">\(P^*=0.02\;\text{bar}\)</span> to <span class="math inline">\(P^*=1\;\text{bar}\)</span> when the temperature is increased from <span class="math inline">\(T=293\;\mathrm{K}\)</span> (around room temperature) to <span class="math inline">\(T=373\;\mathrm{K}\)</span> (boiling point). The integrated Clausius–Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.</p>
+<p>or, in other words, net work is destroyed.</p>
+<blockquote>
+<p>In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it, and it moves back up.</p>
+</blockquote>
+<p>In contrast, if both the expansion and the compression happen in a slow <span class="math inline">\(\infty\)</span>-step manner, the work associated with them will be <span class="math inline">\(W_{\text{max}}\)</span> and <span class="math inline">\(W_{\text{min}}\)</span>, respectively, which are calculated using eq. <a href="ZerothLaw.html#eq:WmaxV">(2.19)</a>. The total work related with the cycle will be in this case:</p>
+<p><span class="math display" id="eq:Wtot2">\[\begin{equation}
+\begin{aligned}
+W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max}}+W^{\text{compression}}_{\text{min}} \\
+ &amp; = -nRT \ln \frac{V_f}{V_i}-nRT \ln \frac{V_i}{V_f} \\
+ &amp; = -nRT \underbrace{\left( \ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i} \right) }_{=0}  = 0,
+\end{aligned}
+  \tag{3.21}
+\end{equation}\]</span></p>
+<p>which means that, in this case, work is not destroyed nor created.</p>
+<blockquote>
+<p>In practice, if we were able to perform this cycle manually by pushing on the piston down by hand, we will notice that it requires the same amount of energy to push down than the amount it gives back when it moves up.</p>
+</blockquote>
+<p>This process can happen both ways without losses, and is called <em>reversible</em>:</p>
+<blockquote>
+
+<div class="definition">
+<p><span id="def:reversible" class="definition"><strong>Definition 3.5  </strong></span><em>Reversible process:</em> a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+</div>
+</blockquote>
+<p>Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="49">
-<li id="fn49"><p>Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.<a href="PhaseEquilibrium.html#fnref49" class="footnote-back">↩︎</a></p></li>
-<li id="fn50"><p>Think, for example, at the integral <span class="math inline">\(\int SdT\)</span>, for which we can assume <span class="math inline">\(S\)</span> independent of temperature to obtain <span class="math inline">\(S\Delta T\)</span>. In practice, the entropy increases slightly with the temperature. Therefore the curves in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a> are slightly concave downwards (remember that they are obtained from values of <span class="math inline">\(-S\)</span>, so if <span class="math inline">\(S\)</span> increase with <span class="math inline">\(T\)</span>, the curves bend downwards.)<a href="PhaseEquilibrium.html#fnref50" class="footnote-back">↩︎</a></p></li>
-<li id="fn51"><p>Despite the effect being minimal, it is one of the contributing causes to the fact that we can skate on ice, but we can’t on stone. If we increase our pressure on ice by reducing our footprints’ surface area using thin skates, ice will slightly melt under our own weight, creating a thin liquid film on which we can skate because of the reduced friction.<a href="PhaseEquilibrium.html#fnref51" class="footnote-back">↩︎</a></p></li>
-<li id="fn52"><p>For a 1-component system <span class="math inline">\(c-1=1-1=0\)</span>, and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence <span class="math inline">\(c-1=2-1=1\)</span> additional variable will be required to describe it–the mole fraction.<a href="PhaseEquilibrium.html#fnref52" class="footnote-back">↩︎</a></p></li>
-<li id="fn53"><p>As is well explained by <a href="https://en.wikipedia.org/wiki/Properties_of_water#Density_of_water_and_ice">Wikipedia</a>: “The unusual density curve and lower density of ice than of water is vital to life—if water were most dense at the freezing point, then in winter the very cold water at the surface of lakes and other water bodies would sink, lakes could freeze from the bottom up, and all life in them would be killed. Furthermore, given that water is a good thermal insulator (due to its heat capacity), some frozen lakes might not completely thaw in summer.[34] The layer of ice that floats on top insulates the water below. Water at about 4 °C (39 °F) also sinks to the bottom, thus keeping the temperature of the water at the bottom constant.”<a href="PhaseEquilibrium.html#fnref53" class="footnote-back">↩︎</a></p></li>
-<li id="fn54"><p>For more information on the 2019 redefinition of the SI units, see <a href="https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units">this Wikipedia page</a>.<a href="PhaseEquilibrium.html#fnref54" class="footnote-back">↩︎</a></p></li>
-<li id="fn55"><p>Notice that quadruple points are possible for 2-component diagrams.<a href="PhaseEquilibrium.html#fnref55" class="footnote-back">↩︎</a></p></li>
-<li id="fn56"><p>Notice that the temperature of a liquid must be below the critical point, otherwise it is no longer a liquid but rather a supercritical fluid.<a href="PhaseEquilibrium.html#fnref56" class="footnote-back">↩︎</a></p></li>
+<ol start="8">
+<li id="fn8"><p>recall that the internal energy is a state function, so its value depends exclusively from the conditions at the beginning and at the end. In a cycle, we’re going back to the same point, so the conditions at the beginning and at the end are equal by definition.<a href="FirstLaw.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>notice that the work for the expansion is negative, as it should be.<a href="FirstLaw.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>notice that the work for the compression is positive, as it should be.<a href="FirstLaw.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)<a href="FirstLaw.html#fnref11" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -485,8 +497,8 @@ Figure 12.3: The Pressure–Temperature Phase Diagram.
           </div>
         </div>
       </div>
-<a href="RealGases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="MCPhaseDiagrams.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ZerothLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Thermochemistry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -517,7 +529,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/12_PhaseEquilibrium.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/03_FirstLaw.rmd",
 "text": "Edit"
 },
 "history": {

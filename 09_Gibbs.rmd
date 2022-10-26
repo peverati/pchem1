@@ -37,7 +37,7 @@ which is the famous **Gibbs equation** for $\Delta G$. Using Definition \@ref(de
 \begin{aligned}
 \Delta_{\text{rxn}} G^\standardstate &= \Delta_{\text{rxn}} H^\standardstate -T \Delta_{\text{rxn}} S^\standardstate \\
 \\
-&= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate + T \sum_i \nu_i S_i^\standardstate,
+&= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate - T \sum_i \nu_i S_i^\standardstate,
 \end{aligned}
 (\#eq:gibbseq2)
 \end{equation}

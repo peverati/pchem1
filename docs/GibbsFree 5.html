@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1</title>
+  <title>9 Gibbs Free Energy | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="9 Gibbs Free Energy | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="9 Gibbs Free Energy | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-10-26" />
+<meta name="date" content="2021-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="RealGases.html"/>
-<link rel="next" href="MCPhaseDiagrams.html"/>
+<link rel="prev" href="Potentials.html"/>
+<link rel="next" href="ChemicalEquilibrium.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -280,204 +280,268 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="PhaseEquilibrium" class="section level1" number="12">
-<h1><span class="header-section-number">12</span> Phase Equilibrium</h1>
-<div id="phase-stability" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Phase Stability</h2>
-<p>We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a> For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of “phase” is necessary to discuss several concepts in this chapter and the following ones:</p>
-<blockquote>
-
-<div class="definition">
-<p><span id="def:phasedef" class="definition"><strong>Definition 12.1  </strong></span><em>Phase:</em> A region of the system with homogeneous chemical composition and physical state.</p>
-</div>
-</blockquote>
-<p>Let’s now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:</p>
-<p><span class="math display" id="eq:muequal1">\[\begin{equation}
+<div id="GibbsFree" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Gibbs Free Energy</h1>
+<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
+<div id="gibbseqsec" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Gibbs Equation</h2>
+<p>Recalling from chapter <a href="Potentials.html#Potentials">8</a>, the definition of <span class="math inline">\(G\)</span> is:</p>
+<p><span class="math display" id="eq:dgdeftot">\[\begin{equation}
+G = U -TS +PV = H-TS,
+\tag{9.1}
+\end{equation}\]</span></p>
+<p>which, taking the differential at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, becomes:</p>
+<p><span class="math display" id="eq:dgdeftot2">\[\begin{equation}
+dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
+\tag{9.2}
+\end{equation}\]</span></p>
+<p>Integrating eq. <a href="GibbsFree.html#eq:dgdeftot2">(9.2)</a> between the initial and final states of a process results in:</p>
+<p><span class="math display" id="eq:gibbseq">\[\begin{equation}
 \begin{aligned}
-d\mu &amp;= \left( \frac{\partial \mu}{\partial T} \right)_P dT + \left( \frac{\partial \mu}{\partial P} \right)_T dP \\
-d\mu &amp;= -SdT+\overline{V}dP,
-\end{aligned}
-\tag{12.1}
-\end{equation}\]</span></p>
-<p>to write:</p>
-<p><span class="math display" id="eq:muequal2">\[\begin{equation}
-\left( \frac{\partial \mu}{\partial T} \right)_P=-S \qquad \left( \frac{\partial \mu}{\partial P} \right)_T =\overline{V}.
-\tag{12.2}
-\end{equation}\]</span></p>
-<p>We can use these definitions to study the dependence of the chemical potential with respect to changes in pressure and temperature. If we plot <span class="math inline">\(\mu\)</span> as a function of <span class="math inline">\(T\)</span> using the first coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>, we obtain the diagram in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>. The diagram presents three curves, each corresponding to one of the three most common states of matter – solid, liquid, and gas. As we saw in several previous chapters, the entropy of a phase is almost constant with respect to temperature,<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a> and therefore the three curves are essentially straight, with negative angular coefficients <span class="math inline">\(-S\)</span>. This also explains why the solid phase has a basically flat line since, according to the third law, the entropy of a perfect solid is zero and close to zero if the solid is not perfect. The difference between the three lines’ angular coefficients is explained by the fact that each of these states has a different value of entropy:</p>
-<p><span class="math display" id="eq:muequal3">\[\begin{equation}
-\left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
-\tag{12.3}
-\end{equation}\]</span></p>
-<p>and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (<span class="math inline">\(S_{\text{g}} \gg S_{\text{l}}&gt;S_{\text{s}}\)</span>), we obtain three lines with different angular coefficients that intersect each other. At each temperature, the phase with the lowest chemical potential will be the most stable (see red segments in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>). At each intersection between two lines, the two phases have the same chemical potential, representing the temperature at which they coexist. This temperature is the temperature at which the phase change happens. Recalling from general chemistry, at the junction between the solid and the liquid lines, the fusion (fus) process occurs, and the corresponding temperature is called the melting point <span class="math inline">\(T_{\text{m}}\)</span>. At the junction between the liquid and the gas lines, the vaporization (vap) process happens, and the corresponding temperature is called the boiling point <span class="math inline">\(T_{\text{b}}\)</span>. Depending on the substance and the pressure at which the process happens, the solid line might intersect the gas line before the liquid line. When that occurs, the liquid phase is never observed, and only the sublimation (subl) process happens at the sublimation point <span class="math inline">\(T_{\text{subl}}\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase1"></span>
-<img src="img/OEP_Figures.016.jpeg" alt="Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure." width="60%" />
-<p class="caption">
-Figure 12.1: Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure.
-</p>
-</div>
-<p>The effects of pressure on this diagram can be studied using the second coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>. For the majority of substances, <span class="math inline">\(\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} &gt; \overline{V}_{\text{s}}\)</span>, hence the curves will shift to lower values when the pressure is reduced, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a>. Notice also that since <span class="math inline">\(\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}\)</span>, the shifts for both the solid and liquid lines is much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point.
-Water is a noticeable exception to these trend because <span class="math inline">\(\overline{V}_{\mathrm{H}_2\mathrm{O,l}} &lt; \overline{V}_{\text{ice}}\)</span>. This explains the experimental observation that increasing the pressure on ice causes the ice to melt<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a></p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase2"></span>
-<img src="img/OEP_Figures.017.jpeg" alt="Effect of Pressure on the Chemical Potential Diagram." width="60%" />
-<p class="caption">
-Figure 12.2: Effect of Pressure on the Chemical Potential Diagram.
-</p>
-</div>
-<p>Considering the intersections between two lines, two phases are in equilibrium with each other at each of these points. Therefore their chemical potentials must be equal:</p>
-<p>For two or more phases to be in equilibrium, their chemical potential must be equal:</p>
-<p><span class="math display" id="eq:muequal">\[\begin{equation}
-\mu_{\alpha} = \mu_{\beta}.
-\tag{12.4}
-\end{equation}\]</span></p>
-<p>If we now change either the temperature or the pressure, the location of the intersection will be shifted (see again Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a> and the discussion above). For infinitesimal changes in variables, the new location will be:</p>
-<p><span class="math display" id="eq:muequalA">\[\begin{equation}
-\mu_{\alpha} + d\mu_{\alpha}= \mu_{\beta}+d\mu_{\beta},
-\tag{12.5}
-\end{equation}\]</span></p>
-<p>which using eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>, simply becomes:</p>
-<p><span class="math display" id="eq:muequalB">\[\begin{equation}
-d\mu_{\alpha}= d\mu_{\beta}.
-\tag{12.6}
-\end{equation}\]</span></p>
-<p>Replacing the differential with the definition of chemical potential in eq. <a href="PhaseEquilibrium.html#eq:muequal1">(12.1)</a>, we obtain:</p>
-<p><span class="math display" id="eq:muequalC">\[\begin{equation}
-\begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &amp;= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &amp;= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
-\end{aligned}
-\tag{12.7}
-\end{equation}\]</span></p>
-<p>which can be rearranged into:</p>
-<p><span class="math display" id="eq:ClapeyronEq">\[\begin{equation}
-\frac{dP}{dT}=\frac{\Delta S}{\Delta \overline{V}}.
-\tag{12.8}
-\end{equation}\]</span></p>
-<p>This equation is known as the <strong>Clapeyron equation</strong>, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a> on a <span class="math inline">\(PT\)</span> phase diagram for common substances results in three lines representing the equilibrium between two different phases. These diagrams are useful to study the relationship between the phases of a substance.</p>
-</div>
-<div id="gibbs-phase-rule" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Gibbs Phase Rule</h2>
-<p>In chapter <a href="SystemVariables.html#SystemVariables">1</a>, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables <span class="math inline">\((3: P,\overline{V},T)\)</span>, and reduce it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of <span class="math inline">\(c\)</span> components (chemical substances) and <span class="math inline">\(p\)</span> phases, the number of independent variables, <span class="math inline">\(f\)</span>, is given by the Gibbs phase rule:</p>
-<p><span class="math display" id="eq:Gibbsrule">\[\begin{equation}
-f=c-p+2.
-\tag{12.9}
-\end{equation}\]</span></p>
-<p>The Gibbs phase rule derives from the fact that different phases are in equilibrium with each other at some conditions, resulting in the reduction of the number of independent variables at those conditions. More rigorously, when two phases are in thermodynamic equilibrium, their chemical potentials are equal (see eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>). For each equality, the number of independent variables—also called the number of <em>degrees of freedom</em>—is reduced by one. For example, the chemical potentials of the liquid and its vapor depend on both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. But when these phases are in equilibrium with each other, their chemical potentials must be equal. If either the pressure or the temperature is fixed, the other variable will be uniquely determined by the equality relation. In other terms, when a liquid is in equilibrium with its vapor at a given pressure, the temperature is determined by the fact that the chemical potentials of the two phases is the same, and is denoted as the boiling temperature <span class="math inline">\(T_{\text{b}}\)</span>. Similarly, at a given temperature, the pressure of the vapor is uniquely determined by the same equality relation and is denoted as the vapor pressure, <span class="math inline">\(P^*\)</span>.</p>
-<p>The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by <span class="math inline">\((c-1)\)</span> variables.<a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> The number of constraints is determined by the number of possible equilibrium relations, which is <span class="math inline">\(c(p-1)\)</span> since the chemical potential of each component must be equal in all phases. The number of degrees of freedom <span class="math inline">\(f\)</span> is then given by <span class="math inline">\(f=(c-1)p+2-c(p-1)\)</span> <span class="math inline">\(=c-p+2\)</span>, which is the Gibbs phase rule, as in eq. <a href="PhaseEquilibrium.html#eq:Gibbsrule">(12.9)</a>.</p>
-</div>
-<div id="pt-phase-diagrams" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> <span class="math inline">\(PT\)</span> Phase Diagrams</h2>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase3"></span>
-<img src="img/OEP_Figures.018.jpeg" alt="The Pressure–Temperature Phase Diagram." width="60%" />
-<p class="caption">
-Figure 12.3: The Pressure–Temperature Phase Diagram.
-</p>
-</div>
-<p>Let’s now discuss the pressure–temperature diagram of a typical substance, as reported in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a>. The interpretation of each line is as follows:</p>
-<div id="liquid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>For this equilibrium we can use Trouton’s rule, eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>, and write:
-<span class="math display" id="eq:PTdia1">\[\begin{equation}
-\Delta_{\text{vap}} S = S_{\text{g}}-S_{\text{l}} \cong 88 \; \frac{\text{kJ}}{\text{mol}} &gt; 0\quad \text{always},
-\tag{12.10}
-\end{equation}\]</span></p>
-<p>where the entropy of vaporization is always positive, even for cases where the Trouton’s rule is violated. The difference in molar volumes is easily obtained, since the volume of the gas is always much greater than the volume of the liquid:</p>
-<p><span class="math display" id="eq:PTdia2">\[\begin{equation}
-\overline{V}_{\text{g}} - \overline{V}_{\text{l}} \cong \overline{V}_{\text{g}} = 22.4\; \frac{\text{L}}{\text{mol}} &gt;0\quad \text{always}.
-\tag{12.11}
-\end{equation}\]</span></p>
-<p>Replacing these values in the Clapeyron equation, we obtain:</p>
-<p><span class="math display" id="eq:PTdia3">\[\begin{equation}
-\frac{dP}{dT}=\frac{88}{22.4}\left( \frac{0.0831}{8.31} \right) = 0.004\;\text{bar} &gt; 0 \quad \text{always},
-\tag{12.12}
-\end{equation}\]</span></p>
-<p>which is always positive,regardless of violations to the Trouton’s rule. Notice how small this value is, meaning that the liquid–gas equilibrium curve is mostly flat as <span class="math inline">\(T\rightarrow 0\)</span>.</p>
-</div>
-<div id="solid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.2">
-<h3><span class="header-section-number">12.3.2</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>If we look at the signs of each quantity, this case is similar to the previous one:
-<span class="math display" id="eq:PTdi1">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{subl}} S &amp;&gt; 0 \quad \text{always} \\
-\Delta_{\text{subl}} \overline{V }&amp;&gt; 0 \quad \text{always} \\
+\int_i^f dG &amp;= \int_i^f dH -T \int_i^f dS \\
 \\
-\frac{dP}{dT} &amp;&gt; 0 \quad \text{always}.
+\Delta G &amp;= \Delta H -T \Delta S
 \end{aligned}
-\tag{12.13}
+\tag{9.3}
 \end{equation}\]</span></p>
-<p>However, the Trouton’s rule is not valid for the solid–gas equilibrium, and <span class="math inline">\(\frac{dP}{dT}\)</span> will be larger than for the previous case.</p>
-</div>
-<div id="solid-rightleftarrows-liquid-equilibrium" class="section level3" number="12.3.3">
-<h3><span class="header-section-number">12.3.3</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</h3>
-<p>The final curve is for the solid-liquid equilibrium, for which we have:</p>
-<p><span class="math display" id="eq:PTd1">\[\begin{equation}
-\Delta_{\text{fus}} S = \frac{\Delta_{\text{fusion}} H}{T_{\text{m}}} &gt; 0 \quad \text{always},
-\tag{12.14}
-\end{equation}\]</span></p>
-<p>since fusion is always an exothermic process, <span class="math inline">\((\Delta_{\text{fus}} H&gt;0)\)</span>. On the other side:</p>
-<p><span class="math display">\[\begin{equation}
-\Delta_{\text{fusion}} \overline{V} = \overline{V}_{\text{l}} - \overline{V}_{\text{s}} &gt; 0 \quad \text{generally}.
-\end{equation}\]</span></p>
-<p>In other words, the difference of the molar volume of the liquid and that of the solid is positive for most substances, but it might be negative (for example for <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span>). As such:</p>
-<p><span class="math display" id="eq:PTd2">\[\begin{equation}
- \frac{dP}{dT} &gt; 0 \quad \text{generally}.
-\tag{12.15}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> and a few other substances, <span class="math inline">\(\frac{dP}{dT}&lt;0\)</span>, an anomalous behavior that has crucial consequences for the existence of life on earth.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a> For this importance, this behavior is also depicted in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a> using a dashed green line.</p>
-<p>Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of <span class="math inline">\(10^{-3}\;\mathrm{L}\)</span>), <span class="math inline">\(\frac{dP}{dT}\)</span> is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are still almost vertical, regardless of the signs of their angular coefficients.</p>
-</div>
-<div id="the-triple-point-and-the-critical-point" class="section level3" number="12.3.4">
-<h3><span class="header-section-number">12.3.4</span> The triple point and the critical point</h3>
-<p>The only point in the <span class="math inline">\(PT\)</span> diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is <span class="math inline">\(f=1-3+2=0\)</span>. The fact that the triple point has zero degrees of freedom means that its coordinates, <span class="math inline">\({T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}}\)</span>, are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition—rather than measured—until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the Kelvin).<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a></p>
-<p>In addition to the triple point where the solid, liquid, and gas phases meet, a triple point may involve more than one condensed phase. Triple points are common for substances with multiple solid phases (polymorphs), involving either two solid phases and a liquid one or three solid phases. Helium is a special case that presents a triple point involving two different fluid phases, called the lambda point. Since the number of degrees of freedom cannot be negative, the Gibbs phase rule for a 1-component diagram sets the limit to how many phases can coexist to just three. Therefore, quadruple points (or higher coexistence points) are not possible for pure substances, even for polymorphs.<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a></p>
-<p>Another point with a fixed position in the <span class="math inline">\(PT\)</span> diagram is the critical point, <span class="math inline">\({T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}}\)</span>. We have already given the definition of the critical temperature in <a href="RealGases.html#def:criticalT">11.2</a>. This point represents the end of the liquid–gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. A gas whose pressure and temperature are below the critical point is called a <em>vapor</em>. A gas whose temperature is above the critical one and the pressure is below its critical one is called a <em>supercritical fluid</em>. Finally, a liquid whose pressure is above the critical point is called a <em>compressible liquid</em>.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a></p>
-</div>
-</div>
-<div id="the-clausiusclapeyron-equation" class="section level2" number="12.4">
-<h2><span class="header-section-number">12.4</span> The Clausius–Clapeyron Equation</h2>
-<p>Let’s now take a closer look at the equilibrium between a condensed phase and the gas phase. For both the vaporization and sublimation processes, Clausius showed that the Clapeyron equation can be simplified by using:</p>
-<p><span class="math display" id="eq:clacla1">\[\begin{equation}
- \Delta_{\text{vap}} S = \frac{\Delta_{\text{vap}} H}{T} \qquad \Delta \overline{V}= \overline{V}_{\mathrm{g}} -\overline{V}_{\mathrm{l}} \cong \overline{V}_{\mathrm{g}},
-\tag{12.16}
-\end{equation}\]</span></p>
-<p>resulting in:</p>
-<p><span class="math display" id="eq:clacla2">\[\begin{equation}
- \frac{dP}{dT} = \frac{ \Delta_{\text{vap}} S}{\Delta \overline{V}} \cong \frac{ \Delta_{\text{vap}} H}{T \overline{V}_{\mathrm{g}}}.
-\tag{12.17}
-\end{equation}\]</span></p>
-<p>Using the ideal gas law to replace the molar volume of the gas, we obtain:</p>
-<p><span class="math display" id="eq:clacla3">\[\begin{equation}
- \frac{dP}{dT} = \frac{P \Delta_{\text{vap}} H}{RT^2},
-\tag{12.18}
-\end{equation}\]</span></p>
-<p>which can be rearranged as:</p>
-<p><span class="math display" id="eq:clacla">\[\begin{equation}
- \frac{dP}{P} = \frac{\Delta_{\text{vap}} H}{R} \frac{dT}{T^2}.
-\tag{12.19}
-\end{equation}\]</span></p>
-<p>Eq. <a href="PhaseEquilibrium.html#eq:clacla">(12.19)</a> is known as the <strong>Clausius–Clapeyron equation</strong>, and it measures the dependence of the vapor pressure of a substance as a function of the temperature. The Clausius–Clapeyron equation can be integrated to obtain:</p>
-<p><span class="math display" id="eq:clacla4">\[\begin{equation}
+<p>which is the famous <strong>Gibbs equation</strong> for <span class="math inline">\(\Delta G\)</span>. Using Definition <a href="Potentials.html#def:helmgibbsminimum">8.2</a>, we can use <span class="math inline">\(\Delta G\)</span> to infer the spontaneity of a chemical process that happens at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> using <span class="math inline">\(\Delta G \leq 0\)</span>. If we set ourselves at standard conditions, we can calculate the standard Gibbs free energy of formation, <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, for any reaction as:</p>
+<p><span class="math display" id="eq:gibbseq2">\[\begin{equation}
 \begin{aligned}
-\int_{P_i}^{P_f} \frac{dP}{P} &amp;= \frac{\Delta_{\text{vap}} H}{R} \int_{T_i}^{T_f} \frac{dT}{T^2} \\
-\ln \frac{P_f}{P_i} &amp;=-\frac{\Delta_{\text{vap}} H}{R} \left( \frac{1}{T_f}-\frac{1}{T_i} \right).
+\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}-T \Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}\\
+\\
+&amp;= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}+ T \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
 \end{aligned}
-\tag{12.20}
+\tag{9.4}
 \end{equation}\]</span></p>
-<p>The integrated Clausius–Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from <span class="math inline">\(P^*=0.02\;\text{bar}\)</span> to <span class="math inline">\(P^*=1\;\text{bar}\)</span> when the temperature is increased from <span class="math inline">\(T=293\;\mathrm{K}\)</span> (around room temperature) to <span class="math inline">\(T=373\;\mathrm{K}\)</span> (boiling point). The integrated Clausius–Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.</p>
+<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a></p>
+<p>The following four options are possible for <span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of a chemical reaction:</p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="3%" />
+<col width="17%" />
+<col width="17%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th></th>
+<th align="center"><span class="math inline">\(\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th align="center"><span class="math inline">\(\Delta S^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th align="center">Spontaneous?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">–</td>
+<td><em>if</em></td>
+<td align="center">–</td>
+<td align="center">+</td>
+<td align="center"><em>Always</em></td>
+</tr>
+<tr class="even">
+<td align="center">+</td>
+<td><em>if</em></td>
+<td align="center">+</td>
+<td align="center">–</td>
+<td align="center"><em>Never</em></td>
+</tr>
+<tr class="odd">
+<td align="center">–/+</td>
+<td><em>if</em></td>
+<td align="center">–</td>
+<td align="center">–</td>
+<td align="center"><em>Depends on <span class="math inline">\(T\)</span>:</em> <br> <span class="math inline">\(\scriptstyle{\text{spontaneous at low } T}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">+/–</td>
+<td><em>if</em></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"><em>Depends on <span class="math inline">\(T\)</span>:</em> <br> <span class="math inline">\(\scriptstyle{\text{spontaneous at high } T}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Or, in other words:</p>
+<ul>
+<li>Exothermic reactions that increase the entropy are always spontaneous.</li>
+<li>Endothermic reactions that reduce the entropy are always non-spontaneous.</li>
+<li>For the other two cases, the spontaneity of the reaction depends on the temperature:
+<ul>
+<li>Exothermic reactions that reduce the entropy are spontaneous at low <span class="math inline">\(T\)</span>.</li>
+<li>Endothermic reactions that increase the entropy are spontaneous at high <span class="math inline">\(T\)</span>.</li>
+</ul></li>
+</ul>
+<p>A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &gt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &lt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, the entropy will also reduce.</p>
+<p>As we saw in section <a href="Potentials.html#thermpot">8.2</a>, the natural variables of the Gibbs free energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. <a href="Potentials.html#eq:dhagchem2">(8.16)</a>):</p>
+<p><span class="math display" id="eq:dgtotdiff">\[\begin{equation}
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
+\tag{9.5}
+\end{equation}\]</span></p>
+<p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in eq. <a href="GibbsFree.html#eq:dgtotdiff">(9.5)</a>, which are given in eq. <a href="Potentials.html#eq:dhagchem3">(8.17)</a>.</p>
+</div>
+<div id="temperature-dependence-of-delta-g" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></h2>
+<p><span class="math display">\[
+\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
+\]</span></p>
+<p>Let’s analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to <span class="math inline">\(-S\)</span> and the entropy is always positive, <span class="math inline">\(G\)</span> must decrease when <span class="math inline">\(T\)</span> increases at constant <span class="math inline">\(P\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and vice versa.</p>
+<p>If we replace this coefficient for <span class="math inline">\(-S\)</span> in the Gibbs equation, eq. <a href="GibbsFree.html#eq:gibbseq">(9.3)</a>, we obtain:</p>
+<p><span class="math display" id="eq:dgconsttt">\[\begin{equation}
+\Delta G = \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}},
+\tag{9.6}
+\end{equation}\]</span></p>
+<p>and since eq. <a href="GibbsFree.html#eq:dgconsttt">(9.6)</a> includes both <span class="math inline">\(\Delta G\)</span> and its partial derivative with respect to temperature <span class="math inline">\(\left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}}\)</span> we need to rearrange it to include the temperature derivative only. To do so, we can start by evaluating the partial derivative of <span class="math inline">\(\left( \frac{\Delta G}{T} \right)\)</span> using the chain rule:</p>
+<p><span class="math display" id="eq:dgconsttt1">\[\begin{equation}
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} = \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2}\Delta G,
+\tag{9.7}
+\end{equation}\]</span></p>
+<p>which, replacing <span class="math inline">\(\Delta G\)</span> from eq. <a href="GibbsFree.html#eq:dgconsttt">(9.6)</a> into eq. <a href="GibbsFree.html#eq:dgconsttt1">(9.7)</a>, becomes:</p>
+<p><span class="math display" id="eq:dgconsttt2">\[\begin{equation}
+\begin{aligned}
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[ \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}} \right] \\
+&amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}}- \frac{\Delta H}{T^2}-\frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}},
+\end{aligned}
+\tag{9.8}
+\end{equation}\]</span></p>
+<p>which simplifies to:</p>
+<p><span class="math display" id="eq:gibbshelm">\[\begin{equation}
+\begin{aligned}
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= - \frac{\Delta H}{T^2}.
+\end{aligned}
+\tag{9.9}
+\end{equation}\]</span></p>
+<p>Equation <a href="GibbsFree.html#eq:gibbshelm">(9.9)</a> is known as the <strong>Gibbs–Helmholtz equation</strong>, and is useful in its integrated form to calculate the Gibbs free energy for a chemical reaction at any temperature <span class="math inline">\(T\)</span> by knowing just the standard Gibbs free energy of formation and the standard enthalpy of formation for the individual species, which are usually reported at <span class="math inline">\(T=298\;\text{K}\)</span>. The integration is performed as follows:</p>
+<p><span class="math display" id="eq:gibbshelmIbase">\[\begin{equation}
+\begin{aligned}
+\int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\partial\left( \frac{\Delta_{\text{rxn}} G}{T} \right)}{\partial T} &amp;=  - \int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\Delta_{\text{rxn}} H}{T^2} \\ \\ \frac{\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}(T)}{T} &amp;=  \frac{\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}}{298 \;\text{K}} + \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\left( \frac{1}{T^2} -\frac{1}{(298 \;\text{K})^2} \right),
+\end{aligned}
+\tag{9.10}
+\end{equation}\]</span></p>
+<p>giving the integrated Gibbs–Helmholtz equation:</p>
+<p><span class="math display" id="eq:gibbshelmI">\[\begin{equation}
+\frac{\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}(T)}{T} =  \frac{\sum_i \nu_i \Delta_{\text{f}} G_i^{-\kern-6pt{\ominus}\kern-6pt-}}{298 \;\text{K}} + \sum_i \nu_i \Delta_{\text{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\left( \frac{1}{T^2} -\frac{1}{(298 \;\text{K})^2} \right)
+\tag{9.11}
+\end{equation}\]</span></p>
+</div>
+<div id="pressure-dependence-of-delta-g" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></h2>
+<p><span class="math display">\[
+\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
+\]</span></p>
+<p>We can now turn the attention to the second coefficient that gives how the Gibbs free energy changes when the pressure change. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From eq. <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
+<p><span class="math display" id="eq:dgconsttp">\[\begin{equation}
+dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
+\tag{9.12}
+\end{equation}\]</span></p>
+<p>which is the differential equation that we were looking for. To study changes of <span class="math inline">\(G\)</span> for macroscopic changes in <span class="math inline">\(P\)</span>, we can integrate eq. <a href="GibbsFree.html#eq:dgconsttp">(9.12)</a> between initial and final pressures, and considering an ideal gas, we obtain:</p>
+<p><span class="math display" id="eq:dgconsttpintegral1">\[\begin{equation}
+\begin{aligned}
+\int_i^f dG &amp;= \int_i^f VdP \\
+\Delta G &amp;= nRT \int_i^f \frac{dP}{P} = nRT \ln \frac{P_f}{P_i}.
+\end{aligned}
+\tag{9.13}
+\end{equation}\]</span></p>
+<p>If we take <span class="math inline">\(P_i = P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \, \text{bar}\)</span>, we can rewrite eq. <a href="GibbsFree.html#eq:dgconsttpintegral1">(9.13)</a> as:</p>
+<p><span class="math display" id="eq:dgconsttpintegral2">\[\begin{equation}
+G = G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
+\tag{9.14}
+\end{equation}\]</span></p>
+<p>which is useful to convert standard Gibbs free energies of formation at pressures different than standard pressure, using:</p>
+<p><span class="math display" id="eq:dgconsttpintegral2b">\[\begin{equation}
+\Delta_{\text{f}} G = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{\underbrace{P^{-\kern-6pt{\ominus}\kern-6pt-}}_{=1 \; \text{bar}}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln P_f
+\tag{9.15}
+\end{equation}\]</span></p>
+<p>For liquids and solids, <span class="math inline">\(V\)</span> is essentially independent of <span class="math inline">\(P\)</span> (liquids and solids are incompressible), and eq. <a href="GibbsFree.html#eq:dgconsttp">(9.12)</a> can be integrated as:</p>
+<p><span class="math display" id="eq:dgconsttpintegral3">\[\begin{equation}
+\Delta G = \int_i^f VdP = V \int_i^f dP = V \Delta P.
+\tag{9.16}
+\end{equation}\]</span></p>
+<p>The plots in Figure <a href="GibbsFree.html#fig:gdeppfig">9.1</a> show the remarkable difference in the behaviors of <span class="math inline">\(\Delta_{\text{f}} G\)</span> for a gas and for a liquid, as obtained from eqs. <a href="GibbsFree.html#eq:dgconsttpintegral1">(9.13)</a> and <a href="GibbsFree.html#eq:dgconsttpintegral3">(9.16)</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:gdeppfig"></span>
+<img src="pchem1_files/figure-html/gdeppfig-1.png" alt="Dependence of the Gibbs Free Energiy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar." width="672" />
+<p class="caption">
+Figure 9.1: Dependence of the Gibbs Free Energiy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.
+</p>
+</div>
+</div>
+<div id="composition-dependence-of-delta-g" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Composition Dependence of <span class="math inline">\(\Delta G\)</span></h2>
+<p><span class="math display">\[
+\left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
+\]</span></p>
+<p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs free energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
+<p><span class="math display" id="eq:dgconstn">\[\begin{equation}
+\int_0^G d G = \int_0^n \mu^* dn,
+\tag{9.17}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\mu^*\)</span> indicates the chemical potential of a pure substance, which is independent on the number of moles by definition. As such, eq. <a href="GibbsFree.html#eq:dgconstn">(9.17)</a> becomes:</p>
+<p><span class="math display" id="eq:dgconstn1">\[\begin{equation}
+\int_0^G d G = \mu^* \int_0^n dn \quad \rightarrow \quad G = \mu^* n \quad \rightarrow \quad \mu^* = \frac{G}{n},
+\tag{9.18}
+\end{equation}\]</span></p>
+<p>which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs free energy.</p>
+<p>We can start from eq. <a href="GibbsFree.html#eq:dgconsttpintegral2">(9.14)</a> and write for a pure substance that is brought from <span class="math inline">\(P_i=P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> to <span class="math inline">\(P_f=P\)</span> at constant <span class="math inline">\(T\)</span>:</p>
+<p><span class="math display" id="eq:dgconstn2">\[\begin{equation}
+G - G^{-\kern-6pt{\ominus}\kern-6pt-}= nRT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
+\tag{9.19}
+\end{equation}\]</span></p>
+<p>dividing both sides by <span class="math inline">\(n\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:dgconstn3">\[\begin{equation}
+\frac{G}{n} - \frac{G^{-\kern-6pt{\ominus}\kern-6pt-}}{n} = RT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
+\tag{9.20}
+\end{equation}\]</span></p>
+<p>which, for a pure substance at <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\)</span>, becomes:</p>
+<p><span class="math display" id="eq:dgconstn4">\[\begin{equation}
+\mu^* - \mu^{-\kern-6pt{\ominus}\kern-6pt-}=      RT \ln P.
+\tag{9.21}
+\end{equation}\]</span></p>
+<p>Notice that, while we use the pressure of the gas inside the logarithm in eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a>, the quantity is formally divided by the standard pressure <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\)</span>, and therefore it is a dimensionless quantity, as it should be. For simplicity of notation, however, we will omit the division by <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> in the remaining of this textbook, especially wherever it does not create confusion.
+Let’s now consider a mixture of ideal gases, and let’s try to find out whether the chemical potential of a pure gas inside the mixture, <span class="math inline">\(\mu_i^{\text{mixture}}\)</span>, is the same as its chemical potential outside the mixture, <span class="math inline">\(\mu^*\)</span>.
+To do so, we can use eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a> and replace the pressure <span class="math inline">\(P\)</span> with the partial pressure <span class="math inline">\(P_i\)</span>:</p>
+<p><span class="math display" id="eq:dgconstn5">\[\begin{equation}
+\mu_i^{\text{mixture}} = \mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P_i,
+\tag{9.22}
+\end{equation}\]</span></p>
+<p>where the partial pressure <span class="math inline">\(P_i\)</span> can be obtained from the simple relation that is known as <strong>Dalton’s Law</strong>:</p>
+<p><span class="math display" id="eq:daltonlaw">\[\begin{equation}
+P_i = y_i P,
+\tag{9.23}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(y_i\)</span> being the concentration of gas <span class="math inline">\(i\)</span> measured as a mole fraction in the gas phase <span class="math inline">\(y_i=\frac{n_i}{n_{\text{TOT}}} &lt; 1\)</span>. Replacing eq. <a href="GibbsFree.html#eq:daltonlaw">(9.23)</a> into eq. <a href="GibbsFree.html#eq:dgconstn5">(9.22)</a>, we obtain:</p>
+<p><span class="math display" id="eq:dgconstn6">\[\begin{equation}
+\begin{aligned}
+\mu_i^{\text{mixture}} &amp;= \mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln (y_i P) \\
+ &amp;= \underbrace{\mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P}_{\mu_i^*} + RT \ln y_i,
+\end{aligned}
+\tag{9.24}
+\end{equation}\]</span></p>
+<p>which then reduces to the following equation:</p>
+<p><span class="math display" id="eq:dgconstn7">\[\begin{equation}
+\mu_i^{\text{mixture}} = \mu_i^* + RT \ln y_i.
+\tag{9.25}
+\end{equation}\]</span></p>
+<p>Analyzing eq. <a href="GibbsFree.html#eq:dgconstn7">(9.25)</a>, we can immediately see that, since <span class="math inline">\(y_i &lt; 1\)</span>:</p>
+<p><span class="math display" id="eq:dgconstn8">\[\begin{equation}
+\mu_i^{\text{mixture}} &lt; \mu_i^*,
+\tag{9.26}
+\end{equation}\]</span></p>
+<p>or, in other words, the chemical potential of a substance in the mixture is always lower than the chemical potential of the pure substance. If we consider a process where we start from two separate pure ideal gases and finish with a mixture of the two, we can calculate the change in Gibbs free energy due to the mixing process with:</p>
+<p><span class="math display" id="eq:dgconstn9">\[\begin{equation}
+\Delta_{\text{mixing}} G = \sum n_i \left( \mu_i^{\text{mixture}} - \mu_i^* \right)  &lt; 0,
+\tag{9.27}
+\end{equation}\]</span></p>
+<p>or, in other words, the process is spontaneous under all circumstances, and pure ideal gases will always mix.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="49">
-<li id="fn49"><p>Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.<a href="PhaseEquilibrium.html#fnref49" class="footnote-back">↩︎</a></p></li>
-<li id="fn50"><p>Think, for example, at the integral <span class="math inline">\(\int SdT\)</span>, for which we can assume <span class="math inline">\(S\)</span> independent of temperature to obtain <span class="math inline">\(S\Delta T\)</span>. In practice, the entropy increases slightly with the temperature. Therefore the curves in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a> are slightly concave downwards (remember that they are obtained from values of <span class="math inline">\(-S\)</span>, so if <span class="math inline">\(S\)</span> increase with <span class="math inline">\(T\)</span>, the curves bend downwards.)<a href="PhaseEquilibrium.html#fnref50" class="footnote-back">↩︎</a></p></li>
-<li id="fn51"><p>Despite the effect being minimal, it is one of the contributing causes to the fact that we can skate on ice, but we can’t on stone. If we increase our pressure on ice by reducing our footprints’ surface area using thin skates, ice will slightly melt under our own weight, creating a thin liquid film on which we can skate because of the reduced friction.<a href="PhaseEquilibrium.html#fnref51" class="footnote-back">↩︎</a></p></li>
-<li id="fn52"><p>For a 1-component system <span class="math inline">\(c-1=1-1=0\)</span>, and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence <span class="math inline">\(c-1=2-1=1\)</span> additional variable will be required to describe it–the mole fraction.<a href="PhaseEquilibrium.html#fnref52" class="footnote-back">↩︎</a></p></li>
-<li id="fn53"><p>As is well explained by <a href="https://en.wikipedia.org/wiki/Properties_of_water#Density_of_water_and_ice">Wikipedia</a>: “The unusual density curve and lower density of ice than of water is vital to life—if water were most dense at the freezing point, then in winter the very cold water at the surface of lakes and other water bodies would sink, lakes could freeze from the bottom up, and all life in them would be killed. Furthermore, given that water is a good thermal insulator (due to its heat capacity), some frozen lakes might not completely thaw in summer.[34] The layer of ice that floats on top insulates the water below. Water at about 4 °C (39 °F) also sinks to the bottom, thus keeping the temperature of the water at the bottom constant.”<a href="PhaseEquilibrium.html#fnref53" class="footnote-back">↩︎</a></p></li>
-<li id="fn54"><p>For more information on the 2019 redefinition of the SI units, see <a href="https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units">this Wikipedia page</a>.<a href="PhaseEquilibrium.html#fnref54" class="footnote-back">↩︎</a></p></li>
-<li id="fn55"><p>Notice that quadruple points are possible for 2-component diagrams.<a href="PhaseEquilibrium.html#fnref55" class="footnote-back">↩︎</a></p></li>
-<li id="fn56"><p>Notice that the temperature of a liquid must be below the critical point, otherwise it is no longer a liquid but rather a supercritical fluid.<a href="PhaseEquilibrium.html#fnref56" class="footnote-back">↩︎</a></p></li>
+<ol start="34">
+<li id="fn34"><p>The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.<a href="GibbsFree.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn35"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book <a href="appendix.html#appendix">16</a>. For cases where <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="GibbsFree.html#fnref35" class="footnote-back">↩︎</a></p></li>
+<li id="fn36"><p>For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.<a href="GibbsFree.html#fnref36" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -485,8 +549,8 @@ Figure 12.3: The Pressure–Temperature Phase Diagram.
           </div>
         </div>
       </div>
-<a href="RealGases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="MCPhaseDiagrams.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Potentials.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ChemicalEquilibrium.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -517,7 +581,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/12_PhaseEquilibrium.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/09_Gibbs.Rmd",
 "text": "Edit"
 },
 "history": {

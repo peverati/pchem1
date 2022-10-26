@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1</title>
+  <title>1 Systems and Variables | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="1 Systems and Variables | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="1 Systems and Variables | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-10-26" />
+<meta name="date" content="2021-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="RealGases.html"/>
-<link rel="next" href="MCPhaseDiagrams.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="ZerothLaw.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -280,204 +280,144 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="PhaseEquilibrium" class="section level1" number="12">
-<h1><span class="header-section-number">12</span> Phase Equilibrium</h1>
-<div id="phase-stability" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Phase Stability</h2>
-<p>We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a> For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of “phase” is necessary to discuss several concepts in this chapter and the following ones:</p>
+<div id="SystemVariables" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Systems and Variables</h1>
+<div id="thermodynamic-systems" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Thermodynamic Systems</h2>
+A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure <a href="SystemVariables.html#fig:Fig1c1">1.1</a> below.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<div class="figure" style="text-align: center"><span id="fig:Fig1c1"></span>
+<img src="img/OEP_Figures.001.jpeg" alt="Examples of Thermodynamic Systems." width="70%" />
+<p class="caption">
+Figure 1.1: Examples of Thermodynamic Systems.
+</p>
+</div>
+<p>In the first case, a liquid is contained in a typical Erlenmeyer flask. The boundaries of the system are the glass walls of the beaker. The second system is represented by the gas contained in a balloon. The boundary is a physical barrier also in this case, being the plastic of the balloon. The third case is that of a thunder cloud. The boundary is not a well-defined physical barrier, but rather some condition of pressure and chemical composition at the interface between the cloud and the atmosphere. Finally, the fourth case is the case of an open flame. In this case, the boundary is again non-physical, and possibly even harder to define than for a cloud. For example, we can choose to define the flame based on some temperature threshold, color criterion, or even some chemical one. Despite the lack of physical boundaries, the cloud and the flame—as portions of space containing matter—can be defined as a thermodynamic system.</p>
+<p>A system can exchange exclusively mass, exclusively energy, or both mass and energy with its surroundings. Depending on the boundaries’ ability to transfer these quantities, a system is defined as open, closed, or isolated. An open system exchanges both mass and energy. A closed system exchanges only energy, but not mass. Finally, an isolated system does not exchange mass nor energy.</p>
+<p>When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let’s consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of –100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be –100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and –100 to the ingoing one, and the overall total would have stayed the same: +100–100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Type of System</strong></th>
+<th align="center"><strong>Mass</strong></th>
+<th align="center"><strong>Energy</strong> <br> (either heat or work)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Open</strong></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+</tr>
+<tr class="even">
+<td><strong>Closed</strong></td>
+<td align="center">N</td>
+<td align="center">Y</td>
+</tr>
+<tr class="odd">
+<td><strong>Isolated</strong></td>
+<td align="center">N</td>
+<td align="center">N</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Here is another example. Let’s consider a system that is composed of your body. When you exercise, you lose mass in the form of water (sweat) and CO<sub>2</sub> (from respiration). This mass loss can be easily measured by stepping on a scale before and after exercise. The number you observe on the scale will go down. Hence you have lost weight. After exercise, you will reintegrate the lost mass by drinking and eating. If you have reinstated the same amount you have lost, your weight will be the same as before the exercise (no weight loss). Nevertheless, which label do you attach to the amounts that you have lost and gained? Let’s say that you are running a 5 km race without drinking nor eating, and you measure your weight dropping 2 kg after the race. After the race, you drink 1.5 kg of water and eat a 500 g energy bar. Overall you did not lose any weight, and it would seem reasonable to label the 2 kg that you’ve lost as negative (–2) and the 1.5 kg of water that you drank and the 500 g bar that you ate as positive (+1.5 +0.5 = +2). But is it the only way? After all, you didn’t gain nor lose any weight, so why not calling the 2 kg due to exercise +2 and the 2 that you’ve ingested as –2? It might seem silly, but mathematically it would not make any difference, the total would still be zero. Now, let’s consider energy instead of mass. To run the 5km race, you have spent 500 kcal, which then you reintegrate precisely by eating the energy bar. Which sign would you put in front of the kilocalories that you “burned” during the race? In principle, you’ve lost them, so if you want to be consistent, you should use a negative sign. But if you think about it, you’ve put quite an effort to “lose” those kilocalories, so it might not feel bad to assign them a positive sign instead. After all, it’s perfectly OK to say, “I’ve done a 500 kcal run today”, while it might sound quite awkward to say, “I’ve done a –500 kcal run today.” Our previous exercise with mass demonstrates that it doesn’t really matter which sign you put in front of the quantities. As long as you are consistent throughout the process, the signs will cancel out. If you’ve done a +500 kcal run, you’ve eaten a bar for –500 kcal, resulting in a total zero loss/gain. Alternatively, if you’ve done a –500 kcal run, you would have eaten a +500 kcal bar, for a total of again zero loss/gain.</p>
+</blockquote>
+<p>These simple examples demonstrate that the sign that we assign to quantities that flow through a boundary is arbitrary (i.e., we can define it any way we want, as long as we are always consistent with ourselves). There is no best way to assign those signs. If you ask two different people, you might obtain two different answers. But we are scientists, and we must make sure to be rigorous. For this reason, chemists have established a convention for the signs that we will follow throughout this course. If we are consistent in following the convention, we are guaranteed to never make any mistake with the signs.</p>
 <blockquote>
 
 <div class="definition">
-<p><span id="def:phasedef" class="definition"><strong>Definition 12.1  </strong></span><em>Phase:</em> A region of the system with homogeneous chemical composition and physical state.</p>
+<p><span id="def:chemistryconv" class="definition"><strong>Definition 1.1  </strong></span><em>The chemistry convention of the sign is system-centric:</em><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<ul>
+<li><em>If something (energy or mass) goes <strong>into</strong> the system it has a <strong>positive</strong> sign (the system is gaining)</em></li>
+<li><em>If something (energy or mass) goes <strong>out of</strong> the system it has a <strong>negative</strong> sign (the system is losing)</em></li>
+</ul>
 </div>
 </blockquote>
-<p>Let’s now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:</p>
-<p><span class="math display" id="eq:muequal1">\[\begin{equation}
-\begin{aligned}
-d\mu &amp;= \left( \frac{\partial \mu}{\partial T} \right)_P dT + \left( \frac{\partial \mu}{\partial P} \right)_T dP \\
-d\mu &amp;= -SdT+\overline{V}dP,
-\end{aligned}
-\tag{12.1}
+<p>If you want a trick to remember the convention, use the weight loss/gain during the exercise example above. You are the system, if you lose weight, the kilograms will be negative (–2 kg), while if you gain weight, they will be positive (+2 kg). Similarly, if you eat an energy bar, you are the system, and you will have increased your energy by +500 kcal (positive). In contrast, if you burned energy during exercise, you are the system, and you will have lost energy, hence –500 kcal (negative). If the system is a balloon filled with gas, and the balloon is losing mass, you are the balloon, and you are losing weight; hence the mass will be negative. If the balloon is absorbing heat (likely increasing its temperature and increasing its volume), you are the system, and you are gaining heat; hence heat will be positive.</p>
+</div>
+<div id="thermodynamic-variables" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Thermodynamic Variables</h2>
+<p>The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don’t be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the “relevant variables” of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the “relevant variables” are called natural variables.</p>
+<p>What are the “relevant variables” of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:</p>
+<p><span class="math display" id="eq:idealgaslaworiginal">\[\begin{equation}
+  PV=nRT       
+  \tag{1.1}
 \end{equation}\]</span></p>
-<p>to write:</p>
-<p><span class="math display" id="eq:muequal2">\[\begin{equation}
-\left( \frac{\partial \mu}{\partial T} \right)_P=-S \qquad \left( \frac{\partial \mu}{\partial P} \right)_T =\overline{V}.
-\tag{12.2}
+<p>Therefore, the natural variables for an ideal gas are the pressure P, the volume V, the number of moles n, and the temperature T, with R being the ideal gas constant. Recalling from the general chemistry courses, R is a universal dimensional constant which has the values of R = 8.31 kJ/mol in SI units.<br />
+We will use the ideal gas equation and its variables as an example to discuss variables and functions in this chapter. We will analyze more complicated cases in the next chapters.
+Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:</p>
+<ul>
+<li><strong>Physical variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent of the chemical composition of the system.</li>
+<li><strong>Chemical variables</strong> (<span class="math inline">\(n\)</span> in the ideal gas law): dependent on the chemical composition of the system.</li>
+</ul>
+<p>Another useful classification is:</p>
+<ul>
+<li><strong>Intensive variables</strong> (<span class="math inline">\(P\)</span>, <span class="math inline">\(T\)</span> in the ideal gas law): independent of the physical size (extension) of the system.</li>
+<li><strong>Extensive variables</strong> (<span class="math inline">\(V\)</span>, <span class="math inline">\(n\)</span> in the ideal gas law): dependent on the physical size (extension) of the system.</li>
+</ul>
+<p>When we deal with thermodynamic systems, it is more convenient to work with intensive variables. Luckily, it is relatively easy to convert extensive variables into intensive ones by just taking the ratio between the two of them. For an ideal gas, by taking the ratio between V and n, we obtained the intensive variable called molar volume:</p>
+<p><span class="math display" id="eq:Vmdef">\[\begin{equation}
+  \overline{V}=\frac{V}{n}.   
+  \tag{1.2}
 \end{equation}\]</span></p>
-<p>We can use these definitions to study the dependence of the chemical potential with respect to changes in pressure and temperature. If we plot <span class="math inline">\(\mu\)</span> as a function of <span class="math inline">\(T\)</span> using the first coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>, we obtain the diagram in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>. The diagram presents three curves, each corresponding to one of the three most common states of matter – solid, liquid, and gas. As we saw in several previous chapters, the entropy of a phase is almost constant with respect to temperature,<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a> and therefore the three curves are essentially straight, with negative angular coefficients <span class="math inline">\(-S\)</span>. This also explains why the solid phase has a basically flat line since, according to the third law, the entropy of a perfect solid is zero and close to zero if the solid is not perfect. The difference between the three lines’ angular coefficients is explained by the fact that each of these states has a different value of entropy:</p>
-<p><span class="math display" id="eq:muequal3">\[\begin{equation}
-\left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
-\tag{12.3}
+<p>We can then recast eq. <a href="SystemVariables.html#eq:idealgaslaworiginal">(1.1)</a> as:</p>
+<p><span class="math display" id="eq:idealgaslaw">\[\begin{equation}
+  P\overline{V}=RT,
+  \tag{1.3}
 \end{equation}\]</span></p>
-<p>and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (<span class="math inline">\(S_{\text{g}} \gg S_{\text{l}}&gt;S_{\text{s}}\)</span>), we obtain three lines with different angular coefficients that intersect each other. At each temperature, the phase with the lowest chemical potential will be the most stable (see red segments in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>). At each intersection between two lines, the two phases have the same chemical potential, representing the temperature at which they coexist. This temperature is the temperature at which the phase change happens. Recalling from general chemistry, at the junction between the solid and the liquid lines, the fusion (fus) process occurs, and the corresponding temperature is called the melting point <span class="math inline">\(T_{\text{m}}\)</span>. At the junction between the liquid and the gas lines, the vaporization (vap) process happens, and the corresponding temperature is called the boiling point <span class="math inline">\(T_{\text{b}}\)</span>. Depending on the substance and the pressure at which the process happens, the solid line might intersect the gas line before the liquid line. When that occurs, the liquid phase is never observed, and only the sublimation (subl) process happens at the sublimation point <span class="math inline">\(T_{\text{subl}}\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase1"></span>
-<img src="img/OEP_Figures.016.jpeg" alt="Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure." width="60%" />
+<p>which is the preferred equation that we will use for the remainder of this course.
+The ideal gas equation connects the 3 variables pressure, molar volume, and temperature, reducing the number of independent variables to just 2. In other words, once 2 of the 3 variables are known, the other one can be easily obtained using these simple relations:</p>
+<p><span class="math display" id="eq:PTVm">\[\begin{equation}
+  P(T,\overline{V})=\frac{RT}{\overline{V}},
+  \tag{1.4}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:VmTP">\[\begin{equation}
+  \overline{V}(T,P)=\frac{RT}{P},
+  \tag{1.5}
+ \end{equation}\]</span></p>
+<p><span class="math display" id="eq:TPVm">\[\begin{equation}
+  T(P,\overline{V})=\frac{P\overline{V}}{R}.
+  \tag{1.6}
+\end{equation}\]</span></p>
+<p>These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. <a href="SystemVariables.html#eq:PTVm">(1.4)</a> defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, eq. <a href="SystemVariables.html#eq:VmTP">(1.5)</a> defines the “molar volume” as a function of temperature and pressure, and eq. <a href="SystemVariables.html#eq:TPVm">(1.6)</a> defines the “temperature” as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure <span class="math inline">\(P(T, \overline{V})\)</span>:</p>
+<p><span class="math display" id="eq:totaldifferentialP">\[\begin{equation}
+  dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
+  \tag{1.7}
+\end{equation}\]</span></p>
+<p>Recalling Schwartz’s theorem, the mixed partial second derivatives that can be obtained from eq. <a href="SystemVariables.html#eq:totaldifferentialP">(1.7)</a> are the same:</p>
+<p><span class="math display" id="eq:schwartzP">\[\begin{equation}
+  \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
+  \tag{1.8}
+\end{equation}\]</span></p>
+<p>Which can be easily verified considering that:</p>
+<p><span class="math display" id="eq:secondderPA">\[\begin{equation}
+  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2} 
+  \tag{1.9}
+\end{equation}\]</span></p>
+<p>and</p>
+<p><span class="math display" id="eq:secondderPB">\[\begin{equation}
+  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2} 
+  \tag{1.10}
+\end{equation}\]</span></p>
+<p>While for the ideal gas law, all the variables are “well-behaved” and always satisfy Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold. Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. Thus, these functions are called path functions; that is, they depend on the path rather than the state. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we cannot define exact differentials <span class="math inline">\(dQ\)</span> and <span class="math inline">\(dW\)</span>, and we must introduce a new notation to define their “inexact differentials” <span class="math inline">\(đ Q\)</span> and <span class="math inline">\(đ W\)</span>.</p>
+<blockquote>
+<p>We will return to exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs. car vs. train vs. boat vs. …). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure <a href="SystemVariables.html#fig:Fig2c1">1.2</a>.</p>
+</blockquote>
+<div class="figure" style="text-align: center"><span id="fig:Fig2c1"></span>
+<img src="img/OEP_Figures.002.jpeg" alt="State Functions vs. Path Functions." width="60%" />
 <p class="caption">
-Figure 12.1: Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure.
+Figure 1.2: State Functions vs. Path Functions.
 </p>
 </div>
-<p>The effects of pressure on this diagram can be studied using the second coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>. For the majority of substances, <span class="math inline">\(\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} &gt; \overline{V}_{\text{s}}\)</span>, hence the curves will shift to lower values when the pressure is reduced, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a>. Notice also that since <span class="math inline">\(\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}\)</span>, the shifts for both the solid and liquid lines is much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point.
-Water is a noticeable exception to these trend because <span class="math inline">\(\overline{V}_{\mathrm{H}_2\mathrm{O,l}} &lt; \overline{V}_{\text{ice}}\)</span>. This explains the experimental observation that increasing the pressure on ice causes the ice to melt<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a></p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase2"></span>
-<img src="img/OEP_Figures.017.jpeg" alt="Effect of Pressure on the Chemical Potential Diagram." width="60%" />
-<p class="caption">
-Figure 12.2: Effect of Pressure on the Chemical Potential Diagram.
-</p>
-</div>
-<p>Considering the intersections between two lines, two phases are in equilibrium with each other at each of these points. Therefore their chemical potentials must be equal:</p>
-<p>For two or more phases to be in equilibrium, their chemical potential must be equal:</p>
-<p><span class="math display" id="eq:muequal">\[\begin{equation}
-\mu_{\alpha} = \mu_{\beta}.
-\tag{12.4}
-\end{equation}\]</span></p>
-<p>If we now change either the temperature or the pressure, the location of the intersection will be shifted (see again Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a> and the discussion above). For infinitesimal changes in variables, the new location will be:</p>
-<p><span class="math display" id="eq:muequalA">\[\begin{equation}
-\mu_{\alpha} + d\mu_{\alpha}= \mu_{\beta}+d\mu_{\beta},
-\tag{12.5}
-\end{equation}\]</span></p>
-<p>which using eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>, simply becomes:</p>
-<p><span class="math display" id="eq:muequalB">\[\begin{equation}
-d\mu_{\alpha}= d\mu_{\beta}.
-\tag{12.6}
-\end{equation}\]</span></p>
-<p>Replacing the differential with the definition of chemical potential in eq. <a href="PhaseEquilibrium.html#eq:muequal1">(12.1)</a>, we obtain:</p>
-<p><span class="math display" id="eq:muequalC">\[\begin{equation}
-\begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &amp;= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &amp;= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
-\end{aligned}
-\tag{12.7}
-\end{equation}\]</span></p>
-<p>which can be rearranged into:</p>
-<p><span class="math display" id="eq:ClapeyronEq">\[\begin{equation}
-\frac{dP}{dT}=\frac{\Delta S}{\Delta \overline{V}}.
-\tag{12.8}
-\end{equation}\]</span></p>
-<p>This equation is known as the <strong>Clapeyron equation</strong>, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a> on a <span class="math inline">\(PT\)</span> phase diagram for common substances results in three lines representing the equilibrium between two different phases. These diagrams are useful to study the relationship between the phases of a substance.</p>
-</div>
-<div id="gibbs-phase-rule" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Gibbs Phase Rule</h2>
-<p>In chapter <a href="SystemVariables.html#SystemVariables">1</a>, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables <span class="math inline">\((3: P,\overline{V},T)\)</span>, and reduce it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of <span class="math inline">\(c\)</span> components (chemical substances) and <span class="math inline">\(p\)</span> phases, the number of independent variables, <span class="math inline">\(f\)</span>, is given by the Gibbs phase rule:</p>
-<p><span class="math display" id="eq:Gibbsrule">\[\begin{equation}
-f=c-p+2.
-\tag{12.9}
-\end{equation}\]</span></p>
-<p>The Gibbs phase rule derives from the fact that different phases are in equilibrium with each other at some conditions, resulting in the reduction of the number of independent variables at those conditions. More rigorously, when two phases are in thermodynamic equilibrium, their chemical potentials are equal (see eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>). For each equality, the number of independent variables—also called the number of <em>degrees of freedom</em>—is reduced by one. For example, the chemical potentials of the liquid and its vapor depend on both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. But when these phases are in equilibrium with each other, their chemical potentials must be equal. If either the pressure or the temperature is fixed, the other variable will be uniquely determined by the equality relation. In other terms, when a liquid is in equilibrium with its vapor at a given pressure, the temperature is determined by the fact that the chemical potentials of the two phases is the same, and is denoted as the boiling temperature <span class="math inline">\(T_{\text{b}}\)</span>. Similarly, at a given temperature, the pressure of the vapor is uniquely determined by the same equality relation and is denoted as the vapor pressure, <span class="math inline">\(P^*\)</span>.</p>
-<p>The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by <span class="math inline">\((c-1)\)</span> variables.<a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> The number of constraints is determined by the number of possible equilibrium relations, which is <span class="math inline">\(c(p-1)\)</span> since the chemical potential of each component must be equal in all phases. The number of degrees of freedom <span class="math inline">\(f\)</span> is then given by <span class="math inline">\(f=(c-1)p+2-c(p-1)\)</span> <span class="math inline">\(=c-p+2\)</span>, which is the Gibbs phase rule, as in eq. <a href="PhaseEquilibrium.html#eq:Gibbsrule">(12.9)</a>.</p>
-</div>
-<div id="pt-phase-diagrams" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> <span class="math inline">\(PT\)</span> Phase Diagrams</h2>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase3"></span>
-<img src="img/OEP_Figures.018.jpeg" alt="The Pressure–Temperature Phase Diagram." width="60%" />
-<p class="caption">
-Figure 12.3: The Pressure–Temperature Phase Diagram.
-</p>
-</div>
-<p>Let’s now discuss the pressure–temperature diagram of a typical substance, as reported in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a>. The interpretation of each line is as follows:</p>
-<div id="liquid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>For this equilibrium we can use Trouton’s rule, eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>, and write:
-<span class="math display" id="eq:PTdia1">\[\begin{equation}
-\Delta_{\text{vap}} S = S_{\text{g}}-S_{\text{l}} \cong 88 \; \frac{\text{kJ}}{\text{mol}} &gt; 0\quad \text{always},
-\tag{12.10}
-\end{equation}\]</span></p>
-<p>where the entropy of vaporization is always positive, even for cases where the Trouton’s rule is violated. The difference in molar volumes is easily obtained, since the volume of the gas is always much greater than the volume of the liquid:</p>
-<p><span class="math display" id="eq:PTdia2">\[\begin{equation}
-\overline{V}_{\text{g}} - \overline{V}_{\text{l}} \cong \overline{V}_{\text{g}} = 22.4\; \frac{\text{L}}{\text{mol}} &gt;0\quad \text{always}.
-\tag{12.11}
-\end{equation}\]</span></p>
-<p>Replacing these values in the Clapeyron equation, we obtain:</p>
-<p><span class="math display" id="eq:PTdia3">\[\begin{equation}
-\frac{dP}{dT}=\frac{88}{22.4}\left( \frac{0.0831}{8.31} \right) = 0.004\;\text{bar} &gt; 0 \quad \text{always},
-\tag{12.12}
-\end{equation}\]</span></p>
-<p>which is always positive,regardless of violations to the Trouton’s rule. Notice how small this value is, meaning that the liquid–gas equilibrium curve is mostly flat as <span class="math inline">\(T\rightarrow 0\)</span>.</p>
-</div>
-<div id="solid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.2">
-<h3><span class="header-section-number">12.3.2</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>If we look at the signs of each quantity, this case is similar to the previous one:
-<span class="math display" id="eq:PTdi1">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{subl}} S &amp;&gt; 0 \quad \text{always} \\
-\Delta_{\text{subl}} \overline{V }&amp;&gt; 0 \quad \text{always} \\
-\\
-\frac{dP}{dT} &amp;&gt; 0 \quad \text{always}.
-\end{aligned}
-\tag{12.13}
-\end{equation}\]</span></p>
-<p>However, the Trouton’s rule is not valid for the solid–gas equilibrium, and <span class="math inline">\(\frac{dP}{dT}\)</span> will be larger than for the previous case.</p>
-</div>
-<div id="solid-rightleftarrows-liquid-equilibrium" class="section level3" number="12.3.3">
-<h3><span class="header-section-number">12.3.3</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</h3>
-<p>The final curve is for the solid-liquid equilibrium, for which we have:</p>
-<p><span class="math display" id="eq:PTd1">\[\begin{equation}
-\Delta_{\text{fus}} S = \frac{\Delta_{\text{fusion}} H}{T_{\text{m}}} &gt; 0 \quad \text{always},
-\tag{12.14}
-\end{equation}\]</span></p>
-<p>since fusion is always an exothermic process, <span class="math inline">\((\Delta_{\text{fus}} H&gt;0)\)</span>. On the other side:</p>
-<p><span class="math display">\[\begin{equation}
-\Delta_{\text{fusion}} \overline{V} = \overline{V}_{\text{l}} - \overline{V}_{\text{s}} &gt; 0 \quad \text{generally}.
-\end{equation}\]</span></p>
-<p>In other words, the difference of the molar volume of the liquid and that of the solid is positive for most substances, but it might be negative (for example for <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span>). As such:</p>
-<p><span class="math display" id="eq:PTd2">\[\begin{equation}
- \frac{dP}{dT} &gt; 0 \quad \text{generally}.
-\tag{12.15}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> and a few other substances, <span class="math inline">\(\frac{dP}{dT}&lt;0\)</span>, an anomalous behavior that has crucial consequences for the existence of life on earth.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a> For this importance, this behavior is also depicted in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a> using a dashed green line.</p>
-<p>Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of <span class="math inline">\(10^{-3}\;\mathrm{L}\)</span>), <span class="math inline">\(\frac{dP}{dT}\)</span> is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are still almost vertical, regardless of the signs of their angular coefficients.</p>
-</div>
-<div id="the-triple-point-and-the-critical-point" class="section level3" number="12.3.4">
-<h3><span class="header-section-number">12.3.4</span> The triple point and the critical point</h3>
-<p>The only point in the <span class="math inline">\(PT\)</span> diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is <span class="math inline">\(f=1-3+2=0\)</span>. The fact that the triple point has zero degrees of freedom means that its coordinates, <span class="math inline">\({T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}}\)</span>, are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition—rather than measured—until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the Kelvin).<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a></p>
-<p>In addition to the triple point where the solid, liquid, and gas phases meet, a triple point may involve more than one condensed phase. Triple points are common for substances with multiple solid phases (polymorphs), involving either two solid phases and a liquid one or three solid phases. Helium is a special case that presents a triple point involving two different fluid phases, called the lambda point. Since the number of degrees of freedom cannot be negative, the Gibbs phase rule for a 1-component diagram sets the limit to how many phases can coexist to just three. Therefore, quadruple points (or higher coexistence points) are not possible for pure substances, even for polymorphs.<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a></p>
-<p>Another point with a fixed position in the <span class="math inline">\(PT\)</span> diagram is the critical point, <span class="math inline">\({T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}}\)</span>. We have already given the definition of the critical temperature in <a href="RealGases.html#def:criticalT">11.2</a>. This point represents the end of the liquid–gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. A gas whose pressure and temperature are below the critical point is called a <em>vapor</em>. A gas whose temperature is above the critical one and the pressure is below its critical one is called a <em>supercritical fluid</em>. Finally, a liquid whose pressure is above the critical point is called a <em>compressible liquid</em>.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a></p>
-</div>
-</div>
-<div id="the-clausiusclapeyron-equation" class="section level2" number="12.4">
-<h2><span class="header-section-number">12.4</span> The Clausius–Clapeyron Equation</h2>
-<p>Let’s now take a closer look at the equilibrium between a condensed phase and the gas phase. For both the vaporization and sublimation processes, Clausius showed that the Clapeyron equation can be simplified by using:</p>
-<p><span class="math display" id="eq:clacla1">\[\begin{equation}
- \Delta_{\text{vap}} S = \frac{\Delta_{\text{vap}} H}{T} \qquad \Delta \overline{V}= \overline{V}_{\mathrm{g}} -\overline{V}_{\mathrm{l}} \cong \overline{V}_{\mathrm{g}},
-\tag{12.16}
-\end{equation}\]</span></p>
-<p>resulting in:</p>
-<p><span class="math display" id="eq:clacla2">\[\begin{equation}
- \frac{dP}{dT} = \frac{ \Delta_{\text{vap}} S}{\Delta \overline{V}} \cong \frac{ \Delta_{\text{vap}} H}{T \overline{V}_{\mathrm{g}}}.
-\tag{12.17}
-\end{equation}\]</span></p>
-<p>Using the ideal gas law to replace the molar volume of the gas, we obtain:</p>
-<p><span class="math display" id="eq:clacla3">\[\begin{equation}
- \frac{dP}{dT} = \frac{P \Delta_{\text{vap}} H}{RT^2},
-\tag{12.18}
-\end{equation}\]</span></p>
-<p>which can be rearranged as:</p>
-<p><span class="math display" id="eq:clacla">\[\begin{equation}
- \frac{dP}{P} = \frac{\Delta_{\text{vap}} H}{R} \frac{dT}{T^2}.
-\tag{12.19}
-\end{equation}\]</span></p>
-<p>Eq. <a href="PhaseEquilibrium.html#eq:clacla">(12.19)</a> is known as the <strong>Clausius–Clapeyron equation</strong>, and it measures the dependence of the vapor pressure of a substance as a function of the temperature. The Clausius–Clapeyron equation can be integrated to obtain:</p>
-<p><span class="math display" id="eq:clacla4">\[\begin{equation}
-\begin{aligned}
-\int_{P_i}^{P_f} \frac{dP}{P} &amp;= \frac{\Delta_{\text{vap}} H}{R} \int_{T_i}^{T_f} \frac{dT}{T^2} \\
-\ln \frac{P_f}{P_i} &amp;=-\frac{\Delta_{\text{vap}} H}{R} \left( \frac{1}{T_f}-\frac{1}{T_i} \right).
-\end{aligned}
-\tag{12.20}
-\end{equation}\]</span></p>
-<p>The integrated Clausius–Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from <span class="math inline">\(P^*=0.02\;\text{bar}\)</span> to <span class="math inline">\(P^*=1\;\text{bar}\)</span> when the temperature is increased from <span class="math inline">\(T=293\;\mathrm{K}\)</span> (around room temperature) to <span class="math inline">\(T=373\;\mathrm{K}\)</span> (boiling point). The integrated Clausius–Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="49">
-<li id="fn49"><p>Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.<a href="PhaseEquilibrium.html#fnref49" class="footnote-back">↩︎</a></p></li>
-<li id="fn50"><p>Think, for example, at the integral <span class="math inline">\(\int SdT\)</span>, for which we can assume <span class="math inline">\(S\)</span> independent of temperature to obtain <span class="math inline">\(S\Delta T\)</span>. In practice, the entropy increases slightly with the temperature. Therefore the curves in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a> are slightly concave downwards (remember that they are obtained from values of <span class="math inline">\(-S\)</span>, so if <span class="math inline">\(S\)</span> increase with <span class="math inline">\(T\)</span>, the curves bend downwards.)<a href="PhaseEquilibrium.html#fnref50" class="footnote-back">↩︎</a></p></li>
-<li id="fn51"><p>Despite the effect being minimal, it is one of the contributing causes to the fact that we can skate on ice, but we can’t on stone. If we increase our pressure on ice by reducing our footprints’ surface area using thin skates, ice will slightly melt under our own weight, creating a thin liquid film on which we can skate because of the reduced friction.<a href="PhaseEquilibrium.html#fnref51" class="footnote-back">↩︎</a></p></li>
-<li id="fn52"><p>For a 1-component system <span class="math inline">\(c-1=1-1=0\)</span>, and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence <span class="math inline">\(c-1=2-1=1\)</span> additional variable will be required to describe it–the mole fraction.<a href="PhaseEquilibrium.html#fnref52" class="footnote-back">↩︎</a></p></li>
-<li id="fn53"><p>As is well explained by <a href="https://en.wikipedia.org/wiki/Properties_of_water#Density_of_water_and_ice">Wikipedia</a>: “The unusual density curve and lower density of ice than of water is vital to life—if water were most dense at the freezing point, then in winter the very cold water at the surface of lakes and other water bodies would sink, lakes could freeze from the bottom up, and all life in them would be killed. Furthermore, given that water is a good thermal insulator (due to its heat capacity), some frozen lakes might not completely thaw in summer.[34] The layer of ice that floats on top insulates the water below. Water at about 4 °C (39 °F) also sinks to the bottom, thus keeping the temperature of the water at the bottom constant.”<a href="PhaseEquilibrium.html#fnref53" class="footnote-back">↩︎</a></p></li>
-<li id="fn54"><p>For more information on the 2019 redefinition of the SI units, see <a href="https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units">this Wikipedia page</a>.<a href="PhaseEquilibrium.html#fnref54" class="footnote-back">↩︎</a></p></li>
-<li id="fn55"><p>Notice that quadruple points are possible for 2-component diagrams.<a href="PhaseEquilibrium.html#fnref55" class="footnote-back">↩︎</a></p></li>
-<li id="fn56"><p>Notice that the temperature of a liquid must be below the critical point, otherwise it is no longer a liquid but rather a supercritical fluid.<a href="PhaseEquilibrium.html#fnref56" class="footnote-back">↩︎</a></p></li>
+<ol start="1">
+<li id="fn1"><p>The photos depicted in this figure are taken from <a href="https://en.wikipedia.org">Wikipedia</a>: the Erlenmeyer flasks photo was taken by user Maytouch L., and distributed under CC-BY-SA license; the cloud photo was taken by user <a href="https://commons.wikimedia.org/wiki/User:Matthew_T_Rader">Mathew T Rader</a>, and distributed under CC-BY-SA license; the flame picture was taken by user <a href="https://commons.wikimedia.org/wiki/User:Oscar">Oscar</a>, and distributed under CC-BY-SA license; the balloon photo is in the public domain.<a href="SystemVariables.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be <em>always</em> consistent, so if you decide that you want to use the physics convention, make sure to <em>always</em> use the physics convention. In this course, on the other hand, we will <em>always</em> use the chemistry one, as introduced above.<a href="SystemVariables.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -485,8 +425,8 @@ Figure 12.3: The Pressure–Temperature Phase Diagram.
           </div>
         </div>
       </div>
-<a href="RealGases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="MCPhaseDiagrams.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ZerothLaw.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -517,7 +457,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/12_PhaseEquilibrium.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/01_Basis.rmd",
 "text": "Edit"
 },
 "history": {

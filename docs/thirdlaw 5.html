@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1</title>
+  <title>7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:title" content="7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem1" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Phase Equilibrium | The Live Textbook of Physical Chemistry 1" />
+  <meta name="twitter:title" content="7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-10-26" />
+<meta name="date" content="2021-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="RealGases.html"/>
-<link rel="next" href="MCPhaseDiagrams.html"/>
+<link rel="prev" href="SecondLaw.html"/>
+<link rel="next" href="Potentials.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -280,204 +280,215 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="PhaseEquilibrium" class="section level1" number="12">
-<h1><span class="header-section-number">12</span> Phase Equilibrium</h1>
-<div id="phase-stability" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Phase Stability</h2>
-<p>We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a> For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of “phase” is necessary to discuss several concepts in this chapter and the following ones:</p>
+<div id="thirdlaw" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Calculation of Entropy and the Third Law of Thermodynamics</h1>
+<p>The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to <em>always</em> consider changes in entropy in <em>both</em> the system (sys) and its surroundings (surr):</p>
+<p><span class="math display" id="eq:dsuniv">\[\begin{equation}
+\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}},
+\tag{7.1}
+\end{equation}\]</span></p>
+<p>or, in differential form:</p>
+<p><span class="math display" id="eq:dsunivd">\[\begin{equation}
+d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}},
+\tag{7.2}
+\end{equation}\]</span></p>
+<div id="dssys" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></h2>
+<p>In general <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> can be calculated using either its Definition <a href="SecondLaw.html#def:entropy">6.1</a>, or its differential formula, eq. <a href="SecondLaw.html#eq:dentropy">(6.5)</a>. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:</p>
+<p><span class="math display" id="eq:entropycycle">\[\begin{equation}
+\begin{aligned}
+P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S_{\text{sys}} } \quad P_f, T_f \\
+  \scriptstyle{\Delta_1 S^{\text{sys}}} &amp; \searrow \qquad  \qquad \nearrow \; \scriptstyle{\Delta_2 S^{\text{sys}}} \\
+&amp; \qquad P_i, T_f \\
+\\
+\Delta_{\text{TOT}} S^{\text{sys}} &amp; = \Delta_1 S^{\text{sys}} + \Delta_2 S^{\text{sys}},
+\end{aligned}
+\tag{7.3}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(\Delta_1 S^{\text{sys}}\)</span> calculated at constant <span class="math inline">\(P\)</span>, and <span class="math inline">\(\Delta_2 S^{\text{sys}}\)</span> at constant <span class="math inline">\(T\)</span>. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in section <a href="FirstLaw.html#energyint">3.1</a>.</p>
+<div id="entropy-in-isothermal-processes" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Entropy in isothermal processes</h3>
+<ul>
+<li><p>For an ideal gas at constant temperature <span class="math inline">\(\Delta U =0\)</span>, and <span class="math inline">\(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\)</span>. Using the formula for <span class="math inline">\(W_{\mathrm{REV}}\)</span> in either eq. <a href="#eq:WintsolvedV">(<strong>??</strong>)</a> or eq. <a href="#eq:WintsolvedP">(<strong>??</strong>)</a>, we obtain:
+<span class="math display" id="eq:sigconsttV">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
+\tag{7.4}
+\end{equation}\]</span>
+or, similarly:
+<span class="math display" id="eq:sigconsttP">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = nR \ln \frac{P_i}{P_f}.
+\tag{7.5}
+\end{equation}\]</span></p></li>
+<li><p>A phase change is a particular case of an isothermal process that does not follow the formulas introduced above since an ideal gas never liquefies. The entropy associated with a phase change at constant pressure can be calculated from its definition, remembering that <span class="math inline">\(Q_{\mathrm{rev}}= \Delta H\)</span>. For example for vaporizations:</p></li>
+</ul>
+<p><span class="math display" id="eq:spc">\[\begin{equation}
+\Delta_{\mathrm{vap}} S = \frac{\Delta_{\mathrm{vap}}H}{T_B},
+\tag{7.6}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(\Delta_{\mathrm{vap}}H\)</span> being the enthalpy of vaporization of a substance, and <span class="math inline">\(T_B\)</span> its boiling temperature.</p>
+<p>It is experimentally observed that the entropies of vaporization of many liquids have almost the same value of:</p>
+<p><span class="math display" id="eq:trouton">\[\begin{equation}
+\Delta_{\mathrm{vap}} S \approx 10.5 R,
+\tag{7.7}
+\end{equation}\]</span></p>
+<p>which corresponds in SI to the range of about 85–88 J/(mol K). This simple rule is named <strong>Trouton’s rule</strong>, after the French scientist that discovered it, Frederick Thomas Trouton (1863-1922).</p>
+<blockquote>
+
+<div class="exercise">
+<p><span id="exr:troutonex" class="exercise"><strong>Exercise 7.1  </strong></span>Calculate the standard entropy of vaporization of water knowing <span class="math inline">\(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= 44 \  \text{kJ/mol}\)</span>, as calculated in Exercise <a href="Thermochemistry.html#exr:HessLawEx">4.1</a>.</p>
+<p><em>Solution:</em> Using eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>—and knowing that at standard conditions of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \  \text{bar}\)</span> the boiling temperature of water is 373 K—we calculate:</p>
+<p><span class="math display" id="eq:trouton1">\[\begin{equation}
+\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
+\tag{7.8}
+\end{equation}\]</span></p>
+The entropy of vaporization of water is far from Trouton’s rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.
+</div>
+</blockquote>
+</div>
+<div id="entropy-in-adiabatic-processes" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Entropy in adiabatic processes</h3>
+<p>Since adiabatic processes happen without the exchange of heat, <span class="math inline">\(đQ=0\)</span>, it would be tempting to think that <span class="math inline">\(\Delta S^{\mathrm{sys}} = 0\)</span> for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes <span class="math inline">\(\Delta S^{\mathrm{sys}} \neq 0\)</span>. The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:</p>
+<p><span class="math display" id="eq:adiabaticent">\[\begin{equation}
+\begin{aligned}
+\text{reversible:} \qquad &amp; \frac{đQ_{\mathrm{REV}}}{T} = 0 \longrightarrow \Delta S^{\mathrm{sys}} = 0 \quad \text{(isentropic),}\\
+\text{irreversible:} \qquad &amp; \frac{đQ_{\mathrm{IRR}}}{T}  = 0 \longrightarrow \Delta S^{\mathrm{sys}} \neq 0. \\
+\end{aligned}
+\tag{7.9}
+\end{equation}\]</span></p>
+</div>
+<div id="entropy-in-isochoric-processes" class="section level3" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Entropy in isochoric processes</h3>
+<p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using eq. <a href="ZerothLaw.html#eq:Cvint1">(2.2)</a>. Since the heat exchanged at those conditions equals the energy (eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
+<p><span class="math display" id="eq:sconstV1">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T},
+\tag{7.10}
+\end{equation}\]</span></p>
+<p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature and solving the integral on the right-hand side, becomes:</p>
+<p><span class="math display" id="eq:sconstV">\[\begin{equation}
+\Delta S^{\mathrm{sys}} \approx n C_V \ln \frac{T_f}{T_i}.
+\tag{7.11}
+\end{equation}\]</span></p>
+</div>
+<div id="entropy-in-isobaric-processes" class="section level3" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> Entropy in isobaric processes</h3>
+<p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
+<p><span class="math display" id="eq:sconstP1">\[\begin{equation}
+\Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
+\tag{7.12}
+\end{equation}\]</span></p>
+<p>which, assuming <span class="math inline">\(C_P\)</span> independent of temperature and solving the integral on the right-hand side, becomes:</p>
+<p><span class="math display" id="eq:sconstP">\[\begin{equation}
+\Delta S^{\mathrm{sys}} \approx n C_P \ln \frac{T_f}{T_i}.
+\tag{7.13}
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="dssurr" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></h2>
+<p>While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:</p>
+<p><span class="math display" id="eq:dssurr">\[\begin{equation}
+\Delta S^{\mathrm{surr}} = \frac{Q_{\text{surr}}}{T_{\text{surr}}}=\frac{-Q_{\text{sys}}}{T_{\text{surr}}},
+\tag{7.14}
+\end{equation}\]</span></p>
+<p>or, in differential form:</p>
+<p><span class="math display" id="eq:dssurrd">\[\begin{equation}
+d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
+\tag{7.15}
+\end{equation}\]</span></p>
+<p>where the substitution <span class="math inline">\(Q_{\text{surr}}=-Q_{\text{sys}}\)</span> can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, <span class="math inline">\(T_{\text{surr}}\)</span> will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.</p>
+<blockquote>
+
+<div class="exercise">
+<p><span id="exr:supercooledEx" class="exercise"><strong>Exercise 7.2  </strong></span>Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: <span class="math inline">\(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}\)</span>, and assuming both <span class="math inline">\(C_P\)</span> to be independent on temperature.</p>
+<p><em>Solution:</em> <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> for the process under consideration can be calculated using the following cycle:</p>
+<p><span class="math display" id="eq:supercooledsyst">\[\begin{equation}
+\begin{aligned}
+\mathrm{H}_2 \mathrm{O}_{(l)} &amp; \quad \xrightarrow{\quad \Delta S_{\text{sys}} \quad} \quad \mathrm{H}_2 \mathrm{O}_{(s)} \qquad \quad T=263\;K\\
+\scriptstyle{\Delta S_1} \; \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta S_3} \\
+\mathrm{H}_2 \mathrm{O}_{(l)} &amp; \quad \xrightarrow{\quad \Delta S_2 \qquad} \quad \mathrm{H}_2\mathrm{O}_{(s)} \qquad \; T=273\;K\\
+\\
+\Delta S^{\text{sys}} &amp; = \Delta S_1 + \Delta S_2 + \Delta S_3
+\end{aligned}
+\tag{7.16}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(\Delta S_1\)</span> and <span class="math inline">\(\Delta S_3\)</span> are the isochoric heating and cooling processes of liquid and solid water, respectively, and can be calculated filling the given data into eq. <a href="thirdlaw.html#eq:sconstP1">(7.12)</a>. <span class="math inline">\(\Delta S_2\)</span> is a phase change (isothermal process) and can be calculated translating eq. <a href="thirdlaw.html#eq:spc">(7.6)</a> to the freezing transformation. Overall:</p>
+<p><span class="math display" id="eq:supercooledsyst2">\[\begin{equation}
+\begin{aligned}
+\Delta S^{\text{sys}} &amp; = \int_{263}^{273} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}}{T}dT+\frac{-\Delta_{\mathrm{fus}}H}{273}+\int_{273}^{263} \frac{C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}}{T}dT \\
+&amp; = 76 \ln \frac{273}{263} - \frac{6 \times 10^3}{273} + 38 \ln \frac{263}{273}= -20.6 \; \text{J/K}.
+\end{aligned}
+\tag{7.17}
+\end{equation}\]</span></p>
+<p>Don’t be confused by the fact that <span class="math inline">\(\Delta S^{\text{sys}}\)</span> is negative. This is <strong><em>not</em></strong> the entropy of the universe! Hence it tells <strong><em>nothing</em></strong> about spontaneity! We can now calculate <span class="math inline">\(\Delta S^{\text{surr}}\)</span> from <span class="math inline">\(Q_{\text{sys}}\)</span>, noting that we can calculate the enthalpy around the same cycle in eq. <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a>. To do that, we already have <span class="math inline">\(\Delta_{\mathrm{fus}}H\)</span> from the given data, and we can calculate <span class="math inline">\(\Delta H_1\)</span> and <span class="math inline">\(\Delta H_3\)</span> using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a>.</p>
+<p><span class="math display" id="eq:supercooledsurr">\[\begin{equation}
+\begin{aligned}
+Q^{\text{sys}} &amp; = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}} dT + (-\Delta_{\mathrm{fus}}H) + \int_{273}^{263} C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}dT \\
+&amp; = 76 \times 10^{-3} (273-263) - 6 + 38  \times 10^{-3} (263-273) \\ &amp;= -5.6 \; \text{kJ}. \\
+\\
+\Delta S^{\text{surr}} &amp; = \frac{-Q_{\text{sys}}}{T}=\frac{5.6 \times 10^3}{263} = + 21.3 \; \text{J/K}. \\
+\end{aligned}
+\tag{7.18}
+\end{equation}\]</span></p>
+<p>Bringing <a href="thirdlaw.html#eq:supercooledsyst">(7.16)</a> and <a href="thirdlaw.html#eq:supercooledsurr">(7.18)</a> results together, we obtain:</p>
+<p><span class="math display" id="eq:supercooledfinal">\[\begin{equation}
+\Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=+0.7 \; \text{J/K}.
+\tag{7.19}
+\end{equation}\]</span></p>
+Since the entropy changes in the universe are positive, the process is spontaneous, as expected.
+</div>
+</blockquote>
+</div>
+<div id="spontS" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Clausius Theorem</h2>
+<p>By replacing eq. <a href="thirdlaw.html#eq:dssurrd">(7.15)</a> into <a href="thirdlaw.html#eq:dsunivd">(7.2)</a> we can write the differential change in the entropy of the system as:</p>
+<p><span class="math display" id="eq:dssysd">\[\begin{equation}
+d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T}.
+\tag{7.20}
+\end{equation}\]</span></p>
+<p>According to the second law, for any spontaneous process <span class="math inline">\(d S^{\mathrm{universe}}\geq0\)</span>, and therefore, replacing it into eq. <a href="thirdlaw.html#eq:dssysd">(7.20)</a>:</p>
+<p><span class="math display" id="eq:dssyscrit7">\[\begin{equation}
+d S^{\mathrm{sys}} \geq \frac{đQ}{T},
+\tag{7.21}
+\end{equation}\]</span></p>
+<p>which is the mathematical expression of the so-called <strong>Clausius theorem</strong>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> distinguishes between three conditions:</p>
+<p><span class="math display" id="eq:dssyscond">\[\begin{equation}
+\begin{aligned}
+d S^{\mathrm{sys}} &gt; \frac{đQ}{T} \qquad &amp;\text{spontaneous, irreversible transformation} \\
+d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &amp;\text{reversible transformation} \\
+d S^{\mathrm{sys}} &lt; \frac{đQ}{T} \qquad &amp;\text{non-spontaneous, irreversible transformation}, 
+\end{aligned}
+\tag{7.22}
+\end{equation}\]</span></p>
+<p>Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it’s hard to calculate <span class="math inline">\(\Delta S^{\mathrm{universe}}\)</span>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> requires knowledge of quantities that are dependent on the system exclusively, such as the difference in entropy, the amount of heat that crosses the boundaries, and the temperature at which the process happens.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> If a process produces more entropy than the amount of heat that crosses the boundaries divided by the absolute temperature, it will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the absolute temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.</p>
+</div>
+<div id="thirdlawsect" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> The Third Law of Thermodynamics</h2>
+<p>In chapter <a href="Thermochemistry.html#Thermochemistry">4</a>, we have discussed how to calculate reaction enthalpies for any reaction, given the formation enthalpies of reactants and products. In this section, we will try to do the same for reaction entropies. In this case, however, our task is simplified by a fundamental law of thermodynamics, introduced by Walther Hermann Nernst (1864–1941) in 1906.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> The statement that was initially known as Nernst’s Theorem is now officially recognized as the third fundamental law of thermodynamics, and it has the following definition:</p>
 <blockquote>
 
 <div class="definition">
-<p><span id="def:phasedef" class="definition"><strong>Definition 12.1  </strong></span><em>Phase:</em> A region of the system with homogeneous chemical composition and physical state.</p>
+<span id="def:thirdlawdef" class="definition"><strong>Definition 7.1  </strong></span><em>Third Law of Thermodynamics:</em> The entropy of a perfectly ordered, pure, crystalline substance is zero at <span class="math inline">\(T=0 \; \text{K}\)</span>.
 </div>
 </blockquote>
-<p>Let’s now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:</p>
-<p><span class="math display" id="eq:muequal1">\[\begin{equation}
-\begin{aligned}
-d\mu &amp;= \left( \frac{\partial \mu}{\partial T} \right)_P dT + \left( \frac{\partial \mu}{\partial P} \right)_T dP \\
-d\mu &amp;= -SdT+\overline{V}dP,
-\end{aligned}
-\tag{12.1}
+<p>This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive. This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences.</p>
+<p>In simpler terms, given a substance <span class="math inline">\(i\)</span>, we are not able to measure absolute values of its enthalpy <span class="math inline">\(H_i\)</span> (and we must resort to known enthalpy differences, such as <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> at standard pressure). At the same time, for entropy, we can measure <span class="math inline">\(S_i\)</span> thanks to the third law, and we usually report them as <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. A comprehensive list of standard entropies of inorganic and organic compounds is reported in appendix <a href="appendix.html#appendix">16</a>. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:</p>
+<p><span class="math display" id="eq:thirdlaweq">\[\begin{equation}
+\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
+\tag{7.23}
 \end{equation}\]</span></p>
-<p>to write:</p>
-<p><span class="math display" id="eq:muequal2">\[\begin{equation}
-\left( \frac{\partial \mu}{\partial T} \right)_P=-S \qquad \left( \frac{\partial \mu}{\partial P} \right)_T =\overline{V}.
-\tag{12.2}
-\end{equation}\]</span></p>
-<p>We can use these definitions to study the dependence of the chemical potential with respect to changes in pressure and temperature. If we plot <span class="math inline">\(\mu\)</span> as a function of <span class="math inline">\(T\)</span> using the first coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>, we obtain the diagram in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>. The diagram presents three curves, each corresponding to one of the three most common states of matter – solid, liquid, and gas. As we saw in several previous chapters, the entropy of a phase is almost constant with respect to temperature,<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a> and therefore the three curves are essentially straight, with negative angular coefficients <span class="math inline">\(-S\)</span>. This also explains why the solid phase has a basically flat line since, according to the third law, the entropy of a perfect solid is zero and close to zero if the solid is not perfect. The difference between the three lines’ angular coefficients is explained by the fact that each of these states has a different value of entropy:</p>
-<p><span class="math display" id="eq:muequal3">\[\begin{equation}
-\left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
-\tag{12.3}
-\end{equation}\]</span></p>
-<p>and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (<span class="math inline">\(S_{\text{g}} \gg S_{\text{l}}&gt;S_{\text{s}}\)</span>), we obtain three lines with different angular coefficients that intersect each other. At each temperature, the phase with the lowest chemical potential will be the most stable (see red segments in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>). At each intersection between two lines, the two phases have the same chemical potential, representing the temperature at which they coexist. This temperature is the temperature at which the phase change happens. Recalling from general chemistry, at the junction between the solid and the liquid lines, the fusion (fus) process occurs, and the corresponding temperature is called the melting point <span class="math inline">\(T_{\text{m}}\)</span>. At the junction between the liquid and the gas lines, the vaporization (vap) process happens, and the corresponding temperature is called the boiling point <span class="math inline">\(T_{\text{b}}\)</span>. Depending on the substance and the pressure at which the process happens, the solid line might intersect the gas line before the liquid line. When that occurs, the liquid phase is never observed, and only the sublimation (subl) process happens at the sublimation point <span class="math inline">\(T_{\text{subl}}\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase1"></span>
-<img src="img/OEP_Figures.016.jpeg" alt="Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure." width="60%" />
-<p class="caption">
-Figure 12.1: Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure.
-</p>
-</div>
-<p>The effects of pressure on this diagram can be studied using the second coefficient in eq. <a href="PhaseEquilibrium.html#eq:muequal2">(12.2)</a>. For the majority of substances, <span class="math inline">\(\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} &gt; \overline{V}_{\text{s}}\)</span>, hence the curves will shift to lower values when the pressure is reduced, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a>. Notice also that since <span class="math inline">\(\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}\)</span>, the shifts for both the solid and liquid lines is much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point.
-Water is a noticeable exception to these trend because <span class="math inline">\(\overline{V}_{\mathrm{H}_2\mathrm{O,l}} &lt; \overline{V}_{\text{ice}}\)</span>. This explains the experimental observation that increasing the pressure on ice causes the ice to melt<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a></p>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase2"></span>
-<img src="img/OEP_Figures.017.jpeg" alt="Effect of Pressure on the Chemical Potential Diagram." width="60%" />
-<p class="caption">
-Figure 12.2: Effect of Pressure on the Chemical Potential Diagram.
-</p>
-</div>
-<p>Considering the intersections between two lines, two phases are in equilibrium with each other at each of these points. Therefore their chemical potentials must be equal:</p>
-<p>For two or more phases to be in equilibrium, their chemical potential must be equal:</p>
-<p><span class="math display" id="eq:muequal">\[\begin{equation}
-\mu_{\alpha} = \mu_{\beta}.
-\tag{12.4}
-\end{equation}\]</span></p>
-<p>If we now change either the temperature or the pressure, the location of the intersection will be shifted (see again Figure <a href="PhaseEquilibrium.html#fig:FigPhase2">12.2</a> and the discussion above). For infinitesimal changes in variables, the new location will be:</p>
-<p><span class="math display" id="eq:muequalA">\[\begin{equation}
-\mu_{\alpha} + d\mu_{\alpha}= \mu_{\beta}+d\mu_{\beta},
-\tag{12.5}
-\end{equation}\]</span></p>
-<p>which using eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>, simply becomes:</p>
-<p><span class="math display" id="eq:muequalB">\[\begin{equation}
-d\mu_{\alpha}= d\mu_{\beta}.
-\tag{12.6}
-\end{equation}\]</span></p>
-<p>Replacing the differential with the definition of chemical potential in eq. <a href="PhaseEquilibrium.html#eq:muequal1">(12.1)</a>, we obtain:</p>
-<p><span class="math display" id="eq:muequalC">\[\begin{equation}
-\begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &amp;= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &amp;= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
-\end{aligned}
-\tag{12.7}
-\end{equation}\]</span></p>
-<p>which can be rearranged into:</p>
-<p><span class="math display" id="eq:ClapeyronEq">\[\begin{equation}
-\frac{dP}{dT}=\frac{\Delta S}{\Delta \overline{V}}.
-\tag{12.8}
-\end{equation}\]</span></p>
-<p>This equation is known as the <strong>Clapeyron equation</strong>, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a> on a <span class="math inline">\(PT\)</span> phase diagram for common substances results in three lines representing the equilibrium between two different phases. These diagrams are useful to study the relationship between the phases of a substance.</p>
-</div>
-<div id="gibbs-phase-rule" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Gibbs Phase Rule</h2>
-<p>In chapter <a href="SystemVariables.html#SystemVariables">1</a>, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables <span class="math inline">\((3: P,\overline{V},T)\)</span>, and reduce it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of <span class="math inline">\(c\)</span> components (chemical substances) and <span class="math inline">\(p\)</span> phases, the number of independent variables, <span class="math inline">\(f\)</span>, is given by the Gibbs phase rule:</p>
-<p><span class="math display" id="eq:Gibbsrule">\[\begin{equation}
-f=c-p+2.
-\tag{12.9}
-\end{equation}\]</span></p>
-<p>The Gibbs phase rule derives from the fact that different phases are in equilibrium with each other at some conditions, resulting in the reduction of the number of independent variables at those conditions. More rigorously, when two phases are in thermodynamic equilibrium, their chemical potentials are equal (see eq. <a href="PhaseEquilibrium.html#eq:muequal">(12.4)</a>). For each equality, the number of independent variables—also called the number of <em>degrees of freedom</em>—is reduced by one. For example, the chemical potentials of the liquid and its vapor depend on both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. But when these phases are in equilibrium with each other, their chemical potentials must be equal. If either the pressure or the temperature is fixed, the other variable will be uniquely determined by the equality relation. In other terms, when a liquid is in equilibrium with its vapor at a given pressure, the temperature is determined by the fact that the chemical potentials of the two phases is the same, and is denoted as the boiling temperature <span class="math inline">\(T_{\text{b}}\)</span>. Similarly, at a given temperature, the pressure of the vapor is uniquely determined by the same equality relation and is denoted as the vapor pressure, <span class="math inline">\(P^*\)</span>.</p>
-<p>The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by <span class="math inline">\((c-1)\)</span> variables.<a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> The number of constraints is determined by the number of possible equilibrium relations, which is <span class="math inline">\(c(p-1)\)</span> since the chemical potential of each component must be equal in all phases. The number of degrees of freedom <span class="math inline">\(f\)</span> is then given by <span class="math inline">\(f=(c-1)p+2-c(p-1)\)</span> <span class="math inline">\(=c-p+2\)</span>, which is the Gibbs phase rule, as in eq. <a href="PhaseEquilibrium.html#eq:Gibbsrule">(12.9)</a>.</p>
-</div>
-<div id="pt-phase-diagrams" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> <span class="math inline">\(PT\)</span> Phase Diagrams</h2>
-<div class="figure" style="text-align: center"><span id="fig:FigPhase3"></span>
-<img src="img/OEP_Figures.018.jpeg" alt="The Pressure–Temperature Phase Diagram." width="60%" />
-<p class="caption">
-Figure 12.3: The Pressure–Temperature Phase Diagram.
-</p>
-</div>
-<p>Let’s now discuss the pressure–temperature diagram of a typical substance, as reported in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, eq. <a href="PhaseEquilibrium.html#eq:ClapeyronEq">(12.8)</a>. The interpretation of each line is as follows:</p>
-<div id="liquid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>For this equilibrium we can use Trouton’s rule, eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>, and write:
-<span class="math display" id="eq:PTdia1">\[\begin{equation}
-\Delta_{\text{vap}} S = S_{\text{g}}-S_{\text{l}} \cong 88 \; \frac{\text{kJ}}{\text{mol}} &gt; 0\quad \text{always},
-\tag{12.10}
-\end{equation}\]</span></p>
-<p>where the entropy of vaporization is always positive, even for cases where the Trouton’s rule is violated. The difference in molar volumes is easily obtained, since the volume of the gas is always much greater than the volume of the liquid:</p>
-<p><span class="math display" id="eq:PTdia2">\[\begin{equation}
-\overline{V}_{\text{g}} - \overline{V}_{\text{l}} \cong \overline{V}_{\text{g}} = 22.4\; \frac{\text{L}}{\text{mol}} &gt;0\quad \text{always}.
-\tag{12.11}
-\end{equation}\]</span></p>
-<p>Replacing these values in the Clapeyron equation, we obtain:</p>
-<p><span class="math display" id="eq:PTdia3">\[\begin{equation}
-\frac{dP}{dT}=\frac{88}{22.4}\left( \frac{0.0831}{8.31} \right) = 0.004\;\text{bar} &gt; 0 \quad \text{always},
-\tag{12.12}
-\end{equation}\]</span></p>
-<p>which is always positive,regardless of violations to the Trouton’s rule. Notice how small this value is, meaning that the liquid–gas equilibrium curve is mostly flat as <span class="math inline">\(T\rightarrow 0\)</span>.</p>
-</div>
-<div id="solid-rightleftarrows-gas-equilibrium" class="section level3" number="12.3.2">
-<h3><span class="header-section-number">12.3.2</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</h3>
-<p>If we look at the signs of each quantity, this case is similar to the previous one:
-<span class="math display" id="eq:PTdi1">\[\begin{equation}
-\begin{aligned}
-\Delta_{\text{subl}} S &amp;&gt; 0 \quad \text{always} \\
-\Delta_{\text{subl}} \overline{V }&amp;&gt; 0 \quad \text{always} \\
-\\
-\frac{dP}{dT} &amp;&gt; 0 \quad \text{always}.
-\end{aligned}
-\tag{12.13}
-\end{equation}\]</span></p>
-<p>However, the Trouton’s rule is not valid for the solid–gas equilibrium, and <span class="math inline">\(\frac{dP}{dT}\)</span> will be larger than for the previous case.</p>
-</div>
-<div id="solid-rightleftarrows-liquid-equilibrium" class="section level3" number="12.3.3">
-<h3><span class="header-section-number">12.3.3</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</h3>
-<p>The final curve is for the solid-liquid equilibrium, for which we have:</p>
-<p><span class="math display" id="eq:PTd1">\[\begin{equation}
-\Delta_{\text{fus}} S = \frac{\Delta_{\text{fusion}} H}{T_{\text{m}}} &gt; 0 \quad \text{always},
-\tag{12.14}
-\end{equation}\]</span></p>
-<p>since fusion is always an exothermic process, <span class="math inline">\((\Delta_{\text{fus}} H&gt;0)\)</span>. On the other side:</p>
-<p><span class="math display">\[\begin{equation}
-\Delta_{\text{fusion}} \overline{V} = \overline{V}_{\text{l}} - \overline{V}_{\text{s}} &gt; 0 \quad \text{generally}.
-\end{equation}\]</span></p>
-<p>In other words, the difference of the molar volume of the liquid and that of the solid is positive for most substances, but it might be negative (for example for <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span>). As such:</p>
-<p><span class="math display" id="eq:PTd2">\[\begin{equation}
- \frac{dP}{dT} &gt; 0 \quad \text{generally}.
-\tag{12.15}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> and a few other substances, <span class="math inline">\(\frac{dP}{dT}&lt;0\)</span>, an anomalous behavior that has crucial consequences for the existence of life on earth.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a> For this importance, this behavior is also depicted in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a> using a dashed green line.</p>
-<p>Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of <span class="math inline">\(10^{-3}\;\mathrm{L}\)</span>), <span class="math inline">\(\frac{dP}{dT}\)</span> is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are still almost vertical, regardless of the signs of their angular coefficients.</p>
-</div>
-<div id="the-triple-point-and-the-critical-point" class="section level3" number="12.3.4">
-<h3><span class="header-section-number">12.3.4</span> The triple point and the critical point</h3>
-<p>The only point in the <span class="math inline">\(PT\)</span> diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is <span class="math inline">\(f=1-3+2=0\)</span>. The fact that the triple point has zero degrees of freedom means that its coordinates, <span class="math inline">\({T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}}\)</span>, are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition—rather than measured—until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the Kelvin).<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a></p>
-<p>In addition to the triple point where the solid, liquid, and gas phases meet, a triple point may involve more than one condensed phase. Triple points are common for substances with multiple solid phases (polymorphs), involving either two solid phases and a liquid one or three solid phases. Helium is a special case that presents a triple point involving two different fluid phases, called the lambda point. Since the number of degrees of freedom cannot be negative, the Gibbs phase rule for a 1-component diagram sets the limit to how many phases can coexist to just three. Therefore, quadruple points (or higher coexistence points) are not possible for pure substances, even for polymorphs.<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a></p>
-<p>Another point with a fixed position in the <span class="math inline">\(PT\)</span> diagram is the critical point, <span class="math inline">\({T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}}\)</span>. We have already given the definition of the critical temperature in <a href="RealGases.html#def:criticalT">11.2</a>. This point represents the end of the liquid–gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in Figure <a href="PhaseEquilibrium.html#fig:FigPhase3">12.3</a>. A gas whose pressure and temperature are below the critical point is called a <em>vapor</em>. A gas whose temperature is above the critical one and the pressure is below its critical one is called a <em>supercritical fluid</em>. Finally, a liquid whose pressure is above the critical point is called a <em>compressible liquid</em>.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a></p>
-</div>
-</div>
-<div id="the-clausiusclapeyron-equation" class="section level2" number="12.4">
-<h2><span class="header-section-number">12.4</span> The Clausius–Clapeyron Equation</h2>
-<p>Let’s now take a closer look at the equilibrium between a condensed phase and the gas phase. For both the vaporization and sublimation processes, Clausius showed that the Clapeyron equation can be simplified by using:</p>
-<p><span class="math display" id="eq:clacla1">\[\begin{equation}
- \Delta_{\text{vap}} S = \frac{\Delta_{\text{vap}} H}{T} \qquad \Delta \overline{V}= \overline{V}_{\mathrm{g}} -\overline{V}_{\mathrm{l}} \cong \overline{V}_{\mathrm{g}},
-\tag{12.16}
-\end{equation}\]</span></p>
-<p>resulting in:</p>
-<p><span class="math display" id="eq:clacla2">\[\begin{equation}
- \frac{dP}{dT} = \frac{ \Delta_{\text{vap}} S}{\Delta \overline{V}} \cong \frac{ \Delta_{\text{vap}} H}{T \overline{V}_{\mathrm{g}}}.
-\tag{12.17}
-\end{equation}\]</span></p>
-<p>Using the ideal gas law to replace the molar volume of the gas, we obtain:</p>
-<p><span class="math display" id="eq:clacla3">\[\begin{equation}
- \frac{dP}{dT} = \frac{P \Delta_{\text{vap}} H}{RT^2},
-\tag{12.18}
-\end{equation}\]</span></p>
-<p>which can be rearranged as:</p>
-<p><span class="math display" id="eq:clacla">\[\begin{equation}
- \frac{dP}{P} = \frac{\Delta_{\text{vap}} H}{R} \frac{dT}{T^2}.
-\tag{12.19}
-\end{equation}\]</span></p>
-<p>Eq. <a href="PhaseEquilibrium.html#eq:clacla">(12.19)</a> is known as the <strong>Clausius–Clapeyron equation</strong>, and it measures the dependence of the vapor pressure of a substance as a function of the temperature. The Clausius–Clapeyron equation can be integrated to obtain:</p>
-<p><span class="math display" id="eq:clacla4">\[\begin{equation}
-\begin{aligned}
-\int_{P_i}^{P_f} \frac{dP}{P} &amp;= \frac{\Delta_{\text{vap}} H}{R} \int_{T_i}^{T_f} \frac{dT}{T^2} \\
-\ln \frac{P_f}{P_i} &amp;=-\frac{\Delta_{\text{vap}} H}{R} \left( \frac{1}{T_f}-\frac{1}{T_i} \right).
-\end{aligned}
-\tag{12.20}
-\end{equation}\]</span></p>
-<p>The integrated Clausius–Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from <span class="math inline">\(P^*=0.02\;\text{bar}\)</span> to <span class="math inline">\(P^*=1\;\text{bar}\)</span> when the temperature is increased from <span class="math inline">\(T=293\;\mathrm{K}\)</span> (around room temperature) to <span class="math inline">\(T=373\;\mathrm{K}\)</span> (boiling point). The integrated Clausius–Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.</p>
+<p>with <span class="math inline">\(\nu_i\)</span> being the usual stoichiometric coefficients with their signs given in Definition <a href="Thermochemistry.html#def:nui">4.2</a>.</p>
+<p>The careful wording in the definition of the third law <a href="thirdlaw.html#def:thirdlawdef">7.1</a> allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at <span class="math inline">\(T=0 \; \text{K}\)</span>. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
+<p>An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to <span class="math inline">\(T=0 \; \text{K}\)</span> in a finite number of steps.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="49">
-<li id="fn49"><p>Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.<a href="PhaseEquilibrium.html#fnref49" class="footnote-back">↩︎</a></p></li>
-<li id="fn50"><p>Think, for example, at the integral <span class="math inline">\(\int SdT\)</span>, for which we can assume <span class="math inline">\(S\)</span> independent of temperature to obtain <span class="math inline">\(S\Delta T\)</span>. In practice, the entropy increases slightly with the temperature. Therefore the curves in Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a> are slightly concave downwards (remember that they are obtained from values of <span class="math inline">\(-S\)</span>, so if <span class="math inline">\(S\)</span> increase with <span class="math inline">\(T\)</span>, the curves bend downwards.)<a href="PhaseEquilibrium.html#fnref50" class="footnote-back">↩︎</a></p></li>
-<li id="fn51"><p>Despite the effect being minimal, it is one of the contributing causes to the fact that we can skate on ice, but we can’t on stone. If we increase our pressure on ice by reducing our footprints’ surface area using thin skates, ice will slightly melt under our own weight, creating a thin liquid film on which we can skate because of the reduced friction.<a href="PhaseEquilibrium.html#fnref51" class="footnote-back">↩︎</a></p></li>
-<li id="fn52"><p>For a 1-component system <span class="math inline">\(c-1=1-1=0\)</span>, and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence <span class="math inline">\(c-1=2-1=1\)</span> additional variable will be required to describe it–the mole fraction.<a href="PhaseEquilibrium.html#fnref52" class="footnote-back">↩︎</a></p></li>
-<li id="fn53"><p>As is well explained by <a href="https://en.wikipedia.org/wiki/Properties_of_water#Density_of_water_and_ice">Wikipedia</a>: “The unusual density curve and lower density of ice than of water is vital to life—if water were most dense at the freezing point, then in winter the very cold water at the surface of lakes and other water bodies would sink, lakes could freeze from the bottom up, and all life in them would be killed. Furthermore, given that water is a good thermal insulator (due to its heat capacity), some frozen lakes might not completely thaw in summer.[34] The layer of ice that floats on top insulates the water below. Water at about 4 °C (39 °F) also sinks to the bottom, thus keeping the temperature of the water at the bottom constant.”<a href="PhaseEquilibrium.html#fnref53" class="footnote-back">↩︎</a></p></li>
-<li id="fn54"><p>For more information on the 2019 redefinition of the SI units, see <a href="https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units">this Wikipedia page</a>.<a href="PhaseEquilibrium.html#fnref54" class="footnote-back">↩︎</a></p></li>
-<li id="fn55"><p>Notice that quadruple points are possible for 2-component diagrams.<a href="PhaseEquilibrium.html#fnref55" class="footnote-back">↩︎</a></p></li>
-<li id="fn56"><p>Notice that the temperature of a liquid must be below the critical point, otherwise it is no longer a liquid but rather a supercritical fluid.<a href="PhaseEquilibrium.html#fnref56" class="footnote-back">↩︎</a></p></li>
+<ol start="21">
+<li id="fn21"><p>Even if we think at the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.<a href="thirdlaw.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>In cases where the temperature of the system changes throughout the process, <span class="math inline">\(T\)</span> is just the (constant) temperature of its immediate surroundings, <span class="math inline">\(T_{\text{surr}}\)</span>, as explained in section <a href="thirdlaw.html#dssurr">7.2</a>.<a href="thirdlaw.html#fnref22" class="footnote-back">↩︎</a></p></li>
+<li id="fn23"><p>Walther Nernst was awarded the 1920 Nobel Prize in Chemistry for his work in thermochemistry.<a href="thirdlaw.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p>A procedure that—in practice—might be extremely difficult to achieve.<a href="thirdlaw.html#fnref24" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -485,8 +496,8 @@ Figure 12.3: The Pressure–Temperature Phase Diagram.
           </div>
         </div>
       </div>
-<a href="RealGases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="MCPhaseDiagrams.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="SecondLaw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Potentials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -517,7 +528,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem1/edit/master/12_PhaseEquilibrium.Rmd",
+"link": "https://github.com/peverati/pchem1/edit/master/07_ThirdLaw.Rmd",
 "text": "Edit"
 },
 "history": {
