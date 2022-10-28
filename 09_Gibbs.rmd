@@ -117,7 +117,7 @@ Equation \@ref(eq:gibbshelm) is known as the **Gibbs–Helmholtz equation**, and
 
 \begin{equation}
 \begin{aligned}
-\int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\partial\left( \frac{\Delta_{\text{rxn}} G}{T} \right)}{\partial T} &=  - \int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\Delta_{\text{rxn}} H}{T^2} \\ \\ \frac{\Delta_{\text{rxn}} G^\standardstate(T)}{T} &=  \frac{\Delta_{\text{rxn}} G^\standardstate}{298 \;\text{K}} + \Delta_{\text{rxn}} H^\standardstate \left( \frac{1}{T^2} -\frac{1}{(298 \;\text{K})^2} \right),
+\int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\partial\left( \frac{\Delta_{\text{rxn}} G}{T} \right)}{\partial T} &=  - \int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\Delta_{\text{rxn}} H}{T^2} \\ \\ \frac{\Delta_{\text{rxn}} G^\standardstate(T)}{T} &=  \frac{\Delta_{\text{rxn}} G^\standardstate}{298 \;\text{K}} + \Delta_{\text{rxn}} H^\standardstate \left( \frac{1}{T} -\frac{1}{298 \;\text{K}} \right),
 \end{aligned}
 (\#eq:gibbshelmIbase)
 \end{equation}
@@ -125,7 +125,7 @@ Equation \@ref(eq:gibbshelm) is known as the **Gibbs–Helmholtz equation**, and
 giving the integrated Gibbs–Helmholtz equation:
 
 \begin{equation}
-\frac{\Delta_{\text{rxn}} G^\standardstate(T)}{T} =  \frac{\sum_i \nu_i \Delta_{\text{f}} G_i^\standardstate}{298 \;\text{K}} + \sum_i \nu_i \Delta_{\text{f}} H_i^\standardstate \left( \frac{1}{T^2} -\frac{1}{(298 \;\text{K})^2} \right)
+\frac{\Delta_{\text{rxn}} G^\standardstate(T)}{T} =  \frac{\sum_i \nu_i \Delta_{\text{f}} G_i^\standardstate}{298 \;\text{K}} + \sum_i \nu_i \Delta_{\text{f}} H_i^\standardstate \left( \frac{1}{T} -\frac{1}{298 \;\text{K}} \right)
 (\#eq:gibbshelmI)
 \end{equation}
 
