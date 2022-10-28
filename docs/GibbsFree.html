@@ -136,6 +136,8 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
 <ul>
@@ -280,7 +282,7 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="GibbsFree" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Gibbs Free Energy</h1>
-<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
+<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
 <div id="gibbseqsec" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Gibbs Equation</h2>
 <p>Recalling from chapter <a href="Potentials.html#Potentials">8</a>, the definition of <span class="math inline">\(G\)</span> is:</p>
@@ -302,7 +304,7 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 \end{aligned}
 \tag{9.3}
 \end{equation}\]</span></p>
-<p>which is the famous <strong>Gibbs equation</strong> for <span class="math inline">\(\Delta G\)</span>. Using Definition <a href="#def:helmgibbsminimum"><strong>??</strong></a>, we can use <span class="math inline">\(\Delta G\)</span> to infer the spontaneity of a chemical process that happens at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> using <span class="math inline">\(\Delta G \leq 0\)</span>. If we set ourselves at standard conditions, we can calculate the standard Gibbs free energy of formation, <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, for any reaction as:</p>
+<p>which is the famous <strong>Gibbs equation</strong> for <span class="math inline">\(\Delta G\)</span>. Using Definition <a href="Potentials.html#def:helmgibbsminimum">8.2</a>, we can use <span class="math inline">\(\Delta G\)</span> to infer the spontaneity of a chemical process that happens at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> using <span class="math inline">\(\Delta G \leq 0\)</span>. If we set ourselves at standard conditions, we can calculate the standard Gibbs free energy of formation, <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, for any reaction as:</p>
 <p><span class="math display" id="eq:gibbseq2">\[\begin{equation}
 \begin{aligned}
 \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}-T \Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}\\
@@ -311,7 +313,7 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 \end{aligned}
 \tag{9.4}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a></p>
 <p>The following four options are possible for <span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of a chemical reaction:</p>
 <table>
 <colgroup>
@@ -372,12 +374,12 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 </ul></li>
 </ul>
 <p>A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &gt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &lt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, the entropy will also reduce.</p>
-<p>As we saw in section <a href="Potentials.html#thermpot">8.2</a>, the natural variables of the Gibbs free energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. <a href="#eq:dhagchem2">(<strong>??</strong>)</a>):</p>
+<p>As we saw in section <a href="Potentials.html#thermpot">8.2</a>, the natural variables of the Gibbs free energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. <a href="Potentials.html#eq:dhagchem2">(8.16)</a>):</p>
 <p><span class="math display" id="eq:dgtotdiff">\[\begin{equation}
 dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 \tag{9.5}
 \end{equation}\]</span></p>
-<p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in eq. <a href="GibbsFree.html#eq:dgtotdiff">(9.5)</a>, which are given in eq. <a href="#eq:dhagchem3">(<strong>??</strong>)</a>.</p>
+<p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in eq. <a href="GibbsFree.html#eq:dgtotdiff">(9.5)</a>, which are given in eq. <a href="Potentials.html#eq:dhagchem3">(8.17)</a>.</p>
 </div>
 <div id="temperature-dependence-of-delta-g" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></h2>
@@ -428,7 +430,7 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
 \]</span></p>
-<p>We can now turn the attention to the second coefficient that gives how the Gibbs free energy changes when the pressure change. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From eq. <a href="#eq:dgdef2">(<strong>??</strong>)</a>:</p>
+<p>We can now turn the attention to the second coefficient that gives how the Gibbs free energy changes when the pressure change. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From eq. <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
 <p><span class="math display" id="eq:dgconsttp">\[\begin{equation}
 dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
 \tag{9.12}
@@ -469,7 +471,7 @@ Figure 9.1: Dependence of the Gibbs Free Energiy of Formation of Liquid and Gase
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
 \]</span></p>
-<p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs free energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
+<p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs free energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
 <p><span class="math display" id="eq:dgconstn">\[\begin{equation}
 \int_0^G d G = \int_0^n \mu^* dn,
 \tag{9.17}
@@ -536,10 +538,10 @@ P_i = y_i P,
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.<a href="GibbsFree.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book <a href="appendix.html#appendix">16</a>. For cases where <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="GibbsFree.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.<a href="GibbsFree.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<ol start="34">
+<li id="fn34"><p>The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.<a href="GibbsFree.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn35"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book <a href="appendix.html#appendix">16</a>. For cases where <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="GibbsFree.html#fnref35" class="footnote-back">↩︎</a></p></li>
+<li id="fn36"><p>For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.<a href="GibbsFree.html#fnref36" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
