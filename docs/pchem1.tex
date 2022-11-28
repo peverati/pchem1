@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{28 October 2022}
+\date{27 November 2022}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -1981,7 +1981,7 @@ From the knowledge of the natural variable of each potential, we could reconstru
 dU &= \underbrace{\left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
 dH &= \underbrace{\left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}}_{T} dS + \underbrace{\left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
 dA &= \underbrace{\left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}}_{-P} dV + \sum_i \underbrace{\left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}}}_{\mu_i} dn_i \\
-dG &= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
+dG &= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{-S} dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{V} dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\mu_i} dn_i\;,
 \end{aligned}
 \label{eq:dhagchem2}
 \end{equation}
@@ -1993,7 +1993,7 @@ we can derive the following new definitions:
  T &= \left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}} = \left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}  \\
 -P &= \left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}} = \left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}  \\
  V &= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}  \\
--S &= \left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}} = \left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}}  \\
+-S &= \left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}} = \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}  \\
 \text{and:}
 \\
  \mu_i &=  \left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}} =  \left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}} \\
@@ -2023,7 +2023,7 @@ The relations in \eqref{eq:maxrelf} are called \textbf{Maxwell relations},\footn
 \emph{Solution:} We can start our derivation from the definition of \(V\) and \(S\) as a partial derivative of \(G\):
 
 \begin{equation}
- V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{V,\{n_i\}},
+ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}},
 \end{equation}
 
 and then take a second partial derivative of each quantity with respect to the second variable:
@@ -2542,7 +2542,7 @@ which is the equation that produces the so-called \textbf{van 't Hoff plots}, fr
 \hypertarget{pressure-and-composition-dependence-of-k_texteq}{%
 \section{\texorpdfstring{Pressure and Composition Dependence of \(K_{\text{eq}}\)}{Pressure and Composition Dependence of K\_\{\textbackslash text\{eq\}\}}}\label{pressure-and-composition-dependence-of-k_texteq}}
 
-While \(K_P\) is independent of both temperature and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants.
+While \(K_P\) is independent of both total pressure and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants.
 
 \begin{equation}
 \left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i} \right)_{T,P} =0.
@@ -3435,8 +3435,10 @@ Eq. \eqref{eq:clacla} is known as the \textbf{Clausius--Clapeyron equation}, and
 
 The integrated Clausius--Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from \(P^*=0.02\;\text{bar}\) to \(P^*=1\;\text{bar}\) when the temperature is increased from \(T=293\;\mathrm{K}\) (around room temperature) to \(T=373\;\mathrm{K}\) (boiling point). The integrated Clausius--Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.
 
+\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+
 \hypertarget{MCPhaseDiagrams}{%
-\chapter{Multi-Component Phase Diagrams}\label{MCPhaseDiagrams}}
+\chapter{Multi-Component Phase Diagrams and Solutions}\label{MCPhaseDiagrams}}
 
 We now move from studying 1-component systems to multi-component ones. Systems that include two or more chemical species are usually called \emph{solutions}. Solutions are possible for all three states of matter:
 
@@ -3623,100 +3625,6 @@ If we move from the \(Px_{\text{B}}\) diagram to the \(Tx_{\text{B}}\) diagram, 
 The minimum (left plot) and maximum (right plot) points in Figure \ref{fig:FigMC8} represent the so-called \emph{azeotrope}.
 
 An azeotrope is a constant boiling point solution whose composition cannot be altered or changed by simple distillation. This happens because the liquidus and Dew point lines coincide at this point. Therefore, the liquid and the vapor phases have the same composition, and distillation cannot occur. Two types of azeotropes exist, representative of the two types of non-ideal behavior of solutions. The first type is the positive azeotrope (left plot in Figure \ref{fig:FigMC8}). A notorious example of this behavior at atmospheric pressure is the ethanol/water mixture, with composition 95.63\% ethanol by mass. This positive azeotrope boils at \(T=78.2\;^\circ \text{C}\), a temperature that is lower than the boiling points of the pure constituents, since ethanol boils at \(T=78.4\;^\circ \text{C}\) and water at \(T=100\;^\circ \text{C}\). The second type is the negative azeotrope (right plot in Figure \ref{fig:FigMC8}). An example of this behavior at atmospheric pressure is the hydrochloric acid/water mixture with composition 20.2\% hydrochloric acid by mass. This negative azeotrope boils at \(T=110\;^\circ \text{C}\), a temperature that is higher than the boiling points of the pure constituents, since hydrochloric acid boils at \(T=-84\;^\circ \text{C}\) and water at \(T=100\;^\circ \text{C}\).
-
-\hypertarget{phase-diagrams-of-2-components2-condensed-phases-systems}{%
-\section{Phase Diagrams of 2-Components/2-Condensed Phases Systems}\label{phase-diagrams-of-2-components2-condensed-phases-systems}}
-
-We now consider equilibria between two condensed phases: liquid/liquid, liquid/solid, and solid/solid. These equilibria usually occur in the low-temperature region of a phase diagram (or high pressure). Three situations are possible, depending on the constituents and concentration of the mixture.
-
-\hypertarget{totally-miscible}{%
-\subsection{Totally miscible}\label{totally-miscible}}
-
-We have already encountered the situation where the components of a solution mix entirely in the liquid phase. All the diagrams that we've discussed up to this point belong to this category.
-
-\hypertarget{totally-immiscible}{%
-\subsection{Totally immiscible}\label{totally-immiscible}}
-
-A more complicated case is that for components that do not mix in the liquid phase. The liquid region of the temperature--composition phase diagram for a solution with components that do not mix in the liquid phase below a specific temperature is reported in Figure \ref{fig:FigMC9}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.027} 
-
-}
-
-\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Completely Immiscible in the Liquid Phase.}\label{fig:FigMC9}
-\end{figure}
-
-While the liquid 1+liquid 2 region (white area in Figure \ref{fig:FigMC9}) might seem similar to the liquid region that sits on top of it (blue area in Figure \ref{fig:FigMC9}), it is substantially different in nature. To prove this, we can calculate the degrees of freedom in each region using the Gibbs phase rule. For the liquid region at the top of the diagram, at constant pressure, we have \(f=2-1+1=2\). In other words, the temperature and the composition are independent, and their values can be changed regardless of each other. In the liquid 1+liquid 2 at the bottom, however, we have \(f=2-2+1=1\), which means that only one variable is independent of the others. The white region in Figure \ref{fig:FigMC9} is a 2-phase region, and it behaves similarly to the other 2-phases regions that we encountered before, such as the inner portion of the lens in Figure \ref{fig:FigMC4}. In other words, since the two components are entirely immiscible, once we set the temperature at a value below the immiscibility line, the concentration of the two liquids will be determined by tracing a horizontal line and by reading the concentrations on the left and right of the diagram (corresponding to 100\% \(\mathrm{A}\) and 100\% \(\mathrm{B}\), respectively).
-
-\hypertarget{partially-miscible}{%
-\subsection{Partially miscible}\label{partially-miscible}}
-
-The third and final case is undoubtedly the most interesting since several behaviors are possible. In fact, there might be components that are partially miscible at low temperatures but totally miscible at higher temperatures, for which the diagram will assume the general shape depicted in Figure \ref{fig:FigMC10}. A typical example of this behavior is the mixture between water and phenol, whose liquids are completely miscible at \(T>66\;^\circ \text{C}\), and only partially miscible below this temperature. The composition of the 2-phases region (white area in Figure \ref{fig:FigMC10}) is determined by tracing a horizontal line and reading the mole fraction on the line that delimits the area, as for the previous case.\footnote{The only noticeable difference, in this case, is that the two concentrations will be different than 0 and 100\% since the component mix partially.}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.028} 
-
-}
-
-\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at Low Temperature in the Liquid Phase, but Completely Miscible at High Temperatures}\label{fig:FigMC10}
-\end{figure}
-
-On the opposite side of the spectrum, the diagram for a mixture whose components are partially miscible at high temperature, but completely miscible at lower temperatures is depicted in Figure \ref{fig:FigMC11}. A typical example of this behavior is the mixture between water and triethylamine, whose liquids are completely miscible at \(T<18.5\;^\circ \text{C}\), and only partially miscible above this temperature.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.029} 
-
-}
-
-\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible at High Temperature in the Liquid Phase, but Completely Miscible at Low Temperatures.}\label{fig:FigMC11}
-\end{figure}
-
-Finally, both situations described above are possible simultaneously. For some particular solutions, there exists a range of temperature where the two components are only partially miscible. A typical example of this behavior is given by the water/nicotine mixture, whose liquids are completely miscible at \(T>210\;^\circ \text{C}\) and \(T<61\;^\circ \text{C}\), but only partially miscible in between these two temperatures, as in the diagram of Figure \ref{fig:FigMC12}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.030} 
-
-}
-
-\caption{The Liquid Region of the Temperature–Composition Phase Diagram of Solutions Containing Two Components that are Partially Immiscible Only Between Two Temperatures.}\label{fig:FigMC12}
-\end{figure}
-
-\hypertarget{eutectic-systems}{%
-\subsection{Eutectic systems}\label{eutectic-systems}}
-
-For some particular mixture, the temperature of partial miscibility in the liquid/liquid region might be close to the azeotrope temperature. In some cases, these two regions might even overlap. These characteristic behaviors are reported in Figure \ref{fig:FigMC13}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.031} 
-
-}
-
-\caption{Interaction Between the Liquid/Gas and Liquid/Liquid Equilibria.}\label{fig:FigMC13}
-\end{figure}
-
-When the azeotrope and partially miscibility temperature overlap, the system forms what is known as an \emph{eutectic}. Eutectic diagrams are possible at the liquid/gas equilibrium. Still, they are widespread at the liquid/solid equilibrium, where two components are completely miscible in the liquid phase, but only partially miscible in the solid phase. Eutectics with completely immiscible components in the solid phase are also very common, as the diagram reported in Figure \ref{fig:FigMC14}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.032} 
-
-}
-
-\caption{Typical Eutectic System with Components that are Completely Miscible in the Liquid Phase and Completely Immiscible in the Solid Phase.}\label{fig:FigMC14}
-\end{figure}
-
-\renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
-
-\hypertarget{Solutions}{%
-\chapter{Properties of Solutions}\label{Solutions}}
-
-In chapter \ref{MCPhaseDiagrams}, we have qualitatively described the deviation of real solutions from ideal behavior. In this section, we are discussing it quantitatively. We will be able to do so by using a concept that we have already encountered in chapter \ref{ChemicalEquilibrium}: Lewis's activity.
 
 \hypertarget{activity}{%
 \section{Activity}\label{activity}}
