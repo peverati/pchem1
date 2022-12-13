@@ -204,7 +204,7 @@ The units of $k$ for a complex second order reaction can be calculated from eq. 
 The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.
 
 ### Third and higher orders reaction
-Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called *termolelucar reactions*. While termolelucar reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
+Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called *termolecular reactions*. While termolecular reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
 
 \begin{equation}
 2\text{NO}_{(g)}+\text{O}_{2(g)}\longrightarrow 2\text{NO}_{2(g)}
@@ -595,7 +595,7 @@ and then determine $\alpha$ by verifying which order the data collected for $[\m
 The dependence of the rate coefficient, $k$, on the temperature is given by the **Arrhenius equation**. This formula was derived by Svante August Arrhenius (1859–1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van 't Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of $k$ when $T$ is increased:
 
 \begin{equation}
-k=A\exp\left( \frac{E_a}{RT}\right),
+k=A\exp\left( -\frac{E_a}{RT}\right),
 (\#eq:Arr1)
 \end{equation}
 
@@ -605,7 +605,7 @@ The Arrhenius equation is experimentally useful in its linearized form, which is
 
 
 \begin{equation}
-\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{RT}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
 (\#eq:Arr2)
 \end{equation}
 

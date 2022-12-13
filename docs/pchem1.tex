@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{27 November 2022}
+\date{13 December 2022}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -189,6 +189,15 @@ Each chapter of this book represents one week of work in the classroom and at ho
 \begin{quote}
 If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati@fit.edu}{email} and you will receive a credit of up to three points towards your final score, once the typo has been verified and corrected.
 \end{quote}
+
+\hypertarget{a-note-on-units}{%
+\section*{A note on units}\label{a-note-on-units}}
+\addcontentsline{toc}{section}{A note on units}
+
+In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (K), energetic terms will be measured in either Joules (J) or kiloJoules (kJ), while volumes will be measured in cubic meters, or more often in liters (L), where \(1\;\mathrm{L} = 10^{-3}\;\mathrm{m^3}\). An important exception is made for pressures, which will be measured in bars (bar). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (Pa), where \(1\;\mathrm{bar} = 10^5\;\mathrm{ Pa}\). This choice is made to retain a reasonable similarity with the unit atmosphere (atm) which is extensively used in other textbooks (\(1\;\mathrm{ atm} = 1.013\;\mathrm{ bar}\)) and in previous physical chemistry courses.
+
+We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of 273.15 K.
+Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting \(P_{atm} = 1\;\mathrm{bar}\), rather than \(P_{atm} = 1\;\mathrm{atm} = 1.013\;\mathrm{bar}\), an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
 
 \cleardoublepage
 \pagenumbering{arabic}
@@ -4033,7 +4042,7 @@ which, perhaps not surprisingly, depends on the initial concentration of the rea
 \hypertarget{third-and-higher-orders-reaction}{%
 \subsection{Third and higher orders reaction}\label{third-and-higher-orders-reaction}}
 
-Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called \emph{termolelucar reactions}. While termolelucar reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
+Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called \emph{termolecular reactions}. While termolecular reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
 
 \begin{equation}
 2\text{NO}_{(g)}+\text{O}_{2(g)}\longrightarrow 2\text{NO}_{2(g)}
@@ -4399,7 +4408,7 @@ and then determine \(\alpha\) by verifying which order the data collected for \(
 The dependence of the rate coefficient, \(k\), on the temperature is given by the \textbf{Arrhenius equation}. This formula was derived by Svante August Arrhenius (1859--1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van 't Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of \(k\) when \(T\) is increased:
 
 \begin{equation}
-k=A\exp\left( \frac{E_a}{RT}\right),
+k=A\exp\left( -\frac{E_a}{RT}\right),
 \label{eq:Arr1}
 \end{equation}
 
@@ -4408,7 +4417,7 @@ where \(A\) is the so-called Arrhenius pre-exponential factor, and \(E_a\) is th
 The Arrhenius equation is experimentally useful in its linearized form, which is obtained from two Arrhenius experiments, taken at different temperatures. Applying eq. \eqref{eq:Arr1} to two different experiments, and taking the ratio between the results, we obtain:
 
 \begin{equation}
-\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{RT}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
 \label{eq:Arr2}
 \end{equation}
 

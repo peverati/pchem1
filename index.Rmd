@@ -45,4 +45,10 @@ Each chapter of this book represents one week of work in the classroom and at ho
 
 > If you spot a mistake or a typo, contact Dr. Peverati via [email](mailto:rpeverati@fit.edu) and you will receive a credit of up to three points towards your final score, once the typo has been verified and corrected. 
 
-[//]: ## A note on units {-}
+## A note on units {-}
+In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (K), energetic terms will be measured in either Joules (J) or kiloJoules (kJ), while volumes will be measured in cubic meters, or more often in liters (L), where $1\;\mathrm{L} = 10^{-3}\;\mathrm{m^3}$. An important exception is made for pressures, which will be measured in bars (bar). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (Pa), where $1\;\mathrm{bar} = 10^5\;\mathrm{ Pa}$. This choice is made to retain a reasonable similarity with the unit atmosphere (atm) which is extensively used in other textbooks ($1\;\mathrm{ atm} = 1.013\;\mathrm{ bar}$) and in previous physical chemistry courses. 
+
+
+We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of 273.15 K.
+Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting $P_{atm} = 1\;\mathrm{bar}$, rather than $P_{atm} = 1\;\mathrm{atm} = 1.013\;\mathrm{bar}$, an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
+
