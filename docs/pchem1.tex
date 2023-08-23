@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{13 December 2022}
+\date{23 August 2023}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -597,7 +597,7 @@ The integral on the right hand side of eq. \eqref{eq:WintsolvedV2} can be solved
 
 This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an \(\infty\)-step process.
 
-The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.\footnote{In contrast to a lower bound for expansion processes.} \(\left| W_{\text{min}} \right|\) for compressions is calculated as the area underneath the PV curve, exactly as \(\left| W_{\text{min}} \right|\) for expansions in eq. \eqref{eq:WintsolvedV2}.
+The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.\footnote{In contrast to a lower bound for expansion processes.} \(\left| W_{\text{min}} \right|\) for compressions is calculated as the area underneath the \(PV\) curve, exactly as \(\left| W_{\text{max}} \right|\) for expansions in eq. \eqref{eq:WintsolvedV2}.
 
 \hypertarget{FirstLaw}{%
 \chapter{First Law of Thermodynamics}\label{FirstLaw}}
@@ -1523,7 +1523,7 @@ with \(\Delta_1 S^{\text{sys}}\) calculated at constant \(P\), and \(\Delta_2 S^
 
 \begin{itemize}
 \item
-  For an ideal gas at constant temperature \(\Delta U =0\), and \(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\). Using the formula for \(W_{\mathrm{REV}}\) in either eq. \eqref{eq:WintsolvedV} or eq. \eqref{eq:WintsolvedP}, we obtain:
+  For an ideal gas at constant temperature \(\Delta U =0\), and \(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\). Using the formula for \(W_{\mathrm{REV}}\) in eq. \eqref{eq:WintsolvedV2} (or its analogue for \(P\)), we obtain:
   \begin{equation}
   \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
   \label{eq:sigconsttV}
@@ -2457,7 +2457,7 @@ K_{\text{eq}} =\prod_i a_{i,\text{eq}}^{\nu_i},
 \label{eq:kdef}
 \end{equation}
 
-where we have replaced the partial pressure at equilibrium, \(P_{i,\text{eq}}\), with a new concept introduced initially by Gilbert Newton Lewis (1875--1946),\footnote{Gilber Lewis is the same scientist that invented the concept of Lewis Structures.} that he termed \textbf{activity}, and represented by the letter \(a\). For ideal gases, it is clear that \(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\). For non-ideal gases, the activity is equal to the fugacity \(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\), a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply \(a_i=1\). For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction \(x_i\) in the liquid phase, and \(y_i\) in the gas phase, or the molar concentration \([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\) with \([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter \ref{Solutions}, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:
+where we have replaced the partial pressure at equilibrium, \(P_{i,\text{eq}}\), with a new concept introduced initially by Gilbert Newton Lewis (1875--1946),\footnote{Gilber Lewis is the same scientist that invented the concept of Lewis Structures.} that he termed \textbf{activity}, and represented by the letter \(a\). For ideal gases, it is clear that \(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\). For non-ideal gases, the activity is equal to the fugacity \(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\), a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply \(a_i=1\). For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction \(x_i\) in the liquid phase, and \(y_i\) in the gas phase, or the molar concentration \([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\) with \([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter \ref{MCPhaseDiagrams}, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:
 
 \begin{equation}
 K_y =\prod_i \left( y_{i,\text{eq}} \right)^{\nu_i} \qquad \qquad \qquad \qquad K_C =\left( \prod_i [i]_{\text{eq}}/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\right)^{\nu_i},
@@ -4178,7 +4178,7 @@ Assuming that each step follows first order kinetic, we can write:
 \frac{d[\mathrm{B}]}{dt} &=k_1 [\mathrm{A}] \Rightarrow [\mathrm{B}]=\frac{k_1}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\} \\
 \frac{d[\mathrm{C}]}{dt} &=k_2 [\mathrm{A}]\Rightarrow [\mathrm{C}]=\frac{k_2}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\}.
 \end{aligned}
-\label{eq:kincomp2}
+\label{eq:kincomp4b}
 \end{equation}
 
 The concentration of each of the species can then be plotted against time, obtaining the diagram reported in Figure \ref{fig:figk7}. The final concentrations of the products, \([\mathrm{B}]_f\) and \([\mathrm{C}]_f\), will depend on the values of the two rate coefficients. For example, if \(k_1>k_2\), \([\mathrm{B}]_f>[\mathrm{C}]_f\), as in Figure \ref{fig:figk7}, but if \(k_1<k_2\), \([\mathrm{B}]_f<[\mathrm{C}]_f\).
@@ -4196,7 +4196,7 @@ An important relationship that can be derived from eq. \eqref{eq:kincomp2} is th
 
 \begin{equation}
 \frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
-\label{eq:kincomp3}
+\label{eq:kincomp5b}
 \end{equation}
 
 \hypertarget{opposed-reactions}{%
@@ -4378,7 +4378,7 @@ From each experiment we can determine the \emph{pseudo-order} of the reaction wi
 
 \begin{equation}
 \text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}
-\label{eq:kiniso1}
+\label{eq:kiniso2}
 \end{equation}
 
 and we can write the initial concentrations, \([X]_0\), and the final concentrations, \([X]_f\), of each of the species in experiment 1, as:

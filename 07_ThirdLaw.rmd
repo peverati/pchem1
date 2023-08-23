@@ -35,7 +35,7 @@ with $\Delta_1 S^{\text{sys}}$ calculated at constant $P$, and $\Delta_2 S^{\tex
 
 ### Entropy in isothermal processes 
 
-- For an ideal gas at constant temperature $\Delta U =0$, and $Q_{\mathrm{REV}} = -W_{\mathrm{REV}}$. Using the formula for $W_{\mathrm{REV}}$ in either eq. \@ref(eq:WintsolvedV) or eq. \@ref(eq:WintsolvedP), we obtain:
+- For an ideal gas at constant temperature $\Delta U =0$, and $Q_{\mathrm{REV}} = -W_{\mathrm{REV}}$. Using the formula for $W_{\mathrm{REV}}$ in eq. \@ref(eq:WintsolvedV2) (or its analogue for $P$), we obtain:
 \begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
 (\#eq:sigconsttV)

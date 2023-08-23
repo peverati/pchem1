@@ -375,7 +375,7 @@ Assuming that each step follows first order kinetic, we can write:
 \frac{d[\mathrm{B}]}{dt} &=k_1 [\mathrm{A}] \Rightarrow [\mathrm{B}]=\frac{k_1}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\} \\
 \frac{d[\mathrm{C}]}{dt} &=k_2 [\mathrm{A}]\Rightarrow [\mathrm{C}]=\frac{k_2}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\}.
 \end{aligned}
-(\#eq:kincomp2)
+(\#eq:kincomp4b)
 \end{equation}
 
 The concentration of each of the species can then be plotted against time, obtaining the diagram reported in Figure \@ref(fig:figk7). The final concentrations of the products, $[\mathrm{B}]_f$ and $[\mathrm{C}]_f$, will depend on the values of the two rate coefficients. For example, if $k_1>k_2$, $[\mathrm{B}]_f>[\mathrm{C}]_f$, as in Figure \@ref(fig:figk7), but if $k_1<k_2$, $[\mathrm{B}]_f<[\mathrm{C}]_f$.
@@ -414,7 +414,7 @@ An important relationship that can be derived from eq. \@ref(eq:kincomp2) is tha
 
 \begin{equation}
 \frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
-(\#eq:kincomp3)
+(\#eq:kincomp5b)
 \end{equation}
 
 ### Opposed reactions
@@ -567,7 +567,7 @@ From each experiment we can determine the *pseudo-order* of the reaction with re
 
 \begin{equation}
 \text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}
-(\#eq:kiniso1)
+(\#eq:kiniso2)
 \end{equation}
 
 and we can write the initial concentrations, $[X]_0$, and the final concentrations, $[X]_f$, of each of the species in experiment 1, as:

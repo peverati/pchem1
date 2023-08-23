@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-12-13" />
+<meta name="date" content="2023-08-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -521,13 +521,13 @@ A &amp;   &amp; \\
 \end{matrix}
 \end{equation}\]</span></p>
 <p>Assuming that each step follows first order kinetic, we can write:</p>
-<p><span class="math display" id="eq:kincomp2">\[\begin{equation}
+<p><span class="math display" id="eq:kincomp4b">\[\begin{equation}
 \begin{aligned}
 -\frac{d[\mathrm{A}]}{dt} &amp;=k_1 [\mathrm{A}]+k_2 [\mathrm{A}] \Rightarrow [\mathrm{A}]=[\mathrm{A}]_0\exp \left[ -(k_1+k_2)t \right] \\
 \frac{d[\mathrm{B}]}{dt} &amp;=k_1 [\mathrm{A}] \Rightarrow [\mathrm{B}]=\frac{k_1}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\} \\
 \frac{d[\mathrm{C}]}{dt} &amp;=k_2 [\mathrm{A}]\Rightarrow [\mathrm{C}]=\frac{k_2}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\}.
 \end{aligned}
-\tag{14.13}
+\tag{14.20}
 \end{equation}\]</span></p>
 <p>The concentration of each of the species can then be plotted against time, obtaining the diagram reported in Figure <a href="Kinetics.html#fig:figk7">14.7</a>. The final concentrations of the products, <span class="math inline">\([\mathrm{B}]_f\)</span> and <span class="math inline">\([\mathrm{C}]_f\)</span>, will depend on the values of the two rate coefficients. For example, if <span class="math inline">\(k_1&gt;k_2\)</span>, <span class="math inline">\([\mathrm{B}]_f&gt;[\mathrm{C}]_f\)</span>, as in Figure <a href="Kinetics.html#fig:figk7">14.7</a>, but if <span class="math inline">\(k_1&lt;k_2\)</span>, <span class="math inline">\([\mathrm{B}]_f&lt;[\mathrm{C}]_f\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:figk7"></span>
@@ -537,9 +537,9 @@ Figure 14.7: Concentration Plot for a Process with Two Competitive Reactions.
 </p>
 </div>
 <p>An important relationship that can be derived from eq. <a href="Kinetics.html#eq:kincomp2">(14.13)</a> is that:</p>
-<p><span class="math display" id="eq:kincomp3">\[\begin{equation}
+<p><span class="math display" id="eq:kincomp5b">\[\begin{equation}
 \frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
-\tag{14.14}
+\tag{14.21}
 \end{equation}\]</span></p>
 </div>
 <div id="opposed-reactions" class="section level3" number="14.2.3">
@@ -554,7 +554,7 @@ Figure 14.7: Concentration Plot for a Process with Two Competitive Reactions.
 -\frac{d[\mathrm{A}]}{dt} &amp;=k_1 [\mathrm{A}]-k_{-1} [\mathrm{B}] = k_1 [\mathrm{A}]-k_{-1}\left([\mathrm{A}]_0-[\mathrm{A}]\right) \\
 \frac{d[\mathrm{A}]}{dt} &amp;=-(k_1+k_{-1})[\mathrm{A}] + k_{-1}[\mathrm{A}]_0,
 \end{aligned}
-\tag{14.20}
+\tag{14.22}
 \end{equation}\]</span></p>
 <p>which can then be integrated to:</p>
 <p><span class="math display" id="eq:kinopp2">\[\begin{equation}
@@ -562,7 +562,7 @@ Figure 14.7: Concentration Plot for a Process with Two Competitive Reactions.
 \left[\mathrm{A}\right] &amp;=[\mathrm{A}]_0\frac{k_{-1}+k_1\exp[-(k_1+k_{-1})t]}{k_1+k_{-1}} \\
 \left[\mathrm{B}\right] &amp;=[\mathrm{A}]_0\left\{ 1-\frac{k_{-1}+k_1\exp[-(k_1+k_{-1})t]}{k_1+k_{-1}}\right\}.
 \end{aligned}
-\tag{14.21}
+\tag{14.23}
 \end{equation}\]</span></p>
 <p>These formulas can then be used to obtain the plots in Figure <a href="Kinetics.html#fig:figkK">14.8</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:figkK"></span>
@@ -571,13 +571,13 @@ Figure 14.7: Concentration Plot for a Process with Two Competitive Reactions.
 Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
 </p>
 </div>
-<p>As can be seen from the plots in Figure <a href="Kinetics.html#fig:figkK">14.8</a>, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> don’t change. These equilibrium concentrations can be calculated replacing <span class="math inline">\(t=\infty\)</span> in eq. <a href="Kinetics.html#eq:kinopp1">(14.20)</a>:</p>
+<p>As can be seen from the plots in Figure <a href="Kinetics.html#fig:figkK">14.8</a>, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> don’t change. These equilibrium concentrations can be calculated replacing <span class="math inline">\(t=\infty\)</span> in eq. <a href="Kinetics.html#eq:kinopp1">(14.22)</a>:</p>
 <p><span class="math display" id="eq:kinopp3">\[\begin{equation}
 \begin{aligned}
 \left[\mathrm{A} \right] _{\mathrm{eq}} &amp;= [\mathrm{A}]_0 \frac{k_{-1}}{k_1+k_{-1}} \\
 [\mathrm{B}]_{\mathrm{eq}} &amp;= [\mathrm{A}]_0 \frac{k_{1}}{k_1+k_{-1}}.
 \end{aligned}
-\tag{14.22}
+\tag{14.24}
 \end{equation}\]</span></p>
 <p>Considering that the concentrations of the species don’t change at equilibrium:</p>
 <p><span class="math display" id="eq:kinopp4">\[\begin{equation}
@@ -586,7 +586,7 @@ Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
 &amp; \Rightarrow \; k_1[\mathrm{A}]_{\mathrm{eq}} = k_{-1}[\mathrm{B}]_{\mathrm{eq}} \\
 &amp; \Rightarrow \;  \frac{k_1}{k_{-1}} =  \frac{[\mathrm{B}]_{\mathrm{eq}}}{[\mathrm{A}]_{\mathrm{eq}}} = K_C, \\
 \end{aligned}
-\tag{14.23}
+\tag{14.25}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(K_C\)</span> is the equilibrium constant as defined in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>. This is a rare link between kinetics and thermodynamics and appears only for opposed reactions after sufficient time has passed so that the system can reach the dynamic equilibrium.</p>
 </div>
@@ -659,7 +659,7 @@ Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
 <p>the initial rate method can be used to determine the coefficients of the rate law:</p>
 <p><span class="math display" id="eq:kinini1">\[\begin{equation}
 \text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}
-\tag{14.24}
+\tag{14.26}
 \end{equation}\]</span></p>
 <p>by designing three experiment, where the initial concentrations of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> are appropriately changed. For example, let’s consider the following experimental data from three different experiments:</p>
 <table>
@@ -706,7 +706,7 @@ Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
 0.445&amp;=0.667^\alpha \;\rightarrow\; \ln0.445=\alpha \ln0.667 \\
 \alpha &amp;= \frac{-0.81}{-0.405}=2.
 \end{aligned}
-\tag{14.25}
+\tag{14.27}
 \end{equation}\]</span></p>
 <p><span class="math inline">\(\beta\)</span> can be calculated similarly by taking the ratio between experiments 1 and 3. Alternatively, we can also notice that the reaction rate does not change when the initial concentration <span class="math inline">\([\mathrm{B}]_0\)</span> is doubled, therefore <span class="math inline">\(\beta=0\)</span>.</p>
 </div>
@@ -723,9 +723,9 @@ Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
 <li><p>Experiment 3: <span class="math inline">\([\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1\;\text{M},\)</span> in which the reaction order with respect to <span class="math inline">\(\mathrm{C}\)</span> is measured.</p></li>
 </ul>
 <p>From each experiment we can determine the <em>pseudo-order</em> of the reaction with respect to the reagent that is in minority concentration. For example, for the reaction above, we can write the rate law as:</p>
-<p><span class="math display" id="eq:kiniso1">\[\begin{equation}
+<p><span class="math display" id="eq:kiniso2">\[\begin{equation}
 \text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}
-\tag{14.25}
+\tag{14.28}
 \end{equation}\]</span></p>
 <p>and we can write the initial concentrations, <span class="math inline">\([X]_0\)</span>, and the final concentrations, <span class="math inline">\([X]_f\)</span>, of each of the species in experiment 1, as:</p>
 <p><span class="math display">\[\begin{equation}
@@ -750,13 +750,13 @@ Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
 <p>The dependence of the rate coefficient, <span class="math inline">\(k\)</span>, on the temperature is given by the <strong>Arrhenius equation</strong>. This formula was derived by Svante August Arrhenius (1859–1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van ’t Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of <span class="math inline">\(k\)</span> when <span class="math inline">\(T\)</span> is increased:</p>
 <p><span class="math display" id="eq:Arr1">\[\begin{equation}
 k=A\exp\left( -\frac{E_a}{RT}\right),
-\tag{14.26}
+\tag{14.29}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(A\)</span> is the so-called Arrhenius pre-exponential factor, and <span class="math inline">\(E_a\)</span> is the activation energy. Both of these terms are independent of temperature,<a href="#fn61" class="footnote-ref" id="fnref61"><sup>61</sup></a> and they represent experimental quantities that are unique to each individual reaction. Since there is no known exception to the fact that a temperature increase speeds up chemical reactions, both <span class="math inline">\(A\)</span> and <span class="math inline">\(E_a\)</span> are always positive. The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, <span class="math inline">\(\frac{\mathrm{J}}{\mathrm{mol}}\)</span> in SI.</p>
-<p>The Arrhenius equation is experimentally useful in its linearized form, which is obtained from two Arrhenius experiments, taken at different temperatures. Applying eq. <a href="Kinetics.html#eq:Arr1">(14.26)</a> to two different experiments, and taking the ratio between the results, we obtain:</p>
+<p>The Arrhenius equation is experimentally useful in its linearized form, which is obtained from two Arrhenius experiments, taken at different temperatures. Applying eq. <a href="Kinetics.html#eq:Arr1">(14.29)</a> to two different experiments, and taking the ratio between the results, we obtain:</p>
 <p><span class="math display" id="eq:Arr2">\[\begin{equation}
 \ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
-\tag{14.27}
+\tag{14.30}
 \end{equation}\]</span></p>
 <p>which gives the plot of Figure <a href="Kinetics.html#fig:figk8">14.9</a>, from which <span class="math inline">\(E_a\)</span> can be determined.</p>
 <div class="figure" style="text-align: center"><span id="fig:figk8"></span>
