@@ -198,7 +198,7 @@ d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathr
 According to the second law, for any spontaneous process $d S^{\mathrm{universe}}\geq0$, and therefore, replacing it into eq. \@ref(eq:dssysd):
 
 \begin{equation}
-d S^{\mathrm{sys}} \geq \frac{đQ}{T},
+d S^{\mathrm{sys}} \geq \frac{đQ_{\text{sys}}}{T},
 (\#eq:dssyscrit7)
 \end{equation}
 
@@ -206,9 +206,9 @@ which is the mathematical expression of the so-called **Clausius theorem**. Eq. 
 
 \begin{equation}
 \begin{aligned}
-d S^{\mathrm{sys}} > \frac{đQ}{T} \qquad &\text{spontaneous, irreversible transformation} \\
-d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &\text{reversible transformation} \\
-d S^{\mathrm{sys}} < \frac{đQ}{T} \qquad &\text{non-spontaneous, irreversible transformation}, 
+d S^{\mathrm{sys}} > \frac{đQ_{\text{sys}}}{T} \qquad &\text{spontaneous, irreversible transformation} \\
+d S^{\mathrm{sys}} = \frac{đQ_{\text{sys}}}{T} \qquad &\text{reversible transformation} \\
+d S^{\mathrm{sys}} < \frac{đQ_{\text{sys}}}{T} \qquad &\text{non-spontaneous, irreversible transformation}, 
 \end{aligned}
 (\#eq:dssyscond)
 \end{equation}

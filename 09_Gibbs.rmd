@@ -176,7 +176,7 @@ For liquids and solids, $V$ is essentially independent of $P$ (liquids and solid
 
 The plots in Figure \@ref(fig:gdeppfig) show the remarkable difference in the behaviors of $\Delta_{\text{f}} G$ for a gas and for a liquid, as obtained from eqs. \@ref(eq:dgconsttpintegral1) and \@ref(eq:dgconsttpintegral3).
 
-```{r gdeppfig, echo=FALSE, fig.align='center', fig.cap='Dependence of the Gibbs Free Energiy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.',fig.asp = .62}
+```{r gdeppfig, echo=FALSE, fig.align='center', fig.cap='Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.',fig.asp = .62}
 x <- seq(0.01,10,0.1)
 i <- 0.2
 f <- 1

@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{02 October 2023}
+\date{06 December 2023}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -270,7 +270,7 @@ What are the ``relevant variables'' of a system? The answer to this question dep
   \label{eq:idealgaslaworiginal}
 \end{equation}
 
-Therefore, the natural variables for an ideal gas are the pressure P, the volume V, the number of moles n, and the temperature T, with R being the ideal gas constant. Recalling from the general chemistry courses, R is a universal dimensional constant which has the values of R = 8.31 kJ/mol in SI units.\\
+Therefore, the natural variables for an ideal gas are the pressure P, the volume V, the number of moles n, and the temperature T, with R being the ideal gas constant. Recalling from the general chemistry courses, R is a universal dimensional constant which has the values of R = 8.31 J/(mol K) in SI units.\\
 We will use the ideal gas equation and its variables as an example to discuss variables and functions in this chapter. We will analyze more complicated cases in the next chapters.
 Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:
 
@@ -373,7 +373,7 @@ We will return to exact and inexact differential when we discuss heat and work, 
 \hypertarget{what-is-thermodynamics}{%
 \section{What is Thermodynamics?}\label{what-is-thermodynamics}}
 
-Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A formal definition of these forms of energy is as follow:
+Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A formal definition of these forms of energy is as follows:
 
 \begin{itemize}
 \tightlist
@@ -738,7 +738,7 @@ Replacing eq. \eqref{eq:enthalpydefdiffu} into eq. \eqref{eq:dUpdv}:
 which simplifies to:
 
 \begin{equation}
-  dH = đ Q_P.
+  dH = đ Q_P = n C_P dT.
   \label{eq:dh2}
 \end{equation}
 
@@ -1697,7 +1697,7 @@ d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathr
 According to the second law, for any spontaneous process \(d S^{\mathrm{universe}}\geq0\), and therefore, replacing it into eq. \eqref{eq:dssysd}:
 
 \begin{equation}
-d S^{\mathrm{sys}} \geq \frac{đQ}{T},
+d S^{\mathrm{sys}} \geq \frac{đQ_{\text{sys}}}{T},
 \label{eq:dssyscrit7}
 \end{equation}
 
@@ -1705,9 +1705,9 @@ which is the mathematical expression of the so-called \textbf{Clausius theorem}.
 
 \begin{equation}
 \begin{aligned}
-d S^{\mathrm{sys}} > \frac{đQ}{T} \qquad &\text{spontaneous, irreversible transformation} \\
-d S^{\mathrm{sys}} = \frac{đQ}{T} \qquad &\text{reversible transformation} \\
-d S^{\mathrm{sys}} < \frac{đQ}{T} \qquad &\text{non-spontaneous, irreversible transformation}, 
+d S^{\mathrm{sys}} > \frac{đQ_{\text{sys}}}{T} \qquad &\text{spontaneous, irreversible transformation} \\
+d S^{\mathrm{sys}} = \frac{đQ_{\text{sys}}}{T} \qquad &\text{reversible transformation} \\
+d S^{\mathrm{sys}} < \frac{đQ_{\text{sys}}}{T} \qquad &\text{non-spontaneous, irreversible transformation}, 
 \end{aligned}
 \label{eq:dssyscond}
 \end{equation}
@@ -2280,7 +2280,7 @@ The plots in Figure \ref{fig:gdeppfig} show the remarkable difference in the beh
 
 }
 
-\caption{Dependence of the Gibbs Free Energiy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.}\label{fig:gdeppfig}
+\caption{Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.}\label{fig:gdeppfig}
 \end{figure}
 
 \hypertarget{composition-dependence-of-delta-g}{%
@@ -2623,9 +2623,9 @@ We can divide the exercise into two parts. In the first one, we will deal with c
   \begin{equation}
   K_y (P^{-\kern-6pt{\ominus}\kern-6pt-},2\,298\;\text{K}) = 1.30 =\frac{1.30}{1}.
   \end{equation}
-  and calculate the initial concentration of \(\mathrm{Cl}_{(g)}\) and \(\mathrm{Cl}_{(g)}\) at \(P^{-\kern-6pt{\ominus}\kern-6pt-}\), recalling that \(y_{\mathrm{Cl}_{2(g)}}=1-y_{\mathrm{Cl}_{(g)}}:\)
+  and calculate the initial concentration of \(\mathrm{Cl}_{2(g)}\) and \(\mathrm{Cl}_{(g)}\) at \(P^{-\kern-6pt{\ominus}\kern-6pt-}\), recalling that \(y_{\mathrm{Cl}_{2(g)}}=1-y_{\mathrm{Cl}_{(g)}}:\)
   \begin{equation}
-  K_y (P_i,2\,298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
+  K_y (P_i,2\,298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{1-y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
   \end{equation}
   Solving the quadratic equation, we obtain one negative answer---which is unphysical---,\footnote{Concentration cannot be negative.} and:
   \begin{equation}
@@ -2637,7 +2637,7 @@ We can divide the exercise into two parts. In the first one, we will deal with c
   \end{equation}
   and, using the same technique used before to solve the quadratic equation:
   \begin{equation}
-  K_y (P_f,2\,298\;\text{K})=\frac{\left(y^f_{\mathrm{Cl}_{(g)}}\right)^2}{y^f_{\mathrm{Cl}_{(g)}}} = 0.520,
+  K_y (P_f,2\,298\;\text{K})=\frac{\left(y^f_{\mathrm{Cl}_{(g)}}\right)^2}{1-y^f_{\mathrm{Cl}_{(g)}}} = 0.520,
   \end{equation}
   gives:
   \begin{equation}
@@ -2892,7 +2892,7 @@ Xenon & 4.250 & 0.05105 \\
 
 We have already met William Thomson, also known as Lord Kelvin, and his seminal work on the second law of thermodynamics. In conjunction with that work, Thomson is famous for developing a sensitive method for measuring the temperature changes related to the expansion of a gas. These experiments improved on the earlier work by James Joule, and Lord Kelvin's improved instrument depicted in Figure \ref{fig:FigJT} is named the Joule--Thomson apparatus. The apparatus is composed of two chambers, each with its own mobile piston. The chambers are connected via a valve or a porous plug. The entire equipment is also thermally isolated from the surroundings. This instrument is a more sensitive version of the Joule expansion apparatus that we already described in section \ref{FirstLaw} (compare with Figure \ref{fig:FigJexp}).
 
-Thomson realized that a gas flowing through an obstruction experience a drop in pressure. If the entire apparatus is insulated, it will not exchange heat with its surroundings (\(Q=0\)), and each transformation will happen at adiabatic conditions. Let's consider an initial condition with 1 mol of gas in the left chamber, occupying a volume \(V_l\), and a completely closed right chamber, for which \(V_r^i=0\). After the process completes, the volume of the right chamber will reduce to \(V_l^f=0\), while the volume of the right chamber will be \(V_r\). Using the first law of thermodynamics, we can write:
+Thomson realized that a gas flowing through an obstruction experiences a drop in pressure. If the entire apparatus is insulated, it will not exchange heat with its surroundings (\(Q=0\)), and each transformation will happen at adiabatic conditions. Let's consider an initial condition with 1 mol of gas in the left chamber, occupying a volume \(V_l\), and a completely closed right chamber, for which \(V_r^i=0\). After the process completes, the volume of the left chamber will reduce to \(V_l^f=0\), while the volume of the right chamber will be \(V_r\). Using the first law of thermodynamics, we can write:
 
 \begin{equation}
 \Delta U=U_r-U_l=\underbrace{Q}_{=0}+W=W_l+W_r,
@@ -3098,14 +3098,14 @@ Notice how slicing the \(PT\overline{V}\) diagram at constant \(T\) results in t
 \hypertarget{fugacity}{%
 \section{Fugacity}\label{fugacity}}
 
-The chemical potential of a pure ideal gas can be calculated using eq. \eqref{eq:dgconstn4}. Since we are not interested in mixture, we can drop the asterisk in \(\mu^*\), and rewrite eq. \eqref{eq:dgconstn4} as:
+The chemical potential of a pure ideal gas can be calculated using eq. \eqref{eq:dgconstn4}. Since we are not interested in a mixture, we can drop the asterisk in \(\mu^*\), and rewrite eq. \eqref{eq:dgconstn4} as:
 
 \begin{equation}
 \mu_{\text{ideal}} = \mu^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}}.
 \label{eq:dcpig}
 \end{equation}
 
-For a non-ideal gas, the pressure cannot be used in eq. \eqref{eq:dcpig} because each gas response to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in eq. \eqref{eq:dcpig} and call it fugacity (\(f\)).
+For a non-ideal gas, the pressure cannot be used in eq. \eqref{eq:dcpig} because the response of each gas to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in eq. \eqref{eq:dcpig} and call it fugacity (\(f\)).
 
 \begin{quote}
 \begin{definition}
@@ -3472,7 +3472,7 @@ Gaseous solutions & Gas & Solid & Smoke, smog \\
 
 \normalsize
 
-The number of degrees of freedom for binary solutions (solutions containing two components) is calculated from the Gibbs phase rules at \(f=2-p+2=4-p\). When one phase is present, binary solutions require \(4-1=3\) variables to be described, usually temperature (\(T\)), pressure (\(P\)), and mole fraction (\(y_i\) in the gas phase and \(x_i\) in the liquid phase). Single-phase, 1-component systems require three-dimensional \(T,P,x_i\) diagram to be described. When two phases are present (e.g., gas and liquid), only two variables are independent: pressure and concentration. Thus, we can study the behavior of the partial pressure of a gas--liquid solution in a 2-dimensional plot. If the gas phase in a solution exhibits properties similar to those of a mixture of ideal gases, it is called an \emph{ideal solution}. The obvious difference between ideal solutions and ideal gases is that the intermolecular interactions in the liquid phase cannot be neglected as for the gas phase. The main advantage of ideal solutions is that the interactions between particles in the liquid phase have similar mean strength throughout the entire phase. We will consider ideal solutions first, and then we'll discuss deviation from ideal behavior and non-ideal solutions.
+The number of degrees of freedom for binary solutions (solutions containing two components) is calculated from the Gibbs phase rules at \(f=2-p+2=4-p\). When one phase is present, binary solutions require \(4-1=3\) variables to be described, usually temperature (\(T\)), pressure (\(P\)), and mole fraction (\(y_i\) in the gas phase and \(x_i\) in the liquid phase). Single-phase, 2-component systems require three-dimensional \(T,P,x_i\) diagram to be described. When two phases are present (e.g., gas and liquid), only two variables are independent: pressure and concentration. Thus, we can study the behavior of the partial pressure of a gas--liquid solution in a 2-dimensional plot. If the gas phase in a solution exhibits properties similar to those of a mixture of ideal gases, it is called an \emph{ideal solution}. The obvious difference between ideal solutions and ideal gases is that the intermolecular interactions in the liquid phase cannot be neglected as for the gas phase. The main advantage of ideal solutions is that the interactions between particles in the liquid phase have similar mean strength throughout the entire phase. We will consider ideal solutions first, and then we'll discuss deviation from ideal behavior and non-ideal solutions.
 
 \hypertarget{raoults-law-and-phase-diagrams-of-ideal-solutions}{%
 \section{Raoult's Law and Phase Diagrams of Ideal Solutions}\label{raoults-law-and-phase-diagrams-of-ideal-solutions}}
@@ -3575,7 +3575,7 @@ We can now consider the phase diagram of a 2-component ideal solution as a funct
 \caption{The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.}\label{fig:FigMC4}
 \end{figure}
 
-Compared to the \(Px_{\text{B}}\) diagram of Figure \ref{fig:FigMC3}, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there is only one degree of freedom inside the lens. As such, a liquid solution of initial composition \(x_{\text{B}}^i\) can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration \(y_{\text{B}}^f\). As is clear from Figure \ref{fig:FigMC4}, the mole fraction of the \(\text{B}\) component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component \(\text{B}\). This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure \ref{fig:FigMC5}.
+Compared to the \(Px_{\text{B}}\) diagram of Figure \ref{fig:FigMC3}, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there are only two degrees of freedom inside the lens, of which the pressure is kept constant by definition.\footnote{This effectively corresponds to a region with just a single degree of freedom in the plot,:either the temperature or the composition can be changed independently.} As such, a liquid solution of initial composition \(x_{\text{B}}^i\) can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration \(y_{\text{B}}^f\). As is clear from Figure \ref{fig:FigMC4}, the mole fraction of the \(\text{B}\) component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component \(\text{B}\). This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure \ref{fig:FigMC5}.
 
 \begin{figure}
 
