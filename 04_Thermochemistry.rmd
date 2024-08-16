@@ -73,7 +73,7 @@ The *standard enthalpy of formation* of compound $i$, $\Delta_{\mathrm{f}} H_i^\
 
 ```
 
-The standard pressure is defined at $P^{\standardstate} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}$.^[prior to 1982 the value of $P^{\standardstate} = 1.0 \mathrm{ atm}$ was used. The two values of $P^\standardstate$ are within 1% of each other, since 1 atm = 101.325 kPa.] There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, $T = 298.15 \; \mathrm{K}$. Standard states are indicated with the symbol $\standardstate$ and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are $\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}$,  respectively).^[There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.]
+The standard pressure is defined at $P^{\standardstate} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}$.^[prior to 1982 the value of $P^{\standardstate} = 1.0 \mathrm{ atm}$ was used. The two values of $P^\standardstate$ are within 1% of each other, since 1 atm = 101.325 kPa.] Strictly speaking, there is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, $T = 298.15 \; \mathrm{K}$. Standard states are indicated with the symbol $\standardstate$ and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are $\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}$,  respectively).^[There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.]
 
 For example, the standard enthalpies of formation of some common compounds at $T = 298.15 \; \mathrm{K}$ are calculated from the following reactions:
 
@@ -171,7 +171,7 @@ dH = C_P dT \rightarrow & \int_{H_{T=298}^\standardstate}^{H_{T'}} dH =  \int_{T
   (\#eq:DrxnHneq298)
 \end{equation}
 
-which, in conjunction with Hess's Law (eq. \@ref(eq:Hess)), results in:
+which, in conjunction with Hess's Law, eq. \@ref(eq:Hess), results in:
 
 \begin{equation}
  \Delta_{\text{rxn}} H_{T'}^\standardstate = \Delta_{\text{rxn}} H_{T=298}^\standardstate + \int_{T=298}^{T'} \Delta C_P dT,
@@ -204,3 +204,168 @@ which, assuming that the heat capacities does not depend on the temperature, bec
 As we notice from this result, a difference in temperature of 100 K translates into a change in $\Delta_{\text{rxn}}H^\standardstate$ of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of $\Delta_{\text{rxn}}H$ are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for $\Delta_{\text{rxn}}H^{398}$ of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. \@ref(eq:DrxnHneq298f), confirming that the heat capacities are mostly independent of temperature. 
 
 ```
+
+
+
+## Chapter Review {#rev4}
+
+### Practice Problems {#exer4}
+
+**Problem 1:** Determine the enthalpy change, $\Delta_{\text{rxn}} H^\standardstate$, when 1 mole of $\text{N}_2 \text{O}_{4\text{(g)}}$ dissociates into 2 moles of $\text{NO}_{2\text{(g)}}$ at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
+
+**Solution:** The reaction under consideration is:
+
+$$\text{N}_2 \text{O}_{4\text{(g)}} \rightarrow 2 \text{NO}_{2\text{(g)}}$$
+
+
+Using Hess's Law, eq. \@ref(eq:Hess), we get:
+
+$$\Delta_{\text{rxn}} H^\standardstate = 2 \Delta_{\mathrm{f}} H_{\text{NO}_{2\text{(g)}}}^\standardstate -\Delta_{\mathrm{f}} H_{\text{N}_2 \text{O}_{4\text{(g)}}}^\standardstate$$
+
+$$\Delta_{\text{rxn}} H^\standardstate = (2 \times 33.2 \, \text{kJ/mol}) - (11.1 \, \text{kJ/mol}) = 66.4 \, \text{kJ/mol} - 11.1 \, \text{kJ/mol} = 55.3 \, \text{kJ/mol},$$
+
+and, since we are asked to calculate the enhalpy change for 1 mole, we directly get our final answer.
+
+**Answer:**  $\Delta_{\text{rxn}} H^\standardstate = 55.3 \, \text{kJ}$
+
+---
+
+**Problem 2:** Determine the enthalpy change $\Delta_{\text{rxn}} H^\standardstate$ when 1 mole of $\text{SO}_{2\text{(g)}}$ is oxidized to $\text{SO}_{3\text{(g)}}$ at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
+
+
+**Solution:** The reaction under consideration is:
+$$2\text{SO}_{2\text{(g)}}+ \text{O}_{2\text{(g)}} \rightarrow 2 \text{SO}_{3\text{(g)}}$$
+
+Using Hess's Law, eq. \@ref(eq:Hess), we get:
+
+$$\Delta_{\text{rxn}} H^\standardstate = 2 \Delta_{\mathrm{f}} H_{\text{SO}_{3\text{(g)}}}^\standardstate - \left(2\Delta_{\mathrm{f}} H_{\text{SO}_{2\text{(g)}}}^\standardstate+\Delta_{\mathrm{f}} H_{\text{O}_{2\text{(g)}}}^\standardstate\right)$$
+
+
+$$\Delta_{\text{rxn}} H^\standardstate  = \left[2 \times \left(-395.7 \, \text{kJ/mol}\right)\right] - \left[2 \times \left(-296.8 \, \text{kJ/mol}\right) + 0\right]$$
+
+$$\Delta_{\text{rxn}} H^\standardstate  = -791.4 \, \text{kJ/mol} + 593.6 \, \text{kJ/mol} = -197.8 \, \text{kJ/mol}$$
+
+However, we now have to pay attention to the question to provide the right answer, since the question is asking for the reaction enthalpy when 1 mole is oxidized, while the balanced reaction contains 2 moles. 
+
+**Answer:** $\Delta_{\text{rxn}} H^\standardstate = \frac{-197.8 \, \text{kJ/mol}}{2\,\text{mol}} = -98.9 \, \text{kJ}$
+
+
+### Study Questions {#quest4}
+
+**1. What is the standard enthalpy of formation of a compound?**
+
+a. The change in enthalpy when 1 mole of the compound is formed from its elements in their standard states.  
+b. The change in enthalpy when 1 mole of the compound is formed from its elements at 273 K.  
+c. The change in enthalpy when 1 mole of the compound is formed from its elements in the gaseous state.  
+d. The total energy content of 1 mole of the compound.  
+e. The amount of heat required to decompose 1 mole of the compound into its elements.
+
+---
+
+**2. Which of the following is true for an exothermic reaction at constant pressure?**
+
+a. $\Delta_{\text{rxn}} H > 0$  
+b. $\Delta_{\text{rxn}} H < 0$  
+c. $\Delta_{\text{rxn}} H = 0$  
+d. The reaction absorbs heat from the surroundings.  
+e. The reaction releases heat only when carried out in a closed system.
+
+---
+
+**3. What is the relationship between $\Delta_{\text{rxn}} H$ and the stoichiometric coefficients in a reaction?**
+
+a. $\Delta_{\text{rxn}} H$ is independent of stoichiometric coefficients.  
+b. $\Delta_{\text{rxn}} H$ is directly proportional to the sum of the stoichiometric coefficients.  
+c. $\Delta_{\text{rxn}} H$ depends on the difference between the stoichiometric coefficients of products and reactants.  
+d. $\Delta_{\text{rxn}} H$ is directly proportional to the product of the stoichiometric coefficients.  
+e. $\Delta H_{\text{rxn}}$ is inversely proportional to the stoichiometric coefficients.
+
+---
+
+**4. Which of the following represents Hess's Law?**
+
+a. The total enthalpy change for a reaction is the sum of the enthalpy changes for the individual steps.  
+b. The enthalpy change of a reaction depends on the pathway taken.  
+c. The enthalpy change of a reaction is independent of the physical states of reactants and products.  
+d. The total entropy change for a reaction is the sum of the entropy changes for the individual steps.  
+e. The enthalpy change for a reaction is equal to the heat absorbed at constant volume.
+
+---
+
+**5. What is the standard enthalpy of formation of $\text{O}_{2\text{(g)}}$ at $298\,\text{K}$?**
+
+a. $0\,\text{kJ/mol}$
+b. $32\,\text{kJ/mol}$
+c. $-286\,\text{kJ/mol}$
+d. $-394\,\text{kJ/mol}$
+e. $75\,\text{kJ/mol}$
+
+---
+
+**6. What is the enthalpy change associated with the bond dissociation of $\text{Cl}_{2\text{(g)}}$ into two chlorine atoms?**
+
+a. The enthalpy change is negative because energy is released when bonds are broken.  
+b. The enthalpy change is positive because energy is required to break bonds.  
+c. The enthalpy change is zero because the process does not involve a chemical reaction.  
+d. The enthalpy change is negative because $\text{Cl}_{2\text{(g)}}$ is in its standard state.  
+e. The enthalpy change is undefined because $\text{Cl}_{2\text{(g)}}$ is a diatomic molecule.
+
+---
+
+**7. What is the significance of the latent heat $\Delta H_{\text{vap}}$ of water?**
+
+a. It is the heat required to convert water from solid to liquid.  
+b. It is the heat released when water condenses from gas to liquid.  
+c. It is the heat required to convert water from liquid to gas.  
+d. It is the heat required to heat water from $273\,\text{K}$ to $373 \,\text{K}$.  
+e. It is the heat released when water freezes from liquid to solid.
+
+---
+
+**8. Which of the following statements is true regarding the calculation of enthalpies of reaction at temperatures different from $298\,\text{K}$**
+
+a. The enthalpy of reaction remains constant with temperature.  
+b. The enthalpy of reaction is independent of the specific heat capacities of reactants and products.  
+c. The enthalpy of reaction can be calculated using heat capacities and temperature changes.  
+d. The enthalpy of reaction decreases linearly with temperature.  
+e. The enthalpy of reaction cannot be calculated for temperatures different from $298\,\text{K}$.
+
+---
+
+**9. Which of the following is true about the standard state of a substance?**
+
+a. The standard state of a substance is always at $273\,\text{K}$ and $1\,\text{bar}$ pressure.  
+b. The standard state of a substance is the gas phase at $1\,\text{bar}$ pressure and $298 \,\text{K}$.  
+c. The standard state of a substance is defined only for elements, not for compounds.  
+d. The standard state of a substance is its liquid form at $1\,\text{bar}$ pressure and $298\,\text{K}$.
+e. The standard state of a substance is the most stable form of the substance at $1\,\text{bar}$ pressure and a specified temperature, usually $298 \,\text{K}$.  
+
+
+---
+
+**10. According to Hess's Law, what is a reaction where the sum of the enthalpies of the products is greater than that of the reactants?**
+
+a. The reaction is endothermic.  
+b. The reaction is exothermic.  
+c. The reaction is spontaneous.  
+d. The reaction is non-spontaneous.  
+e. The reaction does not occur.
+
+---
+
+
+
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.a, 2.b, 3.c, 4.a, 5.a, 6.b, 7.c, 8.c, 9.e, 10.a
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.a, 2.b, 3.c, 4.a, 5.a, 6.b, 7.c, 8.c, 9.e, 10.a
+'
+}`

@@ -222,3 +222,127 @@ Eq. \@ref(eq:clacla) is known as the **Clausius–Clapeyron equation**, and it m
 \end{equation}
 
 The integrated Clausius–Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from $P^*=0.02\;\text{bar}$ to $P^*=1\;\text{bar}$ when the temperature is increased from $T=293\;\mathrm{K}$ (around room temperature) to $T=373\;\mathrm{K}$ (boiling point). The integrated Clausius–Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.
+
+
+
+## Chapter Review {#rev12}
+
+### Study Questions {#quest12}
+
+**1. What is the definition of a phase in thermodynamics?**
+
+a. A region of the system with heterogeneous chemical composition.
+b. A region of the system with homogeneous chemical composition and physical state.
+c. A region of the system with constant temperature and pressure.
+d. A region of the system with varying density and volume.
+e. A region of the system with uniform crystal structure.
+
+---
+
+**2. According to the Gibbs phase rule, how many degrees of freedom ($f$) does a system with 2 components ($c$) and 3 phases ($p$) have?**
+
+a. $f = 1$.
+b. $f = 2$.
+c. $f = 3$.
+d. $f = 4$.
+e. $f = 5$.
+
+---
+
+**3. Which of the following statements about the triple point is correct?**
+
+a. It has one degree of freedom for a one-component system.
+b. It represents the coexistence of four phases.
+c. Its coordinates are uniquely determined for each chemical substance.
+d. It always occurs at standard temperature and pressure.
+e. It is the point where all phases become identical.
+
+---
+
+**4. What does the Clausius-Clapeyron equation describe?**
+
+a. The dependence of critical temperature on pressure.
+b. The relationship between enthalpy and entropy of vaporization.
+c. The dependence of vapor pressure on temperature.
+d. The relationship between molar volume and critical pressure.
+e. The dependence of boiling point on atmospheric pressure.
+
+---
+
+**5. Which of the following is true about the entropy change during vaporization?**
+
+a. It is always negative.
+b. It is approximately equal to $88\,\text{J/(mol·K)}$ for many substances (Trouton's rule).
+c. It decreases with increasing temperature.
+d. It is always zero at the critical point.
+e. It is the same for all substances at their normal boiling points.
+
+---
+
+**6. What is the typical shape of the solid-liquid equilibrium line in a P-T phase diagram for most substances?**
+
+a. Nearly horizontal.
+b. Nearly vertical with a positive slope.
+c. Nearly vertical with a negative slope.
+d. Parabolic.
+e. Exponential.
+
+---
+
+**7. Which of the following is true about the critical point?**
+
+a. It represents the end of the solid-liquid equilibrium curve.
+b. It is the point where all three phases (solid, liquid, gas) coexist.
+c. Its pressure is always $1\,\text{atm}$.
+d. It represents the end of the liquid-gas equilibrium curve.
+e. It is the point where the substance changes directly from solid to gas.
+
+---
+
+**8. What is the mathematical expression for the Clapeyron equation?**
+
+a. $\frac{dP}{dT} = \frac{\Delta S}{\Delta V}$.
+b. $\frac{dP}{dT} = \frac{\Delta H}{T\Delta V}$.
+c. $\frac{dP}{dT} = \frac{\Delta G}{\Delta V}$.
+d. $\frac{dP}{dT} = \frac{\Delta H}{\Delta S}$.
+e. $\frac{dP}{dT} = \frac{T\Delta S}{\Delta V}$.
+
+---
+
+**9. Which of the following is an anomalous behavior exhibited by water?**
+
+a. Its solid phase is less dense than its liquid phase.
+b. Its boiling point increases with increasing pressure.
+c. Its triple point is at $0\,\text{°C}$ and $1\,\text{atm}$.
+d. Its critical point is at $100\,\text{°C}$.
+e. Its solid-liquid equilibrium line has a positive slope in the P-T diagram.
+
+---
+
+**10. What is the definition of a supercritical fluid?**
+
+a. A fluid at a temperature below its critical point and pressure above its critical point.
+b. A fluid at a temperature and pressure both above its critical point.
+c. A fluid at a temperature above its critical point and pressure below its critical point.
+d. A fluid at its triple point.
+e. A fluid at standard temperature and pressure.
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c'
+}`
+
+
+
+
+

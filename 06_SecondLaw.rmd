@@ -354,3 +354,176 @@ which proves that for any irreversible process in an isolated system, the entrop
 *Second Law of Thermodynamics:* for any spontaneous process, the entropy of the universe is increasing.
 ```
 
+
+
+## Chapter Review {#rev6}
+
+### Practice Problems {#exer6}
+
+
+**Problem 1: Efficiency of an Irreversible Cycle**
+
+An irreversible heat engine operates between reservoirs at $600\,\text{K}$ and $300\,\text{K}$. If its efficiency is 80% of the maximum possible efficiency, calculate its actual efficiency.
+
+**Solution:** The maximum possible efficiency is that of a Carnot cycle:
+
+$$\varepsilon_{\text{max}} = 1 - \frac{T_c}{T_h} = 1 - \frac{300 K}{600 K} = 0.5$$
+
+The actual efficiency for this cycle is 80% of the maximum one:
+
+$$\varepsilon_{\text{actual}} = 0.8 \cdot \varepsilon_{\text{max}} = 0.8 \cdot 0.5 = 0.4$$
+
+**Answer:** The actual efficiency of the irreversible heat engine is 0.4 or 40%.
+
+---
+
+**Problem 2: Calculating Heat Rejected in a Carnot Cycle**
+
+A Carnot engine operates between a hot reservoir at $400\,\text{K}$ and a cold reservoir at $300\,\text{K}$. The engine absorbs $1000\,\text{J}$ of heat from the hot reservoir. Calculate the heat rejected to the cold reservoir.
+
+**Solution:** For a Carnot cycle, we can use the equation:
+
+$$\frac{Q_h}{T_h} + \frac{Q_c}{T_c} = 0$$
+
+Given:
+
+$Q_h$ = $1000\,\text{J}$
+
+$T_h$ = $400\,\text{K}$ 
+
+$T_c$ = $300\,\text{K}$ 
+
+
+Then:
+
+$$\frac{1000\,\text{J}}{400\,\text{K}} + \frac{Q_c}{300\,\text{K}} = 0$$
+
+$$2.5\,\frac{\text{J}}{\text{K}} + \frac{Q_c}{300\,\text{K}} = 0$$
+
+$$\frac{Q_c}{300\,\text{K}} = -2.5\,\frac{\text{J}}{\text{K}}$$
+
+$$Q_c = -2.5\,\frac{\text{J}}{\text{K}} \cdot 300\,\text{K} = -750\,\text{J}$$
+
+**Answer:** The heat rejected to the cold reservoir is $-750\,\text{J}$. The negative sign indicates that heat is leaving the system.
+
+
+
+
+### Study Questions {#quest6}
+
+**1. What concept did Rudolf Clausius introduce inspired by Carnot's findings?**
+
+a. Efficiency.
+b. Entropy.
+c. Heat engines.
+d. Reversibility.
+e. Adiabatic processes.
+
+---
+
+**2. In the expression $Q_{\text{REV}}$, what does $Q_{\text{REV}}$ represent?**
+
+a. Heat lost to the surroundings.
+b. Heat exchanged at irreversible conditions.
+c. Total heat of the system.
+d. Heat capacity of the system.
+e. Heat exchanged at reversible conditions.
+
+---
+
+**3. Which of the following correctly defines entropy according to Clausius?**
+
+a. $S = \frac{Q_{\text{REV}}}{T}$.
+b. $S = \frac{Q_{\text{IRR}}}{T}$.
+c. $S = Q_{\text{REV}} \cdot T$.
+d. $S = Q_{\text{IRR}} \cdot T$.
+e. $S = \frac{T}{Q_{\text{REV}}}$.
+
+---
+
+**4. Which of the following is the correct expression for the Clausius inequality?**
+
+a. $\oint \frac{đQ}{T} > 0$.
+b. $\oint \frac{đQ}{T} \geq 0$.
+c. $\oint \frac{đQ}{T} = 0$.
+d. $\oint \frac{đQ}{T} \leq 0$.
+e. $\oint \frac{đQ}{T} < 0$.
+
+---
+
+**5. For an irreversible cycle, which of the following is true?**
+
+a. $\sum_i \frac{Q_{\text{IRR}}}{T_i} < 0$.
+b. $\sum_i \frac{Q_{\text{IRR}}}{T_i} > 0$.
+c. $\sum_i \frac{Q_{\text{IRR}}}{T_i} = 0$.
+d. $\sum_i \frac{Q_{\text{IRR}}}{T_i} \geq 0$.
+e. $\sum_i \frac{Q_{\text{IRR}}}{T_i} \leq 0$.
+
+---
+
+**6. What is the Second Law of Thermodynamics as stated in the text?**
+
+a. For any spontaneous process, the energy of the universe is increasing.
+b. For any spontaneous process, the energy of the universe is conserved.
+c. For any spontaneous process, the entropy of the universe is increasing.
+d. For any spontaneous process, the entropy of the universe is decreasing.
+e. For any spontaneous process, the entropy of the universe remains constant.
+
+---
+
+**7. What is the significance of the quantity $\frac{Q_{\text{REV}}}{T}$ in a Carnot cycle?**
+
+a. It represents the total work done by the system.
+b. It is a conserved quantity.
+c. It is always increasing.
+d. It represents the heat capacity of the system.
+e. It is always decreasing.
+
+---
+
+**8. Which system is the only one that can be considered truly isolated?**
+
+a. The universe.
+b. A perfect heat engine.
+c. A closed thermodynamic system.
+d. An adiabatic process.
+e. A reversible cycle.
+
+---
+
+**9. What is the relationship between the efficiency of an irreversible cycle ($\varepsilon_{\text{IRR}}$) and the efficiency of a Carnot cycle ($\varepsilon_{\text{REV}}$)?**
+
+a. $\varepsilon_{\text{IRR}} < \varepsilon_{\text{REV}}$.
+b. $\varepsilon_{\text{IRR}} > \varepsilon_{\text{REV}}$.
+c. $\varepsilon_{\text{IRR}} = \varepsilon_{\text{REV}}$.
+d. $\varepsilon_{\text{IRR}} \geq \varepsilon_{\text{REV}}$.
+e. $\varepsilon_{\text{IRR}} \leq \varepsilon_{\text{REV}}$.
+
+---
+
+**10. For a reversible cycle, what is true about the integral of $\frac{Q_{\text{REV}}}{T}$ around the cycle?**
+
+a. It is greater than zero.
+b. It is less than zero.
+c. It equals zero.
+d. It approaches infinity.
+e. It approaches negative infinity.
+
+---
+
+
+
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.b, 2.e, 3.a, 4.d, 5.a, 6.c, 7.b, 8.a, 9.a, 10.c
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.b, 2.e, 3.a, 4.d, 5.a, 6.c, 7.b, 8.a, 9.a, 10.c'
+}`
+

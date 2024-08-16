@@ -319,3 +319,124 @@ These two derivatives are mixed partial second derivatives of $G$ with respect t
 
 which is the last of Maxwell relations, as defined in eq. \@ref(eq:maxrelf). This relation is particularly useful because it connects the quantity $\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}$—which is impossible to measure in a lab—with the quantity $\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}$—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
 ```
+
+## Chapter Review {#rev8}
+
+### Study Questions {#quest8}
+
+**1. Which of the following formulas is the fundamental equation of thermodynamics for closed systems?**
+
+a. $dU = Q_{REV} - PdV$.
+b. $dU = TdS - PdV$.
+c. $dU = TdS + PdV$.
+d. $dU = Q_{REV} + PdV$.
+e. $dU = TdS - VdP$.
+
+---
+
+**3. Which of the following formulas is the fundamental equation for the Helmholtz free energy?**
+
+a. $dA = TdS - PdV + \sum_i \mu_i dn_i$.
+b. $dA = -SdT + VdP + \sum_i \mu_i dn_i$.
+c. $dA = -SdT - PdV + \sum_i \mu_i dn_i$.
+d. $dA = TdS + VdP + \sum_i \mu_i dn_i$.
+e. $dA = -SdT - VdP + \sum_i \mu_i dn_i$.
+
+---
+
+**4. Which statement about thermodynamic potentials is NOT correct?**
+
+a. Internal energy is the capacity to do work plus the capacity to release heat.
+b. Enthalpy is the capacity to do non-mechanical work plus the capacity to release heat.
+c. Gibbs free energy is the capacity to do mechanical work only.
+d. Helmholtz free energy is the capacity to do mechanical plus non-mechanical work.
+e. Non-mechanical work includes types of work that are not expansion or compression.
+
+---
+
+**4. Which of the following is NOT a thermodynamic potential?**
+
+a. Internal energy.
+b. Enthalpy.
+c. Gibbs free energy.
+d. Helmholtz free energy.
+e. Chemical potential.
+
+---
+
+**5. What are the natural variables of the Gibbs free energy?**
+
+a. $T$, $V$, $\{n_i\}$.
+b. $S$, $P$, $\{n_i\}$.
+c. $T$, $P$, $\{n_i\}$.
+d. $S$, $V$, $\{n_i\}$.
+e. $U$, $P$, $\{n_i\}$.
+
+---
+
+**6. Which thermodynamic potential represents the capacity to do mechanical plus non-mechanical work?**
+
+a. Internal energy.
+b. Enthalpy.
+c. Gibbs free energy.
+d. Helmholtz free energy.
+e. Chemical potential.
+
+---
+
+**7. What is the condition for a spontaneous process at constant temperature and pressure?**
+
+a. $dA > 0$.
+b. $dG = 0$.
+c. $dG < 0$.
+d. $dS > 0$.
+e. $dU < 0$.
+
+---
+
+**8. Which of the following is a Maxwell relation?**
+
+a. $\left(\frac{\partial T}{\partial V}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}$.
+b. $\left(\frac{\partial T}{\partial P}\right)_{S,\{n_i\}} = -\left(\frac{\partial V}{\partial S}\right)_{P,\{n_i\}}$.
+c. $\left(\frac{\partial S}{\partial V}\right)_{T,\{n_i\}} = -\left(\frac{\partial P}{\partial T}\right)_{V,\{n_i\}}$.
+d. $\left(\frac{\partial S}{\partial P}\right)_{T,\{n_i\}} = -\left(\frac{\partial V}{\partial T}\right)_{P,\{n_i\}}$.
+e. $\left(\frac{\partial U}{\partial V}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}$.
+
+---
+
+**9. What is the definition of the chemical potential?**
+
+a. The amount of heat absorbed or released due to a change in particle number.
+b. The amount of work done due to a change in particle number.
+c. The amount of energy absorbed or released due to a change in particle number.
+d. The amount of entropy change due to a change in particle number.
+e. The amount of volume change due to a change in particle number.
+
+---
+
+**10. Which of the following is true about the Legendre transformation?**
+
+a. It changes the natural variables of a thermodynamic potential.
+b. It adds products of conjugate variables to define new functions.
+c. It only applies to the internal energy function.
+d. It removes all information from the original function.
+e. It can only be performed once on a given function.
+
+
+
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.b, 2.d, 3.c, 4.c, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.b, 2.d, 3.c, 4.c, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a'
+}`
+

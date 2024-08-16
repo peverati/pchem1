@@ -647,3 +647,271 @@ From empirical arguments, Arrhenius proposed the idea that reactants must acquir
 knitr::include_graphics('./img/Rxn_coordinate_diagram_5.PNG')
 ```
 
+
+
+
+## Chapter Review {#rev15}
+
+### Practice Problems {#exer15}
+
+**Problem 1: Determining Reaction Order from Initial Rates**
+
+Determine the reaction order with respect to each reagents and the rate law for the reaction:
+
+$$2A + B \rightarrow C$$
+
+Given the following initial rate tables:
+
+
+Experiment | [A] (M) | [B] (M) | Initial Rate (M/s)
+:---------:|:-------:|:-------:|:-----------------:
+1          | $0.1$   | $0.1$   | $2.0 \times 10^{-3}$
+2          | $0.2$   | $0.1$   | $8.0 \times 10^{-3}$
+3          | $0.1$   | $0.2$   | $4.0 \times 10^{-3}$
+
+**Solution:** To determine the reaction orders, compare rates between experiments:
+
+For $A$ (comparing experiments 1 and 2):
+$$\frac{\text{Rate}_2}{\text{Rate}_1} = \frac{8.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 4 = \left(\frac{0.2}{0.1}\right)^x$$
+$$4 = 2^x$$
+$$x = 2,$$ 
+so the reaction is second order in $A$.
+
+For $B$ (comparing experiments 1 and 3):
+$$\frac{\text{Rate}_3}{\text{Rate}_1} = \frac{4.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 2 = \left(\frac{0.2}{0.1}\right)^y$$
+$$2 = 2^y$$
+$$y = 1,$$
+so the reaction is first order in $B$.
+
+
+
+**Answer:** The rate law is: Rate = $k[A]^2[B]$. The reaction is second order in $A$, first order in $B$, with an overall order of 3.
+
+---
+
+**Problem 2: Calculating Half-Life for a First-Order Reaction**
+
+Calculate the half-life of a first-order reaction with rate constant $k = 0.0231\,\text{s}^{-1}$.
+
+**Solution:** For a first-order reaction, the half-life is given by eq. \@ref(eq:kin8) as:
+
+$$t_{1/2} = \frac{\ln 2}{k}$$
+
+Substituting the given rate constant:
+
+$$t_{1/2} = \frac{\ln 2}{0.0231\,\text{s}^{-1}} = 30.0\,\text{s}$$
+
+**Answer:** The half-life of the reaction is $30.0\,\text{s}$.
+
+---
+
+**Problem 3: Determining Activation Energy Using the Arrhenius Equation**
+
+The rate of a reaction at $300\,\text{K}$ is 
+$2.15 \times 10^{-2}\,\text{s}^{-1}$. When we increase the temperature to $315\,\text{K}$, the same reaction has a rate of $3.98 \times 10^{-2}\,\text{s}^{-1}$ Calculate the activation energy for this reaction.
+
+**Solution:** We can use the Arrhenius equation in its linearized form, eq. \@ref(eq:Arr2):
+
+$$\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+$$
+
+
+
+Given:
+
+$k_1 = 2.15 \times 10^{-2}\,\text{s}^{-1}$,
+
+$k_2 = 3.98 \times 10^{-2}\,\text{s}^{-1}$,
+
+$T_1 = 300\,\text{K}$,
+
+$T_2 = 315\,\text{K}$.
+
+Then:
+
+$$\ln \frac{3.98 \times 10^{-2}}{2.15 \times 10^{-2}} = -\frac{E_a}{8.314}\left(\frac{1}{315} - \frac{1}{300}\right)$$
+
+$$0.6168 = \frac{E_a}{8.314}(1.587 \times 10^{-4})$$
+
+$$E_a = \frac{0.6168 \times 8.314}{1.587 \times 10^{-4}} = 32300\,\text{J/mol}$$
+Adjusting the significant digits gives us the final answer.
+
+**Answer:** The activation energy is $32.3\,\text{kJ/mol}$.
+
+---
+
+**Problem 4: Calculating Concentration in a Second-Order Reaction**
+
+The following second-order reaction:
+$$2\text{Cl} → \text{Cl}_2$$
+has a rate constant of $0.40\,\text{M}^{-1}\text{s}^{-1}$. Calculate the The concentration of $\text{Cl}$ after $100\,\text{s}$, if we start the reaction from an initial concentration of $0.50\,\text{M}$.
+
+
+**Solution:** For a second-order reaction, the integrated rate law is given by eq. \@ref(eq:kin11), which for our case is:
+
+$$\frac{1}{[\text{Cl}]} = \frac{1}{[\text{Cl}]_0} + kt$$
+
+Given:
+
+$[Cl]_0 = 0.50\,\text{M}$,
+
+$k = 0.40\,\text{M}^{-1}\text{s}^{-1}$,
+
+$t = 100\,\text{s}$,
+
+
+Then:
+
+$$\frac{1}{[\text{Cl}]} = \frac{1}{0.5\,\text{M}} + (0.4\,\text{M}^{-1}\text{s}^{-1})(100\,\text{s})$$
+
+$$\frac{1}{[\text{Cl}]} = 2\,\text{M}^{-1} + 40\,\text{M}^{-1} = 42\,\text{M}^{-1}$$
+
+$$[\text{Cl}] = \frac{1}{42\,\text{M}^{-1}} = 0.0238\,\text{M}$$
+
+**Answer:** The concentration of $\text{Cl}$ after $100\,\text{s}$ is $0.024\,\text{M}$.
+
+---
+
+**Problem 5: Determining Rate Constant for a Zero-Order Reaction**
+
+The initial concentration of a reactant of a zero-order reaction is $0.80\,\text{M}$. After $200\,\text{s}$ the concentration has diminished to $0.6\,\text{M}$. Calculate the rate constant of the reaction.
+
+**Solution:** For a zero-order reaction, the integrated rate law is given by \@ref(eq:kin3):
+
+$$[A] = [A]_0 - kt$$
+
+Given:
+
+$[A]_0 = 0.80\,\text{M}$,
+
+$[A] = 0.6\,\text{M}$,
+
+$t=200\,\text{s}$. 
+
+Then:
+
+$$0.6\,\text{M} = 0.8\,\text{M} - k(200\,\text{s})$$
+
+$$0.2\,\text{M} = k(200\,\text{s})$$
+
+$$k = \frac{0.2\,\text{M}}{200\,\text{s}} = 0.001\,\text{M}\text{s}^{-1}$$
+
+**Answer:** The rate constant for the zero-order reaction is $0.001\,\text{M}\text{s}^{-1}$.
+
+
+### Study Questions {#quest15}
+
+**1. Which of the following is true for a zeroth-order reaction?**
+
+a. The reaction rate is independent of reactant concentration.
+b. The reaction rate is directly proportional to reactant concentration.
+c. The reaction rate is proportional to the square of reactant concentration.
+d. The reaction rate decreases exponentially with time.
+e. The reaction rate increases logarithmically with reactant concentration.
+
+---
+
+**2. What are the units of the rate constant for a second-order reaction?**
+
+a. $\text{s}^{-1}$.
+b. $\text{M}^{-1}\text{s}^{-1}$.
+c. $\text{M}\text{s}^{-1}$.
+d. $\text{M}^{-2}\text{s}^{-1}$.
+e. $\text{M}^2\text{s}^{-1}$.
+
+---
+
+**3.In the Arrhenius equation, $k = A\exp(-\frac{E_a}{RT})$, what does $E_a$ represent?**
+
+a. Activation energy.
+b. Reaction energy.
+c. Enthalpy of reaction.
+d. Gibbs free energy.
+e. Kinetic energy.
+
+---
+
+**4. For a first-order reaction, how is the half-life related to the rate constant $k$?**
+
+a. $t_{1/2} = \frac{\ln 2}{k}$.
+b. $t_{1/2} = \frac{k}{\ln 2}$.
+c. $t_{1/2} = \frac{1}{k}$.
+d. $t_{1/2} = \frac{k}{2}$.
+e. $t_{1/2} = 2k$.
+
+---
+
+**5. Which method is used to determine reaction orders by using large excess concentrations of all reactants but one?**
+
+a. Isolation method.
+b. Initial rates method.
+c. Half-life method.
+d. Integrated rate law method.
+e. Arrhenius method.
+
+---
+
+**6. What is the overall reaction order for a reaction with rate law $\text{Rate} = k[A][B]^2$?**
+
+a. 3.
+b. 2.
+c. 1.
+d. 0.
+e. 4.
+
+---
+
+**7. In a consecutive reaction $A \xrightarrow{k_1} B \xrightarrow{k_2} C$, what condition leads to a rate-determining step in the middle of the sequence?**
+
+a. $k_1 \approx k_2$.
+b. $k_1 \gg k_2$.
+c. $k_1 \ll k_2$.
+d. $k_1 = 0$.
+e. $k_2 = 0$.
+
+---
+
+**8. What is the relationship between the equilibrium constant $K_C$ and the forward and reverse rate constants $k_1$ and $k_{-1}$ for an opposed reaction at equilibrium?**
+
+a. $K_C = \frac{k_1}{k_{-1}}$.
+b. $K_C = \frac{k_{-1}}{k_1}$.
+c. $K_C = k_1 k_{-1}$.
+d. $K_C = k_1 + k_{-1}$.
+e. $K_C = k_1 - k_{-1}$.
+
+---
+
+**9. Which of the following plots would give a straight line for a second-order reaction?**
+
+a. $\frac{1}{[A]}$ vs $t$.
+b. $\ln[A]$ vs $t$.
+c. $[A]$ vs $t$.
+d. $\sqrt{[A]}$ vs $t$.
+e. $\frac{1}{[A]^2}$ vs $t$.
+
+---
+
+**10. What is the maximum experimentally observed reaction order for elementary reactions?**
+
+a. 3.
+b. 2.
+c. 4.
+d. 5.
+e. 1.
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a'
+}`
+
+

@@ -305,7 +305,7 @@ K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
 (\#eq:coll7)
 \end{equation}
 
-Notice from Figure \@ref(fig:FigSol2) how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water $K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}$, while $K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}$. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
+Notice from Figure \@ref(fig:FigSol2) how the depression of the melting point is always larger than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water $K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}$, while $K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}$. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
 
 ### Osmotic pressure
 
@@ -324,3 +324,128 @@ Starting from a solvent at atmospheric pressure in the apparatus depicted in Fig
 \end{equation}
 
 where $i$ is the van 't Hoff factor introduced above, $m$ is the molality of the solution, $R$ is the ideal gas constant, and $T$ the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.^[For a derivation, see the osmotic pressure [Wikipedia page](https://en.wikipedia.org/wiki/Osmotic_pressure).]
+
+
+
+## Chapter Review {#rev13}
+
+### Study Questions {#quest13}
+
+
+**1. What is the Gibbs phase rule for binary solutions with one phase present?**
+
+a. $f = 2 - p + 2$.
+b. $f = 4 - p$.
+c. $f = 3 - p + 2$.
+d. $f = 3 - p$.
+e. $f = 2 - p + 1$.
+
+---
+
+**2. Which of the following is NOT an example of a liquid solution?**
+
+a. Saltwater.
+b. Vinegar.
+c. Carbonated drinks.
+d. Dental amalgam.
+e. Alcoholic beverages.
+
+---
+
+**3. Raoult's law states that the partial pressure of each component $i$ of an ideal mixture of liquids is:**
+
+a. $P_i = x_i P^*_i$.
+b. $P_i = y_i P^*_i$.
+c. $P_i = \frac{x_i}{P^*_i}$.
+d. $P_i = x_i RT$.
+e. $P_i = y_i RT$.
+
+---
+
+**4. In a $T-x_B$ phase diagram of an ideal solution with two volatile components, where is the liquid phase located?**
+
+a. At the top of the diagram.
+b. At the bottom of the diagram.
+c. In the middle of the diagram.
+d. On the left side of the diagram.
+e. On the right side of the diagram.
+
+---
+
+**5. What is an azeotrope?**
+
+a. A solution with a constant boiling point that cannot be altered by simple distillation.
+b. A solution with a variable boiling point that can be easily separated by distillation.
+c. A solution where the vapor and liquid phases have different compositions.
+d. A solution that follows Raoult's law perfectly.
+e. A solution with only one volatile component.
+
+---
+
+**6. How is the activity of a component in a non-ideal solution defined?**
+
+a. $a_i = \gamma_i x_i$.
+b. $a_i = x_i$.
+c. $a_i = \frac{P_i}{P^*_i}$.
+d. $a_i = \gamma_i P_i$.
+e. $a_i = \frac{x_i}{P^*_i}$.
+
+---
+
+**7. Which of the following is NOT a colligative property?**
+
+a. Vapor pressure lowering.
+b. Boiling point elevation.
+c. Melting point depression.
+d. Osmotic pressure.
+e. Molar mass.
+
+---
+
+**8. Which of the following is the correct formula for boiling point elevation?**
+
+a. $\Delta T_b = iK_b m$.
+b. $\Delta T_b = -iK_b m$.
+c. $\Delta T_b = \frac{iK_b}{m}$.
+d. $\Delta T_b = iK_b RT$.
+e. $\Delta T_b = iK_b P$.
+
+---
+
+**9. What does the van 't Hoff factor $i$ in colligative property equations represent?**
+
+a. The number of solute particles for each formula unit.
+b. The molality of the solution.
+c. The molar mass of the solvent.
+d. The vapor pressure of the solution.
+e. The enthalpy of vaporization.
+
+---
+
+**10. According to the Morse equation, the osmotic pressure $\pi$ is given by:**
+
+a. $\pi = imRT$.
+b. $\pi = \frac{imRT}{P}$.
+c. $\pi = imP$.
+d. $\pi = \frac{im}{RT}$.
+e. $\pi = imT$.
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a
+'
+}`
+
+
+
+

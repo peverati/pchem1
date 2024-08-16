@@ -229,3 +229,294 @@ This process can happen both ways without losses, and is called *reversible*:
 ```
 
 Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
+
+
+## Chapter Review {#rev3}
+
+### Practice Problems {#exer3}
+
+**Problem 1: Work Done in Isothermal Expansion**
+
+An ideal gas expands isothermally and reversibly at a temperature of $300. \, \text{K}$ from a volume of $2.0 \, \text{L}$ to $5.0 \, \text{L}$. Calculate the work done by the gas during the expansion. The amount of gas is $1.0 \, \text{mol}$.
+
+**Solution:** The work done in an isothermal reversible expansion of an ideal gas is given by:
+
+$$ W = -nRT \ln \left(\frac{V_f}{V_i}\right) $$
+
+Given:
+
+$n = 1.0 \, \text{mol}$
+
+$R = 8.3 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
+
+$T = 300. \, \text{K}$
+
+$V_i = 2.0 \, \text{L}$
+
+$V_f = 5.0 \, \text{L}$
+
+Substituting the values:
+
+$$ W = - (1.0\, \text{mol}) (8.3 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (300. \, \text{K})  \ln \left(\frac{5.0\, \text{L}}{2.0\, \text{L}}\right) $$
+
+$$ W = -2500.\, \text{J} \cdot \ln \left(2.5\right) $$
+
+$$ W = -2500.\, \text{J} \cdot 0.92 $$
+
+$$ W \approx -2300 \, \text{J} $$
+
+Now we just need to adjust the significant digits.
+
+**Answer:** The work done by the gas is $-2.3 \, \text{kJ}$.
+
+---
+
+**Problem 2: Internal Energy Change in an Isochoric Process**
+
+Calculate the change in internal energy, $\Delta U$, for $2.0 \, \text{mol}$ of an ideal gas undergoing an isochoric heating process from $250. \, \text{K}$ to $350. \, \text{K}$. The molar heat capacity at constant volume, $C_V$, is $12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$.
+
+**Solution:** For an isochoric process, the change in internal energy is given by:
+
+$$ \Delta U = n C_V \Delta T $$
+
+Given:
+
+$n = 2.0 \, \text{mol}$
+
+$C_V = 12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
+
+$\Delta T = (350. - 250.) \, \text{K} = 100. \, \text{K}$
+
+Substituting the values:
+
+$$ \Delta U = (2.0\, \text{mol})(12.5\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (100.\,\text{K}) $$
+
+$$ \Delta U = 2500. \, \text{J} $$
+
+Finally, again we need to just adjust the significant digits.
+
+**Answer:** The change in internal energy, $\Delta U$, is $2.5 \, \text{kJ}$.
+
+---
+
+**Problem 3: Heat Required for an Isobaric Process**
+
+Determine the heat required to raise the temperature of $3.0 \, \text{mol}$ of an ideal gas from $200. \, \text{K}$ to $400. \, \text{K}$ in an isobaric process. The molar heat capacity at constant pressure, $C_P$, is $21. \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$.
+
+**Solution:** The heat required for an isobaric process is given by:
+
+$$ Q_P = n C_P \Delta T $$
+
+Given:
+
+$n = 3.0 \, \text{mol}$
+
+$C_P = 21. \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
+
+$\Delta T = (400. - 200.) \, \text{K} = 200. \, \text{K}$
+
+Substituting the values:
+
+$$ Q_P = (3.0 \, \text{mol})(21 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200. \, \text{K}) $$
+
+$$ Q_P = 12600. \, \text{J} $$
+
+Adjusting the significant digits we get the final answer.
+
+**Answer:** The heat required is $13. \, \text{kJ}$.
+
+---
+
+**Problem 4: Final Temperature in an Isochoric Heating Process**
+
+A $2.00 \, \text{mol}$ sample of an ideal gas is heated isochorically (at constant volume) from an initial temperature of $300. \, \text{K}$. If the gas absorbs $5000. \, \text{J}$ of heat during the process, what is the final temperature of the gas? The molar heat capacity at constant volume, $C_V$, is $20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$.
+
+**Solution:** The heat absorbed in an isochoric process is given by:
+
+$$ Q = n C_V \Delta T $$
+
+Given:
+
+$n = 2.00 \, \text{mol}$
+
+$C_V = 20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
+
+$Q = 5000. \, \text{J}$
+
+$T_i = 300. \, \text{K}$
+
+Rearranging to solve for $\Delta T$:
+
+$$ \Delta T = \frac{Q}{n C_V} $$
+
+Substituting the values:
+
+$$ \Delta T = \frac{5000. \, \text{J}}{(2.00\,\text{mol}) (20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})},$$
+
+$$ \Delta T = \frac{5000.}{40.} = 125. \, \text{K} $$
+
+The final temperature is:
+
+$$ T_f = T_i + \Delta T $$
+
+$$ T_f = 300. \, \text{K} + 125. \, \text{K} = 425. \, \text{K} $$
+
+**Answer:** The final temperature, $T_f$, is $425. \, \text{K}$.
+
+
+---
+
+**Problem 5: Enthalpy Change During Heating**
+
+Calculate the enthalpy change, $\Delta H$, when $4.00 \, \text{mol}$ of an ideal gas is heated from $250. \, \text{K}$ to $450. \, \text{K}$ at constant pressure. The molar heat capacity at constant pressure, $C_P$, is $29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$.
+
+**Solution:** The enthalpy change in an isobaric process is given by:
+
+$$ \Delta H = n C_P \Delta T $$
+
+Given:
+
+$n = 4.00 \, \text{mol}$
+
+$C_P = 29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
+
+$\Delta T = (450. - 250.) \, \text{K} = 200. \, \text{K}$
+
+Substituting the values:
+
+$$ \Delta H = (4.00\, \text{mol}) (29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (200.\,\text{K}),$$
+
+$$ \Delta H = 23200 \, \text{J} $$
+
+As usual, the final answer requires just an adjustment for the significant digits.
+
+**Answer:** The enthalpy change, $\Delta H$, is $23.2 \, \text{kJ}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Study Questions {#quest3}
+
+
+**1. What is the First Law of Thermodynamics?**
+
+a. The energy of an isolated system is constant.
+b. The entropy of the universe always increases.
+c. Heat flows naturally from a hot to a cold object.
+d. The energy of the universe is conserved.  
+e. Work done on a system is always zero.
+
+---
+
+**2. In an isothermal process involving an ideal gas, the internal energy:**
+
+a. Increases with volume.
+b. Decreases with pressure.
+c. Stays constant.  
+d. Increases with temperature.
+e. Becomes zero.
+
+---
+
+**3. What is the correct equation for the change in internal energy ($dU$) in an isochoric process?**
+
+a. $dU = -P dV$
+b. $dU = đQ_P$
+c. $dU = đQ_V = nC_V dT$  
+d. $dU = -P \Delta V$
+e. $dU = W = -P dV$
+
+---
+
+**4. What does the heat capacity at constant volume ($C_V$) represent?**
+
+a. The ability to absorb heat at constant pressure.
+b. The ability to absorb energy at constant volume.  
+c. The change in temperature per unit volume.
+d. The ability to absorb energy at constant temperature.
+e. The total energy change in an isochoric process.
+
+---
+
+**5. During an adiabatic process, what is the relationship between work and internal energy?**
+
+a. $dU = đQ$
+b. $dU = đW$  
+c. $dU = -P \Delta V$
+d. $dU = 0$
+e. $dU = -đQ$
+
+---
+
+**6. Which of the following best describes an adiabatic process?**
+
+a. A process with constant pressure.
+b. A process with constant temperature.
+c. A process with no heat exchange.  
+d. A process with constant volume.
+e. A process where heat exchange is maximum.
+
+---
+
+**7. What is the internal energy change ($\Delta U$) for an ideal gas undergoing a reversible isothermal expansion?**
+
+a. It increases.
+b. It decreases.
+c. It becomes zero.  
+d. It is undefined.
+e. It depends on volume.
+
+---
+
+**8. In an isobaric process, the heat capacity ($C_P$) can be interpreted as:**
+
+a. The partial derivative of enthalpy with respect to pressure.
+b. The partial derivative of internal energy with respect to volume.
+c. The partial derivative of internal energy with respect to temperature.
+d. The partial derivative of enthalpy with respect to temperature.  
+e. The partial derivative of pressure with respect to volume.
+
+---
+
+**9. Which statement is true for an isolated system?**
+
+a. The internal energy decreases.
+b. The system can exchange mass but not energy.
+c. The internal energy remains constant.  
+d. The system can exchange heat but not work.
+e. The internal energy increases.
+
+---
+
+**10. What is the equation that defines enthalpy ($H$)?**
+
+a. $H = U + PV$  
+b. $H = Q_P + W$
+c. $H = C_P dT$
+d. $H = T \Delta S$
+e. $H = U - PV$
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.d, 2.c, 3.c, 4.b, 5.b, 6.c, 7.c, 8.d, 9.c, 10.a
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.d, 2.c, 3.c, 4.b, 5.b, 6.c, 7.c, 8.d, 9.c, 10.a
+'
+}`

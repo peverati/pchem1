@@ -70,7 +70,7 @@ Calculate the standard entropy of vaporization of water knowing $\Delta_{\mathrm
 *Solution:* Using eq. \@ref(eq:trouton)—and knowing that at standard conditions of $P^\standardstate = 1 \  \text{bar}$ the boiling temperature of water is 373 K—we calculate:
 
 \begin{equation}
-\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^\standardstate = \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
+\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^\standardstate = \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}.
 (\#eq:trouton1)
 \end{equation}
 
@@ -139,7 +139,7 @@ d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\tex
 where the substitution $Q_{\text{surr}}=-Q_{\text{sys}}$ can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.^[Even if we think at the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.] To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, $T_{\text{surr}}$ will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions. 
 
 > ```{exercise, supercooledEx}
-Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: $\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}$, and assuming both $C_P$ to be independent on temperature.
+Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: $\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, and assuming both $C_P$ to be independent on temperature.
 
 *Solution:* $\Delta S^{\mathrm{sys}}$ for the process under consideration can be calculated using the following cycle:
 
@@ -239,3 +239,249 @@ The careful wording in the definition of the third law  \@ref(def:thirdlawdef) a
 An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to $T=0 \; \text{K}$ in a finite number of steps.
 
 [//]: maybe show S^0 vs T plot here...
+
+
+## Chapter Review {#rev7}
+
+### Practice Problems {#exer7}
+
+
+**Problem 1: Entropy Change in an Isothermal Expansion.**
+
+An ideal gas expands isothermally from a volume of $2.0\,\text{L}$ to $5.0\,\text{L}$ at $300\,\text{K}$. Calculate the change in entropy of the system if there are $0.5\,\text{mol}$ of gas.
+
+**Solution:** For an isothermal expansion of an ideal gas, we use the equation:
+
+$$\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)$$
+
+Given: 
+
+$n = 0.5\,\text{mol}$, 
+
+$R = 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, 
+
+$V_i = 2.0\,\text{L}$,
+
+$V_f = 5.0\,\text{L}$.
+
+Then:
+
+$$\Delta S^{\text{sys}} = 0.5\,\text{mol} \cdot 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \frac{5.0\,\text{L}}{2.0\,\text{L}}$$
+
+$$\Delta S^{\text{sys}} = 4.157\,\text{J/K} \cdot 0.916 = 3.808\,\text{J/K}$$
+Adjusting for the significant digits, we get the final answer.
+
+**Answer:** The change in entropy of the system is $3.8\,\text{J/K}$.
+
+
+---
+
+**Problem 2: Entropy of Vaporization.**
+
+Calculate the standard entropy of vaporization for ethanol at its boiling point of $78.35^\circ\text{C}$, given that its enthalpy of vaporization is $38.56\,\text{kJ/mol}$.
+
+**Solution:** We use the equation for entropy of vaporization:
+
+$$\Delta_{\text{vap}} S^\standardstate = \frac{\Delta_{\text{vap}} H^\standardstate}{T_B}$$
+
+Given:
+
+$\Delta_{\text{vap}} H^\standardstate = 38.56\,\text{kJ/mol}$,
+
+$T_B = 38.56^\circ\text{C}+273.15=351.51\,\text{K}$.
+
+Then:
+
+$$\Delta_{\text{vap}} S = \frac{38.56\,\text{kJ/mol}}{351.51\,\text{K}} = 0.1097\,\text{kJ/(mol K)}.$$
+
+**Answer:** The standard entropy of vaporization for ethanol is $109.7\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$.
+
+---
+
+**Problem 3: Entropy Change in the Surroundings.**
+
+A system releases $500\,\text{J}$ of heat to its surroundings at a constant temperature of $25^\circ\text{C}$. Calculate the entropy change of the surroundings.
+
+**Solution:** We use the equation for entropy change in the surroundings:
+
+$$\Delta S^{\text{surr}} = -\frac{Q_{\text{sys}}}{T_{\text{surr}}}$$
+
+Given:
+
+$Q_{sys} = -500\,\text{J}$ (negative because the system releases heat),
+
+$T_{surr} = 25\,\text{°C} + 273.15 = 298.15\,\text{K}$.
+
+Then:
+
+$$\Delta S^{\text{surr}} = -\frac{-500\,\text{J}}{298.15\,\text{K}} = 1.677\,\text{J/K}$$
+Fixing the significant digits gives us the final answer.
+
+**Answer:** The entropy in the surroundings changes by $1.7\,\text{J/K}$.
+
+---
+
+**Problem 4: Entropy Change in an Isobaric Process**
+
+Calculate the entropy change when $2.0\,\text{mol}$ of an ideal gas is heated from $300\,\text{K}$ to $400\,\text{K}$ at constant pressure. Assume $C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$ and is independent of temperature.
+
+**Solution:** For an isobaric process, we use the equation:
+
+$$\Delta S_{sys} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)$$
+
+Given:
+
+$n = 2.0\,\text{mol}$, 
+
+$C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, 
+
+$T_i = 300\,\text{K}$, 
+
+$T_f = 400\,\text{K}$.
+
+Then:
+
+$$\Delta S^{\text{sys}} = 2.0\,\text{mol} \cdot 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \left(\frac{400\,\text{K}}{300\,\text{K}}\right)$$
+
+$$\Delta S^{\text{sys}} = 58.\,\text{J/K} \cdot 0.2877 = 16.69\,\text{J/K}$$
+Adjusting the significant digits gives us the final answer.
+
+**Answer:** The entropy change in the system is $17\,\text{J/K}$.
+
+---
+
+**Problem 5: Reaction Eentropy.**
+
+Calculate the standard reaction entropy for the combustion of methane:
+
+$$\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_2\text{O}_{(\text{l})}$$
+
+Using the standard entropies reported in the tables at the end of the book.
+
+**Solution:** We can use eq. \@ref(eq:thirdlaweq) to calculate the reaction entropy:
+
+$$\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S^\standardstate_i$$
+
+$$\Delta_{\text{rxn}} S^\standardstate = [S^\standardstate_{\text{CO}_{2\text{(g)}}} + 2S^\standardstate_{\text{H}_2\text{O}_{\text{(l)}}}] - [S^\standardstate_{\text{CH}_{4 \text{(g)}}} + 2S^\standardstate_{\text{O}_{2\text{(g)}}}]$$
+
+$$\Delta_{\text{rxn}} S^\standardstate = [213.8 + 2(70.0)] - [186.3 + 2(205.2)]$$
+
+$$\Delta_{\text{rxn}} S^\standardstate = 353.8 - 596.7 = -242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$$
+
+**Answer:** The standard reaction entropy for the combustion of methane is $-242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
+
+### Study Questions {#quest7}
+
+**1. What is the formula for calculating the change in entropy of the universe?**
+
+a. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}$.
+b. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}$.
+c. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} \cdot \Delta S^{\text{surr}}$.
+d. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} / \Delta S^{\text{surr}}$.
+e. $\Delta S_{\text{universe}} = (\Delta S^{\text{sys}})^2 + (\Delta S^{\text{surr}})^2$.
+
+---
+
+**2. For an ideal gas undergoing an isothermal process, which formula correctly represents the change in entropy?**
+
+a. $\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)$.
+b. $\Delta S^{\text{sys}} = nR \ln \left(\frac{P_f}{P_i}\right)$.
+c. $\Delta S^{\text{sys}} = nR (V_f - V_i)$.
+d. $\Delta S^{\text{sys}} = nR (P_f - P_i)$.
+e. $\Delta S^{\text{sys}} = nR (T_f - T_i)$.
+
+---
+
+**3. What is Trouton's rule for the entropy of vaporization?**
+
+a. $\Delta_{text{vap}} S \approx 5.5R$.
+b. $\Delta_{text{vap}} S \approx 15.5R$.
+c. $\Delta_{text{vap}} S \approx 10.5R$.
+d. $\Delta_{text{vap}} S \approx 20.5R$.
+e. $\Delta_{text{vap}} S \approx 1.5R$.
+
+---
+
+**4. Which statement is true for a reversible adiabatic process?**
+
+a. $\Delta S^{\text{sys}} > 0$.
+b. $\Delta S^{\text{sys}} < 0$.
+c. $\Delta S^{\text{sys}} = 0$.
+d. $Q_{\text{REV}} > 0$.
+e. $Q_{\text{IRR}} = 0$.
+
+---
+
+**5. How is the entropy change of the surroundings calculated?**
+
+a. $\Delta S^{\text{surr}} = \frac{-Q_{\text{surr}}}{T_{surr}}$.
+b. $\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{sys}}$.
+c. $\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{surr}}$.
+d. $\Delta S^{\text{surr}} = \frac{Q_{\text{sys}}}{T_{surr}}$.
+e. $\Delta S^{\text{surr}} = \frac{Q_{\text{surr}}}{T_{sys}}$.
+
+---
+
+**6. Which of the following formula describes what the Clausius theorem state?**
+
+a. $dS^{\text{sys}} =    \frac{đQ}{T}$.
+b. $dS^{\text{sys}} <    \frac{đQ}{T}$.
+c. $dS^{\text{sys}} >    \frac{đQ}{T}$.
+d. $dS^{\text{sys}} \leq \frac{đQ}{T}$.
+e. $dS^{\text{sys}} \geq \frac{đQ}{T}$.
+
+---
+
+**7. According to the Third Law of Thermodynamics, what is the entropy of a perfectly ordered, pure, crystalline substance at $T = 0\,\text{K}$?**
+
+a. 1 J/K.
+b. 0 J/K.
+c. -1 J/K.
+d. Infinity.
+e. Undefined.
+
+---
+
+**8. How can reaction entropies be calculated using standard entropies?**
+
+a. $\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S^\standardstate_i$.
+b. $\Delta_{\text{rxn}} S^\standardstate = \prod_i \nu_i S^\standardstate_i$.
+c. $\Delta_{\text{rxn}} S^\standardstate = \sum_i S^\standardstate_i / \nu_i$.
+d. $\Delta_{\text{rxn}} S^\standardstate = \sum_i (\nu_i S^\standardstate_i)^2$.
+e. $\Delta_{\text{rxn}} S^\standardstate = \ln(\sum_i \nu_i S^\standardstate_i)$.
+
+---
+
+**9. How is the change in entropy of the system calculated for an isobaric process? Note: Assume $C_P$ to be independent of temperature**
+
+a. $\Delta S^{\text{sys}} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)$.
+b. $\Delta S^{\text{sys}} \approx nC_V \ln \left(\frac{T_f}{T_i}\right)$.
+c. $\Delta S^{\text{sys}} \approx nC_P (T_f - T_i)$.
+d. $\Delta S^{\text{sys}} \approx nR \ln \left(\frac{T_f}{T_i}\right)$.
+e. $\Delta S^{\text{sys}} \approx \frac{nC_P}{\ln (T_f/T_i)}$.
+
+---
+
+**Which of the following is a corollary to the Third Law of Thermodynamics?**
+
+a. It is possible to reach T = 0 K in a single step.
+b. It is impossible to reach T = 0 K in a finite number of steps.
+c. All substances have non-zero entropy at T = 0 K.
+d. The entropy of a substance is always negative at T > 0 K.
+e. The entropy of a substance is always infinity at T < 0 K.
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.b, 2.a, 3.c, 4.c, 5.c, 6.e, 7.b, 8.a, 9.a, 10.b
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.b, 2.a, 3.c, 4.c, 5.c, 6.e, 7.b, 8.a, 9.a, 10.b'
+}`
+

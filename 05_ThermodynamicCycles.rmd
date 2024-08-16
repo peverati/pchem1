@@ -299,3 +299,244 @@ If we go back to eq. \@ref(eq:effCC1) and we replace eq. \@ref(eq:WtotCC2) for $
 \end{equation}
 
 which proves that the efficiency of a Carnot cycle is strictly smaller than 1.^[Eq. \@ref(eq:effCC3) can be equal to 1 only if $T_l=0 \; \text{K}$ or $T_h=\infty$, two conditions that are both equally impossible.] In other words, no cycle can convert 100% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. \@ref(eq:effCC1) and \@ref(eq:effCC3) for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement "It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects."^[Thomson W. [Transactions of the Royal Society of Edinburgh. 1851 XX 261–268, 289–298.](https://www.biodiversitylibrary.org/item/126047#page/295/mode/1up).] This statement conclusively disproved Joule's original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.
+
+
+
+## Chapter Review {#rev5}
+
+### Practice Problems {#exer5}
+
+**Problem 1: Calculating Work in a Carnot Cycle**
+
+A Carnot cycle operates between temperatures of $400 \,\text{K}$ and $300 ,\text{K}$. The volume of the gas expands from $2.0\,\text{L}$ to $5.0\,\text{L}$ during the isothermal expansion stage. If 2.0 moles of an ideal gas are used, calculate the total work done by the system.
+
+**Solution:** The total work in a Carnot cycle is given by eq. \@ref(eq:WtotCC2):
+
+$$W_{TOT} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}.$$
+
+Given:
+
+$n = 2.0 \,\text{mol}$
+
+$R = 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1}$
+
+$T_h = 400\,\text{K}$
+
+$T_l = 300\,\text{K}$
+
+$V_B = 5.0\,\text{L}$
+
+$V_A = 2.0\,\text{L}$
+
+Then:
+
+$$W_{TOT} = -2.0 \,\text{mol} \cdot 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1} \cdot(400\,\text{K} - 300\,\text{K})\cdot \ln\frac{5.0\,\text{L}}{2.0\,\text{L}}$$
+$$W_{TOT} = -1662.8\,\text{J} \cdot \ln(2.5) = -1662.8 \,\text{J} \cdot 0.916 = -1523.13\,\text{J}$$
+
+Adjusting the significant digits we get the final answer.
+
+**Answer:** The total work done by the system is $-1.5 \,\text{kJ}$.
+
+---
+
+**Problem 2: Efficiency of a Carnot Cycle**
+
+A Carnot engine operates between a hot reservoir at $500\,\text{K}$ and a cold reservoir at $250\,\text{K}$. Calculate the efficiency of this engine.
+
+**Solution:** The efficiency of a Carnot cycle is given by eq. \@ref(eq:effCC3):
+
+$$\varepsilon = 1 - \frac{T_l}{T_h}.$$
+
+Given:
+
+$T_h = 500\,\text{K}$
+
+$T_l = 250\,\text{K}$
+
+Then:
+
+$$\varepsilon = 1 - \frac{250\,\text{K}}{500\,\text{K}} = 1 - 0.5 = 0.5$$
+
+**Answer:** The efficiency of the Carnot engine is 50%.
+
+---
+
+**Problem 3: Determining Cold Reservoir Temperature in a Carnot Cycle**
+
+A Carnot engine operates between a hot reservoir at $600 \,\text{K}$ and an unknown cold reservoir temperature. The engine absorbs $5000\,\text{J}$ of heat from the hot reservoir and performs $2000\,\text{J}$ of work in each cycle. Calculate the temperature of the cold reservoir.
+
+**Solution:** We can use eqs. \@ref(eq:effCC1) and \@ref(eq:effCC3) to solve this problem:
+
+$$\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.$$
+
+
+Given:
+
+$T_h = 600\,\text{K}$
+
+$|W_{TOT}| = 2000\,\text{J}$
+
+$|Q_h| = 5000\,\text{J}$
+
+
+First, we calculate the efficiency of the engine:
+
+$$\varepsilon = \frac{|W_{TOT}|}{|Q_h|} = \frac{2000\,\text{J}}{5000 \,\text{J}} = 0.4$$
+
+Then, we can use this efficiency to find $T_l$:
+
+$$0.4 = 1 - \frac{T_l}{600\,\text{K}}$$
+
+$$\frac{T_l}{600\,\text{K}} = 1 - 0.4 = 0.6$$
+
+$$T_l = 0.6 \cdot 600\,\text{K} = 360 \,\text{K}$$
+
+**Answer:** The temperature of the cold reservoir is 360 K.
+
+---
+
+**Problem 4: Heat Absorbed in a Carnot Cycle**
+
+A Carnot engine performs $1000\,\text{J}$ of work in each cycle. If it operates between temperatures of $600\,\text{K}$ and $300\,\text{K}$, calculate the amount of heat absorbed from the hot reservoir in each cycle.
+
+**Solution:**  As for the previous problem, we can use eqs. \@ref(eq:effCC1) and \@ref(eq:effCC3) to solve this problem::
+
+$$\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.$$
+
+Given:
+
+$T_h = 600\,\text{K}$
+
+$T_l = 300\,\text{K}$
+
+$|W_{TOT}| = 1000\,\text{J}$
+
+First, we calculate the efficiency:
+
+$$\varepsilon = 1 - \frac{300\,\text{K}}{600\,\text{K}} = 0.5$$
+
+Then, we can use this to find $|Q_h|$:
+
+$$0.5 = \frac{1000\,\text{J}}{|Q_h|}$$
+
+$$|Q_h| = \frac{1000\,\text{J}}{0.5} = 2000\,\text{J}$$
+
+**Answer:** The heat absorbed from the hot reservoir in each cycle is $2000 \,\text{J}$.
+
+
+
+### Study Questions {#quest5}
+
+**1. Which of the following is the basic principle behind refrigerators and air conditioning?**
+
+a. A Carnot cycle operating in the normal direction.
+b. A Carnot cycle operating in reverse order.
+c. An isothermal expansion followed by an adiabatic compression.
+d. A series of isochoric processes.
+e. A continuously expanding system.
+
+---
+
+**2. In a Carnot cycle, how many isothermal and how many adiabatic transformations are there?**
+
+a. 1 isothermal and 3 adiabatic.
+b. 2 isothermal and 2 adiabatic.
+c. 3 isothermal and 1 adiabatic.
+d. 4 isothermal and no adiabatic.
+e. No isothermal and 4 adiabatic.
+
+---
+
+**3. What is the total change in internal energy ($\Delta U_{\text{TOT}}$) for a complete Carnot cycle?**
+
+a. $nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
+b. $nRT_h\ln\frac{V_B}{V_A}$.
+c. $-nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
+d. 0.
+e. $nC_V(T_h - T_l)$.
+
+---
+
+**4. Which of the following equations correctly represents the total work done in a Carnot cycle?**
+
+a. $W_{\text{TOT}} = nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
+b. $W_{\text{TOT}} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
+c. $W_{\text{TOT}} = nRT_h\ln\frac{V_B}{V_A}$.
+d. $W_{\text{TOT}} = nRT_l\ln\frac{V_D}{V_C}$.
+e. $W_{\text{TOT}} = n\int_{T_l}^{T_h}C_V dT$.
+
+---
+
+**5. What is the relationship between the total work and total heat in a Carnot cycle?**
+
+a. $W_{\text{TOT}} = Q_{\text{TOT}}$.
+b. $W_{\text{TOT}} = Q_3 - Q_1$.
+c. $W_{\text{TOT}} = Q_1 + Q_3$.
+d. $W_{\text{TOT}} = Q_1 - Q_3$.
+e. $W_{\text{TOT}} = -Q_{\text{TOT}}$.
+
+---
+
+**6. How is the efficiency ($\varepsilon$) of a Carnot cycle defined?**
+
+a. $\varepsilon = \frac{|Q_{\text{TOT}}|}{|W_{\text{TOT}}|}$.
+b. $\varepsilon = \frac{|W_{\text{TOT}}|}{|Q_l|}$.
+c. $\varepsilon = \frac{|W_{\text{TOT}}|}{|Q_h|}$.
+d. $\varepsilon = \frac{|Q_h|}{|Q_l|}$.
+e. $\varepsilon = \frac{|Q_h|}{|W_{\text{TOT}}|}$.
+
+---
+
+**7. Which of the following formulas allows us to calculate the efficiency of a Carnot cycle?**
+
+a. $\varepsilon = \frac{T_h}{T_l}$.
+b. $\varepsilon = 1 - \frac{T_h}{T_l}$.
+c. $\varepsilon = 1 - \frac{T_l}{T_h}$.
+d. $\varepsilon = \frac{T_h - T_l}{T_h + T_l}$.
+e. $\varepsilon = \frac{T_h - T_l}{T_l}$.
+
+---
+
+**8. What happens when a Carnot cycle operates in reverse?**
+
+a. It produces more work than a forward cycle.
+b. It transfers heat from the cold reservoir to the hot reservoir.
+c. It violates the laws of thermodynamics.
+d. It has 100% efficiency.
+e. It only performs adiabatic transformations.
+
+---
+
+**9. What is the relationship between the volumes at different stages of the Carnot cycle?**
+
+a. $\frac{V_C}{V_D} = \frac{V_A}{V_B}$.
+b. $\frac{V_C}{V_D} = \frac{V_B}{V_A}$.
+c. $\frac{V_B}{V_A} = \frac{V_D}{V_C}$.
+d. $V_A = V_C$ and $V_B = V_D$.
+e. $V_A > V_B > V_C > V_D$.
+
+---
+
+**10. What is the significance of the Carnot cycle in the development of thermodynamics?**
+
+a. It proved the existence of absolute zero.
+b. It demonstrated that not all heat can be converted to work in a cyclic process.
+c. It disproved the existence of ideal gases.
+d. It showed that all thermodynamic processes are reversible.
+e. It proved that energy can be created in closed systems.
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b'
+}`
+

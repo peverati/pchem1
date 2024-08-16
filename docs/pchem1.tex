@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{06 December 2023}
+\date{16 August 2024}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -158,14 +158,24 @@
 
 \begin{center}\includegraphics[width=0.8\linewidth]{./img/OEP_Figures.000} \end{center}
 
-This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 3001) at Florida Tech.
+This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 3001) at Florida Institute of Technology.
 
 The instructor for this course and author of this textbook is Dr.~Roberto Peverati.
 
 \textbf{Contacts}: \href{mailto:rpeverati@fit.edu}{\nolinkurl{rpeverati@fit.edu}}, Office: OPS 333, (321) 674-7735
 
-Chemistry Program, Department of Biomedical and Chemical Engineering and Science
+Chemistry Program, Department of Chemistry and Chemical Engineering,
 Florida Institute of Technology, Melbourne, FL.
+
+\textbf{Author's Note to the August 2024 Edition.}
+
+2024 marks the fifth year of existence for ``The Live Textbook of Physical Chemistry.'' Faithful to my initial intent, the textbook has evolved substantially from its humble beginnings, and it continues to evolve to this days. Five years is a long time in education, and much has happened during this period, including a pandemic that forced everyone to online teaching and learning, and the rise of generative AI in many fields, including education and Academia. I have big plans for the next phase of the book's evolution, but due to time constraints and the ever-increasing demands of academic duties, I had to postpone them for now. As such, the structure of the textbook has largely remained unchanged. If and when I will have time to restructure my entire courses, as well as the textbooks that goes with them, I will present a true ``Second Edition'' of ``The Live Textbook,'' but this is not it yet.
+
+What I did have time to do, however, was to bring ``The Live Textbook'' up to the standards of a true academic textbook. Since its inception, I was well aware that there was a glaring omission: exercises. This summer, I finally had the opportunity to add new review sections at the end of every chapter, each containing practice problems and study questions. These new sections are designed to help readers verify their understanding of each chapter's content. More importantly, they are intended for my students to test their knowledge before exams. For this reason, they follow the same style as the questions I have used in my exams over the past five years. In fact, several of these questions and exercises are taken directly from previous exams. I can't promise that the same questions will be in future exams, but familiarizing with them will give a student the edge over students that decide to ignore them.
+
+Finally, I am not pretending to have been unaware of the emergence of AI, generative models, and their impact on education, so I've tried to put them to a good use. In the past five years, I specifically used ChatGPT and Claude to rewrite some sections of this textbook, and I have made it clear when that was the case. This tools was especially valuable this summer for the new exercises and questions sections, where I abundantly used it to help supplement my existing materials with newly generated ones. I made sure the AI didn't hallucinate and to fix it when it did, so hopefully, everything is consistent. I must confess that I would not have met the deadline for the beginning of the semester without this new technology. Hopefully, this serves as a good example of how AI can be incorporated into the classroom.
+
+As usual, if you spot any mistakes, I encourage you to reach out to me at the contacts listed above.
 
 \begin{quote}
 This live open textbook is distributed under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC-BY-SA 4.0 License} and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library.
@@ -184,26 +194,81 @@ Definitions and exercises are usually numbered and are highlighted in the text i
 
 Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar's corresponding icon. If you are \emph{really} old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on \href{https://github.com/peverati/PChem1}{over there} and fork the book.
 
-Each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week's chapter before the lecture on Friday.
-
-\begin{quote}
-If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati@fit.edu}{email} and you will receive a credit of up to three points towards your final score, once the typo has been verified and corrected.
-\end{quote}
+For my students, each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week's chapter before the lecture on Friday.
 
 \hypertarget{a-note-on-units}{%
 \section*{A note on units}\label{a-note-on-units}}
 \addcontentsline{toc}{section}{A note on units}
 
-In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (K), energetic terms will be measured in either Joules (J) or kiloJoules (kJ), while volumes will be measured in cubic meters, or more often in liters (L), where \(1\;\mathrm{L} = 10^{-3}\;\mathrm{m^3}\). An important exception is made for pressures, which will be measured in bars (bar). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (Pa), where \(1\;\mathrm{bar} = 10^5\;\mathrm{ Pa}\). This choice is made to retain a reasonable similarity with the unit atmosphere (atm) which is extensively used in other textbooks (\(1\;\mathrm{ atm} = 1.013\;\mathrm{ bar}\)) and in previous physical chemistry courses.
+In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (\(K\)), energetic terms will be measured in either Joules (\(\text{J}\)) or kiloJoules (\(\text{kJ}\)), while volumes will be measured in cubic meters, or more often in liters (\(\text{L}\)), where \(1\,\text{L} = 10^{-3}\,\text{m}^3\). An important exception is made for pressures, which will be measured in bars (\(\text{bar}\)). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (\(\text{Pa}\)), where \(1\,\text{bar} = 10^5\,\text{Pa}\). This choice is made to retain a reasonable similarity with the unit atmosphere (\(\text{atm}\)) which is extensively used in several other chemistry textbooks \((1\,\text{atm} = 1.013\,\text{bar})\) and in previous physical chemistry courses.
 
-We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of 273.15 K.
-Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting \(P_{atm} = 1\;\mathrm{bar}\), rather than \(P_{atm} = 1\;\mathrm{atm} = 1.013\;\mathrm{bar}\), an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
+We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of \(273.15\,\text{K}\). Other unconventional conversions might happen in some of the exercises, with the conversion factors always reported within the exercise itself.
+Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting \(P_{\text{atm}} = 1\,\text{bar}\), rather than \(P_{\text{atm}} = 1\,\text{atm} = 1.013\, \text{bar}\), an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
 
 \cleardoublepage
 \pagenumbering{arabic}
 
 \hypertarget{SystemVariables}{%
-\chapter{Systems and Variables}\label{SystemVariables}}
+\chapter{Instroduction to Thermodynamics}\label{SystemVariables}}
+
+\hypertarget{calculus-for-physical-chemistry-slicing-and-gluing}{%
+\section{Calculus for Physical Chemistry: Slicing and Gluing}\label{calculus-for-physical-chemistry-slicing-and-gluing}}
+
+Calculus is a powerful mathematical tool that helps us understand and analyze change. At its core, calculus involves two main procedures: differentiation and integration. These concepts are fundamental to the study of thermodynamics, as they enable us to examine how physical systems change. Undergraduate students often find calculus intimidating due to its rigorous presentation in mathematical courses. However, a strong mathematical foundation, while beneficial, is not always mandatory to study thermodynamics effectively.
+
+If you are a student who lacks confidence in mathematics, I encourage you not to be deterred by the presence of calculus in this physical chemistry textbook. If you break this initial wall of fear for calculus, you might find this textbook quite rewarding. After all, we will finally explain where all those unmemorable formulas that you've been presented in introductory general chemistry courses are coming from. To facilitate your task, we will present in this chapter a simplified view of calculus. The starting point will be a basic question: how do we measure things in science? To answer this question, we will use calculus to measure the length of an object. At a first glance, this approach might seem pedantic. Why do we need to use calculus, with all of its mathematical complications, when we can just grab a ruler and stack it against our object to measure its length? However, we need to remind ourselves that our ultimate goal is physical chemistry, and calculus is the language of this field. By focusing on the straightforward task of measuring a simple length, we aim to make calculus more accessible and less daunting.\footnote{I apologize in advance to the mathematicians that will read this book and cringe at the several unexplained approximations I have made. I am fully aware of the dangers of not introducing these concepts rigorously, but some compromises have to be made\ldots{}}From this simple starting point, we will expand our horizon to introduce the central topic of this textbook: Thermodynamics. Our main focus will be in the relationship between chemistry and thermodynamics, but since this is an advanced undergraduate textbook, we will need to do that from a rigorous perspective. If we want to see it in simple terms, we either deal with the approach of not explaining where things are coming from that is abundantly used in freshman chemistry courses, or we make the effort of learning a bit of calculus so we can use it to understand the world.
+
+\hypertarget{infslici}{%
+\subsection{Differentiation: Infinite Slicing}\label{infslici}}
+
+Differentiation can be thought of as ``slicing an object into infinitely thin pieces'' to understand how it changes at a specific point. Imagine you have a long stick and you want to measure how its length changes along a specific direction. To do this, you would cut the stick into infinitely thin slices. Each slice is so thin that its change in length is practically infinitesimal. By examining each of these tiny slices and how they change, you can understand the rate at which the stick's length changes at any given point. This process of infinite slicing is called differentiation, and it is the most powerful tool to understand things that change, that is, most of the things we are interested in science.
+
+How so? Let's look at a simple example. If we start from a stick of length \(L\), we can infinitely slice it into infinitesimally small pieces of length \(dL\). These incredibly tiny pieces are called \textbf{differentials} of the original quantity, in this particular case, the length of our stick. The beauty of these differentials, \(dL\), is that they don't really depend on how long our object initially was, nor on which unit we plan on using to measure this length. The differentials will always have the same size, that is, they will always be \emph{infinitesimally small}. Imagine, for example, that you start with an object whose length is \(1\, \text{m}\). After you slice it an infinite amount of times, each differential will have exactly the same length of \(0.000[...]0001\, \text{m}\), where we have replaced an infinite amount of zeros with the notation \([...]\). Now imagine that you start with a second object whose length is \(1000\, \text{m} = 1\,\text{km}\). After you slice this second object an infinite amount of times, you will end up with differentials that have exactly the same length as the ones we obtained before, that is \(0.000[...]0001\, \text{m} = 0.000[...]0001\, \text{km}\). At this point, specifying the unit of a differential (\(\text{m}\) or \(\text{km}\) in the case of length) becomes useless. For this reason, we say that differentials are unitless.
+
+Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the same as \(0\), but they can be used much more effectively than something that purely doesn't exist.\footnote{Yes, we are purposely skipping a lot of stuff here, see the note above.} The key word here is \emph{essentially}, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they've lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are \emph{unitless}, but they are not \emph{dimensionless.} Additionally, the differentials will also contain information on the rate of change (the ``slope'') of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as \(\frac{dL}{dx}\). In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, \(x\), along an axis that is oriented the same way as our stick.\footnote{The axis doesn't have to have the same orientation of the stick, but it is easier if we do so, in the first place.} This special ratio is called the \emph{derivative}, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative \(\frac{dL}{dx}\) tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number \(\frac{dL}{dx}=1\), but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.
+
+\hypertarget{integration-gluing-together-differentials}{%
+\subsection{Integration: Gluing Together Differentials}\label{integration-gluing-together-differentials}}
+
+Integration is the procedure that glues infinitely tiny slices back together to reconstruct the initial object. In simple terms, if you start with the infinitely thin slices of length that you cut earlier, you can add them all up to find the total length of the stick. Integration takes all these infinitesimally small pieces and combines them into a whole, helping you determine the accumulated total from the infinitesimal changes. Obviously this procedure is very complicated, and it involves gluing (summing over) an infinite amount of infinitesimally small things. If you can't wrap your head around this, that's OK, this concept puzzled humanity for thousands of years. The ancient Greeks were very concerned by this, but they failed to find a solution.\footnote{Look up \href{https://en.wikipedia.org/wiki/Zeno\%27s_paradoxes}{Zeno's paradoxes} for an interesting account of the situation at Greece's times.} It took two 17\textsuperscript{th} century geniuses, Isaac Newton and Gottfried Wilhelm Leibniz, to figure out how to do so.
+
+The solution came by first defining the mathematical operation that ``undoes'' the slicing:
+
+\begin{equation}
+L = \int dL.
+\label{eq:integraldefgen}
+\end{equation}
+
+This operation is called an integral, and is represented by the symbol \(\int\). The integral is the inverse of \(d\), as it reconstructs the original object by gluing together an infinite amount of infinitesimally small differentials. This operation is, in practice, just a sanity check for the differentiation procedure introduced in the previous section. What eq. \eqref{eq:integraldefgen} is telling us, is nothing other than: if you start from an object, \(L\), and apply a certain operation to it (\(d\)), then there has to be another operation (\(\int\)) that undoes what the first operation did. This inverse procedure becomes really useful when we want to measure things in the real world. How so? Because we can compare differentials of an unknown quantity to differentials of known ones, and then use the latter to reconstruct the former. In our simple example, we can use the derivative, \(\frac{dL}{dx}=1\), to compare the length of the object (unknown) to the position along our axis (known, because we can manipulate it). This is the mathematical counterpart of taking an object with unknown length, and compare it to the length of a standard stick (a meter, a kilometer, a mile, \ldots) The formula that describes this operation is:
+
+\begin{equation}
+L=\int dL = \int_{i}^{f} 1 dx = x_f-x_i =\Delta x,
+\label{eq:integraldef}
+\end{equation}
+
+where the length (\(L\)) of the original object is reconstructed by fixing the initial piece at position \(x_i\) on the \(x\) axis, the final piece at position \(x_f\), and then by gluing together the differentials \(dx\) in between these points, using the integral procedure. Switching from \(dL\) to \(dx\) has the noticeable advantage of going from something that we initially don't know anything about (the length of the stick) to something that we can manipulate as much as we want, because we specifically built it for this task (the position along the axis, \(x\)). This concept, of course, is not limited to length. If we differentiate an area, or a volume, or a pressure, or a temperature using eq. \eqref{eq:integraldefgen}, we obtain the corresponding differentials. By comparing these differentials to specifically built ones that we are able to manipulate to our will, we can reconstruct the original quantity via integration, using eq. \eqref{eq:integraldef}. Every differential will not depend on a specific \emph{unit} of measure (for example, the differential of a temperature \(dT\) does not depend on whether we initially measure the temperature in degrees Celsius, or degrees Fahrenheit, or Kelvin), but it will retain the \emph{dimension} of the original quantity (\(dT\) still retains the dimension of a temperature, a.k.a. it \emph{is} a temperature, despite the fact that it has a value of essentially zero and it does not have any unit). In addition, every differential will retain \emph{hidden} information about the initial object, which we can reconstruct by comparing to something we know, and then by applying integration to the latter. Notice that it is the operation in eq. \eqref{eq:integraldef} that puts the units back into the picture, by comparing an unknown differential to a known one. This is effectively the ``measuring'' procedure, written in mathematical terms.
+
+When we wrote eq. \eqref{eq:integraldef}, we glanced over the fact that \(\int_{i}^{f} 1 dx = x_f-x_i\). Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you'll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.\footnote{Yes, this is to a degree analogue to the plug and chug approach of general chemistry that we are trying to avoid here. However, we'll let this one pass, otherwise we risk of presenting a mathematics textbook, rather than a physical chemistry one.} Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that \(\int_{i}^{f} dx = x_f-x_i\). Other common integration rules that we'll need in this course are, for example: \(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\) for \(n\neq 1\), and \(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|,\)
+
+This is indeed a good point to go fetch that old math textbook and refresh some of the simplest integration rules, as well as some of the simplest derivation ones. Not that we will use all of them, but we might indeed use a few ones.
+
+\hypertarget{calculus-for-thermodynamics}{%
+\subsection{Calculus for Thermodynamics}\label{calculus-for-thermodynamics}}
+
+Now comes the interesting question: How are we going to practically perform these two important operations of differentiation and integration in thermodynamics? Well, imagine we need to study the behavior of a machine that prints out a number on a display. The first thing we need to do if we want to study this machine is to find something that makes the number change. Let's represent this something with a knob. We can then turn the knob voluntarily one way or another, and register haw the number changes on the display. This is how you apply calculus in thermodynamics (and in most science, for that matters). Our machine might be the length of an object \(L\), while our knob might be the position along an axis \(x\). We can voluntarily change the position on the axis, and observe how the length changes on the display. Does that sound familiar? Can we use eq. \eqref{eq:integraldef} to do so? I believe so\ldots{}
+
+Now, obviously the example of length and position is the simplest we could imagine, and doesn't really pertains to physical chemistry. A more relevant example is that of a gas, whose pressure changes when we change the pressure at constant volume. In this case, the pressure, \(P\), is the machine, and the temperature, \(T\), is the knob. To understand the machine, we will need to know the derivative \(\frac{dP}{dT}\). In many cases the derivative between our machine and our knob(s) might not be as simple as 1. In some of such cases, the derivative might be a different number, while in other it might be as complicated as a function itself. Some of the machine we will encounter might have more than just one knob, each with their own specific derivative, and each as complicated as it might be. In all cases, however, our analysis follow the same procedure: First, we identify all the knobs that affect the machine. Second, we use calculus to voluntarily change the position of the knobs and to register how the machine behaves. In mathematical terms, this procedure is to define and study the total differential:
+
+\begin{equation}
+\begin{aligned}
+d\mathcal{M} &= \left( \frac{\partial \mathcal{M}}{\partial a} \right) da + \left( \frac{\partial \mathcal{M}}{\partial b} \right) db + \left( \frac{\partial \mathcal{M}}{\partial c} \right) dc + \cdots ,\\
+\end{aligned}
+\label{eq:totdiff}
+\end{equation}
+
+where \(\mathcal{M}\) is our machine, \(d\mathcal{M}\) is its total differential, \(\left\{a,b,c,\cdots\right\}\) are the variables that affect the machine's behavior (i.e.~the knobs), and \(\frac{\partial \mathcal{M}}{\partial a}\) represents a partial derivative of the machine \(\mathcal{M}\) with respect to the variable \(a\) obtained by keeping all other variables constant. Notice that the number of variables is left unidentified, as it is our goal to indentify all of the variables that a machine depends on, and there are as many as necessary.
+
+The final piece of the puzzle we need to applying calculus to thermodynamics is to know whether or not we can apply these two procedures to any quantity that enters the picture. The answer to this question, unfortunately, is a resounding no. Differentiation and integration can be applied to many variables that are ``well-behaved.'' Such variables are called \textbf{state variables} in thermodynamics. Unfortunately though, there are also a few variables that are not well-behaved at all. These are called \textbf{path variables} in thermodynamics. It turns out that some of the quantities that thermodynamics is mostly concerned about, such as heat and work, belong to this ``ill-behaved'' category. Before we delve deeper into state and path variables, however, we need to define what variables are in thermodynamics. And before we can do that, we need to take a whole step back and define what thermodynamic is concerned about, that is the thermodynamic system.
 
 \hypertarget{thermodynamic-systems}{%
 \section{Thermodynamic Systems}\label{thermodynamic-systems}}
@@ -261,7 +326,7 @@ If you want a trick to remember the convention, use the weight loss/gain during 
 \hypertarget{thermodynamic-variables}{%
 \section{Thermodynamic Variables}\label{thermodynamic-variables}}
 
-The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don't be surprised if, on some occasions, you encounter some variable that is a little harder to measure directly, such as entropy. The variables depend only on the current state of the system, and therefore they define it. If I know the values of all the ``relevant variables'' of a system, I know the state of the system. The relationship between the variables is described by mathematical functions called state functions, while the ``relevant variables'' are called natural variables.
+The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don't be surprised if, on some occasions, you encounter variables that are a little harder to measure directly, such as entropy. If we know the values of all the ``relevant variables'' of a system, we know the state of the system. The relationships between all possible variables and the state of the system are called ``state functions''. Imagine state functions as the ``machines'' that we described in the previous section. The relevant variables are called natural variables, and you should imagine them as the ``knobs'' of the machines that we want to study. When we need to study a specific aspect of the system, then we need to know the total differential of the state function that is relevant for that aspect.
 
 What are the ``relevant variables'' of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:
 
@@ -270,9 +335,7 @@ What are the ``relevant variables'' of a system? The answer to this question dep
   \label{eq:idealgaslaworiginal}
 \end{equation}
 
-Therefore, the natural variables for an ideal gas are the pressure P, the volume V, the number of moles n, and the temperature T, with R being the ideal gas constant. Recalling from the general chemistry courses, R is a universal dimensional constant which has the values of R = 8.31 J/(mol K) in SI units.\\
-We will use the ideal gas equation and its variables as an example to discuss variables and functions in this chapter. We will analyze more complicated cases in the next chapters.
-Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:
+Therefore, the natural variables for an ideal gas are the pressure \(P\), the volume \(V\), the number of moles \(n\), and the temperature \(T\), with \(R\) being the ideal gas constant. Recalling from the general chemistry courses, \(R\) is a universal dimensional constant which has the values of \(R = 8.31 \,\text{J} \text{mol}^{-1} \text{K}^{-1})\) in SI units. We will use the ideal gas equation and its variables as an example to discuss variables and functions in this chapter. We will analyze more complicated cases in the next chapters. Variables can be classified according to numerous criteria, each with its advantages and disadvantages. A typical classification is:
 
 \begin{itemize}
 \tightlist
@@ -282,7 +345,7 @@ Variables can be classified according to numerous criteria, each with its advant
   \textbf{Chemical variables} (\(n\) in the ideal gas law): dependent on the chemical composition of the system.
 \end{itemize}
 
-Another useful classification is:
+Alternatively, another useful classification is:
 
 \begin{itemize}
 \tightlist
@@ -324,7 +387,7 @@ The ideal gas equation connects the 3 variables pressure, molar volume, and temp
   \label{eq:TPVm}
 \end{equation}
 
-These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. \eqref{eq:PTVm} defines the state function called ``pressure'', expressed as a function of temperature and molar volume. Similarly, eq. \eqref{eq:VmTP} defines the ``molar volume'' as a function of temperature and pressure, and eq. \eqref{eq:TPVm} defines the ``temperature'' as a function of pressure and molar volume. When we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure \(P(T, \overline{V})\):
+These equations define three state functions, each one expressed in terms of two independent natural variables. For example, eq. \eqref{eq:PTVm} defines the state function called ``pressure'', expressed as a function of temperature and molar volume. Similarly, eq. \eqref{eq:VmTP} defines the ``molar volume'' as a function of temperature and pressure, and eq. \eqref{eq:TPVm} defines the ``temperature'' as a function of pressure and molar volume. As we mentioned above, when we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure \(P(T, \overline{V})\), using the definition of total differential in eq. \eqref{eq:totdiff}, we get:
 
 \begin{equation}
   dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
@@ -352,7 +415,28 @@ and
   \label{eq:secondderPB}
 \end{equation}
 
-While for the ideal gas law, all the variables are ``well-behaved'' and always satisfy Schwartz's theorem, we will encounter some variable for which Schwartz's theorem does not hold. Mathematically, if the Schwartz's theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated, hence it is not a state function. The differential of a function that cannot be integrated cannot be defined exactly. Thus, these functions are called path functions; that is, they depend on the path rather than the state. The most typical examples of path functions that we will encounter in the next chapters are heat (\(Q\)) and work (\(W\)). For these functions, we cannot define exact differentials \(dQ\) and \(dW\), and we must introduce a new notation to define their ``inexact differentials'' \(đ Q\) and \(đ W\).
+While for the ideal gas law, all the variables are ``well-behaved'' and always satisfy Schwartz's theorem, we will encounter some variable for which Schwartz's theorem does not hold.
+
+\hypertarget{state-and-path-variables}{%
+\subsection{State and Path Variables}\label{state-and-path-variables}}
+
+Mathematically, if the Schwartz's theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated. These ill-behaved variables are called \textbf{path variables} (or path functions) because they depend on the path, rather than the state of the system. In contrast to these ill-behaved variables, well-behaved variables that can be used to define the state of the system are called \textbf{state variables} (or state functions).
+
+Since path functions violate Schwartz's theorem, their differential cannot be defined exactly, therefore eq. \eqref{eq:integraldef} does not exist. The most typical examples of path functions that we will encounter in the next chapters are heat (\(Q\)) and work (\(W\)). For these functions, we can attempt to infinitely slice the initial variable by using the same calculus procedure introduced in section \ref{infslici} and defined in eq. \eqref{eq:integraldefgen}. The resulting infinitely small pieces, however, are different than regular ``exact'' differentials, and are called \textbf{inexact differentials}. To differentiate between exact and inexact differentials, we use the letter \(d\) for the former, and the letter \(đ\) for the latter. It is important to remember that inexact differentials are defined using eq. \eqref{eq:integraldefgen}, but the procedure in \eqref{eq:integraldef} does not exist for them. Summarizing for a case that we will use often in thermodynamics, we can define the following quantity for heat (\(Q\)):
+
+\begin{equation}
+  Q = \int đQ.   
+  \label{eq:intdbarQ}
+\end{equation}
+
+However, we cannot use the familiar formula given by eq. \eqref{eq:integraldef} to calculate it:
+
+\begin{equation}
+  \int_{i}^{f} đQ \neq Q_f - Q_i,     
+  \label{eq:intdbarQfull}
+\end{equation}
+
+as the left hand side of this equation is not defined.\footnote{Technically, the integral itself does exist, but it takes different values when calculated along different paths, so it is not unique.} Work also behaves similarly.
 
 \begin{quote}
 We will return to exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let's, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This ``air distance'' depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities' positions depend uniquely on their latitudes and longitudes, the ``air distance'' is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the ``air distance'' is not the distance that I will practically have to drive when I go from NYC to LA. Such ``travel distance'' depends on the method of transportation that I decide to take (airplane vs.~car vs.~train vs.~boat vs.~\ldots). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical ``travel distance'' by car is, for example, about 4,500 km, which is about 12\% more than the ``air distance.'' Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a ``travel distance'' of 8,000 km or even more (200\% of the ``air distance''). The ``travel distance'' is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure \ref{fig:Fig2c1}.
@@ -366,6 +450,204 @@ We will return to exact and inexact differential when we discuss heat and work, 
 
 \caption{State Functions vs. Path Functions.}\label{fig:Fig2c1}
 \end{figure}
+
+\hypertarget{rev1}{%
+\section{Chapter Review}\label{rev1}}
+
+\hypertarget{quest1}{%
+\subsection{Study Questions}\label{quest1}}
+
+\textbf{1. What is a thermodynamic system?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A portion of space with defined boundaries separating it from its surroundings.
+\item
+  Any physical object in the universe.
+\item
+  A portion of space with real physical barriers.
+\item
+  A portion of space that is completely isolated form everything else.
+\item
+  A system that can only exchange energy with its surroundings.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. Which type of system exchanges only energy but not mass with its surroundings?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Open system.
+\item
+  Closed system.
+\item
+  Isolated system.
+\item
+  Adiabatic system.
+\item
+  Diathermic system.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. According to the chemistry convention of signs, what sign is assigned to mass entering a system?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Negative.
+\item
+  Positive.
+\item
+  Zero.
+\item
+  Depends on the type of system.
+\item
+  Depends on the temperature.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. What is an example of an intensive variable?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Volume (\(V\)).
+\item
+  Number of moles (\(n\)).
+\item
+  Temperature (\(T\)).
+\item
+  Mass (\(m\)).
+\item
+  Energy (\(E\)).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which of the following variables is NOT part of the ideal gas law?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Pressure (\(P\)).
+\item
+  Volume (\(V\)).
+\item
+  Temperature (\(T\)).
+\item
+  Entropy (\(S\)).
+\item
+  Number of moles (\(n\)).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following is a valid expression for the ideal gas law?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\frac{P}{T}=\frac{nR}{V}\).
+\item
+  \(P=nRTV\).
+\item
+  \(P+V=nRT\).
+\item
+  \(PVT=nR\).
+\item
+  \(PT=nRV\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following is a state function?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Heat (\(Q\)).
+\item
+  Work (\(W\)).
+\item
+  Pressure (\(P\)).
+\item
+  Distance traveled.
+\item
+  Path length.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What happens to the variables of a system when it absorbs energy?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The system's mass increases.
+\item
+  One or more of its variables (such as temperature) increase.
+\item
+  The system becomes isolated.
+\item
+  The system's pressure decreases.
+\item
+  The system's volume becomes infinite.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following is an extensive variable?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Pressure (\(P\)).
+\item
+  Temperature (\(T\)).
+\item
+  Molar volume \((\overline{V})\).
+\item
+  Volume (\(V\)).
+\item
+  Specific heat (\(c\)).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is the term for variables that depend only on the current state of the system and define it?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Intensive variables.
+\item
+  Extensive variables.
+\item
+  Natural variables.
+\item
+  Arbitrary variables.
+\item
+  Path variables.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.b, 4.c, 5.d, 6.a, 7.c, 8.b, 9.d, 10.c
 
 \hypertarget{ZerothLaw}{%
 \chapter{Zeroth Law of Thermodynamics}\label{ZerothLaw}}
@@ -409,20 +691,20 @@ As you probably recall from general chemistry, the ability of a substance to abs
 \hypertarget{processes-at-constant-volume-isochoric}{%
 \subsection{Processes at constant volume (isochoric)}\label{processes-at-constant-volume-isochoric}}
 
-The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recasting from general chemistry:
+The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recasting from general chemistry, the molar heat capacity at constant volume has the following formal definition:
 
 \begin{quote}
 The molar heat capacity at constant volume is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.
 \end{quote}
 
-This simple definition can be written in mathematical terms as:
+This is a procedural definition that defines how we can measure \(C_V\) in practice. While this procedure is useful in laboratory settings and in introductory chemistry courses, we need to go beyond it to understand its origin and its meaning. Have you ever wondered why do you need to increase the temperature by 1 K? What if you want to increase it by 2? Or 1/2, or 1/1000? Also, the definition is highly imprecise, as it certainly there has to be a difference when we increase the temperature of a substance from 1 K to 2 K, to when we increase it from 1001 K to 1002 K. Those situation certainly cannot be leading to the same results. How are we going to circumvent this poor definition? We need to apply calculus to remove those arbitrary units and arbitrary increments (remember that differentials are all the same size, and unitless):
 
 \begin{equation}
   C_V = \frac{đ Q_V}{n dT} \Rightarrow đ Q_V = n C_V dT.
   \label{eq:Cvdef}
 \end{equation}
 
-Given a known value of \(C_V\), the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. \eqref{eq:Cvdef}:
+This new differential definition of \(C_V\) is independent on the unit we use to measure it, and does not require a procedural definition. Given a known value of \(C_V\), the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. \eqref{eq:Cvdef}:
 
 \begin{equation}
   đ Q_V = n C_V dT \rightarrow \int đ Q_V = n \int_{T_i}^{T_F}C_V dT \rightarrow Q_V = n C_V \int_{T_i}^{T_F}dT,
@@ -445,7 +727,7 @@ Similarly to the previous case, the heat capacity at constant pressure measures 
 The molar heat capacity at constant pressure is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.
 \end{quote}
 
-And once again, this mathematical treatment follows:
+And once again, applying calculus to obtain a differential definition of \(C_P\), we get:
 
 \begin{equation}
   C_P = \frac{đ Q_P}{n dT} \Rightarrow đ Q_P = n C_P dT \rightarrow \int đ Q_P = n \int_{T_i}^{T_F}C_P dT,
@@ -598,6 +880,317 @@ The integral on the right hand side of eq. \eqref{eq:WintsolvedV2} can be solved
 This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an \(\infty\)-step process.
 
 The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.\footnote{In contrast to a lower bound for expansion processes.} \(\left| W_{\text{min}} \right|\) for compressions is calculated as the area underneath the \(PV\) curve, exactly as \(\left| W_{\text{max}} \right|\) for expansions in eq. \eqref{eq:WintsolvedV2}.
+
+\hypertarget{rev2}{%
+\section{Chapter Review}\label{rev2}}
+
+\hypertarget{exer2}{%
+\subsection{Practice Problems}\label{exer2}}
+
+\textbf{Problem 1: Calculation of Heat in an Isochoric Process}
+
+Calculate the heat absorbed by 3.00 moles of an ideal gas when its temperature increases from \(250.\, \text{K}\) to \(350.\, \text{K}\) at constant volume, knowing that its molar heat capacity at constant volume \(C_V\) is \(12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} For an isochoric process, the heat absorbed is given by eq. \eqref{eq:Cvint}: \[  Q_V \cong n C_V \Delta T.\]
+
+Given:
+
+\(n=3.00 \, \text{mol}\),
+
+\(C_V=12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(\Delta T = (350.-250.) \text{K}=100.\, \text{K}\).
+
+Then:
+
+\[Q_V=(3.00 \, \text{mol})(12.5\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(100.\,\text{K})=3750\,\text{J,}\]
+
+which, using the appropriate amount of significant digits, gives us the final answer.
+
+\textbf{Answer:} The heat absorbed is \(3.75\,\text{kJ}.\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Calculation of Heat in an Isobaric Process}
+
+Calculate the heat absorbed by 2.0 moles of an ideal gas when its temperature increases from \(300. \,\text{K}\) to \(500. \,\text{K}\) at constant pressure. The molar heat capacity at constant pressure for this gas is \(29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} For an isochoric process, the heat absorbed is given by eq. \eqref{eq:Cpint}: \[  Q_P \cong n C_P \Delta T.\]
+
+Given:
+
+\(n=2.0\,\text{mol}\)
+
+\(C_P =29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(\Delta T= (500.-300.)\,\text{K}=200.\,\text{K}\)
+
+Then:
+
+\[Q_P=(2.0\,\text{mol})(29.1\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200.\,\text{K}) = 11640\,\text{J},\]
+
+which, using the appropriate amount of significant digits, gives us the right answer. (Notice the difference with respect to the previous problem.)
+
+\textbf{Answer:} The heat absorbed is \(12.\, \text{kJ}.\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Calculation of Work in an Isothermal Process}
+
+Calculate the maximum amount of work that can be done by an ideal gas during an isothermal expansion at \(300.\, \text{K}\) from an initial volume of \(1.0\,\text{L}\) to a final volume of \(3.0\,\text{L}\). Assume there are 2.0 moles of the gas and the gas constant \(R=8.314\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} For an isothermal process, the maximum amount of work done by the gas is obtained when the transformation happens in an infinite amount of steps. The absolute value of the work is given by eq. \eqref{eq:WintsolvedV2}: \[  \left| W_{\text{max}} \right| = nRT \ln \frac{V_f}{V_i}.\]
+
+Given:
+
+\(n=2.0\,\text{mol}\),
+
+\(T=300.\,\text{K}\),
+
+\(V_i=1.0\,\text{L}\),
+
+\(V_f=3.0\,\text{L}\).
+
+Then:
+
+\[\left| W_{\text{max}} \right|=(2.0\,\text{mol})(8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(300.\,\text{K})\ln\left(\frac{3.0\,\text{L}}{1.0\,\text{L}}\right),\]
+
+\[\left| W_{\text{max}} \right|=4988.4\,\text{J}\cdot \ln(3),\]
+
+and considering that:
+
+\[\ln(3)\approx 1.0986,\]
+
+then:
+
+\[\left| W_{\text{max}} \right|\approx 4988.4\,\text{J} \cdot 1.0986 \approx 5480\,\text{J},\]
+
+Finally, we should always considerthe chemistry convention of the sign, Definition \ref{def:chemistryconv}, according to which the work \emph{performed} by the system (our ideal gas) in an expansion is always \emph{negative}.
+
+\textbf{Answer:} The work done by the system is \(-5.5\,\text{kJ}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 4: Calculation of Work in an Expansion Against Constant External Pressure}
+
+In a room with a high pressure, a baloon is filled with \(2.0\,\text{L}\) of an ideal gas. The baloon is then brought into a different room at a lower external pressure of \(1.5\,\text{atm}\). The baloon expands quickly in this second room to a final volume of \(5.0\,\text{L}\). Calculate the amount of work that the gas releases in the second room. Assume that the temperature is the same across both rooms. Note: \(1 \,\text{atm}\cdotp\text{L} = 101.3\,\text{J}\).
+
+\textbf{Solution:} This problem present an ideal gas that is expanding in a fast, 1-step process, at constant temperature. For this process, the absolute value of the amount of work done by the gas is given by eq. \eqref{eq:Warea1}: \[  \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i).\]
+
+Given:
+
+\(P=1.5\,\text{atm}\),
+
+\(\Delta V =(5.0-2.0)\,\text{L}=3.0\,\text{L}\),
+
+\(1 \, \text{atm}\cdotp\text{L}=101.3\,\text{J}\)
+
+Then:
+
+\[\left| W_{\text{1-step}} \right|=(1.5\,\text{atm})(3.0\,\text{L}) = 4.5\,\text{atm}\cdotp \text{L}.\]
+
+Converting \(\text{atm}\cdot\text{L}\) to \(\text{J}\) and accounting for the chemistry convention of the sign we get:
+
+\[W_{\text{1-step}}= -4.5\,\text{atm}\cdotp \text{L} \cdot 101.3 \,\text{J}\,(\text{atm}\cdotp\text{L})^{-1} = -456\,\text{J},\]
+
+hence, using the correct amount of significant digits, we get the final answer.
+
+\textbf{Answer:} The amount of work released by the gas is \(-4.6 \cdot 10^{-1}\,\text{kJ}\).
+
+\hypertarget{quest2}{%
+\subsection{Study Questions}\label{quest2}}
+
+\textbf{1. What is the primary focus of thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The study of chemical reactions.
+\item
+  The relationship between heat, work, and energy.
+\item
+  The behavior of gases under different pressures.
+\item
+  The study of atomic structures.
+\item
+  The analysis of electromagnetic waves.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. Which law of thermodynamics states that if two systems are each in thermal equilibrium with a third system, then they are in thermal equilibrium with each other?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The First Law of Thermodynamics.
+\item
+  The Second Law of Thermodynamics.
+\item
+  The Third Law of Thermodynamics.
+\item
+  The Zeroth Law of Thermodynamics.
+\item
+  The Law of Conservation of Energy.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the formal definition of the molar heat capacity at constant volume?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.
+\item
+  The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.
+\item
+  The amount of heat required to increase the temperature of a system by 1°C at constant pressure.
+\item
+  The amount of heat required to increase the temperature of a system by 1°C at constant volume.
+\item
+  The energy required to change the state of 1 mol of a substance.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. What is the formal definition of the molar heat capacity at constant pressure?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.
+\item
+  The amount of heat required to increase the temperature of a system by 1°C at constant volume.
+\item
+  The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.
+\item
+  The energy required to change the state of 1 mol of a substance.
+\item
+  The heat required to raise the temperature of a system by 1 K regardless of volume or pressure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. In an isothermal process for an ideal gas, what is the expression for the absolute value of the maximum work done by the system?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\left| W \right|=P\Delta V\).
+\item
+  \(\left| W \right|=nR \Delta T\).
+\item
+  \(\left| W \right|=nRT\ln\frac{V_f}{V_i}\).
+\item
+  \(\left| W \right|=-P_{\text{ext}}(V_f-V_i)\).
+\item
+  \(\left| W \right|=nC_V \Delta T\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following formula can \emph{always} be used to calculate the work in a thermodynamic process involving a gas and a movable piston?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(W= - \int_{i}^{f} PdV\).
+\item
+  \(W = P \Delta T\).
+\item
+  \(W = nRT \Delta V\).
+\item
+  \(W = nC_P \Delta T\).
+\item
+  \(W = \int_{i}^{f} VdP\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following is true about heat (Q) in thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is a state function.
+\item
+  It can be directly used to define the state of a system.
+\item
+  It is always negative.
+\item
+  It is an extensive property.
+\item
+  It is a path function.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What happens to the temperature of two objects in thermal equilibrium with a third object, according to the Zeroth Law of Thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  They both increase.
+\item
+  They both decrease.
+\item
+  They reach the same temperature.
+\item
+  They remain at different temperatures.
+\item
+  They oscillate around a mean temperature.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the expression for the heat transferred in a process at constant volume?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(Q = nC_V \Delta T\)
+\item
+  \(Q = P \Delta V\)
+\item
+  \(Q = n C_P \Delta T\)
+\item
+  \(Q = nRT \ln \frac{V_f}{V_i}\)
+\item
+  \(Q = \int PdV\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which scenario represents the minimum work required for a compression process in thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A one-step fast compression.
+\item
+  An infinitely slow compression.
+\item
+  A constant temperature compression.
+\item
+  A constant volume compression.
+\item
+  A compression with variable external pressure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.d, 3.b, 4.c, 5.c, 6.a, 7.e, 8.c, 9.a, 10.b
 
 \hypertarget{FirstLaw}{%
 \chapter{First Law of Thermodynamics}\label{FirstLaw}}
@@ -863,6 +1456,363 @@ This process can happen both ways without losses, and is called \emph{reversible
 
 Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
 
+\hypertarget{rev3}{%
+\section{Chapter Review}\label{rev3}}
+
+\hypertarget{exer3}{%
+\subsection{Practice Problems}\label{exer3}}
+
+\textbf{Problem 1: Work Done in Isothermal Expansion}
+
+An ideal gas expands isothermally and reversibly at a temperature of \(300. \, \text{K}\) from a volume of \(2.0 \, \text{L}\) to \(5.0 \, \text{L}\). Calculate the work done by the gas during the expansion. The amount of gas is \(1.0 \, \text{mol}\).
+
+\textbf{Solution:} The work done in an isothermal reversible expansion of an ideal gas is given by:
+
+\[ W = -nRT \ln \left(\frac{V_f}{V_i}\right) \]
+
+Given:
+
+\(n = 1.0 \, \text{mol}\)
+
+\(R = 8.3 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(T = 300. \, \text{K}\)
+
+\(V_i = 2.0 \, \text{L}\)
+
+\(V_f = 5.0 \, \text{L}\)
+
+Substituting the values:
+
+\[ W = - (1.0\, \text{mol}) (8.3 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (300. \, \text{K})  \ln \left(\frac{5.0\, \text{L}}{2.0\, \text{L}}\right) \]
+
+\[ W = -2500.\, \text{J} \cdot \ln \left(2.5\right) \]
+
+\[ W = -2500.\, \text{J} \cdot 0.92 \]
+
+\[ W \approx -2300 \, \text{J} \]
+
+Now we just need to adjust the significant digits.
+
+\textbf{Answer:} The work done by the gas is \(-2.3 \, \text{kJ}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Internal Energy Change in an Isochoric Process}
+
+Calculate the change in internal energy, \(\Delta U\), for \(2.0 \, \text{mol}\) of an ideal gas undergoing an isochoric heating process from \(250. \, \text{K}\) to \(350. \, \text{K}\). The molar heat capacity at constant volume, \(C_V\), is \(12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} For an isochoric process, the change in internal energy is given by:
+
+\[ \Delta U = n C_V \Delta T \]
+
+Given:
+
+\(n = 2.0 \, \text{mol}\)
+
+\(C_V = 12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(\Delta T = (350. - 250.) \, \text{K} = 100. \, \text{K}\)
+
+Substituting the values:
+
+\[ \Delta U = (2.0\, \text{mol})(12.5\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (100.\,\text{K}) \]
+
+\[ \Delta U = 2500. \, \text{J} \]
+
+Finally, again we need to just adjust the significant digits.
+
+\textbf{Answer:} The change in internal energy, \(\Delta U\), is \(2.5 \, \text{kJ}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Heat Required for an Isobaric Process}
+
+Determine the heat required to raise the temperature of \(3.0 \, \text{mol}\) of an ideal gas from \(200. \, \text{K}\) to \(400. \, \text{K}\) in an isobaric process. The molar heat capacity at constant pressure, \(C_P\), is \(21. \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} The heat required for an isobaric process is given by:
+
+\[ Q_P = n C_P \Delta T \]
+
+Given:
+
+\(n = 3.0 \, \text{mol}\)
+
+\(C_P = 21. \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(\Delta T = (400. - 200.) \, \text{K} = 200. \, \text{K}\)
+
+Substituting the values:
+
+\[ Q_P = (3.0 \, \text{mol})(21 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200. \, \text{K}) \]
+
+\[ Q_P = 12600. \, \text{J} \]
+
+Adjusting the significant digits we get the final answer.
+
+\textbf{Answer:} The heat required is \(13. \, \text{kJ}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 4: Final Temperature in an Isochoric Heating Process}
+
+A \(2.00 \, \text{mol}\) sample of an ideal gas is heated isochorically (at constant volume) from an initial temperature of \(300. \, \text{K}\). If the gas absorbs \(5000. \, \text{J}\) of heat during the process, what is the final temperature of the gas? The molar heat capacity at constant volume, \(C_V\), is \(20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} The heat absorbed in an isochoric process is given by:
+
+\[ Q = n C_V \Delta T \]
+
+Given:
+
+\(n = 2.00 \, \text{mol}\)
+
+\(C_V = 20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(Q = 5000. \, \text{J}\)
+
+\(T_i = 300. \, \text{K}\)
+
+Rearranging to solve for \(\Delta T\):
+
+\[ \Delta T = \frac{Q}{n C_V} \]
+
+Substituting the values:
+
+\[ \Delta T = \frac{5000. \, \text{J}}{(2.00\,\text{mol}) (20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})},\]
+
+\[ \Delta T = \frac{5000.}{40.} = 125. \, \text{K} \]
+
+The final temperature is:
+
+\[ T_f = T_i + \Delta T \]
+
+\[ T_f = 300. \, \text{K} + 125. \, \text{K} = 425. \, \text{K} \]
+
+\textbf{Answer:} The final temperature, \(T_f\), is \(425. \, \text{K}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 5: Enthalpy Change During Heating}
+
+Calculate the enthalpy change, \(\Delta H\), when \(4.00 \, \text{mol}\) of an ideal gas is heated from \(250. \, \text{K}\) to \(450. \, \text{K}\) at constant pressure. The molar heat capacity at constant pressure, \(C_P\), is \(29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\textbf{Solution:} The enthalpy change in an isobaric process is given by:
+
+\[ \Delta H = n C_P \Delta T \]
+
+Given:
+
+\(n = 4.00 \, \text{mol}\)
+
+\(C_P = 29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\(\Delta T = (450. - 250.) \, \text{K} = 200. \, \text{K}\)
+
+Substituting the values:
+
+\[ \Delta H = (4.00\, \text{mol}) (29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (200.\,\text{K}),\]
+
+\[ \Delta H = 23200 \, \text{J} \]
+
+As usual, the final answer requires just an adjustment for the significant digits.
+
+\textbf{Answer:} The enthalpy change, \(\Delta H\), is \(23.2 \, \text{kJ}\).
+
+\hypertarget{quest3}{%
+\subsection{Study Questions}\label{quest3}}
+
+\textbf{1. What is the First Law of Thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The energy of an isolated system is constant.
+\item
+  The entropy of the universe always increases.
+\item
+  Heat flows naturally from a hot to a cold object.
+\item
+  The energy of the universe is conserved.\\
+\item
+  Work done on a system is always zero.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. In an isothermal process involving an ideal gas, the internal energy:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Increases with volume.
+\item
+  Decreases with pressure.
+\item
+  Stays constant.\\
+\item
+  Increases with temperature.
+\item
+  Becomes zero.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the correct equation for the change in internal energy (\(dU\)) in an isochoric process?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dU = -P dV\)
+\item
+  \(dU = đQ_P\)
+\item
+  \(dU = đQ_V = nC_V dT\)\\
+\item
+  \(dU = -P \Delta V\)
+\item
+  \(dU = W = -P dV\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. What does the heat capacity at constant volume (\(C_V\)) represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The ability to absorb heat at constant pressure.
+\item
+  The ability to absorb energy at constant volume.\\
+\item
+  The change in temperature per unit volume.
+\item
+  The ability to absorb energy at constant temperature.
+\item
+  The total energy change in an isochoric process.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. During an adiabatic process, what is the relationship between work and internal energy?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dU = đQ\)
+\item
+  \(dU = đW\)\\
+\item
+  \(dU = -P \Delta V\)
+\item
+  \(dU = 0\)
+\item
+  \(dU = -đQ\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following best describes an adiabatic process?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A process with constant pressure.
+\item
+  A process with constant temperature.
+\item
+  A process with no heat exchange.\\
+\item
+  A process with constant volume.
+\item
+  A process where heat exchange is maximum.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What is the internal energy change (\(\Delta U\)) for an ideal gas undergoing a reversible isothermal expansion?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It increases.
+\item
+  It decreases.
+\item
+  It becomes zero.\\
+\item
+  It is undefined.
+\item
+  It depends on volume.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. In an isobaric process, the heat capacity (\(C_P\)) can be interpreted as:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The partial derivative of enthalpy with respect to pressure.
+\item
+  The partial derivative of internal energy with respect to volume.
+\item
+  The partial derivative of internal energy with respect to temperature.
+\item
+  The partial derivative of enthalpy with respect to temperature.\\
+\item
+  The partial derivative of pressure with respect to volume.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which statement is true for an isolated system?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The internal energy decreases.
+\item
+  The system can exchange mass but not energy.
+\item
+  The internal energy remains constant.\\
+\item
+  The system can exchange heat but not work.
+\item
+  The internal energy increases.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is the equation that defines enthalpy (\(H\))?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(H = U + PV\)\\
+\item
+  \(H = Q_P + W\)
+\item
+  \(H = C_P dT\)
+\item
+  \(H = T \Delta S\)
+\item
+  \(H = U - PV\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.d, 2.c, 3.c, 4.b, 5.b, 6.c, 7.c, 8.d, 9.c, 10.a
+
 \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{Thermochemistry}{%
@@ -953,7 +1903,7 @@ The \emph{standard enthalpy of formation} of compound \(i\), \(\Delta_{\mathrm{f
 \end{definition}
 \end{quote}
 
-The standard pressure is defined at \(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\).\footnote{prior to 1982 the value of \(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\) was used. The two values of \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) are within 1\% of each other, since 1 atm = 101.325 kPa.} There is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, \(T = 298.15 \; \mathrm{K}\). Standard states are indicated with the symbol \({-\kern-6pt{\ominus}\kern-6pt-}\) and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are \(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\), respectively).\footnote{There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.}
+The standard pressure is defined at \(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 100 \; \mathrm{kPa} = 1 \; \mathrm{bar}\).\footnote{prior to 1982 the value of \(P^{{-\kern-6pt{\ominus}\kern-6pt-}} = 1.0 \mathrm{ atm}\) was used. The two values of \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) are within 1\% of each other, since 1 atm = 101.325 kPa.} Strictly speaking, there is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, \(T = 298.15 \; \mathrm{K}\). Standard states are indicated with the symbol \({-\kern-6pt{\ominus}\kern-6pt-}\) and they are defined for elements as the form in which such element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the standard states are \(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\), respectively).\footnote{There are some exception, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.}
 
 For example, the standard enthalpies of formation of some common compounds at \(T = 298.15 \; \mathrm{K}\) are calculated from the following reactions:
 
@@ -1056,7 +2006,7 @@ dH = C_P dT \rightarrow & \int_{H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}}^{H_{T
   \label{eq:DrxnHneq298}
 \end{equation}
 
-which, in conjunction with Hess's Law (eq. \eqref{eq:Hess}), results in:
+which, in conjunction with Hess's Law, eq. \eqref{eq:Hess}, results in:
 
 \begin{equation}
  \Delta_{\text{rxn}} H_{T'}^{-\kern-6pt{\ominus}\kern-6pt-}= \Delta_{\text{rxn}} H_{T=298}^{-\kern-6pt{\ominus}\kern-6pt-}+ \int_{T=298}^{T'} \Delta C_P dT,
@@ -1090,6 +2040,242 @@ which, assuming that the heat capacities does not depend on the temperature, bec
 As we notice from this result, a difference in temperature of 100 K translates into a change in \(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\) of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of \(\Delta_{\text{rxn}}H\) are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for \(\Delta_{\text{rxn}}H^{398}\) of this reaction, which is --283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in eq. \eqref{eq:DrxnHneq298f}, confirming that the heat capacities are mostly independent of temperature.
 \end{exercise}
 \end{quote}
+
+\hypertarget{rev4}{%
+\section{Chapter Review}\label{rev4}}
+
+\hypertarget{exer4}{%
+\subsection{Practice Problems}\label{exer4}}
+
+\textbf{Problem 1:} Determine the enthalpy change, \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\), when 1 mole of \(\text{N}_2 \text{O}_{4\text{(g)}}\) dissociates into 2 moles of \(\text{NO}_{2\text{(g)}}\) at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
+
+\textbf{Solution:} The reaction under consideration is:
+
+\[\text{N}_2 \text{O}_{4\text{(g)}} \rightarrow 2 \text{NO}_{2\text{(g)}}\]
+
+Using Hess's Law, eq. \eqref{eq:Hess}, we get:
+
+\[\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= 2 \Delta_{\mathrm{f}} H_{\text{NO}_{2\text{(g)}}}^{-\kern-6pt{\ominus}\kern-6pt-}-\Delta_{\mathrm{f}} H_{\text{N}_2 \text{O}_{4\text{(g)}}}^{-\kern-6pt{\ominus}\kern-6pt-}\]
+
+\[\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= (2 \times 33.2 \, \text{kJ/mol}) - (11.1 \, \text{kJ/mol}) = 66.4 \, \text{kJ/mol} - 11.1 \, \text{kJ/mol} = 55.3 \, \text{kJ/mol},\]
+
+and, since we are asked to calculate the enhalpy change for 1 mole, we directly get our final answer.
+
+\textbf{Answer:} \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= 55.3 \, \text{kJ}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2:} Determine the enthalpy change \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) when 1 mole of \(\text{SO}_{2\text{(g)}}\) is oxidized to \(\text{SO}_{3\text{(g)}}\) at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
+
+\textbf{Solution:} The reaction under consideration is:
+\[2\text{SO}_{2\text{(g)}}+ \text{O}_{2\text{(g)}} \rightarrow 2 \text{SO}_{3\text{(g)}}\]
+
+Using Hess's Law, eq. \eqref{eq:Hess}, we get:
+
+\[\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= 2 \Delta_{\mathrm{f}} H_{\text{SO}_{3\text{(g)}}}^{-\kern-6pt{\ominus}\kern-6pt-}- \left(2\Delta_{\mathrm{f}} H_{\text{SO}_{2\text{(g)}}}^{-\kern-6pt{\ominus}\kern-6pt-}+\Delta_{\mathrm{f}} H_{\text{O}_{2\text{(g)}}}^{-\kern-6pt{\ominus}\kern-6pt-}\right)\]
+
+\[\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \left[2 \times \left(-395.7 \, \text{kJ/mol}\right)\right] - \left[2 \times \left(-296.8 \, \text{kJ/mol}\right) + 0\right]\]
+
+\[\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= -791.4 \, \text{kJ/mol} + 593.6 \, \text{kJ/mol} = -197.8 \, \text{kJ/mol}\]
+
+However, we now have to pay attention to the question to provide the right answer, since the question is asking for the reaction enthalpy when 1 mole is oxidized, while the balanced reaction contains 2 moles.
+
+\textbf{Answer:} \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{-197.8 \, \text{kJ/mol}}{2\,\text{mol}} = -98.9 \, \text{kJ}\)
+
+\hypertarget{quest4}{%
+\subsection{Study Questions}\label{quest4}}
+
+\textbf{1. What is the standard enthalpy of formation of a compound?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The change in enthalpy when 1 mole of the compound is formed from its elements in their standard states.\\
+\item
+  The change in enthalpy when 1 mole of the compound is formed from its elements at 273 K.\\
+\item
+  The change in enthalpy when 1 mole of the compound is formed from its elements in the gaseous state.\\
+\item
+  The total energy content of 1 mole of the compound.\\
+\item
+  The amount of heat required to decompose 1 mole of the compound into its elements.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. Which of the following is true for an exothermic reaction at constant pressure?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{rxn}} H > 0\)\\
+\item
+  \(\Delta_{\text{rxn}} H < 0\)\\
+\item
+  \(\Delta_{\text{rxn}} H = 0\)\\
+\item
+  The reaction absorbs heat from the surroundings.\\
+\item
+  The reaction releases heat only when carried out in a closed system.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the relationship between \(\Delta_{\text{rxn}} H\) and the stoichiometric coefficients in a reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{rxn}} H\) is independent of stoichiometric coefficients.\\
+\item
+  \(\Delta_{\text{rxn}} H\) is directly proportional to the sum of the stoichiometric coefficients.\\
+\item
+  \(\Delta_{\text{rxn}} H\) depends on the difference between the stoichiometric coefficients of products and reactants.\\
+\item
+  \(\Delta_{\text{rxn}} H\) is directly proportional to the product of the stoichiometric coefficients.\\
+\item
+  \(\Delta H_{\text{rxn}}\) is inversely proportional to the stoichiometric coefficients.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which of the following represents Hess's Law?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The total enthalpy change for a reaction is the sum of the enthalpy changes for the individual steps.\\
+\item
+  The enthalpy change of a reaction depends on the pathway taken.\\
+\item
+  The enthalpy change of a reaction is independent of the physical states of reactants and products.\\
+\item
+  The total entropy change for a reaction is the sum of the entropy changes for the individual steps.\\
+\item
+  The enthalpy change for a reaction is equal to the heat absorbed at constant volume.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. What is the standard enthalpy of formation of \(\text{O}_{2\text{(g)}}\) at \(298\,\text{K}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(0\,\text{kJ/mol}\)
+\item
+  \(32\,\text{kJ/mol}\)
+\item
+  \(-286\,\text{kJ/mol}\)
+\item
+  \(-394\,\text{kJ/mol}\)
+\item
+  \(75\,\text{kJ/mol}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. What is the enthalpy change associated with the bond dissociation of \(\text{Cl}_{2\text{(g)}}\) into two chlorine atoms?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The enthalpy change is negative because energy is released when bonds are broken.\\
+\item
+  The enthalpy change is positive because energy is required to break bonds.\\
+\item
+  The enthalpy change is zero because the process does not involve a chemical reaction.\\
+\item
+  The enthalpy change is negative because \(\text{Cl}_{2\text{(g)}}\) is in its standard state.\\
+\item
+  The enthalpy change is undefined because \(\text{Cl}_{2\text{(g)}}\) is a diatomic molecule.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What is the significance of the latent heat \(\Delta H_{\text{vap}}\) of water?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is the heat required to convert water from solid to liquid.\\
+\item
+  It is the heat released when water condenses from gas to liquid.\\
+\item
+  It is the heat required to convert water from liquid to gas.\\
+\item
+  It is the heat required to heat water from \(273\,\text{K}\) to \(373 \,\text{K}\).\\
+\item
+  It is the heat released when water freezes from liquid to solid.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which of the following statements is true regarding the calculation of enthalpies of reaction at temperatures different from \(298\,\text{K}\)}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The enthalpy of reaction remains constant with temperature.\\
+\item
+  The enthalpy of reaction is independent of the specific heat capacities of reactants and products.\\
+\item
+  The enthalpy of reaction can be calculated using heat capacities and temperature changes.\\
+\item
+  The enthalpy of reaction decreases linearly with temperature.\\
+\item
+  The enthalpy of reaction cannot be calculated for temperatures different from \(298\,\text{K}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following is true about the standard state of a substance?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The standard state of a substance is always at \(273\,\text{K}\) and \(1\,\text{bar}\) pressure.\\
+\item
+  The standard state of a substance is the gas phase at \(1\,\text{bar}\) pressure and \(298 \,\text{K}\).\\
+\item
+  The standard state of a substance is defined only for elements, not for compounds.\\
+\item
+  The standard state of a substance is its liquid form at \(1\,\text{bar}\) pressure and \(298\,\text{K}\).
+\item
+  The standard state of a substance is the most stable form of the substance at \(1\,\text{bar}\) pressure and a specified temperature, usually \(298 \,\text{K}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. According to Hess's Law, what is a reaction where the sum of the enthalpies of the products is greater than that of the reactants?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The reaction is endothermic.\\
+\item
+  The reaction is exothermic.\\
+\item
+  The reaction is spontaneous.\\
+\item
+  The reaction is non-spontaneous.\\
+\item
+  The reaction does not occur.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.c, 4.a, 5.a, 6.b, 7.c, 8.c, 9.e, 10.a
 
 \hypertarget{ThermodynamicCycles}{%
 \chapter{Thermodynamic Cycles}\label{ThermodynamicCycles}}
@@ -1334,6 +2520,326 @@ If we go back to eq. \eqref{eq:effCC1} and we replace eq. \eqref{eq:WtotCC2} for
 
 which proves that the efficiency of a Carnot cycle is strictly smaller than 1.\footnote{Eq. \eqref{eq:effCC3} can be equal to 1 only if \(T_l=0 \; \text{K}\) or \(T_h=\infty\), two conditions that are both equally impossible.} In other words, no cycle can convert 100\% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. \eqref{eq:effCC1} and \eqref{eq:effCC3} for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement ``It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects.''\footnote{Thomson W. \href{https://www.biodiversitylibrary.org/item/126047\#page/295/mode/1up}{Transactions of the Royal Society of Edinburgh. 1851 XX 261--268, 289--298.}.} This statement conclusively disproved Joule's original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.
 
+\hypertarget{rev5}{%
+\section{Chapter Review}\label{rev5}}
+
+\hypertarget{exer5}{%
+\subsection{Practice Problems}\label{exer5}}
+
+\textbf{Problem 1: Calculating Work in a Carnot Cycle}
+
+A Carnot cycle operates between temperatures of \(400 \,\text{K}\) and \(300 ,\text{K}\). The volume of the gas expands from \(2.0\,\text{L}\) to \(5.0\,\text{L}\) during the isothermal expansion stage. If 2.0 moles of an ideal gas are used, calculate the total work done by the system.
+
+\textbf{Solution:} The total work in a Carnot cycle is given by eq. \eqref{eq:WtotCC2}:
+
+\[W_{TOT} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}.\]
+
+Given:
+
+\(n = 2.0 \,\text{mol}\)
+
+\(R = 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1}\)
+
+\(T_h = 400\,\text{K}\)
+
+\(T_l = 300\,\text{K}\)
+
+\(V_B = 5.0\,\text{L}\)
+
+\(V_A = 2.0\,\text{L}\)
+
+Then:
+
+\[W_{TOT} = -2.0 \,\text{mol} \cdot 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1} \cdot(400\,\text{K} - 300\,\text{K})\cdot \ln\frac{5.0\,\text{L}}{2.0\,\text{L}}\]
+\[W_{TOT} = -1662.8\,\text{J} \cdot \ln(2.5) = -1662.8 \,\text{J} \cdot 0.916 = -1523.13\,\text{J}\]
+
+Adjusting the significant digits we get the final answer.
+
+\textbf{Answer:} The total work done by the system is \(-1.5 \,\text{kJ}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Efficiency of a Carnot Cycle}
+
+A Carnot engine operates between a hot reservoir at \(500\,\text{K}\) and a cold reservoir at \(250\,\text{K}\). Calculate the efficiency of this engine.
+
+\textbf{Solution:} The efficiency of a Carnot cycle is given by eq. \eqref{eq:effCC3}:
+
+\[\varepsilon = 1 - \frac{T_l}{T_h}.\]
+
+Given:
+
+\(T_h = 500\,\text{K}\)
+
+\(T_l = 250\,\text{K}\)
+
+Then:
+
+\[\varepsilon = 1 - \frac{250\,\text{K}}{500\,\text{K}} = 1 - 0.5 = 0.5\]
+
+\textbf{Answer:} The efficiency of the Carnot engine is 50\%.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Determining Cold Reservoir Temperature in a Carnot Cycle}
+
+A Carnot engine operates between a hot reservoir at \(600 \,\text{K}\) and an unknown cold reservoir temperature. The engine absorbs \(5000\,\text{J}\) of heat from the hot reservoir and performs \(2000\,\text{J}\) of work in each cycle. Calculate the temperature of the cold reservoir.
+
+\textbf{Solution:} We can use eqs. \eqref{eq:effCC1} and \eqref{eq:effCC3} to solve this problem:
+
+\[\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.\]
+
+Given:
+
+\(T_h = 600\,\text{K}\)
+
+\(|W_{TOT}| = 2000\,\text{J}\)
+
+\(|Q_h| = 5000\,\text{J}\)
+
+First, we calculate the efficiency of the engine:
+
+\[\varepsilon = \frac{|W_{TOT}|}{|Q_h|} = \frac{2000\,\text{J}}{5000 \,\text{J}} = 0.4\]
+
+Then, we can use this efficiency to find \(T_l\):
+
+\[0.4 = 1 - \frac{T_l}{600\,\text{K}}\]
+
+\[\frac{T_l}{600\,\text{K}} = 1 - 0.4 = 0.6\]
+
+\[T_l = 0.6 \cdot 600\,\text{K} = 360 \,\text{K}\]
+
+\textbf{Answer:} The temperature of the cold reservoir is 360 K.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 4: Heat Absorbed in a Carnot Cycle}
+
+A Carnot engine performs \(1000\,\text{J}\) of work in each cycle. If it operates between temperatures of \(600\,\text{K}\) and \(300\,\text{K}\), calculate the amount of heat absorbed from the hot reservoir in each cycle.
+
+\textbf{Solution:} As for the previous problem, we can use eqs. \eqref{eq:effCC1} and \eqref{eq:effCC3} to solve this problem::
+
+\[\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.\]
+
+Given:
+
+\(T_h = 600\,\text{K}\)
+
+\(T_l = 300\,\text{K}\)
+
+\(|W_{TOT}| = 1000\,\text{J}\)
+
+First, we calculate the efficiency:
+
+\[\varepsilon = 1 - \frac{300\,\text{K}}{600\,\text{K}} = 0.5\]
+
+Then, we can use this to find \(|Q_h|\):
+
+\[0.5 = \frac{1000\,\text{J}}{|Q_h|}\]
+
+\[|Q_h| = \frac{1000\,\text{J}}{0.5} = 2000\,\text{J}\]
+
+\textbf{Answer:} The heat absorbed from the hot reservoir in each cycle is \(2000 \,\text{J}\).
+
+\hypertarget{quest5}{%
+\subsection{Study Questions}\label{quest5}}
+
+\textbf{1. Which of the following is the basic principle behind refrigerators and air conditioning?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A Carnot cycle operating in the normal direction.
+\item
+  A Carnot cycle operating in reverse order.
+\item
+  An isothermal expansion followed by an adiabatic compression.
+\item
+  A series of isochoric processes.
+\item
+  A continuously expanding system.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. In a Carnot cycle, how many isothermal and how many adiabatic transformations are there?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  1 isothermal and 3 adiabatic.
+\item
+  2 isothermal and 2 adiabatic.
+\item
+  3 isothermal and 1 adiabatic.
+\item
+  4 isothermal and no adiabatic.
+\item
+  No isothermal and 4 adiabatic.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the total change in internal energy (\(\Delta U_{\text{TOT}}\)) for a complete Carnot cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
+\item
+  \(nRT_h\ln\frac{V_B}{V_A}\).
+\item
+  \(-nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{-1}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \(nC_V(T_h - T_l)\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which of the following equations correctly represents the total work done in a Carnot cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(W_{\text{TOT}} = nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
+\item
+  \(W_{\text{TOT}} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
+\item
+  \(W_{\text{TOT}} = nRT_h\ln\frac{V_B}{V_A}\).
+\item
+  \(W_{\text{TOT}} = nRT_l\ln\frac{V_D}{V_C}\).
+\item
+  \(W_{\text{TOT}} = n\int_{T_l}^{T_h}C_V dT\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. What is the relationship between the total work and total heat in a Carnot cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(W_{\text{TOT}} = Q_{\text{TOT}}\).
+\item
+  \(W_{\text{TOT}} = Q_3 - Q_1\).
+\item
+  \(W_{\text{TOT}} = Q_1 + Q_3\).
+\item
+  \(W_{\text{TOT}} = Q_1 - Q_3\).
+\item
+  \(W_{\text{TOT}} = -Q_{\text{TOT}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. How is the efficiency (\(\varepsilon\)) of a Carnot cycle defined?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\varepsilon = \frac{|Q_{\text{TOT}}|}{|W_{\text{TOT}}|}\).
+\item
+  \(\varepsilon = \frac{|W_{\text{TOT}}|}{|Q_l|}\).
+\item
+  \(\varepsilon = \frac{|W_{\text{TOT}}|}{|Q_h|}\).
+\item
+  \(\varepsilon = \frac{|Q_h|}{|Q_l|}\).
+\item
+  \(\varepsilon = \frac{|Q_h|}{|W_{\text{TOT}}|}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following formulas allows us to calculate the efficiency of a Carnot cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\varepsilon = \frac{T_h}{T_l}\).
+\item
+  \(\varepsilon = 1 - \frac{T_h}{T_l}\).
+\item
+  \(\varepsilon = 1 - \frac{T_l}{T_h}\).
+\item
+  \(\varepsilon = \frac{T_h - T_l}{T_h + T_l}\).
+\item
+  \(\varepsilon = \frac{T_h - T_l}{T_l}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What happens when a Carnot cycle operates in reverse?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It produces more work than a forward cycle.
+\item
+  It transfers heat from the cold reservoir to the hot reservoir.
+\item
+  It violates the laws of thermodynamics.
+\item
+  It has 100\% efficiency.
+\item
+  It only performs adiabatic transformations.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the relationship between the volumes at different stages of the Carnot cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\frac{V_C}{V_D} = \frac{V_A}{V_B}\).
+\item
+  \(\frac{V_C}{V_D} = \frac{V_B}{V_A}\).
+\item
+  \(\frac{V_B}{V_A} = \frac{V_D}{V_C}\).
+\item
+  \(V_A = V_C\) and \(V_B = V_D\).
+\item
+  \(V_A > V_B > V_C > V_D\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is the significance of the Carnot cycle in the development of thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It proved the existence of absolute zero.
+\item
+  It demonstrated that not all heat can be converted to work in a cyclic process.
+\item
+  It disproved the existence of ideal gases.
+\item
+  It showed that all thermodynamic processes are reversible.
+\item
+  It proved that energy can be created in closed systems.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b
+
 \hypertarget{SecondLaw}{%
 \chapter{Second Law of Thermodynamics}\label{SecondLaw}}
 
@@ -1481,6 +2987,251 @@ which proves that for any irreversible process in an isolated system, the entrop
 \end{definition}
 \end{quote}
 
+\hypertarget{rev6}{%
+\section{Chapter Review}\label{rev6}}
+
+\hypertarget{exer6}{%
+\subsection{Practice Problems}\label{exer6}}
+
+\textbf{Problem 1: Efficiency of an Irreversible Cycle}
+
+An irreversible heat engine operates between reservoirs at \(600\,\text{K}\) and \(300\,\text{K}\). If its efficiency is 80\% of the maximum possible efficiency, calculate its actual efficiency.
+
+\textbf{Solution:} The maximum possible efficiency is that of a Carnot cycle:
+
+\[\varepsilon_{\text{max}} = 1 - \frac{T_c}{T_h} = 1 - \frac{300 K}{600 K} = 0.5\]
+
+The actual efficiency for this cycle is 80\% of the maximum one:
+
+\[\varepsilon_{\text{actual}} = 0.8 \cdot \varepsilon_{\text{max}} = 0.8 \cdot 0.5 = 0.4\]
+
+\textbf{Answer:} The actual efficiency of the irreversible heat engine is 0.4 or 40\%.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Calculating Heat Rejected in a Carnot Cycle}
+
+A Carnot engine operates between a hot reservoir at \(400\,\text{K}\) and a cold reservoir at \(300\,\text{K}\). The engine absorbs \(1000\,\text{J}\) of heat from the hot reservoir. Calculate the heat rejected to the cold reservoir.
+
+\textbf{Solution:} For a Carnot cycle, we can use the equation:
+
+\[\frac{Q_h}{T_h} + \frac{Q_c}{T_c} = 0\]
+
+Given:
+
+\(Q_h\) = \(1000\,\text{J}\)
+
+\(T_h\) = \(400\,\text{K}\)
+
+\(T_c\) = \(300\,\text{K}\)
+
+Then:
+
+\[\frac{1000\,\text{J}}{400\,\text{K}} + \frac{Q_c}{300\,\text{K}} = 0\]
+
+\[2.5\,\frac{\text{J}}{\text{K}} + \frac{Q_c}{300\,\text{K}} = 0\]
+
+\[\frac{Q_c}{300\,\text{K}} = -2.5\,\frac{\text{J}}{\text{K}}\]
+
+\[Q_c = -2.5\,\frac{\text{J}}{\text{K}} \cdot 300\,\text{K} = -750\,\text{J}\]
+
+\textbf{Answer:} The heat rejected to the cold reservoir is \(-750\,\text{J}\). The negative sign indicates that heat is leaving the system.
+
+\hypertarget{quest6}{%
+\subsection{Study Questions}\label{quest6}}
+
+\textbf{1. What concept did Rudolf Clausius introduce inspired by Carnot's findings?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Efficiency.
+\item
+  Entropy.
+\item
+  Heat engines.
+\item
+  Reversibility.
+\item
+  Adiabatic processes.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. In the expression \(Q_{\text{REV}}\), what does \(Q_{\text{REV}}\) represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Heat lost to the surroundings.
+\item
+  Heat exchanged at irreversible conditions.
+\item
+  Total heat of the system.
+\item
+  Heat capacity of the system.
+\item
+  Heat exchanged at reversible conditions.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which of the following correctly defines entropy according to Clausius?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(S = \frac{Q_{\text{REV}}}{T}\).
+\item
+  \(S = \frac{Q_{\text{IRR}}}{T}\).
+\item
+  \(S = Q_{\text{REV}} \cdot T\).
+\item
+  \(S = Q_{\text{IRR}} \cdot T\).
+\item
+  \(S = \frac{T}{Q_{\text{REV}}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which of the following is the correct expression for the Clausius inequality?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\oint \frac{đQ}{T} > 0\).
+\item
+  \(\oint \frac{đQ}{T} \geq 0\).
+\item
+  \(\oint \frac{đQ}{T} = 0\).
+\item
+  \(\oint \frac{đQ}{T} \leq 0\).
+\item
+  \(\oint \frac{đQ}{T} < 0\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. For an irreversible cycle, which of the following is true?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\sum_i \frac{Q_{\text{IRR}}}{T_i} < 0\).
+\item
+  \(\sum_i \frac{Q_{\text{IRR}}}{T_i} > 0\).
+\item
+  \(\sum_i \frac{Q_{\text{IRR}}}{T_i} = 0\).
+\item
+  \(\sum_i \frac{Q_{\text{IRR}}}{T_i} \geq 0\).
+\item
+  \(\sum_i \frac{Q_{\text{IRR}}}{T_i} \leq 0\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. What is the Second Law of Thermodynamics as stated in the text?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  For any spontaneous process, the energy of the universe is increasing.
+\item
+  For any spontaneous process, the energy of the universe is conserved.
+\item
+  For any spontaneous process, the entropy of the universe is increasing.
+\item
+  For any spontaneous process, the entropy of the universe is decreasing.
+\item
+  For any spontaneous process, the entropy of the universe remains constant.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What is the significance of the quantity \(\frac{Q_{\text{REV}}}{T}\) in a Carnot cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It represents the total work done by the system.
+\item
+  It is a conserved quantity.
+\item
+  It is always increasing.
+\item
+  It represents the heat capacity of the system.
+\item
+  It is always decreasing.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which system is the only one that can be considered truly isolated?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The universe.
+\item
+  A perfect heat engine.
+\item
+  A closed thermodynamic system.
+\item
+  An adiabatic process.
+\item
+  A reversible cycle.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the relationship between the efficiency of an irreversible cycle (\(\varepsilon_{\text{IRR}}\)) and the efficiency of a Carnot cycle (\(\varepsilon_{\text{REV}}\))?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\varepsilon_{\text{IRR}} < \varepsilon_{\text{REV}}\).
+\item
+  \(\varepsilon_{\text{IRR}} > \varepsilon_{\text{REV}}\).
+\item
+  \(\varepsilon_{\text{IRR}} = \varepsilon_{\text{REV}}\).
+\item
+  \(\varepsilon_{\text{IRR}} \geq \varepsilon_{\text{REV}}\).
+\item
+  \(\varepsilon_{\text{IRR}} \leq \varepsilon_{\text{REV}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. For a reversible cycle, what is true about the integral of \(\frac{Q_{\text{REV}}}{T}\) around the cycle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is greater than zero.
+\item
+  It is less than zero.
+\item
+  It equals zero.
+\item
+  It approaches infinity.
+\item
+  It approaches negative infinity.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.e, 3.a, 4.d, 5.a, 6.c, 7.b, 8.a, 9.a, 10.c
+
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{thirdlaw}{%
@@ -1560,7 +3311,7 @@ which corresponds in SI to the range of about 85--88 J/(mol K). This simple rule
 \emph{Solution:} Using eq. \eqref{eq:trouton}---and knowing that at standard conditions of \(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \  \text{bar}\) the boiling temperature of water is 373 K---we calculate:
 
 \begin{equation}
-\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J/(mol K)}.
+\Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}.
 \label{eq:trouton1}
 \end{equation}
 
@@ -1636,7 +3387,7 @@ where the substitution \(Q_{\text{surr}}=-Q_{\text{sys}}\) can be performed rega
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:supercooledEx}{}{\label{exr:supercooledEx} }Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at --10°C, knowing the following data: \(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J/(mol K)}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J/(mol K)}\), and assuming both \(C_P\) to be independent on temperature.
+\protect\hypertarget{exr:supercooledEx}{}{\label{exr:supercooledEx} }Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at --10°C, knowing the following data: \(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\), and assuming both \(C_P\) to be independent on temperature.
 
 \emph{Solution:} \(\Delta S^{\mathrm{sys}}\) for the process under consideration can be calculated using the following cycle:
 
@@ -1739,6 +3490,330 @@ with \(\nu_i\) being the usual stoichiometric coefficients with their signs give
 The careful wording in the definition of the third law \ref{def:thirdlawdef} allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at \(T=0 \; \text{K}\). However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.\footnote{A procedure that---in practice---might be extremely difficult to achieve.}
 
 An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to \(T=0 \; \text{K}\) in a finite number of steps.
+
+\hypertarget{rev7}{%
+\section{Chapter Review}\label{rev7}}
+
+\hypertarget{exer7}{%
+\subsection{Practice Problems}\label{exer7}}
+
+\textbf{Problem 1: Entropy Change in an Isothermal Expansion.}
+
+An ideal gas expands isothermally from a volume of \(2.0\,\text{L}\) to \(5.0\,\text{L}\) at \(300\,\text{K}\). Calculate the change in entropy of the system if there are \(0.5\,\text{mol}\) of gas.
+
+\textbf{Solution:} For an isothermal expansion of an ideal gas, we use the equation:
+
+\[\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)\]
+
+Given:
+
+\(n = 0.5\,\text{mol}\),
+
+\(R = 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\),
+
+\(V_i = 2.0\,\text{L}\),
+
+\(V_f = 5.0\,\text{L}\).
+
+Then:
+
+\[\Delta S^{\text{sys}} = 0.5\,\text{mol} \cdot 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \frac{5.0\,\text{L}}{2.0\,\text{L}}\]
+
+\[\Delta S^{\text{sys}} = 4.157\,\text{J/K} \cdot 0.916 = 3.808\,\text{J/K}\]
+Adjusting for the significant digits, we get the final answer.
+
+\textbf{Answer:} The change in entropy of the system is \(3.8\,\text{J/K}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Entropy of Vaporization.}
+
+Calculate the standard entropy of vaporization for ethanol at its boiling point of \(78.35^\circ\text{C}\), given that its enthalpy of vaporization is \(38.56\,\text{kJ/mol}\).
+
+\textbf{Solution:} We use the equation for entropy of vaporization:
+
+\[\Delta_{\text{vap}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}}{T_B}\]
+
+Given:
+
+\(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}= 38.56\,\text{kJ/mol}\),
+
+\(T_B = 38.56^\circ\text{C}+273.15=351.51\,\text{K}\).
+
+Then:
+
+\[\Delta_{\text{vap}} S = \frac{38.56\,\text{kJ/mol}}{351.51\,\text{K}} = 0.1097\,\text{kJ/(mol K)}.\]
+
+\textbf{Answer:} The standard entropy of vaporization for ethanol is \(109.7\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Entropy Change in the Surroundings.}
+
+A system releases \(500\,\text{J}\) of heat to its surroundings at a constant temperature of \(25^\circ\text{C}\). Calculate the entropy change of the surroundings.
+
+\textbf{Solution:} We use the equation for entropy change in the surroundings:
+
+\[\Delta S^{\text{surr}} = -\frac{Q_{\text{sys}}}{T_{\text{surr}}}\]
+
+Given:
+
+\(Q_{sys} = -500\,\text{J}\) (negative because the system releases heat),
+
+\(T_{surr} = 25\,\text{°C} + 273.15 = 298.15\,\text{K}\).
+
+Then:
+
+\[\Delta S^{\text{surr}} = -\frac{-500\,\text{J}}{298.15\,\text{K}} = 1.677\,\text{J/K}\]
+Fixing the significant digits gives us the final answer.
+
+\textbf{Answer:} The entropy in the surroundings changes by \(1.7\,\text{J/K}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 4: Entropy Change in an Isobaric Process}
+
+Calculate the entropy change when \(2.0\,\text{mol}\) of an ideal gas is heated from \(300\,\text{K}\) to \(400\,\text{K}\) at constant pressure. Assume \(C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\) and is independent of temperature.
+
+\textbf{Solution:} For an isobaric process, we use the equation:
+
+\[\Delta S_{sys} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)\]
+
+Given:
+
+\(n = 2.0\,\text{mol}\),
+
+\(C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\),
+
+\(T_i = 300\,\text{K}\),
+
+\(T_f = 400\,\text{K}\).
+
+Then:
+
+\[\Delta S^{\text{sys}} = 2.0\,\text{mol} \cdot 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \left(\frac{400\,\text{K}}{300\,\text{K}}\right)\]
+
+\[\Delta S^{\text{sys}} = 58.\,\text{J/K} \cdot 0.2877 = 16.69\,\text{J/K}\]
+Adjusting the significant digits gives us the final answer.
+
+\textbf{Answer:} The entropy change in the system is \(17\,\text{J/K}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 5: Reaction Eentropy.}
+
+Calculate the standard reaction entropy for the combustion of methane:
+
+\[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_2\text{O}_{(\text{l})}\]
+
+Using the standard entropies reported in the tables at the end of the book.
+
+\textbf{Solution:} We can use eq. \eqref{eq:thirdlaweq} to calculate the reaction entropy:
+
+\[\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S^{-\kern-6pt{\ominus}\kern-6pt-}_i\]
+
+\[\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= [S^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{CO}_{2\text{(g)}}} + 2S^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{H}_2\text{O}_{\text{(l)}}}] - [S^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{CH}_{4 \text{(g)}}} + 2S^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{O}_{2\text{(g)}}}]\]
+
+\[\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= [213.8 + 2(70.0)] - [186.3 + 2(205.2)]\]
+
+\[\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= 353.8 - 596.7 = -242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\]
+
+\textbf{Answer:} The standard reaction entropy for the combustion of methane is \(-242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
+
+\hypertarget{quest7}{%
+\subsection{Study Questions}\label{quest7}}
+
+\textbf{1. What is the formula for calculating the change in entropy of the universe?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}\).
+\item
+  \(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}\).
+\item
+  \(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} \cdot \Delta S^{\text{surr}}\).
+\item
+  \(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} / \Delta S^{\text{surr}}\).
+\item
+  \(\Delta S_{\text{universe}} = (\Delta S^{\text{sys}})^2 + (\Delta S^{\text{surr}})^2\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. For an ideal gas undergoing an isothermal process, which formula correctly represents the change in entropy?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)\).
+\item
+  \(\Delta S^{\text{sys}} = nR \ln \left(\frac{P_f}{P_i}\right)\).
+\item
+  \(\Delta S^{\text{sys}} = nR (V_f - V_i)\).
+\item
+  \(\Delta S^{\text{sys}} = nR (P_f - P_i)\).
+\item
+  \(\Delta S^{\text{sys}} = nR (T_f - T_i)\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is Trouton's rule for the entropy of vaporization?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{text{vap}} S \approx 5.5R\).
+\item
+  \(\Delta_{text{vap}} S \approx 15.5R\).
+\item
+  \(\Delta_{text{vap}} S \approx 10.5R\).
+\item
+  \(\Delta_{text{vap}} S \approx 20.5R\).
+\item
+  \(\Delta_{text{vap}} S \approx 1.5R\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which statement is true for a reversible adiabatic process?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta S^{\text{sys}} > 0\).
+\item
+  \(\Delta S^{\text{sys}} < 0\).
+\item
+  \(\Delta S^{\text{sys}} = 0\).
+\item
+  \(Q_{\text{REV}} > 0\).
+\item
+  \(Q_{\text{IRR}} = 0\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. How is the entropy change of the surroundings calculated?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta S^{\text{surr}} = \frac{-Q_{\text{surr}}}{T_{surr}}\).
+\item
+  \(\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{sys}}\).
+\item
+  \(\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{surr}}\).
+\item
+  \(\Delta S^{\text{surr}} = \frac{Q_{\text{sys}}}{T_{surr}}\).
+\item
+  \(\Delta S^{\text{surr}} = \frac{Q_{\text{surr}}}{T_{sys}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following formula describes what the Clausius theorem state?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dS^{\text{sys}} = \frac{đQ}{T}\).
+\item
+  \(dS^{\text{sys}} < \frac{đQ}{T}\).
+\item
+  \(dS^{\text{sys}} > \frac{đQ}{T}\).
+\item
+  \(dS^{\text{sys}} \leq \frac{đQ}{T}\).
+\item
+  \(dS^{\text{sys}} \geq \frac{đQ}{T}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. According to the Third Law of Thermodynamics, what is the entropy of a perfectly ordered, pure, crystalline substance at \(T = 0\,\text{K}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  1 J/K.
+\item
+  0 J/K.
+\item
+  -1 J/K.
+\item
+  Infinity.
+\item
+  Undefined.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. How can reaction entropies be calculated using standard entropies?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i \nu_i S^{-\kern-6pt{\ominus}\kern-6pt-}_i\).
+\item
+  \(\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \prod_i \nu_i S^{-\kern-6pt{\ominus}\kern-6pt-}_i\).
+\item
+  \(\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i S^{-\kern-6pt{\ominus}\kern-6pt-}_i / \nu_i\).
+\item
+  \(\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \sum_i (\nu_i S^{-\kern-6pt{\ominus}\kern-6pt-}_i)^2\).
+\item
+  \(\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= \ln(\sum_i \nu_i S^{-\kern-6pt{\ominus}\kern-6pt-}_i)\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. How is the change in entropy of the system calculated for an isobaric process? Note: Assume \(C_P\) to be independent of temperature}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta S^{\text{sys}} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)\).
+\item
+  \(\Delta S^{\text{sys}} \approx nC_V \ln \left(\frac{T_f}{T_i}\right)\).
+\item
+  \(\Delta S^{\text{sys}} \approx nC_P (T_f - T_i)\).
+\item
+  \(\Delta S^{\text{sys}} \approx nR \ln \left(\frac{T_f}{T_i}\right)\).
+\item
+  \(\Delta S^{\text{sys}} \approx \frac{nC_P}{\ln (T_f/T_i)}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Which of the following is a corollary to the Third Law of Thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is possible to reach T = 0 K in a single step.
+\item
+  It is impossible to reach T = 0 K in a finite number of steps.
+\item
+  All substances have non-zero entropy at T = 0 K.
+\item
+  The entropy of a substance is always negative at T \textgreater{} 0 K.
+\item
+  The entropy of a substance is always infinity at T \textless{} 0 K.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.a, 3.c, 4.c, 5.c, 6.e, 7.b, 8.a, 9.a, 10.b
 
 \hypertarget{Potentials}{%
 \chapter{Thermodynamic Potentials}\label{Potentials}}
@@ -2062,6 +4137,204 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 \end{exercise}
 \end{quote}
 
+\hypertarget{rev8}{%
+\section{Chapter Review}\label{rev8}}
+
+\hypertarget{quest8}{%
+\subsection{Study Questions}\label{quest8}}
+
+\textbf{1. Which of the following formulas is the fundamental equation of thermodynamics for closed systems?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dU = Q_{REV} - PdV\).
+\item
+  \(dU = TdS - PdV\).
+\item
+  \(dU = TdS + PdV\).
+\item
+  \(dU = Q_{REV} + PdV\).
+\item
+  \(dU = TdS - VdP\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which of the following formulas is the fundamental equation for the Helmholtz free energy?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dA = TdS - PdV + \sum_i \mu_i dn_i\).
+\item
+  \(dA = -SdT + VdP + \sum_i \mu_i dn_i\).
+\item
+  \(dA = -SdT - PdV + \sum_i \mu_i dn_i\).
+\item
+  \(dA = TdS + VdP + \sum_i \mu_i dn_i\).
+\item
+  \(dA = -SdT - VdP + \sum_i \mu_i dn_i\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which statement about thermodynamic potentials is NOT correct?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Internal energy is the capacity to do work plus the capacity to release heat.
+\item
+  Enthalpy is the capacity to do non-mechanical work plus the capacity to release heat.
+\item
+  Gibbs free energy is the capacity to do mechanical work only.
+\item
+  Helmholtz free energy is the capacity to do mechanical plus non-mechanical work.
+\item
+  Non-mechanical work includes types of work that are not expansion or compression.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which of the following is NOT a thermodynamic potential?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Internal energy.
+\item
+  Enthalpy.
+\item
+  Gibbs free energy.
+\item
+  Helmholtz free energy.
+\item
+  Chemical potential.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. What are the natural variables of the Gibbs free energy?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(T\), \(V\), \(\{n_i\}\).
+\item
+  \(S\), \(P\), \(\{n_i\}\).
+\item
+  \(T\), \(P\), \(\{n_i\}\).
+\item
+  \(S\), \(V\), \(\{n_i\}\).
+\item
+  \(U\), \(P\), \(\{n_i\}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which thermodynamic potential represents the capacity to do mechanical plus non-mechanical work?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Internal energy.
+\item
+  Enthalpy.
+\item
+  Gibbs free energy.
+\item
+  Helmholtz free energy.
+\item
+  Chemical potential.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What is the condition for a spontaneous process at constant temperature and pressure?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dA > 0\).
+\item
+  \(dG = 0\).
+\item
+  \(dG < 0\).
+\item
+  \(dS > 0\).
+\item
+  \(dU < 0\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which of the following is a Maxwell relation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\left(\frac{\partial T}{\partial V}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}\).
+\item
+  \(\left(\frac{\partial T}{\partial P}\right)_{S,\{n_i\}} = -\left(\frac{\partial V}{\partial S}\right)_{P,\{n_i\}}\).
+\item
+  \(\left(\frac{\partial S}{\partial V}\right)_{T,\{n_i\}} = -\left(\frac{\partial P}{\partial T}\right)_{V,\{n_i\}}\).
+\item
+  \(\left(\frac{\partial S}{\partial P}\right)_{T,\{n_i\}} = -\left(\frac{\partial V}{\partial T}\right)_{P,\{n_i\}}\).
+\item
+  \(\left(\frac{\partial U}{\partial V}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the definition of the chemical potential?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The amount of heat absorbed or released due to a change in particle number.
+\item
+  The amount of work done due to a change in particle number.
+\item
+  The amount of energy absorbed or released due to a change in particle number.
+\item
+  The amount of entropy change due to a change in particle number.
+\item
+  The amount of volume change due to a change in particle number.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which of the following is true about the Legendre transformation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It changes the natural variables of a thermodynamic potential.
+\item
+  It adds products of conjugate variables to define new functions.
+\item
+  It only applies to the internal energy function.
+\item
+  It removes all information from the original function.
+\item
+  It can only be performed once on a given function.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.d, 3.c, 4.c, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
+
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{GibbsFree}{%
@@ -2376,6 +4649,310 @@ or, in other words, the chemical potential of a substance in the mixture is alwa
 
 or, in other words, the process is spontaneous under all circumstances, and pure ideal gases will always mix.
 
+\hypertarget{rev9}{%
+\section{Chapter Review}\label{rev9}}
+
+\hypertarget{exer9}{%
+\subsection{Practice Problems}\label{exer9}}
+
+\textbf{Problem 1: Calculating Gibbs Free Energy Change}
+
+A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is \(-50\,\text{kJ/mol}\) and the entropy change is \(-0.15\,\text{kJ/(mol·K)}\). Calculate the Gibbs free energy change at \(298\,\text{K}\). Is the reaction spontaneous?
+
+\textbf{Solution:} We can use Gibbs equation, eq. \eqref{eq:gibbseq}, to solve this problem:
+\[\Delta_{\text{rxn}} G= \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.\]
+Given:
+
+\(\Delta_{\text{rxn}} H = -50\,\text{kJ/mol}\),
+
+\(\Delta_{\text{rxn}} S = -0.15\,\text{kJ/(mol·K)}\),
+
+\(T=298\,\text{K}\).
+
+Then:
+
+\[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} - (298\,\text{K})(-0.15\,\text{kJ/(mol·K)})\]
+
+\[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} + 44.7\,\text{kJ/mol}\]
+
+\textbf{Answer:} the Gibbs free energy change for the reaction is \(-5.3\,\text{kJ/mol}\). The reaction is spontaneous.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Calculating \(\Delta G\) of Reaction from Standard Free Energies of Formation}
+
+Calculate \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) at \(298\,\text{K}\) for the reaction:
+
+\[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}\]
+
+Using the standard Gibbs free energies of formation reported in the tables at the end of the book.
+
+\textbf{Solution:} We can use the equation: \[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i \]
+
+Substituting the values:
+
+\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = [1(-394.4) + 2(-237.1)] - [1(-50.7) + 2(0)]\]
+
+\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = -817.9\,\text{kJ/mol}\]
+
+WHich gives us the final answer, after fixing the significant digits.
+
+\textbf{Answer:} The change in Gibbs free energy for the reported reaction at \(298\,\text{K}\) is \(-818\,\text{kJ/mol}\).
+
+\hypertarget{quest9}{%
+\subsection{Study Questions}\label{quest9}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Which of the following is the correct definition of the Gibbs free energy?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(G = U - TS\).
+\item
+  \(G = H + TS\).
+\item
+  \(G = H - TS\).
+\item
+  \(G = H - PV + TS\).
+\item
+  \(G = H + PV - TS\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{For a spontaneous process at constant T and P, which of the following is true?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta G > 0\).
+\item
+  \(\Delta G < 0\).
+\item
+  \(\Delta G = 0\).
+\item
+  \(\Delta G \geq 0\).
+\item
+  \(\Delta G\) is undefined.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Which of the following is NOT a natural variable of the Gibbs free energy?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Temperature.
+\item
+  Pressure.
+\item
+  Chemical composition.
+\item
+  Volume.
+\item
+  Number of moles.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{What is the temperature dependence coefficient of G?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = S\).
+\item
+  \(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -S\).
+\item
+  \(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = H\).
+\item
+  \(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -H\).
+\item
+  \(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = V\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{What is the pressure dependence coefficient of G?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -V\).
+\item
+  \(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = V\).
+\item
+  \(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = S\).
+\item
+  \(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -S\).
+\item
+  \(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = H\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{For an ideal gas, how does G change with pressure at constant T?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} - nRT\ln\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\).
+\item
+  \(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} + nRT\ln\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\).
+\item
+  \(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} + nRT\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\).
+\item
+  \(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} - nRT\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\).
+\item
+  \(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT\ln\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{What is the composition dependence coefficient of G?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = -\mu_i\).
+\item
+  \(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \mu_i\).
+\item
+  \(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\ln\mu_i\).
+\item
+  \(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\mu_i\).
+\item
+  \(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \frac{\mu_i}{RT}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  \textbf{For a pure substance, what is the relationship between chemical potential and molar Gibbs free energy?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\mu^* = \frac{G}{n^2}\).
+\item
+  \(\mu^* = \frac{G}{RT}\).
+\item
+  \(\mu^* = G\).
+\item
+  \(\mu^* = \frac{G}{n}\).
+\item
+  \(\mu^* = nG\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  \textbf{How does the chemical potential of a substance in an ideal gas mixture compare to its chemical potential as a pure substance?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\mu_i^{\text{mixture}} > \mu_i^*\).
+\item
+  \(\mu_i^{\text{mixture}} < \mu_i^*\).
+\item
+  \(\mu_i^{\text{mixture}} = \mu_i^*\).
+\item
+  \(\mu_i^{\text{mixture}} = RT\ln\mu_i^*\).
+\item
+  \(\mu_i^{\text{mixture}} = \frac{\mu_i^*}{RT}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  \textbf{What is the equation for the change in Gibbs free energy due to mixing of ideal gases?}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} + \mu_i^*)\).
+\item
+  \(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) > 0\).
+\item
+  \(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) = 0\).
+\item
+  \(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) < 0\).
+\item
+  \(\Delta_{\text{mixing}}G = RT\sum n_i\ln\mu_i^{\text{mixture}}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.c, 2.b, 3.d, 4.b, 5.b, 6.b, 7.b, 8.d, 9.b, 10.d
+
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{ChemicalEquilibrium}{%
@@ -2655,6 +5232,296 @@ The dependence of \(K_{\text{eq}}\) on \(P\) highlighted above is another mathem
 \item
   If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total amount of moles (the equilibrium in exercise \ref{exr:kpkx} shifts toward the reactant).
 \end{itemize}
+
+\hypertarget{rev10}{%
+\section{Chapter Review}\label{rev10}}
+
+\hypertarget{exer10}{%
+\subsection{Practice Problems}\label{exer10}}
+
+\textbf{Problem 1: Pressure Dependence of Equilibrium Composition}
+
+The equilibrium constant at \(500\,\text{K}\) for the following reaction is \(K_P = 1.8\).If the equilibrium mixture contains \(0.60\) mole fraction of \(\text{PCl}_5\) at \(1\,\text{bar}\), calculate the mole fraction of \(\text{PCl}_5\) when the pressure is increased to \(5\,\text{bar}\) at constant temperature.
+
+\[\text{PCl}_{5(\text{g})} \rightleftharpoons \text{PCl}_{3(\text{g})} + \text{Cl}_{2(\text{g})}.\]
+
+\textbf{Solution:} First, let's calculate \(K_y\) at \(1\,\text{bar}\):
+
+\[K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)^{\Delta n},\]
+
+\[1.8 = K_y \cdot \left(\frac{1\,\text{bar}}{1\,\text{bar}}\right)^1,\]
+
+\(K_y = 1.8\) at \(1\,\text{bar}.\)
+
+At \(1\,\text{bar}\):
+
+\(y_{\text{PCl}_5} = 0.60\),
+
+\(y_{\text{PCl}_3} = y_{\text{Cl}_2} = 0.20\).
+
+At \(5\,\text{bar}\):
+
+\[K_y = \frac{1.8}{5} = 0.36,\]
+
+\[K_y = \frac{y_{\text{PCl}_3} \cdot y_{\text{Cl}_2}}{y_{\text{PCl}_5}} = \frac{(1-y_{\text{PCl}_5})^2}{4y_{\text{PCl}_5}} = 0.36\]
+
+Solving this quadratic equation, we get:
+
+\[y_{\text{PCl}_5} = 0.77\]
+
+\textbf{Answer:} The mole fraction of \(\text{PCl}_5\) at \(5\,\text{bar}\) is \(0.77\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Temperature Dependence of Equilibrium Constant}
+
+Calculate \(K_P\) at \(500\,\text{K}\) for the following reaction, knowing that \(\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}} = -92.2\,\text{kJ/mol}\), and \(K_P = 6.8 \times 10^{-1}\) at \(298\,\text{K}\):
+
+\[\text{N}_{2(\text{g})} + 3\text{H}_{2(\text{g})} \rightleftharpoons 2\text{NH}_{3(\text{g})}.\]
+
+\textbf{Solution:} We can use the integrated van't Hoff equation, eq. \eqref{eq:vthoffeqI}, to solve this problem:
+
+\[\ln K_{\text{eq}}(2) = \ln K_{\text{eq}}(1) - \frac{\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}}{R} \left( \frac{1}{T_2}-\frac{1}{T_1} \right).\]
+
+Given:
+
+\(\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}} = -92.2\,\text{kJ/mol}\),
+
+\(K_P (298 \text{K})= 6.8 \times 10^{-1}\),
+
+\(T_1=298\,\text{K}\),
+
+\(T_2=500\,\text{K}\).
+
+Then:
+
+\[\ln K_{P}(500\text{K}) = \ln \left(6.8 \times 10^{-1}\right) -\frac{-92200\,\text{J/mol}}{8.314\,\text{J/mol·K}}\left(\frac{1}{500\,\text{K}} - \frac{1}{298\,\text{K}}\right)\]
+
+\[\ln K_{P}(500\text{K}) = \ln(6.8 \times 10^{-1}) - 6.31 = -6.69\]
+
+\[K_{P}(500\text{K}) = e^{-6.69} = 1.24 \times 10^{-3}\]
+
+And finally, we adjust for the significant digits to get the final answer.
+
+\textbf{Answer:} The equilibrium constant for the given reaction is \(1.2 \times 10^{-3}\) at \(500\,\text{K}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Calculating Standard Enthalpy of Reaction from \(K_P\) Values}
+
+For the reaction:
+\[2\text{SO}_{2(\text{g})} + \text{O}_{2(\text{g})} \rightleftharpoons 2\text{SO}_{3(\text{g})}\]
+
+\(K_P = 2.50 \times 10^{10}\) at \(600\,\text{K}\) and \(K_P = 3.90 \times 10^8\) at \(700\,\text{K}\). Calculate \(\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}\) for this reaction.
+
+\textbf{Solution:} As for the previous problem, we can use the integrated van 't Hoff equation, eq. \eqref{eq:vthoffeqI}, as:
+
+\[\ln \frac{K_{P2}}{K_{P1}} = -\frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\]
+
+Substituting the values:
+
+\[\ln \frac{3.90 \times 10^8}{2.50 \times 10^{10}} = -\frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{8.314\,\text{J/mol·K}}\left(\frac{1}{700\,\text{K}} - \frac{1}{600\,\text{K}}\right)\]
+
+\[-3.86 = -\frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{8.314}\left(\frac{1}{700} - \frac{1}{600}\right)\]
+
+\[\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}} = -196\,\text{kJ/mol}\]
+
+\textbf{Answer:} The standard enthalpy of reactoin is \(-196\,\text{kJ/mol}\)
+
+\hypertarget{quest10}{%
+\subsection{Study Questions}\label{quest10}}
+
+\textbf{1. What is the definition of the reaction quotient \(Q_P\) for a general reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(Q_P = \prod_i P_i^{\nu_i}\).
+\item
+  \(Q_P = \prod_i a_i^{\nu_i}\).
+\item
+  \(Q_P = \sum_i P_i^{\nu_i}\).
+\item
+  \(Q_P = \prod_i f_i^{\nu_i}\).
+\item
+  \(Q_P = \sum_i f_i^{\nu_i}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What is the relationship between \(\Delta_{\text{rxn}}G\) and \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} - RT\ln Q_P\).
+\item
+  \(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT\ln Q_P\).
+\item
+  \(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} \cdot Q_P\).
+\item
+  \(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} + RTQ_P\).
+\item
+  \(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} - RTQ_P\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. At chemical equilibrium, what is true about \(\Delta_{\text{rxn}}G\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{rxn}}G > 0\).
+\item
+  \(\Delta_{\text{rxn}}G < 0\).
+\item
+  \(\Delta_{\text{rxn}}G = 0\).
+\item
+  \(\Delta_{\text{rxn}}G = RT\).
+\item
+  \(\Delta_{\text{rxn}}G = -RT\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. What is the relationship between \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) and the equilibrium constant \(K_{eq}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = RT\ln K_{eq}\).
+\item
+  \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = -RT\ln K_{eq}\).
+\item
+  \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = K_{eq}/RT\).
+\item
+  \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = RTK_{eq}\).
+\item
+  \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = -K_{eq}/RT\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which is the following is the correct expression of the van 't Hoff equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\left(\frac{\partial \ln K_{eq}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta S^{{-\kern-6pt{\ominus}\kern-6pt-}}}{RT^2}\).
+\item
+  \(\left(\frac{\partial \ln K_{eq}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{RT}\).
+\item
+  \(\left(\frac{\partial \ln K_{eq}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{RT^2}\).
+\item
+  \(\left(\frac{\partial \ln K_{eq}}{\partial T}\right)_{P,\{n_i\}} = -\frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{RT^2}\).
+\item
+  \(\left(\frac{\partial \ln K_{eq}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta G^{{-\kern-6pt{\ominus}\kern-6pt-}}}{RT^2}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. How does the equilibrium constant \(K_P\) change with temperature for an exothermic reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It increases as temperature increases.
+\item
+  It decreases as temperature increases.
+\item
+  It remains constant with temperature change.
+\item
+  It first increases then decreases with temperature.
+\item
+  It oscillates with temperature change.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What is the relationship between \(K_P\) and \(K_y\) for a gas-phase reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(K_P = K_y \cdot \left(\frac{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}{P}\right)^{\Delta n}\).
+\item
+  \(K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)^{\Delta n}\).
+\item
+  \(K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)\).
+\item
+  \(K_P = K_y \cdot \left(\frac{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}{P}\right)\).
+\item
+  \(K_P = K_y\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. How does pressure affect the equilibrium composition for a reaction where \(\Delta n \neq 0\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Increasing pressure always shifts equilibrium towards products.
+\item
+  Increasing pressure always shifts equilibrium towards reactants.
+\item
+  Increasing pressure shifts equilibrium towards fewer moles of gas.
+\item
+  Increasing pressure shifts equilibrium towards more moles of gas.
+\item
+  Pressure has no effect on equilibrium composition.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the integrated form of the van 't Hoff equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\ln\frac{K_2}{K_1} = \frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\).
+\item
+  \(\ln\frac{K_2}{K_1} = -\frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\).
+\item
+  \(\ln\frac{K_2}{K_1} = \frac{\Delta S^{{-\kern-6pt{\ominus}\kern-6pt-}}}{R}\left(T_2 - T_1\right)\).
+\item
+  \(\ln\frac{K_2}{K_1} = -\frac{\Delta G^{{-\kern-6pt{\ominus}\kern-6pt-}}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\).
+\item
+  \(\ln\frac{K_2}{K_1} = \frac{\Delta H^{{-\kern-6pt{\ominus}\kern-6pt-}}}{R}\left(T_2 - T_1\right)\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which of the following is true about the pressure dependence of \(K_P\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(K_P\) increases with increasing pressure.
+\item
+  \(K_P\) decreases with increasing pressure.
+\item
+  \(K_P\) is independent of pressure.
+\item
+  \(K_P\) first increases then decreases with pressure.
+\item
+  \(K_P\) depends on pressure only for non-ideal gases.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.c, 4.b, 5.c, 6.b, 7.b, 8.c, 9.b, 10.c
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
@@ -3191,6 +6058,351 @@ K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
 \label{eq:kfdef}
 \end{equation}
 
+\hypertarget{rev11}{%
+\section{Chapter Review}\label{rev11}}
+
+\hypertarget{exer11}{%
+\subsection{Practice Problems}\label{exer11}}
+
+\textbf{Problem 1: Calculating the van der Waals Constants}
+
+A gas has a critical temperature of \(400\,\text{K}\) and critical pressure of \(80\,\text{bar}\). Calculate its van der Waals constants \(a\) and \(b\).
+
+\textbf{Solution:} Consider the first two formulas in eq. \eqref{eq:critiz}:
+
+\[T_c = \frac{8a}{27Rb},\]
+
+\[P_c = \frac{a}{27b^2}.\]
+
+We can rearrange the equation for the critical pressure, to get:
+
+\[a = 27b^2P_c,\]
+
+then replace this into the equation for the critical temperature:
+
+\[T_c = \frac{8(27b^2P_c)}{27Rb} = \frac{8bP_c}{R},\]
+
+Given:
+
+\(T_c = 400\,\text{K}\),
+
+\(P_c = 80.0\,\text{bar}\),
+
+\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\).
+
+We can now solve for \(b\):
+
+\[b = \frac{RT_c}{8P_c} = \frac{0.083145 \cdot 400}{8 \cdot 80} = 0.0519\,\text{L}/\text{mol}.\]
+
+Now we can calculate \(a\):
+
+\[a = 27b^2P_c = 27 \cdot (0.0519)^2 \cdot 80 = 5.80\,\text{L}^2\cdot\text{bar}/\text{mol}^2\]
+
+\textbf{Answer:} The van der Waals constant for the given gas are:
+\(a = 5.80\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)
+\(b = 0.0519\,\text{L}/\text{mol}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Determining the Joule-Thomson Coefficient}
+
+Calculate the Joule-Thomson coefficient for a gas with \(C_p = 30\,\frac{\text{J}}{\text{mol}\,\text{K}}\) and \(\left(\frac{\partial H}{\partial P}\right)_T = -0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\) at \(300\,\text{K}\) and \(1.0\,\text{bar}\).
+
+\textbf{Solution:} The Joule-Thomson coefficient is defined in eq. \eqref{eq:muJT} as:
+
+\[\mu_{JT} = \left(\frac{\partial T}{\partial P}\right)_H = -\frac{1}{C_p}\left(\frac{\partial H}{\partial P}\right)_T.\]
+
+Given:
+
+\(C_p = 30\,\frac{\text{J}}{\text{mol}\,\text{K}}\),
+
+\(\left(\frac{\partial H}{\partial P}\right)_T = -0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\),
+
+\(T = 300\,\text{K}\),
+
+\(P = 1.0\,\text{bar}\).
+
+Then:
+
+\[\mu_{JT} = -\frac{1}{30\,\frac{\text{J}}{\text{mol}\,\text{K}}} \cdot \left(-0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\right) = 6.667 \times 10^{-4}\,\text{K}/\text{bar}\]
+
+Adjusting the significant digits gives us the final answer.
+
+\textbf{Answer:} the Joule-Thomson coefficient for the gas is \(6.7 \times 10^{-4}\,\text{K}/\text{bar}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Calculating the Boyle Temperature}
+
+Calculate the Boyle temperature for a gas with van der Waals constants \(a = 3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2\) and \(b = 0.04\,\text{L}/\text{mol}\).
+
+\textbf{Solution:} The Boyle temperature is defined as:
+
+\[T_B = \frac{a}{bR}.\]
+
+Given:
+
+\(a = 3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2\),
+
+\(b = 0.04\,\text{L}/\text{mol}\),
+
+\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\).
+
+Then:
+
+\[T_B = \frac{3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2}{0.04\,\text{L}/\text{mol} \cdot 0.083145\,\text{L}\cdot\text{bar}/\text{mol}\cdot\text{K}}=1053\,\text{K}\]
+
+\textbf{Answer:} The Boyle temperature for the gas is
+\(1053\,\text{K}\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 4: Determining the Critical Compressibility Factor}
+
+A gas has a critical temperature of \(350\,\text{K}\), critical pressure of \(70\,\text{bar}\), and critical volume of \(0.15\,\text{L}/\text{mol}\). Calculate its critical compressibility factor.
+
+\textbf{Solution:} The critical compressibility factor is given by eq. \eqref{eq:critiz} as:
+
+\[z_c = \frac{P_cV_c}{RT_c}\]
+
+Given:
+\(T_c = 350\,\text{K}\),
+
+\(P_c = 70\,\text{bar}\),
+
+\(V_c = 0.15\,\text{L}/\text{mol}\),
+
+\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\).
+
+Then:
+
+\[z_c = \frac{70\,\text{bar} \cdot 0.15\,\text{L}/\text{mol}}{0.083145\,\text{L}\cdot\text{bar}/\text{mol}\cdot\text{K} \cdot 350\,\text{K}}=0.257\]
+
+Adjusting the significant digits gives us the final answer.
+
+\textbf{Answer:} The critical compressibility factor for the gas is \(0.26\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 5: Calculating Fugacity}
+
+A gas at \(300\,\text{K}\) and \(50\,\text{bar}\) has a fugacity coefficient of 0.95. Calculate its fugacity.
+
+\textbf{Solution:} The fugacity is defined in eq. \eqref{eq:dmufug7} as:
+
+\[f = \phi P\]
+
+Given:
+
+\(T = 300\,\text{K}\),
+
+\(P = 50\,\text{bar}\),
+
+\(\phi = 0.95\).
+
+Adjusting the significant digits gives us the final answer.
+
+Then:
+
+\[f = 0.95 \cdot 50\,\text{bar}=47.5\,\text{bar} \]
+
+\textbf{Answer:} The fugacity of the gas is \(48\,\text{bar}\)
+
+\hypertarget{quest11}{%
+\subsection{Study Questions}\label{quest11}}
+
+\textbf{1. Which of the following is NOT an assumption of the ideal gas model?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The particles occupy no volume.
+\item
+  The particles do not interact with each other.
+\item
+  The particles have no kinetic energy.
+\item
+  The particles are in constant motion.
+\item
+  The particles undergo perfectly elastic collisions.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What does the Joule-Thomson coefficient measure?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The rate of change of volume with respect to temperature.
+\item
+  The rate of change of pressure with respect to volume.
+\item
+  The rate of change of temperature with respect to pressure at constant enthalpy.
+\item
+  The rate of change of entropy with respect to temperature.
+\item
+  The rate of change of enthalpy with respect to pressure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the value of the critical compressibility factor predicted by the van der Waals equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(1/3\).
+\item
+  \(3/8\).
+\item
+  \(1/2\).
+\item
+  \(2/3\).
+\item
+  \(1/4\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which of the following statements about fugacity is correct?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Fugacity has units of pressure squared.
+\item
+  The fugacity coefficient is always greater than 1.
+\item
+  As pressure approaches zero, the ratio of fugacity to pressure approaches infinity.
+\item
+  Fugacity is independent of temperature for all gases.
+\item
+  Fugacity is used to replace pressure in equilibrium constant calculations for non-ideal gases.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. How is the critical temperature of a gas defined?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The temperature at which the gas becomes a supercritical fluid.
+\item
+  The temperature above which the gas cannot be liquefied by pressure alone.
+\item
+  The temperature at which the gas occupies its largest volume.
+\item
+  The temperature at which the gas behaves most ideally.
+\item
+  The temperature at which the gas has zero compressibility.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. The compressibility factor \(z\) for an ideal gas is always:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Greater than 1.
+\item
+  Less than 1.
+\item
+  Equal to 0.
+\item
+  Equal to 1.
+\item
+  Dependent on pressure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. How is the Boyle temperature defined?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The temperature at which a gas liquefies.
+\item
+  The temperature at which a gas behaves most ideally over a large pressure range.
+\item
+  The critical temperature of a gas.
+\item
+  The temperature at which a gas solidifies.
+\item
+  The temperature at which a gas has maximum entropy.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. In the van der Waals equation, what does the parameter `\(a\)' accounts for?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The volume of gas molecules.
+\item
+  The pressure of the gas.
+\item
+  The temperature of the gas.
+\item
+  The number of moles of the gas.
+\item
+  The intermolecular forces between gas molecules.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following is true regarding the fugacity of a gas?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is always greater than its pressure.
+\item
+  It is always less than its pressure.
+\item
+  It is the effective pressure that corresponds to the chemical potential of the real gas.
+\item
+  It is independent of temperature.
+\item
+  It is only applicable to ideal gases.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which of the following gases is likely to have a Joule-Thomson inversion temperature below room temperature?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Nitrogen.
+\item
+  Oxygen.
+\item
+  Carbon dioxide.
+\item
+  Helium.
+\item
+  Water vapor.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.c, 2.c, 3.b, 4.e, 5.b, 6.d, 7.b, 8.e, 9.c, 10.d
+
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
 \hypertarget{PhaseEquilibrium}{%
@@ -3443,6 +6655,204 @@ Eq. \eqref{eq:clacla} is known as the \textbf{Clausius--Clapeyron equation}, and
 \end{equation}
 
 The integrated Clausius--Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from \(P^*=0.02\;\text{bar}\) to \(P^*=1\;\text{bar}\) when the temperature is increased from \(T=293\;\mathrm{K}\) (around room temperature) to \(T=373\;\mathrm{K}\) (boiling point). The integrated Clausius--Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.
+
+\hypertarget{rev12}{%
+\section{Chapter Review}\label{rev12}}
+
+\hypertarget{quest12}{%
+\subsection{Study Questions}\label{quest12}}
+
+\textbf{1. What is the definition of a phase in thermodynamics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A region of the system with heterogeneous chemical composition.
+\item
+  A region of the system with homogeneous chemical composition and physical state.
+\item
+  A region of the system with constant temperature and pressure.
+\item
+  A region of the system with varying density and volume.
+\item
+  A region of the system with uniform crystal structure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. According to the Gibbs phase rule, how many degrees of freedom (\(f\)) does a system with 2 components (\(c\)) and 3 phases (\(p\)) have?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f = 1\).
+\item
+  \(f = 2\).
+\item
+  \(f = 3\).
+\item
+  \(f = 4\).
+\item
+  \(f = 5\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which of the following statements about the triple point is correct?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It has one degree of freedom for a one-component system.
+\item
+  It represents the coexistence of four phases.
+\item
+  Its coordinates are uniquely determined for each chemical substance.
+\item
+  It always occurs at standard temperature and pressure.
+\item
+  It is the point where all phases become identical.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. What does the Clausius-Clapeyron equation describe?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The dependence of critical temperature on pressure.
+\item
+  The relationship between enthalpy and entropy of vaporization.
+\item
+  The dependence of vapor pressure on temperature.
+\item
+  The relationship between molar volume and critical pressure.
+\item
+  The dependence of boiling point on atmospheric pressure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which of the following is true about the entropy change during vaporization?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is always negative.
+\item
+  It is approximately equal to \(88\,\text{J/(mol·K)}\) for many substances (Trouton's rule).
+\item
+  It decreases with increasing temperature.
+\item
+  It is always zero at the critical point.
+\item
+  It is the same for all substances at their normal boiling points.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. What is the typical shape of the solid-liquid equilibrium line in a P-T phase diagram for most substances?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Nearly horizontal.
+\item
+  Nearly vertical with a positive slope.
+\item
+  Nearly vertical with a negative slope.
+\item
+  Parabolic.
+\item
+  Exponential.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following is true about the critical point?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It represents the end of the solid-liquid equilibrium curve.
+\item
+  It is the point where all three phases (solid, liquid, gas) coexist.
+\item
+  Its pressure is always \(1\,\text{atm}\).
+\item
+  It represents the end of the liquid-gas equilibrium curve.
+\item
+  It is the point where the substance changes directly from solid to gas.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What is the mathematical expression for the Clapeyron equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\frac{dP}{dT} = \frac{\Delta S}{\Delta V}\).
+\item
+  \(\frac{dP}{dT} = \frac{\Delta H}{T\Delta V}\).
+\item
+  \(\frac{dP}{dT} = \frac{\Delta G}{\Delta V}\).
+\item
+  \(\frac{dP}{dT} = \frac{\Delta H}{\Delta S}\).
+\item
+  \(\frac{dP}{dT} = \frac{T\Delta S}{\Delta V}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following is an anomalous behavior exhibited by water?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Its solid phase is less dense than its liquid phase.
+\item
+  Its boiling point increases with increasing pressure.
+\item
+  Its triple point is at \(0\,\text{°C}\) and \(1\,\text{atm}\).
+\item
+  Its critical point is at \(100\,\text{°C}\).
+\item
+  Its solid-liquid equilibrium line has a positive slope in the P-T diagram.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is the definition of a supercritical fluid?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A fluid at a temperature below its critical point and pressure above its critical point.
+\item
+  A fluid at a temperature and pressure both above its critical point.
+\item
+  A fluid at a temperature above its critical point and pressure below its critical point.
+\item
+  A fluid at its triple point.
+\item
+  A fluid at standard temperature and pressure.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
@@ -3817,7 +7227,7 @@ K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
 \label{eq:coll7}
 \end{equation}
 
-Notice from Figure \ref{fig:FigSol2} how the depression of the melting point is always smaller than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water \(K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\), while \(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\). This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
+Notice from Figure \ref{fig:FigSol2} how the depression of the melting point is always larger than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water \(K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\), while \(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\). This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
 
 \hypertarget{osmotic-pressure}{%
 \subsection{Osmotic pressure}\label{osmotic-pressure}}
@@ -3841,6 +7251,204 @@ Starting from a solvent at atmospheric pressure in the apparatus depicted in Fig
 \end{equation}
 
 where \(i\) is the van 't Hoff factor introduced above, \(m\) is the molality of the solution, \(R\) is the ideal gas constant, and \(T\) the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.\footnote{For a derivation, see the osmotic pressure \href{https://en.wikipedia.org/wiki/Osmotic_pressure}{Wikipedia page}.}
+
+\hypertarget{rev13}{%
+\section{Chapter Review}\label{rev13}}
+
+\hypertarget{quest13}{%
+\subsection{Study Questions}\label{quest13}}
+
+\textbf{1. What is the Gibbs phase rule for binary solutions with one phase present?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f = 2 - p + 2\).
+\item
+  \(f = 4 - p\).
+\item
+  \(f = 3 - p + 2\).
+\item
+  \(f = 3 - p\).
+\item
+  \(f = 2 - p + 1\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. Which of the following is NOT an example of a liquid solution?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Saltwater.
+\item
+  Vinegar.
+\item
+  Carbonated drinks.
+\item
+  Dental amalgam.
+\item
+  Alcoholic beverages.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Raoult's law states that the partial pressure of each component \(i\) of an ideal mixture of liquids is:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(P_i = x_i P^*_i\).
+\item
+  \(P_i = y_i P^*_i\).
+\item
+  \(P_i = \frac{x_i}{P^*_i}\).
+\item
+  \(P_i = x_i RT\).
+\item
+  \(P_i = y_i RT\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. In a \(T-x_B\) phase diagram of an ideal solution with two volatile components, where is the liquid phase located?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  At the top of the diagram.
+\item
+  At the bottom of the diagram.
+\item
+  In the middle of the diagram.
+\item
+  On the left side of the diagram.
+\item
+  On the right side of the diagram.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. What is an azeotrope?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A solution with a constant boiling point that cannot be altered by simple distillation.
+\item
+  A solution with a variable boiling point that can be easily separated by distillation.
+\item
+  A solution where the vapor and liquid phases have different compositions.
+\item
+  A solution that follows Raoult's law perfectly.
+\item
+  A solution with only one volatile component.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. How is the activity of a component in a non-ideal solution defined?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(a_i = \gamma_i x_i\).
+\item
+  \(a_i = x_i\).
+\item
+  \(a_i = \frac{P_i}{P^*_i}\).
+\item
+  \(a_i = \gamma_i P_i\).
+\item
+  \(a_i = \frac{x_i}{P^*_i}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following is NOT a colligative property?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Vapor pressure lowering.
+\item
+  Boiling point elevation.
+\item
+  Melting point depression.
+\item
+  Osmotic pressure.
+\item
+  Molar mass.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which of the following is the correct formula for boiling point elevation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta T_b = iK_b m\).
+\item
+  \(\Delta T_b = -iK_b m\).
+\item
+  \(\Delta T_b = \frac{iK_b}{m}\).
+\item
+  \(\Delta T_b = iK_b RT\).
+\item
+  \(\Delta T_b = iK_b P\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What does the van 't Hoff factor \(i\) in colligative property equations represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The number of solute particles for each formula unit.
+\item
+  The molality of the solution.
+\item
+  The molar mass of the solvent.
+\item
+  The vapor pressure of the solution.
+\item
+  The enthalpy of vaporization.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. According to the Morse equation, the osmotic pressure \(\pi\) is given by:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\pi = imRT\).
+\item
+  \(\pi = \frac{imRT}{P}\).
+\item
+  \(\pi = imP\).
+\item
+  \(\pi = \frac{im}{RT}\).
+\item
+  \(\pi = imT\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a
 
 \hypertarget{Kinetics}{%
 \chapter{Chemical Kinetics}\label{Kinetics}}
@@ -4442,6 +8050,395 @@ From empirical arguments, Arrhenius proposed the idea that reactants must acquir
 
 \caption{Reaction Coordinate Diagram for a Typical Reaction.}\label{fig:figk9}
 \end{figure}
+
+\hypertarget{rev15}{%
+\section{Chapter Review}\label{rev15}}
+
+\hypertarget{exer15}{%
+\subsection{Practice Problems}\label{exer15}}
+
+\textbf{Problem 1: Determining Reaction Order from Initial Rates}
+
+Determine the reaction order with respect to each reagents and the rate law for the reaction:
+
+\[2A + B \rightarrow C\]
+
+Given the following initial rate tables:
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Experiment & {[}A{]} (M) & {[}B{]} (M) & Initial Rate (M/s) \\
+\midrule
+\endhead
+1 & \(0.1\) & \(0.1\) & \(2.0 \times 10^{-3}\) \\
+2 & \(0.2\) & \(0.1\) & \(8.0 \times 10^{-3}\) \\
+3 & \(0.1\) & \(0.2\) & \(4.0 \times 10^{-3}\) \\
+\bottomrule
+\end{longtable}
+
+\textbf{Solution:} To determine the reaction orders, compare rates between experiments:
+
+For \(A\) (comparing experiments 1 and 2):
+\[\frac{\text{Rate}_2}{\text{Rate}_1} = \frac{8.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 4 = \left(\frac{0.2}{0.1}\right)^x\]
+\[4 = 2^x\]
+\[x = 2,\]
+so the reaction is second order in \(A\).
+
+For \(B\) (comparing experiments 1 and 3):
+\[\frac{\text{Rate}_3}{\text{Rate}_1} = \frac{4.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 2 = \left(\frac{0.2}{0.1}\right)^y\]
+\[2 = 2^y\]
+\[y = 1,\]
+so the reaction is first order in \(B\).
+
+\textbf{Answer:} The rate law is: Rate = \(k[A]^2[B]\). The reaction is second order in \(A\), first order in \(B\), with an overall order of 3.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 2: Calculating Half-Life for a First-Order Reaction}
+
+Calculate the half-life of a first-order reaction with rate constant \(k = 0.0231\,\text{s}^{-1}\).
+
+\textbf{Solution:} For a first-order reaction, the half-life is given by eq. \eqref{eq:kin8} as:
+
+\[t_{1/2} = \frac{\ln 2}{k}\]
+
+Substituting the given rate constant:
+
+\[t_{1/2} = \frac{\ln 2}{0.0231\,\text{s}^{-1}} = 30.0\,\text{s}\]
+
+\textbf{Answer:} The half-life of the reaction is \(30.0\,\text{s}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 3: Determining Activation Energy Using the Arrhenius Equation}
+
+The rate of a reaction at \(300\,\text{K}\) is
+\(2.15 \times 10^{-2}\,\text{s}^{-1}\). When we increase the temperature to \(315\,\text{K}\), the same reaction has a rate of \(3.98 \times 10^{-2}\,\text{s}^{-1}\) Calculate the activation energy for this reaction.
+
+\textbf{Solution:} We can use the Arrhenius equation in its linearized form, eq. \eqref{eq:Arr2}:
+
+\[\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+\]
+
+Given:
+
+\(k_1 = 2.15 \times 10^{-2}\,\text{s}^{-1}\),
+
+\(k_2 = 3.98 \times 10^{-2}\,\text{s}^{-1}\),
+
+\(T_1 = 300\,\text{K}\),
+
+\(T_2 = 315\,\text{K}\).
+
+Then:
+
+\[\ln \frac{3.98 \times 10^{-2}}{2.15 \times 10^{-2}} = -\frac{E_a}{8.314}\left(\frac{1}{315} - \frac{1}{300}\right)\]
+
+\[0.6168 = \frac{E_a}{8.314}(1.587 \times 10^{-4})\]
+
+\[E_a = \frac{0.6168 \times 8.314}{1.587 \times 10^{-4}} = 32300\,\text{J/mol}\]
+Adjusting the significant digits gives us the final answer.
+
+\textbf{Answer:} The activation energy is \(32.3\,\text{kJ/mol}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 4: Calculating Concentration in a Second-Order Reaction}
+
+The following second-order reaction:
+\[2\text{Cl} → \text{Cl}_2\]
+has a rate constant of \(0.40\,\text{M}^{-1}\text{s}^{-1}\). Calculate the The concentration of \(\text{Cl}\) after \(100\,\text{s}\), if we start the reaction from an initial concentration of \(0.50\,\text{M}\).
+
+\textbf{Solution:} For a second-order reaction, the integrated rate law is given by eq. \eqref{eq:kin11}, which for our case is:
+
+\[\frac{1}{[\text{Cl}]} = \frac{1}{[\text{Cl}]_0} + kt\]
+
+Given:
+
+\([Cl]_0 = 0.50\,\text{M}\),
+
+\(k = 0.40\,\text{M}^{-1}\text{s}^{-1}\),
+
+\(t = 100\,\text{s}\),
+
+Then:
+
+\[\frac{1}{[\text{Cl}]} = \frac{1}{0.5\,\text{M}} + (0.4\,\text{M}^{-1}\text{s}^{-1})(100\,\text{s})\]
+
+\[\frac{1}{[\text{Cl}]} = 2\,\text{M}^{-1} + 40\,\text{M}^{-1} = 42\,\text{M}^{-1}\]
+
+\[[\text{Cl}] = \frac{1}{42\,\text{M}^{-1}} = 0.0238\,\text{M}\]
+
+\textbf{Answer:} The concentration of \(\text{Cl}\) after \(100\,\text{s}\) is \(0.024\,\text{M}\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problem 5: Determining Rate Constant for a Zero-Order Reaction}
+
+The initial concentration of a reactant of a zero-order reaction is \(0.80\,\text{M}\). After \(200\,\text{s}\) the concentration has diminished to \(0.6\,\text{M}\). Calculate the rate constant of the reaction.
+
+\textbf{Solution:} For a zero-order reaction, the integrated rate law is given by \eqref{eq:kin3}:
+
+\[[A] = [A]_0 - kt\]
+
+Given:
+
+\([A]_0 = 0.80\,\text{M}\),
+
+\([A] = 0.6\,\text{M}\),
+
+\(t=200\,\text{s}\).
+
+Then:
+
+\[0.6\,\text{M} = 0.8\,\text{M} - k(200\,\text{s})\]
+
+\[0.2\,\text{M} = k(200\,\text{s})\]
+
+\[k = \frac{0.2\,\text{M}}{200\,\text{s}} = 0.001\,\text{M}\text{s}^{-1}\]
+
+\textbf{Answer:} The rate constant for the zero-order reaction is \(0.001\,\text{M}\text{s}^{-1}\).
+
+\hypertarget{quest15}{%
+\subsection{Study Questions}\label{quest15}}
+
+\textbf{1. Which of the following is true for a zeroth-order reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The reaction rate is independent of reactant concentration.
+\item
+  The reaction rate is directly proportional to reactant concentration.
+\item
+  The reaction rate is proportional to the square of reactant concentration.
+\item
+  The reaction rate decreases exponentially with time.
+\item
+  The reaction rate increases logarithmically with reactant concentration.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What are the units of the rate constant for a second-order reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\text{s}^{-1}\).
+\item
+  \(\text{M}^{-1}\text{s}^{-1}\).
+\item
+  \(\text{M}\text{s}^{-1}\).
+\item
+  \(\text{M}^{-2}\text{s}^{-1}\).
+\item
+  \(\text{M}^2\text{s}^{-1}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3.In the Arrhenius equation, \(k = A\exp(-\frac{E_a}{RT})\), what does \(E_a\) represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Activation energy.
+\item
+  Reaction energy.
+\item
+  Enthalpy of reaction.
+\item
+  Gibbs free energy.
+\item
+  Kinetic energy.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. For a first-order reaction, how is the half-life related to the rate constant \(k\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(t_{1/2} = \frac{\ln 2}{k}\).
+\item
+  \(t_{1/2} = \frac{k}{\ln 2}\).
+\item
+  \(t_{1/2} = \frac{1}{k}\).
+\item
+  \(t_{1/2} = \frac{k}{2}\).
+\item
+  \(t_{1/2} = 2k\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which method is used to determine reaction orders by using large excess concentrations of all reactants but one?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Isolation method.
+\item
+  Initial rates method.
+\item
+  Half-life method.
+\item
+  Integrated rate law method.
+\item
+  Arrhenius method.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. What is the overall reaction order for a reaction with rate law \(\text{Rate} = k[A][B]^2\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{2}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{1}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{-1}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{3}
+  \tightlist
+  \item
+  \end{enumerate}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. In a consecutive reaction \(A \xrightarrow{k_1} B \xrightarrow{k_2} C\), what condition leads to a rate-determining step in the middle of the sequence?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(k_1 \approx k_2\).
+\item
+  \(k_1 \gg k_2\).
+\item
+  \(k_1 \ll k_2\).
+\item
+  \(k_1 = 0\).
+\item
+  \(k_2 = 0\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What is the relationship between the equilibrium constant \(K_C\) and the forward and reverse rate constants \(k_1\) and \(k_{-1}\) for an opposed reaction at equilibrium?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(K_C = \frac{k_1}{k_{-1}}\).
+\item
+  \(K_C = \frac{k_{-1}}{k_1}\).
+\item
+  \(K_C = k_1 k_{-1}\).
+\item
+  \(K_C = k_1 + k_{-1}\).
+\item
+  \(K_C = k_1 - k_{-1}\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following plots would give a straight line for a second-order reaction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\frac{1}{[A]}\) vs \(t\).
+\item
+  \(\ln[A]\) vs \(t\).
+\item
+  \([A]\) vs \(t\).
+\item
+  \(\sqrt{[A]}\) vs \(t\).
+\item
+  \(\frac{1}{[A]^2}\) vs \(t\).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is the maximum experimentally observed reaction order for elementary reactions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{2}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{1}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{3}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{4}
+  \tightlist
+  \item
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+  \end{enumerate}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 

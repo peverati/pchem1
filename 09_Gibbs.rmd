@@ -286,3 +286,167 @@ or, in other words, the chemical potential of a substance in the mixture is alwa
 
 or, in other words, the process is spontaneous under all circumstances, and pure ideal gases will always mix.
 
+
+## Chapter Review {#rev9}
+
+### Practice Problems {#exer9}
+
+**Problem 1: Calculating Gibbs Free Energy Change**
+
+A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is $-50\,\text{kJ/mol}$ and the entropy change is $-0.15\,\text{kJ/(mol·K)}$. Calculate the Gibbs free energy change at $298\,\text{K}$. Is the reaction spontaneous?
+
+**Solution:**  We can use Gibbs equation, eq. \@ref(eq:gibbseq), to solve this problem:
+$$\Delta_{\text{rxn}} G= \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.$$
+Given:
+
+$\Delta_{\text{rxn}} H = -50\,\text{kJ/mol}$,
+
+$\Delta_{\text{rxn}} S = -0.15\,\text{kJ/(mol·K)}$,
+
+$T=298\,\text{K}$.
+
+Then:
+
+$$\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} - (298\,\text{K})(-0.15\,\text{kJ/(mol·K)})$$
+
+$$\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} + 44.7\,\text{kJ/mol}$$
+
+**Answer:** the Gibbs free energy change for the reaction is $-5.3\,\text{kJ/mol}$. The reaction is spontaneous.
+
+---
+
+**Problem 2: Calculating $\Delta G$ of Reaction from Standard Free Energies of Formation**
+
+Calculate $\Delta_{\text{rxn}}G^{\standardstate}$ at $298\,\text{K}$ for the reaction:
+
+$$\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}$$
+
+Using the standard Gibbs free energies of formation reported in the tables at the end of the book.
+
+**Solution:** We can use the equation: $$\Delta_{\text{rxn}}G^{\standardstate} = \sum \nu_i \Delta_f G^{\standardstate}_i $$
+
+Substituting the values:
+
+$$\Delta_{\text{rxn}}G^{\standardstate} = [1(-394.4) + 2(-237.1)] - [1(-50.7) + 2(0)]$$
+
+$$\Delta_{\text{rxn}}G^{\standardstate} = -817.9\,\text{kJ/mol}$$
+
+WHich gives us the final answer, after fixing the significant digits.
+
+**Answer:** The change in Gibbs free energy for the reported reaction at $298\,\text{K}$ is $-818\,\text{kJ/mol}$.
+
+### Study Questions {#quest9}
+
+1. **Which of the following is the correct definition of the Gibbs free energy?**
+
+a. $G = U - TS$.
+b. $G = H + TS$.
+c. $G = H - TS$.
+d. $G = H - PV + TS$.
+e. $G = H + PV - TS$.
+
+---
+
+2. **For a spontaneous process at constant T and P, which of the following is true?**
+
+a. $\Delta G > 0$.
+b. $\Delta G < 0$.
+c. $\Delta G = 0$.
+d. $\Delta G \geq 0$.
+e. $\Delta G$ is undefined.
+
+---
+
+3. **Which of the following is NOT a natural variable of the Gibbs free energy?**
+
+a. Temperature.
+b. Pressure.
+c. Chemical composition.
+d. Volume.
+e. Number of moles.
+
+---
+
+4. **What is the temperature dependence coefficient of G?**
+
+a. $\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = S$.
+b. $\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -S$.
+c. $\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = H$.
+d. $\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -H$.
+e. $\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = V$.
+
+---
+
+5. **What is the pressure dependence coefficient of G?**
+
+a. $\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -V$.
+b. $\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = V$.
+c. $\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = S$.
+d. $\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -S$.
+e. $\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = H$.
+
+---
+
+6. **For an ideal gas, how does G change with pressure at constant T?**
+
+a. $G = G^{\standardstate} - nRT\ln\frac{P}{P^{\standardstate}}$.
+b. $G = G^{\standardstate} + nRT\ln\frac{P}{P^{\standardstate}}$.
+c. $G = G^{\standardstate} + nRT\frac{P}{P^{\standardstate}}$.
+d. $G = G^{\standardstate} - nRT\frac{P}{P^{\standardstate}}$.
+e. $G = G^{\standardstate} + RT\ln\frac{P}{P^{\standardstate}}$.
+
+---
+
+7. **What is the composition dependence coefficient of G?**
+
+a. $\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = -\mu_i$.
+b. $\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \mu_i$.
+c. $\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\ln\mu_i$.
+d. $\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\mu_i$.
+e. $\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \frac{\mu_i}{RT}$.
+
+---
+
+8. **For a pure substance, what is the relationship between chemical potential and molar Gibbs free energy?**
+
+a. $\mu^* = \frac{G}{n^2}$.
+b. $\mu^* = \frac{G}{RT}$.
+c. $\mu^* = G$.
+d. $\mu^* = \frac{G}{n}$.
+e. $\mu^* = nG$.
+
+---
+
+9. **How does the chemical potential of a substance in an ideal gas mixture compare to its chemical potential as a pure substance?**
+
+a. $\mu_i^{\text{mixture}} > \mu_i^*$.
+b. $\mu_i^{\text{mixture}} < \mu_i^*$.
+c. $\mu_i^{\text{mixture}} = \mu_i^*$.
+d. $\mu_i^{\text{mixture}} = RT\ln\mu_i^*$.
+e. $\mu_i^{\text{mixture}} = \frac{\mu_i^*}{RT}$.
+
+---
+
+10. **What is the equation for the change in Gibbs free energy due to mixing of ideal gases?**
+
+a. $\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} + \mu_i^*)$.
+b. $\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) > 0$.
+c. $\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) = 0$.
+d. $\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) < 0$.
+e. $\Delta_{\text{mixing}}G = RT\sum n_i\ln\mu_i^{\text{mixture}}$.
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+1.c, 2.b, 3.d, 4.b, 5.b, 6.b, 7.b, 8.d, 9.b, 10.d
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.c, 2.b, 3.d, 4.b, 5.b, 6.b, 7.b, 8.d, 9.b, 10.d'
+}`
+
