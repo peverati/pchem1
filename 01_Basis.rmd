@@ -1,6 +1,7 @@
 \cleardoublepage
 \pagenumbering{arabic}
-# Instroduction to Thermodynamics {#SystemVariables}
+
+# Introduction to Thermodynamics {#SystemVariables}
 
 ## Calculus for Physical Chemistry: Slicing and Gluing
 
@@ -205,103 +206,105 @@ knitr::include_graphics('./img/OEP_Figures.002.jpeg')
 
 ### Study Questions {#quest1}
 
-**1. What is a thermodynamic system?**
+Here are 10 multiple choice questions based on the content of the PDF, formatted as requested:
 
-a. A portion of space with defined boundaries separating it from its surroundings.
-b. Any physical object in the universe.
-c. A portion of space with real physical barriers.
-d. A portion of space that is completely isolated form everything else.
-e. A system that can only exchange energy with its surroundings.
+**1. What is the primary purpose of calculus in thermodynamics?**
 
----
-
-**2. Which type of system exchanges only energy but not mass with its surroundings?**
-
-a. Open system.
-b. Closed system.
-c. Isolated system.
-d. Adiabatic system.
-e. Diathermic system.
+a. To measure the length of objects.
+b. To understand and analyze change in physical systems.
+c. To create complex mathematical formulas.
+d. To predict the weather.
+e. To calculate the mass of atoms.
 
 ---
 
-**3. According to the chemistry convention of signs, what sign is assigned to mass entering a system?**
+**2. What does the term "differential" represent?**
 
-a. Negative.
-b. Positive.
-c. Zero.
-d. Depends on the type of system.
-e. Depends on the temperature.
+a. The final state of a system.
+b. The initial state of a system.
+c. An infinitesimally small change in a quantity.
+d. The total energy of a system.
+e. The mass of a system.
 
 ---
 
-**4. What is an example of an intensive variable?**
+**3. Which of the following is NOT a characteristic of a good thermodynamic system?**
+
+a. It has defined boundaries.
+b. It can exchange energy with its surroundings.
+c. It can be open, closed, or isolated.
+d. It must always have a physical barrier.
+e. It can be a portion of space containing matter.
+
+---
+
+**4. According to the chemistry convention of signs, how is energy entering a system represented?**
+
+a. With a negative sign.
+b. With a positive sign.
+c. With no sign.
+d. With a multiplication symbol.
+e. With a division symbol.
+
+---
+
+**5. Which of the following is an example of an intensive variable in the ideal gas law?**
 
 a. Volume ($V$).
 b. Number of moles ($n$).
-c. Temperature ($T$).
-d. Mass ($m$).
-e. Energy ($E$).
-
----
-
-**5. Which of the following variables is NOT part of the ideal gas law?**
-
-a. Pressure ($P$).
-b. Volume ($V$).
-c. Temperature ($T$).
-d. Entropy ($S$).
-e. Number of moles ($n$).
+c. Pressure ($P$).
+d. Total energy ($E$).
+e. Mass ($m$).
 
 ---
 
 **6. Which of the following is a valid expression for the ideal gas law?**
 
-a. $\frac{P}{T}=\frac{nR}{V}$.
-b. $P=nRTV$.
+a. $P=nRTV$.
+b. $\frac{P}{T}=\frac{nR}{V}$.
 c. $P+V=nRT$.
 d. $PVT=nR$.
 e. $PT=nRV$.
 
 ---
 
-**7. Which of the following is a state function?**
+**7. What is a key difference between state variables and path variables?**
 
-a. Heat ($Q$).
-b. Work ($W$).
-c. Pressure ($P$).
-d. Distance traveled.
-e. Path length.
-
----
-
-**8. What happens to the variables of a system when it absorbs energy?**
-
-a. The system’s mass increases.
-b. One or more of its variables (such as temperature) increase.
-c. The system becomes isolated.
-d. The system’s pressure decreases.
-e. The system’s volume becomes infinite.
+a. State variables are always intensive, while path variables are always extensive.
+b. State variables can be integrated, while path variables cannot be integrated exactly.
+c. State variables depend on the system's history, while path variables do not.
+d. State variables are always measured in SI units, while path variables are not.
+e. State variables are only used for gases, while path variables are used for liquids.
 
 ---
 
-**9. Which of the following is an extensive variable?**
+**8. Which of the following is an example of a path variable?**
 
-a. Pressure ($P$).
-b. Temperature ($T$).
-c. Molar volume $(\overline{V})$.
+a. Temperature ($T$).
+b. Pressure ($P$).
+c. Heat ($Q$).
 d. Volume ($V$).
-e. Specific heat ($c$).
+e. Molar volume ($\overline{V}$).
 
 ---
 
-**10. What is the term for variables that depend only on the current state of the system and define it?**
+**9. In the context of thermodynamics, what does the symbol $đ$ represent when used instead of $d$ in a differential?**
 
-a. Intensive variables.
-b. Extensive variables.
-c. Natural variables.
-d. Arbitrary variables.
-e. Path variables.
+a. An exact differential.
+b. An inexact differential.
+c. A partial derivative.
+d. A state function.
+e. An intensive variable.
+
+---
+
+**10. What is the correct expression for the total differential of pressure, $P$, as a function of temperature, $T$, and molar volume, $\overline{V}$?**
+
+a. $dP = \left(\frac{\partial P}{\partial T}\right)dT + \left(\frac{\partial P}{\partial \overline{V}}\right)d\overline{V}$
+b. $dP = \left(\frac{\partial T}{\partial P}\right)dT + \left(\frac{\partial \overline{V}}{\partial P}\right)d\overline{V}$
+c. $dP = \frac{\partial P}{\partial T} + \frac{\partial P}{\partial \overline{V}}$
+d. $dP = \frac{dT}{d\overline{V}}$
+e. $dP = PdT + Pd\overline{V}$
 
 ---
 
@@ -311,9 +314,9 @@ e. Path variables.
     Click to reveal
   </span>
   <span id="reveal-inline-content" style="display: none;">
-1.a, 2.b, 3.b, 4.c, 5.d, 6.a, 7.c, 8.b, 9.d, 10.c
+1.b, 2.c, 3.d, 4.b, 5.c, 6.c, 7.b, 8.c, 9.b, 10.a
   </span>
   '
 } else if (knitr::is_latex_output()) {
-  'Answers: 1.a, 2.b, 3.b, 4.c, 5.d, 6.a, 7.c, 8.b, 9.d, 10.c'
+  'Answers: 1.b, 2.c, 3.d, 4.b, 5.c, 6.c, 7.b, 8.c, 9.b, 10.a'
 }`

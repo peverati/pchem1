@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{16 August 2024}
+\date{18 August 2024}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -108,6 +108,7 @@
 \makeatother
 \let\oldmaketitle\maketitle
 \AtBeginDocument{\let\maketitle\relax}
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -177,10 +178,6 @@ Finally, I am not pretending to have been unaware of the emergence of AI, genera
 
 As usual, if you spot any mistakes, I encourage you to reach out to me at the contacts listed above.
 
-\begin{quote}
-This live open textbook is distributed under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC-BY-SA 4.0 License} and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library.
-\end{quote}
-
 \hypertarget{how-to-use-this-book}{%
 \section*{How to use this book}\label{how-to-use-this-book}}
 \addcontentsline{toc}{section}{How to use this book}
@@ -203,13 +200,17 @@ For my students, each chapter of this book represents one week of work in the cl
 In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (\(K\)), energetic terms will be measured in either Joules (\(\text{J}\)) or kiloJoules (\(\text{kJ}\)), while volumes will be measured in cubic meters, or more often in liters (\(\text{L}\)), where \(1\,\text{L} = 10^{-3}\,\text{m}^3\). An important exception is made for pressures, which will be measured in bars (\(\text{bar}\)). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (\(\text{Pa}\)), where \(1\,\text{bar} = 10^5\,\text{Pa}\). This choice is made to retain a reasonable similarity with the unit atmosphere (\(\text{atm}\)) which is extensively used in several other chemistry textbooks \((1\,\text{atm} = 1.013\,\text{bar})\) and in previous physical chemistry courses.
 
 We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of \(273.15\,\text{K}\). Other unconventional conversions might happen in some of the exercises, with the conversion factors always reported within the exercise itself.
-Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting \(P_{\text{atm}} = 1\,\text{bar}\), rather than \(P_{\text{atm}} = 1\,\text{atm} = 1.013\, \text{bar}\), an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
+Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting \(P_{\text{atm}} = 1\,\text{bar},\) rather than \(P_{\text{atm}} = 1\,\text{atm} = 1.013\, \text{bar},\) an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
+
+\begin{quote}
+This live open textbook is distributed under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC-BY-SA 4.0 License} and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library.
+\end{quote}
 
 \cleardoublepage
 \pagenumbering{arabic}
 
 \hypertarget{SystemVariables}{%
-\chapter{Instroduction to Thermodynamics}\label{SystemVariables}}
+\chapter{Introduction to Thermodynamics}\label{SystemVariables}}
 
 \hypertarget{calculus-for-physical-chemistry-slicing-and-gluing}{%
 \section{Calculus for Physical Chemistry: Slicing and Gluing}\label{calculus-for-physical-chemistry-slicing-and-gluing}}
@@ -457,64 +458,85 @@ We will return to exact and inexact differential when we discuss heat and work, 
 \hypertarget{quest1}{%
 \subsection{Study Questions}\label{quest1}}
 
-\textbf{1. What is a thermodynamic system?}
+Here are 10 multiple choice questions based on the content of the PDF, formatted as requested:
+
+\textbf{1. What is the primary purpose of calculus in thermodynamics?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  A portion of space with defined boundaries separating it from its surroundings.
+  To measure the length of objects.
 \item
-  Any physical object in the universe.
+  To understand and analyze change in physical systems.
 \item
-  A portion of space with real physical barriers.
+  To create complex mathematical formulas.
 \item
-  A portion of space that is completely isolated form everything else.
+  To predict the weather.
 \item
-  A system that can only exchange energy with its surroundings.
+  To calculate the mass of atoms.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{2. Which type of system exchanges only energy but not mass with its surroundings?}
+\textbf{2. What does the term ``differential'' represent?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Open system.
+  The final state of a system.
 \item
-  Closed system.
+  The initial state of a system.
 \item
-  Isolated system.
+  An infinitesimally small change in a quantity.
 \item
-  Adiabatic system.
+  The total energy of a system.
 \item
-  Diathermic system.
+  The mass of a system.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{3. According to the chemistry convention of signs, what sign is assigned to mass entering a system?}
+\textbf{3. Which of the following is NOT a characteristic of a good thermodynamic system?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Negative.
+  It has defined boundaries.
 \item
-  Positive.
+  It can exchange energy with its surroundings.
 \item
-  Zero.
+  It can be open, closed, or isolated.
 \item
-  Depends on the type of system.
+  It must always have a physical barrier.
 \item
-  Depends on the temperature.
+  It can be a portion of space containing matter.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{4. What is an example of an intensive variable?}
+\textbf{4. According to the chemistry convention of signs, how is energy entering a system represented?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  With a negative sign.
+\item
+  With a positive sign.
+\item
+  With no sign.
+\item
+  With a multiplication symbol.
+\item
+  With a division symbol.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which of the following is an example of an intensive variable in the ideal gas law?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -523,31 +545,12 @@ We will return to exact and inexact differential when we discuss heat and work, 
   Volume (\(V\)).
 \item
   Number of moles (\(n\)).
-\item
-  Temperature (\(T\)).
-\item
-  Mass (\(m\)).
-\item
-  Energy (\(E\)).
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\textbf{5. Which of the following variables is NOT part of the ideal gas law?}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
 \item
   Pressure (\(P\)).
 \item
-  Volume (\(V\)).
+  Total energy (\(E\)).
 \item
-  Temperature (\(T\)).
-\item
-  Entropy (\(S\)).
-\item
-  Number of moles (\(n\)).
+  Mass (\(m\)).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -558,9 +561,9 @@ We will return to exact and inexact differential when we discuss heat and work, 
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(\frac{P}{T}=\frac{nR}{V}\).
-\item
   \(P=nRTV\).
+\item
+  \(\frac{P}{T}=\frac{nR}{V}\).
 \item
   \(P+V=nRT\).
 \item
@@ -571,83 +574,83 @@ We will return to exact and inexact differential when we discuss heat and work, 
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{7. Which of the following is a state function?}
+\textbf{7. What is a key difference between state variables and path variables?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Heat (\(Q\)).
+  State variables are always intensive, while path variables are always extensive.
 \item
-  Work (\(W\)).
+  State variables can be integrated, while path variables cannot be integrated exactly.
 \item
-  Pressure (\(P\)).
+  State variables depend on the system's history, while path variables do not.
 \item
-  Distance traveled.
+  State variables are always measured in SI units, while path variables are not.
 \item
-  Path length.
+  State variables are only used for gases, while path variables are used for liquids.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{8. What happens to the variables of a system when it absorbs energy?}
+\textbf{8. Which of the following is an example of a path variable?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
-\item
-  The system's mass increases.
-\item
-  One or more of its variables (such as temperature) increase.
-\item
-  The system becomes isolated.
-\item
-  The system's pressure decreases.
-\item
-  The system's volume becomes infinite.
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\textbf{9. Which of the following is an extensive variable?}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  Pressure (\(P\)).
 \item
   Temperature (\(T\)).
 \item
-  Molar volume \((\overline{V})\).
+  Pressure (\(P\)).
+\item
+  Heat (\(Q\)).
 \item
   Volume (\(V\)).
 \item
-  Specific heat (\(c\)).
+  Molar volume (\(\overline{V}\)).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{10. What is the term for variables that depend only on the current state of the system and define it?}
+\textbf{9. In the context of thermodynamics, what does the symbol \(đ\) represent when used instead of \(d\) in a differential?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Intensive variables.
+  An exact differential.
 \item
-  Extensive variables.
+  An inexact differential.
 \item
-  Natural variables.
+  A partial derivative.
 \item
-  Arbitrary variables.
+  A state function.
 \item
-  Path variables.
+  An intensive variable.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Answers: 1.a, 2.b, 3.b, 4.c, 5.d, 6.a, 7.c, 8.b, 9.d, 10.c
+\textbf{10. What is the correct expression for the total differential of pressure, \(P\), as a function of temperature, \(T\), and molar volume, \(\overline{V}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(dP = \left(\frac{\partial P}{\partial T}\right)dT + \left(\frac{\partial P}{\partial \overline{V}}\right)d\overline{V}\)
+\item
+  \(dP = \left(\frac{\partial T}{\partial P}\right)dT + \left(\frac{\partial \overline{V}}{\partial P}\right)d\overline{V}\)
+\item
+  \(dP = \frac{\partial P}{\partial T} + \frac{\partial P}{\partial \overline{V}}\)
+\item
+  \(dP = \frac{dT}{d\overline{V}}\)
+\item
+  \(dP = PdT + Pd\overline{V}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.c, 3.d, 4.b, 5.c, 6.c, 7.b, 8.c, 9.b, 10.a
 
 \hypertarget{ZerothLaw}{%
 \chapter{Zeroth Law of Thermodynamics}\label{ZerothLaw}}
@@ -1633,7 +1636,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   Heat flows naturally from a hot to a cold object.
 \item
-  The energy of the universe is conserved.\\
+  The energy of the universe is conserved.
 \item
   Work done on a system is always zero.
 \end{enumerate}
@@ -1650,7 +1653,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   Decreases with pressure.
 \item
-  Stays constant.\\
+  Stays constant.
 \item
   Increases with temperature.
 \item
@@ -1665,15 +1668,15 @@ As usual, the final answer requires just an adjustment for the significant digit
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(dU = -P dV\)
+  \(dU = -P dV\).
 \item
-  \(dU = đQ_P\)
+  \(dU = đQ_P\).
 \item
-  \(dU = đQ_V = nC_V dT\)\\
+  \(dU = đQ_V = nC_V dT\).
 \item
-  \(dU = -P \Delta V\)
+  \(dU = -P \Delta V\).
 \item
-  \(dU = W = -P dV\)
+  \(dU = W = -P dV\).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -1686,7 +1689,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   The ability to absorb heat at constant pressure.
 \item
-  The ability to absorb energy at constant volume.\\
+  The ability to absorb energy at constant volume.
 \item
   The change in temperature per unit volume.
 \item
@@ -1703,15 +1706,15 @@ As usual, the final answer requires just an adjustment for the significant digit
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(dU = đQ\)
+  \(dU = đQ\).
 \item
-  \(dU = đW\)\\
+  \(dU = đW\).
 \item
-  \(dU = -P \Delta V\)
+  \(dU = -P \Delta V\).
 \item
-  \(dU = 0\)
+  \(dU = 0\).
 \item
-  \(dU = -đQ\)
+  \(dU = -đQ\).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -1726,7 +1729,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   A process with constant temperature.
 \item
-  A process with no heat exchange.\\
+  A process with no heat exchange.
 \item
   A process with constant volume.
 \item
@@ -1745,7 +1748,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   It decreases.
 \item
-  It becomes zero.\\
+  It becomes zero.
 \item
   It is undefined.
 \item
@@ -1766,7 +1769,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   The partial derivative of internal energy with respect to temperature.
 \item
-  The partial derivative of enthalpy with respect to temperature.\\
+  The partial derivative of enthalpy with respect to temperature.
 \item
   The partial derivative of pressure with respect to volume.
 \end{enumerate}
@@ -1783,7 +1786,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 \item
   The system can exchange mass but not energy.
 \item
-  The internal energy remains constant.\\
+  The internal energy remains constant.
 \item
   The system can exchange heat but not work.
 \item
@@ -1798,15 +1801,15 @@ As usual, the final answer requires just an adjustment for the significant digit
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(H = U + PV\)\\
+  \(H = U + PV\).
 \item
-  \(H = Q_P + W\)
+  \(H = Q_P + W\).
 \item
-  \(H = C_P dT\)
+  \(H = C_P dT\).
 \item
-  \(H = T \Delta S\)
+  \(H = T \Delta S\).
 \item
-  \(H = U - PV\)
+  \(H = U - PV\).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -2047,7 +2050,9 @@ As we notice from this result, a difference in temperature of 100 K translates i
 \hypertarget{exer4}{%
 \subsection{Practice Problems}\label{exer4}}
 
-\textbf{Problem 1:} Determine the enthalpy change, \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\), when 1 mole of \(\text{N}_2 \text{O}_{4\text{(g)}}\) dissociates into 2 moles of \(\text{NO}_{2\text{(g)}}\) at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
+\textbf{Problem 1:} Calculating \(\Delta H\) of a Reaction from Standard Enthalpies of Formation
+
+Determine the enthalpy change, \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\), when 1 mole of \(\text{N}_2 \text{O}_{4\text{(g)}}\) dissociates into 2 moles of \(\text{NO}_{2\text{(g)}}\) at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
 
 \textbf{Solution:} The reaction under consideration is:
 
@@ -2065,7 +2070,9 @@ and, since we are asked to calculate the enhalpy change for 1 mole, we directly 
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Problem 2:} Determine the enthalpy change \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) when 1 mole of \(\text{SO}_{2\text{(g)}}\) is oxidized to \(\text{SO}_{3\text{(g)}}\) at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
+\textbf{Problem 2:} Calculating \(\Delta H\) of a Reaction from Standard Enthalpies of Formation
+
+Determine the enthalpy change \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) when 1 mole of \(\text{SO}_{2\text{(g)}}\) is oxidized to \(\text{SO}_{3\text{(g)}}\) at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
 
 \textbf{Solution:} The reaction under consideration is:
 \[2\text{SO}_{2\text{(g)}}+ \text{O}_{2\text{(g)}} \rightarrow 2 \text{SO}_{3\text{(g)}}\]
@@ -2091,13 +2098,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  The change in enthalpy when 1 mole of the compound is formed from its elements in their standard states.\\
+  The change in enthalpy when 1 mole of the compound is formed from its elements in their standard states.
 \item
-  The change in enthalpy when 1 mole of the compound is formed from its elements at 273 K.\\
+  The change in enthalpy when 1 mole of the compound is formed from its elements at 273 K.
 \item
-  The change in enthalpy when 1 mole of the compound is formed from its elements in the gaseous state.\\
+  The change in enthalpy when 1 mole of the compound is formed from its elements in the gaseous state.
 \item
-  The total energy content of 1 mole of the compound.\\
+  The total energy content of 1 mole of the compound.
 \item
   The amount of heat required to decompose 1 mole of the compound into its elements.
 \end{enumerate}
@@ -2110,13 +2117,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(\Delta_{\text{rxn}} H > 0\)\\
+  \(\Delta_{\text{rxn}} H > 0\).
 \item
-  \(\Delta_{\text{rxn}} H < 0\)\\
+  \(\Delta_{\text{rxn}} H < 0\).
 \item
-  \(\Delta_{\text{rxn}} H = 0\)\\
+  \(\Delta_{\text{rxn}} H = 0\).
 \item
-  The reaction absorbs heat from the surroundings.\\
+  The reaction absorbs heat from the surroundings.
 \item
   The reaction releases heat only when carried out in a closed system.
 \end{enumerate}
@@ -2129,13 +2136,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(\Delta_{\text{rxn}} H\) is independent of stoichiometric coefficients.\\
+  \(\Delta_{\text{rxn}} H\) is independent of stoichiometric coefficients.
 \item
-  \(\Delta_{\text{rxn}} H\) is directly proportional to the sum of the stoichiometric coefficients.\\
+  \(\Delta_{\text{rxn}} H\) is directly proportional to the sum of the stoichiometric coefficients.
 \item
-  \(\Delta_{\text{rxn}} H\) depends on the difference between the stoichiometric coefficients of products and reactants.\\
+  \(\Delta_{\text{rxn}} H\) depends on the difference between the stoichiometric coefficients of products and reactants.
 \item
-  \(\Delta_{\text{rxn}} H\) is directly proportional to the product of the stoichiometric coefficients.\\
+  \(\Delta_{\text{rxn}} H\) is directly proportional to the product of the stoichiometric coefficients.
 \item
   \(\Delta H_{\text{rxn}}\) is inversely proportional to the stoichiometric coefficients.
 \end{enumerate}
@@ -2148,13 +2155,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  The total enthalpy change for a reaction is the sum of the enthalpy changes for the individual steps.\\
+  The total enthalpy change for a reaction is the sum of the enthalpy changes for the individual steps.
 \item
-  The enthalpy change of a reaction depends on the pathway taken.\\
+  The enthalpy change of a reaction depends on the pathway taken.
 \item
-  The enthalpy change of a reaction is independent of the physical states of reactants and products.\\
+  The enthalpy change of a reaction is independent of the physical states of reactants and products.
 \item
-  The total entropy change for a reaction is the sum of the entropy changes for the individual steps.\\
+  The total entropy change for a reaction is the sum of the entropy changes for the individual steps.
 \item
   The enthalpy change for a reaction is equal to the heat absorbed at constant volume.
 \end{enumerate}
@@ -2167,15 +2174,15 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(0\,\text{kJ/mol}\)
+  \(0\,\text{kJ/mol}\).
 \item
-  \(32\,\text{kJ/mol}\)
+  \(32\,\text{kJ/mol}\).
 \item
-  \(-286\,\text{kJ/mol}\)
+  \(-286\,\text{kJ/mol}\).
 \item
-  \(-394\,\text{kJ/mol}\)
+  \(-394\,\text{kJ/mol}\).
 \item
-  \(75\,\text{kJ/mol}\)
+  \(75\,\text{kJ/mol}\).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -2186,13 +2193,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  The enthalpy change is negative because energy is released when bonds are broken.\\
+  The enthalpy change is negative because energy is released when bonds are broken.
 \item
-  The enthalpy change is positive because energy is required to break bonds.\\
+  The enthalpy change is positive because energy is required to break bonds.
 \item
-  The enthalpy change is zero because the process does not involve a chemical reaction.\\
+  The enthalpy change is zero because the process does not involve a chemical reaction.
 \item
-  The enthalpy change is negative because \(\text{Cl}_{2\text{(g)}}\) is in its standard state.\\
+  The enthalpy change is negative because \(\text{Cl}_{2\text{(g)}}\) is in its standard state.
 \item
   The enthalpy change is undefined because \(\text{Cl}_{2\text{(g)}}\) is a diatomic molecule.
 \end{enumerate}
@@ -2205,13 +2212,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  It is the heat required to convert water from solid to liquid.\\
+  It is the heat required to convert water from solid to liquid.
 \item
-  It is the heat released when water condenses from gas to liquid.\\
+  It is the heat released when water condenses from gas to liquid.
 \item
-  It is the heat required to convert water from liquid to gas.\\
+  It is the heat required to convert water from liquid to gas.
 \item
-  It is the heat required to heat water from \(273\,\text{K}\) to \(373 \,\text{K}\).\\
+  It is the heat required to heat water from \(273\,\text{K}\) to \(373 \,\text{K}\).
 \item
   It is the heat released when water freezes from liquid to solid.
 \end{enumerate}
@@ -2224,13 +2231,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  The enthalpy of reaction remains constant with temperature.\\
+  The enthalpy of reaction remains constant with temperature.
 \item
-  The enthalpy of reaction is independent of the specific heat capacities of reactants and products.\\
+  The enthalpy of reaction is independent of the specific heat capacities of reactants and products.
 \item
-  The enthalpy of reaction can be calculated using heat capacities and temperature changes.\\
+  The enthalpy of reaction can be calculated using heat capacities and temperature changes.
 \item
-  The enthalpy of reaction decreases linearly with temperature.\\
+  The enthalpy of reaction decreases linearly with temperature.
 \item
   The enthalpy of reaction cannot be calculated for temperatures different from \(298\,\text{K}\).
 \end{enumerate}
@@ -2243,11 +2250,11 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  The standard state of a substance is always at \(273\,\text{K}\) and \(1\,\text{bar}\) pressure.\\
+  The standard state of a substance is always at \(273\,\text{K}\) and \(1\,\text{bar}\) pressure.
 \item
-  The standard state of a substance is the gas phase at \(1\,\text{bar}\) pressure and \(298 \,\text{K}\).\\
+  The standard state of a substance is the gas phase at \(1\,\text{bar}\) pressure and \(298 \,\text{K}\).
 \item
-  The standard state of a substance is defined only for elements, not for compounds.\\
+  The standard state of a substance is defined only for elements, not for compounds.
 \item
   The standard state of a substance is its liquid form at \(1\,\text{bar}\) pressure and \(298\,\text{K}\).
 \item
@@ -2262,13 +2269,13 @@ However, we now have to pay attention to the question to provide the right answe
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  The reaction is endothermic.\\
+  The reaction is endothermic.
 \item
-  The reaction is exothermic.\\
+  The reaction is exothermic.
 \item
-  The reaction is spontaneous.\\
+  The reaction is spontaneous.
 \item
-  The reaction is non-spontaneous.\\
+  The reaction is non-spontaneous.
 \item
   The reaction does not occur.
 \end{enumerate}
@@ -2686,21 +2693,17 @@ Then, we can use this to find \(|Q_h|\):
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
+\tightlist
 \item
-  \(nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
+  \(\Delta U_{\text{TOT}}=nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
 \item
-  \(nRT_h\ln\frac{V_B}{V_A}\).
+  \(\Delta U_{\text{TOT}}=nRT_h\ln\frac{V_B}{V_A}\).
 \item
-  \(-nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
+  \(-\Delta U_{\text{TOT}}=nR(T_h - T_l)\ln\frac{V_B}{V_A}\).
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{-1}
-  \tightlist
-  \item
-  \end{enumerate}
+  \(\Delta U_{\text{TOT}}=0\).
 \item
-  \(nC_V(T_h - T_l)\).
+  \(\Delta U_{\text{TOT}}=nC_V(T_h - T_l)\).
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -5249,15 +5252,13 @@ The equilibrium constant at \(500\,\text{K}\) for the following reaction is \(K_
 
 \[K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)^{\Delta n},\]
 
-\[1.8 = K_y \cdot \left(\frac{1\,\text{bar}}{1\,\text{bar}}\right)^1,\]
-
-\(K_y = 1.8\) at \(1\,\text{bar}.\)
+\[1.8 = K_y \cdot \left(\frac{1\,\text{bar}}{1\,\text{bar}}\right)^1 = 1.8.\]
 
 At \(1\,\text{bar}\):
 
-\(y_{\text{PCl}_5} = 0.60\),
+\[y_{\text{PCl}_5} = 0.60,\]
 
-\(y_{\text{PCl}_3} = y_{\text{Cl}_2} = 0.20\).
+\[y_{\text{PCl}_3} = y_{\text{Cl}_2} = 0.20.\]
 
 At \(5\,\text{bar}\):
 
@@ -8146,7 +8147,7 @@ Adjusting the significant digits gives us the final answer.
 \textbf{Problem 4: Calculating Concentration in a Second-Order Reaction}
 
 The following second-order reaction:
-\[2\text{Cl} → \text{Cl}_2\]
+\[2\text{Cl} \rightarrow \text{Cl}_2\]
 has a rate constant of \(0.40\,\text{M}^{-1}\text{s}^{-1}\). Calculate the The concentration of \(\text{Cl}\) after \(100\,\text{s}\), if we start the reaction from an initial concentration of \(0.50\,\text{M}\).
 
 \textbf{Solution:} For a second-order reaction, the integrated rate law is given by eq. \eqref{eq:kin11}, which for our case is:
