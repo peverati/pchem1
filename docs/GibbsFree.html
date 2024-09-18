@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Gibbs Free Energy | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Gibbs Free Energy | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Potentials.html"/>
 <link rel="next" href="ChemicalEquilibrium.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -346,11 +352,11 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="GibbsFree" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Gibbs Free Energy</h1>
+<div id="GibbsFree" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Gibbs Free Energy<a href="GibbsFree.html#GibbsFree" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
-<div id="gibbseqsec" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Gibbs Equation</h2>
+<div id="gibbseqsec" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Gibbs Equation<a href="GibbsFree.html#gibbseqsec" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Recalling from chapter <a href="Potentials.html#Potentials">8</a>, the definition of <span class="math inline">\(G\)</span> is:</p>
 <p><span class="math display" id="eq:dgdeftot">\[\begin{equation}
 G = U -TS +PV = H-TS,
@@ -447,8 +453,8 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 \end{equation}\]</span></p>
 <p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in eq. <a href="GibbsFree.html#eq:dgtotdiff">(9.5)</a>, which are given in eq. <a href="Potentials.html#eq:dhagchem3">(8.17)</a>.</p>
 </div>
-<div id="temperature-dependence-of-delta-g" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></h2>
+<div id="temperature-dependence-of-delta-g" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#temperature-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
 \]</span></p>
@@ -491,8 +497,8 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 \tag{9.11}
 \end{equation}\]</span></p>
 </div>
-<div id="pressure-dependence-of-delta-g" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></h2>
+<div id="pressure-dependence-of-delta-g" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Pressure Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#pressure-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
 \]</span></p>
@@ -525,15 +531,15 @@ G = G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{P^{-\kern-6pt{\ominus}
 \tag{9.16}
 \end{equation}\]</span></p>
 <p>The plots in Figure <a href="GibbsFree.html#fig:gdeppfig">9.1</a> show the remarkable difference in the behaviors of <span class="math inline">\(\Delta_{\text{f}} G\)</span> for a gas and for a liquid, as obtained from eqs. <a href="GibbsFree.html#eq:dgconsttpintegral1">(9.13)</a> and <a href="GibbsFree.html#eq:dgconsttpintegral3">(9.16)</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:gdeppfig"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gdeppfig"></span>
 <img src="pchem1_files/figure-html/gdeppfig-1.png" alt="Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar." width="672" />
 <p class="caption">
 Figure 9.1: Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.
 </p>
 </div>
 </div>
-<div id="composition-dependence-of-delta-g" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Composition Dependence of <span class="math inline">\(\Delta G\)</span></h2>
+<div id="composition-dependence-of-delta-g" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Composition Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#composition-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
 \]</span></p>
@@ -579,7 +585,7 @@ P_i = y_i P,
 <p><span class="math display" id="eq:dgconstn6">\[\begin{equation}
 \begin{aligned}
 \mu_i^{\text{mixture}} &amp;= \mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln (y_i P) \\
- &amp;= \underbrace{\mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P}_{\mu_i^*} + RT \ln y_i,
+&amp;= \underbrace{\mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P}_{\mu_i^*} + RT \ln y_i,
 \end{aligned}
 \tag{9.24}
 \end{equation}\]</span></p>
@@ -600,10 +606,10 @@ P_i = y_i P,
 \end{equation}\]</span></p>
 <p>or, in other words, the process is spontaneous under all circumstances, and pure ideal gases will always mix.</p>
 </div>
-<div id="rev9" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Chapter Review</h2>
-<div id="exer9" class="section level3" number="9.5.1">
-<h3><span class="header-section-number">9.5.1</span> Practice Problems</h3>
+<div id="rev9" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Chapter Review<a href="GibbsFree.html#rev9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer9" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> Practice Problems<a href="GibbsFree.html#exer9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Problem 1: Calculating Gibbs Free Energy Change</strong></p>
 <p>A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is <span class="math inline">\(-50\,\text{kJ/mol}\)</span> and the entropy change is <span class="math inline">\(-0.15\,\text{kJ/(mol·K)}\)</span>. Calculate the Gibbs free energy change at <span class="math inline">\(298\,\text{K}\)</span>. Is the reaction spontaneous?</p>
 <p><strong>Solution:</strong> We can use Gibbs equation, eq. <a href="GibbsFree.html#eq:gibbseq">(9.3)</a>, to solve this problem:
@@ -628,8 +634,8 @@ Given:</p>
 <p>WHich gives us the final answer, after fixing the significant digits.</p>
 <p><strong>Answer:</strong> The change in Gibbs free energy for the reported reaction at <span class="math inline">\(298\,\text{K}\)</span> is <span class="math inline">\(-818\,\text{kJ/mol}\)</span>.</p>
 </div>
-<div id="quest9" class="section level3" number="9.5.2">
-<h3><span class="header-section-number">9.5.2</span> Study Questions</h3>
+<div id="quest9" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Study Questions<a href="GibbsFree.html#quest9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><strong>Which of the following is the correct definition of the Gibbs free energy?</strong></li>
 </ol>
@@ -768,7 +774,6 @@ Click to reveal
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -787,6 +792,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -807,6 +813,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -820,7 +830,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 Introduction to Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 Introduction to Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="ZerothLaw.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -346,20 +352,20 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="SystemVariables" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Introduction to Thermodynamics</h1>
-<div id="calculus-for-physical-chemistry-slicing-and-gluing" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Calculus for Physical Chemistry: Slicing and Gluing</h2>
+<div id="SystemVariables" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Introduction to Thermodynamics<a href="SystemVariables.html#SystemVariables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="calculus-for-physical-chemistry-slicing-and-gluing" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Calculus for Physical Chemistry: Slicing and Gluing<a href="SystemVariables.html#calculus-for-physical-chemistry-slicing-and-gluing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Calculus is a powerful mathematical tool that helps us understand and analyze change. At its core, calculus involves two main procedures: differentiation and integration. These concepts are fundamental to the study of thermodynamics, as they enable us to examine how physical systems change. Undergraduate students often find calculus intimidating due to its rigorous presentation in mathematical courses. However, a strong mathematical foundation, while beneficial, is not always mandatory to study thermodynamics effectively.</p>
-<p>If you are a student who lacks confidence in mathematics, I encourage you not to be deterred by the presence of calculus in this physical chemistry textbook. If you break this initial wall of fear for calculus, you might find this textbook quite rewarding. After all, we will finally explain where all those unmemorable formulas that you’ve been presented in introductory general chemistry courses are coming from. To facilitate your task, we will present in this chapter a simplified view of calculus. The starting point will be a basic question: how do we measure things in science? To answer this question, we will use calculus to measure the length of an object. At a first glance, this approach might seem pedantic. Why do we need to use calculus, with all of its mathematical complications, when we can just grab a ruler and stack it against our object to measure its length? However, we need to remind ourselves that our ultimate goal is physical chemistry, and calculus is the language of this field. By focusing on the straightforward task of measuring a simple length, we aim to make calculus more accessible and less daunting.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>From this simple starting point, we will expand our horizon to introduce the central topic of this textbook: Thermodynamics. Our main focus will be in the relationship between chemistry and thermodynamics, but since this is an advanced undergraduate textbook, we will need to do that from a rigorous perspective. If we want to see it in simple terms, we either deal with the approach of not explaining where things are coming from that is abundantly used in freshman chemistry courses, or we make the effort of learning a bit of calculus so we can use it to understand the world.</p>
-<div id="infslici" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Differentiation: Infinite Slicing</h3>
+<p>If you are a student who lacks confidence in mathematics, I encourage you not to be deterred by the presence of calculus in this physical chemistry textbook. If you break this initial wall of fear for calculus, you might find this textbook quite rewarding. After all, we will finally explain where all those unmemorable formulas that you’ve been presented in introductory general chemistry courses are coming from. To facilitate your task, we will present in this chapter a simplified view of calculus. The starting point will be a basic question: how do we measure things in science? To answer this question, we will use calculus to measure the length of an object. At a first glance, this approach might seem pedantic. Why do we need to use calculus, with all of its mathematical complications, when we can just grab a ruler and stack it against our object to measure its length? However, we need to remind ourselves that our ultimate goal is physical chemistry, and calculus is the language of this field. By focusing on the straightforward task of measuring a simple length, we aim to make calculus more accessible and less daunting.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> From this simple starting point, we will expand our horizon to introduce the central topic of this textbook: Thermodynamics. Our main focus will be in the relationship between chemistry and thermodynamics, but since this is an advanced undergraduate textbook, we will need to do that from a rigorous perspective. If we want to see it in simple terms, we either deal with the approach of not explaining where things are coming from that is abundantly used in freshman chemistry courses, or we make the effort of learning a bit of calculus so we can use it to understand the world.</p>
+<div id="infslici" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Differentiation: Infinite Slicing<a href="SystemVariables.html#infslici" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Differentiation can be thought of as “slicing an object into infinitely thin pieces” to understand how it changes at a specific point. Imagine you have a long stick and you want to measure how its length changes along a specific direction. To do this, you would cut the stick into infinitely thin slices. Each slice is so thin that its change in length is practically infinitesimal. By examining each of these tiny slices and how they change, you can understand the rate at which the stick’s length changes at any given point. This process of infinite slicing is called differentiation, and it is the most powerful tool to understand things that change, that is, most of the things we are interested in science.</p>
 <p>How so? Let’s look at a simple example. If we start from a stick of length <span class="math inline">\(L\)</span>, we can infinitely slice it into infinitesimally small pieces of length <span class="math inline">\(dL\)</span>. These incredibly tiny pieces are called <strong>differentials</strong> of the original quantity, in this particular case, the length of our stick. The beauty of these differentials, <span class="math inline">\(dL\)</span>, is that they don’t really depend on how long our object initially was, nor on which unit we plan on using to measure this length. The differentials will always have the same size, that is, they will always be <em>infinitesimally small</em>. Imagine, for example, that you start with an object whose length is <span class="math inline">\(1\, \text{m}\)</span>. After you slice it an infinite amount of times, each differential will have exactly the same length of <span class="math inline">\(0.000[...]0001\, \text{m}\)</span>, where we have replaced an infinite amount of zeros with the notation <span class="math inline">\([...]\)</span>. Now imagine that you start with a second object whose length is <span class="math inline">\(1000\, \text{m} = 1\,\text{km}\)</span>. After you slice this second object an infinite amount of times, you will end up with differentials that have exactly the same length as the ones we obtained before, that is <span class="math inline">\(0.000[...]0001\, \text{m} = 0.000[...]0001\, \text{km}\)</span>. At this point, specifying the unit of a differential (<span class="math inline">\(\text{m}\)</span> or <span class="math inline">\(\text{km}\)</span> in the case of length) becomes useless. For this reason, we say that differentials are unitless.</p>
-<p>Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the same as <span class="math inline">\(0\)</span>, but they can be used much more effectively than something that purely doesn’t exist.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> The key word here is <em>essentially</em>, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they’ve lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are <em>unitless</em>, but they are not <em>dimensionless.</em> Additionally, the differentials will also contain information on the rate of change (the “slope”) of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as <span class="math inline">\(\frac{dL}{dx}\)</span>. In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, <span class="math inline">\(x\)</span>, along an axis that is oriented the same way as our stick.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> This special ratio is called the <em>derivative</em>, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative <span class="math inline">\(\frac{dL}{dx}\)</span> tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number <span class="math inline">\(\frac{dL}{dx}=1\)</span>, but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.</p>
+<p>Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the same as <span class="math inline">\(0\)</span>, but they can be used much more effectively than something that purely doesn’t exist.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> The key word here is <em>essentially</em>, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they’ve lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are <em>unitless</em>, but they are not <em>dimensionless</em>. Additionally, the differentials will also contain information on the rate of change (the “slope”) of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as <span class="math inline">\(\frac{dL}{dx}\)</span>. In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, <span class="math inline">\(x\)</span>, along an axis that is oriented the same way as our stick.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> This special ratio is called the <em>derivative</em>, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative <span class="math inline">\(\frac{dL}{dx}\)</span> tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number <span class="math inline">\(\frac{dL}{dx}=1\)</span>, but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.</p>
 </div>
-<div id="integration-gluing-together-differentials" class="section level3" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Integration: Gluing Together Differentials</h3>
+<div id="integration-gluing-together-differentials" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Integration: Gluing Together Differentials<a href="SystemVariables.html#integration-gluing-together-differentials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Integration is the procedure that glues infinitely tiny slices back together to reconstruct the initial object. In simple terms, if you start with the infinitely thin slices of length that you cut earlier, you can add them all up to find the total length of the stick. Integration takes all these infinitesimally small pieces and combines them into a whole, helping you determine the accumulated total from the infinitesimal changes. Obviously this procedure is very complicated, and it involves gluing (summing over) an infinite amount of infinitesimally small things. If you can’t wrap your head around this, that’s OK, this concept puzzled humanity for thousands of years. The ancient Greeks were very concerned by this, but they failed to find a solution.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> It took two 17<sup>th</sup> century geniuses, Isaac Newton and Gottfried Wilhelm Leibniz, to figure out how to do so.</p>
 <p>The solution came by first defining the mathematical operation that “undoes” the slicing:</p>
 <p><span class="math display" id="eq:integraldefgen">\[\begin{equation}
@@ -372,11 +378,11 @@ L=\int dL = \int_{i}^{f} 1 dx = x_f-x_i =\Delta x,
 \tag{1.2}
 \end{equation}\]</span></p>
 <p>where the length (<span class="math inline">\(L\)</span>) of the original object is reconstructed by fixing the initial piece at position <span class="math inline">\(x_i\)</span> on the <span class="math inline">\(x\)</span> axis, the final piece at position <span class="math inline">\(x_f\)</span>, and then by gluing together the differentials <span class="math inline">\(dx\)</span> in between these points, using the integral procedure. Switching from <span class="math inline">\(dL\)</span> to <span class="math inline">\(dx\)</span> has the noticeable advantage of going from something that we initially don’t know anything about (the length of the stick) to something that we can manipulate as much as we want, because we specifically built it for this task (the position along the axis, <span class="math inline">\(x\)</span>). This concept, of course, is not limited to length. If we differentiate an area, or a volume, or a pressure, or a temperature using eq. <a href="SystemVariables.html#eq:integraldefgen">(1.1)</a>, we obtain the corresponding differentials. By comparing these differentials to specifically built ones that we are able to manipulate to our will, we can reconstruct the original quantity via integration, using eq. <a href="SystemVariables.html#eq:integraldef">(1.2)</a>. Every differential will not depend on a specific <em>unit</em> of measure (for example, the differential of a temperature <span class="math inline">\(dT\)</span> does not depend on whether we initially measure the temperature in degrees Celsius, or degrees Fahrenheit, or Kelvin), but it will retain the <em>dimension</em> of the original quantity (<span class="math inline">\(dT\)</span> still retains the dimension of a temperature, a.k.a. it <em>is</em> a temperature, despite the fact that it has a value of essentially zero and it does not have any unit). In addition, every differential will retain <em>hidden</em> information about the initial object, which we can reconstruct by comparing to something we know, and then by applying integration to the latter. Notice that it is the operation in eq. <a href="SystemVariables.html#eq:integraldef">(1.2)</a> that puts the units back into the picture, by comparing an unknown differential to a known one. This is effectively the “measuring” procedure, written in mathematical terms.</p>
-<p>When we wrote eq. <a href="SystemVariables.html#eq:integraldef">(1.2)</a>, we glanced over the fact that <span class="math inline">\(\int_{i}^{f} 1 dx = x_f-x_i\)</span>. Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you’ll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that <span class="math inline">\(\int_{i}^{f} dx = x_f-x_i\)</span>. Other common integration rules that we’ll need in this course are, for example: <span class="math inline">\(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\)</span> for <span class="math inline">\(n\neq 1\)</span>, and <span class="math inline">\(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|,\)</span></p>
+<p>When we wrote eq. <a href="SystemVariables.html#eq:integraldef">(1.2)</a>, we glanced over the fact that <span class="math inline">\(\int_{i}^{f} 1 dx = x_f-x_i\)</span>. Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you’ll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that <span class="math inline">\(\int_{i}^{f} dx = x_f-x_i\)</span>. Other common integration rules that we’ll need in this course are, for example: <span class="math inline">\(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f  =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\)</span> for <span class="math inline">\(n\neq 1\)</span>, and <span class="math inline">\(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|,\)</span></p>
 <p>This is indeed a good point to go fetch that old math textbook and refresh some of the simplest integration rules, as well as some of the simplest derivation ones. Not that we will use all of them, but we might indeed use a few ones.</p>
 </div>
-<div id="calculus-for-thermodynamics" class="section level3" number="1.1.3">
-<h3><span class="header-section-number">1.1.3</span> Calculus for Thermodynamics</h3>
+<div id="calculus-for-thermodynamics" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Calculus for Thermodynamics<a href="SystemVariables.html#calculus-for-thermodynamics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now comes the interesting question: How are we going to practically perform these two important operations of differentiation and integration in thermodynamics? Well, imagine we need to study the behavior of a machine that prints out a number on a display. The first thing we need to do if we want to study this machine is to find something that makes the number change. Let’s represent this something with a knob. We can then turn the knob voluntarily one way or another, and register haw the number changes on the display. This is how you apply calculus in thermodynamics (and in most science, for that matters). Our machine might be the length of an object <span class="math inline">\(L\)</span>, while our knob might be the position along an axis <span class="math inline">\(x\)</span>. We can voluntarily change the position on the axis, and observe how the length changes on the display. Does that sound familiar? Can we use eq. <a href="SystemVariables.html#eq:integraldef">(1.2)</a> to do so? I believe so…</p>
 <p>Now, obviously the example of length and position is the simplest we could imagine, and doesn’t really pertains to physical chemistry. A more relevant example is that of a gas, whose pressure changes when we change the pressure at constant volume. In this case, the pressure, <span class="math inline">\(P\)</span>, is the machine, and the temperature, <span class="math inline">\(T\)</span>, is the knob. To understand the machine, we will need to know the derivative <span class="math inline">\(\frac{dP}{dT}\)</span>. In many cases the derivative between our machine and our knob(s) might not be as simple as 1. In some of such cases, the derivative might be a different number, while in other it might be as complicated as a function itself. Some of the machine we will encounter might have more than just one knob, each with their own specific derivative, and each as complicated as it might be. In all cases, however, our analysis follow the same procedure: First, we identify all the knobs that affect the machine. Second, we use calculus to voluntarily change the position of the knobs and to register how the machine behaves. In mathematical terms, this procedure is to define and study the total differential:</p>
 <p><span class="math display" id="eq:totdiff">\[\begin{equation}
@@ -389,10 +395,10 @@ d\mathcal{M} &amp;= \left( \frac{\partial \mathcal{M}}{\partial a} \right) da + 
 <p>The final piece of the puzzle we need to applying calculus to thermodynamics is to know whether or not we can apply these two procedures to any quantity that enters the picture. The answer to this question, unfortunately, is a resounding no. Differentiation and integration can be applied to many variables that are “well-behaved.” Such variables are called <strong>state variables</strong> in thermodynamics. Unfortunately though, there are also a few variables that are not well-behaved at all. These are called <strong>path variables</strong> in thermodynamics. It turns out that some of the quantities that thermodynamics is mostly concerned about, such as heat and work, belong to this “ill-behaved” category. Before we delve deeper into state and path variables, however, we need to define what variables are in thermodynamics. And before we can do that, we need to take a whole step back and define what thermodynamic is concerned about, that is the thermodynamic system.</p>
 </div>
 </div>
-<div id="thermodynamic-systems" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Thermodynamic Systems</h2>
-A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure <a href="SystemVariables.html#fig:Fig1c1">1.1</a> below.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>
-<div class="figure" style="text-align: center"><span id="fig:Fig1c1"></span>
+<div id="thermodynamic-systems" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Thermodynamic Systems<a href="SystemVariables.html#thermodynamic-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure <a href="SystemVariables.html#fig:Fig1c1">1.1</a> below.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig1c1"></span>
 <img src="img/OEP_Figures.001.jpeg" alt="Examples of Thermodynamic Systems." width="70%" />
 <p class="caption">
 Figure 1.1: Examples of Thermodynamic Systems.
@@ -402,6 +408,11 @@ Figure 1.1: Examples of Thermodynamic Systems.
 <p>A system can exchange exclusively mass, exclusively energy, or both mass and energy with its surroundings. Depending on the boundaries’ ability to transfer these quantities, a system is defined as open, closed, or isolated. An open system exchanges both mass and energy. A closed system exchanges only energy, but not mass. Finally, an isolated system does not exchange mass nor energy.</p>
 <p>When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let’s consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of –100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be –100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and –100 to the ingoing one, and the overall total would have stayed the same: +100–100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?</p>
 <table>
+<colgroup>
+<col width="31%" />
+<col width="15%" />
+<col width="53%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Type of System</strong></th>
@@ -432,19 +443,18 @@ Figure 1.1: Examples of Thermodynamic Systems.
 </blockquote>
 <p>These simple examples demonstrate that the sign that we assign to quantities that flow through a boundary is arbitrary (i.e., we can define it any way we want, as long as we are always consistent with ourselves). There is no best way to assign those signs. If you ask two different people, you might obtain two different answers. But we are scientists, and we must make sure to be rigorous. For this reason, chemists have established a convention for the signs that we will follow throughout this course. If we are consistent in following the convention, we are guaranteed to never make any mistake with the signs.</p>
 <blockquote>
-
 <div class="definition">
 <p><span id="def:chemistryconv" class="definition"><strong>Definition 1.1  </strong></span><em>The chemistry convention of the sign is system-centric:</em><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+</div>
+</blockquote>
 <ul>
 <li><em>If something (energy or mass) goes <strong>into</strong> the system it has a <strong>positive</strong> sign (the system is gaining)</em></li>
 <li><em>If something (energy or mass) goes <strong>out of</strong> the system it has a <strong>negative</strong> sign (the system is losing)</em></li>
 </ul>
-</div>
-</blockquote>
 <p>If you want a trick to remember the convention, use the weight loss/gain during the exercise example above. You are the system, if you lose weight, the kilograms will be negative (–2 kg), while if you gain weight, they will be positive (+2 kg). Similarly, if you eat an energy bar, you are the system, and you will have increased your energy by +500 kcal (positive). In contrast, if you burned energy during exercise, you are the system, and you will have lost energy, hence –500 kcal (negative). If the system is a balloon filled with gas, and the balloon is losing mass, you are the balloon, and you are losing weight; hence the mass will be negative. If the balloon is absorbing heat (likely increasing its temperature and increasing its volume), you are the system, and you are gaining heat; hence heat will be positive.</p>
 </div>
-<div id="thermodynamic-variables" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Thermodynamic Variables</h2>
+<div id="thermodynamic-variables" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Thermodynamic Variables<a href="SystemVariables.html#thermodynamic-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don’t be surprised if, on some occasions, you encounter variables that are a little harder to measure directly, such as entropy. If we know the values of all the “relevant variables” of a system, we know the state of the system. The relationships between all possible variables and the state of the system are called “state functions”. Imagine state functions as the “machines” that we described in the previous section. The relevant variables are called natural variables, and you should imagine them as the “knobs” of the machines that we want to study. When we need to study a specific aspect of the system, then we need to know the total differential of the state function that is relevant for that aspect.</p>
 <p>What are the “relevant variables” of a system? The answer to this question depends on the system, and it is not always straightforward. The simplest case is the case of an ideal gas, for which the natural variables are those that enter the ideal gas law and the corresponding equation:</p>
 <p><span class="math display" id="eq:idealgaslaworiginal">\[\begin{equation}
@@ -480,7 +490,7 @@ The ideal gas equation connects the 3 variables pressure, molar volume, and temp
 <p><span class="math display" id="eq:VmTP">\[\begin{equation}
   \overline{V}(T,P)=\frac{RT}{P},
   \tag{1.8}
- \end{equation}\]</span></p>
+\end{equation}\]</span></p>
 <p><span class="math display" id="eq:TPVm">\[\begin{equation}
   T(P,\overline{V})=\frac{P\overline{V}}{R}.
   \tag{1.9}
@@ -497,17 +507,17 @@ The ideal gas equation connects the 3 variables pressure, molar volume, and temp
 \end{equation}\]</span></p>
 <p>Which can be easily verified considering that:</p>
 <p><span class="math display" id="eq:secondderPA">\[\begin{equation}
-  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2} 
+  \frac{\partial}{\partial \overline{V}} \frac{\partial P}{\partial T}  = \frac{\partial}{\partial \overline{V}} \left(\frac{R}{\overline{V}}\right) = -\frac{R}{\overline{V}^2}
   \tag{1.12}
 \end{equation}\]</span></p>
 <p>and</p>
 <p><span class="math display" id="eq:secondderPB">\[\begin{equation}
-  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2} 
+  \frac{\partial}{\partial T} \frac{\partial P}{\partial \overline{V}}  = \frac{\partial}{\partial T} \left(\frac{-RT}{\overline{V}^2}\right) = -\frac{R}{\overline{V}^2}
   \tag{1.13}
 \end{equation}\]</span></p>
 <p>While for the ideal gas law, all the variables are “well-behaved” and always satisfy Schwartz’s theorem, we will encounter some variable for which Schwartz’s theorem does not hold.</p>
-<div id="state-and-path-variables" class="section level3" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> State and Path Variables</h3>
+<div id="state-and-path-variables" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> State and Path Variables<a href="SystemVariables.html#state-and-path-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Mathematically, if the Schwartz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated. These ill-behaved variables are called <strong>path variables</strong> (or path functions) because they depend on the path, rather than the state of the system. In contrast to these ill-behaved variables, well-behaved variables that can be used to define the state of the system are called <strong>state variables</strong> (or state functions).</p>
 <p>Since path functions violate Schwartz’s theorem, their differential cannot be defined exactly, therefore eq. <a href="SystemVariables.html#eq:integraldef">(1.2)</a> does not exist. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we can attempt to infinitely slice the initial variable by using the same calculus procedure introduced in section <a href="SystemVariables.html#infslici">1.1.1</a> and defined in eq. <a href="SystemVariables.html#eq:integraldefgen">(1.1)</a>. The resulting infinitely small pieces, however, are different than regular “exact” differentials, and are called <strong>inexact differentials</strong>. To differentiate between exact and inexact differentials, we use the letter <span class="math inline">\(d\)</span> for the former, and the letter <span class="math inline">\(đ\)</span> for the latter. It is important to remember that inexact differentials are defined using eq. <a href="SystemVariables.html#eq:integraldefgen">(1.1)</a>, but the procedure in <a href="SystemVariables.html#eq:integraldef">(1.2)</a> does not exist for them. Summarizing for a case that we will use often in thermodynamics, we can define the following quantity for heat (<span class="math inline">\(Q\)</span>):</p>
 <p><span class="math display" id="eq:intdbarQ">\[\begin{equation}
@@ -523,7 +533,7 @@ The ideal gas equation connects the 3 variables pressure, molar volume, and temp
 <blockquote>
 <p>We will return to exact and inexact differential when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have accessibility to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs. car vs. train vs. boat vs. …). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See Figure <a href="SystemVariables.html#fig:Fig2c1">1.2</a>.</p>
 </blockquote>
-<div class="figure" style="text-align: center"><span id="fig:Fig2c1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c1"></span>
 <img src="img/OEP_Figures.002.jpeg" alt="State Functions vs. Path Functions." width="60%" />
 <p class="caption">
 Figure 1.2: State Functions vs. Path Functions.
@@ -531,10 +541,10 @@ Figure 1.2: State Functions vs. Path Functions.
 </div>
 </div>
 </div>
-<div id="rev1" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Chapter Review</h2>
-<div id="quest1" class="section level3" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> Study Questions</h3>
+<div id="rev1" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Chapter Review<a href="SystemVariables.html#rev1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest1" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Study Questions<a href="SystemVariables.html#quest1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. What is the primary purpose of calculus in thermodynamics?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>To measure the length of objects.</li>
@@ -658,7 +668,6 @@ Click to reveal
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -677,6 +686,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -697,6 +707,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -710,7 +724,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

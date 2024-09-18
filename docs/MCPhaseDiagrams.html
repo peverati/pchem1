@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>13 Multi-Component Phase Diagrams and Solutions | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="13 Multi-Component Phase Diagrams and Solutions | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="PhaseEquilibrium.html"/>
 <link rel="next" href="Kinetics.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -346,8 +352,8 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="MCPhaseDiagrams" class="section level1" number="13">
-<h1><span class="header-section-number">13</span> Multi-Component Phase Diagrams and Solutions</h1>
+<div id="MCPhaseDiagrams" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">13</span> Multi-Component Phase Diagrams and Solutions<a href="MCPhaseDiagrams.html#MCPhaseDiagrams" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>We now move from studying 1-component systems to multi-component ones. Systems that include two or more chemical species are usually called <em>solutions</em>. Solutions are possible for all three states of matter:</p>
 <table>
 <thead>
@@ -416,17 +422,17 @@ MathJax.Hub.Config({
 </tbody>
 </table>
 <p>The number of degrees of freedom for binary solutions (solutions containing two components) is calculated from the Gibbs phase rules at <span class="math inline">\(f=2-p+2=4-p\)</span>. When one phase is present, binary solutions require <span class="math inline">\(4-1=3\)</span> variables to be described, usually temperature (<span class="math inline">\(T\)</span>), pressure (<span class="math inline">\(P\)</span>), and mole fraction (<span class="math inline">\(y_i\)</span> in the gas phase and <span class="math inline">\(x_i\)</span> in the liquid phase). Single-phase, 2-component systems require three-dimensional <span class="math inline">\(T,P,x_i\)</span> diagram to be described. When two phases are present (e.g., gas and liquid), only two variables are independent: pressure and concentration. Thus, we can study the behavior of the partial pressure of a gas–liquid solution in a 2-dimensional plot. If the gas phase in a solution exhibits properties similar to those of a mixture of ideal gases, it is called an <em>ideal solution</em>. The obvious difference between ideal solutions and ideal gases is that the intermolecular interactions in the liquid phase cannot be neglected as for the gas phase. The main advantage of ideal solutions is that the interactions between particles in the liquid phase have similar mean strength throughout the entire phase. We will consider ideal solutions first, and then we’ll discuss deviation from ideal behavior and non-ideal solutions.</p>
-<div id="raoults-law-and-phase-diagrams-of-ideal-solutions" class="section level2" number="13.1">
-<h2><span class="header-section-number">13.1</span> Raoult’s Law and Phase Diagrams of Ideal Solutions</h2>
+<div id="raoults-law-and-phase-diagrams-of-ideal-solutions" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Raoult’s Law and Phase Diagrams of Ideal Solutions<a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The behavior of the vapor pressure of an ideal solution can be mathematically described by a simple law established by François-Marie Raoult (1830–1901). <strong>Raoult’s law</strong> states that the partial pressure of each component, <span class="math inline">\(i\)</span>, of an ideal mixture of liquids, <span class="math inline">\(P_i\)</span>, is equal to the vapor pressure of the pure component <span class="math inline">\(P_i^*\)</span> multiplied by its mole fraction in the mixture <span class="math inline">\(x_i\)</span>:</p>
 <p><span class="math display" id="eq:mc1">\[\begin{equation}
 P_i=x_i P_i^*.
 \tag{13.1}
 \end{equation}\]</span></p>
-<div id="one-volatile-component" class="section level3" number="13.1.1">
-<h3><span class="header-section-number">13.1.1</span> One volatile component</h3>
+<div id="one-volatile-component" class="section level3 hasAnchor" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> One volatile component<a href="MCPhaseDiagrams.html#one-volatile-component" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Raoult’s law applied to a system containing only one volatile component describes a line in the <span class="math inline">\(Px_{\text{B}}\)</span> plot, as in Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC1"></span>
 <img src="img/OEP_Figures.019.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
 <p class="caption">
 Figure 13.1: The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.
@@ -434,19 +440,18 @@ Figure 13.1: The Pressure–Composition Phase Diagram of an Ideal Solution Conta
 </div>
 <p>As emerges from Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>, Raoult’s law divides the diagram into two distinct areas, each with three degrees of freedom.<a href="#fn63" class="footnote-ref" id="fnref63"><sup>63</sup></a> Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult’s law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.</p>
 </div>
-<div id="two-volatile-components" class="section level3" number="13.1.2">
-<h3><span class="header-section-number">13.1.2</span> Two volatile components</h3>
+<div id="two-volatile-components" class="section level3 hasAnchor" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Two volatile components<a href="MCPhaseDiagrams.html#two-volatile-components" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In an ideal solution, every volatile component follows Raoult’s law. Since the vapors in the gas phase behave ideally, the total pressure can be simply calculated using Dalton’s law as the sum of the partial pressures of the two components <span class="math inline">\(P_{\text{TOT}}=P_{\text{A}}+P_{\text{B}}\)</span>. The corresponding diagram is reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC2">13.2</a>. The total vapor pressure, calculated using Dalton’s law, is reported in red. The Raoult’s behaviors of each of the two components are also reported using black dashed lines.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC2"></span>
 <img src="img/OEP_Figures.020.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature." width="60%" />
 <p class="caption">
 Figure 13.2: The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature.
 </p>
 </div>
 <blockquote>
-
 <div class="exercise">
-<span id="exr:xaya" class="exercise"><strong>Exercise 13.1  </strong></span>Calculate the mole fraction in the vapor phase of a liquid solution composed of 67% of toluene (<span class="math inline">\(\mathrm{A}\)</span>) and 33% of benzene (<span class="math inline">\(\mathrm{B}\)</span>), given the vapor pressures of the pure substances: <span class="math inline">\(P_{\text{A}}^*=0.03\;\text{bar}\)</span>, and <span class="math inline">\(P_{\text{B}}^*=0.10\;\text{bar}\)</span>.
+<p><span id="exr:xaya" class="exercise"><strong>Exercise 13.1  </strong></span>Calculate the mole fraction in the vapor phase of a liquid solution composed of 67% of toluene (<span class="math inline">\(\mathrm{A}\)</span>) and 33% of benzene (<span class="math inline">\(\mathrm{B}\)</span>), given the vapor pressures of the pure substances: <span class="math inline">\(P_{\text{A}}^*=0.03\;\text{bar}\)</span>, and <span class="math inline">\(P_{\text{B}}^*=0.10\;\text{bar}\)</span>.
 <em>Solution:</em> The data available for the systems are summarized as follows:
 <span class="math display" id="eq:mc2">\[\begin{equation}
 \begin{aligned}
@@ -474,11 +479,11 @@ y_{\text{A}}=\frac{0.02}{0.05}=0.40 &amp; \qquad y_{\text{B}}=\frac{0.03}{0.05}=
 \end{aligned}
 \tag{13.4}
 \end{equation}\]</span>
-Notice how the mole fraction of toluene is much higher in the liquid phase, <span class="math inline">\(x_{\text{A}}=0.67\)</span>, than in the vapor phase, <span class="math inline">\(y_{\text{A}}=0.40\)</span>.
+Notice how the mole fraction of toluene is much higher in the liquid phase, <span class="math inline">\(x_{\text{A}}=0.67\)</span>, than in the vapor phase, <span class="math inline">\(y_{\text{A}}=0.40\)</span>.</p>
 </div>
 </blockquote>
 <p>As is clear from the results of Exercise <a href="MCPhaseDiagrams.html#exr:xaya">13.1</a>, the concentration of the components in the gas and vapor phases are different. We can also report the mole fraction in the vapor phase as an additional line in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC2">13.2</a>. When both concentrations are reported in one diagram—as in Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>—the line where <span class="math inline">\(x_{\text{B}}\)</span> is obtained is called the <em>liquidus line</em>, while the line where the <span class="math inline">\(y_{\text{B}}\)</span> is reported is called the <em>Dew point line</em>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC3"></span>
 <img src="img/OEP_Figures.021.jpeg" alt="The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot." width="60%" />
 <p class="caption">
 Figure 13.3: The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot.
@@ -486,17 +491,17 @@ Figure 13.3: The Pressure–Composition Phase Diagram of an Ideal Solution Conta
 </div>
 <p>The liquidus and Dew point lines determine a new section in the phase diagram where the liquid and vapor phases coexist. Since the degrees of freedom inside the area are only 2, for a system at constant temperature, a point inside the coexistence area has fixed mole fractions for both phases. We can reduce the pressure on top of a liquid solution with concentration <span class="math inline">\(x^i_{\text{B}}\)</span> (see Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>) until the solution hits the liquidus line. At this pressure, the solution forms a vapor phase with mole fraction given by the corresponding point on the Dew point line, <span class="math inline">\(y^f_{\text{B}}\)</span>.</p>
 </div>
-<div id="t_textb-phase-diagrams-and-fractional-distillation" class="section level3" number="13.1.3">
-<h3><span class="header-section-number">13.1.3</span> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</h3>
+<div id="t_textb-phase-diagrams-and-fractional-distillation" class="section level3 hasAnchor" number="13.1.3">
+<h3><span class="header-section-number">13.1.3</span> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation<a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can now consider the phase diagram of a 2-component ideal solution as a function of temperature at constant pressure. The <span class="math inline">\(T_{\text{B}}\)</span> diagram for two volatile components is reported in Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC4"></span>
 <img src="img/OEP_Figures.022.jpeg" alt="The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure." width="60%" />
 <p class="caption">
 Figure 13.4: The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.
 </p>
 </div>
 <p>Compared to the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there are only two degrees of freedom inside the lens, of which the pressure is kept constant by definition.<a href="#fn64" class="footnote-ref" id="fnref64"><sup>64</sup></a> As such, a liquid solution of initial composition <span class="math inline">\(x_{\text{B}}^i\)</span> can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration <span class="math inline">\(y_{\text{B}}^f\)</span>. As is clear from Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>, the mole fraction of the <span class="math inline">\(\text{B}\)</span> component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component <span class="math inline">\(\text{B}\)</span>. This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigMC5">13.5</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC5"></span>
 <img src="img/OEP_Figures.023.jpeg" alt="The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram." width="60%" />
 <p class="caption">
 Figure 13.5: The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram.
@@ -505,10 +510,10 @@ Figure 13.5: The Fractional Distillation Process and Theoretical Plates Calculat
 <p>Each of the horizontal lines in the lens region of the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC5">13.5</a> corresponds to a condensation/evaporation process and is called a <em>theoretical plate</em>. These plates are industrially realized on large columns with several floors equipped with condensation trays. The temperature decreases with the height of the column. A condensation/evaporation process will happen on each level, and a solution concentrated in the most volatile component is collected. The theoretical plates and the <span class="math inline">\(Tx_{\text{B}}\)</span> are crucial for sizing the industrial fractional distillation columns.</p>
 </div>
 </div>
-<div id="phase-diagrams-of-non-ideal-solutions" class="section level2" number="13.2">
-<h2><span class="header-section-number">13.2</span> Phase Diagrams of Non-Ideal Solutions</h2>
+<div id="phase-diagrams-of-non-ideal-solutions" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Phase Diagrams of Non-Ideal Solutions<a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Non-ideal solutions follow Raoult’s law for only a small amount of concentrations. The typical behavior of a non-ideal solution with a single volatile component is reported in the <span class="math inline">\(Px_{\text{B}}\)</span> plot in Figure <a href="MCPhaseDiagrams.html#fig:FigMC6">13.6</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC6"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC6"></span>
 <img src="img/OEP_Figures.024.jpeg" alt="The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature." width="60%" />
 <p class="caption">
 Figure 13.6: The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.
@@ -520,14 +525,14 @@ P_{\text{B}}=k_{\text{AB}} x_{\text{B}},
 \tag{13.5}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(k_{\text{AB}}\)</span> depends on the chemical nature of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>. The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviations on Raoult’s ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit slightly less common. An example of a negative deviation is reported in the right panel of Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC7"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC7"></span>
 <img src="img/OEP_Figures.025.jpeg" alt="The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature." width="80%" />
 <p class="caption">
 Figure 13.7: The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature.
 </p>
 </div>
 <p>If we move from the <span class="math inline">\(Px_{\text{B}}\)</span> diagram to the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram, the behaviors observed in Figure <a href="MCPhaseDiagrams.html#fig:FigMC7">13.7</a> will correspond to the diagram in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigMC8"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC8"></span>
 <img src="img/OEP_Figures.026.jpeg" alt="The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure." width="80%" />
 <p class="caption">
 Figure 13.8: The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure.
@@ -536,8 +541,8 @@ Figure 13.8: The Temperature–Composition Phase Diagram of Non-Ideal Solutions 
 <p>The minimum (left plot) and maximum (right plot) points in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a> represent the so-called <em>azeotrope</em>.</p>
 <p>An azeotrope is a constant boiling point solution whose composition cannot be altered or changed by simple distillation. This happens because the liquidus and Dew point lines coincide at this point. Therefore, the liquid and the vapor phases have the same composition, and distillation cannot occur. Two types of azeotropes exist, representative of the two types of non-ideal behavior of solutions. The first type is the positive azeotrope (left plot in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a>). A notorious example of this behavior at atmospheric pressure is the ethanol/water mixture, with composition 95.63% ethanol by mass. This positive azeotrope boils at <span class="math inline">\(T=78.2\;^\circ \text{C}\)</span>, a temperature that is lower than the boiling points of the pure constituents, since ethanol boils at <span class="math inline">\(T=78.4\;^\circ \text{C}\)</span> and water at <span class="math inline">\(T=100\;^\circ \text{C}\)</span>. The second type is the negative azeotrope (right plot in Figure <a href="MCPhaseDiagrams.html#fig:FigMC8">13.8</a>). An example of this behavior at atmospheric pressure is the hydrochloric acid/water mixture with composition 20.2% hydrochloric acid by mass. This negative azeotrope boils at <span class="math inline">\(T=110\;^\circ \text{C}\)</span>, a temperature that is higher than the boiling points of the pure constituents, since hydrochloric acid boils at <span class="math inline">\(T=-84\;^\circ \text{C}\)</span> and water at <span class="math inline">\(T=100\;^\circ \text{C}\)</span>.</p>
 </div>
-<div id="activity" class="section level2" number="13.3">
-<h2><span class="header-section-number">13.3</span> Activity</h2>
+<div id="activity" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Activity<a href="MCPhaseDiagrams.html#activity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For non-ideal gases, we introduced in chapter <a href="RealGases.html#RealGases">11</a> the concept of <em>fugacity</em> as an <em>effective pressure</em> that accounts for non-ideal behavior. If we extend this concept to non-ideal solution, we can introduce the <em>activity</em> of a liquid or a solid, <span class="math inline">\(a\)</span>, as:</p>
 <p><span class="math display" id="eq:act1">\[\begin{equation}
 \mu_{\text{non-ideal}} = \mu^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT \ln a,
@@ -585,7 +590,7 @@ P_i = a_i P_i^*.
 \tag{13.14}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(P_i^{\text{R}}\)</span> is the partial pressure calculated using Raoult’s law. This result also proves that for an ideal solution, <span class="math inline">\(\gamma=1\)</span>. Eq. <a href="MCPhaseDiagrams.html#eq:act9">(13.14)</a> can also be used experimentally to obtain the activity coefficient from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in Figure <a href="MCPhaseDiagrams.html#fig:FigSol1">13.9</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigSol1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigSol1"></span>
 <img src="img/OEP_Figures.033.jpeg" alt="Positive and Negative Deviation from Raoult's Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature." width="80%" />
 <p class="caption">
 Figure 13.9: Positive and Negative Deviation from Raoult’s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.
@@ -593,28 +598,28 @@ Figure 13.9: Positive and Negative Deviation from Raoult’s Law in the Pressure
 </div>
 <p>As we already discussed in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it’s defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.<a href="#fn65" class="footnote-ref" id="fnref65"><sup>65</sup></a></p>
 </div>
-<div id="colligative-properties" class="section level2" number="13.4">
-<h2><span class="header-section-number">13.4</span> Colligative Properties</h2>
+<div id="colligative-properties" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Colligative Properties<a href="MCPhaseDiagrams.html#colligative-properties" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Colligative properties are properties of solutions that depend on the number of particles in the solution and not on the nature of the chemical species. More specifically, a colligative property depends on the ratio between the number of particles of the solute and the number of particles of the solvent. This ratio can be measured using any unit of concentration, such as mole fraction, molarity, and normality. For diluted solutions, however, the most useful concentration for studying colligative properties is the molality, <span class="math inline">\(m\)</span>, which measures the ratio between the number of particles of the solute (in moles) and the mass of the solvent (in kg):</p>
 <p><span class="math display" id="eq:coll1">\[\begin{equation}
 m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
 \tag{13.15}
 \end{equation}\]</span></p>
 <p>Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the melting point, and osmotic pressure.</p>
-<div id="vapor-pressure-lowering" class="section level3" number="13.4.1">
-<h3><span class="header-section-number">13.4.1</span> Vapor pressure lowering</h3>
+<div id="vapor-pressure-lowering" class="section level3 hasAnchor" number="13.4.1">
+<h3><span class="header-section-number">13.4.1</span> Vapor pressure lowering<a href="MCPhaseDiagrams.html#vapor-pressure-lowering" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As we have already discussed in chapter <a href="MCPhaseDiagrams.html#MCPhaseDiagrams">13</a>, the vapor pressure of an ideal solution follows Raoult’s law. Its difference with respect to the vapor pressure of the pure solvent can be calculated as:</p>
 <p><span class="math display" id="eq:coll2">\[\begin{equation}
 \begin{aligned}
-P_{\text{solvent}}^* &amp;- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{solvent}} P_{\text{solvent}}^* \\ 
+P_{\text{solvent}}^* &amp;- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{solvent}} P_{\text{solvent}}^* \\
 &amp; = \left( 1-x_{\text{solvent}}\right)P_{\text{solvent}}^* =x_{\text{solute}} P_{\text{solvent}}^*,
 \end{aligned}
 \tag{13.16}
 \end{equation}\]</span></p>
 <p>which shows that the vapor pressure lowering depends only on the concentration of the solute. As such, it is a colligative property.</p>
 </div>
-<div id="boiling-point-elevation-and-melting-point-depression" class="section level3" number="13.4.2">
-<h3><span class="header-section-number">13.4.2</span> Boiling point elevation and melting point depression</h3>
+<div id="boiling-point-elevation-and-melting-point-depression" class="section level3 hasAnchor" number="13.4.2">
+<h3><span class="header-section-number">13.4.2</span> Boiling point elevation and melting point depression<a href="MCPhaseDiagrams.html#boiling-point-elevation-and-melting-point-depression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The following two colligative properties are explained by reporting the changes due to the solute molecules in the plot of the chemical potential as a function of temperature (Figure <a href="PhaseEquilibrium.html#fig:FigPhase1">12.1</a>).</p>
 <p>At the boiling point, the chemical potential of the solution is equal to the chemical potential of the vapor, and the following relation can be obtained:</p>
 <p><span class="math display" id="eq:collA">\[\begin{equation}
@@ -628,11 +633,11 @@ P_{\text{solvent}}^* &amp;- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\tex
 \end{equation}\]</span></p>
 <p>and since <span class="math inline">\(x_{\text{solution}}&lt;1\)</span>, the logarithmic term in the last expression is negative, and:</p>
 <p><span class="math display" id="eq:collB">\[\begin{equation}
-\mu_{\text{solution}} &lt; \mu_{\text{solvent}}^*. 
+\mu_{\text{solution}} &lt; \mu_{\text{solvent}}^*.
 \tag{13.18}
 \end{equation}\]</span></p>
 <p>Eq. <a href="MCPhaseDiagrams.html#eq:collA">(13.17)</a> proves that the addition of a solute always stabilizes the solvent in the liquid phase, and lowers its chemical potential, as shown in Figure <a href="MCPhaseDiagrams.html#fig:FigSol2">13.10</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigSol2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigSol2"></span>
 <img src="img/OEP_Figures.034.jpeg" alt="Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute." width="60%" />
 <p class="caption">
 Figure 13.10: Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute.
@@ -667,10 +672,10 @@ K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
 \end{equation}\]</span></p>
 <p>Notice from Figure <a href="MCPhaseDiagrams.html#fig:FigSol2">13.10</a> how the depression of the melting point is always larger than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water <span class="math inline">\(K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\)</span>, while <span class="math inline">\(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\)</span>. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.</p>
 </div>
-<div id="osmotic-pressure" class="section level3" number="13.4.3">
-<h3><span class="header-section-number">13.4.3</span> Osmotic pressure</h3>
+<div id="osmotic-pressure" class="section level3 hasAnchor" number="13.4.3">
+<h3><span class="header-section-number">13.4.3</span> Osmotic pressure<a href="MCPhaseDiagrams.html#osmotic-pressure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The osmotic pressure of a solution is defined as the difference in pressure between the solution and the pure liquid solvent when the two are in equilibrium across a semi-permeable (osmotic) membrane. The osmotic membrane is made of a porous material that allows the flow of solvent molecules but blocks the flow of the solute ones. The osmosis process is depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigSol3">13.11</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigSol3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigSol3"></span>
 <img src="img/OEP_Figures.035.jpeg" alt="Osmotic Pressure of a Solution." width="80%" />
 <p class="caption">
 Figure 13.11: Osmotic Pressure of a Solution.
@@ -684,10 +689,10 @@ Figure 13.11: Osmotic Pressure of a Solution.
 <p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(m\)</span> is the molality of the solution, <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(T\)</span> the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.<a href="#fn66" class="footnote-ref" id="fnref66"><sup>66</sup></a></p>
 </div>
 </div>
-<div id="rev13" class="section level2" number="13.5">
-<h2><span class="header-section-number">13.5</span> Chapter Review</h2>
-<div id="quest13" class="section level3" number="13.5.1">
-<h3><span class="header-section-number">13.5.1</span> Study Questions</h3>
+<div id="rev13" class="section level2 hasAnchor" number="13.5">
+<h2><span class="header-section-number">13.5</span> Chapter Review<a href="MCPhaseDiagrams.html#rev13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest13" class="section level3 hasAnchor" number="13.5.1">
+<h3><span class="header-section-number">13.5.1</span> Study Questions<a href="MCPhaseDiagrams.html#quest13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. What is the Gibbs phase rule for binary solutions with one phase present?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(f = 2 - p + 2\)</span>.</li>
@@ -807,7 +812,6 @@ Click to reveal
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -826,6 +830,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -846,6 +851,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -859,7 +868,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

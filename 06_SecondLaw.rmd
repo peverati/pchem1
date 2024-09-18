@@ -261,7 +261,7 @@ where the summation happens across a sequence of Carnot cycles that connects dif
 *Entropy:* \begin{equation}
 S = \frac{Q_{\mathrm{REV}}}{T}.
 \end{equation}
-```
+> ```
 
 We can use the new state function to generalize eq. \@ref(eq:effQrevT) to any reversible cycle in a $PV$-diagram by using the rules of calculus. First, we will slice $S$ into an infinitesimal quantity:
 
@@ -352,7 +352,7 @@ which proves that for any irreversible process in an isolated system, the entrop
 
 > ```{definition, secondlawdef}
 *Second Law of Thermodynamics:* for any spontaneous process, the entropy of the universe is increasing.
-```
+> ```
 
 
 

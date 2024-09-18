@@ -6,9 +6,7 @@ Energy is a property of a system that can be either transferred or converted. Th
 
 > ```{definition, energy}
 *Internal Energy:* The energy contained within the system, excluding kinetic energy and potential energy of motion and position of the system as a whole.
-
-
-```
+> ```
 
 In the absence of chemical transformations, heat and work are the only two forms of energy that thermodynamics is concerned with. Keeping in mind Definition \@ref(def:chemistryconv), which gives the convention for the signs of heat and work, the internal energy of a system can be written as:
 
@@ -85,7 +83,7 @@ where we have replaced the total derivative $d$ with a partial one $\partial$, a
 
 > ```{definition, newdefcv}
 *The heat capacity of a substance, $C_V$, represents its ability to absorb **energy** at constant **volume**.*
-```
+> ```
 
 ### Internal energy in isobaric processes {#enthalpy}
 In an isobaric process, the pressure does not change, hence $dP=0$. Unfortunately, eq. \@ref(eq:dU) for this case does not simplify further, as happened in the two previous cases. However, in section \@ref(heatconstp), we have introduced the useful concept of heat capacity at constant $P$. $C_P$ was used in an adiabatic process in the same manner as $C_V$ was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \@ref(eq:cvstatefunc) gave a mathematical definition of $C_V$ as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain $C_P$? In order to do so, we can introduce a new state function, called the enthalpy ($H$), as:
@@ -134,7 +132,7 @@ Eq. \@ref(eq:cpstatefunc) brings also a rigorous definition of heat capacity at 
 
 > ```{definition, newdefcp}
 *The heat capacity of a substance, $C_P$, represents its ability to absorb **enthalpy** at constant **pressure**.*
-```
+> ```
 
 ## The First Law of Thermodynamics
 We finally come to a working definition of the first law. If we take an isolated system—i.e., a system that does not exchange heat nor mass with its surroundings—its internal energy is conserved. If the internal energy is conserved, $dU=0$. Therefore, for an isolated system:
@@ -150,7 +148,7 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 
 > ```{definition, firstlaw}
 *First Law of Thermodynamics:* The energy of the universe is conserved.
-```
+> ```
 
 
 ## Reversible and Irreversible processes
@@ -224,9 +222,7 @@ This process can happen both ways without losses, and is called *reversible*:
 
 > ```{definition, reversible}
 *Reversible process:* a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.^[Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)]
-
-
-```
+> ```
 
 Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 
 <link rel="next" href="SystemVariables.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -349,10 +355,10 @@ MathJax.Hub.Config({
 <div id="header">
 <h1 class="title">The Live Textbook of Physical Chemistry 1</h1>
 <p class="author"><em><a href="mailto:rpeverati@fit.edu">Dr. Roberto Peverati</a></em></p>
-<p class="date"><em>04 September 2024</em></p>
+<p class="date"><em>18 September 2024</em></p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
+<div id="preface" class="section level1 unnumbered hasAnchor">
+<h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="img/OEP_Figures.000.jpeg" width="80%" style="display: block; margin: auto;" /></p>
 <p>This textbook is the official textbook for the Physical Chemistry 1 Course (CHM 3001) at Florida Institute of Technology.</p>
 <p>The instructor for this course and author of this textbook is Dr. Roberto Peverati.</p>
@@ -364,8 +370,8 @@ Florida Institute of Technology, Melbourne, FL.</p>
 <p>What I did have time to do, however, was to bring “The Live Textbook” up to the standards of a true academic textbook. Since its inception, I was well aware that there was a glaring omission: exercises. This summer, I finally had the opportunity to add new review sections at the end of every chapter, each containing practice problems and study questions. These new sections are designed to help readers verify their understanding of each chapter’s content. More importantly, they are intended for my students to test their knowledge before exams. For this reason, they follow the same style as the questions I have used in my exams over the past five years. In fact, several of these questions and exercises are taken directly from previous exams. I can’t promise that the same questions will be in future exams, but familiarizing with them will give a student the edge over students that decide to ignore them.</p>
 <p>Finally, I am not pretending to have been unaware of the emergence of AI, generative models, and their impact on education, so I’ve tried to put them to a good use. In the past five years, I specifically used ChatGPT and Claude to rewrite some sections of this textbook, and I have made it clear when that was the case. This tools was especially valuable this summer for the new exercises and questions sections, where I abundantly used it to help supplement my existing materials with newly generated ones. I made sure the AI didn’t hallucinate and to fix it when it did, so hopefully, everything is consistent. I must confess that I would not have met the deadline for the beginning of the semester without this new technology. Hopefully, this serves as a good example of how AI can be incorporated into the classroom.</p>
 <p>As usual, if you spot any mistakes, I encourage you to reach out to me at the contacts listed above.</p>
-<div id="how-to-use-this-book" class="section level2 unnumbered">
-<h2>How to use this book</h2>
+<div id="how-to-use-this-book" class="section level2 unnumbered hasAnchor">
+<h2>How to use this book<a href="index.html#how-to-use-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Please read this book carefully, since everything that will be in your exams is explained here.
 Since this book is specifically tailored for the CHM 3001 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.</p>
 <blockquote>
@@ -374,8 +380,8 @@ Since this book is specifically tailored for the CHM 3001 course at Florida Tech
 <p>Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar’s corresponding icon. If you are <em>really</em> old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on <a href="https://github.com/peverati/PChem1">over there</a> and fork the book.</p>
 <p>For my students, each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week’s chapter before the lecture on Friday.</p>
 </div>
-<div id="a-note-on-units" class="section level2 unnumbered">
-<h2>A note on units</h2>
+<div id="a-note-on-units" class="section level2 unnumbered hasAnchor">
+<h2>A note on units<a href="index.html#a-note-on-units" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (<span class="math inline">\(K\)</span>), energetic terms will be measured in either Joules (<span class="math inline">\(\text{J}\)</span>) or kiloJoules (<span class="math inline">\(\text{kJ}\)</span>), while volumes will be measured in cubic meters, or more often in liters (<span class="math inline">\(\text{L}\)</span>), where <span class="math inline">\(1\,\text{L} = 10^{-3}\,\text{m}^3\)</span>. An important exception is made for pressures, which will be measured in bars (<span class="math inline">\(\text{bar}\)</span>). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (<span class="math inline">\(\text{Pa}\)</span>), where <span class="math inline">\(1\,\text{bar} = 10^5\,\text{Pa}\)</span>. This choice is made to retain a reasonable similarity with the unit atmosphere (<span class="math inline">\(\text{atm}\)</span>) which is extensively used in several other chemistry textbooks <span class="math inline">\((1\,\text{atm} = 1.013\,\text{bar})\)</span> and in previous physical chemistry courses.</p>
 <p>We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of <span class="math inline">\(273.15\,\text{K}\)</span>. Other unconventional conversions might happen in some of the exercises, with the conversion factors always reported within the exercise itself.
 Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting <span class="math inline">\(P_{\text{atm}} = 1\,\text{bar},\)</span> rather than <span class="math inline">\(P_{\text{atm}} = 1\,\text{atm} = 1.013\, \text{bar},\)</span> an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.</p>
@@ -395,7 +401,6 @@ Additionally, we will avoid unnecessary conversion between the average atmospher
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -414,6 +419,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -434,6 +440,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -447,7 +457,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

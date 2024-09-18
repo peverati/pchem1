@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Thermodynamic Potentials | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="thirdlaw.html"/>
 <link rel="next" href="GibbsFree.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -346,10 +352,10 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Potentials" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Thermodynamic Potentials</h1>
-<div id="fundeq" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Fundamental Equation of Thermodynamics</h2>
+<div id="Potentials" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Thermodynamic Potentials<a href="Potentials.html#Potentials" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="fundeq" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Fundamental Equation of Thermodynamics<a href="Potentials.html#fundeq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems:</p>
 <p><span class="math display" id="eq:dunv">\[\begin{equation}
 \begin{aligned}
@@ -363,7 +369,6 @@ MathJax.Hub.Config({
 <p>Eq. <a href="Potentials.html#eq:dunv">(8.1)</a> is called the <strong>fundamental equation of thermodynamics</strong> since it combines the first and the second laws. Even though we started the derivation above by restricting to reversible transformations only, if we look carefully at eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we notice that it exclusively involves state functions. As such, it applies to both reversible and irreversible processes. The fundamental equation, however, remains constrained to closed systems. This fact restricts its utility for chemistry, since when a chemical reaction happens, the composition of the system will change, and the system is no longer closed.</p>
 <p>At the end of the 19<sup>th</sup> century, Josiah Willard Gibbs (1839–1903) proposed an important addition to the fundamental equation to account for chemical reactions. Gibbs was able to do so by introducing a new quantity that he called the chemical potential:</p>
 <blockquote>
-
 <div class="definition">
 <p><span id="def:chemicalpot" class="definition"><strong>Definition 8.1  </strong></span>The <em>chemical potential</em> is the amount of energy absorbed or released due to a change of the particle number of a given chemical species.</p>
 </div>
@@ -376,8 +381,8 @@ dU = TdS-PdV+\sum_i\mu_i dn_i,
 <p>where <span class="math inline">\(dn_i\)</span> is the differential change in the number of moles of substance <span class="math inline">\(i\)</span>, and the summation extends over all chemical species in the system.</p>
 <p>According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, <span class="math inline">\(S\)</span>, volume, <span class="math inline">\(V\)</span>, and the numbers of moles <span class="math inline">\(\{n_i\}\)</span>.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> To emphasize the important connections given by the fundamental equation, we can use the notation <span class="math inline">\(U(S,V,\{n_i\})\)</span> and we can term <span class="math inline">\(S\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\{n_i\}\)</span> <strong>natural variables</strong> of the energy.</p>
 </div>
-<div id="thermpot" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Thermodynamic Potentials</h2>
+<div id="thermpot" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Thermodynamic Potentials<a href="Potentials.html#thermpot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a></p>
 <p>Taking the internal energy as defined in eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we can perform such procedure by subtracting products of the following conjugate variables pairs: <span class="math inline">\(T \text{ and } S\)</span> or <span class="math inline">\(-P \text{ and } V\)</span>. This procedure aims to define new state functions that depend on more convenient natural variables.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a> The new functions are called “thermodynamic potential energies,” or simply <strong>thermodynamic potentials</strong>.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> An example of this procedure is given by the definition of enthalpy that we have already seen in section <a href="FirstLaw.html#enthalpy">3.1.4</a>. If we take the internal energy and subtract the product of two conjugate variables (<span class="math inline">\(-P\)</span> and <span class="math inline">\(V\)</span>), we obtain a new state function called enthalpy, as we did in eq. <a href="FirstLaw.html#eq:enthalpydef">(3.9)</a>). Taking the differential of this definition, we obtain:</p>
 <p><span class="math display" id="eq:dhdef1">\[\begin{equation}
@@ -423,7 +428,13 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 \end{equation}\]</span></p>
 <p>The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.</p>
 <p>A summary of the four thermodynamic potentials is given in the following table.</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="28%" />
+<col width="12%" />
+<col width="34%" />
+<col width="24%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center"><strong>Name</strong></th>
@@ -468,8 +479,8 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 </ul>
 <p>Where non-mechanical work is defined as any type of work that is not expansion or compression (<span class="math inline">\(PV\)</span>–work). A typical example of non-mechanical work is electrical work.</p>
 </div>
-<div id="freeenergies" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Free Energies</h2>
+<div id="freeenergies" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Free Energies<a href="Potentials.html#freeenergies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, <span class="math inline">\(H(S,P,\{n_i\})\)</span>, <span class="math inline">\(A(T,V,\{n_i\})\)</span>, and <span class="math inline">\(G(T,P,\{n_i\})\)</span> all contain the same information that is in <span class="math inline">\(U(S,V,\{n_i\})\)</span>. However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term <span class="math inline">\(\sum_i\mu_i dn_i\)</span> that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant <span class="math inline">\(S\)</span> and constant <span class="math inline">\(V\)</span>:</p>
 <p><span class="math display" id="eq:duchem">\[\begin{equation}
 dU(S,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dS=dV=0.
@@ -506,7 +517,7 @@ TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
 \begin{aligned}
 \text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\
 \\
-(dA)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       (dG)_{T,P} &amp;= dH - TdS \\ 
+(dA)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       (dG)_{T,P} &amp;= dH - TdS \\
 \\
 dU = (dA)_{T,V} &amp;+TdS       &amp; &amp;   &amp;       dH = (dG)_{T,P} &amp;+TdS
 \end{aligned}
@@ -523,7 +534,6 @@ TdS -(dA)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -(dG)_{T,P
 \end{equation}\]</span></p>
 <p>These equations represent the conditions on <span class="math inline">\(dA\)</span> and <span class="math inline">\(dG\)</span> for inferring the spontaneity of a process, and can be summarized as follows:</p>
 <blockquote>
-
 <div class="definition">
 <p><span id="def:helmgibbsminimum" class="definition"><strong>Definition 8.2  </strong></span><span class="math inline">\(\;\)</span></p>
 <ul>
@@ -532,15 +542,15 @@ TdS -(dA)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -(dG)_{T,P
 </ul>
 </div>
 </blockquote>
-<div class="figure" style="text-align: center"><span id="fig:agfig"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agfig"></span>
 <img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right)." width="672" />
 <p class="caption">
 Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant <span class="math inline">\(T,V\)</span> (left) and Constant <span class="math inline">\(T,P\)</span> (right).
 </p>
 </div>
 </div>
-<div id="maxwell" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Maxwell Relations</h2>
+<div id="maxwell" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Maxwell Relations<a href="Potentials.html#maxwell" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s consider the fundamental equations for the thermodynamic potentials that we have derived in section <a href="Potentials.html#fundeq">8.1</a>:</p>
 <p><span class="math display" id="eq:dhagchem1">\[\begin{equation}
 \begin{aligned}
@@ -564,13 +574,13 @@ dG &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{
 <p>we can derive the following new definitions:</p>
 <p><span class="math display" id="eq:dhagchem3">\[\begin{equation}
 \begin{aligned}
- T &amp;= \left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}} = \left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}  \\
+T &amp;= \left(\frac{\partial U}{\partial S} \right)_{V,\{n_i\}} = \left(\frac{\partial H}{\partial S} \right)_{P,\{n_i\}}  \\
 -P &amp;= \left(\frac{\partial U}{\partial V} \right)_{S,\{n_i\}} = \left(\frac{\partial A}{\partial V} \right)_{T,\{n_i\}}  \\
- V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}  \\
+V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}  \\
 -S &amp;= \left(\frac{\partial A}{\partial T} \right)_{V,\{n_i\}} = \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}  \\
 \text{and:}
 \\
- \mu_i &amp;=  \left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}} =  \left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}} \\
+\mu_i &amp;=  \left(\frac{\partial U}{\partial n_i} \right)_{S,V,\{n_{j \neq i}\}} =  \left(\frac{\partial H}{\partial n_i} \right)_{S,P,\{n_{j \neq i}\}} \\
        &amp;= \left(\frac{\partial A}{\partial n_i} \right)_{T,V,\{n_{j \neq i}\}} = \left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}\;.
 \end{aligned}
 \tag{8.17}
@@ -587,17 +597,16 @@ dG &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{
 \end{equation}\]</span></p>
 <p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relations</strong>,<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
 <blockquote>
-
 <div class="exercise">
 <p><span id="exr:maxwellEx" class="exercise"><strong>Exercise 8.1  </strong></span>Derive the last Maxwell relation in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>.</p>
 <p><em>Solution:</em> We can start our derivation from the definition of <span class="math inline">\(V\)</span> and <span class="math inline">\(S\)</span> as a partial derivative of <span class="math inline">\(G\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
- V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}},
+V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}},
 \end{equation}\]</span></p>
 <p>and then take a second partial derivative of each quantity with respect to the second variable:</p>
 <p><span class="math display">\[\begin{equation}
 \begin{aligned}
- \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;=\frac{\partial}{\partial T}\left[ \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \right]_{P,\{n_i\}} \\
+\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;=\frac{\partial}{\partial T}\left[ \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \right]_{P,\{n_i\}} \\
 \\
 -\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}} &amp;=\frac{\partial}{\partial P}\left[ \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}} \right]_{T,\{n_i\}} \;.
 \end{aligned}
@@ -610,17 +619,17 @@ dG &amp;= \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{
 \\
 \text{hence:} \\
 \\
- \left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;= -\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}},
+\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}} &amp;= -\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}},
 \end{aligned}
 \end{equation}\]</span></p>
-which is the last of Maxwell relations, as defined in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>. This relation is particularly useful because it connects the quantity <span class="math inline">\(\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}\)</span>—which is impossible to measure in a lab—with the quantity <span class="math inline">\(\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}\)</span>—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
+<p>which is the last of Maxwell relations, as defined in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>. This relation is particularly useful because it connects the quantity <span class="math inline">\(\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}\)</span>—which is impossible to measure in a lab—with the quantity <span class="math inline">\(\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}\)</span>—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.</p>
 </div>
 </blockquote>
 </div>
-<div id="rev8" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Chapter Review</h2>
-<div id="quest8" class="section level3" number="8.5.1">
-<h3><span class="header-section-number">8.5.1</span> Study Questions</h3>
+<div id="rev8" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Chapter Review<a href="Potentials.html#rev8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest8" class="section level3 hasAnchor" number="8.5.1">
+<h3><span class="header-section-number">8.5.1</span> Study Questions<a href="Potentials.html#quest8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. Which of the following formulas is the fundamental equation of thermodynamics for closed systems?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(dU = Q_{REV} - PdV\)</span>.</li>
@@ -745,7 +754,6 @@ Click to reveal
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -764,6 +772,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -784,6 +793,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -797,7 +810,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -22,7 +22,7 @@ At the end of the 19^th^ century, Josiah Willard Gibbs (1839–1903) proposed an
 > ```{definition, chemicalpot}
 The *chemical potential* is the amount of energy absorbed or released due to a change of the particle number of a given chemical species. 
 
-```
+> ```
 
 The chemical potential of species $i$ is usually abbreviated as $\mu_i$, and it enters the fundamental equation of thermodynamics as:
 
@@ -193,7 +193,7 @@ $\;$
 - During a spontaneous process at constant *temperature* and *volume*, the *Helmholtz free energy* will decrease $(dA<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dA=0)$.
 - During a spontaneous process at constant *temperature* and *pressure*, the *Gibbs free energy* will decrease $(dG<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dG=0)$.
 
-```
+> ```
 
 ```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).'}
 x <- seq(0,1.25,0.01)
@@ -318,7 +318,7 @@ These two derivatives are mixed partial second derivatives of $G$ with respect t
 \end{equation}
 
 which is the last of Maxwell relations, as defined in eq. \@ref(eq:maxrelf). This relation is particularly useful because it connects the quantity $\left(\frac{\partial S}{\partial P} \right)_{T,\{n_i\}}$—which is impossible to measure in a lab—with the quantity $\left(\frac{\partial V}{\partial T} \right)_{P,\{n_i\}}$—which is easier to measure from an experiment that determines isobaric volumetric thermal expansion coefficients.
-```
+> ```
 
 ## Chapter Review {#rev8}
 

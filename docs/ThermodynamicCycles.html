@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Thermodynamic Cycles | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Thermodynamic Cycles | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Thermochemistry.html"/>
 <link rel="next" href="SecondLaw.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -346,10 +352,10 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ThermodynamicCycles" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Thermodynamic Cycles</h1>
+<div id="ThermodynamicCycles" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Thermodynamic Cycles<a href="ThermodynamicCycles.html#ThermodynamicCycles" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let’s consider once again the Joule experiment (Figure <a href="FirstLaw.html#fig:FigJexp">3.1</a>). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in Figure <a href="ThermodynamicCycles.html#fig:FigJexpC">5.1</a>, there are no restrictions imposed on this hypothetical cycle by the first law.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigJexpC"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigJexpC"></span>
 <img src="img/OEP_Figures.008.jpeg" alt="Closing the Cycle in The Joule Expansion Experiment." width="80%" />
 <p class="caption">
 Figure 5.1: Closing the Cycle in The Joule Expansion Experiment.
@@ -362,25 +368,23 @@ Figure 5.1: Closing the Cycle in The Joule Expansion Experiment.
 \end{equation}\]</span></p>
 <p>James Joule himself was indeed convinced that this must be the case and that we don’t observe the backward transformation in practice only because we cannot build ideal machines.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> Another scientist of that era was not convinced. William Thomson, the 1<sup>st</sup> Baron Kelvin (1824–1907), was unsure about this idea, and invested substantial resources to try to prove Joule’s wrong.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a></p>
 <p>A few years later, the controversy between Joule and Kelvin was redeemed in favor of the latter, thanks to the experiments of French military engineer Nicolas Léonard Sadi Carnot (1796–1832). The work of Carnot began in France several years before Joule and Kelvin’s time.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency.</p>
-<div id="carnotcyclesect" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Carnot Cycle</h2>
+<div id="carnotcyclesect" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Carnot Cycle<a href="ThermodynamicCycles.html#carnotcyclesect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The main contribution of Carnot to thermodynamics is his abstraction of the steam engine’s essential features into a more general and idealized heat engine. The definition of Carnot’s idealized cycle is as follows:</p>
 <blockquote>
-
 <div class="definition">
-<p><span id="def:carnotcycle" class="definition"><strong>Definition 5.1  </strong></span>
-A <em>Carnot cycle</em> is an idealized process composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an <em>ideal gas</em>. All transformations are assumed to be <em>reversible</em>, and no energy is lost to mechanical friction.</p>
+<p><span id="def:carnotcycle" class="definition"><strong>Definition 5.1  </strong></span>A <em>Carnot cycle</em> is an idealized process composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an <em>ideal gas</em>. All transformations are assumed to be <em>reversible</em>, and no energy is lost to mechanical friction.</p>
 </div>
 </blockquote>
 <p>A Carnot cycle connects two “heat reservoirs” at temperatures <span class="math inline">\(T_h\)</span> (hot) and <span class="math inline">\(T_l\)</span> (low), respectively. The reservoirs have a large thermal capacity so that their temperatures are unaffected by the cycle. The system is composed exclusively by the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformations of a Carnot cycle on a <span class="math inline">\(PV\)</span> diagram, we obtain the following plot:</p>
-<div class="figure" style="text-align: center"><span id="fig:FigCarnotPV"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigCarnotPV"></span>
 <img src="pchem1_files/figure-html/FigCarnotPV-1.png" alt="PV-Diagram of a Carnot Cycle." width="70%" />
 <p class="caption">
 Figure 5.2: PV-Diagram of a Carnot Cycle.
 </p>
 </div>
-<div id="CCstage1" class="section level3" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></h3>
+<div id="CCstage1" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span><a href="ThermodynamicCycles.html#CCstage1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="img/OEP_Figures.007a.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Starting the analysis of the cycle from point <span class="math inline">\(A\)</span> in Figure <a href="ThermodynamicCycles.html#fig:FigCarnotPV">5.2</a>,<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> the first transformation we encounter is an isothermal expansion at <span class="math inline">\(T_h\)</span>. Since the transformation is isothermal:</p>
 <p><span class="math display" id="eq:CCst1">\[\begin{equation}
@@ -390,15 +394,15 @@ Figure 5.2: PV-Diagram of a Carnot Cycle.
 <p>and heat and work can be calculated for this stage using eq. <a href="ZerothLaw.html#eq:WmaxV">(2.19)</a>:</p>
 <p><span class="math display" id="eq:CCst1b">\[\begin{equation}
 \begin{aligned}
- Q_1 &amp; = \left| Q_h \right|  = nRT_h \overbrace{\ln \frac{V_B}{V_A}}^{&gt;0 \text{ since } V_B&gt;V_A} &gt; 0, \\
- W_1 &amp; = -Q_1 = - nRT_h \ln \frac{V_B}{V_A} &lt; 0,
+Q_1 &amp; = \left| Q_h \right|  = nRT_h \overbrace{\ln \frac{V_B}{V_A}}^{&gt;0 \text{ since } V_B&gt;V_A} &gt; 0, \\
+W_1 &amp; = -Q_1 = - nRT_h \ln \frac{V_B}{V_A} &lt; 0,
 \end{aligned}
   \tag{5.3}
 \end{equation}\]</span></p>
 <p>where we denoted <span class="math inline">\(\left| Q_h \right|\)</span> the absolute value of the heat that gets <strong>into</strong> the system from the hot reservoir.</p>
 </div>
-<div id="CCstage2" class="section level3" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></h3>
+<div id="CCstage2" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span><a href="ThermodynamicCycles.html#CCstage2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="img/OEP_Figures.007b.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The second transformation is an adiabatic expansion between <span class="math inline">\(T_h\)</span> and <span class="math inline">\(T_l\)</span>. Since we are at adiabatic conditions:</p>
 <p><span class="math display" id="eq:CCst2">\[\begin{equation}
@@ -411,8 +415,8 @@ Q_2 = 0 \Rightarrow \Delta U_2 = W_2,
   \tag{5.5}
 \end{equation}\]</span></p>
 </div>
-<div id="CCstage3" class="section level3" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></h3>
+<div id="CCstage3" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span><a href="ThermodynamicCycles.html#CCstage3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="img/OEP_Figures.007c.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The third transformation is an isothermal compression at <span class="math inline">\(T_l\)</span>. The formulas are the same as those used for stage 1, but they will results in heat and work with reversed signs (since this is a compression):</p>
 <p><span class="math display" id="eq:CCst3">\[\begin{equation}
@@ -422,15 +426,15 @@ Q_2 = 0 \Rightarrow \Delta U_2 = W_2,
 <p>and:</p>
 <p><span class="math display" id="eq:CCst3b">\[\begin{equation}
 \begin{aligned}
- Q_3 &amp; = \left| Q_l \right|  = nRT_l \overbrace{\ln \frac{V_D}{V_C}}^{&lt;0 \text{ since } V_D&lt;V_C} &lt; 0 , \\
- W_3 &amp; = -Q_3 = - nRT_l \ln \frac{V_D}{V_C} &gt; 0,
+Q_3 &amp; = \left| Q_l \right|  = nRT_l \overbrace{\ln \frac{V_D}{V_C}}^{&lt;0 \text{ since } V_D&lt;V_C} &lt; 0 , \\
+W_3 &amp; = -Q_3 = - nRT_l \ln \frac{V_D}{V_C} &gt; 0,
 \end{aligned}
   \tag{5.7}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(\left| Q_l \right|\)</span> is the absolute value of the heat that gets <strong>out of</strong> the system to the cold reservoir (<span class="math inline">\(\left| Q_l \right|\)</span> being the heat entering the system).</p>
 </div>
-<div id="CCstage4" class="section level3" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></h3>
+<div id="CCstage4" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span><a href="ThermodynamicCycles.html#CCstage4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="img/OEP_Figures.007d.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The fourth and final transformation is an adiabatic comprssion that restores the system to point <span class="math inline">\(A\)</span>, bringing it from <span class="math inline">\(T_l\)</span> to <span class="math inline">\(T_h\)</span>. Similarly to stage 3:</p>
 <p><span class="math display" id="eq:CCst4">\[\begin{equation}
@@ -445,8 +449,8 @@ Q_4 = 0 \Rightarrow \Delta U_4 = W_4,
 <p>Notice how <span class="math inline">\(\Delta U_4 = - \Delta U_2\)</span> because <span class="math inline">\(\int_x^y=-\int_y^x\)</span>.</p>
 </div>
 </div>
-<div id="UWQCarnot" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Energy, Heat, and Work in the Carnot Cycle</h2>
+<div id="UWQCarnot" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Energy, Heat, and Work in the Carnot Cycle<a href="ThermodynamicCycles.html#UWQCarnot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Summarizing the results of the previous sections, the total amount of energy for a Carnot cycle is:</p>
 <p><span class="math display" id="eq:UtotCC">\[\begin{equation}
 \begin{aligned}
@@ -491,24 +495,23 @@ W_{\text{TOT}}=-(Q_1+Q_3),
   \tag{5.15}
 \end{equation}\]</span></p>
 <p>or, in other words, more heat is extracted from the hot reservoir than it is put into the cold one. The difference between the absolute value of these amounts of heat gives the total work of the cycle. This process is depicted in Figure <a href="ThermodynamicCycles.html#fig:FigCarnotEff">5.3</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:FigCarnotEff"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigCarnotEff"></span>
 <img src="img/OEP_Figures.009.jpeg" alt="Carnot Cycle Diagram." width="80%" />
 <p class="caption">
 Figure 5.3: Carnot Cycle Diagram.
 </p>
 </div>
 <blockquote>
-
 <div class="exercise">
-<p><span id="exr:CarnotEx" class="exercise"><strong>Exercise 5.1  </strong></span>Up to this point, we have discussed Carnot cycles working in the hot <span class="math inline">\(\rightarrow\)</span> cold direction (<span class="math inline">\(A\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(B\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(D\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(A\)</span>), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold <span class="math inline">\(rightarrow\)</span> hot direction (<span class="math inline">\(A\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(D\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(B\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(A\)</span>). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections <a href="ThermodynamicCycles.html#carnotcyclesect">5.1</a> and <a href="ThermodynamicCycles.html#UWQCarnot">5.2</a>.</p>
-<em>Solution:</em> When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of <span class="math inline">\(Q\)</span>, <span class="math inline">\(W\)</span>, and <span class="math inline">\(U\)</span> will be reversed. In this case, the total work would get <strong>into</strong> the systems, and heat would be transferred from the cold reservoir to the hot one. Figure <a href="ThermodynamicCycles.html#fig:FigCarnotEff">5.3</a> would be modified as:
+<p><span id="exr:CarnotEx" class="exercise"><strong>Exercise 5.1  </strong></span>Up to this point, we have discussed Carnot cycles working in the hot <span class="math inline">\(\rightarrow\)</span> cold direction (<span class="math inline">\(A\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(B\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(D\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(A\)</span>), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold <span class="math inline">\(\rightarrow\)</span> hot direction (<span class="math inline">\(A\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(D\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(B\)</span> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(A\)</span>). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections <a href="ThermodynamicCycles.html#carnotcyclesect">5.1</a> and <a href="ThermodynamicCycles.html#UWQCarnot">5.2</a>.</p>
+<p><em>Solution:</em> When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of <span class="math inline">\(Q\)</span>, <span class="math inline">\(W\)</span>, and <span class="math inline">\(U\)</span> will be reversed. In this case, the total work would get <strong>into</strong> the systems, and heat would be transferred from the cold reservoir to the hot one. Figure <a href="ThermodynamicCycles.html#fig:FigCarnotEff">5.3</a> would be modified as:</p>
 </div>
 <p><img src="img/OEP_Figures.010.jpeg" width="60%" style="display: block; margin: auto 0 auto auto;" />
 This reversed mode of operation is the basic principle behind refrigerators and air conditioning.</p>
 </blockquote>
 </div>
-<div id="efficiency-of-a-carnot-cycle" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Efficiency of a Carnot Cycle</h2>
+<div id="efficiency-of-a-carnot-cycle" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Efficiency of a Carnot Cycle<a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The efficiency (<span class="math inline">\(\varepsilon\)</span>) of a cycle is defined as the ratio between the absolute value of the work extracted from the cycle (<span class="math inline">\(\left| W_{\text{TOT}} \right|\)</span>) and the heat that gets into the system (<span class="math inline">\(\left| Q_h \right|\)</span>):</p>
 <p><span class="math display" id="eq:effCC1">\[\begin{equation}
 \varepsilon = \frac{\left| W_{\text{TOT}} \right|}{\left| Q_h \right|} =\frac{-W_{\text{TOT}}}{Q_1}
@@ -526,10 +529,10 @@ This reversed mode of operation is the basic principle behind refrigerators and 
 \end{equation}\]</span></p>
 <p>which proves that the efficiency of a Carnot cycle is strictly smaller than 1.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> In other words, no cycle can convert 100% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. <a href="ThermodynamicCycles.html#eq:effCC1">(5.16)</a> and <a href="ThermodynamicCycles.html#eq:effCC3">(5.18)</a> for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement “It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects.”<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> This statement conclusively disproved Joule’s original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.</p>
 </div>
-<div id="rev5" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Chapter Review</h2>
-<div id="exer5" class="section level3" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Practice Problems</h3>
+<div id="rev5" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Chapter Review<a href="ThermodynamicCycles.html#rev5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer5" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Practice Problems<a href="ThermodynamicCycles.html#exer5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Problem 1: Calculating Work in a Carnot Cycle</strong></p>
 <p>A Carnot cycle operates between temperatures of <span class="math inline">\(400 \,\text{K}\)</span> and <span class="math inline">\(300 ,\text{K}\)</span>. The volume of the gas expands from <span class="math inline">\(2.0\,\text{L}\)</span> to <span class="math inline">\(5.0\,\text{L}\)</span> during the isothermal expansion stage. If 2.0 moles of an ideal gas are used, calculate the total work done by the system.</p>
 <p><strong>Solution:</strong> The total work in a Carnot cycle is given by eq. <a href="ThermodynamicCycles.html#eq:WtotCC2">(5.12)</a>:</p>
@@ -589,8 +592,8 @@ This reversed mode of operation is the basic principle behind refrigerators and 
 <p><span class="math display">\[|Q_h| = \frac{1000\,\text{J}}{0.5} = 2000\,\text{J}\]</span></p>
 <p><strong>Answer:</strong> The heat absorbed from the hot reservoir in each cycle is <span class="math inline">\(2000 \,\text{J}\)</span>.</p>
 </div>
-<div id="quest5" class="section level3" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> Study Questions</h3>
+<div id="quest5" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Study Questions<a href="ThermodynamicCycles.html#quest5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. Which of the following is the basic principle behind refrigerators and air conditioning?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>A Carnot cycle operating in the normal direction.</li>
@@ -712,7 +715,6 @@ Click to reveal
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -731,6 +733,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -751,6 +754,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -764,7 +771,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

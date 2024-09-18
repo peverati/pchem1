@@ -5,21 +5,20 @@
 \documentclass[
   9pt,
 ]{extbook}
-\title{The Live Textbook of Physical Chemistry 1}
-\author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{04 September 2024}
-
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -38,14 +37,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={The Live Textbook of Physical Chemistry 1},
-  pdfauthor={Dr.~Roberto Peverati},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -114,6 +105,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={The Live Textbook of Physical Chemistry 1},
+  pdfauthor={Dr.~Roberto Peverati},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{The Live Textbook of Physical Chemistry 1}
+\author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
+\date{18 September 2024}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -127,6 +130,8 @@
 \newtheorem{example}{Example}[chapter]
 \theoremstyle{definition}
 \newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
@@ -153,8 +158,7 @@
 }
 \renewcommand{\arraystretch}{1.8}
 
-\hypertarget{preface}{%
-\chapter*{Preface}\label{preface}}
+\chapter*{Preface}\label{preface}
 \addcontentsline{toc}{chapter}{Preface}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{./img/OEP_Figures.000} \end{center}
@@ -178,8 +182,7 @@ Finally, I am not pretending to have been unaware of the emergence of AI, genera
 
 As usual, if you spot any mistakes, I encourage you to reach out to me at the contacts listed above.
 
-\hypertarget{how-to-use-this-book}{%
-\section*{How to use this book}\label{how-to-use-this-book}}
+\section*{How to use this book}\label{how-to-use-this-book}
 \addcontentsline{toc}{section}{How to use this book}
 
 Please read this book carefully, since everything that will be in your exams is explained here.
@@ -193,8 +196,7 @@ Navigating the book should be straightforward. On each page, there is a useful s
 
 For my students, each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week's chapter before the lecture on Friday.
 
-\hypertarget{a-note-on-units}{%
-\section*{A note on units}\label{a-note-on-units}}
+\section*{A note on units}\label{a-note-on-units}
 \addcontentsline{toc}{section}{A note on units}
 
 In general, we will use SI units or some of their multiple throughout the textbook, lectures, and exercises. For example, temperatures will be measured in Kelvin (\(K\)), energetic terms will be measured in either Joules (\(\text{J}\)) or kiloJoules (\(\text{kJ}\)), while volumes will be measured in cubic meters, or more often in liters (\(\text{L}\)), where \(1\,\text{L} = 10^{-3}\,\text{m}^3\). An important exception is made for pressures, which will be measured in bars (\(\text{bar}\)). This exception is not completely unjustified, since bar is still a (unconventional) multiple of the SI unit of pressure, pascal (\(\text{Pa}\)), where \(1\,\text{bar} = 10^5\,\text{Pa}\). This choice is made to retain a reasonable similarity with the unit atmosphere (\(\text{atm}\)) which is extensively used in several other chemistry textbooks \((1\,\text{atm} = 1.013\,\text{bar})\) and in previous physical chemistry courses.
@@ -209,27 +211,23 @@ This live open textbook is distributed under the \href{https://creativecommons.o
 \cleardoublepage
 \pagenumbering{arabic}
 
-\hypertarget{SystemVariables}{%
-\chapter{Introduction to Thermodynamics}\label{SystemVariables}}
+\chapter{Introduction to Thermodynamics}\label{SystemVariables}
 
-\hypertarget{calculus-for-physical-chemistry-slicing-and-gluing}{%
-\section{Calculus for Physical Chemistry: Slicing and Gluing}\label{calculus-for-physical-chemistry-slicing-and-gluing}}
+\section{Calculus for Physical Chemistry: Slicing and Gluing}\label{calculus-for-physical-chemistry-slicing-and-gluing}
 
 Calculus is a powerful mathematical tool that helps us understand and analyze change. At its core, calculus involves two main procedures: differentiation and integration. These concepts are fundamental to the study of thermodynamics, as they enable us to examine how physical systems change. Undergraduate students often find calculus intimidating due to its rigorous presentation in mathematical courses. However, a strong mathematical foundation, while beneficial, is not always mandatory to study thermodynamics effectively.
 
-If you are a student who lacks confidence in mathematics, I encourage you not to be deterred by the presence of calculus in this physical chemistry textbook. If you break this initial wall of fear for calculus, you might find this textbook quite rewarding. After all, we will finally explain where all those unmemorable formulas that you've been presented in introductory general chemistry courses are coming from. To facilitate your task, we will present in this chapter a simplified view of calculus. The starting point will be a basic question: how do we measure things in science? To answer this question, we will use calculus to measure the length of an object. At a first glance, this approach might seem pedantic. Why do we need to use calculus, with all of its mathematical complications, when we can just grab a ruler and stack it against our object to measure its length? However, we need to remind ourselves that our ultimate goal is physical chemistry, and calculus is the language of this field. By focusing on the straightforward task of measuring a simple length, we aim to make calculus more accessible and less daunting.\footnote{I apologize in advance to the mathematicians that will read this book and cringe at the several unexplained approximations I have made. I am fully aware of the dangers of not introducing these concepts rigorously, but some compromises have to be made\ldots{}}From this simple starting point, we will expand our horizon to introduce the central topic of this textbook: Thermodynamics. Our main focus will be in the relationship between chemistry and thermodynamics, but since this is an advanced undergraduate textbook, we will need to do that from a rigorous perspective. If we want to see it in simple terms, we either deal with the approach of not explaining where things are coming from that is abundantly used in freshman chemistry courses, or we make the effort of learning a bit of calculus so we can use it to understand the world.
+If you are a student who lacks confidence in mathematics, I encourage you not to be deterred by the presence of calculus in this physical chemistry textbook. If you break this initial wall of fear for calculus, you might find this textbook quite rewarding. After all, we will finally explain where all those unmemorable formulas that you've been presented in introductory general chemistry courses are coming from. To facilitate your task, we will present in this chapter a simplified view of calculus. The starting point will be a basic question: how do we measure things in science? To answer this question, we will use calculus to measure the length of an object. At a first glance, this approach might seem pedantic. Why do we need to use calculus, with all of its mathematical complications, when we can just grab a ruler and stack it against our object to measure its length? However, we need to remind ourselves that our ultimate goal is physical chemistry, and calculus is the language of this field. By focusing on the straightforward task of measuring a simple length, we aim to make calculus more accessible and less daunting.\footnote{I apologize in advance to the mathematicians that will read this book and cringe at the several unexplained approximations I have made. I am fully aware of the dangers of not introducing these concepts rigorously, but some compromises have to be made\ldots{}} From this simple starting point, we will expand our horizon to introduce the central topic of this textbook: Thermodynamics. Our main focus will be in the relationship between chemistry and thermodynamics, but since this is an advanced undergraduate textbook, we will need to do that from a rigorous perspective. If we want to see it in simple terms, we either deal with the approach of not explaining where things are coming from that is abundantly used in freshman chemistry courses, or we make the effort of learning a bit of calculus so we can use it to understand the world.
 
-\hypertarget{infslici}{%
-\subsection{Differentiation: Infinite Slicing}\label{infslici}}
+\subsection{Differentiation: Infinite Slicing}\label{infslici}
 
 Differentiation can be thought of as ``slicing an object into infinitely thin pieces'' to understand how it changes at a specific point. Imagine you have a long stick and you want to measure how its length changes along a specific direction. To do this, you would cut the stick into infinitely thin slices. Each slice is so thin that its change in length is practically infinitesimal. By examining each of these tiny slices and how they change, you can understand the rate at which the stick's length changes at any given point. This process of infinite slicing is called differentiation, and it is the most powerful tool to understand things that change, that is, most of the things we are interested in science.
 
 How so? Let's look at a simple example. If we start from a stick of length \(L\), we can infinitely slice it into infinitesimally small pieces of length \(dL\). These incredibly tiny pieces are called \textbf{differentials} of the original quantity, in this particular case, the length of our stick. The beauty of these differentials, \(dL\), is that they don't really depend on how long our object initially was, nor on which unit we plan on using to measure this length. The differentials will always have the same size, that is, they will always be \emph{infinitesimally small}. Imagine, for example, that you start with an object whose length is \(1\, \text{m}\). After you slice it an infinite amount of times, each differential will have exactly the same length of \(0.000[...]0001\, \text{m}\), where we have replaced an infinite amount of zeros with the notation \([...]\). Now imagine that you start with a second object whose length is \(1000\, \text{m} = 1\,\text{km}\). After you slice this second object an infinite amount of times, you will end up with differentials that have exactly the same length as the ones we obtained before, that is \(0.000[...]0001\, \text{m} = 0.000[...]0001\, \text{km}\). At this point, specifying the unit of a differential (\(\text{m}\) or \(\text{km}\) in the case of length) becomes useless. For this reason, we say that differentials are unitless.
 
-Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the same as \(0\), but they can be used much more effectively than something that purely doesn't exist.\footnote{Yes, we are purposely skipping a lot of stuff here, see the note above.} The key word here is \emph{essentially}, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they've lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are \emph{unitless}, but they are not \emph{dimensionless.} Additionally, the differentials will also contain information on the rate of change (the ``slope'') of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as \(\frac{dL}{dx}\). In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, \(x\), along an axis that is oriented the same way as our stick.\footnote{The axis doesn't have to have the same orientation of the stick, but it is easier if we do so, in the first place.} This special ratio is called the \emph{derivative}, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative \(\frac{dL}{dx}\) tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number \(\frac{dL}{dx}=1\), but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.
+Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the same as \(0\), but they can be used much more effectively than something that purely doesn't exist.\footnote{Yes, we are purposely skipping a lot of stuff here, see the note above.} The key word here is \emph{essentially}, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they've lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are \emph{unitless}, but they are not \emph{dimensionless}. Additionally, the differentials will also contain information on the rate of change (the ``slope'') of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as \(\frac{dL}{dx}\). In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, \(x\), along an axis that is oriented the same way as our stick.\footnote{The axis doesn't have to have the same orientation of the stick, but it is easier if we do so, in the first place.} This special ratio is called the \emph{derivative}, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative \(\frac{dL}{dx}\) tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number \(\frac{dL}{dx}=1\), but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.
 
-\hypertarget{integration-gluing-together-differentials}{%
-\subsection{Integration: Gluing Together Differentials}\label{integration-gluing-together-differentials}}
+\subsection{Integration: Gluing Together Differentials}\label{integration-gluing-together-differentials}
 
 Integration is the procedure that glues infinitely tiny slices back together to reconstruct the initial object. In simple terms, if you start with the infinitely thin slices of length that you cut earlier, you can add them all up to find the total length of the stick. Integration takes all these infinitesimally small pieces and combines them into a whole, helping you determine the accumulated total from the infinitesimal changes. Obviously this procedure is very complicated, and it involves gluing (summing over) an infinite amount of infinitesimally small things. If you can't wrap your head around this, that's OK, this concept puzzled humanity for thousands of years. The ancient Greeks were very concerned by this, but they failed to find a solution.\footnote{Look up \href{https://en.wikipedia.org/wiki/Zeno\%27s_paradoxes}{Zeno's paradoxes} for an interesting account of the situation at Greece's times.} It took two 17\textsuperscript{th} century geniuses, Isaac Newton and Gottfried Wilhelm Leibniz, to figure out how to do so.
 
@@ -249,12 +247,11 @@ L=\int dL = \int_{i}^{f} 1 dx = x_f-x_i =\Delta x,
 
 where the length (\(L\)) of the original object is reconstructed by fixing the initial piece at position \(x_i\) on the \(x\) axis, the final piece at position \(x_f\), and then by gluing together the differentials \(dx\) in between these points, using the integral procedure. Switching from \(dL\) to \(dx\) has the noticeable advantage of going from something that we initially don't know anything about (the length of the stick) to something that we can manipulate as much as we want, because we specifically built it for this task (the position along the axis, \(x\)). This concept, of course, is not limited to length. If we differentiate an area, or a volume, or a pressure, or a temperature using eq. \eqref{eq:integraldefgen}, we obtain the corresponding differentials. By comparing these differentials to specifically built ones that we are able to manipulate to our will, we can reconstruct the original quantity via integration, using eq. \eqref{eq:integraldef}. Every differential will not depend on a specific \emph{unit} of measure (for example, the differential of a temperature \(dT\) does not depend on whether we initially measure the temperature in degrees Celsius, or degrees Fahrenheit, or Kelvin), but it will retain the \emph{dimension} of the original quantity (\(dT\) still retains the dimension of a temperature, a.k.a. it \emph{is} a temperature, despite the fact that it has a value of essentially zero and it does not have any unit). In addition, every differential will retain \emph{hidden} information about the initial object, which we can reconstruct by comparing to something we know, and then by applying integration to the latter. Notice that it is the operation in eq. \eqref{eq:integraldef} that puts the units back into the picture, by comparing an unknown differential to a known one. This is effectively the ``measuring'' procedure, written in mathematical terms.
 
-When we wrote eq. \eqref{eq:integraldef}, we glanced over the fact that \(\int_{i}^{f} 1 dx = x_f-x_i\). Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you'll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.\footnote{Yes, this is to a degree analogue to the plug and chug approach of general chemistry that we are trying to avoid here. However, we'll let this one pass, otherwise we risk of presenting a mathematics textbook, rather than a physical chemistry one.} Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that \(\int_{i}^{f} dx = x_f-x_i\). Other common integration rules that we'll need in this course are, for example: \(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\) for \(n\neq 1\), and \(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|,\)
+When we wrote eq. \eqref{eq:integraldef}, we glanced over the fact that \(\int_{i}^{f} 1 dx = x_f-x_i\). Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you'll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.\footnote{Yes, this is to a degree analogue to the plug and chug approach of general chemistry that we are trying to avoid here. However, we'll let this one pass, otherwise we risk of presenting a mathematics textbook, rather than a physical chemistry one.} Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that \(\int_{i}^{f} dx = x_f-x_i\). Other common integration rules that we'll need in this course are, for example: \(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f  =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\) for \(n\neq 1\), and \(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|,\)
 
 This is indeed a good point to go fetch that old math textbook and refresh some of the simplest integration rules, as well as some of the simplest derivation ones. Not that we will use all of them, but we might indeed use a few ones.
 
-\hypertarget{calculus-for-thermodynamics}{%
-\subsection{Calculus for Thermodynamics}\label{calculus-for-thermodynamics}}
+\subsection{Calculus for Thermodynamics}\label{calculus-for-thermodynamics}
 
 Now comes the interesting question: How are we going to practically perform these two important operations of differentiation and integration in thermodynamics? Well, imagine we need to study the behavior of a machine that prints out a number on a display. The first thing we need to do if we want to study this machine is to find something that makes the number change. Let's represent this something with a knob. We can then turn the knob voluntarily one way or another, and register haw the number changes on the display. This is how you apply calculus in thermodynamics (and in most science, for that matters). Our machine might be the length of an object \(L\), while our knob might be the position along an axis \(x\). We can voluntarily change the position on the axis, and observe how the length changes on the display. Does that sound familiar? Can we use eq. \eqref{eq:integraldef} to do so? I believe so\ldots{}
 
@@ -271,8 +268,7 @@ where \(\mathcal{M}\) is our machine, \(d\mathcal{M}\) is its total differential
 
 The final piece of the puzzle we need to applying calculus to thermodynamics is to know whether or not we can apply these two procedures to any quantity that enters the picture. The answer to this question, unfortunately, is a resounding no. Differentiation and integration can be applied to many variables that are ``well-behaved.'' Such variables are called \textbf{state variables} in thermodynamics. Unfortunately though, there are also a few variables that are not well-behaved at all. These are called \textbf{path variables} in thermodynamics. It turns out that some of the quantities that thermodynamics is mostly concerned about, such as heat and work, belong to this ``ill-behaved'' category. Before we delve deeper into state and path variables, however, we need to define what variables are in thermodynamics. And before we can do that, we need to take a whole step back and define what thermodynamic is concerned about, that is the thermodynamic system.
 
-\hypertarget{thermodynamic-systems}{%
-\section{Thermodynamic Systems}\label{thermodynamic-systems}}
+\section{Thermodynamic Systems}\label{thermodynamic-systems}
 
 A thermodynamic system---or just simply a system---is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Typical examples of systems are reported in Figure \ref{fig:Fig1c1} below.\footnote{The photos depicted in this figure are taken from \href{https://en.wikipedia.org}{Wikipedia}: the Erlenmeyer flasks photo was taken by user Maytouch L., and distributed under CC-BY-SA license; the cloud photo was taken by user \href{https://commons.wikimedia.org/wiki/User:Matthew_T_Rader}{Mathew T Rader}, and distributed under CC-BY-SA license; the flame picture was taken by user \href{https://commons.wikimedia.org/wiki/User:Oscar}{Oscar}, and distributed under CC-BY-SA license; the balloon photo is in the public domain.}
 
@@ -291,15 +287,25 @@ A system can exchange exclusively mass, exclusively energy, or both mass and ene
 
 When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let's consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of --100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be --100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and --100 to the ingoing one, and the overall total would have stayed the same: +100--100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?
 
-\begin{longtable}[]{@{}lcc@{}}
-\toprule
-\textbf{Type of System} & \textbf{Mass} & \textbf{Energy} (either heat or work) \\
-\midrule
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3125}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1562}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5312}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Type of System}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Mass}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Energy} (either heat or work)
+\end{minipage} \\
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Open} & Y & Y \\
 \textbf{Closed} & N & Y \\
 \textbf{Isolated} & N & N \\
-\bottomrule
 \end{longtable}
 
 \begin{quote}
@@ -310,7 +316,9 @@ These simple examples demonstrate that the sign that we assign to quantities tha
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:chemistryconv}{}{\label{def:chemistryconv} }\emph{The chemistry convention of the sign is system-centric:}\footnote{Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be \emph{always} consistent, so if you decide that you want to use the physics convention, make sure to \emph{always} use the physics convention. In this course, on the other hand, we will \emph{always} use the chemistry one, as introduced above.}
+\protect\hypertarget{def:chemistryconv}{}\label{def:chemistryconv}\emph{The chemistry convention of the sign is system-centric:}\footnote{Notice that physicists use a different sign convention when it comes to thermodynamics. To eliminate confusion, I will not describe the physics convention here, but if you are reading thermodynamics on a physics textbook, or if you are browsing the web and stumble on thermodynamics formula (e.g., on Wikipedia), please be advised that some quantity, such as work, might have a different sign than the one that is used in this textbook. Obviously, the science will not change, but you need to be \emph{always} consistent, so if you decide that you want to use the physics convention, make sure to \emph{always} use the physics convention. In this course, on the other hand, we will \emph{always} use the chemistry one, as introduced above.}
+\end{definition}
+\end{quote}
 
 \begin{itemize}
 \tightlist
@@ -319,13 +327,10 @@ These simple examples demonstrate that the sign that we assign to quantities tha
 \item
   \emph{If something (energy or mass) goes \textbf{out of} the system it has a \textbf{negative} sign (the system is losing)}
 \end{itemize}
-\end{definition}
-\end{quote}
 
 If you want a trick to remember the convention, use the weight loss/gain during the exercise example above. You are the system, if you lose weight, the kilograms will be negative (--2 kg), while if you gain weight, they will be positive (+2 kg). Similarly, if you eat an energy bar, you are the system, and you will have increased your energy by +500 kcal (positive). In contrast, if you burned energy during exercise, you are the system, and you will have lost energy, hence --500 kcal (negative). If the system is a balloon filled with gas, and the balloon is losing mass, you are the balloon, and you are losing weight; hence the mass will be negative. If the balloon is absorbing heat (likely increasing its temperature and increasing its volume), you are the system, and you are gaining heat; hence heat will be positive.
 
-\hypertarget{thermodynamic-variables}{%
-\section{Thermodynamic Variables}\label{thermodynamic-variables}}
+\section{Thermodynamic Variables}\label{thermodynamic-variables}
 
 The system is defined and studied using parameters that are called variables. These variables are quantities that we can measure, such as pressure and temperature. However, don't be surprised if, on some occasions, you encounter variables that are a little harder to measure directly, such as entropy. If we know the values of all the ``relevant variables'' of a system, we know the state of the system. The relationships between all possible variables and the state of the system are called ``state functions''. Imagine state functions as the ``machines'' that we described in the previous section. The relevant variables are called natural variables, and you should imagine them as the ``knobs'' of the machines that we want to study. When we need to study a specific aspect of the system, then we need to know the total differential of the state function that is relevant for that aspect.
 
@@ -418,8 +423,7 @@ and
 
 While for the ideal gas law, all the variables are ``well-behaved'' and always satisfy Schwartz's theorem, we will encounter some variable for which Schwartz's theorem does not hold.
 
-\hypertarget{state-and-path-variables}{%
-\subsection{State and Path Variables}\label{state-and-path-variables}}
+\subsection{State and Path Variables}\label{state-and-path-variables}
 
 Mathematically, if the Schwartz's theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated. These ill-behaved variables are called \textbf{path variables} (or path functions) because they depend on the path, rather than the state of the system. In contrast to these ill-behaved variables, well-behaved variables that can be used to define the state of the system are called \textbf{state variables} (or state functions).
 
@@ -452,11 +456,9 @@ We will return to exact and inexact differential when we discuss heat and work, 
 \caption{State Functions vs. Path Functions.}\label{fig:Fig2c1}
 \end{figure}
 
-\hypertarget{rev1}{%
-\section{Chapter Review}\label{rev1}}
+\section{Chapter Review}\label{rev1}
 
-\hypertarget{quest1}{%
-\subsection{Study Questions}\label{quest1}}
+\subsection{Study Questions}\label{quest1}
 
 \textbf{1. What is the primary purpose of calculus in thermodynamics?}
 
@@ -650,11 +652,9 @@ We will return to exact and inexact differential when we discuss heat and work, 
 
 Answers: 1.b, 2.c, 3.d, 4.b, 5.c, 6.b, 7.b, 8.c, 9.b, 10.a
 
-\hypertarget{ZerothLaw}{%
-\chapter{Zeroth Law of Thermodynamics}\label{ZerothLaw}}
+\chapter{Zeroth Law of Thermodynamics}\label{ZerothLaw}
 
-\hypertarget{what-is-thermodynamics}{%
-\section{What is Thermodynamics?}\label{what-is-thermodynamics}}
+\section{What is Thermodynamics?}\label{what-is-thermodynamics}
 
 Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A formal definition of these forms of energy is as follows:
 
@@ -670,27 +670,24 @@ As we saw in chapter \ref{SystemVariables}, heat and work are not ``well-behaved
 
 Before we even discuss the definition of energy and how it relates to heat and work, it is crucial to introduce the essential concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition at the microscopic level.\footnote{In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.} However, for all our purposes, it is not essential to have a microscopic definition of temperature, as long as we have the guarantee that this quantity can be measured unambiguously. In other words, we only need a mathematical definition of temperature that agrees with the physical existence of thermometers.
 
-\hypertarget{the-zeroth-law-of-thermodynamics}{%
-\section{The Zeroth Law of Thermodynamics}\label{the-zeroth-law-of-thermodynamics}}
+\section{The Zeroth Law of Thermodynamics}\label{the-zeroth-law-of-thermodynamics}
 
 The mathematical definition that guarantees that thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:zerothlaw}{}{\label{def:zerothlaw} }\emph{Zeroth Law of Thermodynamics:} If \(T_A = T_B\), and \(T_B = T_C\), then \(T_A = T_C\).
+\protect\hypertarget{def:zerothlaw}{}\label{def:zerothlaw}\emph{Zeroth Law of Thermodynamics:} If \(T_A = T_B\), and \(T_B = T_C\), then \(T_A = T_C\).
 \end{definition}
 \end{quote}
 
 Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let's, for example, consider a pot of boiling water at \(P=1\;\mathrm{bar}\). Its temperature, \(T_{H_2O}\), is about 373 K. Let's now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature \(T_W = T_{H_2O}\). Similarly, the metal coin will also be in thermal equilibrium with the water, hence \(T_M = T_{H_2O}\). According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same \(T_W = T_M = 373\;\mathrm{K}\), even if they are not in direct contact with each other. Now here's the catch: since wood and metal transmit heat in different manners if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.
 
-\hypertarget{heatint}{%
-\section{Calculation of Heat}\label{heatint}}
+\section{Calculation of Heat}\label{heatint}
 
 Heat (\(Q\)) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because \emph{heat is a path function}.
 As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in \(\frac{\text{J}}{\text{mol K}}\). However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.
 
-\hypertarget{processes-at-constant-volume-isochoric}{%
-\subsection{Processes at constant volume (isochoric)}\label{processes-at-constant-volume-isochoric}}
+\subsection{Processes at constant volume (isochoric)}\label{processes-at-constant-volume-isochoric}
 
 The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recasting from general chemistry, the molar heat capacity at constant volume has the following formal definition:
 
@@ -719,8 +716,7 @@ which, assuming \(C_V\) independent of temperature, simply becomes:
   \label{eq:Cvint}
 \end{equation}
 
-\hypertarget{heatconstp}{%
-\subsection{Processes at constant pressure (isobaric)}\label{heatconstp}}
+\subsection{Processes at constant pressure (isobaric)}\label{heatconstp}
 
 Similarly to the previous case, the heat capacity at constant pressure measures the ability of a substance to absorb heat at constant pressure. Recasting again from general chemistry:
 
@@ -742,8 +738,7 @@ which result in the simple formula:
   \label{eq:Cpint}
 \end{equation}
 
-\hypertarget{workint}{%
-\section{Calculation of Work}\label{workint}}
+\section{Calculation of Work}\label{workint}
 
 In thermodynamics, work (\(W\)) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because \emph{work is a path function}. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.
 
@@ -810,8 +805,7 @@ where the integration is performed along the \emph{path}. Using eq. \eqref{eq:Wd
 where the integral on the left-hand side is taken along the path,\footnote{from here on we will replace the notation \(\int_{\text{path}}\) with the more convenient \(\int\) and we will keep in mind that the integral of an inexact differential must be taken along the path.} while the integral on the right-hand side can be taken between the initial and final states, since \(dV\) is a state function.
 How do we solve the integral in eq. \eqref{eq:Wint}? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.
 
-\hypertarget{w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal}{%
-\subsection{\texorpdfstring{\(| W_{\text{max}} |\) and \(| W_{\text{min}} |\) in processes at constant temperature (isothermal)}{\textbar{} W\_\{\textbackslash text\{max\}\} \textbar{} and \textbar{} W\_\{\textbackslash text\{min\}\} \textbar{} in processes at constant temperature (isothermal)}}\label{w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal}}
+\subsection{\texorpdfstring{\(| W_{\text{max}} |\) and \(| W_{\text{min}} |\) in processes at constant temperature (isothermal)}{\textbar{} W\_\{\textbackslash text\{max\}\} \textbar{} and \textbar{} W\_\{\textbackslash text\{min\}\} \textbar{} in processes at constant temperature (isothermal)}}\label{w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal}
 
 At constant temperature, the piston in Figure \ref{fig:Fig2c3} moves along the following PV diagram (this curve is obtained from an ideal gas at constant \(T=298\) K):
 
@@ -882,11 +876,9 @@ This example demonstrates why work is a path function. If we perform a fast 1-st
 
 The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.\footnote{In contrast to a lower bound for expansion processes.} \(\left| W_{\text{min}} \right|\) for compressions is calculated as the area underneath the \(PV\) curve, exactly as \(\left| W_{\text{max}} \right|\) for expansions in eq. \eqref{eq:WintsolvedV2}.
 
-\hypertarget{rev2}{%
-\section{Chapter Review}\label{rev2}}
+\section{Chapter Review}\label{rev2}
 
-\hypertarget{exer2}{%
-\subsection{Practice Problems}\label{exer2}}
+\subsection{Practice Problems}\label{exer2}
 
 \textbf{Problem 1: Calculation of Heat in an Isochoric Process}
 
@@ -998,8 +990,7 @@ hence, using the correct amount of significant digits, we get the final answer.
 
 \textbf{Answer:} The amount of work released by the gas is \(-4.6 \cdot 10^{-1}\,\text{kJ}\).
 
-\hypertarget{quest2}{%
-\subsection{Study Questions}\label{quest2}}
+\subsection{Study Questions}\label{quest2}
 
 \textbf{1. What is the primary focus of thermodynamics?}
 
@@ -1193,17 +1184,15 @@ hence, using the correct amount of significant digits, we get the final answer.
 
 Answers: 1.b, 2.d, 3.b, 4.c, 5.c, 6.a, 7.e, 8.c, 9.a, 10.b
 
-\hypertarget{FirstLaw}{%
-\chapter{First Law of Thermodynamics}\label{FirstLaw}}
+\chapter{First Law of Thermodynamics}\label{FirstLaw}
 
-\hypertarget{energyint}{%
-\section{Calculation of Internal Energy Changes}\label{energyint}}
+\section{Calculation of Internal Energy Changes}\label{energyint}
 
 Energy is a property of a system that can be either transferred or converted. The internal energy (\(U\)) of a system is a thermodynamic state function defined as:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:energy}{}{\label{def:energy} }\emph{Internal Energy:} The energy contained within the system, excluding kinetic energy and potential energy of motion and position of the system as a whole.
+\protect\hypertarget{def:energy}{}\label{def:energy}\emph{Internal Energy:} The energy contained within the system, excluding kinetic energy and potential energy of motion and position of the system as a whole.
 \end{definition}
 \end{quote}
 
@@ -1227,8 +1216,7 @@ which, using eq. \eqref{eq:Wdef} becomes:
   \label{eq:dUpdv}
 \end{equation}
 
-\hypertarget{isothermalE}{%
-\subsection{Internal energy in isothermal processes}\label{isothermalE}}
+\subsection{Internal energy in isothermal processes}\label{isothermalE}
 
 To study the behavior of the internal energy in a process at constant temperature (\(dT=0\)), James Prescott Joule (1818--1889) created the apparatus depicted in Figure \ref{fig:FigJexp}.
 
@@ -1261,8 +1249,7 @@ Notice that Joule's conclusion is valid only for an ideal gas. If we expand a re
 
 From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature.
 
-\hypertarget{internal-energy-in-adiabatic-processes}{%
-\subsection{Internal energy in adiabatic processes}\label{internal-energy-in-adiabatic-processes}}
+\subsection{Internal energy in adiabatic processes}\label{internal-energy-in-adiabatic-processes}
 
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, \(đ Q=0\), and the work associated with an adiabatic process becomes a state function:
 
@@ -1273,8 +1260,7 @@ An adiabatic process is defined as a process that happens without the exchange o
 
 which can then be calculated using the formulas that we derived in section \ref{workint}. Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
-\hypertarget{internal-energy-in-isochoric-processes}{%
-\subsection{Internal energy in isochoric processes}\label{internal-energy-in-isochoric-processes}}
+\subsection{Internal energy in isochoric processes}\label{internal-energy-in-isochoric-processes}
 
 An isochoric process is a process in which the volume does not change. Therefore, \(đ W=0\), and \(dU = đ Q_V\), which using eq. \eqref{eq:Cvdef}, becomes:
 
@@ -1294,12 +1280,11 @@ where we have replaced the total derivative \(d\) with a partial one \(\partial\
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:newdefcv}{}{\label{def:newdefcv} }\emph{The heat capacity of a substance, \(C_V\), represents its ability to absorb \textbf{energy} at constant \textbf{volume}.}
+\protect\hypertarget{def:newdefcv}{}\label{def:newdefcv}\emph{The heat capacity of a substance, \(C_V\), represents its ability to absorb \textbf{energy} at constant \textbf{volume}.}
 \end{definition}
 \end{quote}
 
-\hypertarget{enthalpy}{%
-\subsection{Internal energy in isobaric processes}\label{enthalpy}}
+\subsection{Internal energy in isobaric processes}\label{enthalpy}
 
 In an isobaric process, the pressure does not change, hence \(dP=0\). Unfortunately, eq. \eqref{eq:dU} for this case does not simplify further, as happened in the two previous cases. However, in section \ref{heatconstp}, we have introduced the useful concept of heat capacity at constant \(P\). \(C_P\) was used in an adiabatic process in the same manner as \(C_V\) was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. Eq. \eqref{eq:cvstatefunc} gave a mathematical definition of \(C_V\) as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain \(C_P\)? In order to do so, we can introduce a new state function, called the enthalpy (\(H\)), as:
 
@@ -1347,12 +1332,11 @@ Eq. \eqref{eq:cpstatefunc} brings also a rigorous definition of heat capacity at
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:newdefcp}{}{\label{def:newdefcp} }\emph{The heat capacity of a substance, \(C_P\), represents its ability to absorb \textbf{enthalpy} at constant \textbf{pressure}.}
+\protect\hypertarget{def:newdefcp}{}\label{def:newdefcp}\emph{The heat capacity of a substance, \(C_P\), represents its ability to absorb \textbf{enthalpy} at constant \textbf{pressure}.}
 \end{definition}
 \end{quote}
 
-\hypertarget{the-first-law-of-thermodynamics}{%
-\section{The First Law of Thermodynamics}\label{the-first-law-of-thermodynamics}}
+\section{The First Law of Thermodynamics}\label{the-first-law-of-thermodynamics}
 
 We finally come to a working definition of the first law. If we take an isolated system---i.e., a system that does not exchange heat nor mass with its surroundings---its internal energy is conserved. If the internal energy is conserved, \(dU=0\). Therefore, for an isolated system:
 
@@ -1367,12 +1351,11 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:firstlaw}{}{\label{def:firstlaw} }\emph{First Law of Thermodynamics:} The energy of the universe is conserved.
+\protect\hypertarget{def:firstlaw}{}\label{def:firstlaw}\emph{First Law of Thermodynamics:} The energy of the universe is conserved.
 \end{definition}
 \end{quote}
 
-\hypertarget{reversible-and-irreversible-processes}{%
-\section{Reversible and Irreversible processes}\label{reversible-and-irreversible-processes}}
+\section{Reversible and Irreversible processes}\label{reversible-and-irreversible-processes}
 
 Let's now consider the cycle in Figure \ref{fig:FigRevCyc}. The process in this case starts from state 1 (system at \(P_1V_1\)), expands to state 2 (system at \(P_2V_2\)), and compresses back to state 1 (system back to \(P_1V_1\)).
 
@@ -1451,17 +1434,15 @@ This process can happen both ways without losses, and is called \emph{reversible
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:reversible}{}{\label{def:reversible} }\emph{Reversible process:} a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.\footnote{Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)}
+\protect\hypertarget{def:reversible}{}\label{def:reversible}\emph{Reversible process:} a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.\footnote{Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)}
 \end{definition}
 \end{quote}
 
 Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
 
-\hypertarget{rev3}{%
-\section{Chapter Review}\label{rev3}}
+\section{Chapter Review}\label{rev3}
 
-\hypertarget{exer3}{%
-\subsection{Practice Problems}\label{exer3}}
+\subsection{Practice Problems}\label{exer3}
 
 \textbf{Problem 1: Work Done in Isothermal Expansion}
 
@@ -1619,8 +1600,7 @@ As usual, the final answer requires just an adjustment for the significant digit
 
 \textbf{Answer:} The enthalpy change, \(\Delta H\), is \(23.2 \, \text{kJ}\).
 
-\hypertarget{quest3}{%
-\subsection{Study Questions}\label{quest3}}
+\subsection{Study Questions}\label{quest3}
 
 \textbf{1. What is the First Law of Thermodynamics?}
 
@@ -1816,11 +1796,9 @@ Answers: 1.d, 2.c, 3.c, 4.b, 5.b, 6.c, 7.c, 8.d, 9.c, 10.a
 
 \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{Thermochemistry}{%
-\chapter{Thermochemistry}\label{Thermochemistry}}
+\chapter{Thermochemistry}\label{Thermochemistry}
 
-\hypertarget{rxnenthalpy}{%
-\section{Reaction Enthalpies}\label{rxnenthalpy}}
+\section{Reaction Enthalpies}\label{rxnenthalpy}
 
 In chapter \ref{FirstLaw}, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new one form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.
 
@@ -1846,7 +1824,9 @@ Using the chemistry sign convention, Definition \ref{def:chemistryconv}, reactio
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:exoendo}{}{\label{def:exoendo} }\(\;\)
+\protect\hypertarget{def:exoendo}{}\label{def:exoendo}
+
+\(\;\)
 
 \begin{itemize}
 \tightlist
@@ -1855,6 +1835,7 @@ Using the chemistry sign convention, Definition \ref{def:chemistryconv}, reactio
 \item
   \(\Delta_{\text{rxn}} H < 0 \Rightarrow\) \emph{Exothermic reaction} (heat is lost by the system).
 \end{itemize}
+
 \end{definition}
 \end{quote}
 
@@ -1880,7 +1861,9 @@ where \(\nu_i\) is the stoichiometric coefficient of species \(i\) with its own 
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:nui}{}{\label{def:nui} }\emph{Signs of the stoichiometric coefficients:}
+\protect\hypertarget{def:nui}{}\label{def:nui}
+
+\emph{Signs of the stoichiometric coefficients:}
 
 \begin{itemize}
 \tightlist
@@ -1889,18 +1872,17 @@ where \(\nu_i\) is the stoichiometric coefficient of species \(i\) with its own 
 \item
   \(\nu_i\) is \textbf{negative} if \(i\) is a \textbf{reactant}.
 \end{itemize}
+
 \end{definition}
 \end{quote}
 
-\hypertarget{formenthalpy}{%
-\section{Standard Enthalpies of Formation}\label{formenthalpy}}
+\section{Standard Enthalpies of Formation}\label{formenthalpy}
 
 In principle, we could use eq. \eqref{eq:DHrxn3} to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies \(H_i\) of reactants and products would be required. Unfortunately, absolute enthalpies are not known---and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist.\footnote{An example of a known absolute zero for a scale is the zero of the temperature scale, a temperature that can be approached only as a limit from above. No such thing exists for the enthalpy.} To prevent this problem, enthalpies relative to a deﬁned reference state must be used. This reference state is defined at the constituent elements in their standard state, and the enthalpies of 1 mol of substance in this reference state are called \textbf{standard enthalpies of formation}.
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:stdenthapies}{}{\label{def:stdenthapies} }
-The \emph{standard enthalpy of formation} of compound \(i\), \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\), is the change of enthalpy during the formation of 1 mol of \(i\) from its constituent elements, with all substances in their standard states.
+\protect\hypertarget{def:stdenthapies}{}\label{def:stdenthapies}The \emph{standard enthalpy of formation} of compound \(i\), \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\), is the change of enthalpy during the formation of 1 mol of \(i\) from its constituent elements, with all substances in their standard states.
 \end{definition}
 \end{quote}
 
@@ -1919,8 +1901,7 @@ For example, the standard enthalpies of formation of some common compounds at \(
 
 A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in appendix \ref{appendix}.
 
-\hypertarget{hessslaw}{%
-\section{Hess's Law}\label{hessslaw}}
+\section{Hess's Law}\label{hessslaw}
 
 The calculation of a standard reaction enthalpy can be performed using the following cycle:
 
@@ -1951,7 +1932,7 @@ which is a mathematical expression of the law that is known as \textbf{Hess's La
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:HessLawEx}{}{\label{exr:HessLawEx} }Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. \eqref{eq:someDfH}.
+\protect\hypertarget{exr:HessLawEx}{}\label{exr:HessLawEx}Calculate the standard enthalpy of formation at 298 K for the combustion of 1 mol of methane, using the data in eq. \eqref{eq:someDfH}.
 
 \emph{Solution:} The reaction that is under consideration is:
 \begin{equation}
@@ -1980,7 +1961,7 @@ where the negative sign indicates that the reaction is exothermic (see \ref{def:
 \end{aligned}
 \end{equation}
 
-Notice that at standard pressure and \(T = 298 \; \mathrm{K}\) water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and \(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} = -242 \  \mathrm{kJ/mol}\). The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:
+Notice that at standard pressure and \(T = 298 \; \mathrm{K}\) water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporize the water. Substances in different states of matter have different formation enthalpies, and \(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{H}_{2}O_{(l)}} =  -242 \  \mathrm{kJ/mol}\). The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:
 
 \begin{equation}
 \begin{aligned}
@@ -1993,8 +1974,7 @@ which is the latent heat of vaporization for water, \(\Delta_{\text{vap}} H^{-\k
 \end{exercise}
 \end{quote}
 
-\hypertarget{calculations-of-enthalpies-of-reaction-at-t-neq-298-textk}{%
-\section{\texorpdfstring{Calculations of Enthalpies of Reaction at \(T \neq 298 \; \text{K}\)}{Calculations of Enthalpies of Reaction at T \textbackslash neq 298 \textbackslash; \textbackslash text\{K\}}}\label{calculations-of-enthalpies-of-reaction-at-t-neq-298-textk}}
+\section{\texorpdfstring{Calculations of Enthalpies of Reaction at \(T \neq 298 \; \text{K}\)}{Calculations of Enthalpies of Reaction at T \textbackslash neq 298 \textbackslash; \textbackslash text\{K\}}}\label{calculations-of-enthalpies-of-reaction-at-t-neq-298-textk}
 
 Standard enthalpies of formation are usually reported at room temperature (\(T\) = 298 K), but enthalpies of formation at any temperature \(T'\) can be calculated from the values at 298 K using eqs. \eqref{eq:Cpdef} and \eqref{eq:dh2}:
 
@@ -2018,7 +1998,7 @@ with \(\Delta C_P = \sum_i \nu_i C_{P,i}\).
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:DHtdiff298}{}{\label{exr:DHtdiff298} }Calculate \(\Delta_{\text{rxn}}H\) of the following reaction at 398 K, knowing that \(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\) at 298 K is -283.0 kJ/mol, and the following \(C_P\) values: \(\mathrm{CO}_{(g)}\) = 29 J/(mol K), \(\mathrm{O}_{2(g)}\) = 30 J/(mol K), \(\mathrm{CO}_{2(g)}\) = 38 J/(mol K):
+\protect\hypertarget{exr:DHtdiff298}{}\label{exr:DHtdiff298}Calculate \(\Delta_{\text{rxn}}H\) of the following reaction at 398 K, knowing that \(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\) at 298 K is -283.0 kJ/mol, and the following \(C_P\) values: \(\mathrm{CO}_{(g)}\) = 29 J/(mol K), \(\mathrm{O}_{2(g)}\) = 30 J/(mol K), \(\mathrm{CO}_{2(g)}\) = 38 J/(mol K):
 
 \[
 \mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
@@ -2042,11 +2022,9 @@ As we notice from this result, a difference in temperature of 100 K translates i
 \end{exercise}
 \end{quote}
 
-\hypertarget{rev4}{%
-\section{Chapter Review}\label{rev4}}
+\section{Chapter Review}\label{rev4}
 
-\hypertarget{exer4}{%
-\subsection{Practice Problems}\label{exer4}}
+\subsection{Practice Problems}\label{exer4}
 
 \textbf{Problem 1:} Calculating \(\Delta H\) of a Reaction from Standard Enthalpies of Formation
 
@@ -2087,8 +2065,7 @@ However, we now have to pay attention to the question to provide the right answe
 
 \textbf{Answer:} \(\Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{-197.8 \, \text{kJ/mol}}{2\,\text{mol}} = -98.9 \, \text{kJ}\)
 
-\hypertarget{quest4}{%
-\subsection{Study Questions}\label{quest4}}
+\subsection{Study Questions}\label{quest4}
 
 \textbf{1. What is the standard enthalpy of formation of a compound?}
 
@@ -2282,8 +2259,7 @@ However, we now have to pay attention to the question to provide the right answe
 
 Answers: 1.a, 2.b, 3.c, 4.a, 5.a, 6.b, 7.c, 8.c, 9.e, 10.a
 
-\hypertarget{ThermodynamicCycles}{%
-\chapter{Thermodynamic Cycles}\label{ThermodynamicCycles}}
+\chapter{Thermodynamic Cycles}\label{ThermodynamicCycles}
 
 The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let's consider once again the Joule experiment (Figure \ref{fig:FigJexp}). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in Figure \ref{fig:FigJexpC}, there are no restrictions imposed on this hypothetical cycle by the first law.
 
@@ -2307,15 +2283,13 @@ James Joule himself was indeed convinced that this must be the case and that we 
 
 A few years later, the controversy between Joule and Kelvin was redeemed in favor of the latter, thanks to the experiments of French military engineer Nicolas Léonard Sadi Carnot (1796--1832). The work of Carnot began in France several years before Joule and Kelvin's time.\footnote{Carnot's lone book, the \href{https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire}{\emph{Réflexions sur la Puissance Motrice du Feu} (``Reflections on the Motive Power of Fire'')} was published in France in 1824, the same year Kelvin was born and just 6 years after Joule's birth.} At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency.
 
-\hypertarget{carnotcyclesect}{%
-\section{Carnot Cycle}\label{carnotcyclesect}}
+\section{Carnot Cycle}\label{carnotcyclesect}
 
 The main contribution of Carnot to thermodynamics is his abstraction of the steam engine's essential features into a more general and idealized heat engine. The definition of Carnot's idealized cycle is as follows:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:carnotcycle}{}{\label{def:carnotcycle} }
-A \emph{Carnot cycle} is an idealized process composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an \emph{ideal gas}. All transformations are assumed to be \emph{reversible}, and no energy is lost to mechanical friction.
+\protect\hypertarget{def:carnotcycle}{}\label{def:carnotcycle}A \emph{Carnot cycle} is an idealized process composed of two isothermal and two adiabatic transformations. Each transformation is either an expansion or a compression of an \emph{ideal gas}. All transformations are assumed to be \emph{reversible}, and no energy is lost to mechanical friction.
 \end{definition}
 \end{quote}
 
@@ -2330,8 +2304,7 @@ A Carnot cycle connects two ``heat reservoirs'' at temperatures \(T_h\) (hot) an
 \caption{PV-Diagram of a Carnot Cycle.}\label{fig:FigCarnotPV}
 \end{figure}
 
-\hypertarget{CCstage1}{%
-\subsection{\texorpdfstring{Stage 1: isothermal expansion \(A \rightarrow B\)}{Stage 1: isothermal expansion A \textbackslash rightarrow B}}\label{CCstage1}}
+\subsection{\texorpdfstring{Stage 1: isothermal expansion \(A \rightarrow B\)}{Stage 1: isothermal expansion A \textbackslash rightarrow B}}\label{CCstage1}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007a} \end{center}
 
@@ -2354,8 +2327,7 @@ and heat and work can be calculated for this stage using eq. \eqref{eq:WmaxV}:
 
 where we denoted \(\left| Q_h \right|\) the absolute value of the heat that gets \textbf{into} the system from the hot reservoir.
 
-\hypertarget{CCstage2}{%
-\subsection{\texorpdfstring{Stage 2: adiabatic expansion \(B \rightarrow C\)}{Stage 2: adiabatic expansion B \textbackslash rightarrow C}}\label{CCstage2}}
+\subsection{\texorpdfstring{Stage 2: adiabatic expansion \(B \rightarrow C\)}{Stage 2: adiabatic expansion B \textbackslash rightarrow C}}\label{CCstage2}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007b} \end{center}
 
@@ -2373,8 +2345,7 @@ and the negative energy (expansion work) can be calculated using:
   \label{eq:CCst2b}
 \end{equation}
 
-\hypertarget{CCstage3}{%
-\subsection{\texorpdfstring{Stage 3: isothermal compression \(C \rightarrow D\)}{Stage 3: isothermal compression C \textbackslash rightarrow D}}\label{CCstage3}}
+\subsection{\texorpdfstring{Stage 3: isothermal compression \(C \rightarrow D\)}{Stage 3: isothermal compression C \textbackslash rightarrow D}}\label{CCstage3}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007c} \end{center}
 
@@ -2397,8 +2368,7 @@ and:
 
 where \(\left| Q_l \right|\) is the absolute value of the heat that gets \textbf{out of} the system to the cold reservoir (\(\left| Q_l \right|\) being the heat entering the system).
 
-\hypertarget{CCstage4}{%
-\subsection{\texorpdfstring{Stage 4: adiabatic compression \(D \rightarrow A\)}{Stage 4: adiabatic compression D \textbackslash rightarrow A}}\label{CCstage4}}
+\subsection{\texorpdfstring{Stage 4: adiabatic compression \(D \rightarrow A\)}{Stage 4: adiabatic compression D \textbackslash rightarrow A}}\label{CCstage4}
 
 \begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007d} \end{center}
 
@@ -2418,8 +2388,7 @@ Since we are at adiabatic conditions. The energy associated with this process is
 
 Notice how \(\Delta U_4 = - \Delta U_2\) because \(\int_x^y=-\int_y^x\).
 
-\hypertarget{UWQCarnot}{%
-\section{Energy, Heat, and Work in the Carnot Cycle}\label{UWQCarnot}}
+\section{Energy, Heat, and Work in the Carnot Cycle}\label{UWQCarnot}
 
 Summarizing the results of the previous sections, the total amount of energy for a Carnot cycle is:
 
@@ -2489,18 +2458,17 @@ or, in other words, more heat is extracted from the hot reservoir than it is put
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:CarnotEx}{}{\label{exr:CarnotEx} }Up to this point, we have discussed Carnot cycles working in the hot \(\rightarrow\) cold direction (\(A\) \(\rightarrow\) \(B\) \(\rightarrow\) \(C\) \(\rightarrow\) \(D\) \(\rightarrow\) \(A\)), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also---in principle---work in the reversed cold \(rightarrow\) hot direction (\(A\) \(\rightarrow\) \(D\) \(\rightarrow\) \(C\) \(\rightarrow\) \(B\) \(\rightarrow\) \(A\)). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections \ref{carnotcyclesect} and \ref{UWQCarnot}.
+\protect\hypertarget{exr:CarnotEx}{}\label{exr:CarnotEx}Up to this point, we have discussed Carnot cycles working in the hot \(\rightarrow\) cold direction (\(A\) \(\rightarrow\) \(B\) \(\rightarrow\) \(C\) \(\rightarrow\) \(D\) \(\rightarrow\) \(A\)), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also---in principle---work in the reversed cold \(\rightarrow\) hot direction (\(A\) \(\rightarrow\) \(D\) \(\rightarrow\) \(C\) \(\rightarrow\) \(B\) \(\rightarrow\) \(A\)). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections \ref{carnotcyclesect} and \ref{UWQCarnot}.
 
 \emph{Solution:} When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of \(Q\), \(W\), and \(U\) will be reversed. In this case, the total work would get \textbf{into} the systems, and heat would be transferred from the cold reservoir to the hot one. Figure \ref{fig:FigCarnotEff} would be modified as:
 \end{exercise}
-\end{quote}
 
 \begin{flushright}\includegraphics[width=0.6\linewidth]{./img/OEP_Figures.010} \end{flushright}
 
 This reversed mode of operation is the basic principle behind refrigerators and air conditioning.
+\end{quote}
 
-\hypertarget{efficiency-of-a-carnot-cycle}{%
-\section{Efficiency of a Carnot Cycle}\label{efficiency-of-a-carnot-cycle}}
+\section{Efficiency of a Carnot Cycle}\label{efficiency-of-a-carnot-cycle}
 
 The efficiency (\(\varepsilon\)) of a cycle is defined as the ratio between the absolute value of the work extracted from the cycle (\(\left| W_{\text{TOT}} \right|\)) and the heat that gets into the system (\(\left| Q_h \right|\)):
 
@@ -2525,11 +2493,9 @@ If we go back to eq. \eqref{eq:effCC1} and we replace eq. \eqref{eq:WtotCC2} for
 
 which proves that the efficiency of a Carnot cycle is strictly smaller than 1.\footnote{Eq. \eqref{eq:effCC3} can be equal to 1 only if \(T_l=0 \; \text{K}\) or \(T_h=\infty\), two conditions that are both equally impossible.} In other words, no cycle can convert 100\% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use eqs. \eqref{eq:effCC1} and \eqref{eq:effCC3} for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning back to Lord Kelvin. In 1851 he used this finding to state his statement ``It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects.''\footnote{Thomson W. \href{https://www.biodiversitylibrary.org/item/126047\#page/295/mode/1up}{Transactions of the Royal Society of Edinburgh. 1851 XX 261--268, 289--298.}.} This statement conclusively disproved Joule's original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.
 
-\hypertarget{rev5}{%
-\section{Chapter Review}\label{rev5}}
+\section{Chapter Review}\label{rev5}
 
-\hypertarget{exer5}{%
-\subsection{Practice Problems}\label{exer5}}
+\subsection{Practice Problems}\label{exer5}
 
 \textbf{Problem 1: Calculating Work in a Carnot Cycle}
 
@@ -2646,8 +2612,7 @@ Then, we can use this to find \(|Q_h|\):
 
 \textbf{Answer:} The heat absorbed from the hot reservoir in each cycle is \(2000 \,\text{J}\).
 
-\hypertarget{quest5}{%
-\subsection{Study Questions}\label{quest5}}
+\subsection{Study Questions}\label{quest5}
 
 \textbf{1. Which of the following is the basic principle behind refrigerators and air conditioning?}
 
@@ -2841,13 +2806,11 @@ Then, we can use this to find \(|Q_h|\):
 
 Answers: 1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b
 
-\hypertarget{SecondLaw}{%
-\chapter{Second Law of Thermodynamics}\label{SecondLaw}}
+\chapter{Second Law of Thermodynamics}\label{SecondLaw}
 
 In chapter \ref{ThermodynamicCycles}, we have discussed heat engines as a means of understanding how some processes are spontaneous while others are not. Carnot's findings did not just simply inspire Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822--1888) to introduce the concept of entropy.
 
-\hypertarget{entropyint}{%
-\section{Entropy}\label{entropyint}}
+\section{Entropy}\label{entropyint}
 
 Let's return to the definition of efficiency of a Carnot cycle and bring together eqs. \eqref{eq:effCC2} and \eqref{eq:effCC3}:
 
@@ -2883,7 +2846,7 @@ where the summation happens across a sequence of Carnot cycles that connects dif
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:entropy}{}{\label{def:entropy} }\emph{Entropy:} \begin{equation}
+\protect\hypertarget{def:entropy}{}\label{def:entropy}\emph{Entropy:} \begin{equation}
 S = \frac{Q_{\mathrm{REV}}}{T}.
 \end{equation}
 \end{definition}
@@ -2903,8 +2866,7 @@ then we can extend the summation across temperatures of eq. \eqref{eq:effQrevT} 
 \label{eq:ds0}
 \end{equation}
 
-\hypertarget{irreversible-cycles}{%
-\section{Irreversible Cycles}\label{irreversible-cycles}}
+\section{Irreversible Cycles}\label{irreversible-cycles}
 
 Up to this point, we have discussed \emph{reversible} cycles only. Notice that the heat that enters the definition of entropy (Definition \ref{def:entropy}) is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of eq. \eqref{eq:dentropy} becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in eq. \eqref{eq:effCC3} is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, eq. \eqref{eq:effcQT} for an \emph{irreversible} cycle will not hold anymore and must be rewritten as:
 
@@ -2936,8 +2898,7 @@ Putting eqs. \eqref{eq:ds0} and \eqref{eq:dqirrineq} together, we obtain:
 
 where the equal sign holds for reversible transformations exclusively, while the inequality sign holds for irreversible ones. Eq. \eqref{eq:clausiusineq} is known as \textbf{Clausius inequality}.
 
-\hypertarget{secondlaw}{%
-\section{The Second Law of Thermodynamics}\label{secondlaw}}
+\section{The Second Law of Thermodynamics}\label{secondlaw}
 
 Now we can consider an isolated system undergoing a cycle composed of an irreversible forward transformation (1 \(\rightarrow\) 2) and a reversible backward transformation (2 \(\rightarrow\) 1), as in Figure \ref{fig:FigJexpC2}.
 
@@ -2984,15 +2945,13 @@ which proves that for any irreversible process in an isolated system, the entrop
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:secondlawdef}{}{\label{def:secondlawdef} }\emph{Second Law of Thermodynamics:} for any spontaneous process, the entropy of the universe is increasing.
+\protect\hypertarget{def:secondlawdef}{}\label{def:secondlawdef}\emph{Second Law of Thermodynamics:} for any spontaneous process, the entropy of the universe is increasing.
 \end{definition}
 \end{quote}
 
-\hypertarget{rev6}{%
-\section{Chapter Review}\label{rev6}}
+\section{Chapter Review}\label{rev6}
 
-\hypertarget{exer6}{%
-\subsection{Practice Problems}\label{exer6}}
+\subsection{Practice Problems}\label{exer6}
 
 \textbf{Problem 1: Efficiency of an Irreversible Cycle}
 
@@ -3038,8 +2997,7 @@ Then:
 
 \textbf{Answer:} The heat rejected to the cold reservoir is \(-750\,\text{J}\). The negative sign indicates that heat is leaving the system.
 
-\hypertarget{quest6}{%
-\subsection{Study Questions}\label{quest6}}
+\subsection{Study Questions}\label{quest6}
 
 \textbf{1. What concept did Rudolf Clausius introduce inspired by Carnot's findings?}
 
@@ -3235,8 +3193,7 @@ Answers: 1.b, 2.e, 3.a, 4.d, 5.a, 6.c, 7.b, 8.a, 9.a, 10.c
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{thirdlaw}{%
-\chapter{Calculation of Entropy and the Third Law of Thermodynamics}\label{thirdlaw}}
+\chapter{Calculation of Entropy and the Third Law of Thermodynamics}\label{thirdlaw}
 
 The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to \emph{always} consider changes in entropy in \emph{both} the system (sys) and its surroundings (surr):
 
@@ -3252,8 +3209,7 @@ d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}},
 \label{eq:dsunivd}
 \end{equation}
 
-\hypertarget{dssys}{%
-\section{\texorpdfstring{Calculation of \(\Delta S^{\mathrm{sys}}\)}{Calculation of \textbackslash Delta S\^{}\{\textbackslash mathrm\{sys\}\}}}\label{dssys}}
+\section{\texorpdfstring{Calculation of \(\Delta S^{\mathrm{sys}}\)}{Calculation of \textbackslash Delta S\^{}\{\textbackslash mathrm\{sys\}\}}}\label{dssys}
 
 In general \(\Delta S^{\mathrm{sys}}\) can be calculated using either its Definition \ref{def:entropy}, or its differential formula, eq. \eqref{eq:dentropy}. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:
 
@@ -3270,8 +3226,7 @@ P_i, T_i & \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_f, T
 
 with \(\Delta_1 S^{\text{sys}}\) calculated at constant \(P\), and \(\Delta_2 S^{\text{sys}}\) at constant \(T\). The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in section \ref{energyint}.
 
-\hypertarget{entropy-in-isothermal-processes}{%
-\subsection{Entropy in isothermal processes}\label{entropy-in-isothermal-processes}}
+\subsection{Entropy in isothermal processes}\label{entropy-in-isothermal-processes}
 
 \begin{itemize}
 \item
@@ -3307,7 +3262,7 @@ which corresponds in SI to the range of about 85--88 J/(mol K). This simple rule
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:troutonex}{}{\label{exr:troutonex} }Calculate the standard entropy of vaporization of water knowing \(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= 44 \  \text{kJ/mol}\), as calculated in Exercise \ref{exr:HessLawEx}.
+\protect\hypertarget{exr:troutonex}{}\label{exr:troutonex}Calculate the standard entropy of vaporization of water knowing \(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= 44 \  \text{kJ/mol}\), as calculated in Exercise \ref{exr:HessLawEx}.
 
 \emph{Solution:} Using eq. \eqref{eq:trouton}---and knowing that at standard conditions of \(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \  \text{bar}\) the boiling temperature of water is 373 K---we calculate:
 
@@ -3320,8 +3275,7 @@ The entropy of vaporization of water is far from Trouton's rule range of 85--88 
 \end{exercise}
 \end{quote}
 
-\hypertarget{entropy-in-adiabatic-processes}{%
-\subsection{Entropy in adiabatic processes}\label{entropy-in-adiabatic-processes}}
+\subsection{Entropy in adiabatic processes}\label{entropy-in-adiabatic-processes}
 
 Since adiabatic processes happen without the exchange of heat, \(đQ=0\), it would be tempting to think that \(\Delta S^{\mathrm{sys}} = 0\) for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes \(\Delta S^{\mathrm{sys}} \neq 0\). The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:
 
@@ -3333,8 +3287,7 @@ Since adiabatic processes happen without the exchange of heat, \(đQ=0\), it wou
 \label{eq:adiabaticent}
 \end{equation}
 
-\hypertarget{entropy-in-isochoric-processes}{%
-\subsection{Entropy in isochoric processes}\label{entropy-in-isochoric-processes}}
+\subsection{Entropy in isochoric processes}\label{entropy-in-isochoric-processes}
 
 We can calculate the heat exchanged in a process that happens at constant volume, \(Q_V\), using eq. \eqref{eq:Cvint1}. Since the heat exchanged at those conditions equals the energy (eq. \eqref{eq:dUqv}), and the energy is a state function, we can use \(Q_V\) regardless of the path (reversible or irreversible). The entropy associated with the process will then be:
 
@@ -3350,8 +3303,7 @@ which, assuming \(C_V\) independent of temperature and solving the integral on t
 \label{eq:sconstV}
 \end{equation}
 
-\hypertarget{entropy-in-isobaric-processes}{%
-\subsection{Entropy in isobaric processes}\label{entropy-in-isobaric-processes}}
+\subsection{Entropy in isobaric processes}\label{entropy-in-isobaric-processes}
 
 Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, \(Q_P\), using eq. \eqref{eq:Cpdef}. Again, similarly to the previous case, \(Q_P\) equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:
 
@@ -3367,8 +3319,7 @@ which, assuming \(C_P\) independent of temperature and solving the integral on t
 \label{eq:sconstP}
 \end{equation}
 
-\hypertarget{dssurr}{%
-\section{\texorpdfstring{Calculation of \(\Delta S^{\mathrm{surr}}\)}{Calculation of \textbackslash Delta S\^{}\{\textbackslash mathrm\{surr\}\}}}\label{dssurr}}
+\section{\texorpdfstring{Calculation of \(\Delta S^{\mathrm{surr}}\)}{Calculation of \textbackslash Delta S\^{}\{\textbackslash mathrm\{surr\}\}}}\label{dssurr}
 
 While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:
 
@@ -3388,7 +3339,7 @@ where the substitution \(Q_{\text{surr}}=-Q_{\text{sys}}\) can be performed rega
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:supercooledEx}{}{\label{exr:supercooledEx} }Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at --10°C, knowing the following data: \(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\), and assuming both \(C_P\) to be independent on temperature.
+\protect\hypertarget{exr:supercooledEx}{}\label{exr:supercooledEx}Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at --10°C, knowing the following data: \(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\), \(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\), and assuming both \(C_P\) to be independent on temperature.
 
 \emph{Solution:} \(\Delta S^{\mathrm{sys}}\) for the process under consideration can be calculated using the following cycle:
 
@@ -3436,8 +3387,7 @@ Since the entropy changes in the universe are positive, the process is spontaneo
 \end{exercise}
 \end{quote}
 
-\hypertarget{spontS}{%
-\section{Clausius Theorem}\label{spontS}}
+\section{Clausius Theorem}\label{spontS}
 
 By replacing eq. \eqref{eq:dssurrd} into \eqref{eq:dsunivd} we can write the differential change in the entropy of the system as:
 
@@ -3466,14 +3416,13 @@ d S^{\mathrm{sys}} < \frac{đQ_{\text{sys}}}{T} \qquad &\text{non-spontaneous, i
 
 Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it's hard to calculate \(\Delta S^{\mathrm{universe}}\). Eq. \eqref{eq:dssyscrit7} requires knowledge of quantities that are dependent on the system exclusively, such as the difference in entropy, the amount of heat that crosses the boundaries, and the temperature at which the process happens.\footnote{In cases where the temperature of the system changes throughout the process, \(T\) is just the (constant) temperature of its immediate surroundings, \(T_{\text{surr}}\), as explained in section \ref{dssurr}.} If a process produces more entropy than the amount of heat that crosses the boundaries divided by the absolute temperature, it will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the absolute temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.
 
-\hypertarget{thirdlawsect}{%
-\section{The Third Law of Thermodynamics}\label{thirdlawsect}}
+\section{The Third Law of Thermodynamics}\label{thirdlawsect}
 
 In chapter \ref{Thermochemistry}, we have discussed how to calculate reaction enthalpies for any reaction, given the formation enthalpies of reactants and products. In this section, we will try to do the same for reaction entropies. In this case, however, our task is simplified by a fundamental law of thermodynamics, introduced by Walther Hermann Nernst (1864--1941) in 1906.\footnote{Walther Nernst was awarded the 1920 Nobel Prize in Chemistry for his work in thermochemistry.} The statement that was initially known as Nernst's Theorem is now officially recognized as the third fundamental law of thermodynamics, and it has the following definition:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:thirdlawdef}{}{\label{def:thirdlawdef} }\emph{Third Law of Thermodynamics:} The entropy of a perfectly ordered, pure, crystalline substance is zero at \(T=0 \; \text{K}\).
+\protect\hypertarget{def:thirdlawdef}{}\label{def:thirdlawdef}\emph{Third Law of Thermodynamics:} The entropy of a perfectly ordered, pure, crystalline substance is zero at \(T=0 \; \text{K}\).
 \end{definition}
 \end{quote}
 
@@ -3492,11 +3441,9 @@ The careful wording in the definition of the third law \ref{def:thirdlawdef} all
 
 An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to \(T=0 \; \text{K}\) in a finite number of steps.
 
-\hypertarget{rev7}{%
-\section{Chapter Review}\label{rev7}}
+\section{Chapter Review}\label{rev7}
 
-\hypertarget{exer7}{%
-\subsection{Practice Problems}\label{exer7}}
+\subsection{Practice Problems}\label{exer7}
 
 \textbf{Problem 1: Entropy Change in an Isothermal Expansion.}
 
@@ -3621,8 +3568,7 @@ Using the standard entropies reported in the tables at the end of the book.
 
 \textbf{Answer:} The standard reaction entropy for the combustion of methane is \(-242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)
 
-\hypertarget{quest7}{%
-\subsection{Study Questions}\label{quest7}}
+\subsection{Study Questions}\label{quest7}
 
 \textbf{1. What is the formula for calculating the change in entropy of the universe?}
 
@@ -3725,11 +3671,11 @@ Using the standard entropies reported in the tables at the end of the book.
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(dS^{\text{sys}} = \frac{đQ}{T}\).
+  \(dS^{\text{sys}} =    \frac{đQ}{T}\).
 \item
-  \(dS^{\text{sys}} < \frac{đQ}{T}\).
+  \(dS^{\text{sys}} <    \frac{đQ}{T}\).
 \item
-  \(dS^{\text{sys}} > \frac{đQ}{T}\).
+  \(dS^{\text{sys}} >    \frac{đQ}{T}\).
 \item
   \(dS^{\text{sys}} \leq \frac{đQ}{T}\).
 \item
@@ -3816,11 +3762,9 @@ Using the standard entropies reported in the tables at the end of the book.
 
 Answers: 1.b, 2.a, 3.c, 4.c, 5.c, 6.e, 7.b, 8.a, 9.a, 10.b
 
-\hypertarget{Potentials}{%
-\chapter{Thermodynamic Potentials}\label{Potentials}}
+\chapter{Thermodynamic Potentials}\label{Potentials}
 
-\hypertarget{fundeq}{%
-\section{Fundamental Equation of Thermodynamics}\label{fundeq}}
+\section{Fundamental Equation of Thermodynamics}\label{fundeq}
 
 Let's summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems:
 
@@ -3840,7 +3784,7 @@ At the end of the 19\textsuperscript{th} century, Josiah Willard Gibbs (1839--19
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:chemicalpot}{}{\label{def:chemicalpot} }The \emph{chemical potential} is the amount of energy absorbed or released due to a change of the particle number of a given chemical species.
+\protect\hypertarget{def:chemicalpot}{}\label{def:chemicalpot}The \emph{chemical potential} is the amount of energy absorbed or released due to a change of the particle number of a given chemical species.
 \end{definition}
 \end{quote}
 
@@ -3855,8 +3799,7 @@ where \(dn_i\) is the differential change in the number of moles of substance \(
 
 According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, \(S\), volume, \(V\), and the numbers of moles \(\{n_i\}\).\footnote{In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.} Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.\footnote{For example, we don't always have a simple way to calculate or to measure the entropy.} To emphasize the important connections given by the fundamental equation, we can use the notation \(U(S,V,\{n_i\})\) and we can term \(S\), \(V\), and \(\{n_i\}\) \textbf{natural variables} of the energy.
 
-\hypertarget{thermpot}{%
-\section{Thermodynamic Potentials}\label{thermpot}}
+\section{Thermodynamic Potentials}\label{thermpot}
 
 Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.\footnote{The mathematical condition that is fulfilled when performing a Legendre transformation is that the first derivatives of the original function and its transformation are inverse functions of each other.}
 
@@ -3922,16 +3865,29 @@ A summary of the four thermodynamic potentials is given in the following table.
 
 \tiny
 
-\begin{longtable}[]{@{}cccc@{}}
-\toprule
-\textbf{Name} & \textbf{Symbol} & \textbf{Fundamental Equation} & \textbf{Natural Variables} \\
-\midrule
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2872}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1277}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3404}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2447}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{Name}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Symbol}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Fundamental Equation}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Natural Variables}
+\end{minipage} \\
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Energy} & \(U\) & \(dU=TdS-PdV+\sum_i\mu_i dn_i\) & \(S,V,\{n_i\}\) \\
 \textbf{Enthalpy} & \(H\) & \(dH=TdS+VdP+\sum_i\mu_i dn_i\) & \(S,P,\{n_i\}\) \\
 \textbf{Helmholtz Free Energy} & \(A\) & \(dA=-SdT-PdV+\sum_i\mu_i dn_i\) & \(T,V,\{n_i\}\) \\
 \textbf{Gibbs Free Energy} & \(G\) & \(dG=VdP-SdT+\sum_i\mu_i dn_i\) & \(T,P,\{n_i\}\) \\
-\bottomrule
 \end{longtable}
 
 \normalsize
@@ -3952,8 +3908,7 @@ The thermodynamic potentials are the analog of the potential energy in classical
 
 Where non-mechanical work is defined as any type of work that is not expansion or compression (\(PV\)--work). A typical example of non-mechanical work is electrical work.
 
-\hypertarget{freeenergies}{%
-\section{Free Energies}\label{freeenergies}}
+\section{Free Energies}\label{freeenergies}
 
 The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, \(H(S,P,\{n_i\})\), \(A(T,V,\{n_i\})\), and \(G(T,P,\{n_i\})\) all contain the same information that is in \(U(S,V,\{n_i\})\). However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term \(\sum_i\mu_i dn_i\) that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant \(S\) and constant \(V\):
 
@@ -4023,7 +3978,9 @@ These equations represent the conditions on \(dA\) and \(dG\) for inferring the 
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:helmgibbsminimum}{}{\label{def:helmgibbsminimum} }\(\;\)
+\protect\hypertarget{def:helmgibbsminimum}{}\label{def:helmgibbsminimum}
+
+\(\;\)
 
 \begin{itemize}
 \tightlist
@@ -4032,6 +3989,7 @@ These equations represent the conditions on \(dA\) and \(dG\) for inferring the 
 \item
   During a spontaneous process at constant \emph{temperature} and \emph{pressure}, the \emph{Gibbs free energy} will decrease \((dG<0)\), until it reaches a stationary point at which the system will be at equilibrium \((dG=0)\).
 \end{itemize}
+
 \end{definition}
 \end{quote}
 
@@ -4044,8 +4002,7 @@ These equations represent the conditions on \(dA\) and \(dG\) for inferring the 
 \caption{Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).}\label{fig:agfig}
 \end{figure}
 
-\hypertarget{maxwell}{%
-\section{Maxwell Relations}\label{maxwell}}
+\section{Maxwell Relations}\label{maxwell}
 
 Let's consider the fundamental equations for the thermodynamic potentials that we have derived in section \ref{fundeq}:
 
@@ -4103,7 +4060,7 @@ The relations in \eqref{eq:maxrelf} are called \textbf{Maxwell relations},\footn
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:maxwellEx}{}{\label{exr:maxwellEx} }Derive the last Maxwell relation in eq. \eqref{eq:maxrelf}.
+\protect\hypertarget{exr:maxwellEx}{}\label{exr:maxwellEx}Derive the last Maxwell relation in eq. \eqref{eq:maxrelf}.
 
 \emph{Solution:} We can start our derivation from the definition of \(V\) and \(S\) as a partial derivative of \(G\):
 
@@ -4138,11 +4095,9 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 \end{exercise}
 \end{quote}
 
-\hypertarget{rev8}{%
-\section{Chapter Review}\label{rev8}}
+\section{Chapter Review}\label{rev8}
 
-\hypertarget{quest8}{%
-\subsection{Study Questions}\label{quest8}}
+\subsection{Study Questions}\label{quest8}
 
 \textbf{1. Which of the following formulas is the fundamental equation of thermodynamics for closed systems?}
 
@@ -4338,13 +4293,11 @@ Answers: 1.b, 2.d, 3.c, 4.c, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{GibbsFree}{%
-\chapter{Gibbs Free Energy}\label{GibbsFree}}
+\chapter{Gibbs Free Energy}\label{GibbsFree}
 
 In this chapter, we will concentrate on chemical processes that happen at constant \(T\) and constant \(P\).\footnote{The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.} As such, we will focus our attention on the Gibbs free energy.
 
-\hypertarget{gibbseqsec}{%
-\section{Gibbs Equation}\label{gibbseqsec}}
+\section{Gibbs Equation}\label{gibbseqsec}
 
 Recalling from chapter \ref{Potentials}, the definition of \(G\) is:
 
@@ -4387,12 +4340,12 @@ where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standa
 The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\) of a chemical reaction:
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.04}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.45}}@{}}
-\toprule
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0382}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4459}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -4403,13 +4356,14 @@ The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Spontaneous?
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 -- & \emph{if} & -- & + & \emph{Always} \\
 + & \emph{if} & + & -- & \emph{Never} \\
 --/+ & \emph{if} & -- & -- & \emph{Depends on \(T\):} \(\scriptstyle{\text{spontaneous at low } T}\) \\
 +/-- & \emph{if} & + & + & \emph{Depends on \(T\):} \(\scriptstyle{\text{spontaneous at high } T}\) \\
-\bottomrule
 \end{longtable}
 
 Or, in other words:
@@ -4443,8 +4397,7 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 
 If we know the behavior of \(G\) as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential \(dG\). Each of these terms represents a coefficient in eq. \eqref{eq:dgtotdiff}, which are given in eq. \eqref{eq:dhagchem3}.
 
-\hypertarget{temperature-dependence-of-delta-g}{%
-\section{\texorpdfstring{Temperature Dependence of \(\Delta G\)}{Temperature Dependence of \textbackslash Delta G}}\label{temperature-dependence-of-delta-g}}
+\section{\texorpdfstring{Temperature Dependence of \(\Delta G\)}{Temperature Dependence of \textbackslash Delta G}}\label{temperature-dependence-of-delta-g}
 
 \[
 \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
@@ -4501,8 +4454,7 @@ giving the integrated Gibbs--Helmholtz equation:
 \label{eq:gibbshelmI}
 \end{equation}
 
-\hypertarget{pressure-dependence-of-delta-g}{%
-\section{\texorpdfstring{Pressure Dependence of \(\Delta G\)}{Pressure Dependence of \textbackslash Delta G}}\label{pressure-dependence-of-delta-g}}
+\section{\texorpdfstring{Pressure Dependence of \(\Delta G\)}{Pressure Dependence of \textbackslash Delta G}}\label{pressure-dependence-of-delta-g}
 
 \[
 \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
@@ -4557,8 +4509,7 @@ The plots in Figure \ref{fig:gdeppfig} show the remarkable difference in the beh
 \caption{Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.}\label{fig:gdeppfig}
 \end{figure}
 
-\hypertarget{composition-dependence-of-delta-g}{%
-\section{\texorpdfstring{Composition Dependence of \(\Delta G\)}{Composition Dependence of \textbackslash Delta G}}\label{composition-dependence-of-delta-g}}
+\section{\texorpdfstring{Composition Dependence of \(\Delta G\)}{Composition Dependence of \textbackslash Delta G}}\label{composition-dependence-of-delta-g}
 
 \[
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
@@ -4650,11 +4601,9 @@ or, in other words, the chemical potential of a substance in the mixture is alwa
 
 or, in other words, the process is spontaneous under all circumstances, and pure ideal gases will always mix.
 
-\hypertarget{rev9}{%
-\section{Chapter Review}\label{rev9}}
+\section{Chapter Review}\label{rev9}
 
-\hypertarget{exer9}{%
-\subsection{Practice Problems}\label{exer9}}
+\subsection{Practice Problems}\label{exer9}
 
 \textbf{Problem 1: Calculating Gibbs Free Energy Change}
 
@@ -4700,8 +4649,7 @@ WHich gives us the final answer, after fixing the significant digits.
 
 \textbf{Answer:} The change in Gibbs free energy for the reported reaction at \(298\,\text{K}\) is \(-818\,\text{kJ/mol}\).
 
-\hypertarget{quest9}{%
-\subsection{Study Questions}\label{quest9}}
+\subsection{Study Questions}\label{quest9}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4956,11 +4904,9 @@ Answers: 1.c, 2.b, 3.d, 4.b, 5.b, 6.b, 7.b, 8.d, 9.b, 10.d
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{ChemicalEquilibrium}{%
-\chapter{Chemical Equilibrium}\label{ChemicalEquilibrium}}
+\chapter{Chemical Equilibrium}\label{ChemicalEquilibrium}
 
-\hypertarget{reaction-quotient-and-equilibrium-constant}{%
-\section{Reaction Quotient and Equilibrium Constant}\label{reaction-quotient-and-equilibrium-constant}}
+\section{Reaction Quotient and Equilibrium Constant}\label{reaction-quotient-and-equilibrium-constant}
 
 Let's consider a prototypical reaction at constant \(T,P\):
 
@@ -5067,8 +5013,7 @@ Using the general equilibrium constant, \(K_{\text{eq}}\), we can also rewrite t
 
 and since \(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) depends on \(T,P\) and \(\{n_i\}\), it is useful to explore how \(K_{\text{eq}}\) depends on those variables as well.
 
-\hypertarget{temperature-dependence-of-k_texteq}{%
-\section{\texorpdfstring{Temperature Dependence of \(K_{\text{eq}}\)}{Temperature Dependence of K\_\{\textbackslash text\{eq\}\}}}\label{temperature-dependence-of-k_texteq}}
+\section{\texorpdfstring{Temperature Dependence of \(K_{\text{eq}}\)}{Temperature Dependence of K\_\{\textbackslash text\{eq\}\}}}\label{temperature-dependence-of-k_texteq}
 
 To study the temperature dependence of \(K_{\text{eq}}\) we can use eq. \eqref{eq:chemeqdgG} for the general equilibrium constant and write:
 
@@ -5126,8 +5071,7 @@ which is the equation that produces the so-called \textbf{van 't Hoff plots}, fr
 \caption{Van 't Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reactions at Constant P.}\label{fig:vthoffplt}
 \end{figure}
 
-\hypertarget{pressure-and-composition-dependence-of-k_texteq}{%
-\section{\texorpdfstring{Pressure and Composition Dependence of \(K_{\text{eq}}\)}{Pressure and Composition Dependence of K\_\{\textbackslash text\{eq\}\}}}\label{pressure-and-composition-dependence-of-k_texteq}}
+\section{\texorpdfstring{Pressure and Composition Dependence of \(K_{\text{eq}}\)}{Pressure and Composition Dependence of K\_\{\textbackslash text\{eq\}\}}}\label{pressure-and-composition-dependence-of-k_texteq}
 
 While \(K_P\) is independent of both total pressure and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants.
 
@@ -5140,7 +5084,9 @@ For example, it is easy to look at eq. \eqref{eq:kxkcdef3} and determine that \(
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:kpkx}{}{\label{exr:kpkx} }Calculate the mole fraction change for the dissociation of \(\mathrm{Cl}_{2(g)}\) when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) to \(P_f=2.5 \;\text{bar}\) at constant \(T=2\,298\;\mathrm{K}\), knowing that \(\Delta_{\mathrm{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\) and \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\), and remembering that both of these values are tabulated at \(T=298\;\text{K}\).
+\protect\hypertarget{exr:kpkx}{}\label{exr:kpkx}
+
+Calculate the mole fraction change for the dissociation of \(\mathrm{Cl}_{2(g)}\) when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) to \(P_f=2.5 \;\text{bar}\) at constant \(T=2\,298\;\mathrm{K}\), knowing that \(\Delta_{\mathrm{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\) and \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\), and remembering that both of these values are tabulated at \(T=298\;\text{K}\).
 
 \emph{Solution:} Let's consider the reaction:
 \[
@@ -5223,6 +5169,7 @@ We can divide the exercise into two parts. In the first one, we will deal with c
   \end{equation}
   To summarize, when we increase the pressure from \(1\;\text{bar}\) to \(2.5\;\text{bar}\) at \(T=2\,298\;\text{K}\), the equilibrium constant in terms of the mole fraction decreases from \(K_y(P^{-\kern-6pt{\ominus}\kern-6pt-},2\,298\;\text{K})=1.30\) to \(K_y(P_f=2.5\;\text{bar},2\,298\;\text{K})=0.520\). This reduction is causing a shift of the equilibrium towards the reactants, with the concentration of \(\text{Cl}_{2(g)}\) increasing from \(y_{\text{Cl}_{2(g)}}^i = 0.338\) to \(y_{\text{Cl}_{2(g)}}^f = 0.493\) and the concentration of \(\text{Cl}_{(g)}\) decreasing from \(y_{\text{Cl}_{2(g)}}^i = 0.662\) to \(y_{\text{Cl}_{(g)}}^f = 0.507\).
 \end{itemize}
+
 \end{exercise}
 \end{quote}
 
@@ -5234,11 +5181,9 @@ The dependence of \(K_{\text{eq}}\) on \(P\) highlighted above is another mathem
   If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total amount of moles (the equilibrium in exercise \ref{exr:kpkx} shifts toward the reactant).
 \end{itemize}
 
-\hypertarget{rev10}{%
-\section{Chapter Review}\label{rev10}}
+\section{Chapter Review}\label{rev10}
 
-\hypertarget{exer10}{%
-\subsection{Practice Problems}\label{exer10}}
+\subsection{Practice Problems}\label{exer10}
 
 \textbf{Problem 1: Pressure Dependence of Equilibrium Composition}
 
@@ -5327,8 +5272,7 @@ Substituting the values:
 
 \textbf{Answer:} The standard enthalpy of reactoin is \(-196\,\text{kJ/mol}\)
 
-\hypertarget{quest10}{%
-\subsection{Study Questions}\label{quest10}}
+\subsection{Study Questions}\label{quest10}
 
 \textbf{1. What is the definition of the reaction quotient \(Q_P\) for a general reaction?}
 
@@ -5524,17 +5468,15 @@ Answers: 1.a, 2.b, 3.c, 4.b, 5.c, 6.b, 7.b, 8.c, 9.b, 10.c
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{RealGases}{%
-\chapter{Ideal and Non-Ideal Gases}\label{RealGases}}
+\chapter{Ideal and Non-Ideal Gases}\label{RealGases}
 
-\hypertarget{the-ideal-gas-equation}{%
-\section{The Ideal Gas Equation}\label{the-ideal-gas-equation}}
+\section{The Ideal Gas Equation}\label{the-ideal-gas-equation}
 
 The concept of an ideal gas is a theoretical construct that allows for straightforward treatment and interpretation of gases' behavior. As such, the ideal gas is a simplified \emph{model} that we use to understand nature, and it does not correspond to any real system. The following two assumptions define the ideal gas model:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:iedalgasdef}{}{\label{def:iedalgasdef} }
+\protect\hypertarget{def:iedalgasdef}{}\label{def:iedalgasdef}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -5543,13 +5485,13 @@ The concept of an ideal gas is a theoretical construct that allows for straightf
 \item
   The particles that compose an ideal gas do not interact with each other.
 \end{itemize}
+
 \end{definition}
 \end{quote}
 
 Because of its simplicity, the ideal gas model has been the historical foundation of thermodynamics and of science in general. The first studies of the ideal gas behavior date back to the seventeenth century, and the scientists that performed them are among the founders of modern science.
 
-\hypertarget{boyles-law}{%
-\subsection{Boyle's Law}\label{boyles-law}}
+\subsection{Boyle's Law}\label{boyles-law}
 
 In 1662 Robert Boyle (1627--1691) found that the pressure and the volume of an ideal gas are inversely related at constant temperature. Boyle's Law has the following mathematical description:
 
@@ -5576,8 +5518,7 @@ which results in the familiar \(PV\) plots of Figure \ref{fig:FigPVideal}. As we
 \caption{PV-Diagram of an ideal Gas.}\label{fig:FigPVideal}
 \end{figure}
 
-\hypertarget{charless-and-gay-lussacs-laws}{%
-\subsection{Charles's and Gay-Lussac's Laws}\label{charless-and-gay-lussacs-laws}}
+\subsection{Charles's and Gay-Lussac's Laws}\label{charless-and-gay-lussacs-laws}
 
 It took scientists more than a century to expand Boyle's work and study the relationship between volume and temperature. In 1787 Jacques Alexandre César Charles (1746--1823) wrote the relationship known as Charles's Law:
 
@@ -5631,8 +5572,7 @@ which results in the plots of Figure \ref{fig:FigTPideal}. Each of the curves is
 \caption{PT-Diagram of an ideal Gas.}\label{fig:FigTPideal}
 \end{figure}
 
-\hypertarget{avogadros-law}{%
-\subsection{Avogadro's Law}\label{avogadros-law}}
+\subsection{Avogadro's Law}\label{avogadros-law}
 
 Ten years later, Amedeo Avogadro (1776--1856) discovered a seemingly unrelated principle by studying the composition of matter. His Avogadro's Law encodes the relationship between the number of moles in an ideal gas and its volume as:
 
@@ -5648,8 +5588,7 @@ V=k_4 n\quad\text{at const.}\;P,T,
 \label{eq:avogadrolaw2}
 \end{equation}
 
-\hypertarget{the-ideal-gas-law}{%
-\subsection{The ideal gas Law}\label{the-ideal-gas-law}}
+\subsection{The ideal gas Law}\label{the-ideal-gas-law}
 
 Despite all of the ingredients being available for more than 20 years, it's only in 1834 that Benoît Paul Émile Clapeyron (1799--1864) was finally able to combine them into what is now known as the \textbf{ideal gas Law}. Using the same formulas obtained above, we can write:
 
@@ -5679,13 +5618,11 @@ R=8.31\;\frac{\text{J}}{\text{mol K}}.
 \label{eq:RvalueSI}
 \end{equation}
 
-\hypertarget{behaviors-of-non-ideal-gases}{%
-\section{Behaviors of Non-Ideal Gases}\label{behaviors-of-non-ideal-gases}}
+\section{Behaviors of Non-Ideal Gases}\label{behaviors-of-non-ideal-gases}
 
 Non-ideal gases (sometimes also referred to as ``real gases''), do not behave as ideal gases because at least one of the assumptions in definition \ref{def:iedalgasdef} is violated. What characterizes non-ideal gases is that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental models, none of which is superior to the other. The van der Waals (vdW) equation is the only model that we will analyze in detail because of its simple interpretation. However, it is far from universal, and for several non-ideal gases, it is severely inaccurate. Other popular non-ideal gases equations are the Clausius equation, the virial equation, the Redlich--Kwong equation and several others.\footnote{For more information on empirical equations for non-ideal gases see \href{https://en.wikipedia.org/wiki/Real_gas}{this Wikipedia page}.}
 
-\hypertarget{the-van-der-waals-equation}{%
-\subsection{The van der Waals equation}\label{the-van-der-waals-equation}}
+\subsection{The van der Waals equation}\label{the-van-der-waals-equation}
 
 One of the simplest empirical equation that describes non-ideal gases was obtained in 1873 by Johannes Diderik van der Waals (1837--1923). The vdW equation includes two empirical parameters (\(a\) and \(b\)) with different values for different non-ideal gases. Each of the parameters corresponds to a correction for the breaking of one of the two conditions that define the ideal gas behavior (definition \ref{def:iedalgasdef}). The vdW equation is obtained from the ideal gas equation performing the following simple substitutions:
 
@@ -5712,18 +5649,20 @@ The parameter \(a\) accounts for the presence of intermolecular interactions, wh
 \scriptsize
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.50}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.38}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1250}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5000}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \(a \left[ \frac{\mathrm{L}^2\mathrm{bar}}{\mathrm{mol}^2} \right]\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \(b \left[ \frac{\mathrm{L}}{\mathrm{mol}} \right]\)
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Ammonia & 4.225 & 0.0371 \\
 Argon & 1.355 & 0.03201 \\
 Carbon dioxide & 3.640 & 0.04267 \\
@@ -5739,13 +5678,11 @@ Nitrogen & 1.370 & 0.0387 \\
 Oxygen & 1.382 & 0.03186 \\
 Radon & 6.601 & 0.06239 \\
 Xenon & 4.250 & 0.05105 \\
-\bottomrule
 \end{longtable}
 
 \normalsize
 
-\hypertarget{joulethomson-effect}{%
-\subsection{Joule--Thomson effect}\label{joulethomson-effect}}
+\subsection{Joule--Thomson effect}\label{joulethomson-effect}
 
 \begin{figure}
 
@@ -5825,23 +5762,37 @@ From eq. \eqref{eq:JT6} we can define a new coefficient, called the \emph{Joule-
 
 The value of \(\mu_{\mathrm{JT}}\) depends on the type of gas, the temperature and pressure before expansion, and the heat capacity at constant pressure of the gas. The temperature at which \(\mu_{\mathrm{JT}}\) changes sign is called the ``Joule--Thomson inversion temperature.'' Since the pressure decreases during an expansion, \(\partial P\) is negative by definition, and the following possibilities are available for \(\mu_{\mathrm{JT}}\):
 
-\begin{longtable}[]{@{}lcccc@{}}
-\toprule
-Gas temperature: & \(\partial P\) & \(\mu_{\mathrm{JT}}\) & \(\partial T\) & The gas will: \\
-\midrule
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3535}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1414}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2121}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1414}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1515}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Gas temperature:
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\partial P\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\mu_{\mathrm{JT}}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\partial T\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+The gas will:
+\end{minipage} \\
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \emph{Below the inversion temperature} & -- & + & -- & cool \\
 \emph{Above the inversion temperature} & -- & -- & + & warm \\
-\bottomrule
 \end{longtable}
 
 For example, helium has a very low Joule--Thomson inversion temperature at standard pressure \((T=45\;\text{K})\), and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures (\(T=621\;\text{K}\) and \(T=764\;\text{K}\), respectively), and they both cool when expanded at room temperature. Therefore, it is possible to use the Joule--Thomson effect in refrigeration processes such as air conditioning.\footnote{Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule--Thomson expansions are also used for the industrial liquefaction of air.} As we already discussed in chapter \ref{FirstLaw}, the temperature of an ideal gases stays constant in an adiabatic expansion, therefore its Joule--Thomson coefficient is always equal to zero.
 
-\hypertarget{critical-phenomena}{%
-\section{Critical Phenomena}\label{critical-phenomena}}
+\section{Critical Phenomena}\label{critical-phenomena}
 
-\hypertarget{compressibility-factors}{%
-\subsection{Compressibility factors}\label{compressibility-factors}}
+\subsection{Compressibility factors}\label{compressibility-factors}
 
 The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behaviour. It is usually represented with the symbol \(z\), and is calculated as:
 
@@ -5908,8 +5859,7 @@ Both type I and type II non-ideal gases will approach the ideal gas behavior as 
   At a very specific temperature, inversion will occur (i.e., at \(T=713 \; \mathrm{K}\) for \(\mathrm{CO}_2\)). This temperature is called the \textbf{Boyle temperature}, \(T_{\mathrm{B}}\), and is the temperature at which the attractive and repulsive forces balance out. It can be calculated from the vdW equation, since \(b-\frac{a}{RT_{\mathrm{B}}}=0 \; \Rightarrow \; T_{\mathrm{B}}=\frac{a}{bR}.\) At the Boyle's temperature a type II gas shows ideal gas behavior over a large range of pressure.
 \end{itemize}
 
-\hypertarget{phase-diagram-of-a-non-ideal-gas}{%
-\subsection{Phase diagram of a non-ideal gas}\label{phase-diagram-of-a-non-ideal-gas}}
+\subsection{Phase diagram of a non-ideal gas}\label{phase-diagram-of-a-non-ideal-gas}
 
 \begin{figure}
 
@@ -5924,7 +5874,7 @@ Let's now turn our attention to the \(PV\) phase diagram of a non-ideal gas, rep
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:criticalT}{}{\label{def:criticalT} }\emph{Critical Temperature:} The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.
+\protect\hypertarget{def:criticalT}{}\label{def:criticalT}\emph{Critical Temperature:} The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.
 \end{definition}
 \end{quote}
 
@@ -5961,8 +5911,7 @@ a value that is independent of the gas. Experimentally measured values of \(z_c\
 
 Notice how slicing the \(PT\overline{V}\) diagram at constant \(T\) results in the \(PV\) diagram that we reported in Figure \ref{fig:FigTPVd}. On the other hand, slicing the \(PT\overline{V}\) diagram at constant \(P\) results in the \(PT\) diagram that we will examine in detail in the next chapter.
 
-\hypertarget{fugacity}{%
-\section{Fugacity}\label{fugacity}}
+\section{Fugacity}\label{fugacity}
 
 The chemical potential of a pure ideal gas can be calculated using eq. \eqref{eq:dgconstn4}. Since we are not interested in a mixture, we can drop the asterisk in \(\mu^*\), and rewrite eq. \eqref{eq:dgconstn4} as:
 
@@ -5975,7 +5924,7 @@ For a non-ideal gas, the pressure cannot be used in eq. \eqref{eq:dcpig} because
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:fugacitydef}{}{\label{def:fugacitydef} }\emph{Fugacity:} The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.
+\protect\hypertarget{def:fugacitydef}{}\label{def:fugacitydef}\emph{Fugacity:} The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.
 \end{definition}
 
 Eq. \eqref{eq:dcpig} then becomes:
@@ -6057,11 +6006,9 @@ K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
 \label{eq:kfdef}
 \end{equation}
 
-\hypertarget{rev11}{%
-\section{Chapter Review}\label{rev11}}
+\section{Chapter Review}\label{rev11}
 
-\hypertarget{exer11}{%
-\subsection{Practice Problems}\label{exer11}}
+\subsection{Practice Problems}\label{exer11}
 
 \textbf{Problem 1: Calculating the van der Waals Constants}
 
@@ -6207,8 +6154,7 @@ Then:
 
 \textbf{Answer:} The fugacity of the gas is \(48\,\text{bar}\)
 
-\hypertarget{quest11}{%
-\subsection{Study Questions}\label{quest11}}
+\subsection{Study Questions}\label{quest11}
 
 \textbf{1. Which of the following is NOT an assumption of the ideal gas model?}
 
@@ -6404,17 +6350,15 @@ Answers: 1.c, 2.c, 3.b, 4.e, 5.b, 6.d, 7.b, 8.e, 9.c, 10.d
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{PhaseEquilibrium}{%
-\chapter{Phase Equilibrium}\label{PhaseEquilibrium}}
+\chapter{Phase Equilibrium}\label{PhaseEquilibrium}
 
-\hypertarget{phase-stability}{%
-\section{Phase Stability}\label{phase-stability}}
+\section{Phase Stability}\label{phase-stability}
 
 We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.\footnote{Other states of matter---such as plasma---are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.} For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of ``phase'' is necessary to discuss several concepts in this chapter and the following ones:
 
 \begin{quote}
 \begin{definition}
-\protect\hypertarget{def:phasedef}{}{\label{def:phasedef} }\emph{Phase:} A region of the system with homogeneous chemical composition and physical state.
+\protect\hypertarget{def:phasedef}{}\label{def:phasedef}\emph{Phase:} A region of the system with homogeneous chemical composition and physical state.
 \end{definition}
 \end{quote}
 
@@ -6507,8 +6451,7 @@ which can be rearranged into:
 
 This equation is known as the \textbf{Clapeyron equation}, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of eq. \eqref{eq:ClapeyronEq} on a \(PT\) phase diagram for common substances results in three lines representing the equilibrium between two different phases. These diagrams are useful to study the relationship between the phases of a substance.
 
-\hypertarget{gibbs-phase-rule}{%
-\section{Gibbs Phase Rule}\label{gibbs-phase-rule}}
+\section{Gibbs Phase Rule}\label{gibbs-phase-rule}
 
 In chapter \ref{SystemVariables}, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables \((3: P,\overline{V},T)\), and reduce it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of \(c\) components (chemical substances) and \(p\) phases, the number of independent variables, \(f\), is given by the Gibbs phase rule:
 
@@ -6521,8 +6464,7 @@ The Gibbs phase rule derives from the fact that different phases are in equilibr
 
 The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by \((c-1)\) variables.\footnote{For a 1-component system \(c-1=1-1=0\), and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence \(c-1=2-1=1\) additional variable will be required to describe it--the mole fraction.} The number of constraints is determined by the number of possible equilibrium relations, which is \(c(p-1)\) since the chemical potential of each component must be equal in all phases. The number of degrees of freedom \(f\) is then given by \(f=(c-1)p+2-c(p-1)\) \(=c-p+2\), which is the Gibbs phase rule, as in eq. \eqref{eq:Gibbsrule}.
 
-\hypertarget{pt-phase-diagrams}{%
-\section{\texorpdfstring{\(PT\) Phase Diagrams}{PT Phase Diagrams}}\label{pt-phase-diagrams}}
+\section{\texorpdfstring{\(PT\) Phase Diagrams}{PT Phase Diagrams}}\label{pt-phase-diagrams}
 
 \begin{figure}
 
@@ -6535,8 +6477,7 @@ The Gibbs phase rule is obtained considering that the number of independent vari
 
 Let's now discuss the pressure--temperature diagram of a typical substance, as reported in Figure \ref{fig:FigPhase3}. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, eq. \eqref{eq:ClapeyronEq}. The interpretation of each line is as follows:
 
-\hypertarget{liquid-rightleftarrows-gas-equilibrium}{%
-\subsection{\texorpdfstring{Liquid \(\rightleftarrows\) Gas equilibrium}{Liquid \textbackslash rightleftarrows Gas equilibrium}}\label{liquid-rightleftarrows-gas-equilibrium}}
+\subsection{\texorpdfstring{Liquid \(\rightleftarrows\) Gas equilibrium}{Liquid \textbackslash rightleftarrows Gas equilibrium}}\label{liquid-rightleftarrows-gas-equilibrium}
 
 For this equilibrium we can use Trouton's rule, eq. \eqref{eq:trouton}, and write:
 \begin{equation}
@@ -6560,8 +6501,7 @@ Replacing these values in the Clapeyron equation, we obtain:
 
 which is always positive,regardless of violations to the Trouton's rule. Notice how small this value is, meaning that the liquid--gas equilibrium curve is mostly flat as \(T\rightarrow 0\).
 
-\hypertarget{solid-rightleftarrows-gas-equilibrium}{%
-\subsection{\texorpdfstring{Solid \(\rightleftarrows\) Gas equilibrium}{Solid \textbackslash rightleftarrows Gas equilibrium}}\label{solid-rightleftarrows-gas-equilibrium}}
+\subsection{\texorpdfstring{Solid \(\rightleftarrows\) Gas equilibrium}{Solid \textbackslash rightleftarrows Gas equilibrium}}\label{solid-rightleftarrows-gas-equilibrium}
 
 If we look at the signs of each quantity, this case is similar to the previous one:
 \begin{equation}
@@ -6576,8 +6516,7 @@ If we look at the signs of each quantity, this case is similar to the previous o
 
 However, the Trouton's rule is not valid for the solid--gas equilibrium, and \(\frac{dP}{dT}\) will be larger than for the previous case.
 
-\hypertarget{solid-rightleftarrows-liquid-equilibrium}{%
-\subsection{\texorpdfstring{Solid \(\rightleftarrows\) Liquid equilibrium}{Solid \textbackslash rightleftarrows Liquid equilibrium}}\label{solid-rightleftarrows-liquid-equilibrium}}
+\subsection{\texorpdfstring{Solid \(\rightleftarrows\) Liquid equilibrium}{Solid \textbackslash rightleftarrows Liquid equilibrium}}\label{solid-rightleftarrows-liquid-equilibrium}
 
 The final curve is for the solid-liquid equilibrium, for which we have:
 
@@ -6603,8 +6542,7 @@ For \(\mathrm{H}_2\mathrm{O}\) and a few other substances, \(\frac{dP}{dT}<0\), 
 
 Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of \(10^{-3}\;\mathrm{L}\)), \(\frac{dP}{dT}\) is always much larger than for the previous two cases. The resulting lines for the solid--liquid equilibria are still almost vertical, regardless of the signs of their angular coefficients.
 
-\hypertarget{the-triple-point-and-the-critical-point}{%
-\subsection{The triple point and the critical point}\label{the-triple-point-and-the-critical-point}}
+\subsection{The triple point and the critical point}\label{the-triple-point-and-the-critical-point}
 
 The only point in the \(PT\) diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is \(f=1-3+2=0\). The fact that the triple point has zero degrees of freedom means that its coordinates, \({T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}}\), are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition---rather than measured---until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the Kelvin).\footnote{For more information on the 2019 redefinition of the SI units, see \href{https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units}{this Wikipedia page}.}
 
@@ -6612,8 +6550,7 @@ In addition to the triple point where the solid, liquid, and gas phases meet, a 
 
 Another point with a fixed position in the \(PT\) diagram is the critical point, \({T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}}\). We have already given the definition of the critical temperature in \ref{def:criticalT}. This point represents the end of the liquid--gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in Figure \ref{fig:FigPhase3}. A gas whose pressure and temperature are below the critical point is called a \emph{vapor}. A gas whose temperature is above the critical one and the pressure is below its critical one is called a \emph{supercritical fluid}. Finally, a liquid whose pressure is above the critical point is called a \emph{compressible liquid}.\footnote{Notice that the temperature of a liquid must be below the critical point, otherwise it is no longer a liquid but rather a supercritical fluid.}
 
-\hypertarget{the-clausiusclapeyron-equation}{%
-\section{The Clausius--Clapeyron Equation}\label{the-clausiusclapeyron-equation}}
+\section{The Clausius--Clapeyron Equation}\label{the-clausiusclapeyron-equation}
 
 Let's now take a closer look at the equilibrium between a condensed phase and the gas phase. For both the vaporization and sublimation processes, Clausius showed that the Clapeyron equation can be simplified by using:
 
@@ -6655,11 +6592,9 @@ Eq. \eqref{eq:clacla} is known as the \textbf{Clausius--Clapeyron equation}, and
 
 The integrated Clausius--Clapeyron equation shows that the vapor pressure depends exponentially on the temperature. Thus, even a small change in the temperature will result in a significant change in the vapor pressure. In fact, we daily use the fact that the vapor pressure of water changes drastically when we increase its temperature for cooking most of our food. For example, at an external pressure of 1 bar, it rapidly grows from \(P^*=0.02\;\text{bar}\) to \(P^*=1\;\text{bar}\) when the temperature is increased from \(T=293\;\mathrm{K}\) (around room temperature) to \(T=373\;\mathrm{K}\) (boiling point). The integrated Clausius--Clapeyron equation is also often used to determine the enthalpy of vaporization from measurements of vapor pressure at different temperatures.
 
-\hypertarget{rev12}{%
-\section{Chapter Review}\label{rev12}}
+\section{Chapter Review}\label{rev12}
 
-\hypertarget{quest12}{%
-\subsection{Study Questions}\label{quest12}}
+\subsection{Study Questions}\label{quest12}
 
 \textbf{1. What is the definition of a phase in thermodynamics?}
 
@@ -6855,18 +6790,19 @@ Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{MCPhaseDiagrams}{%
-\chapter{Multi-Component Phase Diagrams and Solutions}\label{MCPhaseDiagrams}}
+\chapter{Multi-Component Phase Diagrams and Solutions}\label{MCPhaseDiagrams}
 
 We now move from studying 1-component systems to multi-component ones. Systems that include two or more chemical species are usually called \emph{solutions}. Solutions are possible for all three states of matter:
 
 \scriptsize
 
 \begin{longtable}[]{@{}lccl@{}}
-\toprule
+\toprule\noalign{}
 Type: & Solvent & Solute & Examples: \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Solid solutions & Solid & Solid & Alloys: brass, bronze \\
 & Solid & Liquid & Dental amalgam \\
 & Solid & Gas & Hydrogen stored in Palladium \\
@@ -6876,15 +6812,13 @@ Liquid solutions & Liquid & Solid & Saltwater, bleach \\
 Gaseous solutions & Gas & Solid & Smoke, smog \\
 & Gas & Liquid & Aerosols and perfumes \\
 & Gas & Gas & Air \\
-\bottomrule
 \end{longtable}
 
 \normalsize
 
 The number of degrees of freedom for binary solutions (solutions containing two components) is calculated from the Gibbs phase rules at \(f=2-p+2=4-p\). When one phase is present, binary solutions require \(4-1=3\) variables to be described, usually temperature (\(T\)), pressure (\(P\)), and mole fraction (\(y_i\) in the gas phase and \(x_i\) in the liquid phase). Single-phase, 2-component systems require three-dimensional \(T,P,x_i\) diagram to be described. When two phases are present (e.g., gas and liquid), only two variables are independent: pressure and concentration. Thus, we can study the behavior of the partial pressure of a gas--liquid solution in a 2-dimensional plot. If the gas phase in a solution exhibits properties similar to those of a mixture of ideal gases, it is called an \emph{ideal solution}. The obvious difference between ideal solutions and ideal gases is that the intermolecular interactions in the liquid phase cannot be neglected as for the gas phase. The main advantage of ideal solutions is that the interactions between particles in the liquid phase have similar mean strength throughout the entire phase. We will consider ideal solutions first, and then we'll discuss deviation from ideal behavior and non-ideal solutions.
 
-\hypertarget{raoults-law-and-phase-diagrams-of-ideal-solutions}{%
-\section{Raoult's Law and Phase Diagrams of Ideal Solutions}\label{raoults-law-and-phase-diagrams-of-ideal-solutions}}
+\section{Raoult's Law and Phase Diagrams of Ideal Solutions}\label{raoults-law-and-phase-diagrams-of-ideal-solutions}
 
 The behavior of the vapor pressure of an ideal solution can be mathematically described by a simple law established by François-Marie Raoult (1830--1901). \textbf{Raoult's law} states that the partial pressure of each component, \(i\), of an ideal mixture of liquids, \(P_i\), is equal to the vapor pressure of the pure component \(P_i^*\) multiplied by its mole fraction in the mixture \(x_i\):
 
@@ -6893,8 +6827,7 @@ P_i=x_i P_i^*.
 \label{eq:mc1}
 \end{equation}
 
-\hypertarget{one-volatile-component}{%
-\subsection{One volatile component}\label{one-volatile-component}}
+\subsection{One volatile component}\label{one-volatile-component}
 
 Raoult's law applied to a system containing only one volatile component describes a line in the \(Px_{\text{B}}\) plot, as in Figure \ref{fig:FigMC1}.
 
@@ -6909,8 +6842,7 @@ Raoult's law applied to a system containing only one volatile component describe
 
 As emerges from Figure \ref{fig:FigMC1}, Raoult's law divides the diagram into two distinct areas, each with three degrees of freedom.\footnote{Only two degrees of freedom are visible in the \(Px_{\text{B}}\) diagram. Temperature represents the third independent variable.} Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult's law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.
 
-\hypertarget{two-volatile-components}{%
-\subsection{Two volatile components}\label{two-volatile-components}}
+\subsection{Two volatile components}\label{two-volatile-components}
 
 In an ideal solution, every volatile component follows Raoult's law. Since the vapors in the gas phase behave ideally, the total pressure can be simply calculated using Dalton's law as the sum of the partial pressures of the two components \(P_{\text{TOT}}=P_{\text{A}}+P_{\text{B}}\). The corresponding diagram is reported in Figure \ref{fig:FigMC2}. The total vapor pressure, calculated using Dalton's law, is reported in red. The Raoult's behaviors of each of the two components are also reported using black dashed lines.
 
@@ -6925,7 +6857,7 @@ In an ideal solution, every volatile component follows Raoult's law. Since the v
 
 \begin{quote}
 \begin{exercise}
-\protect\hypertarget{exr:xaya}{}{\label{exr:xaya} }Calculate the mole fraction in the vapor phase of a liquid solution composed of 67\% of toluene (\(\mathrm{A}\)) and 33\% of benzene (\(\mathrm{B}\)), given the vapor pressures of the pure substances: \(P_{\text{A}}^*=0.03\;\text{bar}\), and \(P_{\text{B}}^*=0.10\;\text{bar}\).
+\protect\hypertarget{exr:xaya}{}\label{exr:xaya}Calculate the mole fraction in the vapor phase of a liquid solution composed of 67\% of toluene (\(\mathrm{A}\)) and 33\% of benzene (\(\mathrm{B}\)), given the vapor pressures of the pure substances: \(P_{\text{A}}^*=0.03\;\text{bar}\), and \(P_{\text{B}}^*=0.10\;\text{bar}\).
 \emph{Solution:} The data available for the systems are summarized as follows:
 \begin{equation}
 \begin{aligned}
@@ -6970,8 +6902,7 @@ As is clear from the results of Exercise \ref{exr:xaya}, the concentration of th
 
 The liquidus and Dew point lines determine a new section in the phase diagram where the liquid and vapor phases coexist. Since the degrees of freedom inside the area are only 2, for a system at constant temperature, a point inside the coexistence area has fixed mole fractions for both phases. We can reduce the pressure on top of a liquid solution with concentration \(x^i_{\text{B}}\) (see Figure \ref{fig:FigMC3}) until the solution hits the liquidus line. At this pressure, the solution forms a vapor phase with mole fraction given by the corresponding point on the Dew point line, \(y^f_{\text{B}}\).
 
-\hypertarget{t_textb-phase-diagrams-and-fractional-distillation}{%
-\subsection{\texorpdfstring{\(T_{\text{B}}\) phase diagrams and fractional distillation}{T\_\{\textbackslash text\{B\}\} phase diagrams and fractional distillation}}\label{t_textb-phase-diagrams-and-fractional-distillation}}
+\subsection{\texorpdfstring{\(T_{\text{B}}\) phase diagrams and fractional distillation}{T\_\{\textbackslash text\{B\}\} phase diagrams and fractional distillation}}\label{t_textb-phase-diagrams-and-fractional-distillation}
 
 We can now consider the phase diagram of a 2-component ideal solution as a function of temperature at constant pressure. The \(T_{\text{B}}\) diagram for two volatile components is reported in Figure \ref{fig:FigMC4}.
 
@@ -6997,8 +6928,7 @@ Compared to the \(Px_{\text{B}}\) diagram of Figure \ref{fig:FigMC3}, the phases
 
 Each of the horizontal lines in the lens region of the \(Tx_{\text{B}}\) diagram of Figure \ref{fig:FigMC5} corresponds to a condensation/evaporation process and is called a \emph{theoretical plate}. These plates are industrially realized on large columns with several floors equipped with condensation trays. The temperature decreases with the height of the column. A condensation/evaporation process will happen on each level, and a solution concentrated in the most volatile component is collected. The theoretical plates and the \(Tx_{\text{B}}\) are crucial for sizing the industrial fractional distillation columns.
 
-\hypertarget{phase-diagrams-of-non-ideal-solutions}{%
-\section{Phase Diagrams of Non-Ideal Solutions}\label{phase-diagrams-of-non-ideal-solutions}}
+\section{Phase Diagrams of Non-Ideal Solutions}\label{phase-diagrams-of-non-ideal-solutions}
 
 Non-ideal solutions follow Raoult's law for only a small amount of concentrations. The typical behavior of a non-ideal solution with a single volatile component is reported in the \(Px_{\text{B}}\) plot in Figure \ref{fig:FigMC6}.
 
@@ -7044,8 +6974,7 @@ The minimum (left plot) and maximum (right plot) points in Figure \ref{fig:FigMC
 
 An azeotrope is a constant boiling point solution whose composition cannot be altered or changed by simple distillation. This happens because the liquidus and Dew point lines coincide at this point. Therefore, the liquid and the vapor phases have the same composition, and distillation cannot occur. Two types of azeotropes exist, representative of the two types of non-ideal behavior of solutions. The first type is the positive azeotrope (left plot in Figure \ref{fig:FigMC8}). A notorious example of this behavior at atmospheric pressure is the ethanol/water mixture, with composition 95.63\% ethanol by mass. This positive azeotrope boils at \(T=78.2\;^\circ \text{C}\), a temperature that is lower than the boiling points of the pure constituents, since ethanol boils at \(T=78.4\;^\circ \text{C}\) and water at \(T=100\;^\circ \text{C}\). The second type is the negative azeotrope (right plot in Figure \ref{fig:FigMC8}). An example of this behavior at atmospheric pressure is the hydrochloric acid/water mixture with composition 20.2\% hydrochloric acid by mass. This negative azeotrope boils at \(T=110\;^\circ \text{C}\), a temperature that is higher than the boiling points of the pure constituents, since hydrochloric acid boils at \(T=-84\;^\circ \text{C}\) and water at \(T=100\;^\circ \text{C}\).
 
-\hypertarget{activity}{%
-\section{Activity}\label{activity}}
+\section{Activity}\label{activity}
 
 For non-ideal gases, we introduced in chapter \ref{RealGases} the concept of \emph{fugacity} as an \emph{effective pressure} that accounts for non-ideal behavior. If we extend this concept to non-ideal solution, we can introduce the \emph{activity} of a liquid or a solid, \(a\), as:
 
@@ -7125,8 +7054,7 @@ where \(P_i^{\text{R}}\) is the partial pressure calculated using Raoult's law. 
 
 As we already discussed in chapter \ref{ChemicalEquilibrium}, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it's defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.\footnote{Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of the activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to \(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) using Gibbs' relation. This is why the definition of a universally agreed-upon \href{https://en.wikipedia.org/wiki/Standard_state}{standard state} is such an essential concept in chemistry, and why it is defined by the \href{https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry}{International Union of Pure and Applied Chemistry (IUPAC)} and followed systematically by chemists around the globe.}
 
-\hypertarget{colligative-properties}{%
-\section{Colligative Properties}\label{colligative-properties}}
+\section{Colligative Properties}\label{colligative-properties}
 
 Colligative properties are properties of solutions that depend on the number of particles in the solution and not on the nature of the chemical species. More specifically, a colligative property depends on the ratio between the number of particles of the solute and the number of particles of the solvent. This ratio can be measured using any unit of concentration, such as mole fraction, molarity, and normality. For diluted solutions, however, the most useful concentration for studying colligative properties is the molality, \(m\), which measures the ratio between the number of particles of the solute (in moles) and the mass of the solvent (in kg):
 
@@ -7137,8 +7065,7 @@ m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
 
 Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the melting point, and osmotic pressure.
 
-\hypertarget{vapor-pressure-lowering}{%
-\subsection{Vapor pressure lowering}\label{vapor-pressure-lowering}}
+\subsection{Vapor pressure lowering}\label{vapor-pressure-lowering}
 
 As we have already discussed in chapter \ref{MCPhaseDiagrams}, the vapor pressure of an ideal solution follows Raoult's law. Its difference with respect to the vapor pressure of the pure solvent can be calculated as:
 
@@ -7152,8 +7079,7 @@ P_{\text{solvent}}^* &- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{so
 
 which shows that the vapor pressure lowering depends only on the concentration of the solute. As such, it is a colligative property.
 
-\hypertarget{boiling-point-elevation-and-melting-point-depression}{%
-\subsection{Boiling point elevation and melting point depression}\label{boiling-point-elevation-and-melting-point-depression}}
+\subsection{Boiling point elevation and melting point depression}\label{boiling-point-elevation-and-melting-point-depression}
 
 The following two colligative properties are explained by reporting the changes due to the solute molecules in the plot of the chemical potential as a function of temperature (Figure \ref{fig:FigPhase1}).
 
@@ -7228,8 +7154,7 @@ K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
 
 Notice from Figure \ref{fig:FigSol2} how the depression of the melting point is always larger than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water \(K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\), while \(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\). This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.
 
-\hypertarget{osmotic-pressure}{%
-\subsection{Osmotic pressure}\label{osmotic-pressure}}
+\subsection{Osmotic pressure}\label{osmotic-pressure}
 
 The osmotic pressure of a solution is defined as the difference in pressure between the solution and the pure liquid solvent when the two are in equilibrium across a semi-permeable (osmotic) membrane. The osmotic membrane is made of a porous material that allows the flow of solvent molecules but blocks the flow of the solute ones. The osmosis process is depicted in Figure \ref{fig:FigSol3}.
 
@@ -7251,11 +7176,9 @@ Starting from a solvent at atmospheric pressure in the apparatus depicted in Fig
 
 where \(i\) is the van 't Hoff factor introduced above, \(m\) is the molality of the solution, \(R\) is the ideal gas constant, and \(T\) the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.\footnote{For a derivation, see the osmotic pressure \href{https://en.wikipedia.org/wiki/Osmotic_pressure}{Wikipedia page}.}
 
-\hypertarget{rev13}{%
-\section{Chapter Review}\label{rev13}}
+\section{Chapter Review}\label{rev13}
 
-\hypertarget{quest13}{%
-\subsection{Study Questions}\label{quest13}}
+\subsection{Study Questions}\label{quest13}
 
 \textbf{1. What is the Gibbs phase rule for binary solutions with one phase present?}
 
@@ -7449,22 +7372,19 @@ where \(i\) is the van 't Hoff factor introduced above, \(m\) is the molality of
 
 Answers: 1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a
 
-\hypertarget{Kinetics}{%
-\chapter{Chemical Kinetics}\label{Kinetics}}
+\chapter{Chemical Kinetics}\label{Kinetics}
 
 From thermodynamics, we can determine the spontaneity of a reaction and its extent, using \(\Delta G\) and \(K_{\text{eq}}\), respectively. However, thermodynamics does not provide any information on how \emph{fast} the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.
 
 A chemical kinetics study aims to find the \emph{rate} of a reaction and to find the microscopic steps that compose it, determining its \emph{mechanism}.
 
-\hypertarget{diffintk}{%
-\section{Differential and integrated rate laws}\label{diffintk}}
+\section{Differential and integrated rate laws}\label{diffintk}
 
 The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, \(k\), called the \emph{rate coefficient}, and several parameters found at the exponent of the concentrations of the reactants, and are called \emph{reaction orders}. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The reaction rate is usually represented with the lowercase letter \(k\), and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter \(K\). Another useful concept in kinetics is the half-life, usually abbreviated with \(t_{1/2}\). The half-life is defined as the time required to reach half of the initial reactant concentration.
 
 A reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant's individual orders and is, at most, equal to three. We examine in detail the four most common reaction orders below.
 
-\hypertarget{zeroth-order-reaction}{%
-\subsection{Zeroth-order reaction}\label{zeroth-order-reaction}}
+\subsection{Zeroth-order reaction}\label{zeroth-order-reaction}
 
 For a zeroth-order reaction, the reaction rate is independent of the concentration of a reactant. In other words, if we have a reaction of the type:
 
@@ -7515,8 +7435,7 @@ t_{1/2} &= \frac{[\mathrm{A}]_0}{2k_0}.
 
 Zeroth-order reactions are common in several biochemical processes catalyzed by enzymes, such as the oxidation of ethanol to acetaldehyde in the liver by the alcohol dehydrogenase enzyme, which is zero-order in ethanol.
 
-\hypertarget{first-order-reaction}{%
-\subsection{First-order reaction}\label{first-order-reaction}}
+\subsection{First-order reaction}\label{first-order-reaction}
 
 A first-order reaction depends on the concentration of only one reactant, and is therefore also called a \emph{unimolecular reaction}. As for the previous case, if we consider a reaction of the type:
 
@@ -7576,8 +7495,7 @@ t_{1/2} &= \frac{\ln 2}{k_1}.
 
 The half-life of a first-order reaction is independent of the initial concentration of the reactant. Therefore, the half-life can be used in place of the rate coefficient to describe the reaction rate. Typical examples of first-order reactions are radioactive decays. For radioactive isotopes, it is common to report their rate of decay in terms of their half-life. For example, the most stable uranium nucleotide, \(^{238}\mathrm{U}\), has a half-life of \(4.468\times 10^9\) years, while the most common fissile isotope of uranium, \(^{235}\mathrm{U}\), has a half-life of \(7.038\times 10^8\) years.\footnote{Notice how large these numbers are for uranium. To put these numbers in perspective, we can compare them with the half-life of the most unstable isotope of plutonium, \(^{241}\mathrm{Pu}\), which is \(t_{1/2}=14.1\) years.} Other examples of first-order reactions in chemistry are the class of S\textsubscript{N}1 nucleophilic substitution reactions in organic chemistry.
 
-\hypertarget{second-order-reaction}{%
-\subsection{Second-order reaction}\label{second-order-reaction}}
+\subsection{Second-order reaction}\label{second-order-reaction}
 
 A reaction is second-order when the sum of the reaction orders is two. Elementary second-order reactions are also called \emph{bimolecular reactions}. There are two possibilities, a simple one, where the reaction order of one reagent is two, or a more complicated one, with two reagents having each a reaction order of one.
 
@@ -7646,8 +7564,7 @@ which, perhaps not surprisingly, depends on the initial concentration of the rea
   The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.
 \end{itemize}
 
-\hypertarget{third-and-higher-orders-reaction}{%
-\subsection{Third and higher orders reaction}\label{third-and-higher-orders-reaction}}
+\subsection{Third and higher orders reaction}\label{third-and-higher-orders-reaction}
 
 Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called \emph{termolecular reactions}. While termolecular reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
 
@@ -7662,13 +7579,11 @@ for which the differential rate law can be written as:
 \label{eq:kin17}
 \end{equation}
 
-\hypertarget{complex-rate-laws}{%
-\section{Complex Rate Laws}\label{complex-rate-laws}}
+\section{Complex Rate Laws}\label{complex-rate-laws}
 
 It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants.
 
-\hypertarget{consecutive-reactions}{%
-\subsection{Consecutive reactions}\label{consecutive-reactions}}
+\subsection{Consecutive reactions}\label{consecutive-reactions}
 
 A reaction that happens following a sequence of two elementary steps can be written as follows:
 
@@ -7762,8 +7677,7 @@ Since the concentration of \(B\) is small and relatively constant throughout the
 \label{eq:kincomp8}
 \end{equation}
 
-\hypertarget{competitive-reactions}{%
-\subsection{Competitive reactions}\label{competitive-reactions}}
+\subsection{Competitive reactions}\label{competitive-reactions}
 
 A process where two elementary reactions happen in parallel, competing with each can be written as follows:
 
@@ -7806,8 +7720,7 @@ An important relationship that can be derived from eq. \eqref{eq:kincomp2} is th
 \label{eq:kincomp5b}
 \end{equation}
 
-\hypertarget{opposed-reactions}{%
-\subsection{Opposed reactions}\label{opposed-reactions}}
+\subsection{Opposed reactions}\label{opposed-reactions}
 
 Another case of complex kinetic law happens when a pair of forward and reverse reactions occur simultaneously:
 
@@ -7869,20 +7782,19 @@ Considering that the concentrations of the species don't change at equilibrium:
 
 where \(K_C\) is the equilibrium constant as defined in chapter \ref{ChemicalEquilibrium}. This is a rare link between kinetics and thermodynamics and appears only for opposed reactions after sufficient time has passed so that the system can reach the dynamic equilibrium.
 
-\hypertarget{experimental-methods-for-determination-of-reaction-orders}{%
-\section{Experimental Methods for Determination of Reaction Orders}\label{experimental-methods-for-determination-of-reaction-orders}}
+\section{Experimental Methods for Determination of Reaction Orders}\label{experimental-methods-for-determination-of-reaction-orders}
 
 To experimentally measure the reaction rate, we need a method to measure concentration changes with respect to time. The simplest way to determine the reaction rate is to monitor the entire reaction as it proceeds and then plot the resulting data differently until a linear plot is found. A summary of the results obtained in section \ref{diffintk} and that is useful for this task is reported in the following table:
 
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.09}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.17}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.15}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.19}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.40}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0865}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1731}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1474}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1891}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4038}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \emph{Zeroth-Order}
@@ -7893,22 +7805,22 @@ To experimentally measure the reaction rate, we need a method to measure concent
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \emph{Complex Second-Order}
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Differential Rate Law} & \(-\frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0\) & \(-\frac{d[\mathrm{A}]}{dt}=k_1 [\mathrm{A}]\) & \(-\frac{d[\mathrm{A}]}{dt}=k_2 [\mathrm{A}]^2\) & \(-\frac{d[\mathrm{A}]}{dt}=k'_2 [\mathrm{A}][\mathrm{B}]\) \\
 \textbf{Integrated Rate Law} & \([\mathrm{A}]=[\mathrm{A}]_0 -k_0 t\) & \([\mathrm{A}]=[\mathrm{A}]_0 e^{-k_1 t}\) & \(\frac{1}{[\mathrm{A}]}=\frac{1}{[\mathrm{A}]_0} + k_2 t\) & \(\frac{\mathrm{[A]}}{\mathrm{[B]}}=\frac{\mathrm{[A]_0}}{\mathrm{[B]_0}}e^{\left(\mathrm{[A]_0}-\mathrm{[B]_0}\right)k'_2t}\) \\
 \textbf{Units of \(k\)} & \(\frac{\mathrm{M}}{\mathrm{s}}\) & \(\frac{1}{\mathrm{s}}\) & \(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\) & \(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\) \\
 \textbf{Linear Plot vs.~\(t\)} & \([\mathrm{A}]\) & \(\ln [\mathrm{A}]\) & \(\frac{1}{[\mathrm{A}]}\) & \(\ln \frac{[\mathrm{A}]_0[\mathrm{B}]}{[\mathrm{B}]_0[\mathrm{A}]}\) \\
 \textbf{Half-life} & \(t_{1/2}=\frac{[\mathrm{A}]_0}{2k_0}\) & \(t_{1/2}=\frac{\ln 2}{k_1}\) & \(t_{1/2}=\frac{1}{k_2 [\mathrm{A}]_0}\) & not easily defined \\
-\bottomrule
 \end{longtable}
 
 \normalsize
 
 However, this method works only if the reaction has few reactants, and it requires several measurements, each of which might be complicated to make. More useful methods to determine the reaction rate are the \emph{initial rate} and the \emph{isolation} methods that we describe below.
 
-\hypertarget{initial-rates-method}{%
-\subsection{Initial rates method}\label{initial-rates-method}}
+\subsection{Initial rates method}\label{initial-rates-method}
 
 The \emph{initial rates method} involves measuring the rate of a reaction as soon as it starts before any significant change in the concentrations of the reactants occurs. The initial rate method is practical only if the reaction is reasonably slow, but it can measure the rate unambiguously when more than one reactant is involved. For example, if we have a reaction with the following stoichiometry:
 
@@ -7926,11 +7838,11 @@ the initial rate method can be used to determine the coefficients of the rate la
 by designing three experiment, where the initial concentrations of \(\mathrm{A}\) and \(\mathrm{B}\) are appropriately changed. For example, let's consider the following experimental data from three different experiments:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.17}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.23}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.23}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.36}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1705}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2326}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2326}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3643}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \([\mathrm{A}]_0 \; (\text{M})\)
@@ -7939,12 +7851,13 @@ by designing three experiment, where the initial concentrations of \(\mathrm{A}\
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \(\text{initial rate}\;\left(\frac{M}{s}\right)\)
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \(\text{Experiment 1:}\) & 0.10 & 0.10 & 4.32 \\
 \(\text{Experiment 2:}\) & 0.15 & 0.10 & 9.70 \\
 \(\text{Experiment 3:}\) & 0.10 & 0.20 & 4.29 \\
-\bottomrule
 \end{longtable}
 
 we can calculate \(\alpha\) by taking the ratio of the rates measured in experiment 1 and 2:
@@ -7961,8 +7874,7 @@ we can calculate \(\alpha\) by taking the ratio of the rates measured in experim
 
 \(\beta\) can be calculated similarly by taking the ratio between experiments 1 and 3. Alternatively, we can also notice that the reaction rate does not change when the initial concentration \([\mathrm{B}]_0\) is doubled, therefore \(\beta=0\).
 
-\hypertarget{isolation-method}{%
-\subsection{Isolation method}\label{isolation-method}}
+\subsection{Isolation method}\label{isolation-method}
 
 Another method that is widely used to determine reaction orders is the \emph{isolation method}. This method is performed by using large excess concentrations of all reactants but one. For example, if we have the following reaction with three reagents and unknown rate law:
 
@@ -8009,8 +7921,7 @@ The coefficient \(\alpha\) can then be determined by incorporating the concentra
 
 and then determine \(\alpha\) by verifying which order the data collected for \([\mathrm{A}]\) at various time fit. This can be simply achieved by using the zero-, first-, and second-order kinetic plots, as reported in the table above. We can determine \(\beta\) and \(\gamma\) by repeating the same procedure for the data from the other two experiments. For example, if we find for a specific reaction that \(\alpha=\) 1, \(\beta=2\), and \(\gamma=0\), we can then say that the reaction is pseudo-order one in \(\mathrm{A}\), pseudo-order two in \(\mathrm{B}\), and pseudo-order zero in \(\mathrm{C}\), with an overall reaction order of three.
 
-\hypertarget{temperature-dependence-of-the-rate-coefficients}{%
-\section{Temperature Dependence of the Rate Coefficients}\label{temperature-dependence-of-the-rate-coefficients}}
+\section{Temperature Dependence of the Rate Coefficients}\label{temperature-dependence-of-the-rate-coefficients}
 
 The dependence of the rate coefficient, \(k\), on the temperature is given by the \textbf{Arrhenius equation}. This formula was derived by Svante August Arrhenius (1859--1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van 't Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of \(k\) when \(T\) is increased:
 
@@ -8050,11 +7961,9 @@ From empirical arguments, Arrhenius proposed the idea that reactants must acquir
 \caption{Reaction Coordinate Diagram for a Typical Reaction.}\label{fig:figk9}
 \end{figure}
 
-\hypertarget{rev15}{%
-\section{Chapter Review}\label{rev15}}
+\section{Chapter Review}\label{rev15}
 
-\hypertarget{exer15}{%
-\subsection{Practice Problems}\label{exer15}}
+\subsection{Practice Problems}\label{exer15}
 
 \textbf{Problem 1: Determining Reaction Order from Initial Rates}
 
@@ -8065,14 +7974,15 @@ Determine the reaction order with respect to each reagents and the rate law for 
 Given the following initial rate tables:
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule
+\toprule\noalign{}
 Experiment & {[}A{]} (M) & {[}B{]} (M) & Initial Rate (M/s) \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 1 & \(0.1\) & \(0.1\) & \(2.0 \times 10^{-3}\) \\
 2 & \(0.2\) & \(0.1\) & \(8.0 \times 10^{-3}\) \\
 3 & \(0.1\) & \(0.2\) & \(4.0 \times 10^{-3}\) \\
-\bottomrule
 \end{longtable}
 
 \textbf{Solution:} To determine the reaction orders, compare rates between experiments:
@@ -8198,8 +8108,7 @@ Then:
 
 \textbf{Answer:} The rate constant for the zero-order reaction is \(0.001\,\text{M}\text{s}^{-1}\).
 
-\hypertarget{quest15}{%
-\subsection{Study Questions}\label{quest15}}
+\subsection{Study Questions}\label{quest15}
 
 \textbf{1. Which of the following is true for a zeroth-order reaction?}
 
@@ -8300,6 +8209,7 @@ Then:
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
+\tightlist
 \item
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
@@ -8399,6 +8309,7 @@ Then:
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
+\tightlist
 \item
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
@@ -8441,21 +8352,19 @@ Answers: 1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\hypertarget{appendix}{%
-\chapter{Appendix}\label{appendix}}
+\chapter{Appendix}\label{appendix}
 
-\hypertarget{thermodynamic-data-of-inorganic-substances-at-298-k}{%
-\section{Thermodynamic Data of Inorganic Substances at 298 K}\label{thermodynamic-data-of-inorganic-substances-at-298-k}}
+\section{Thermodynamic Data of Inorganic Substances at 298 K}\label{thermodynamic-data-of-inorganic-substances-at-298-k}
 
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.12}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.23}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.23}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.21}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.21}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1136}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2216}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2273}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2102}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2102}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Substance:
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8471,8 +8380,10 @@ Substance:
 \(C_P\)
 \(\scriptstyle{\text{[J/(mol K)]}}\)
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Ag(g) & 284.9 & 246 & 173 & 20.8 \\
 Ag(s) & 0 & 0 & 42.6 & 25.4 \\
 Ag\textsuperscript{+}(aq) & 105.8 & 77.1 & 73.5 & \\
@@ -8598,7 +8509,8 @@ CuBr\textsubscript{2}(s) & --141.8 & & & \\
 CuCl(s) & --137.2 & --119.9 & 86.2 & 48.5 \\
 CuCl\textsubscript{2}(s) & --220.1 & --175.7 & 108.1 & 71.9 \\
 CuCN(s) & 96.2 & 111.3 & 84.5 & \\
-F\textsuperscript{--}(aq) & --335.4 & --278.8 & --13.8 \textbar{} & \\
+F\textsuperscript{--}(aq) & --335.4 & --278.8 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+--13.8 \textbar{} \textbar{}} \\
 F(g) & 79.4 & 62.3 & 158.8 & 22.7 \\
 F\textsubscript{2}(g) & 0 & 0 & 202.8 & 32.3 \\
 F\textsubscript{2}O(g) & 24.5 & 41.8 & 247.5 & 43.3 \\
@@ -8607,9 +8519,11 @@ FB(g) & --122.2 & --149.8 & 200.5 & 58.6 \\
 Fe(g) & 416.3 & 370.7 & 180.5 & 25.7 \\
 Fe(s) & 0 & 0 & 27.3 & 25.1 \\
 FeO(s) & --272.0 & --251.4 & 60.7 & \\
-Fe\textsuperscript{2+}(aq) & --89.1 & --78.9 & --137.7 \textbar{} & \\
+Fe\textsuperscript{2+}(aq) & --89.1 & --78.9 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+--137.7 \textbar{} \textbar{}} \\
 Fe\textsubscript{2}O\textsubscript{3}(s) & --824.2 & --742.2 & 87.4 & 103.9 \\
-Fe\textsuperscript{3+}(aq) & --48.5 & --4.7 & --315.9 \textbar{} & \\
+Fe\textsuperscript{3+}(aq) & --48.5 & --4.7 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+--315.9 \textbar{} \textbar{}} \\
 Fe\textsubscript{3}O\textsubscript{4}(s) & --1118.4 & --1015.4 & 146.4 & 143.4 \\
 FeCO\textsubscript{3}(s) & --740.6 & --666.7 & 92.9 & 82.1 \\
 FeS\textsubscript{2}(s) & --178.2 & --166.9 & 52.9 & 62.2 \\
@@ -8637,7 +8551,8 @@ HCl(aq) & --167.2 & --131.2 & 56.5 & \\
 HCl(g) & --92.3 & --95.3 & 186.9 & 29.1 \\
 HCN(g) & 135.1 & 124.7 & 201.8 & 35.9 \\
 HCN(l) & 108.9 & 125 & 112.8 & 70.6 \\
-HF(aq) & --332.6 & --278.8 & --13.8 \textbar{} & \\
+HF(aq) & --332.6 & --278.8 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+--13.8 \textbar{} \textbar{}} \\
 HF(g) & --273.3 & --275.4 & 173.8 & \\
 HI(aq) & --55.2 & --51.6 & 111.3 & \\
 HI(g) & 26.5 & 1.7 & 206.6 & 29.2 \\
@@ -8763,7 +8678,8 @@ NiF\textsubscript{2}(s) & --651.4 & --604.1 & 73.6 & 64.1 \\
 O(g) & 249.2 & 231.7 & 161.1 & 21.9 \\
 O\textsubscript{2}(g) & 0 & 0 & 205.2 & 29.4 \\
 O\textsubscript{3}(g) & 142.7 & 163.2 & 238.9 & 39.2 \\
-OH\textsuperscript{--}(aq) & --230.0 & --157.2 & --10.9 \textbar{} & \\
+OH\textsuperscript{--}(aq) & --230.0 & --157.2 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+--10.9 \textbar{} \textbar{}} \\
 Os(g) & 791 & 745 & 192.6 & 20.8 \\
 Os(s) & 0 & 0 & 32.6 & 24.7 \\
 OsO\textsubscript{4}(g) & --337.2 & --292.8 & 293.8 & 74.1 \\
@@ -8850,20 +8766,18 @@ Zr(g) & 608.8 & 566.5 & 181.4 & 26.7 \\
 Zr(s) & 0 & 0 & 39 & 25.4 \\
 ZrCl\textsubscript{2}(s) & --502.0 & --386 & 110 & \\
 ZrCl\textsubscript{4}(s) & --980.5 & --889.9 & 181.6 & 119.8 \\
-\bottomrule
 \end{longtable}
 
-\hypertarget{thermodynamic-data-of-organic-substances-at-298-k}{%
-\section{Thermodynamic Data of Organic Substances at 298 K}\label{thermodynamic-data-of-organic-substances-at-298-k}}
+\section{Thermodynamic Data of Organic Substances at 298 K}\label{thermodynamic-data-of-organic-substances-at-298-k}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.08}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.21}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.18}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.18}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0822}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2055}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1781}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1781}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1689}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1689}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Formula:
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8881,8 +8795,10 @@ Name:
 \(C_P\)
 \(\scriptstyle{\text{[J/(mol K)]}}\)
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 CHBr\textsubscript{3} & Bromoform(g) & 25 & 16 & 331 & 71 \\
 CHCl\textsubscript{3} & Chloroform(l) & --134.1 & --73.7 & 201.7 & 114.2 \\
 CHCl\textsubscript{3} & Chloroform(g) & --102.7 & 6.0 & 295.7 & 65.7 \\
@@ -9111,7 +9027,6 @@ C\textsubscript{16}H\textsubscript{34} & N-hexadecane(l) & --456.1 & & & 501.6 \
 C\textsubscript{16}H\textsubscript{34} & N-hexadecane(g) & --374.8 & & & \\
 C\textsubscript{18}H\textsubscript{12} & Chrysene(s) & 145.3 & & & \\
 C\textsubscript{18}H\textsubscript{12} & Chrysene(g) & 269.8 & & & \\
-\bottomrule
 \end{longtable}
 
 \end{document}

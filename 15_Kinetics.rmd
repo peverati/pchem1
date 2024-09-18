@@ -175,6 +175,7 @@ arrows(0.8, 0.75,2.5,0.75 , length=0, angle=90, code=3, lty="dotted")
 text(1.7,0.85, expression(paste('+k'[2])), col = "black")
 legend("topleft", inset=.03, expression(paste("second-order reaction")),box.col = "white", bg = "white", adj=0.15)
 ```
+
 Notice that the line has a *positive* angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of $k$ for a simple second order reaction are calculated from eq. \@ref(eq:kin11) and typically are $\frac{1}{\mathrm{M}\cdot \mathrm{s}}$.
 The half-life of a simple second-order reaction is:
 \begin{equation}
@@ -311,6 +312,7 @@ text(20,0.55, expression(paste('[B]')), col = "red")
 text(95,0.9, expression(paste('[C]')), col = "green")
 legend(25,1, inset=.03, expression(paste(k[1]," = 2",k[2]," = 0.08 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
 ```
+
 The second behavior is observed when $k_1\ll k_2$, and it produces the plot in Figure \@ref(fig:figk6) In this case, the concentration of the intermediate species $B$ is not relevant throughout the process, and the rate-determining step is the first reaction. As such, the process has the same rate law as an elementary reaction going directly from $A$ to $C$.
 
 ```{r figk6, echo=FALSE, fig.align='center', fig.cap='Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step.',fig.asp = .62}
@@ -342,6 +344,7 @@ text(10,0.08, expression(paste('[B]')), col = "red")
 text(95,0.95, expression(paste('[C]')), col = "green")
 legend(40,0.95, inset=.03, expression(paste(k[1]," = 0.04",k[2]," = 0.08 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
 ```
+
 Since the concentration of $B$ is small and relatively constant throughout the process, $\frac{d[\mathrm{B}]}{dT}=0$. We can then simplify the mathematical treatment of these reactions by eliminating it from the process altogether. This simplification is known as the *steady-state approximation*. It is used in chemical kinetics to study processes that undergo a series of reactions producing intermediate species whose concentrations are constants throughout the entire process.
 
 \begin{equation}
@@ -471,6 +474,7 @@ text(50,0, expression(paste('t'[eq])), col = "black")
 arrows(45,0,45,1 , length=0, angle=90, code=3, lty="dotted")
 legend(50,1, inset=.03, expression(paste(k[1]," = 2",k[-1]," = 0.2 ",s^-1)),box.col = "white", bg = "white", adj=0.15)
 ```
+
 As can be seen from the plots in Figure \@ref(fig:figkK), after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of $\mathrm{A}$ and $\mathrm{B}$ don't change. These equilibrium concentrations can be calculated replacing $t=\infty$ in eq. \@ref(eq:kinopp1):
 
 \begin{equation}

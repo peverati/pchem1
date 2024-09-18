@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
   <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Calculation of Entropy and the Third Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem1" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-04" />
+<meta name="date" content="2024-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="SecondLaw.html"/>
 <link rel="next" href="Potentials.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -346,8 +352,8 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="thirdlaw" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Calculation of Entropy and the Third Law of Thermodynamics</h1>
+<div id="thirdlaw" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Calculation of Entropy and the Third Law of Thermodynamics<a href="thirdlaw.html#thirdlaw" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to <em>always</em> consider changes in entropy in <em>both</em> the system (sys) and its surroundings (surr):</p>
 <p><span class="math display" id="eq:dsuniv">\[\begin{equation}
 \Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}},
@@ -358,8 +364,8 @@ MathJax.Hub.Config({
 d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}},
 \tag{7.2}
 \end{equation}\]</span></p>
-<div id="dssys" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></h2>
+<div id="dssys" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span><a href="thirdlaw.html#dssys" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In general <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> can be calculated using either its Definition <a href="SecondLaw.html#def:entropy">6.1</a>, or its differential formula, eq. <a href="SecondLaw.html#eq:dentropy">(6.5)</a>. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:</p>
 <p><span class="math display" id="eq:entropycycle">\[\begin{equation}
 \begin{aligned}
@@ -372,8 +378,8 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 \tag{7.3}
 \end{equation}\]</span></p>
 <p>with <span class="math inline">\(\Delta_1 S^{\text{sys}}\)</span> calculated at constant <span class="math inline">\(P\)</span>, and <span class="math inline">\(\Delta_2 S^{\text{sys}}\)</span> at constant <span class="math inline">\(T\)</span>. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in section <a href="FirstLaw.html#energyint">3.1</a>.</p>
-<div id="entropy-in-isothermal-processes" class="section level3" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> Entropy in isothermal processes</h3>
+<div id="entropy-in-isothermal-processes" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Entropy in isothermal processes<a href="thirdlaw.html#entropy-in-isothermal-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>For an ideal gas at constant temperature <span class="math inline">\(\Delta U =0\)</span>, and <span class="math inline">\(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\)</span>. Using the formula for <span class="math inline">\(W_{\mathrm{REV}}\)</span> in eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a> (or its analogue for <span class="math inline">\(P\)</span>), we obtain:
 <span class="math display" id="eq:sigconsttV">\[\begin{equation}
@@ -399,7 +405,6 @@ or, similarly:
 \end{equation}\]</span></p>
 <p>which corresponds in SI to the range of about 85–88 J/(mol K). This simple rule is named <strong>Trouton’s rule</strong>, after the French scientist that discovered it, Frederick Thomas Trouton (1863-1922).</p>
 <blockquote>
-
 <div class="exercise">
 <p><span id="exr:troutonex" class="exercise"><strong>Exercise 7.1  </strong></span>Calculate the standard entropy of vaporization of water knowing <span class="math inline">\(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= 44 \  \text{kJ/mol}\)</span>, as calculated in Exercise <a href="Thermochemistry.html#exr:HessLawEx">4.1</a>.</p>
 <p><em>Solution:</em> Using eq. <a href="thirdlaw.html#eq:trouton">(7.7)</a>—and knowing that at standard conditions of <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \  \text{bar}\)</span> the boiling temperature of water is 373 K—we calculate:</p>
@@ -407,12 +412,12 @@ or, similarly:
 \Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^{-\kern-6pt{\ominus}\kern-6pt-}= \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}.
 \tag{7.8}
 \end{equation}\]</span></p>
-The entropy of vaporization of water is far from Trouton’s rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.
+<p>The entropy of vaporization of water is far from Trouton’s rule range of 85–88 J/(mol K) because of the hydrogen bond interactions between its molecules. Other similar exceptions are ethanol, formic acid, and hydrogen fluoride.</p>
 </div>
 </blockquote>
 </div>
-<div id="entropy-in-adiabatic-processes" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> Entropy in adiabatic processes</h3>
+<div id="entropy-in-adiabatic-processes" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Entropy in adiabatic processes<a href="thirdlaw.html#entropy-in-adiabatic-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Since adiabatic processes happen without the exchange of heat, <span class="math inline">\(đQ=0\)</span>, it would be tempting to think that <span class="math inline">\(\Delta S^{\mathrm{sys}} = 0\)</span> for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes <span class="math inline">\(\Delta S^{\mathrm{sys}} \neq 0\)</span>. The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:</p>
 <p><span class="math display" id="eq:adiabaticent">\[\begin{equation}
 \begin{aligned}
@@ -422,8 +427,8 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 \tag{7.9}
 \end{equation}\]</span></p>
 </div>
-<div id="entropy-in-isochoric-processes" class="section level3" number="7.1.3">
-<h3><span class="header-section-number">7.1.3</span> Entropy in isochoric processes</h3>
+<div id="entropy-in-isochoric-processes" class="section level3 hasAnchor" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Entropy in isochoric processes<a href="thirdlaw.html#entropy-in-isochoric-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using eq. <a href="ZerothLaw.html#eq:Cvint1">(2.2)</a>. Since the heat exchanged at those conditions equals the energy (eq. <a href="FirstLaw.html#eq:dUqv">(3.7)</a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
 <p><span class="math display" id="eq:sconstV1">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T},
@@ -435,8 +440,8 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 \tag{7.11}
 \end{equation}\]</span></p>
 </div>
-<div id="entropy-in-isobaric-processes" class="section level3" number="7.1.4">
-<h3><span class="header-section-number">7.1.4</span> Entropy in isobaric processes</h3>
+<div id="entropy-in-isobaric-processes" class="section level3 hasAnchor" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> Entropy in isobaric processes<a href="thirdlaw.html#entropy-in-isobaric-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using eq. <a href="ZerothLaw.html#eq:Cpdef">(2.4)</a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
 <p><span class="math display" id="eq:sconstP1">\[\begin{equation}
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
@@ -449,8 +454,8 @@ The entropy of vaporization of water is far from Trouton’s rule range of 85–
 \end{equation}\]</span></p>
 </div>
 </div>
-<div id="dssurr" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></h2>
+<div id="dssurr" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span><a href="thirdlaw.html#dssurr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While the entropy of the system can be broken down into simple cases and calculated using the formulas introduced above, the entropy of the surroundings does not require such a complicated treatment, and it can always be calculated as:</p>
 <p><span class="math display" id="eq:dssurr">\[\begin{equation}
 \Delta S^{\mathrm{surr}} = \frac{Q_{\text{surr}}}{T_{\text{surr}}}=\frac{-Q_{\text{sys}}}{T_{\text{surr}}},
@@ -463,7 +468,6 @@ d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\tex
 \end{equation}\]</span></p>
 <p>where the substitution <span class="math inline">\(Q_{\text{surr}}=-Q_{\text{sys}}\)</span> can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermal chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, <span class="math inline">\(T_{\text{surr}}\)</span> will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.</p>
 <blockquote>
-
 <div class="exercise">
 <p><span id="exr:supercooledEx" class="exercise"><strong>Exercise 7.2  </strong></span>Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: <span class="math inline">\(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>, and assuming both <span class="math inline">\(C_P\)</span> to be independent on temperature.</p>
 <p><em>Solution:</em> <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> for the process under consideration can be calculated using the following cycle:</p>
@@ -500,12 +504,12 @@ Q^{\text{sys}} &amp; = \Delta H = \int_{263}^{273} C_P^{\mathrm{H}_2 \mathrm{O}_
 \Delta S^{\text{universe}}=\Delta S^{\text{sys}} + \Delta S^{\text{surr}} =  -20.6+21.3=+0.7 \; \text{J/K}.
 \tag{7.19}
 \end{equation}\]</span></p>
-Since the entropy changes in the universe are positive, the process is spontaneous, as expected.
+<p>Since the entropy changes in the universe are positive, the process is spontaneous, as expected.</p>
 </div>
 </blockquote>
 </div>
-<div id="spontS" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Clausius Theorem</h2>
+<div id="spontS" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Clausius Theorem<a href="thirdlaw.html#spontS" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>By replacing eq. <a href="thirdlaw.html#eq:dssurrd">(7.15)</a> into <a href="thirdlaw.html#eq:dsunivd">(7.2)</a> we can write the differential change in the entropy of the system as:</p>
 <p><span class="math display" id="eq:dssysd">\[\begin{equation}
 d S^{\mathrm{sys}} = d S^{\mathrm{universe}} - d S^{\mathrm{surr}} = d S^{\mathrm{universe}} + \frac{đQ_{\text{sys}}}{T}.
@@ -521,19 +525,18 @@ d S^{\mathrm{sys}} \geq \frac{đQ_{\text{sys}}}{T},
 \begin{aligned}
 d S^{\mathrm{sys}} &gt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{spontaneous, irreversible transformation} \\
 d S^{\mathrm{sys}} = \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{reversible transformation} \\
-d S^{\mathrm{sys}} &lt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{non-spontaneous, irreversible transformation}, 
+d S^{\mathrm{sys}} &lt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{non-spontaneous, irreversible transformation},
 \end{aligned}
 \tag{7.22}
 \end{equation}\]</span></p>
 <p>Clausius theorem provides a useful criterion to infer the spontaneity of a process, especially in cases where it’s hard to calculate <span class="math inline">\(\Delta S^{\mathrm{universe}}\)</span>. Eq. <a href="thirdlaw.html#eq:dssyscrit7">(7.21)</a> requires knowledge of quantities that are dependent on the system exclusively, such as the difference in entropy, the amount of heat that crosses the boundaries, and the temperature at which the process happens.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> If a process produces more entropy than the amount of heat that crosses the boundaries divided by the absolute temperature, it will be spontaneous. Vice versa, if the entropy produced is smaller than the amount of heat crossing the boundaries divided by the absolute temperature, the process will be non-spontaneous. The equality holds for systems in equilibrium with their surroundings, or for reversible processes since they happen through a series of equilibrium states. Measuring or calculating these quantities might not always be the simplest of calculations. We will return to the Clausius theorem in the next chapter when we seek more convenient indicators of spontaneity.</p>
 </div>
-<div id="thirdlawsect" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> The Third Law of Thermodynamics</h2>
+<div id="thirdlawsect" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> The Third Law of Thermodynamics<a href="thirdlaw.html#thirdlawsect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In chapter <a href="Thermochemistry.html#Thermochemistry">4</a>, we have discussed how to calculate reaction enthalpies for any reaction, given the formation enthalpies of reactants and products. In this section, we will try to do the same for reaction entropies. In this case, however, our task is simplified by a fundamental law of thermodynamics, introduced by Walther Hermann Nernst (1864–1941) in 1906.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> The statement that was initially known as Nernst’s Theorem is now officially recognized as the third fundamental law of thermodynamics, and it has the following definition:</p>
 <blockquote>
-
 <div class="definition">
-<span id="def:thirdlawdef" class="definition"><strong>Definition 7.1  </strong></span><em>Third Law of Thermodynamics:</em> The entropy of a perfectly ordered, pure, crystalline substance is zero at <span class="math inline">\(T=0 \; \text{K}\)</span>.
+<p><span id="def:thirdlawdef" class="definition"><strong>Definition 7.1  </strong></span><em>Third Law of Thermodynamics:</em> The entropy of a perfectly ordered, pure, crystalline substance is zero at <span class="math inline">\(T=0 \; \text{K}\)</span>.</p>
 </div>
 </blockquote>
 <p>This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive. This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences.</p>
@@ -546,10 +549,10 @@ d S^{\mathrm{sys}} &lt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{non-spontan
 <p>The careful wording in the definition of the third law <a href="thirdlaw.html#def:thirdlawdef">7.1</a> allows for the fact that some crystal might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at <span class="math inline">\(T=0 \; \text{K}\)</span>. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></p>
 <p>An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to <span class="math inline">\(T=0 \; \text{K}\)</span> in a finite number of steps.</p>
 </div>
-<div id="rev7" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Chapter Review</h2>
-<div id="exer7" class="section level3" number="7.5.1">
-<h3><span class="header-section-number">7.5.1</span> Practice Problems</h3>
+<div id="rev7" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Chapter Review<a href="thirdlaw.html#rev7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer7" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Practice Problems<a href="thirdlaw.html#exer7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Problem 1: Entropy Change in an Isothermal Expansion.</strong></p>
 <p>An ideal gas expands isothermally from a volume of <span class="math inline">\(2.0\,\text{L}\)</span> to <span class="math inline">\(5.0\,\text{L}\)</span> at <span class="math inline">\(300\,\text{K}\)</span>. Calculate the change in entropy of the system if there are <span class="math inline">\(0.5\,\text{mol}\)</span> of gas.</p>
 <p><strong>Solution:</strong> For an isothermal expansion of an ideal gas, we use the equation:</p>
@@ -614,8 +617,8 @@ Adjusting the significant digits gives us the final answer.</p>
 <p><span class="math display">\[\Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}= 353.8 - 596.7 = -242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\]</span></p>
 <p><strong>Answer:</strong> The standard reaction entropy for the combustion of methane is <span class="math inline">\(-242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
 </div>
-<div id="quest7" class="section level3" number="7.5.2">
-<h3><span class="header-section-number">7.5.2</span> Study Questions</h3>
+<div id="quest7" class="section level3 hasAnchor" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Study Questions<a href="thirdlaw.html#quest7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. What is the formula for calculating the change in entropy of the universe?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}\)</span>.</li>
@@ -663,9 +666,9 @@ Adjusting the significant digits gives us the final answer.</p>
 <hr />
 <p><strong>6. Which of the following formula describes what the Clausius theorem state?</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(dS^{\text{sys}} = \frac{đQ}{T}\)</span>.</li>
-<li><span class="math inline">\(dS^{\text{sys}} &lt; \frac{đQ}{T}\)</span>.</li>
-<li><span class="math inline">\(dS^{\text{sys}} &gt; \frac{đQ}{T}\)</span>.</li>
+<li><span class="math inline">\(dS^{\text{sys}} =    \frac{đQ}{T}\)</span>.</li>
+<li><span class="math inline">\(dS^{\text{sys}} &lt;    \frac{đQ}{T}\)</span>.</li>
+<li><span class="math inline">\(dS^{\text{sys}} &gt;    \frac{đQ}{T}\)</span>.</li>
 <li><span class="math inline">\(dS^{\text{sys}} \leq \frac{đQ}{T}\)</span>.</li>
 <li><span class="math inline">\(dS^{\text{sys}} \geq \frac{đQ}{T}\)</span>.</li>
 </ol>
@@ -735,7 +738,6 @@ Click to reveal
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -754,6 +756,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -774,6 +777,10 @@ gitbook.start({
 "text": null
 },
 "download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -787,7 +794,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
