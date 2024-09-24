@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-18" />
+<meta name="date" content="2024-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,10 +178,14 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
 <li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
-<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.4.1</b> Practice Problems</a></li>
-<li class="chapter" data-level="6.4.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.4.2</b> Study Questions</a></li>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
@@ -379,12 +383,12 @@ dU = TdS-PdV+\sum_i\mu_i dn_i,
 \tag{8.2}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(dn_i\)</span> is the differential change in the number of moles of substance <span class="math inline">\(i\)</span>, and the summation extends over all chemical species in the system.</p>
-<p>According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, <span class="math inline">\(S\)</span>, volume, <span class="math inline">\(V\)</span>, and the numbers of moles <span class="math inline">\(\{n_i\}\)</span>.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> To emphasize the important connections given by the fundamental equation, we can use the notation <span class="math inline">\(U(S,V,\{n_i\})\)</span> and we can term <span class="math inline">\(S\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\{n_i\}\)</span> <strong>natural variables</strong> of the energy.</p>
+<p>According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, <span class="math inline">\(S\)</span>, volume, <span class="math inline">\(V\)</span>, and the numbers of moles <span class="math inline">\(\{n_i\}\)</span>.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Because of their importance in determining the internal energy, these three variables are crucial in thermodynamics. Under several circumstances, however, they might not be the most convenient variables to use.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> To emphasize the important connections given by the fundamental equation, we can use the notation <span class="math inline">\(U(S,V,\{n_i\})\)</span> and we can term <span class="math inline">\(S\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(\{n_i\}\)</span> <strong>natural variables</strong> of the energy.</p>
 </div>
 <div id="thermpot" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Thermodynamic Potentials<a href="Potentials.html#thermpot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a></p>
-<p>Taking the internal energy as defined in eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we can perform such procedure by subtracting products of the following conjugate variables pairs: <span class="math inline">\(T \text{ and } S\)</span> or <span class="math inline">\(-P \text{ and } V\)</span>. This procedure aims to define new state functions that depend on more convenient natural variables.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a> The new functions are called “thermodynamic potential energies,” or simply <strong>thermodynamic potentials</strong>.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> An example of this procedure is given by the definition of enthalpy that we have already seen in section <a href="FirstLaw.html#enthalpy">3.1.4</a>. If we take the internal energy and subtract the product of two conjugate variables (<span class="math inline">\(-P\)</span> and <span class="math inline">\(V\)</span>), we obtain a new state function called enthalpy, as we did in eq. <a href="FirstLaw.html#eq:enthalpydef">(3.9)</a>). Taking the differential of this definition, we obtain:</p>
+<p>Starting from the fundamental equation, we can define new thermodynamic state functions that are more convenient to use under certain specific conditions. The new functions are determined by using a mathematical procedure called the Legendre transformation. A Legendre transformation is a linear change in variables that brings from an initial mathematical function to a new function obtained by subtracting one or more products of conjugate variables.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a></p>
+<p>Taking the internal energy as defined in eq. <a href="Potentials.html#eq:dunv">(8.1)</a>, we can perform such procedure by subtracting products of the following conjugate variables pairs: <span class="math inline">\(T \text{ and } S\)</span> or <span class="math inline">\(-P \text{ and } V\)</span>. This procedure aims to define new state functions that depend on more convenient natural variables.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> The new functions are called “thermodynamic potential energies,” or simply <strong>thermodynamic potentials</strong>.<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a> An example of this procedure is given by the definition of enthalpy that we have already seen in section <a href="FirstLaw.html#enthalpy">3.1.4</a>. If we take the internal energy and subtract the product of two conjugate variables (<span class="math inline">\(-P\)</span> and <span class="math inline">\(V\)</span>), we obtain a new state function called enthalpy, as we did in eq. <a href="FirstLaw.html#eq:enthalpydef">(3.9)</a>). Taking the differential of this definition, we obtain:</p>
 <p><span class="math display" id="eq:dhdef1">\[\begin{equation}
 dH = dU +VdP +PdV,
 \tag{8.3}
@@ -475,7 +479,7 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 <li>Internal energy (<span class="math inline">\(U\)</span>) is the capacity to do work plus the capacity to release heat.</li>
 <li>Enthalpy (<span class="math inline">\(H\)</span>) is the capacity to do non-mechanical work plus the capacity to release heat.</li>
 <li>Gibbs free energy (<span class="math inline">\(G\)</span>) is the capacity to do non-mechanical work.</li>
-<li>Helmholtz free energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a></li>
+<li>Helmholtz free energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a></li>
 </ul>
 <p>Where non-mechanical work is defined as any type of work that is not expansion or compression (<span class="math inline">\(PV\)</span>–work). A typical example of non-mechanical work is electrical work.</p>
 </div>
@@ -495,7 +499,7 @@ dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 \end{aligned}
 \tag{8.10}
 \end{equation}\]</span></p>
-<p>The latter two cases are particularly interesting since most of chemistry happens at either constant volume,<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> or constant pressure.<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> Since <span class="math inline">\(dS=0\)</span> is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies.</p>
+<p>The latter two cases are particularly interesting since most of chemistry happens at either constant volume,<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> or constant pressure.<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> Since <span class="math inline">\(dS=0\)</span> is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies.</p>
 <p>Recalling Clausius theorem:</p>
 <p><span class="math display" id="eq:dssyscrit">\[\begin{equation}
 d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
@@ -595,7 +599,7 @@ V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\
 \end{aligned}
 \tag{8.18}
 \end{equation}\]</span></p>
-<p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relations</strong>,<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
+<p>The relations in <a href="Potentials.html#eq:maxrelf">(8.18)</a> are called <strong>Maxwell relations</strong>,<a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a> and are useful in experimental settings to relate quantities that are hard to measure with others that are more intuitive.</p>
 <blockquote>
 <div class="exercise">
 <p><span id="exr:maxwellEx" class="exercise"><strong>Exercise 8.1  </strong></span>Derive the last Maxwell relation in eq. <a href="Potentials.html#eq:maxrelf">(8.18)</a>.</p>
@@ -732,16 +736,16 @@ Click to reveal
 </div>
 <div class="footnotes">
 <hr />
-<ol start="31">
-<li id="fn31"><p>In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.<a href="Potentials.html#fnref31" class="footnote-back">↩︎</a></p></li>
-<li id="fn32"><p>For example, we don’t always have a simple way to calculate or to measure the entropy.<a href="Potentials.html#fnref32" class="footnote-back">↩︎</a></p></li>
-<li id="fn33"><p>The mathematical condition that is fulfilled when performing a Legendre transformation is that the first derivatives of the original function and its transformation are inverse functions of each other.<a href="Potentials.html#fnref33" class="footnote-back">↩︎</a></p></li>
-<li id="fn34"><p>The rigorous mathematical definition of conjugate variables is unimportant at this stage. However, we can relate the variables in a pair with basic physics by noticing how the first variable in a pair is always intensive (<span class="math inline">\(T\)</span> and <span class="math inline">\(-P\)</span>), while the second one is always extensive (<span class="math inline">\(S\)</span> and <span class="math inline">\(V\)</span>). The intensive variables represent thermodynamic driving forces (as compared with mechanical forces in classical mechanics), while the extensive ones are the thermodynamic displacements (as compared with spatial displacements in classical mechanics). Similarly to classical mechanics, the product of two conjugate variables in a pair yields an energy. The minus sign in front of <span class="math inline">\(P\)</span> is explained by the fact that an increase in the force should always correspond to an increase in the displacement (while <span class="math inline">\(P\)</span> and <span class="math inline">\(V\)</span> are inversely related).<a href="Potentials.html#fnref34" class="footnote-back">↩︎</a></p></li>
-<li id="fn35"><p>Even if we introduced both concepts in the same chapter, it is important to never confuse the <em>thermodynamic potentials</em>—which are potential energy functions—with the <em>chemical potential</em>—which have been introduced by Gibbs to study heat in chemical reactions.<a href="Potentials.html#fnref35" class="footnote-back">↩︎</a></p></li>
-<li id="fn36"><p>For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the <a href="https://en.wikipedia.org/wiki/Thermodynamic_square">thermodynamic square</a>.<a href="Potentials.html#fnref36" class="footnote-back">↩︎</a></p></li>
-<li id="fn37"><p>for example, several industrial processes in chemical plants.<a href="Potentials.html#fnref37" class="footnote-back">↩︎</a></p></li>
-<li id="fn38"><p>for example, most processes in a chemistry lab.<a href="Potentials.html#fnref38" class="footnote-back">↩︎</a></p></li>
-<li id="fn39"><p>Maxwell relations should not be confused with the Maxwell equations of electromagnetism.<a href="Potentials.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<ol start="32">
+<li id="fn32"><p>In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species undergo chemical reactions.<a href="Potentials.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<li id="fn33"><p>For example, we don’t always have a simple way to calculate or to measure the entropy.<a href="Potentials.html#fnref33" class="footnote-back">↩︎</a></p></li>
+<li id="fn34"><p>The mathematical condition that is fulfilled when performing a Legendre transformation is that the first derivatives of the original function and its transformation are inverse functions of each other.<a href="Potentials.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn35"><p>The rigorous mathematical definition of conjugate variables is unimportant at this stage. However, we can relate the variables in a pair with basic physics by noticing how the first variable in a pair is always intensive (<span class="math inline">\(T\)</span> and <span class="math inline">\(-P\)</span>), while the second one is always extensive (<span class="math inline">\(S\)</span> and <span class="math inline">\(V\)</span>). The intensive variables represent thermodynamic driving forces (as compared with mechanical forces in classical mechanics), while the extensive ones are the thermodynamic displacements (as compared with spatial displacements in classical mechanics). Similarly to classical mechanics, the product of two conjugate variables in a pair yields an energy. The minus sign in front of <span class="math inline">\(P\)</span> is explained by the fact that an increase in the force should always correspond to an increase in the displacement (while <span class="math inline">\(P\)</span> and <span class="math inline">\(V\)</span> are inversely related).<a href="Potentials.html#fnref35" class="footnote-back">↩︎</a></p></li>
+<li id="fn36"><p>Even if we introduced both concepts in the same chapter, it is important to never confuse the <em>thermodynamic potentials</em>—which are potential energy functions—with the <em>chemical potential</em>—which have been introduced by Gibbs to study heat in chemical reactions.<a href="Potentials.html#fnref36" class="footnote-back">↩︎</a></p></li>
+<li id="fn37"><p>For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the <a href="https://en.wikipedia.org/wiki/Thermodynamic_square">thermodynamic square</a>.<a href="Potentials.html#fnref37" class="footnote-back">↩︎</a></p></li>
+<li id="fn38"><p>for example, several industrial processes in chemical plants.<a href="Potentials.html#fnref38" class="footnote-back">↩︎</a></p></li>
+<li id="fn39"><p>for example, most processes in a chemistry lab.<a href="Potentials.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<li id="fn40"><p>Maxwell relations should not be confused with the Maxwell equations of electromagnetism.<a href="Potentials.html#fnref40" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

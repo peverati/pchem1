@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-18" />
+<meta name="date" content="2024-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,10 +178,14 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
 <li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
-<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.4.1</b> Practice Problems</a></li>
-<li class="chapter" data-level="6.4.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.4.2</b> Study Questions</a></li>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
@@ -459,10 +463,32 @@ Figure 6.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
 </div>
 </blockquote>
 </div>
-<div id="rev6" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Chapter Review<a href="SecondLaw.html#rev6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="exer6" class="section level3 hasAnchor" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Practice Problems<a href="SecondLaw.html#exer6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="boltzmann-entropy" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Boltzmann Entropy<a href="SecondLaw.html#boltzmann-entropy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the previous chapter, we introduced Clausius’s entropy to describe how heat and work interact in macroscopic systems. In this chapter, we saw how entropy increases in isolated systems, with this increase being linked to irreversibility and the second law of thermodynamics. From this perspective, entropy is a tool that explains how energy transformations behave, and what limits the efficiency of those processes. However, in order to connect the molecular behaviors that chemistry describes with the macroscopic laws of thermodynamics, we need to explore what entropy really <em>is</em>. To do this, we need to dive into the microscopic world, where entropy is interpreted in terms of the underlying microstates that define the system.</p>
+<p>This exploration of entropy from a microscopic perspective was pioneered by Ludwig Edward Boltzmann (1844-1906), which introduced a formula to describe a statistical concept, which he then linked to Clausius’s thermodynamic entropy. The microscopic definition of Boltzmann’s entropy is summarized in the formula that became famous as Boltzmann equation:</p>
+<p><span class="math display" id="eq:boltzmanneq">\[\begin{equation}
+S = k_B \ln \Omega,
+\tag{6.15}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(S\)</span> is the entropy, <span class="math inline">\(k_B\)</span> is the Boltzmann constant, <span class="math inline">\(k_B = R/N_A = 1.380649 \times 10^{-23} \, \text{J/K}\)</span>, where <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(N_A\)</span> Avogadro’s constant, and finally <span class="math inline">\(\Omega\)</span> is the multiplicity of the system (that is, the number of possible microstates that correspond to a given macrostate). Boltzmann equation tells us that this statistical form of entropy is directly related to the number of microscopic configurations (microstates) available to a system. More microstates mean more entropy. The logarithmic relationship ensures that entropy scales appropriately with the size of the system and that small changes in the number of microstates lead to measurable changes in entropy. It is important to notice that the microscopic statistical entropy of Boltzmann is, in principle, a different concept than the macroscopic thermodynamic entropy of Clausius. The beauty of Boltzmann equation is that it shows how these two concept are connected with each other. In particular, the key role in the equation is played by the Boltzmann constant, which is the proportionality factor between the two concepts of entropy. This constant is a fundamental constant of nature at the microscopic level, relating the thermal energy of a gas with its temperature. At the macroscopic level, however, it can obtained simply from the ideal gas law as:</p>
+<p><span class="math display" id="eq:stat2">\[\begin{equation}
+k_B = \frac{PV}{TN},
+\tag{6.16}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(N=nN_A\)</span> being the number of molecules in a system.</p>
+<p>The second key concept in the Boltzmann equation is that the state of a system at the microscopic level is described by a <strong>microstate</strong>. A microstate specifies the exact arrangement of each particle in the system, including their positions and momenta. For example, in an ideal gas, a microstate would tell us the precise position and velocity of every individual gas molecule at a given moment. In contrast, a <strong>macrostate</strong> describes the system using macroscopic variables like pressure, temperature, and volume. A single macrostate can correspond to a large number of different microstates, since there are many ways the particles can be arranged that result in the same overall macroscopic properties.</p>
+<p>The <strong>multiplicity</strong> of a system, denoted by <span class="math inline">\(\Omega\)</span>, is the number of distinct microstates that correspond to a given macrostate. Systems naturally evolve toward macrostates with higher multiplicities because these are more probable. In other words, a system is more likely to be found in a macrostate that is associated with a high number of possible microstates, simply because there are more ways to arrange the particles. Consider an example where a gas expands into a larger volume. Initially, the particles are confined to a smaller volume, which corresponds to a relatively small number of microstates. When the gas expands, the particles have more space to occupy, leading to a greater number of possible microstates. As a result, the multiplicity <span class="math inline">\(\Omega\)</span> increases, and so does the entropy.</p>
+<p>Boltzmann equation gives us a powerful tool to link the macroscopic behavior of a system (entropy) to the microscopic behavior of its individual particles (microstates). The more microstates available to the system, the higher the entropy. Systems naturally evolve toward macrostates with the highest multiplicity (i.e., the largest number of microstates), which explains why entropy tends to increase in isolated systems and the second law of thermodynamics.</p>
+<div id="why-disorder-can-be-misleading" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Why “Disorder” Can Be Misleading<a href="SecondLaw.html#why-disorder-can-be-misleading" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As first shown by Boltzmann himself, although thermodynamic entropy and statistical entropy arise from different perspectives, they describe the same underlying reality. One common misconception about entropy is that it is simply a measure of “disorder.” While there is some truth to this idea, it can be misleading. A more accurate description of entropy is that it measures the number of possible ways a system can be arranged, which corresponds to the amount of “information” needed to describe the system at the microscopic level. For example, when ice melts into water, the entropy of the system increases, but the resulting liquid is not necessarily more “disordered” than the solid ice. Instead, the liquid has more possible microstates, as the water molecules can move more freely compared to the fixed structure of ice. While we would be able to describe the solid macrostate using a small number of microstates (in principle the number of microstate for a solid could be even as small as one), we would always need many more microstates to describe the liquid one. The common misconception of a messy room having more entropy than a tidier one is indeed a mistake, as entropy (at least the thermodynamic entropy that we are discussing here) doesn’t play a role in either of these situations. If we want to stretch the analogy and treat objects in a room the same way we trear particles in a system, the analogy also doesn’t work, as both the messy room and the tidy one represent only one way of arranging the objects in the room (a microstate), so the entropy is zero for both, since <span class="math inline">\(S=k_B \ln(1)=0\)</span>.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p>
+</div>
+</div>
+<div id="rev6" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Chapter Review<a href="SecondLaw.html#rev6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer6" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Practice Problems<a href="SecondLaw.html#exer6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Problem 1: Efficiency of an Irreversible Cycle</strong></p>
 <p>An irreversible heat engine operates between reservoirs at <span class="math inline">\(600\,\text{K}\)</span> and <span class="math inline">\(300\,\text{K}\)</span>. If its efficiency is 80% of the maximum possible efficiency, calculate its actual efficiency.</p>
 <p><strong>Solution:</strong> The maximum possible efficiency is that of a Carnot cycle:</p>
@@ -486,8 +512,8 @@ Figure 6.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
 <p><span class="math display">\[Q_c = -2.5\,\frac{\text{J}}{\text{K}} \cdot 300\,\text{K} = -750\,\text{J}\]</span></p>
 <p><strong>Answer:</strong> The heat rejected to the cold reservoir is <span class="math inline">\(-750\,\text{J}\)</span>. The negative sign indicates that heat is leaving the system.</p>
 </div>
-<div id="quest6" class="section level3 hasAnchor" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Study Questions<a href="SecondLaw.html#quest6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="quest6" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Study Questions<a href="SecondLaw.html#quest6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. What concept did Rudolf Clausius introduce inspired by Carnot’s findings?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>Efficiency.</li>
@@ -587,6 +613,12 @@ Click to reveal
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="27">
+<li id="fn27"><p>If we really want to use this analogy, then a better version would be that of a hotel with identical rooms containing the same objects. The configuration of all unmade rooms in the morning has a higher entropy than the configuration of the same rooms after the house keepers have arranged all the objects in every room exactly the same way.<a href="SecondLaw.html#fnref27" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

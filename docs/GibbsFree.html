@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-18" />
+<meta name="date" content="2024-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,10 +178,14 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
 <li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
-<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.4.1</b> Practice Problems</a></li>
-<li class="chapter" data-level="6.4.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.4.2</b> Study Questions</a></li>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
@@ -354,7 +358,7 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="GibbsFree" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">9</span> Gibbs Free Energy<a href="GibbsFree.html#GibbsFree" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
+<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a> As such, we will focus our attention on the Gibbs free energy.</p>
 <div id="gibbseqsec" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Gibbs Equation<a href="GibbsFree.html#gibbseqsec" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Recalling from chapter <a href="Potentials.html#Potentials">8</a>, the definition of <span class="math inline">\(G\)</span> is:</p>
@@ -385,7 +389,7 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 \end{aligned}
 \tag{9.4}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a></p>
+<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a></p>
 <p>The following four options are possible for <span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of a chemical reaction:</p>
 <table>
 <colgroup>
@@ -543,7 +547,7 @@ Figure 9.1: Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseo
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
 \]</span></p>
-<p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs free energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
+<p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs free energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
 <p><span class="math display" id="eq:dgconstn">\[\begin{equation}
 \int_0^G d G = \int_0^n \mu^* dn,
 \tag{9.17}
@@ -758,10 +762,10 @@ Click to reveal
 </div>
 <div class="footnotes">
 <hr />
-<ol start="40">
-<li id="fn40"><p>The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.<a href="GibbsFree.html#fnref40" class="footnote-back">↩︎</a></p></li>
-<li id="fn41"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book <a href="appendix.html#appendix">15</a>. For cases where <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="GibbsFree.html#fnref41" class="footnote-back">↩︎</a></p></li>
-<li id="fn42"><p>For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.<a href="GibbsFree.html#fnref42" class="footnote-back">↩︎</a></p></li>
+<ol start="41">
+<li id="fn41"><p>The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.<a href="GibbsFree.html#fnref41" class="footnote-back">↩︎</a></p></li>
+<li id="fn42"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book <a href="appendix.html#appendix">15</a>. For cases where <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="GibbsFree.html#fnref42" class="footnote-back">↩︎</a></p></li>
+<li id="fn43"><p>For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.<a href="GibbsFree.html#fnref43" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

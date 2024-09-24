@@ -354,7 +354,37 @@ which proves that for any irreversible process in an isolated system, the entrop
 *Second Law of Thermodynamics:* for any spontaneous process, the entropy of the universe is increasing.
 > ```
 
+## Boltzmann Entropy
 
+In the previous chapter, we introduced Clausius's entropy to describe how heat and work interact in macroscopic systems. In this chapter, we saw how entropy increases in isolated systems, with this increase being linked to irreversibility and the second law of thermodynamics. From this perspective, entropy is a tool that explains how energy transformations behave, and what limits the efficiency of those processes. However, in order to connect the molecular behaviors that chemistry describes with the macroscopic laws of thermodynamics, we need to explore what entropy really *is*. To do this, we need to dive into the microscopic world, where entropy is interpreted in terms of the underlying microstates that define the system. 
+
+This exploration of entropy from a microscopic perspective was pioneered by Ludwig Edward Boltzmann (1844-1906), which introduced a formula to describe a statistical concept, which he then linked to Clausius's thermodynamic entropy. The microscopic definition of Boltzmann's entropy is summarized in the formula that became famous as Boltzmann equation:
+
+\begin{equation}
+S = k_B \ln \Omega,
+(\#eq:boltzmanneq)
+\end{equation}
+
+
+where $S$ is the entropy, $k_B$ is the Boltzmann constant, $k_B = R/N_A = 1.380649 \times 10^{-23} \, \text{J/K}$, where $R$ is the ideal gas constant, and $N_A$ Avogadro's constant, and finally $\Omega$ is the multiplicity of the system (that is, the number of possible microstates that correspond to a given macrostate). Boltzmann equation tells us that this statistical form of entropy is directly related to the number of microscopic configurations (microstates) available to a system. More microstates mean more entropy. The logarithmic relationship ensures that entropy scales appropriately with the size of the system and that small changes in the number of microstates lead to measurable changes in entropy. It is important to notice that the microscopic statistical entropy of Boltzmann is, in principle, a different concept than the macroscopic thermodynamic entropy of Clausius. The beauty of Boltzmann equation is that it shows how these two concept are connected with each other. In particular, the key role in the equation is played by the Boltzmann constant, which is the proportionality factor between the two concepts of entropy. This constant is a fundamental constant of nature at the microscopic level, relating the thermal energy of a gas with its temperature. At the macroscopic level, however, it can obtained simply from the ideal gas law as:
+
+
+\begin{equation}
+k_B = \frac{PV}{TN},
+(\#eq:stat2)
+\end{equation}
+
+with $N=nN_A$ being the number of molecules in a system. 
+
+The second key concept in the Boltzmann equation is that the state of a system at the microscopic level is described by a **microstate**. A microstate specifies the exact arrangement of each particle in the system, including their positions and momenta. For example, in an ideal gas, a microstate would tell us the precise position and velocity of every individual gas molecule at a given moment. In contrast, a **macrostate** describes the system using macroscopic variables like pressure, temperature, and volume. A single macrostate can correspond to a large number of different microstates, since there are many ways the particles can be arranged that result in the same overall macroscopic properties. 
+
+The **multiplicity** of a system, denoted by $\Omega$, is the number of distinct microstates that correspond to a given macrostate. Systems naturally evolve toward macrostates with higher multiplicities because these are more probable. In other words, a system is more likely to be found in a macrostate that is associated with a high number of possible microstates, simply because there are more ways to arrange the particles. Consider an example where a gas expands into a larger volume. Initially, the particles are confined to a smaller volume, which corresponds to a relatively small number of microstates. When the gas expands, the particles have more space to occupy, leading to a greater number of possible microstates. As a result, the multiplicity $\Omega$ increases, and so does the entropy.
+
+Boltzmann equation gives us a powerful tool to link the macroscopic behavior of a system (entropy) to the microscopic behavior of its individual particles (microstates). The more microstates available to the system, the higher the entropy. Systems naturally evolve toward macrostates with the highest multiplicity (i.e., the largest number of microstates), which explains why entropy tends to increase in isolated systems and the second law of thermodynamics.
+
+### Why "Disorder" Can Be Misleading
+
+As first shown by Boltzmann himself, although thermodynamic entropy and statistical entropy arise from different perspectives, they describe the same underlying reality. One common misconception about entropy is that it is simply a measure of "disorder." While there is some truth to this idea, it can be misleading. A more accurate description of entropy is that it measures the number of possible ways a system can be arranged, which corresponds to the amount of "information" needed to describe the system at the microscopic level. For example, when ice melts into water, the entropy of the system increases, but the resulting liquid is not necessarily more "disordered" than the solid ice. Instead, the liquid has more possible microstates, as the water molecules can move more freely compared to the fixed structure of ice. While we would be able to describe the solid macrostate using a small number of microstates (in principle the number of microstate for a solid could be even as small as one), we would always need many more microstates to describe the liquid one. The common misconception of a messy room having more entropy than a tidier one is indeed a mistake, as entropy (at least the thermodynamic entropy that we are discussing here) doesn't play a role in either of these situations. If we want to stretch the analogy and treat objects in a room the same way we trear particles in a system, the analogy also doesn't work, as both the messy room and the tidy one represent only one way of arranging the objects in the room (a microstate), so the entropy is zero for both, since $S=k_B \ln(1)=0$.^[If we really want to use this analogy, then a better version would be that of a hotel with identical rooms containing the same objects. The configuration of all unmade rooms in the morning has a higher entropy than the configuration of the same rooms after the house keepers have arranged all the objects in every room exactly the same way.]
 
 ## Chapter Review {#rev6}
 

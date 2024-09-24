@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-18" />
+<meta name="date" content="2024-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,10 +178,14 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
 <li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
-<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.4.1</b> Practice Problems</a></li>
-<li class="chapter" data-level="6.4.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.4.2</b> Study Questions</a></li>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
@@ -438,7 +442,7 @@ P_i=x_i P_i^*.
 Figure 13.1: The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.
 </p>
 </div>
-<p>As emerges from Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>, Raoult’s law divides the diagram into two distinct areas, each with three degrees of freedom.<a href="#fn63" class="footnote-ref" id="fnref63"><sup>63</sup></a> Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult’s law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.</p>
+<p>As emerges from Figure <a href="MCPhaseDiagrams.html#fig:FigMC1">13.1</a>, Raoult’s law divides the diagram into two distinct areas, each with three degrees of freedom.<a href="#fn64" class="footnote-ref" id="fnref64"><sup>64</sup></a> Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult’s law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.</p>
 </div>
 <div id="two-volatile-components" class="section level3 hasAnchor" number="13.1.2">
 <h3><span class="header-section-number">13.1.2</span> Two volatile components<a href="MCPhaseDiagrams.html#two-volatile-components" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -500,7 +504,7 @@ Figure 13.3: The Pressure–Composition Phase Diagram of an Ideal Solution Conta
 Figure 13.4: The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.
 </p>
 </div>
-<p>Compared to the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there are only two degrees of freedom inside the lens, of which the pressure is kept constant by definition.<a href="#fn64" class="footnote-ref" id="fnref64"><sup>64</sup></a> As such, a liquid solution of initial composition <span class="math inline">\(x_{\text{B}}^i\)</span> can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration <span class="math inline">\(y_{\text{B}}^f\)</span>. As is clear from Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>, the mole fraction of the <span class="math inline">\(\text{B}\)</span> component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component <span class="math inline">\(\text{B}\)</span>. This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigMC5">13.5</a>.</p>
+<p>Compared to the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of Figure <a href="MCPhaseDiagrams.html#fig:FigMC3">13.3</a>, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there are only two degrees of freedom inside the lens, of which the pressure is kept constant by definition.<a href="#fn65" class="footnote-ref" id="fnref65"><sup>65</sup></a> As such, a liquid solution of initial composition <span class="math inline">\(x_{\text{B}}^i\)</span> can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration <span class="math inline">\(y_{\text{B}}^f\)</span>. As is clear from Figure <a href="MCPhaseDiagrams.html#fig:FigMC4">13.4</a>, the mole fraction of the <span class="math inline">\(\text{B}\)</span> component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component <span class="math inline">\(\text{B}\)</span>. This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure <a href="MCPhaseDiagrams.html#fig:FigMC5">13.5</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigMC5"></span>
 <img src="img/OEP_Figures.023.jpeg" alt="The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram." width="60%" />
 <p class="caption">
@@ -596,7 +600,7 @@ P_i = a_i P_i^*.
 Figure 13.9: Positive and Negative Deviation from Raoult’s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.
 </p>
 </div>
-<p>As we already discussed in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it’s defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.<a href="#fn65" class="footnote-ref" id="fnref65"><sup>65</sup></a></p>
+<p>As we already discussed in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it’s defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.<a href="#fn66" class="footnote-ref" id="fnref66"><sup>66</sup></a></p>
 </div>
 <div id="colligative-properties" class="section level2 hasAnchor" number="13.4">
 <h2><span class="header-section-number">13.4</span> Colligative Properties<a href="MCPhaseDiagrams.html#colligative-properties" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -686,7 +690,7 @@ Figure 13.11: Osmotic Pressure of a Solution.
 \pi = imRT,
 \tag{13.24}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(m\)</span> is the molality of the solution, <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(T\)</span> the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.<a href="#fn66" class="footnote-ref" id="fnref66"><sup>66</sup></a></p>
+<p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(m\)</span> is the molality of the solution, <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(T\)</span> the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.<a href="#fn67" class="footnote-ref" id="fnref67"><sup>67</sup></a></p>
 </div>
 </div>
 <div id="rev13" class="section level2 hasAnchor" number="13.5">
@@ -795,11 +799,11 @@ Click to reveal
 </div>
 <div class="footnotes">
 <hr />
-<ol start="63">
-<li id="fn63"><p>Only two degrees of freedom are visible in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram. Temperature represents the third independent variable.<a href="MCPhaseDiagrams.html#fnref63" class="footnote-back">↩︎</a></p></li>
-<li id="fn64"><p>This effectively corresponds to a region with just a single degree of freedom in the plot,:either the temperature or the composition can be changed independently.<a href="MCPhaseDiagrams.html#fnref64" class="footnote-back">↩︎</a></p></li>
-<li id="fn65"><p>Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of the activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to <span class="math inline">\(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> using Gibbs’ relation. This is why the definition of a universally agreed-upon <a href="https://en.wikipedia.org/wiki/Standard_state">standard state</a> is such an essential concept in chemistry, and why it is defined by the <a href="https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry">International Union of Pure and Applied Chemistry (IUPAC)</a> and followed systematically by chemists around the globe.<a href="MCPhaseDiagrams.html#fnref65" class="footnote-back">↩︎</a></p></li>
-<li id="fn66"><p>For a derivation, see the osmotic pressure <a href="https://en.wikipedia.org/wiki/Osmotic_pressure">Wikipedia page</a>.<a href="MCPhaseDiagrams.html#fnref66" class="footnote-back">↩︎</a></p></li>
+<ol start="64">
+<li id="fn64"><p>Only two degrees of freedom are visible in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram. Temperature represents the third independent variable.<a href="MCPhaseDiagrams.html#fnref64" class="footnote-back">↩︎</a></p></li>
+<li id="fn65"><p>This effectively corresponds to a region with just a single degree of freedom in the plot,:either the temperature or the composition can be changed independently.<a href="MCPhaseDiagrams.html#fnref65" class="footnote-back">↩︎</a></p></li>
+<li id="fn66"><p>Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of the activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to <span class="math inline">\(\Delta_{\text{rxn}} G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> using Gibbs’ relation. This is why the definition of a universally agreed-upon <a href="https://en.wikipedia.org/wiki/Standard_state">standard state</a> is such an essential concept in chemistry, and why it is defined by the <a href="https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry">International Union of Pure and Applied Chemistry (IUPAC)</a> and followed systematically by chemists around the globe.<a href="MCPhaseDiagrams.html#fnref66" class="footnote-back">↩︎</a></p></li>
+<li id="fn67"><p>For a derivation, see the osmotic pressure <a href="https://en.wikipedia.org/wiki/Osmotic_pressure">Wikipedia page</a>.<a href="MCPhaseDiagrams.html#fnref67" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

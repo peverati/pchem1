@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-18" />
+<meta name="date" content="2024-09-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,10 +178,14 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
 <li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
-<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.4.1</b> Practice Problems</a></li>
-<li class="chapter" data-level="6.4.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.4.2</b> Study Questions</a></li>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
@@ -379,7 +383,7 @@ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}
 \end{aligned}
 \tag{10.4}
 \end{equation}\]</span></p>
-<p>We can define a new quantity called the <em>reaction quotient</em> as a function of the partial pressures of each substance:<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a></p>
+<p>We can define a new quantity called the <em>reaction quotient</em> as a function of the partial pressures of each substance:<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a></p>
 <p><span class="math display" id="eq:chemeq4">\[\begin{equation}
 Q_P = \frac{P_{\text{C}}^c \cdot P_{\text{D}}^d}{P_{\text{A}}^a \cdot P_{\text{B}}^b},
 \tag{10.5}
@@ -394,7 +398,7 @@ Q_P = \frac{P_{\text{C}}^c \cdot P_{\text{D}}^d}{P_{\text{A}}^a \cdot P_{\text{B
 \Delta_{\text{rxn}} G = 0 = \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln K_P,
 \tag{10.7}
 \end{equation}\]</span></p>
-<p>where we have defined a new quantity called <strong>equilibrium constant</strong>, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol <span class="math inline">\(K_P\)</span>.<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a> From eq. <a href="ChemicalEquilibrium.html#eq:chemeq6">(10.7)</a> we can derive the following fundamental equation on the standard Gibbs free energy of reaction:</p>
+<p>where we have defined a new quantity called <strong>equilibrium constant</strong>, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol <span class="math inline">\(K_P\)</span>.<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a> From eq. <a href="ChemicalEquilibrium.html#eq:chemeq6">(10.7)</a> we can derive the following fundamental equation on the standard Gibbs free energy of reaction:</p>
 <p><span class="math display" id="eq:chemeqdg0">\[\begin{equation}
 \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}= - RT \ln K_P.
 \tag{10.8}
@@ -409,7 +413,7 @@ K_P=\prod_i P_{i,\text{eq}}^{\nu_i},
 K_{\text{eq}} =\prod_i a_{i,\text{eq}}^{\nu_i},
 \tag{10.10}
 \end{equation}\]</span></p>
-<p>where we have replaced the partial pressure at equilibrium, <span class="math inline">\(P_{i,\text{eq}}\)</span>, with a new concept introduced initially by Gilbert Newton Lewis (1875–1946),<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a> that he termed <strong>activity</strong>, and represented by the letter <span class="math inline">\(a\)</span>. For ideal gases, it is clear that <span class="math inline">\(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. For non-ideal gases, the activity is equal to the fugacity <span class="math inline">\(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply <span class="math inline">\(a_i=1\)</span>. For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction <span class="math inline">\(x_i\)</span> in the liquid phase, and <span class="math inline">\(y_i\)</span> in the gas phase, or the molar concentration <span class="math inline">\([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> with <span class="math inline">\([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)</span>). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter <a href="MCPhaseDiagrams.html#MCPhaseDiagrams">13</a>, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:</p>
+<p>where we have replaced the partial pressure at equilibrium, <span class="math inline">\(P_{i,\text{eq}}\)</span>, with a new concept introduced initially by Gilbert Newton Lewis (1875–1946),<a href="#fn46" class="footnote-ref" id="fnref46"><sup>46</sup></a> that he termed <strong>activity</strong>, and represented by the letter <span class="math inline">\(a\)</span>. For ideal gases, it is clear that <span class="math inline">\(a_i=P_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>. For non-ideal gases, the activity is equal to the fugacity <span class="math inline">\(a_i=f_i/P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply <span class="math inline">\(a_i=1\)</span>. For diluted solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction <span class="math inline">\(x_i\)</span> in the liquid phase, and <span class="math inline">\(y_i\)</span> in the gas phase, or the molar concentration <span class="math inline">\([i]/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> with <span class="math inline">\([i]^{-\kern-6pt{\ominus}\kern-6pt-}= 1\;\text[mol/L]\)</span>). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in chapter <a href="MCPhaseDiagrams.html#MCPhaseDiagrams">13</a>, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:</p>
 <p><span class="math display" id="eq:kxkcdef">\[\begin{equation}
 K_y =\prod_i \left( y_{i,\text{eq}} \right)^{\nu_i} \qquad \qquad \qquad \qquad K_C =\left( \prod_i [i]_{\text{eq}}/[i]^{-\kern-6pt{\ominus}\kern-6pt-}\right)^{\nu_i},
 \tag{10.11}
@@ -449,7 +453,7 @@ K_P = K_y\cdot \left(\frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}}\right)^{\Delta 
 \left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R} \left( -\frac{\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}}{T^2} \right) = \frac{\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}}{RT^2},
 \tag{10.17}
 \end{equation}\]</span></p>
-<p>which gives the dependence of <span class="math inline">\(\ln K_{\text{eq}}\)</span> on <span class="math inline">\(T\)</span> that we were looking for. Eq. <a href="ChemicalEquilibrium.html#eq:kptemp3">(10.17)</a> is also called <strong>van ’t Hoff equation</strong>,<a href="#fn46" class="footnote-ref" id="fnref46"><sup>46</sup></a> and it is the mathematical expression of Le Chatelier’s principle. The simplest interpretation is as follows:</p>
+<p>which gives the dependence of <span class="math inline">\(\ln K_{\text{eq}}\)</span> on <span class="math inline">\(T\)</span> that we were looking for. Eq. <a href="ChemicalEquilibrium.html#eq:kptemp3">(10.17)</a> is also called <strong>van ’t Hoff equation</strong>,<a href="#fn47" class="footnote-ref" id="fnref47"><sup>47</sup></a> and it is the mathematical expression of Le Chatelier’s principle. The simplest interpretation is as follows:</p>
 <ul>
 <li>For an exothermic reaction (<span class="math inline">\(\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}&lt; 0\)</span>): <span class="math inline">\(K_{\text{eq}}\)</span> will decrease as the temperature increases.</li>
 <li>For an endothermic reaction (<span class="math inline">\(\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}&gt; 0\)</span>): <span class="math inline">\(K_{\text{eq}}\)</span> will increase as the temperature increases.</li>
@@ -479,7 +483,7 @@ Figure 10.1: Van ’t Hoff Plots for an Endothermic (Left, Blue) and an Exotherm
 \left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i} \right)_{T,P} =0.
 \tag{10.20}
 \end{equation}\]</span></p>
-<p>For example, it is easy to look at eq. <a href="ChemicalEquilibrium.html#eq:kxkcdef3">(10.13)</a> and determine that <span class="math inline">\(K_y\)</span> usually depends on <span class="math inline">\(P\)</span>.<a href="#fn47" class="footnote-ref" id="fnref47"><sup>47</sup></a> Using Dalton’s Law, eq. <a href="GibbsFree.html#eq:daltonlaw">(9.23)</a>, we can also notice that the equilibrium partial pressures of the reactants and products in a gas-phase reaction can be expressed in terms of their equilibrium mole fractions <span class="math inline">\(y_i\)</span> and the total pressure <span class="math inline">\(P\)</span>. As such, we can use <span class="math inline">\(K_y\)</span> to demonstrate that the equilibrium mole fractions will change when <span class="math inline">\(P\)</span> changes,<a href="#fn48" class="footnote-ref" id="fnref48"><sup>48</sup></a> as it is demonstrated by the following exercise.</p>
+<p>For example, it is easy to look at eq. <a href="ChemicalEquilibrium.html#eq:kxkcdef3">(10.13)</a> and determine that <span class="math inline">\(K_y\)</span> usually depends on <span class="math inline">\(P\)</span>.<a href="#fn48" class="footnote-ref" id="fnref48"><sup>48</sup></a> Using Dalton’s Law, eq. <a href="GibbsFree.html#eq:daltonlaw">(9.23)</a>, we can also notice that the equilibrium partial pressures of the reactants and products in a gas-phase reaction can be expressed in terms of their equilibrium mole fractions <span class="math inline">\(y_i\)</span> and the total pressure <span class="math inline">\(P\)</span>. As such, we can use <span class="math inline">\(K_y\)</span> to demonstrate that the equilibrium mole fractions will change when <span class="math inline">\(P\)</span> changes,<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a> as it is demonstrated by the following exercise.</p>
 <blockquote>
 <div class="exercise">
 <p><span id="exr:kpkx" class="exercise"><strong>Exercise 10.1  </strong></span>Calculate the mole fraction change for the dissociation of <span class="math inline">\(\mathrm{Cl}_{2(g)}\)</span> when the pressure is increased from <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> to <span class="math inline">\(P_f=2.5 \;\text{bar}\)</span> at constant <span class="math inline">\(T=2\,298\;\mathrm{K}\)</span>, knowing that <span class="math inline">\(\Delta_{\mathrm{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\)</span> and <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\)</span>, and remembering that both of these values are tabulated at <span class="math inline">\(T=298\;\text{K}\)</span>.</p>
@@ -496,14 +500,14 @@ Figure 10.1: Van ’t Hoff Plots for an Endothermic (Left, Blue) and an Exotherm
 \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}},
 \end{aligned}
 \end{equation}\]</span>
-and since <span class="math inline">\(\text{Cl}_{2(g)}\)</span> is an element in its most stable form at <span class="math inline">\(T=298\;\mathrm{K}\)</span>, its standard enthalpy and Gibbs free energy of formation are <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = 0\)</span>. Therefore:<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a>
+and since <span class="math inline">\(\text{Cl}_{2(g)}\)</span> is an element in its most stable form at <span class="math inline">\(T=298\;\mathrm{K}\)</span>, its standard enthalpy and Gibbs free energy of formation are <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = 0\)</span>. Therefore:<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a>
 <span class="math display">\[\begin{equation}
 \begin{aligned}
 \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= 2 \cdot 105.3 - 0 = 210.6 \;\text{kJ/mol} \\
 \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= 2 \cdot 121.3 - 0 = 242.6\;\text{kJ/mol}.
 \end{aligned}
 \end{equation}\]</span>
-Using eq. <a href="ChemicalEquilibrium.html#eq:chemeqdg0">(10.8)</a> to calculate <span class="math inline">\(K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},298\;\text{K})\)</span>, we obtain:<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a>
+Using eq. <a href="ChemicalEquilibrium.html#eq:chemeqdg0">(10.8)</a> to calculate <span class="math inline">\(K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},298\;\text{K})\)</span>, we obtain:<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a>
 <span class="math display">\[\begin{equation}
 \ln [ K_P (P^{-\kern-6pt{\ominus}\kern-6pt-},298\;\text{K}) ] =  \frac{ - \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}}{RT}  =  \frac{-210.6\times10^3}{8.31 \cdot 298} = - 85.0.
 \end{equation}\]</span>
@@ -542,7 +546,7 @@ and calculate the initial concentration of <span class="math inline">\(\mathrm{C
 <span class="math display">\[\begin{equation}
 K_y (P_i,2\,298\;\text{K})=\frac{\left(y^i_{\mathrm{Cl}_{(g)}}\right)^2}{1-y^i_{\mathrm{Cl}_{(g)}}} = 1.30.
 \end{equation}\]</span>
-Solving the quadratic equation, we obtain one negative answer—which is unphysical—,<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a> and:
+Solving the quadratic equation, we obtain one negative answer—which is unphysical—,<a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> and:
 <span class="math display">\[\begin{equation}
 y_{\mathrm{Cl}_{(g)}}^i= 0.662 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^i=1-0.662 = 0.338.
 \end{equation}\]</span>
@@ -720,16 +724,16 @@ Click to reveal
 </div>
 <div class="footnotes">
 <hr />
-<ol start="43">
-<li id="fn43"><p>Notice that since we used eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a> to derive the reaction quotient, the partial pressures inside it are always dimensionless since they are divided by <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>.<a href="ChemicalEquilibrium.html#fnref43" class="footnote-back">↩︎</a></p></li>
-<li id="fn44"><p>The subscript <span class="math inline">\(P\)</span> refers to the fact that the equilibrium constant is measured in terms of partial pressures.<a href="ChemicalEquilibrium.html#fnref44" class="footnote-back">↩︎</a></p></li>
-<li id="fn45"><p>Gilber Lewis is the same scientist that invented the concept of Lewis Structures.<a href="ChemicalEquilibrium.html#fnref45" class="footnote-back">↩︎</a></p></li>
-<li id="fn46"><p>named after Jacobus Henricus “Henry” van ’t Hoff Jr. (1852–1911).<a href="ChemicalEquilibrium.html#fnref46" class="footnote-back">↩︎</a></p></li>
-<li id="fn47"><p><span class="math inline">\(K_y\)</span> becomes independent of <span class="math inline">\(P\)</span> in the particular case where <span class="math inline">\(\Delta \nu=0\)</span>, i.e., for reactions where the total number of moles of reactants is the same as the total number of moles of the products.<a href="ChemicalEquilibrium.html#fnref47" class="footnote-back">↩︎</a></p></li>
-<li id="fn48"><p>Keep in mind that <span class="math inline">\(K_P\)</span> will <em>not</em> change.<a href="ChemicalEquilibrium.html#fnref48" class="footnote-back">↩︎</a></p></li>
-<li id="fn49"><p>Notice how a positive <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> indicates that the dissociation of <span class="math inline">\(\mathrm{CL}_{2(g)}\)</span> is non-spontaneous at <span class="math inline">\(T=298\;\text{K}\)</span> and <span class="math inline">\(P=1\;\text{bar}\)</span>. As such, we should expect a very small value for <span class="math inline">\(K_P\)</span>.<a href="ChemicalEquilibrium.html#fnref49" class="footnote-back">↩︎</a></p></li>
-<li id="fn50"><p>The results corresponds to <span class="math inline">\(K_P=1.2\times 10^{-37}\)</span>, an incredible miniscule number, as we should expect given the data of <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>.<a href="ChemicalEquilibrium.html#fnref50" class="footnote-back">↩︎</a></p></li>
-<li id="fn51"><p>Concentration cannot be negative.<a href="ChemicalEquilibrium.html#fnref51" class="footnote-back">↩︎</a></p></li>
+<ol start="44">
+<li id="fn44"><p>Notice that since we used eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a> to derive the reaction quotient, the partial pressures inside it are always dimensionless since they are divided by <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>.<a href="ChemicalEquilibrium.html#fnref44" class="footnote-back">↩︎</a></p></li>
+<li id="fn45"><p>The subscript <span class="math inline">\(P\)</span> refers to the fact that the equilibrium constant is measured in terms of partial pressures.<a href="ChemicalEquilibrium.html#fnref45" class="footnote-back">↩︎</a></p></li>
+<li id="fn46"><p>Gilber Lewis is the same scientist that invented the concept of Lewis Structures.<a href="ChemicalEquilibrium.html#fnref46" class="footnote-back">↩︎</a></p></li>
+<li id="fn47"><p>named after Jacobus Henricus “Henry” van ’t Hoff Jr. (1852–1911).<a href="ChemicalEquilibrium.html#fnref47" class="footnote-back">↩︎</a></p></li>
+<li id="fn48"><p><span class="math inline">\(K_y\)</span> becomes independent of <span class="math inline">\(P\)</span> in the particular case where <span class="math inline">\(\Delta \nu=0\)</span>, i.e., for reactions where the total number of moles of reactants is the same as the total number of moles of the products.<a href="ChemicalEquilibrium.html#fnref48" class="footnote-back">↩︎</a></p></li>
+<li id="fn49"><p>Keep in mind that <span class="math inline">\(K_P\)</span> will <em>not</em> change.<a href="ChemicalEquilibrium.html#fnref49" class="footnote-back">↩︎</a></p></li>
+<li id="fn50"><p>Notice how a positive <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> indicates that the dissociation of <span class="math inline">\(\mathrm{CL}_{2(g)}\)</span> is non-spontaneous at <span class="math inline">\(T=298\;\text{K}\)</span> and <span class="math inline">\(P=1\;\text{bar}\)</span>. As such, we should expect a very small value for <span class="math inline">\(K_P\)</span>.<a href="ChemicalEquilibrium.html#fnref50" class="footnote-back">↩︎</a></p></li>
+<li id="fn51"><p>The results corresponds to <span class="math inline">\(K_P=1.2\times 10^{-37}\)</span>, an incredible miniscule number, as we should expect given the data of <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>.<a href="ChemicalEquilibrium.html#fnref51" class="footnote-back">↩︎</a></p></li>
+<li id="fn52"><p>Concentration cannot be negative.<a href="ChemicalEquilibrium.html#fnref52" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
