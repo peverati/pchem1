@@ -10,7 +10,7 @@ We have already encountered the gas, liquid, and solid phases and already discus
 *Phase:* A region of the system with homogeneous chemical composition and physical state.
 > ```
 
-Let's now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:
+Let's now use the total differential of the chemical potential and the definition of molar Gibbs energy for one component:
 
 \begin{equation}
 \begin{aligned}
@@ -74,8 +74,8 @@ Replacing the differential with the definition of chemical potential in eq. \@re
 
 \begin{equation}
 \begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
+-S_{\alpha}dT+\overline{V}_{\alpha}dP &= -S_{\beta}dT+\overline{V}_{\beta}dP \\
+\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}}dP,
 \end{aligned}
 (\#eq:muequalC)
 \end{equation}

@@ -10,14 +10,14 @@ Let's consider a prototypical reaction at constant $T,P$:
 (\#eq:reaction4)
 \end{equation}
 
-The Gibbs free energy of the reaction is defined as:
+The Gibbs energy of the reaction is defined as:
 
 \begin{equation}
 \Delta_{\text{rxn}} G = G_{\text{products}} - G_{\text{reactants}} = G^{\text{C}} + G^{\text{D}} - G^{\text{A}}-G^{\text{B}},
 (\#eq:chemeq1)
 \end{equation}
 
-and replacing the absolute Gibbs free energies with the chemical potentials $\mu_i$, we obtain:
+and replacing the absolute Gibbs energies with the chemical potentials $\mu_i$, we obtain:
 
 \begin{equation}
 \Delta_{\text{rxn}} G = c \mu_{\text{C}} + d \mu_{\text{D}} - a \mu_{\text{A}}- b\mu_{\text{B}}.
@@ -55,7 +55,7 @@ This equation tells us that the sign of $\Delta_{\text{rxn}} G$ is influenced by
 (\#eq:chemeq6)
 \end{equation}
 
-where we have defined a new quantity called **equilibrium constant**, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol $K_P$.^[The subscript $P$ refers to the fact that the equilibrium constant is measured in terms of partial pressures.] From eq. \@ref(eq:chemeq6) we can derive the following fundamental equation on the standard Gibbs free energy of reaction:
+where we have defined a new quantity called **equilibrium constant**, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol $K_P$.^[The subscript $P$ refers to the fact that the equilibrium constant is measured in terms of partial pressures.] From eq. \@ref(eq:chemeq6) we can derive the following fundamental equation on the standard Gibbs energy of reaction:
 
 \begin{equation}
 \Delta_{\text{rxn}} G^\standardstate = - RT \ln K_P.
@@ -224,7 +224,7 @@ We can divide the exercise into two parts. In the first one, we will deal with c
 \Delta_{\text{rxn}} H^\standardstate &= 2 \Delta_{\text{f}} H^\standardstate_{\text{Cl}_{(g)}} - \Delta_{\text{f}} H^\standardstate_{\text{Cl}_{2(g)}},
 \end{aligned}
 \end{equation}
-and since $\text{Cl}_{2(g)}$ is an element in its most stable form at $T=298\;\mathrm{K}$, its standard enthalpy and Gibbs free energy of formation are $\Delta_{\text{f}} H^\standardstate_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^\standardstate_{\text{Cl}_{2(g)}} = 0$. Therefore:^[Notice how a positive $\Delta_{\text{rxn}} G^\standardstate$ indicates that the dissociation of $\mathrm{CL}_{2(g)}$ is non-spontaneous at $T=298\;\text{K}$ and $P=1\;\text{bar}$. As such, we should expect a very small value for $K_P$.]
+and since $\text{Cl}_{2(g)}$ is an element in its most stable form at $T=298\;\mathrm{K}$, its standard enthalpy and Gibbs energy of formation are $\Delta_{\text{f}} H^\standardstate_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^\standardstate_{\text{Cl}_{2(g)}} = 0$. Therefore:^[Notice how a positive $\Delta_{\text{rxn}} G^\standardstate$ indicates that the dissociation of $\mathrm{CL}_{2(g)}$ is non-spontaneous at $T=298\;\text{K}$ and $P=1\;\text{bar}$. As such, we should expect a very small value for $K_P$.]
 \begin{equation}
 \begin{aligned}
 \Delta_{\text{rxn}} G^\standardstate &= 2 \cdot 105.3 - 0 = 210.6 \;\text{kJ/mol} \\

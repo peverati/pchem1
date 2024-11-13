@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-24" />
+<meta name="date" content="2024-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,6 +87,7 @@ MathJax.Hub.Config({
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#authors-note-to-the-august-2024-edition."><i class="fa fa-check"></i>Author’s Note to the August 2024 Edition.</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-note-on-units"><i class="fa fa-check"></i>A note on units</a></li>
 </ul></li>
@@ -173,7 +174,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.4.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#quest5"><i class="fa fa-check"></i><b>5.4.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Entropy and the Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
@@ -210,14 +211,14 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
 <li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Gibbs and Helmholtz Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 <li class="chapter" data-level="8.5" data-path="Potentials.html"><a href="Potentials.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
 <ul>
 <li class="chapter" data-level="8.5.1" data-path="Potentials.html"><a href="Potentials.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Free Energy</a>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Energy</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
 <li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
@@ -365,12 +366,12 @@ MathJax.Hub.Config({
 a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}
 \tag{10.1}
 \end{equation}\]</span></p>
-<p>The Gibbs free energy of the reaction is defined as:</p>
+<p>The Gibbs energy of the reaction is defined as:</p>
 <p><span class="math display" id="eq:chemeq1">\[\begin{equation}
 \Delta_{\text{rxn}} G = G_{\text{products}} - G_{\text{reactants}} = G^{\text{C}} + G^{\text{D}} - G^{\text{A}}-G^{\text{B}},
 \tag{10.2}
 \end{equation}\]</span></p>
-<p>and replacing the absolute Gibbs free energies with the chemical potentials <span class="math inline">\(\mu_i\)</span>, we obtain:</p>
+<p>and replacing the absolute Gibbs energies with the chemical potentials <span class="math inline">\(\mu_i\)</span>, we obtain:</p>
 <p><span class="math display" id="eq:chemeq2">\[\begin{equation}
 \Delta_{\text{rxn}} G = c \mu_{\text{C}} + d \mu_{\text{D}} - a \mu_{\text{A}}- b\mu_{\text{B}}.
 \tag{10.3}
@@ -398,7 +399,7 @@ Q_P = \frac{P_{\text{C}}^c \cdot P_{\text{D}}^d}{P_{\text{A}}^a \cdot P_{\text{B
 \Delta_{\text{rxn}} G = 0 = \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln K_P,
 \tag{10.7}
 \end{equation}\]</span></p>
-<p>where we have defined a new quantity called <strong>equilibrium constant</strong>, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol <span class="math inline">\(K_P\)</span>.<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a> From eq. <a href="ChemicalEquilibrium.html#eq:chemeq6">(10.7)</a> we can derive the following fundamental equation on the standard Gibbs free energy of reaction:</p>
+<p>where we have defined a new quantity called <strong>equilibrium constant</strong>, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol <span class="math inline">\(K_P\)</span>.<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a> From eq. <a href="ChemicalEquilibrium.html#eq:chemeq6">(10.7)</a> we can derive the following fundamental equation on the standard Gibbs energy of reaction:</p>
 <p><span class="math display" id="eq:chemeqdg0">\[\begin{equation}
 \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}= - RT \ln K_P.
 \tag{10.8}
@@ -500,7 +501,7 @@ Figure 10.1: Van ’t Hoff Plots for an Endothermic (Left, Blue) and an Exotherm
 \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}},
 \end{aligned}
 \end{equation}\]</span>
-and since <span class="math inline">\(\text{Cl}_{2(g)}\)</span> is an element in its most stable form at <span class="math inline">\(T=298\;\mathrm{K}\)</span>, its standard enthalpy and Gibbs free energy of formation are <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = 0\)</span>. Therefore:<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a>
+and since <span class="math inline">\(\text{Cl}_{2(g)}\)</span> is an element in its most stable form at <span class="math inline">\(T=298\;\mathrm{K}\)</span>, its standard enthalpy and Gibbs energy of formation are <span class="math inline">\(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = 0\)</span>. Therefore:<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a>
 <span class="math display">\[\begin{equation}
 \begin{aligned}
 \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= 2 \cdot 105.3 - 0 = 210.6 \;\text{kJ/mol} \\

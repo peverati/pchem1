@@ -116,7 +116,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{24 September 2024}
+\date{13 November 2024}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -172,7 +172,8 @@ The instructor for this course and author of this textbook is Dr.~Roberto Pevera
 Chemistry Program, Department of Chemistry and Chemical Engineering,
 Florida Institute of Technology, Melbourne, FL.
 
-\textbf{Author's Note to the August 2024 Edition.}
+\section*{Author's Note to the August 2024 Edition.}\label{authors-note-to-the-august-2024-edition.}
+\addcontentsline{toc}{section}{Author's Note to the August 2024 Edition.}
 
 2024 marks the fifth year of existence for ``The Live Textbook of Physical Chemistry.'' Faithful to my initial intent, the textbook has evolved substantially from its humble beginnings, and it continues to evolve to this days. Five years is a long time in education, and much has happened during this period, including a pandemic that forced everyone to online teaching and learning, and the rise of generative AI in many fields, including education and Academia. I have big plans for the next phase of the book's evolution, but due to time constraints and the ever-increasing demands of academic duties, I had to postpone them for now. As such, the structure of the textbook has largely remained unchanged. If and when I will have time to restructure my entire courses, as well as the textbooks that goes with them, I will present a true ``Second Edition'' of ``The Live Textbook,'' but this is not it yet.
 
@@ -225,7 +226,7 @@ Differentiation can be thought of as ``slicing an object into infinitely thin pi
 
 How so? Let's look at a simple example. If we start from a stick of length \(L\), we can infinitely slice it into infinitesimally small pieces of length \(dL\). These incredibly tiny pieces are called \textbf{differentials} of the original quantity, in this particular case, the length of our stick. The beauty of these differentials, \(dL\), is that they don't really depend on how long our object initially was, nor on which unit we plan on using to measure this length. The differentials will always have the same size, that is, they will always be \emph{infinitesimally small}. Imagine, for example, that you start with an object whose length is \(1\, \text{m}\). After you slice it an infinite amount of times, each differential will have exactly the same length of \(0.000[...]0001\, \text{m}\), where we have replaced an infinite amount of zeros with the notation \([...]\). Now imagine that you start with a second object whose length is \(1000\, \text{m} = 1\,\text{km}\). After you slice this second object an infinite amount of times, you will end up with differentials that have exactly the same length as the ones we obtained before, that is \(0.000[...]0001\, \text{m} = 0.000[...]0001\, \text{km}\). At this point, specifying the unit of a differential (\(\text{m}\) or \(\text{km}\) in the case of length) becomes useless. For this reason, we say that differentials are unitless.
 
-Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the same as \(0\), but they can be used much more effectively than something that purely doesn't exist.\footnote{Yes, we are purposely skipping a lot of stuff here, see the note above.} The key word here is \emph{essentially}, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they've lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are \emph{unitless}, but they are not \emph{dimensionless}. Additionally, the differentials will also contain information on the rate of change (the ``slope'') of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as \(\frac{dL}{dx}\). In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, \(x\), along an axis that is oriented the same way as our stick.\footnote{The axis doesn't have to have the same orientation of the stick, but it is easier if we do so, in the first place.} This special ratio is called the \emph{derivative}, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative \(\frac{dL}{dx}\) tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number \(\frac{dL}{dx}=1\), but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.
+Now, through some mathematical magic, these strange numbers with an infinite amount of zeros, are essentially the closest thing you can get to \(0\), without practically being \(0\). For this reason, they can be used much more effectively than something that purely doesn't exist.\footnote{Yes, we are purposely skipping a lot of stuff here, see the note above.} The key word here is \emph{essentially}, because the differentials will have zero length, but they will still contain some fundamental information related to the original objects. In the first place, they will still have the dimension of lengths, despite the fact that they've lost their units (since starting from a meter, or a kilometer, or any other unit of length you could think of, produce the same things). In technical terms, differentials are \emph{unitless}, but they are not \emph{dimensionless}. Additionally, the differentials will also contain information on the rate of change (the ``slope'') of the length in the original objects. The question that remains is: How are we going to access this apparently hidden information? In other words, how are we going to reconstruct the length of the original object from the differentials? The answer is surprisingly simple: By comparing different differentials to each other. More specifically, despite their zero-ness, we are allowed to calculate the ratio between differentials, such as \(\frac{dL}{dx}\). In this specific case, we are calculating the ratio between the differential of the length of our stick, and the position, \(x\), along an axis that is oriented the same way as our stick.\footnote{The axis doesn't have to have the same orientation of the stick, but it is easier if we do so, in the first place.} This special ratio is called the \emph{derivative}, and it is fundamental to compare one differential to another. In simple terms, the derivative tells us how one quantity (the one at the top) changes, when we purposely change another (the one at the bottom). Going back to our simple example, the derivative \(\frac{dL}{dx}\) tells us how the length of our stick changes when we change the position on the axis. For this case, the derivative is a simple number \(\frac{dL}{dx}=1\), but more complicated cases are possible. So, how can we use this information to measure the length of our stick? A second calculus procedure, integration, comes to our rescue.
 
 \subsection{Integration: Gluing Together Differentials}\label{integration-gluing-together-differentials}
 
@@ -2806,7 +2807,7 @@ Then, we can use this to find \(|Q_h|\):
 
 Answers: 1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b
 
-\chapter{Second Law of Thermodynamics}\label{SecondLaw}
+\chapter{Entropy and the Second Law of Thermodynamics}\label{SecondLaw}
 
 In chapter \ref{ThermodynamicCycles}, we have discussed heat engines as a means of understanding how some processes are spontaneous while others are not. Carnot's findings did not just simply inspire Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822--1888) to introduce the concept of entropy.
 
@@ -2977,7 +2978,7 @@ Boltzmann equation gives us a powerful tool to link the macroscopic behavior of 
 
 \subsection{Why ``Disorder'' Can Be Misleading}\label{why-disorder-can-be-misleading}
 
-As first shown by Boltzmann himself, although thermodynamic entropy and statistical entropy arise from different perspectives, they describe the same underlying reality. One common misconception about entropy is that it is simply a measure of ``disorder.'' While there is some truth to this idea, it can be misleading. A more accurate description of entropy is that it measures the number of possible ways a system can be arranged, which corresponds to the amount of ``information'' needed to describe the system at the microscopic level. For example, when ice melts into water, the entropy of the system increases, but the resulting liquid is not necessarily more ``disordered'' than the solid ice. Instead, the liquid has more possible microstates, as the water molecules can move more freely compared to the fixed structure of ice. While we would be able to describe the solid macrostate using a small number of microstates (in principle the number of microstate for a solid could be even as small as one), we would always need many more microstates to describe the liquid one. The common misconception of a messy room having more entropy than a tidier one is indeed a mistake, as entropy (at least the thermodynamic entropy that we are discussing here) doesn't play a role in either of these situations. If we want to stretch the analogy and treat objects in a room the same way we trear particles in a system, the analogy also doesn't work, as both the messy room and the tidy one represent only one way of arranging the objects in the room (a microstate), so the entropy is zero for both, since \(S=k_B \ln(1)=0\).\footnote{If we really want to use this analogy, then a better version would be that of a hotel with identical rooms containing the same objects. The configuration of all unmade rooms in the morning has a higher entropy than the configuration of the same rooms after the house keepers have arranged all the objects in every room exactly the same way.}
+As first shown by Boltzmann himself, although thermodynamic entropy and statistical entropy arise from different perspectives, they describe the same underlying reality. One common misconception about entropy is that it is simply a measure of ``disorder.'' While there is some truth to this idea, it can be misleading. A more accurate description of entropy is that it measures the number of possible ways a system can be arranged, which corresponds to the amount of ``information'' needed to describe the system at the microscopic level. For example, when ice melts into water, the entropy of the system increases, but the resulting liquid is not necessarily more ``disordered'' than the solid ice. Instead, the liquid has more possible microstates, as the water molecules can move more freely compared to the fixed structure of ice. While we would be able to describe the solid macrostate using a small number of microstates (in principle the number of microstate for a solid could be even as small as one), we would always need many more microstates to describe the liquid one. The common misconception of a messy room having more entropy than a tidier one is indeed a mistake, as entropy (at least the thermodynamic entropy that we are discussing here) doesn't play a role in either of these situations. If we want to stretch the analogy and treat objects in a room the same way we trear particles in a system, the analogy also doesn't work, as both the messy room and the tidy one represent only one way of arranging the objects in the room (a microstate), so the entropy is zero for both, since \(S=k_B \ln(1)=0\).\footnote{If we really want to use this analogy, then a better version would be that of a hotel with identical rooms containing the same objects. The configuration of all unmade rooms in the morning has a higher entropy than the configuration of the same rooms after the housekeepers have arranged all the objects in every room exactly the same way.}
 
 \section{Chapter Review}\label{rev6}
 
@@ -3852,7 +3853,7 @@ dH & = TdS -PdV +\sum_i\mu_i dn_i +VdP +PdV  \\
 
 which is the fundamental equation for enthalpy. The natural variables of the enthalpy are \(S\), \(P\), and \(\{n_i\}\). The Legendre transformation has allowed us to go from \(U(S,V,\{n_i\})\) to \(H(S,P,\{n_i\})\) by replacing the dependence on the extensive variable, \(V\), with an intensive one, \(P\).
 
-Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, \(A\), as:
+Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz energy, \(A\), as:
 
 \begin{equation}
 A = U -TS
@@ -3869,9 +3870,9 @@ dA &= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
 \label{eq:dadef2}
 \end{equation}
 
-The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821---1894), and its natural variables are temperature, volume, and the number of moles.
+The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821---1894), and its natural variables are temperature, volume, and the number of moles.
 
-Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs free energy, \(G\), as:
+Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs energy, \(G\), as:
 
 \begin{equation}
 G = U -TS +PV
@@ -3889,7 +3890,7 @@ dG &= dU -SdT -TdS +VdP +PdV \\
 \label{eq:dgdef2}
 \end{equation}
 
-The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
+The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
 
 A summary of the four thermodynamic potentials is given in the following table.
 
@@ -3916,8 +3917,8 @@ A summary of the four thermodynamic potentials is given in the following table.
 \endlastfoot
 \textbf{Energy} & \(U\) & \(dU=TdS-PdV+\sum_i\mu_i dn_i\) & \(S,V,\{n_i\}\) \\
 \textbf{Enthalpy} & \(H\) & \(dH=TdS+VdP+\sum_i\mu_i dn_i\) & \(S,P,\{n_i\}\) \\
-\textbf{Helmholtz Free Energy} & \(A\) & \(dA=-SdT-PdV+\sum_i\mu_i dn_i\) & \(T,V,\{n_i\}\) \\
-\textbf{Gibbs Free Energy} & \(G\) & \(dG=VdP-SdT+\sum_i\mu_i dn_i\) & \(T,P,\{n_i\}\) \\
+\textbf{Helmholtz Energy} & \(A\) & \(dA=-SdT-PdV+\sum_i\mu_i dn_i\) & \(T,V,\{n_i\}\) \\
+\textbf{Gibbs Energy} & \(G\) & \(dG=VdP-SdT+\sum_i\mu_i dn_i\) & \(T,P,\{n_i\}\) \\
 \end{longtable}
 
 \normalsize
@@ -3931,14 +3932,14 @@ The thermodynamic potentials are the analog of the potential energy in classical
 \item
   Enthalpy (\(H\)) is the capacity to do non-mechanical work plus the capacity to release heat.
 \item
-  Gibbs free energy (\(G\)) is the capacity to do non-mechanical work.
+  Gibbs energy (\(G\)) is the capacity to do non-mechanical work.
 \item
-  Helmholtz free energy (\(A\)) is the capacity to do mechanical plus non-mechanical work.\footnote{For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the \href{https://en.wikipedia.org/wiki/Thermodynamic_square}{thermodynamic square}.}
+  Helmholtz energy (\(A\)) is the capacity to do mechanical plus non-mechanical work.\footnote{For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the \href{https://en.wikipedia.org/wiki/Thermodynamic_square}{thermodynamic square}.}
 \end{itemize}
 
 Where non-mechanical work is defined as any type of work that is not expansion or compression (\(PV\)--work). A typical example of non-mechanical work is electrical work.
 
-\section{Free Energies}\label{freeenergies}
+\section{Gibbs and Helmholtz Energies}\label{freeenergies}
 
 The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, \(H(S,P,\{n_i\})\), \(A(T,V,\{n_i\})\), and \(G(T,P,\{n_i\})\) all contain the same information that is in \(U(S,V,\{n_i\})\). However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term \(\sum_i\mu_i dn_i\) that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant \(S\) and constant \(V\):
 
@@ -3958,7 +3959,7 @@ dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 \label{eq:dhagchem}
 \end{equation}
 
-The latter two cases are particularly interesting since most of chemistry happens at either constant volume,\footnote{for example, several industrial processes in chemical plants.} or constant pressure.\footnote{for example, most processes in a chemistry lab.} Since \(dS=0\) is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore---according to the second law---it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies.
+The latter two cases are particularly interesting since most of chemistry happens at either constant volume,\footnote{for example, several industrial processes in chemical plants.} or constant pressure.\footnote{for example, most processes in a chemistry lab.} Since \(dS=0\) is not a requirement for both energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore---according to the second law---it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the potentials.
 
 Recalling Clausius theorem:
 
@@ -3980,7 +3981,7 @@ TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0 \\
 \label{eq:dadgder1}
 \end{equation}
 
-we can then simplify the definition of free energies, eqs. \eqref{eq:dadef2} and \eqref{eq:dgdef2}:
+we can then simplify the definition of each energy, eqs. \eqref{eq:dadef2} and \eqref{eq:dgdef2}:
 
 \begin{equation}
 \begin{aligned}
@@ -4015,9 +4016,9 @@ These equations represent the conditions on \(dA\) and \(dG\) for inferring the 
 \begin{itemize}
 \tightlist
 \item
-  During a spontaneous process at constant \emph{temperature} and \emph{volume}, the \emph{Helmholtz free energy} will decrease \((dA<0)\), until it reaches a stationary point at which the system will be at equilibrium \((dA=0)\).
+  During a spontaneous process at constant \emph{temperature} and \emph{volume}, the \emph{Helmholtz energy} will decrease \((dA<0)\), until it reaches a stationary point at which the system will be at equilibrium \((dA=0)\).
 \item
-  During a spontaneous process at constant \emph{temperature} and \emph{pressure}, the \emph{Gibbs free energy} will decrease \((dG<0)\), until it reaches a stationary point at which the system will be at equilibrium \((dG=0)\).
+  During a spontaneous process at constant \emph{temperature} and \emph{pressure}, the \emph{Gibbs energy} will decrease \((dG<0)\), until it reaches a stationary point at which the system will be at equilibrium \((dG=0)\).
 \end{itemize}
 
 \end{definition}
@@ -4029,7 +4030,7 @@ These equations represent the conditions on \(dA\) and \(dG\) for inferring the 
 
 }
 
-\caption{Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).}\label{fig:agfig}
+\caption{Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).}\label{fig:agfig}
 \end{figure}
 
 \section{Maxwell Relations}\label{maxwell}
@@ -4148,7 +4149,7 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{3. Which of the following formulas is the fundamental equation for the Helmholtz free energy?}
+\textbf{3. Which of the following formulas is the fundamental equation for the Helmholtz energy?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -4177,9 +4178,9 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 \item
   Enthalpy is the capacity to do non-mechanical work plus the capacity to release heat.
 \item
-  Gibbs free energy is the capacity to do mechanical work only.
+  Gibbs energy is the capacity to do mechanical work only.
 \item
-  Helmholtz free energy is the capacity to do mechanical plus non-mechanical work.
+  Helmholtz energy is the capacity to do mechanical plus non-mechanical work.
 \item
   Non-mechanical work includes types of work that are not expansion or compression.
 \end{enumerate}
@@ -4196,16 +4197,16 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 \item
   Enthalpy.
 \item
-  Gibbs free energy.
+  Gibbs energy.
 \item
-  Helmholtz free energy.
+  Helmholtz energy.
 \item
   Chemical potential.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{5. What are the natural variables of the Gibbs free energy?}
+\textbf{5. What are the natural variables of the Gibbs energy?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -4234,9 +4235,9 @@ which is the last of Maxwell relations, as defined in eq. \eqref{eq:maxrelf}. Th
 \item
   Enthalpy.
 \item
-  Gibbs free energy.
+  Gibbs energy.
 \item
-  Helmholtz free energy.
+  Helmholtz energy.
 \item
   Chemical potential.
 \end{enumerate}
@@ -4323,9 +4324,9 @@ Answers: 1.b, 2.d, 3.c, 4.c, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-\chapter{Gibbs Free Energy}\label{GibbsFree}
+\chapter{Gibbs Energy}\label{GibbsFree}
 
-In this chapter, we will concentrate on chemical processes that happen at constant \(T\) and constant \(P\).\footnote{The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.} As such, we will focus our attention on the Gibbs free energy.
+In this chapter, we will concentrate on chemical processes that happen at constant \(T\) and constant \(P\).\footnote{The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.} As such, we will focus our attention on the Gibbs energy.
 
 \section{Gibbs Equation}\label{gibbseqsec}
 
@@ -4354,7 +4355,7 @@ Integrating eq. \eqref{eq:dgdeftot2} between the initial and final states of a p
 \label{eq:gibbseq}
 \end{equation}
 
-which is the famous \textbf{Gibbs equation} for \(\Delta G\). Using Definition \ref{def:helmgibbsminimum}, we can use \(\Delta G\) to infer the spontaneity of a chemical process that happens at constant \(T\) and \(P\) using \(\Delta G \leq 0\). If we set ourselves at standard conditions, we can calculate the standard Gibbs free energy of formation, \(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\), for any reaction as:
+which is the famous \textbf{Gibbs equation} for \(\Delta G\). Using Definition \ref{def:helmgibbsminimum}, we can use \(\Delta G\) to infer the spontaneity of a chemical process that happens at constant \(T\) and \(P\) using \(\Delta G \leq 0\). If we set ourselves at standard conditions, we can calculate the standard Gibbs energy of formation, \(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\), for any reaction as:
 
 \begin{equation}
 \begin{aligned}
@@ -4365,7 +4366,7 @@ which is the famous \textbf{Gibbs equation} for \(\Delta G\). Using Definition \
 \label{eq:gibbseq2}
 \end{equation}
 
-where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard enthalpies of formation, \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard entropies, and \(\nu_i\) are the stoichiometric coefficients for every species \(i\) involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \ref{Thermochemistry} and \ref{thirdlaw}, respectively.\footnote{It is not uncommon to see values of \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) tabulated alongside \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) and \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\), which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book \ref{appendix}. For cases where \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) are not reported, they can always be calculated by their constituents.}
+where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard enthalpies of formation, \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standard entropies, and \(\nu_i\) are the stoichiometric coefficients for every species \(i\) involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \ref{Thermochemistry} and \ref{thirdlaw}, respectively.\footnote{It is not uncommon to see values of \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) tabulated alongside \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\) and \(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\), which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs energy of formation of inorganic and organic compounds is reported in the appendix of this book \ref{appendix}. For cases where \(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) are not reported, they can always be calculated by their constituents.}
 
 The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\) of a chemical reaction:
 
@@ -4418,7 +4419,7 @@ Or, in other words:
 
 A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys \(\left( \left| \sum_\text{products} \nu_i \right| > \left| \sum_\text{reactants} \nu_i \right| \right)\), it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing \(\left( \left| \sum_\text{products} \nu_i \right| < \left| \sum_\text{reactants} \nu_i \right| \right)\), the entropy will also reduce.
 
-As we saw in section \ref{thermpot}, the natural variables of the Gibbs free energy are the temperature, \(T\), the pressure, \(P\), and chemical composition, as the number of moles \(\{n_i\}\). The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. \eqref{eq:dhagchem2}):
+As we saw in section \ref{thermpot}, the natural variables of the Gibbs energy are the temperature, \(T\), the pressure, \(P\), and chemical composition, as the number of moles \(\{n_i\}\). The Gibbs energy can therefore be expressed using the total differential as (see also, last formula in eq. \eqref{eq:dhagchem2}):
 
 \begin{equation}
 dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
@@ -4468,7 +4469,7 @@ which simplifies to:
 \label{eq:gibbshelm}
 \end{equation}
 
-Equation \eqref{eq:gibbshelm} is known as the \textbf{Gibbs--Helmholtz equation}, and is useful in its integrated form to calculate the Gibbs free energy for a chemical reaction at any temperature \(T\) by knowing just the standard Gibbs free energy of formation and the standard enthalpy of formation for the individual species, which are usually reported at \(T=298\;\text{K}\). The integration is performed as follows:
+Equation \eqref{eq:gibbshelm} is known as the \textbf{Gibbs--Helmholtz equation}, and is useful in its integrated form to calculate the Gibbs energy for a chemical reaction at any temperature \(T\) by knowing just the standard Gibbs energy of formation and the standard enthalpy of formation for the individual species, which are usually reported at \(T=298\;\text{K}\). The integration is performed as follows:
 
 \begin{equation}
 \begin{aligned}
@@ -4490,7 +4491,7 @@ giving the integrated Gibbs--Helmholtz equation:
 \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
 \]
 
-We can now turn the attention to the second coefficient that gives how the Gibbs free energy changes when the pressure change. To do this, we put the system at constant \(T\) and \(\{n_i\}\), and then we consider infinitesimal variations of \(G\). From eq. \eqref{eq:dgdef2}:
+We can now turn the attention to the second coefficient that gives how the Gibbs energy changes when the pressure change. To do this, we put the system at constant \(T\) and \(\{n_i\}\), and then we consider infinitesimal variations of \(G\). From eq. \eqref{eq:dgdef2}:
 
 \begin{equation}
 dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
@@ -4514,7 +4515,7 @@ G = G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{P^{-\kern-6pt{\ominus}
 \label{eq:dgconsttpintegral2}
 \end{equation}
 
-which is useful to convert standard Gibbs free energies of formation at pressures different than standard pressure, using:
+which is useful to convert standard Gibbs energies of formation at pressures different than standard pressure, using:
 
 \begin{equation}
 \Delta_{\text{f}} G = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{\underbrace{P^{-\kern-6pt{\ominus}\kern-6pt-}}_{=1 \; \text{bar}}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln P_f
@@ -4536,7 +4537,7 @@ The plots in Figure \ref{fig:gdeppfig} show the remarkable difference in the beh
 
 }
 
-\caption{Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.}\label{fig:gdeppfig}
+\caption{Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.}\label{fig:gdeppfig}
 \end{figure}
 
 \section{\texorpdfstring{Composition Dependence of \(\Delta G\)}{Composition Dependence of \textbackslash Delta G}}\label{composition-dependence-of-delta-g}
@@ -4545,7 +4546,7 @@ The plots in Figure \ref{fig:gdeppfig} show the remarkable difference in the beh
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
 \]
 
-The third and final coefficient gives the chemical potential as the dependence of \(G\) on the chemical composition at constant \(T\) and \(P\). Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance \(i\), at the beginning of the reaction there will be no moles of it \(n_i=0\), and consequently \(G=0\).\footnote{For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.} We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, \(n\), and the right-hand side between zero and the Gibbs free energy of the product, \(G\). The integral will become:
+The third and final coefficient gives the chemical potential as the dependence of \(G\) on the chemical composition at constant \(T\) and \(P\). Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance \(i\), at the beginning of the reaction there will be no moles of it \(n_i=0\), and consequently \(G=0\).\footnote{For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.} We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, \(n\), and the right-hand side between zero and the Gibbs energy of the product, \(G\). The integral will become:
 
 \begin{equation}
 \int_0^G d G = \int_0^n \mu^* dn,
@@ -4559,7 +4560,7 @@ where \(\mu^*\) indicates the chemical potential of a pure substance, which is i
 \label{eq:dgconstn1}
 \end{equation}
 
-which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs free energy.
+which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs energy.
 
 We can start from eq. \eqref{eq:dgconsttpintegral2} and write for a pure substance that is brought from \(P_i=P^{-\kern-6pt{\ominus}\kern-6pt-}\) to \(P_f=P\) at constant \(T\):
 
@@ -4622,7 +4623,7 @@ Analyzing eq. \eqref{eq:dgconstn7}, we can immediately see that, since \(y_i < 1
 \label{eq:dgconstn8}
 \end{equation}
 
-or, in other words, the chemical potential of a substance in the mixture is always lower than the chemical potential of the pure substance. If we consider a process where we start from two separate pure ideal gases and finish with a mixture of the two, we can calculate the change in Gibbs free energy due to the mixing process with:
+or, in other words, the chemical potential of a substance in the mixture is always lower than the chemical potential of the pure substance. If we consider a process where we start from two separate pure ideal gases and finish with a mixture of the two, we can calculate the change in Gibbs energy due to the mixing process with:
 
 \begin{equation}
 \Delta_{\text{mixing}} G = \sum n_i \left( \mu_i^{\text{mixture}} - \mu_i^* \right)  < 0,
@@ -4635,9 +4636,9 @@ or, in other words, the process is spontaneous under all circumstances, and pure
 
 \subsection{Practice Problems}\label{exer9}
 
-\textbf{Problem 1: Calculating Gibbs Free Energy Change}
+\textbf{Problem 1: Calculating Gibbs Energy Change}
 
-A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is \(-50\,\text{kJ/mol}\) and the entropy change is \(-0.15\,\text{kJ/(mol·K)}\). Calculate the Gibbs free energy change at \(298\,\text{K}\). Is the reaction spontaneous?
+A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is \(-50\,\text{kJ/mol}\) and the entropy change is \(-0.15\,\text{kJ/(mol·K)}\). Calculate the Gibbs energy change at \(298\,\text{K}\). Is the reaction spontaneous?
 
 \textbf{Solution:} We can use Gibbs equation, eq. \eqref{eq:gibbseq}, to solve this problem:
 \[\Delta_{\text{rxn}} G= \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.\]
@@ -4655,7 +4656,7 @@ Then:
 
 \[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} + 44.7\,\text{kJ/mol}\]
 
-\textbf{Answer:} the Gibbs free energy change for the reaction is \(-5.3\,\text{kJ/mol}\). The reaction is spontaneous.
+\textbf{Answer:} the Gibbs energy change for the reaction is \(-5.3\,\text{kJ/mol}\). The reaction is spontaneous.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -4665,7 +4666,7 @@ Calculate \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) at \(298\,\
 
 \[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}\]
 
-Using the standard Gibbs free energies of formation reported in the tables at the end of the book.
+Using the standard Gibbs energies of formation reported in the tables at the end of the book.
 
 \textbf{Solution:} We can use the equation: \[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i \]
 
@@ -4677,7 +4678,7 @@ Substituting the values:
 
 WHich gives us the final answer, after fixing the significant digits.
 
-\textbf{Answer:} The change in Gibbs free energy for the reported reaction at \(298\,\text{K}\) is \(-818\,\text{kJ/mol}\).
+\textbf{Answer:} The change in Gibbs energy for the reported reaction at \(298\,\text{K}\) is \(-818\,\text{kJ/mol}\).
 
 \subsection{Study Questions}\label{quest9}
 
@@ -4685,7 +4686,7 @@ WHich gives us the final answer, after fixing the significant digits.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Which of the following is the correct definition of the Gibbs free energy?}
+  \textbf{Which of the following is the correct definition of the Gibbs energy?}
 \end{enumerate}
 
 \begin{enumerate}
@@ -4735,7 +4736,7 @@ WHich gives us the final answer, after fixing the significant digits.
 \setcounter{enumi}{2}
 \tightlist
 \item
-  \textbf{Which of the following is NOT a natural variable of the Gibbs free energy?}
+  \textbf{Which of the following is NOT a natural variable of the Gibbs energy?}
 \end{enumerate}
 
 \begin{enumerate}
@@ -4860,7 +4861,7 @@ WHich gives us the final answer, after fixing the significant digits.
 \setcounter{enumi}{7}
 \tightlist
 \item
-  \textbf{For a pure substance, what is the relationship between chemical potential and molar Gibbs free energy?}
+  \textbf{For a pure substance, what is the relationship between chemical potential and molar Gibbs energy?}
 \end{enumerate}
 
 \begin{enumerate}
@@ -4910,7 +4911,7 @@ WHich gives us the final answer, after fixing the significant digits.
 \setcounter{enumi}{9}
 \tightlist
 \item
-  \textbf{What is the equation for the change in Gibbs free energy due to mixing of ideal gases?}
+  \textbf{What is the equation for the change in Gibbs energy due to mixing of ideal gases?}
 \end{enumerate}
 
 \begin{enumerate}
@@ -4945,14 +4946,14 @@ Let's consider a prototypical reaction at constant \(T,P\):
 \label{eq:reaction4}
 \end{equation}
 
-The Gibbs free energy of the reaction is defined as:
+The Gibbs energy of the reaction is defined as:
 
 \begin{equation}
 \Delta_{\text{rxn}} G = G_{\text{products}} - G_{\text{reactants}} = G^{\text{C}} + G^{\text{D}} - G^{\text{A}}-G^{\text{B}},
 \label{eq:chemeq1}
 \end{equation}
 
-and replacing the absolute Gibbs free energies with the chemical potentials \(\mu_i\), we obtain:
+and replacing the absolute Gibbs energies with the chemical potentials \(\mu_i\), we obtain:
 
 \begin{equation}
 \Delta_{\text{rxn}} G = c \mu_{\text{C}} + d \mu_{\text{D}} - a \mu_{\text{A}}- b\mu_{\text{B}}.
@@ -4990,7 +4991,7 @@ This equation tells us that the sign of \(\Delta_{\text{rxn}} G\) is influenced 
 \label{eq:chemeq6}
 \end{equation}
 
-where we have defined a new quantity called \textbf{equilibrium constant}, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol \(K_P\).\footnote{The subscript \(P\) refers to the fact that the equilibrium constant is measured in terms of partial pressures.} From eq. \eqref{eq:chemeq6} we can derive the following fundamental equation on the standard Gibbs free energy of reaction:
+where we have defined a new quantity called \textbf{equilibrium constant}, as the value the reaction quotient assumes when the reaction reaches equilibrium, and we have denoted it with the symbol \(K_P\).\footnote{The subscript \(P\) refers to the fact that the equilibrium constant is measured in terms of partial pressures.} From eq. \eqref{eq:chemeq6} we can derive the following fundamental equation on the standard Gibbs energy of reaction:
 
 \begin{equation}
 \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}= - RT \ln K_P.
@@ -5134,7 +5135,7 @@ We can divide the exercise into two parts. In the first one, we will deal with c
   \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}&= 2 \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{(g)}} - \Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}},
   \end{aligned}
   \end{equation}
-  and since \(\text{Cl}_{2(g)}\) is an element in its most stable form at \(T=298\;\mathrm{K}\), its standard enthalpy and Gibbs free energy of formation are \(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = 0\). Therefore:\footnote{Notice how a positive \(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) indicates that the dissociation of \(\mathrm{CL}_{2(g)}\) is non-spontaneous at \(T=298\;\text{K}\) and \(P=1\;\text{bar}\). As such, we should expect a very small value for \(K_P\).}
+  and since \(\text{Cl}_{2(g)}\) is an element in its most stable form at \(T=298\;\mathrm{K}\), its standard enthalpy and Gibbs energy of formation are \(\Delta_{\text{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\text{Cl}_{2(g)}} = 0\). Therefore:\footnote{Notice how a positive \(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\) indicates that the dissociation of \(\mathrm{CL}_{2(g)}\) is non-spontaneous at \(T=298\;\text{K}\) and \(P=1\;\text{bar}\). As such, we should expect a very small value for \(K_P\).}
   \begin{equation}
   \begin{aligned}
   \Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&= 2 \cdot 105.3 - 0 = 210.6 \;\text{kJ/mol} \\
@@ -5978,7 +5979,7 @@ in other words, any non-ideal gas will approach the ideal gas behavior as \(P\ri
 The highest chances for any gas to behave ideally happen at high temperature and low pressure.
 \end{quote}
 
-We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs free energy of a substance, we can write:
+We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs energy of a substance, we can write:
 
 \begin{equation}
 d \mu_{\text{ideal}} = \overline{V}_{\text{ideal}}dP,
@@ -6392,7 +6393,7 @@ We have already encountered the gas, liquid, and solid phases and already discus
 \end{definition}
 \end{quote}
 
-Let's now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:
+Let's now use the total differential of the chemical potential and the definition of molar Gibbs energy for one component:
 
 \begin{equation}
 \begin{aligned}
@@ -6466,8 +6467,8 @@ Replacing the differential with the definition of chemical potential in eq. \eqr
 
 \begin{equation}
 \begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
+-S_{\alpha}dT+\overline{V}_{\alpha}dP &= -S_{\beta}dT+\overline{V}_{\beta}dP \\
+\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}}dP,
 \end{aligned}
 \label{eq:muequalC}
 \end{equation}
@@ -8190,7 +8191,7 @@ Then:
 \item
   Enthalpy of reaction.
 \item
-  Gibbs free energy.
+  Gibbs energy.
 \item
   Kinetic energy.
 \end{enumerate}

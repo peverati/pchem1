@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-24" />
+<meta name="date" content="2024-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,6 +87,7 @@ MathJax.Hub.Config({
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#authors-note-to-the-august-2024-edition."><i class="fa fa-check"></i>Author’s Note to the August 2024 Edition.</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-note-on-units"><i class="fa fa-check"></i>A note on units</a></li>
 </ul></li>
@@ -173,7 +174,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.4.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#quest5"><i class="fa fa-check"></i><b>5.4.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Entropy and the Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
@@ -210,14 +211,14 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
 <li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Gibbs and Helmholtz Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 <li class="chapter" data-level="8.5" data-path="Potentials.html"><a href="Potentials.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
 <ul>
 <li class="chapter" data-level="8.5.1" data-path="Potentials.html"><a href="Potentials.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Free Energy</a>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Energy</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
 <li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
@@ -366,7 +367,7 @@ MathJax.Hub.Config({
 <p><span id="def:phasedef" class="definition"><strong>Definition 12.1  </strong></span><em>Phase:</em> A region of the system with homogeneous chemical composition and physical state.</p>
 </div>
 </blockquote>
-<p>Let’s now use the total differential of the chemical potential and the definition of molar Gibbs free energy for one component:</p>
+<p>Let’s now use the total differential of the chemical potential and the definition of molar Gibbs energy for one component:</p>
 <p><span class="math display" id="eq:muequal1">\[\begin{equation}
 \begin{aligned}
 d\mu &amp;= \left( \frac{\partial \mu}{\partial T} \right)_P dT + \left( \frac{\partial \mu}{\partial P} \right)_T dP \\
@@ -418,8 +419,8 @@ d\mu_{\alpha}= d\mu_{\beta}.
 <p>Replacing the differential with the definition of chemical potential in eq. <a href="PhaseEquilibrium.html#eq:muequal1">(12.1)</a>, we obtain:</p>
 <p><span class="math display" id="eq:muequalC">\[\begin{equation}
 \begin{aligned}
--S_{\alpha}dT+\overline{V}_{\alpha} &amp;= -S_{\beta}dT+\overline{V}_{\beta} \\
-\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &amp;= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}},
+-S_{\alpha}dT+\overline{V}_{\alpha}dP &amp;= -S_{\beta}dT+\overline{V}_{\beta}dP \\
+\underbrace{\left(S_{\beta}-S_{\alpha}\right)}_{\Delta S} dT &amp;= \underbrace{\left( \overline{V}_{\beta}-\overline{V}_{\alpha}\right)}_{\Delta \overline{V}}dP,
 \end{aligned}
 \tag{12.7}
 \end{equation}\]</span></p>

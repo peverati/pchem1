@@ -1,8 +1,8 @@
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
-# Gibbs Free Energy {#GibbsFree}
+# Gibbs Energy {#GibbsFree}
 
-In this chapter, we will concentrate on chemical processes that happen at constant $T$ and constant $P$.^[The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.] As such, we will focus our attention on the Gibbs free energy.
+In this chapter, we will concentrate on chemical processes that happen at constant $T$ and constant $P$.^[The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.] As such, we will focus our attention on the Gibbs energy.
 
 ## Gibbs Equation {#gibbseqsec}
 Recalling from chapter \@ref(Potentials), the definition of $G$ is:
@@ -31,7 +31,7 @@ Integrating eq. \@ref(eq:dgdeftot2) between the initial and final states of a pr
 \end{equation}
 
 
-which is the famous **Gibbs equation** for $\Delta G$. Using Definition \@ref(def:helmgibbsminimum), we can use $\Delta G$ to infer the spontaneity of a chemical process that happens at constant $T$ and $P$ using $\Delta G \leq 0$. If we set ourselves at standard conditions, we can calculate the standard Gibbs free energy of formation, $\Delta_{\text{rxn}} G^\standardstate$, for any reaction as:
+which is the famous **Gibbs equation** for $\Delta G$. Using Definition \@ref(def:helmgibbsminimum), we can use $\Delta G$ to infer the spontaneity of a chemical process that happens at constant $T$ and $P$ using $\Delta G \leq 0$. If we set ourselves at standard conditions, we can calculate the standard Gibbs energy of formation, $\Delta_{\text{rxn}} G^\standardstate$, for any reaction as:
 
 \begin{equation}
 \begin{aligned}
@@ -42,7 +42,7 @@ which is the famous **Gibbs equation** for $\Delta G$. Using Definition \@ref(de
 (\#eq:gibbseq2)
 \end{equation}
 
-where $\Delta_{\mathrm{f}} H_i^\standardstate$ are the standard enthalpies of formation, $S_i^\standardstate$ are the standard entropies, and $\nu_i$ are the stoichiometric coefficients for every species $i$ involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \@ref(Thermochemistry) and \@ref(thirdlaw), respectively.^[It is not uncommon to see values of $\Delta_{\text{f}} G^\standardstate$ tabulated alongside $\Delta_{\mathrm{f}} H^\standardstate$ and $S_i^\standardstate$, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs free energy of formation of inorganic and organic compounds is reported in the appendix of this book \@ref(appendix). For cases where $\Delta_{\text{f}} G^\standardstate$ are not reported, they can always be calculated by their constituents.]
+where $\Delta_{\mathrm{f}} H_i^\standardstate$ are the standard enthalpies of formation, $S_i^\standardstate$ are the standard entropies, and $\nu_i$ are the stoichiometric coefficients for every species $i$ involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters \@ref(Thermochemistry) and \@ref(thirdlaw), respectively.^[It is not uncommon to see values of $\Delta_{\text{f}} G^\standardstate$ tabulated alongside $\Delta_{\mathrm{f}} H^\standardstate$ and $S_i^\standardstate$, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs energy of formation of inorganic and organic compounds is reported in the appendix of this book \@ref(appendix). For cases where $\Delta_{\text{f}} G^\standardstate$ are not reported, they can always be calculated by their constituents.]
 
 The following four options are possible for $\Delta G^\standardstate$ of a chemical reaction:
 
@@ -64,7 +64,7 @@ Or, in other words:
     
 A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys $\left( \left| \sum_\text{products} \nu_i \right| > \left| \sum_\text{reactants} \nu_i \right| \right)$, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing $\left( \left| \sum_\text{products} \nu_i \right| < \left| \sum_\text{reactants} \nu_i \right| \right)$, the entropy will also reduce.
 
-As we saw in section \@ref(thermpot), the natural variables of the Gibbs free energy are the temperature, $T$, the pressure, $P$, and chemical composition, as the number of moles $\{n_i\}$. The Gibbs free energy can therefore be expressed using the total differential as (see also, last formula in eq. \@ref(eq:dhagchem2)):
+As we saw in section \@ref(thermpot), the natural variables of the Gibbs energy are the temperature, $T$, the pressure, $P$, and chemical composition, as the number of moles $\{n_i\}$. The Gibbs energy can therefore be expressed using the total differential as (see also, last formula in eq. \@ref(eq:dhagchem2)):
 
 \begin{equation}
 dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
@@ -113,7 +113,7 @@ which simplifies to:
 (\#eq:gibbshelm)
 \end{equation}
 
-Equation \@ref(eq:gibbshelm) is known as the **Gibbs–Helmholtz equation**, and is useful in its integrated form to calculate the Gibbs free energy for a chemical reaction at any temperature $T$ by knowing just the standard Gibbs free energy of formation and the standard enthalpy of formation for the individual species, which are usually reported at $T=298\;\text{K}$. The integration is performed as follows:
+Equation \@ref(eq:gibbshelm) is known as the **Gibbs–Helmholtz equation**, and is useful in its integrated form to calculate the Gibbs energy for a chemical reaction at any temperature $T$ by knowing just the standard Gibbs energy of formation and the standard enthalpy of formation for the individual species, which are usually reported at $T=298\;\text{K}$. The integration is performed as follows:
 
 \begin{equation}
 \begin{aligned}
@@ -135,7 +135,7 @@ $$
 \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
 $$
 
-We can now turn the attention to the second coefficient that gives how the Gibbs free energy changes when the pressure change. To do this, we put the system at constant $T$ and $\{n_i\}$, and then we consider infinitesimal variations of $G$. From eq. \@ref(eq:dgdef2):
+We can now turn the attention to the second coefficient that gives how the Gibbs energy changes when the pressure change. To do this, we put the system at constant $T$ and $\{n_i\}$, and then we consider infinitesimal variations of $G$. From eq. \@ref(eq:dgdef2):
 
 \begin{equation}
 dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
@@ -159,7 +159,7 @@ G = G^\standardstate + nRT \ln \frac{P_f}{P^\standardstate},
 (\#eq:dgconsttpintegral2)
 \end{equation}
 
-which is useful to convert standard Gibbs free energies of formation at pressures different than standard pressure, using:
+which is useful to convert standard Gibbs energies of formation at pressures different than standard pressure, using:
 
 \begin{equation}
 \Delta_{\text{f}} G = \Delta_{\text{f}} G^\standardstate + nRT \ln \frac{P_f}{\underbrace{P^\standardstate}_{=1 \; \text{bar}}} = \Delta_{\text{f}} G^\standardstate + nRT \ln P_f
@@ -176,7 +176,7 @@ For liquids and solids, $V$ is essentially independent of $P$ (liquids and solid
 
 The plots in Figure \@ref(fig:gdeppfig) show the remarkable difference in the behaviors of $\Delta_{\text{f}} G$ for a gas and for a liquid, as obtained from eqs. \@ref(eq:dgconsttpintegral1) and \@ref(eq:dgconsttpintegral3).
 
-```{r gdeppfig, echo=FALSE, fig.align='center', fig.cap='Dependence of the Gibbs Free Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.',fig.asp = .62}
+```{r gdeppfig, echo=FALSE, fig.align='center', fig.cap='Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.',fig.asp = .62}
 x <- seq(0.01,10,0.1)
 i <- 0.2
 f <- 1
@@ -200,7 +200,7 @@ $$
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
 $$
 
-The third and final coefficient gives the chemical potential as the dependence of $G$ on the chemical composition at constant $T$ and $P$. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance $i$, at the beginning of the reaction there will be no moles of it $n_i=0$, and consequently $G=0$.^[For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.] We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, $n$, and the right-hand side between zero and the Gibbs free energy of the product, $G$. The integral will become:
+The third and final coefficient gives the chemical potential as the dependence of $G$ on the chemical composition at constant $T$ and $P$. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance $i$, at the beginning of the reaction there will be no moles of it $n_i=0$, and consequently $G=0$.^[For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.] We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, $n$, and the right-hand side between zero and the Gibbs energy of the product, $G$. The integral will become:
 
 \begin{equation}
 \int_0^G d G = \int_0^n \mu^* dn,
@@ -214,7 +214,7 @@ where $\mu^*$ indicates the chemical potential of a pure substance, which is ind
 (\#eq:dgconstn1)
 \end{equation}
 
-which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs free energy.
+which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs energy.
 
 We can start from eq. \@ref(eq:dgconsttpintegral2) and write for a pure substance that is brought from $P_i=P^\standardstate$ to $P_f=P$ at constant $T$:
 
@@ -277,7 +277,7 @@ Analyzing eq. \@ref(eq:dgconstn7), we can immediately see that, since $y_i < 1$:
 (\#eq:dgconstn8)
 \end{equation}
 
-or, in other words, the chemical potential of a substance in the mixture is always lower than the chemical potential of the pure substance. If we consider a process where we start from two separate pure ideal gases and finish with a mixture of the two, we can calculate the change in Gibbs free energy due to the mixing process with:
+or, in other words, the chemical potential of a substance in the mixture is always lower than the chemical potential of the pure substance. If we consider a process where we start from two separate pure ideal gases and finish with a mixture of the two, we can calculate the change in Gibbs energy due to the mixing process with:
 
 \begin{equation}
 \Delta_{\text{mixing}} G = \sum n_i \left( \mu_i^{\text{mixture}} - \mu_i^* \right)  < 0,
@@ -291,9 +291,9 @@ or, in other words, the process is spontaneous under all circumstances, and pure
 
 ### Practice Problems {#exer9}
 
-**Problem 1: Calculating Gibbs Free Energy Change**
+**Problem 1: Calculating Gibbs Energy Change**
 
-A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is $-50\,\text{kJ/mol}$ and the entropy change is $-0.15\,\text{kJ/(mol·K)}$. Calculate the Gibbs free energy change at $298\,\text{K}$. Is the reaction spontaneous?
+A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is $-50\,\text{kJ/mol}$ and the entropy change is $-0.15\,\text{kJ/(mol·K)}$. Calculate the Gibbs energy change at $298\,\text{K}$. Is the reaction spontaneous?
 
 **Solution:**  We can use Gibbs equation, eq. \@ref(eq:gibbseq), to solve this problem:
 $$\Delta_{\text{rxn}} G= \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.$$
@@ -311,7 +311,7 @@ $$\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} - (298\,\text{K})(-0.15\,\text{kJ/(
 
 $$\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} + 44.7\,\text{kJ/mol}$$
 
-**Answer:** the Gibbs free energy change for the reaction is $-5.3\,\text{kJ/mol}$. The reaction is spontaneous.
+**Answer:** the Gibbs energy change for the reaction is $-5.3\,\text{kJ/mol}$. The reaction is spontaneous.
 
 ---
 
@@ -321,7 +321,7 @@ Calculate $\Delta_{\text{rxn}}G^{\standardstate}$ at $298\,\text{K}$ for the rea
 
 $$\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}$$
 
-Using the standard Gibbs free energies of formation reported in the tables at the end of the book.
+Using the standard Gibbs energies of formation reported in the tables at the end of the book.
 
 **Solution:** We can use the equation: $$\Delta_{\text{rxn}}G^{\standardstate} = \sum \nu_i \Delta_f G^{\standardstate}_i $$
 
@@ -333,11 +333,11 @@ $$\Delta_{\text{rxn}}G^{\standardstate} = -817.9\,\text{kJ/mol}$$
 
 WHich gives us the final answer, after fixing the significant digits.
 
-**Answer:** The change in Gibbs free energy for the reported reaction at $298\,\text{K}$ is $-818\,\text{kJ/mol}$.
+**Answer:** The change in Gibbs energy for the reported reaction at $298\,\text{K}$ is $-818\,\text{kJ/mol}$.
 
 ### Study Questions {#quest9}
 
-1. **Which of the following is the correct definition of the Gibbs free energy?**
+1. **Which of the following is the correct definition of the Gibbs energy?**
 
 a. $G = U - TS$.
 b. $G = H + TS$.
@@ -357,7 +357,7 @@ e. $\Delta G$ is undefined.
 
 ---
 
-3. **Which of the following is NOT a natural variable of the Gibbs free energy?**
+3. **Which of the following is NOT a natural variable of the Gibbs energy?**
 
 a. Temperature.
 b. Pressure.
@@ -407,7 +407,7 @@ e. $\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \frac{\
 
 ---
 
-8. **For a pure substance, what is the relationship between chemical potential and molar Gibbs free energy?**
+8. **For a pure substance, what is the relationship between chemical potential and molar Gibbs energy?**
 
 a. $\mu^* = \frac{G}{n^2}$.
 b. $\mu^* = \frac{G}{RT}$.
@@ -427,7 +427,7 @@ e. $\mu_i^{\text{mixture}} = \frac{\mu_i^*}{RT}$.
 
 ---
 
-10. **What is the equation for the change in Gibbs free energy due to mixing of ideal gases?**
+10. **What is the equation for the change in Gibbs energy due to mixing of ideal gases?**
 
 a. $\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} + \mu_i^*)$.
 b. $\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) > 0$.

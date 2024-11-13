@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-09-24" />
+<meta name="date" content="2024-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,6 +87,7 @@ MathJax.Hub.Config({
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#authors-note-to-the-august-2024-edition."><i class="fa fa-check"></i>Author’s Note to the August 2024 Edition.</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-note-on-units"><i class="fa fa-check"></i>A note on units</a></li>
 </ul></li>
@@ -173,7 +174,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.4.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#quest5"><i class="fa fa-check"></i><b>5.4.2</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Second Law of Thermodynamics</a>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Entropy and the Second Law of Thermodynamics</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
 <li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
@@ -210,14 +211,14 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
 <li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
-<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Free Energies</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Gibbs and Helmholtz Energies</a></li>
 <li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
 <li class="chapter" data-level="8.5" data-path="Potentials.html"><a href="Potentials.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
 <ul>
 <li class="chapter" data-level="8.5.1" data-path="Potentials.html"><a href="Potentials.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Free Energy</a>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Energy</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
 <li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
@@ -402,7 +403,7 @@ dH &amp; = TdS -PdV +\sum_i\mu_i dn_i +VdP +PdV  \\
 \tag{8.4}
 \end{equation}\]</span></p>
 <p>which is the fundamental equation for enthalpy. The natural variables of the enthalpy are <span class="math inline">\(S\)</span>, <span class="math inline">\(P\)</span>, and <span class="math inline">\(\{n_i\}\)</span>. The Legendre transformation has allowed us to go from <span class="math inline">\(U(S,V,\{n_i\})\)</span> to <span class="math inline">\(H(S,P,\{n_i\})\)</span> by replacing the dependence on the extensive variable, <span class="math inline">\(V\)</span>, with an intensive one, <span class="math inline">\(P\)</span>.</p>
-<p>Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, <span class="math inline">\(A\)</span>, as:</p>
+<p>Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz energy, <span class="math inline">\(A\)</span>, as:</p>
 <p><span class="math display" id="eq:dadef1">\[\begin{equation}
 A = U -TS
 \tag{8.5}
@@ -415,8 +416,8 @@ dA &amp;= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
 \end{aligned}
 \tag{8.6}
 \end{equation}\]</span></p>
-<p>The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.</p>
-<p>Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs free energy, <span class="math inline">\(G\)</span>, as:</p>
+<p>The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.</p>
+<p>Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs energy, <span class="math inline">\(G\)</span>, as:</p>
 <p><span class="math display" id="eq:dgdef1">\[\begin{equation}
 G = U -TS +PV
 \tag{8.7}
@@ -430,7 +431,7 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 \end{aligned}
 \tag{8.8}
 \end{equation}\]</span></p>
-<p>The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.</p>
+<p>The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.</p>
 <p>A summary of the four thermodynamic potentials is given in the following table.</p>
 <table style="width:100%;">
 <colgroup>
@@ -461,13 +462,13 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 <td align="center"><span class="math inline">\(S,P,\{n_i\}\)</span></td>
 </tr>
 <tr class="odd">
-<td align="center"><strong>Helmholtz Free Energy</strong></td>
+<td align="center"><strong>Helmholtz Energy</strong></td>
 <td align="center"><span class="math inline">\(A\)</span></td>
 <td align="center"><span class="math inline">\(dA=-SdT-PdV+\sum_i\mu_i dn_i\)</span></td>
 <td align="center"><span class="math inline">\(T,V,\{n_i\}\)</span></td>
 </tr>
 <tr class="even">
-<td align="center"><strong>Gibbs Free Energy</strong></td>
+<td align="center"><strong>Gibbs Energy</strong></td>
 <td align="center"><span class="math inline">\(G\)</span></td>
 <td align="center"><span class="math inline">\(dG=VdP-SdT+\sum_i\mu_i dn_i\)</span></td>
 <td align="center"><span class="math inline">\(T,P,\{n_i\}\)</span></td>
@@ -478,13 +479,13 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 <ul>
 <li>Internal energy (<span class="math inline">\(U\)</span>) is the capacity to do work plus the capacity to release heat.</li>
 <li>Enthalpy (<span class="math inline">\(H\)</span>) is the capacity to do non-mechanical work plus the capacity to release heat.</li>
-<li>Gibbs free energy (<span class="math inline">\(G\)</span>) is the capacity to do non-mechanical work.</li>
-<li>Helmholtz free energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a></li>
+<li>Gibbs energy (<span class="math inline">\(G\)</span>) is the capacity to do non-mechanical work.</li>
+<li>Helmholtz energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a></li>
 </ul>
 <p>Where non-mechanical work is defined as any type of work that is not expansion or compression (<span class="math inline">\(PV\)</span>–work). A typical example of non-mechanical work is electrical work.</p>
 </div>
 <div id="freeenergies" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Free Energies<a href="Potentials.html#freeenergies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">8.3</span> Gibbs and Helmholtz Energies<a href="Potentials.html#freeenergies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, <span class="math inline">\(H(S,P,\{n_i\})\)</span>, <span class="math inline">\(A(T,V,\{n_i\})\)</span>, and <span class="math inline">\(G(T,P,\{n_i\})\)</span> all contain the same information that is in <span class="math inline">\(U(S,V,\{n_i\})\)</span>. However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term <span class="math inline">\(\sum_i\mu_i dn_i\)</span> that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant <span class="math inline">\(S\)</span> and constant <span class="math inline">\(V\)</span>:</p>
 <p><span class="math display" id="eq:duchem">\[\begin{equation}
 dU(S,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dS=dV=0.
@@ -499,7 +500,7 @@ dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 \end{aligned}
 \tag{8.10}
 \end{equation}\]</span></p>
-<p>The latter two cases are particularly interesting since most of chemistry happens at either constant volume,<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> or constant pressure.<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> Since <span class="math inline">\(dS=0\)</span> is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies.</p>
+<p>The latter two cases are particularly interesting since most of chemistry happens at either constant volume,<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> or constant pressure.<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> Since <span class="math inline">\(dS=0\)</span> is not a requirement for both energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the potentials.</p>
 <p>Recalling Clausius theorem:</p>
 <p><span class="math display" id="eq:dssyscrit">\[\begin{equation}
 d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
@@ -516,7 +517,7 @@ TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
 \end{aligned}
 \tag{8.12}
 \end{equation}\]</span></p>
-<p>we can then simplify the definition of free energies, eqs. <a href="Potentials.html#eq:dadef2">(8.6)</a> and <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
+<p>we can then simplify the definition of each energy, eqs. <a href="Potentials.html#eq:dadef2">(8.6)</a> and <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
 <p><span class="math display" id="eq:dadgder3">\[\begin{equation}
 \begin{aligned}
 \text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\
@@ -541,15 +542,15 @@ TdS -(dA)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -(dG)_{T,P
 <div class="definition">
 <p><span id="def:helmgibbsminimum" class="definition"><strong>Definition 8.2  </strong></span><span class="math inline">\(\;\)</span></p>
 <ul>
-<li>During a spontaneous process at constant <em>temperature</em> and <em>volume</em>, the <em>Helmholtz free energy</em> will decrease <span class="math inline">\((dA&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dA=0)\)</span>.</li>
-<li>During a spontaneous process at constant <em>temperature</em> and <em>pressure</em>, the <em>Gibbs free energy</em> will decrease <span class="math inline">\((dG&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dG=0)\)</span>.</li>
+<li>During a spontaneous process at constant <em>temperature</em> and <em>volume</em>, the <em>Helmholtz energy</em> will decrease <span class="math inline">\((dA&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dA=0)\)</span>.</li>
+<li>During a spontaneous process at constant <em>temperature</em> and <em>pressure</em>, the <em>Gibbs energy</em> will decrease <span class="math inline">\((dG&lt;0)\)</span>, until it reaches a stationary point at which the system will be at equilibrium <span class="math inline">\((dG=0)\)</span>.</li>
 </ul>
 </div>
 </blockquote>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:agfig"></span>
-<img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right)." width="672" />
+<img src="pchem1_files/figure-html/agfig-1.png" alt="Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right)." width="672" />
 <p class="caption">
-Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant <span class="math inline">\(T,V\)</span> (left) and Constant <span class="math inline">\(T,P\)</span> (right).
+Figure 8.1: Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant <span class="math inline">\(T,V\)</span> (left) and Constant <span class="math inline">\(T,P\)</span> (right).
 </p>
 </div>
 </div>
@@ -643,7 +644,7 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <li><span class="math inline">\(dU = TdS - VdP\)</span>.</li>
 </ol>
 <hr />
-<p><strong>3. Which of the following formulas is the fundamental equation for the Helmholtz free energy?</strong></p>
+<p><strong>3. Which of the following formulas is the fundamental equation for the Helmholtz energy?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(dA = TdS - PdV + \sum_i \mu_i dn_i\)</span>.</li>
 <li><span class="math inline">\(dA = -SdT + VdP + \sum_i \mu_i dn_i\)</span>.</li>
@@ -656,8 +657,8 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <ol style="list-style-type: lower-alpha">
 <li>Internal energy is the capacity to do work plus the capacity to release heat.</li>
 <li>Enthalpy is the capacity to do non-mechanical work plus the capacity to release heat.</li>
-<li>Gibbs free energy is the capacity to do mechanical work only.</li>
-<li>Helmholtz free energy is the capacity to do mechanical plus non-mechanical work.</li>
+<li>Gibbs energy is the capacity to do mechanical work only.</li>
+<li>Helmholtz energy is the capacity to do mechanical plus non-mechanical work.</li>
 <li>Non-mechanical work includes types of work that are not expansion or compression.</li>
 </ol>
 <hr />
@@ -665,12 +666,12 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <ol style="list-style-type: lower-alpha">
 <li>Internal energy.</li>
 <li>Enthalpy.</li>
-<li>Gibbs free energy.</li>
-<li>Helmholtz free energy.</li>
+<li>Gibbs energy.</li>
+<li>Helmholtz energy.</li>
 <li>Chemical potential.</li>
 </ol>
 <hr />
-<p><strong>5. What are the natural variables of the Gibbs free energy?</strong></p>
+<p><strong>5. What are the natural variables of the Gibbs energy?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(T\)</span>, <span class="math inline">\(V\)</span>, <span class="math inline">\(\{n_i\}\)</span>.</li>
 <li><span class="math inline">\(S\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(\{n_i\}\)</span>.</li>
@@ -683,8 +684,8 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <ol style="list-style-type: lower-alpha">
 <li>Internal energy.</li>
 <li>Enthalpy.</li>
-<li>Gibbs free energy.</li>
-<li>Helmholtz free energy.</li>
+<li>Gibbs energy.</li>
+<li>Helmholtz energy.</li>
 <li>Chemical potential.</li>
 </ol>
 <hr />

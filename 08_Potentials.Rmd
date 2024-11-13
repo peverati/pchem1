@@ -58,7 +58,7 @@ dH & = TdS -PdV +\sum_i\mu_i dn_i +VdP +PdV  \\
 
 which is the fundamental equation for enthalpy. The natural variables of the enthalpy are $S$, $P$, and $\{n_i\}$. The Legendre transformation has allowed us to go from $U(S,V,\{n_i\})$ to $H(S,P,\{n_i\})$ by replacing the dependence on the extensive variable, $V$, with an intensive one, $P$.
 
-Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz free energy, $A$, as:
+Following the same procedure, we can perform another Legendre transformation to replace the entropy with a more convenient intensive variable such as the temperature. This can be done by defining a new function called the Helmholtz energy, $A$, as:
 
 \begin{equation}
 A = U -TS
@@ -75,9 +75,9 @@ dA &= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
 (\#eq:dadef2)
 \end{equation}
 
-The Helmholtz free energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.
+The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.
 
-Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs free energy, $G$, as:
+Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs energy, $G$, as:
 
 \begin{equation}
 G = U -TS +PV
@@ -95,7 +95,7 @@ dG &= dU -SdT -TdS +VdP +PdV \\
 (\#eq:dgdef2)
 \end{equation} 
 
-The Gibbs free energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
+The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.
 
 A summary of the four thermodynamic potentials is given in the following table.
 
@@ -104,8 +104,8 @@ A summary of the four thermodynamic potentials is given in the following table.
 |:-------------------------:|:----------:|:------------------------------:|:---------------------:|
 | **Energy**                |     $U$    |  $dU=TdS-PdV+\sum_i\mu_i dn_i$ |      $S,V,\{n_i\}$      |
 | **Enthalpy**              |     $H$    |  $dH=TdS+VdP+\sum_i\mu_i dn_i$ |      $S,P,\{n_i\}$      |
-| **Helmholtz Free Energy** |     $A$    | $dA=-SdT-PdV+\sum_i\mu_i dn_i$ |      $T,V,\{n_i\}$      |
-| **Gibbs Free Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
+| **Helmholtz Energy** |     $A$    | $dA=-SdT-PdV+\sum_i\mu_i dn_i$ |      $T,V,\{n_i\}$      |
+| **Gibbs Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
 \normalsize
 
 
@@ -113,12 +113,12 @@ The thermodynamic potentials are the analog of the potential energy in classical
 
 - Internal energy ($U$) is the capacity to do work plus the capacity to release heat.
 - Enthalpy ($H$) is the capacity to do non-mechanical work plus the capacity to release heat.
-- Gibbs free energy ($G$) is the capacity to do non-mechanical work.
-- Helmholtz free energy ($A$) is the capacity to do mechanical plus non-mechanical work.^[For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the [thermodynamic square](https://en.wikipedia.org/wiki/Thermodynamic_square).]
+- Gibbs energy ($G$) is the capacity to do non-mechanical work.
+- Helmholtz energy ($A$) is the capacity to do mechanical plus non-mechanical work.^[For the mathematically inclined, an entertaining method to summarize the same thermodynamic potentials is the [thermodynamic square](https://en.wikipedia.org/wiki/Thermodynamic_square).]
 
 Where non-mechanical work is defined as any type of work that is not expansion or compression ($PV$–work). A typical example of non-mechanical work is electrical work.
 
-## Free Energies {#freeenergies}
+## Gibbs and Helmholtz Energies {#freeenergies}
 
 The Legendre transformation procedure translates all information contained in the original function to the new one. Therefore, $H(S,P,\{n_i\})$, $A(T,V,\{n_i\})$, and $G(T,P,\{n_i\})$ all contain the same information that is in $U(S,V,\{n_i\})$. However, the new functions depend on different natural variables, and they are useful at different conditions. For example, when we want to study chemical changes, we are interested in studying the term $\sum_i\mu_i dn_i$ that appears in each thermodynamic potential. To do so, we need to isolate the chemical term by keeping all other natural variables constant. For example, changes in the chemical term will correspond to changes in the internal energy at constant $S$ and constant $V$:
 
@@ -138,7 +138,7 @@ dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 (\#eq:dhagchem)
 \end{equation}
 
-The latter two cases are particularly interesting since most of chemistry happens at either constant volume,^[for example, several industrial processes in chemical plants.] or constant pressure.^[for example, most processes in a chemistry lab.] Since $dS=0$ is not a requirement for both free energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the free energies. 
+The latter two cases are particularly interesting since most of chemistry happens at either constant volume,^[for example, several industrial processes in chemical plants.] or constant pressure.^[for example, most processes in a chemistry lab.] Since $dS=0$ is not a requirement for both energies to describe chemical changes, we can apply either of them to study non-isentropic processes. If a process is not isentropic, it either increases the entropy of the universe, or it decreases it. Therefore—according to the second law—it is either spontaneous or not. Using this concept in conjunction with Clausius theorem, we can devise new criteria for inferring the spontaneity of a process that depends exclusively on the potentials. 
 
 Recalling Clausius theorem:
 
@@ -161,7 +161,7 @@ TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0 \\
 (\#eq:dadgder1)
 \end{equation}
 
-we can then simplify the definition of free energies, eqs. \@ref(eq:dadef2) and \@ref(eq:dgdef2):
+we can then simplify the definition of each energy, eqs. \@ref(eq:dadef2) and \@ref(eq:dgdef2):
 
 \begin{equation}
 \begin{aligned}
@@ -190,12 +190,12 @@ These equations represent the conditions on $dA$ and $dG$ for inferring the spon
 > ```{definition, helmgibbsminimum}
 $\;$
 
-- During a spontaneous process at constant *temperature* and *volume*, the *Helmholtz free energy* will decrease $(dA<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dA=0)$.
-- During a spontaneous process at constant *temperature* and *pressure*, the *Gibbs free energy* will decrease $(dG<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dG=0)$.
+- During a spontaneous process at constant *temperature* and *volume*, the *Helmholtz energy* will decrease $(dA<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dA=0)$.
+- During a spontaneous process at constant *temperature* and *pressure*, the *Gibbs energy* will decrease $(dG<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dG=0)$.
 
 > ```
 
-```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Free Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).'}
+```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).'}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -210,7 +210,7 @@ plot(x, 2/x^2+25,
      xaxt='n',
      yaxt='n',
      mgp=c(0.5,0.5,0),
-     ylab = "Helmholtz Free Energy", xlab = "time", col = "red")
+     ylab = "Helmholtz Energy", xlab = "time", col = "red")
 arrows(-10 , 25, 10, 25 , length=0, angle=90, code=3, lty="dotted")
 legend("topright", inset=.02, "constant T,V",, bg = "white", adj=0.15, box.col = "white")
 
@@ -222,7 +222,7 @@ plot(x, 2/x^2+25,
      xaxt='n',
      yaxt='n',
      mgp=c(0.5,0.5,0),
-     ylab = "Gibbs Free Energy", xlab = "time", col = "#2E9FDF")
+     ylab = "Gibbs Energy", xlab = "time", col = "#2E9FDF")
 arrows(-10 , 25, 10, 25 , length=0, angle=90, code=3, lty="dotted")
 
 legend("topright", inset=.02, "constant T,P",, bg = "white", adj=0.15, box.col = "white")
@@ -334,7 +334,7 @@ e. $dU = TdS - VdP$.
 
 ---
 
-**3. Which of the following formulas is the fundamental equation for the Helmholtz free energy?**
+**3. Which of the following formulas is the fundamental equation for the Helmholtz energy?**
 
 a. $dA = TdS - PdV + \sum_i \mu_i dn_i$.
 b. $dA = -SdT + VdP + \sum_i \mu_i dn_i$.
@@ -348,8 +348,8 @@ e. $dA = -SdT - VdP + \sum_i \mu_i dn_i$.
 
 a. Internal energy is the capacity to do work plus the capacity to release heat.
 b. Enthalpy is the capacity to do non-mechanical work plus the capacity to release heat.
-c. Gibbs free energy is the capacity to do mechanical work only.
-d. Helmholtz free energy is the capacity to do mechanical plus non-mechanical work.
+c. Gibbs energy is the capacity to do mechanical work only.
+d. Helmholtz energy is the capacity to do mechanical plus non-mechanical work.
 e. Non-mechanical work includes types of work that are not expansion or compression.
 
 ---
@@ -358,13 +358,13 @@ e. Non-mechanical work includes types of work that are not expansion or compress
 
 a. Internal energy.
 b. Enthalpy.
-c. Gibbs free energy.
-d. Helmholtz free energy.
+c. Gibbs energy.
+d. Helmholtz energy.
 e. Chemical potential.
 
 ---
 
-**5. What are the natural variables of the Gibbs free energy?**
+**5. What are the natural variables of the Gibbs energy?**
 
 a. $T$, $V$, $\{n_i\}$.
 b. $S$, $P$, $\{n_i\}$.
@@ -378,8 +378,8 @@ e. $U$, $P$, $\{n_i\}$.
 
 a. Internal energy.
 b. Enthalpy.
-c. Gibbs free energy.
-d. Helmholtz free energy.
+c. Gibbs energy.
+d. Helmholtz energy.
 e. Chemical potential.
 
 ---
