@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Zeroth Law of Thermodynamics | The Live Textbook of Physical Chemistry 1</title>
+  <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Zeroth Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem1" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Zeroth Law of Thermodynamics | The Live Textbook of Physical Chemistry 1" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2024-11-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="SystemVariables.html"/>
+<link rel="next" href="FirstLaw.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 1</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#authors-note-to-the-august-2024-edition."><i class="fa fa-check"></i>Author’s Note to the August 2024 Edition.</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-note-on-units"><i class="fa fa-check"></i>A note on units</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="SystemVariables.html"><a href="SystemVariables.html"><i class="fa fa-check"></i><b>1</b> Introduction to Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#calculus-for-physical-chemistry-slicing-and-gluing"><i class="fa fa-check"></i><b>1.1</b> Calculus for Physical Chemistry: Slicing and Gluing</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#infslici"><i class="fa fa-check"></i><b>1.1.1</b> Differentiation: Infinite Slicing</a></li>
+<li class="chapter" data-level="1.1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#integration-gluing-together-differentials"><i class="fa fa-check"></i><b>1.1.2</b> Integration: Gluing Together Differentials</a></li>
+<li class="chapter" data-level="1.1.3" data-path="SystemVariables.html"><a href="SystemVariables.html#calculus-for-thermodynamics"><i class="fa fa-check"></i><b>1.1.3</b> Calculus for Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Systems</a></li>
+<li class="chapter" data-level="1.3" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.3</b> Thermodynamic Variables</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="SystemVariables.html"><a href="SystemVariables.html#state-and-path-variables"><i class="fa fa-check"></i><b>1.3.1</b> State and Path Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="SystemVariables.html"><a href="SystemVariables.html#rev1"><i class="fa fa-check"></i><b>1.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="SystemVariables.html"><a href="SystemVariables.html#quest1"><i class="fa fa-check"></i><b>1.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ZerothLaw.html"><a href="ZerothLaw.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="ZerothLaw.html"><a href="ZerothLaw.html#rev2"><i class="fa fa-check"></i><b>2.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#exer2"><i class="fa fa-check"></i><b>2.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="2.5.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#quest2"><i class="fa fa-check"></i><b>2.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energyint"><i class="fa fa-check"></i><b>3.1</b> Calculation of Internal Energy Changes</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermalE"><i class="fa fa-check"></i><b>3.1.1</b> Internal energy in isothermal processes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-adiabatic-processes"><i class="fa fa-check"></i><b>3.1.2</b> Internal energy in adiabatic processes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-isochoric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Internal energy in isochoric processes</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
+<li class="chapter" data-level="3.4" data-path="FirstLaw.html"><a href="FirstLaw.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="FirstLaw.html"><a href="FirstLaw.html#exer3"><i class="fa fa-check"></i><b>3.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="3.4.2" data-path="FirstLaw.html"><a href="FirstLaw.html#quest3"><i class="fa fa-check"></i><b>3.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rxnenthalpy"><i class="fa fa-check"></i><b>4.1</b> Reaction Enthalpies</a></li>
+<li class="chapter" data-level="4.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#formenthalpy"><i class="fa fa-check"></i><b>4.2</b> Standard Enthalpies of Formation</a></li>
+<li class="chapter" data-level="4.3" data-path="Thermochemistry.html"><a href="Thermochemistry.html#hessslaw"><i class="fa fa-check"></i><b>4.3</b> Hess’s Law</a></li>
+<li class="chapter" data-level="4.4" data-path="Thermochemistry.html"><a href="Thermochemistry.html#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><i class="fa fa-check"></i><b>4.4</b> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+<li class="chapter" data-level="4.5" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rev4"><i class="fa fa-check"></i><b>4.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#exer4"><i class="fa fa-check"></i><b>4.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="4.5.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#quest4"><i class="fa fa-check"></i><b>4.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html"><i class="fa fa-check"></i><b>5</b> Thermodynamic Cycles</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#carnotcyclesect"><i class="fa fa-check"></i><b>5.1</b> Carnot Cycle</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage1"><i class="fa fa-check"></i><b>5.1.1</b> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage2"><i class="fa fa-check"></i><b>5.1.2</b> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage3"><i class="fa fa-check"></i><b>5.1.3</b> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage4"><i class="fa fa-check"></i><b>5.1.4</b> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#UWQCarnot"><i class="fa fa-check"></i><b>5.2</b> Energy, Heat, and Work in the Carnot Cycle</a></li>
+<li class="chapter" data-level="5.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle"><i class="fa fa-check"></i><b>5.3</b> Efficiency of a Carnot Cycle</a></li>
+<li class="chapter" data-level="5.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#rev5"><i class="fa fa-check"></i><b>5.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#exer5"><i class="fa fa-check"></i><b>5.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="5.4.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#quest5"><i class="fa fa-check"></i><b>5.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Entropy and the Second Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isothermal-processes"><i class="fa fa-check"></i><b>7.1.1</b> Entropy in isothermal processes</a></li>
+<li class="chapter" data-level="7.1.2" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-adiabatic-processes"><i class="fa fa-check"></i><b>7.1.2</b> Entropy in adiabatic processes</a></li>
+<li class="chapter" data-level="7.1.3" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isochoric-processes"><i class="fa fa-check"></i><b>7.1.3</b> Entropy in isochoric processes</a></li>
+<li class="chapter" data-level="7.1.4" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isobaric-processes"><i class="fa fa-check"></i><b>7.1.4</b> Entropy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="thirdlaw.html"><a href="thirdlaw.html#dssurr"><i class="fa fa-check"></i><b>7.2</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
+<li class="chapter" data-level="7.3" data-path="thirdlaw.html"><a href="thirdlaw.html#spontS"><i class="fa fa-check"></i><b>7.3</b> Clausius Theorem</a></li>
+<li class="chapter" data-level="7.4" data-path="thirdlaw.html"><a href="thirdlaw.html#thirdlawsect"><i class="fa fa-check"></i><b>7.4</b> The Third Law of Thermodynamics</a></li>
+<li class="chapter" data-level="7.5" data-path="thirdlaw.html"><a href="thirdlaw.html#rev7"><i class="fa fa-check"></i><b>7.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="thirdlaw.html"><a href="thirdlaw.html#exer7"><i class="fa fa-check"></i><b>7.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="7.5.2" data-path="thirdlaw.html"><a href="thirdlaw.html#quest7"><i class="fa fa-check"></i><b>7.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Gibbs and Helmholtz Energies</a></li>
+<li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
+<li class="chapter" data-level="8.5" data-path="Potentials.html"><a href="Potentials.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="Potentials.html"><a href="Potentials.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Energy</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.3" data-path="GibbsFree.html"><a href="GibbsFree.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.3</b> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.4" data-path="GibbsFree.html"><a href="GibbsFree.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.4</b> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.5" data-path="GibbsFree.html"><a href="GibbsFree.html#rev9"><i class="fa fa-check"></i><b>9.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="GibbsFree.html"><a href="GibbsFree.html#exer9"><i class="fa fa-check"></i><b>9.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="9.5.2" data-path="GibbsFree.html"><a href="GibbsFree.html#quest9"><i class="fa fa-check"></i><b>9.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>10</b> Chemical Equilibrium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#reaction-quotient-and-equilibrium-constant"><i class="fa fa-check"></i><b>10.1</b> Reaction Quotient and Equilibrium Constant</a></li>
+<li class="chapter" data-level="10.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.2</b> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.3</b> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.4" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#rev10"><i class="fa fa-check"></i><b>10.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#exer10"><i class="fa fa-check"></i><b>10.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.4.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#quest10"><i class="fa fa-check"></i><b>10.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>11</b> Ideal and Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-equation"><i class="fa fa-check"></i><b>11.1</b> The Ideal Gas Equation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="RealGases.html"><a href="RealGases.html#boyles-law"><i class="fa fa-check"></i><b>11.1.1</b> Boyle’s Law</a></li>
+<li class="chapter" data-level="11.1.2" data-path="RealGases.html"><a href="RealGases.html#charless-and-gay-lussacs-laws"><i class="fa fa-check"></i><b>11.1.2</b> Charles’s and Gay-Lussac’s Laws</a></li>
+<li class="chapter" data-level="11.1.3" data-path="RealGases.html"><a href="RealGases.html#avogadros-law"><i class="fa fa-check"></i><b>11.1.3</b> Avogadro’s Law</a></li>
+<li class="chapter" data-level="11.1.4" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-law"><i class="fa fa-check"></i><b>11.1.4</b> The ideal gas Law</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="RealGases.html"><a href="RealGases.html#behaviors-of-non-ideal-gases"><i class="fa fa-check"></i><b>11.2</b> Behaviors of Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="RealGases.html"><a href="RealGases.html#the-van-der-waals-equation"><i class="fa fa-check"></i><b>11.2.1</b> The van der Waals equation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="RealGases.html"><a href="RealGases.html#joulethomson-effect"><i class="fa fa-check"></i><b>11.2.2</b> Joule–Thomson effect</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="RealGases.html"><a href="RealGases.html#critical-phenomena"><i class="fa fa-check"></i><b>11.3</b> Critical Phenomena</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="RealGases.html"><a href="RealGases.html#compressibility-factors"><i class="fa fa-check"></i><b>11.3.1</b> Compressibility factors</a></li>
+<li class="chapter" data-level="11.3.2" data-path="RealGases.html"><a href="RealGases.html#phase-diagram-of-a-non-ideal-gas"><i class="fa fa-check"></i><b>11.3.2</b> Phase diagram of a non-ideal gas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="RealGases.html"><a href="RealGases.html#fugacity"><i class="fa fa-check"></i><b>11.4</b> Fugacity</a></li>
+<li class="chapter" data-level="11.5" data-path="RealGases.html"><a href="RealGases.html#rev11"><i class="fa fa-check"></i><b>11.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="RealGases.html"><a href="RealGases.html#exer11"><i class="fa fa-check"></i><b>11.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.5.2" data-path="RealGases.html"><a href="RealGases.html#quest11"><i class="fa fa-check"></i><b>11.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>12</b> Phase Equilibrium</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#phase-stability"><i class="fa fa-check"></i><b>12.1</b> Phase Stability</a></li>
+<li class="chapter" data-level="12.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#gibbs-phase-rule"><i class="fa fa-check"></i><b>12.2</b> Gibbs Phase Rule</a></li>
+<li class="chapter" data-level="12.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#pt-phase-diagrams"><i class="fa fa-check"></i><b>12.3</b> <span class="math inline">\(PT\)</span> Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#liquid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.1</b> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.2</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-liquid-equilibrium"><i class="fa fa-check"></i><b>12.3.3</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</a></li>
+<li class="chapter" data-level="12.3.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-triple-point-and-the-critical-point"><i class="fa fa-check"></i><b>12.3.4</b> The triple point and the critical point</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
+<li class="chapter" data-level="12.5" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#rev12"><i class="fa fa-check"></i><b>12.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#quest12"><i class="fa fa-check"></i><b>12.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams and Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#activity"><i class="fa fa-check"></i><b>13.3</b> Activity</a></li>
+<li class="chapter" data-level="13.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#colligative-properties"><i class="fa fa-check"></i><b>13.4</b> Colligative Properties</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#vapor-pressure-lowering"><i class="fa fa-check"></i><b>13.4.1</b> Vapor pressure lowering</a></li>
+<li class="chapter" data-level="13.4.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#boiling-point-elevation-and-melting-point-depression"><i class="fa fa-check"></i><b>13.4.2</b> Boiling point elevation and melting point depression</a></li>
+<li class="chapter" data-level="13.4.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#osmotic-pressure"><i class="fa fa-check"></i><b>13.4.3</b> Osmotic pressure</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#rev13"><i class="fa fa-check"></i><b>13.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#quest13"><i class="fa fa-check"></i><b>13.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Kinetics.html"><a href="Kinetics.html"><i class="fa fa-check"></i><b>14</b> Chemical Kinetics</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Kinetics.html"><a href="Kinetics.html#diffintk"><i class="fa fa-check"></i><b>14.1</b> Differential and integrated rate laws</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="Kinetics.html"><a href="Kinetics.html#zeroth-order-reaction"><i class="fa fa-check"></i><b>14.1.1</b> Zeroth-order reaction</a></li>
+<li class="chapter" data-level="14.1.2" data-path="Kinetics.html"><a href="Kinetics.html#first-order-reaction"><i class="fa fa-check"></i><b>14.1.2</b> First-order reaction</a></li>
+<li class="chapter" data-level="14.1.3" data-path="Kinetics.html"><a href="Kinetics.html#second-order-reaction"><i class="fa fa-check"></i><b>14.1.3</b> Second-order reaction</a></li>
+<li class="chapter" data-level="14.1.4" data-path="Kinetics.html"><a href="Kinetics.html#third-and-higher-orders-reaction"><i class="fa fa-check"></i><b>14.1.4</b> Third and higher orders reaction</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="Kinetics.html"><a href="Kinetics.html#complex-rate-laws"><i class="fa fa-check"></i><b>14.2</b> Complex Rate Laws</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Kinetics.html"><a href="Kinetics.html#consecutive-reactions"><i class="fa fa-check"></i><b>14.2.1</b> Consecutive reactions</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Kinetics.html"><a href="Kinetics.html#competitive-reactions"><i class="fa fa-check"></i><b>14.2.2</b> Competitive reactions</a></li>
+<li class="chapter" data-level="14.2.3" data-path="Kinetics.html"><a href="Kinetics.html#opposed-reactions"><i class="fa fa-check"></i><b>14.2.3</b> Opposed reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="Kinetics.html"><a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders"><i class="fa fa-check"></i><b>14.3</b> Experimental Methods for Determination of Reaction Orders</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="Kinetics.html"><a href="Kinetics.html#initial-rates-method"><i class="fa fa-check"></i><b>14.3.1</b> Initial rates method</a></li>
+<li class="chapter" data-level="14.3.2" data-path="Kinetics.html"><a href="Kinetics.html#isolation-method"><i class="fa fa-check"></i><b>14.3.2</b> Isolation method</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Kinetics.html"><a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients"><i class="fa fa-check"></i><b>14.4</b> Temperature Dependence of the Rate Coefficients</a></li>
+<li class="chapter" data-level="14.5" data-path="Kinetics.html"><a href="Kinetics.html#rev15"><i class="fa fa-check"></i><b>14.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="Kinetics.html"><a href="Kinetics.html#exer15"><i class="fa fa-check"></i><b>14.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="14.5.2" data-path="Kinetics.html"><a href="Kinetics.html#quest15"><i class="fa fa-check"></i><b>14.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>15</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-inorganic-substances-at-298-k"><i class="fa fa-check"></i><b>15.1</b> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+<li class="chapter" data-level="15.2" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-organic-substances-at-298-k"><i class="fa fa-check"></i><b>15.2</b> Thermodynamic Data of Organic Substances at 298 K</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ZerothLaw" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Zeroth Law of Thermodynamics<a href="ZerothLaw.html#ZerothLaw" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-is-thermodynamics" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> What is Thermodynamics?<a href="ZerothLaw.html#what-is-thermodynamics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A formal definition of these forms of energy is as follows:</p>
+<ul>
+<li>Work is exchanged if external parameters are changed during the process.</li>
+<li>Heat is exchanged if only internal parameters are changed during the process.</li>
+</ul>
+<p>As we saw in chapter <a href="SystemVariables.html#SystemVariables">1</a>, heat and work are not “well-behaved” quantities because they are path functions. On the one hand, it might be simple to measure the amount of heat and/or work experimentally, these measured quantities cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the seventeenth century when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related to each other, and how they were related to the other variables that they were able to measure, such as temperature and volume.</p>
+<p>Before we even discuss the definition of energy and how it relates to heat and work, it is crucial to introduce the essential concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition at the microscopic level.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> However, for all our purposes, it is not essential to have a microscopic definition of temperature, as long as we have the guarantee that this quantity can be measured unambiguously. In other words, we only need a mathematical definition of temperature that agrees with the physical existence of thermometers.</p>
+</div>
+<div id="the-zeroth-law-of-thermodynamics" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> The Zeroth Law of Thermodynamics<a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The mathematical definition that guarantees that thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:</p>
+<blockquote>
+<div class="definition">
+<p><span id="def:zerothlaw" class="definition"><strong>Definition 2.1  </strong></span><em>Zeroth Law of Thermodynamics:</em> If <span class="math inline">\(T_A = T_B\)</span>, and <span class="math inline">\(T_B = T_C\)</span>, then <span class="math inline">\(T_A = T_C\)</span>.</p>
+</div>
+</blockquote>
+<p>Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at <span class="math inline">\(P=1\;\mathrm{bar}\)</span>. Its temperature, <span class="math inline">\(T_{H_2O}\)</span>, is about 373 K. Let’s now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature <span class="math inline">\(T_W = T_{H_2O}\)</span>. Similarly, the metal coin will also be in thermal equilibrium with the water, hence <span class="math inline">\(T_M = T_{H_2O}\)</span>. According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same <span class="math inline">\(T_W = T_M = 373\;\mathrm{K}\)</span>, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners if I take the coins out of the water and put them immediately in your hands, one of them will be very hot, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.</p>
+</div>
+<div id="heatint" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Calculation of Heat<a href="ZerothLaw.html#heatint" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Heat (<span class="math inline">\(Q\)</span>) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because <em>heat is a path function</em>.
+As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in <span class="math inline">\(\frac{\text{J}}{\text{mol K}}\)</span>. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.</p>
+<div id="processes-at-constant-volume-isochoric" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Processes at constant volume (isochoric)<a href="ZerothLaw.html#processes-at-constant-volume-isochoric" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recasting from general chemistry, the molar heat capacity at constant volume has the following formal definition:</p>
+<blockquote>
+<p>The molar heat capacity at constant volume is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</p>
+</blockquote>
+<p>This is a procedural definition that defines how we can measure <span class="math inline">\(C_V\)</span> in practice. While this procedure is useful in laboratory settings and in introductory chemistry courses, we need to go beyond it to understand its origin and its meaning. Have you ever wondered why do you need to increase the temperature by 1 K? What if you want to increase it by 2? Or 1/2, or 1/1000? Also, the definition is highly imprecise, as it certainly there has to be a difference when we increase the temperature of a substance from 1 K to 2 K, to when we increase it from 1001 K to 1002 K. Those situation certainly cannot be leading to the same results. How are we going to circumvent this poor definition? We need to apply calculus to remove those arbitrary units and arbitrary increments (remember that differentials are all the same size, and unitless):</p>
+<p><span class="math display" id="eq:Cvdef">\[\begin{equation}
+  C_V = \frac{đ Q_V}{n dT} \Rightarrow đ Q_V = n C_V dT.
+  \tag{2.1}
+\end{equation}\]</span></p>
+<p>This new differential definition of <span class="math inline">\(C_V\)</span> is independent on the unit we use to measure it, and does not require a procedural definition. Given a known value of <span class="math inline">\(C_V\)</span>, the amount of heat that gets transfered can be easily calculated by measuring the changes in temperature, after integration of eq. <a href="ZerothLaw.html#eq:Cvdef">(2.1)</a>:</p>
+<p><span class="math display" id="eq:Cvint1">\[\begin{equation}
+  đ Q_V = n C_V dT \rightarrow \int đ Q_V = n \int_{T_i}^{T_F}C_V dT \rightarrow Q_V = n C_V \int_{T_i}^{T_F}dT,
+  \tag{2.2}
+\end{equation}\]</span></p>
+<p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature, simply becomes:</p>
+<p><span class="math display" id="eq:Cvint">\[\begin{equation}
+  Q_V \cong n C_V \Delta T.
+  \tag{2.3}
+\end{equation}\]</span></p>
+</div>
+<div id="heatconstp" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Processes at constant pressure (isobaric)<a href="ZerothLaw.html#heatconstp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Similarly to the previous case, the heat capacity at constant pressure measures the ability of a substance to absorb heat at constant pressure. Recasting again from general chemistry:</p>
+<blockquote>
+<p>The molar heat capacity at constant pressure is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</p>
+</blockquote>
+<p>And once again, applying calculus to obtain a differential definition of <span class="math inline">\(C_P\)</span>, we get:</p>
+<p><span class="math display" id="eq:Cpdef">\[\begin{equation}
+  C_P = \frac{đ Q_P}{n dT} \Rightarrow đ Q_P = n C_P dT \rightarrow \int đ Q_P = n \int_{T_i}^{T_F}C_P dT,
+  \tag{2.4}
+\end{equation}\]</span></p>
+<p>which result in the simple formula:</p>
+<p><span class="math display" id="eq:Cpint">\[\begin{equation}
+  Q_P \cong n C_P \Delta T.
+  \tag{2.5}
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="workint" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Calculation of Work<a href="ZerothLaw.html#workint" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c3"></span>
+<img src="img/OEP_Figures.004.jpeg" alt="Isothermal Expansion of an Ideal Gas Against a Constant External Pressure." width="50%" />
+<p class="caption">
+Figure 2.1: Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.
+</p>
+</div>
+<p>Let’s consider the situation in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a>, where a special beaker with a piston that is free to move is filled with an ideal gas. The beaker sits on a desk, so the piston is not subject to any external forces other than the external pressure, <span class="math inline">\(P_{\text{ext}}\)</span>, and the internal pressure of the gas, <span class="math inline">\(P\)</span>.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> The piston is initially compressed to a position that is not in equilibrium <span class="math inline">\((i)\)</span>. After the process, the piston reaches a final equilibrium position <span class="math inline">\((f)\)</span>. How do we calculate the work (<span class="math inline">\(W\)</span>) performed by the system?</p>
+<p>From basic physics, we recall that the infinitesimal amount of work associated with an object moving in space is given by the force acting on the object (<span class="math inline">\(F\)</span>) multiplied by the infinitesimal amount it gets displaced (<span class="math inline">\(d h\)</span>):</p>
+<p><span class="math display" id="eq:Wphysics">\[\begin{equation}
+  đ W = - Fdh,
+  \tag{2.6}
+\end{equation}\]</span></p>
+<p>where the negative sign comes from the chemistry sign convention, Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, since the work in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a> is <em>performed</em> by the system (expansion). What kind of force is moving the piston? It is the force due to the pressure of the gas. Relying upon another definition from physics, the pressure is the ratio between the force (<span class="math inline">\(F\)</span>) and the area (<span class="math inline">\(A\)</span>) that such force acts upon:</p>
+<p><span class="math display" id="eq:Pphysics">\[\begin{equation}
+  P = F/A.
+  \tag{2.7}
+\end{equation}\]</span></p>
+<p>Obtaining <span class="math inline">\(F\)</span> from eq. <a href="ZerothLaw.html#eq:Pphysics">(2.7)</a> and replacing it in eq. <a href="ZerothLaw.html#eq:Wphysics">(2.6)</a>, we obtain:</p>
+<p><span class="math display" id="eq:Wphysics2">\[\begin{equation}
+  đ W = - P \underbrace{Adh}_{dV},
+  \tag{2.8}
+\end{equation}\]</span></p>
+<p>and considering that <span class="math inline">\(Adh\)</span> (area times infinitesimal height) is the definition of an infinitesimal volume <span class="math inline">\(dV\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:Wdef">\[\begin{equation}
+  đ W = - PdV,
+  \tag{2.9}
+\end{equation}\]</span></p>
+<p>If we want to calculate the amount of work performed by a system, <span class="math inline">\(W\)</span>, from eq. <a href="ZerothLaw.html#eq:Wdef">(2.9)</a>, we need to recall that <span class="math inline">\(đ W\)</span> is an inexact differential. As such, we cannot integrate it from initial to final as for the (exact) differential of a state function, because:</p>
+<p><span class="math display" id="eq:Wdiff">\[\begin{equation}
+  \int_{i}^{f}đ W \neq W_f - W_i,
+  \tag{2.10}
+\end{equation}\]</span></p>
+<p>but rather:</p>
+<p><span class="math display" id="eq:Wdiff2">\[\begin{equation}
+  \int_{\text{path}} đ W = W,
+  \tag{2.11}
+\end{equation}\]</span></p>
+<p>where the integration is performed along the <em>path</em>. Using eq. <a href="ZerothLaw.html#eq:Wdiff2">(2.11)</a>, we can integrate eq. <a href="ZerothLaw.html#eq:Wdef">(2.9)</a> as:</p>
+<p><span class="math display" id="eq:Wint">\[\begin{equation}
+  \int đ W = W = - \int_{i}^{f} PdV,
+  \tag{2.12}
+\end{equation}\]</span></p>
+<p>where the integral on the left-hand side is taken along the path,<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(dV\)</span> is a state function.
+How do we solve the integral in eq. <a href="ZerothLaw.html#eq:Wint">(2.12)</a>? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.</p>
+<div id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)<a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At constant temperature, the piston in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a> moves along the following PV diagram (this curve is obtained from an ideal gas at constant <span class="math inline">\(T=298\)</span> K):</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>An expansion of the gas will happen between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example <span class="math inline">\(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)</span>), and solve the integral as:</p>
+<p><span class="math display" id="eq:Wint3">\[\begin{equation}
+  W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i),
+  \tag{2.13}
+\end{equation}\]</span></p>
+<p>Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> represents the red area of the PV-diagram:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-3-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea1">\[\begin{equation}
+\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
+  \tag{2.14}
+\end{equation}\]</span></p>
+<p>If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, and solve each one as we did in the previous case. The first process is an expansion between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_1\)</span>, with <span class="math inline">\(P_1\)</span> constant. The absolute value of the work, <span class="math inline">\(W_A\)</span>, is represented by the blue area:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-4-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea2">\[\begin{equation}
+\left| W_A \right| = P_1 (V_1-V_i)
+  \tag{2.15}
+\end{equation}\]</span></p>
+<p>The second process is an expansion between <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_f\)</span>, with <span class="math inline">\(P_f=P_{\text{ext}}\)</span> constant. The absolute value of the work for this second process is represented by the green area:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea3">\[\begin{equation}
+\left| W_B \right| = P_f (V_f-V_1)
+  \tag{2.16}
+\end{equation}\]</span></p>
+<p>The total absolute value of the work for the 2-step process is given by the sum of the two areas:</p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="math display" id="eq:Warea4">\[\begin{equation}
+  \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
+  \tag{2.17}
+\end{equation}\]</span></p>
+<p>As can be easily verified by comparing the shaded areas in the plots, <span class="math inline">\(\left| W_{\text{2-step}} \right| &gt; \left| W_{\text{1-step}} \right|\)</span>.</p>
+<p>We can easily extend this procedure to consider processes that happens in 3, 4, 5, …, <span class="math inline">\(n\)</span> steps. What is the limit of this procedure? In other words, what happens when <span class="math inline">\(n \rightarrow \infty\)</span>? A simple answer is given by the plots in the next Figure, which clearly demonstrates that the maximum value of the area underneath the curve <span class="math inline">\(\left| W_{\text{max}}\right|\)</span> is achieved in an <span class="math inline">\(\infty\)</span>-step process, for which the work is calculated as:</p>
+<p><span class="math display" id="eq:WintsolvedV2">\[\begin{equation}
+  \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
+  \tag{2.18}
+\end{equation}\]</span></p>
+<p><img src="pchem1_files/figure-html/figures-side-1.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-2.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-3.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-4.png" width="50%" height="100%" /></p>
+<p>The integral on the right hand side of eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a> can be solved for an ideal gas by calculating the pressure using the ideal gas law <span class="math inline">\(P=\frac{nRT}{V}\)</span>, and solving the integral since <span class="math inline">\(n\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(T\)</span> are constant:</p>
+<p><span class="math display" id="eq:WmaxV">\[\begin{equation}
+  \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
+  \tag{2.19}
+\end{equation}\]</span></p>
+<p>This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an <span class="math inline">\(\infty\)</span>-step process.</p>
+<p>The same considerations that we made up to this point for expansion processes hold specularly for compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite amount of steps will be an upper bound to the minimum amount of work required to compress the system.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> <span class="math inline">\(\left| W_{\text{min}} \right|\)</span> for compressions is calculated as the area underneath the <span class="math inline">\(PV\)</span> curve, exactly as <span class="math inline">\(\left| W_{\text{max}} \right|\)</span> for expansions in eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a>.</p>
+</div>
+</div>
+<div id="rev2" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Chapter Review<a href="ZerothLaw.html#rev2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer2" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Practice Problems<a href="ZerothLaw.html#exer2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Problem 1: Calculation of Heat in an Isochoric Process</strong></p>
+<p>Calculate the heat absorbed by 3.00 moles of an ideal gas when its temperature increases from <span class="math inline">\(250.\, \text{K}\)</span> to <span class="math inline">\(350.\, \text{K}\)</span> at constant volume, knowing that its molar heat capacity at constant volume <span class="math inline">\(C_V\)</span> is <span class="math inline">\(12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For an isochoric process, the heat absorbed is given by eq. <a href="ZerothLaw.html#eq:Cvint">(2.3)</a>: <span class="math display">\[  Q_V \cong n C_V \Delta T.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(n=3.00 \, \text{mol}\)</span>,</p>
+<p><span class="math inline">\(C_V=12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
+<p><span class="math inline">\(\Delta T = (350.-250.) \text{K}=100.\, \text{K}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[Q_V=(3.00 \, \text{mol})(12.5\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(100.\,\text{K})=3750\,\text{J,}\]</span></p>
+<p>which, using the appropriate amount of significant digits, gives us the final answer.</p>
+<p><strong>Answer:</strong> The heat absorbed is <span class="math inline">\(3.75\,\text{kJ}.\)</span></p>
+<hr />
+<p><strong>Problem 2: Calculation of Heat in an Isobaric Process</strong></p>
+<p>Calculate the heat absorbed by 2.0 moles of an ideal gas when its temperature increases from <span class="math inline">\(300. \,\text{K}\)</span> to <span class="math inline">\(500. \,\text{K}\)</span> at constant pressure. The molar heat capacity at constant pressure for this gas is <span class="math inline">\(29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For an isochoric process, the heat absorbed is given by eq. <a href="ZerothLaw.html#eq:Cpint">(2.5)</a>: <span class="math display">\[  Q_P \cong n C_P \Delta T.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(n=2.0\,\text{mol}\)</span></p>
+<p><span class="math inline">\(C_P =29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
+<p><span class="math inline">\(\Delta T= (500.-300.)\,\text{K}=200.\,\text{K}\)</span></p>
+<p>Then:</p>
+<p><span class="math display">\[Q_P=(2.0\,\text{mol})(29.1\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200.\,\text{K}) = 11640\,\text{J},\]</span></p>
+<p>which, using the appropriate amount of significant digits, gives us the right answer. (Notice the difference with respect to the previous problem.)</p>
+<p><strong>Answer:</strong> The heat absorbed is <span class="math inline">\(12.\, \text{kJ}.\)</span></p>
+<hr />
+<p><strong>Problem 3: Calculation of Work in an Isothermal Process</strong></p>
+<p>Calculate the maximum amount of work that can be done by an ideal gas during an isothermal expansion at <span class="math inline">\(300.\, \text{K}\)</span> from an initial volume of <span class="math inline">\(1.0\,\text{L}\)</span> to a final volume of <span class="math inline">\(3.0\,\text{L}\)</span>. Assume there are 2.0 moles of the gas and the gas constant <span class="math inline">\(R=8.314\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For an isothermal process, the maximum amount of work done by the gas is obtained when the transformation happens in an infinite amount of steps. The absolute value of the work is given by eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a>: <span class="math display">\[  \left| W_{\text{max}} \right| = nRT \ln \frac{V_f}{V_i}.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(n=2.0\,\text{mol}\)</span>,</p>
+<p><span class="math inline">\(T=300.\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(V_i=1.0\,\text{L}\)</span>,</p>
+<p><span class="math inline">\(V_f=3.0\,\text{L}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[\left| W_{\text{max}} \right|=(2.0\,\text{mol})(8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(300.\,\text{K})\ln\left(\frac{3.0\,\text{L}}{1.0\,\text{L}}\right),\]</span></p>
+<p><span class="math display">\[\left| W_{\text{max}} \right|=4988.4\,\text{J}\cdot \ln(3),\]</span></p>
+<p>and considering that:</p>
+<p><span class="math display">\[\ln(3)\approx 1.0986,\]</span></p>
+<p>then:</p>
+<p><span class="math display">\[\left| W_{\text{max}} \right|\approx 4988.4\,\text{J} \cdot 1.0986 \approx 5480\,\text{J},\]</span></p>
+<p>Finally, we should always considerthe chemistry convention of the sign, Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>, according to which the work <em>performed</em> by the system (our ideal gas) in an expansion is always <em>negative</em>.</p>
+<p><strong>Answer:</strong> The work done by the system is <span class="math inline">\(-5.5\,\text{kJ}\)</span>.</p>
+<hr />
+<p><strong>Problem 4: Calculation of Work in an Expansion Against Constant External Pressure</strong></p>
+<p>In a room with a high pressure, a baloon is filled with <span class="math inline">\(2.0\,\text{L}\)</span> of an ideal gas. The baloon is then brought into a different room at a lower external pressure of <span class="math inline">\(1.5\,\text{atm}\)</span>. The baloon expands quickly in this second room to a final volume of <span class="math inline">\(5.0\,\text{L}\)</span>. Calculate the amount of work that the gas releases in the second room. Assume that the temperature is the same across both rooms. Note: <span class="math inline">\(1 \,\text{atm}\cdotp\text{L} = 101.3\,\text{J}\)</span>.</p>
+<p><strong>Solution:</strong> This problem present an ideal gas that is expanding in a fast, 1-step process, at constant temperature. For this process, the absolute value of the amount of work done by the gas is given by eq. <a href="ZerothLaw.html#eq:Warea1">(2.14)</a>: <span class="math display">\[  \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i).\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(P=1.5\,\text{atm}\)</span>,</p>
+<p><span class="math inline">\(\Delta V =(5.0-2.0)\,\text{L}=3.0\,\text{L}\)</span>,</p>
+<p><span class="math inline">\(1 \, \text{atm}\cdotp\text{L}=101.3\,\text{J}\)</span></p>
+<p>Then:</p>
+<p><span class="math display">\[\left| W_{\text{1-step}} \right|=(1.5\,\text{atm})(3.0\,\text{L}) = 4.5\,\text{atm}\cdotp \text{L}.\]</span></p>
+<p>Converting <span class="math inline">\(\text{atm}\cdot\text{L}\)</span> to <span class="math inline">\(\text{J}\)</span> and accounting for the chemistry convention of the sign we get:</p>
+<p><span class="math display">\[W_{\text{1-step}}= -4.5\,\text{atm}\cdotp \text{L} \cdot 101.3 \,\text{J}\,(\text{atm}\cdotp\text{L})^{-1} = -456\,\text{J},\]</span></p>
+<p>hence, using the correct amount of significant digits, we get the final answer.</p>
+<p><strong>Answer:</strong> The amount of work released by the gas is <span class="math inline">\(-4.6 \cdot 10^{-1}\,\text{kJ}\)</span>.</p>
+</div>
+<div id="quest2" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Study Questions<a href="ZerothLaw.html#quest2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. What is the primary focus of thermodynamics?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The study of chemical reactions.</li>
+<li>The relationship between heat, work, and energy.</li>
+<li>The behavior of gases under different pressures.</li>
+<li>The study of atomic structures.</li>
+<li>The analysis of electromagnetic waves.</li>
+</ol>
+<hr />
+<p><strong>2. Which law of thermodynamics states that if two systems are each in thermal equilibrium with a third system, then they are in thermal equilibrium with each other?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The First Law of Thermodynamics.</li>
+<li>The Second Law of Thermodynamics.</li>
+<li>The Third Law of Thermodynamics.</li>
+<li>The Zeroth Law of Thermodynamics.</li>
+<li>The Law of Conservation of Energy.</li>
+</ol>
+<hr />
+<p><strong>3. What is the formal definition of the molar heat capacity at constant volume?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</li>
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</li>
+<li>The amount of heat required to increase the temperature of a system by 1°C at constant pressure.</li>
+<li>The amount of heat required to increase the temperature of a system by 1°C at constant volume.</li>
+<li>The energy required to change the state of 1 mol of a substance.</li>
+</ol>
+<hr />
+<p><strong>4. What is the formal definition of the molar heat capacity at constant pressure?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</li>
+<li>The amount of heat required to increase the temperature of a system by 1°C at constant volume.</li>
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</li>
+<li>The energy required to change the state of 1 mol of a substance.</li>
+<li>The heat required to raise the temperature of a system by 1 K regardless of volume or pressure.</li>
+</ol>
+<hr />
+<p><strong>5. In an isothermal process for an ideal gas, what is the expression for the absolute value of the maximum work done by the system?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\left| W \right|=P\Delta V\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=nR \Delta T\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=nRT\ln\frac{V_f}{V_i}\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=-P_{\text{ext}}(V_f-V_i)\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=nC_V \Delta T\)</span>.</li>
+</ol>
+<hr />
+<p><strong>6. Which of the following formula can <em>always</em> be used to calculate the work in a thermodynamic process involving a gas and a movable piston?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(W= - \int_{i}^{f} PdV\)</span>.</li>
+<li><span class="math inline">\(W = P \Delta T\)</span>.</li>
+<li><span class="math inline">\(W = nRT \Delta V\)</span>.</li>
+<li><span class="math inline">\(W = nC_P \Delta T\)</span>.</li>
+<li><span class="math inline">\(W = \int_{i}^{f} VdP\)</span>.</li>
+</ol>
+<hr />
+<p><strong>7. Which of the following is true about heat (Q) in thermodynamics?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>It is a state function.</li>
+<li>It can be directly used to define the state of a system.</li>
+<li>It is always negative.</li>
+<li>It is an extensive property.</li>
+<li>It is a path function.</li>
+</ol>
+<hr />
+<p><strong>8. What happens to the temperature of two objects in thermal equilibrium with a third object, according to the Zeroth Law of Thermodynamics?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>They both increase.</li>
+<li>They both decrease.</li>
+<li>They reach the same temperature.</li>
+<li>They remain at different temperatures.</li>
+<li>They oscillate around a mean temperature.</li>
+</ol>
+<hr />
+<p><strong>9. What is the expression for the heat transferred in a process at constant volume?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(Q = nC_V \Delta T\)</span></li>
+<li><span class="math inline">\(Q = P \Delta V\)</span></li>
+<li><span class="math inline">\(Q = n C_P \Delta T\)</span></li>
+<li><span class="math inline">\(Q = nRT \ln \frac{V_f}{V_i}\)</span></li>
+<li><span class="math inline">\(Q = \int PdV\)</span></li>
+</ol>
+<hr />
+<p><strong>10. Which scenario represents the minimum work required for a compression process in thermodynamics?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>A one-step fast compression.</li>
+<li>An infinitely slow compression.</li>
+<li>A constant temperature compression.</li>
+<li>A constant volume compression.</li>
+<li>A compression with variable external pressure.</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.b, 2.d, 3.b, 4.c, 5.c, 6.a, 7.e, 8.c, 9.a, 10.b
+</span></p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="9">
+<li id="fn9"><p>In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.<a href="ZerothLaw.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>For this simple thought experiment, we will ignore any external force that is not significant. In other words, we will not consider the friction of the piston on the beaker walls or any other foreign influence.<a href="ZerothLaw.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>from here on we will replace the notation <span class="math inline">\(\int_{\text{path}}\)</span> with the more convenient <span class="math inline">\(\int\)</span> and we will keep in mind that the integral of an inexact differential must be taken along the path.<a href="ZerothLaw.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition <a href="SystemVariables.html#def:chemistryconv">1.1</a>.<a href="ZerothLaw.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>In contrast to a lower bound for expansion processes.<a href="ZerothLaw.html#fnref13" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="SystemVariables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="FirstLaw.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem1/edit/master/02_ZerothLaw.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

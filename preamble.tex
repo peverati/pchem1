@@ -1,0 +1,36 @@
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{amsthm}
+\usepackage[version=4]{mhchem}
+\usepackage{cancel}
+
+%change to a smaller page:
+\usepackage[paperwidth=6in, paperheight=9in]{geometry}
+% this is to change the size of text: headsep=10pt, textheight=550pt
+%\usepackage[textwidth=456pt]{geometry}
+
+%fancyhdr to set custom headers for the book:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\slshape\nouppercase{\rightmark}}
+\fancyhead[RE]{\slshape\nouppercase{\leftmark}}
+\fancyhead[RO,LE]{\thepage}
+%no page numbers on empty pages
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+
+
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\let\oldmaketitle\maketitle
+\AtBeginDocument{\let\maketitle\relax}
+

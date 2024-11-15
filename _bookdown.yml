@@ -1,0 +1,24 @@
+book_filename: "pchem1"
+Rmd_files: ["index.Rmd",
+            "01_Basis.Rmd",
+            "02_ZerothLaw.Rmd",
+            "03_FirstLaw.Rmd",
+            "04_Thermochemistry.Rmd",
+            "05_ThermodynamicCycles.Rmd",
+            "06_SecondLaw.Rmd",
+            "07_ThirdLaw.Rmd",
+            "08_Potentials.Rmd",
+            "09_Gibbs.Rmd",
+            "10_ChemicalEquilibrium.Rmd",
+            "11_NonIdealGases.Rmd",
+            "12_PhaseEquilibrium.Rmd",
+            "13_MCPhaseDiagrams.Rmd",
+            "14_Solutions.Rmd",
+            "15_Kinetics.Rmd",
+            "16_Appendix.Rmd",
+              ]
+output_dir: "docs"
+language:
+#  ui:
+#    chapter_name: "Chapter "
+delete_merged_file: true

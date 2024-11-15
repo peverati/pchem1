@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Gibbs Energy | The Live Textbook of Physical Chemistry 1</title>
+  <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 Gibbs Energy | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem1" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 Gibbs Energy | The Live Textbook of Physical Chemistry 1" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2024-11-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Potentials.html"/>
+<link rel="next" href="ChemicalEquilibrium.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 1</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#authors-note-to-the-august-2024-edition."><i class="fa fa-check"></i>Author’s Note to the August 2024 Edition.</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-note-on-units"><i class="fa fa-check"></i>A note on units</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="SystemVariables.html"><a href="SystemVariables.html"><i class="fa fa-check"></i><b>1</b> Introduction to Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#calculus-for-physical-chemistry-slicing-and-gluing"><i class="fa fa-check"></i><b>1.1</b> Calculus for Physical Chemistry: Slicing and Gluing</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#infslici"><i class="fa fa-check"></i><b>1.1.1</b> Differentiation: Infinite Slicing</a></li>
+<li class="chapter" data-level="1.1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#integration-gluing-together-differentials"><i class="fa fa-check"></i><b>1.1.2</b> Integration: Gluing Together Differentials</a></li>
+<li class="chapter" data-level="1.1.3" data-path="SystemVariables.html"><a href="SystemVariables.html#calculus-for-thermodynamics"><i class="fa fa-check"></i><b>1.1.3</b> Calculus for Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Systems</a></li>
+<li class="chapter" data-level="1.3" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.3</b> Thermodynamic Variables</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="SystemVariables.html"><a href="SystemVariables.html#state-and-path-variables"><i class="fa fa-check"></i><b>1.3.1</b> State and Path Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="SystemVariables.html"><a href="SystemVariables.html#rev1"><i class="fa fa-check"></i><b>1.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="SystemVariables.html"><a href="SystemVariables.html#quest1"><i class="fa fa-check"></i><b>1.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ZerothLaw.html"><a href="ZerothLaw.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="ZerothLaw.html"><a href="ZerothLaw.html#rev2"><i class="fa fa-check"></i><b>2.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#exer2"><i class="fa fa-check"></i><b>2.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="2.5.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#quest2"><i class="fa fa-check"></i><b>2.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energyint"><i class="fa fa-check"></i><b>3.1</b> Calculation of Internal Energy Changes</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermalE"><i class="fa fa-check"></i><b>3.1.1</b> Internal energy in isothermal processes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-adiabatic-processes"><i class="fa fa-check"></i><b>3.1.2</b> Internal energy in adiabatic processes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-isochoric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Internal energy in isochoric processes</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
+<li class="chapter" data-level="3.4" data-path="FirstLaw.html"><a href="FirstLaw.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="FirstLaw.html"><a href="FirstLaw.html#exer3"><i class="fa fa-check"></i><b>3.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="3.4.2" data-path="FirstLaw.html"><a href="FirstLaw.html#quest3"><i class="fa fa-check"></i><b>3.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rxnenthalpy"><i class="fa fa-check"></i><b>4.1</b> Reaction Enthalpies</a></li>
+<li class="chapter" data-level="4.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#formenthalpy"><i class="fa fa-check"></i><b>4.2</b> Standard Enthalpies of Formation</a></li>
+<li class="chapter" data-level="4.3" data-path="Thermochemistry.html"><a href="Thermochemistry.html#hessslaw"><i class="fa fa-check"></i><b>4.3</b> Hess’s Law</a></li>
+<li class="chapter" data-level="4.4" data-path="Thermochemistry.html"><a href="Thermochemistry.html#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><i class="fa fa-check"></i><b>4.4</b> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+<li class="chapter" data-level="4.5" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rev4"><i class="fa fa-check"></i><b>4.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#exer4"><i class="fa fa-check"></i><b>4.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="4.5.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#quest4"><i class="fa fa-check"></i><b>4.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html"><i class="fa fa-check"></i><b>5</b> Thermodynamic Cycles</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#carnotcyclesect"><i class="fa fa-check"></i><b>5.1</b> Carnot Cycle</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage1"><i class="fa fa-check"></i><b>5.1.1</b> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage2"><i class="fa fa-check"></i><b>5.1.2</b> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage3"><i class="fa fa-check"></i><b>5.1.3</b> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage4"><i class="fa fa-check"></i><b>5.1.4</b> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#UWQCarnot"><i class="fa fa-check"></i><b>5.2</b> Energy, Heat, and Work in the Carnot Cycle</a></li>
+<li class="chapter" data-level="5.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle"><i class="fa fa-check"></i><b>5.3</b> Efficiency of a Carnot Cycle</a></li>
+<li class="chapter" data-level="5.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#rev5"><i class="fa fa-check"></i><b>5.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#exer5"><i class="fa fa-check"></i><b>5.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="5.4.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#quest5"><i class="fa fa-check"></i><b>5.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Entropy and the Second Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isothermal-processes"><i class="fa fa-check"></i><b>7.1.1</b> Entropy in isothermal processes</a></li>
+<li class="chapter" data-level="7.1.2" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-adiabatic-processes"><i class="fa fa-check"></i><b>7.1.2</b> Entropy in adiabatic processes</a></li>
+<li class="chapter" data-level="7.1.3" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isochoric-processes"><i class="fa fa-check"></i><b>7.1.3</b> Entropy in isochoric processes</a></li>
+<li class="chapter" data-level="7.1.4" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isobaric-processes"><i class="fa fa-check"></i><b>7.1.4</b> Entropy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="thirdlaw.html"><a href="thirdlaw.html#dssurr"><i class="fa fa-check"></i><b>7.2</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
+<li class="chapter" data-level="7.3" data-path="thirdlaw.html"><a href="thirdlaw.html#spontS"><i class="fa fa-check"></i><b>7.3</b> Clausius Theorem</a></li>
+<li class="chapter" data-level="7.4" data-path="thirdlaw.html"><a href="thirdlaw.html#thirdlawsect"><i class="fa fa-check"></i><b>7.4</b> The Third Law of Thermodynamics</a></li>
+<li class="chapter" data-level="7.5" data-path="thirdlaw.html"><a href="thirdlaw.html#rev7"><i class="fa fa-check"></i><b>7.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="thirdlaw.html"><a href="thirdlaw.html#exer7"><i class="fa fa-check"></i><b>7.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="7.5.2" data-path="thirdlaw.html"><a href="thirdlaw.html#quest7"><i class="fa fa-check"></i><b>7.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Gibbs and Helmholtz Energies</a></li>
+<li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
+<li class="chapter" data-level="8.5" data-path="Potentials.html"><a href="Potentials.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="Potentials.html"><a href="Potentials.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Energy</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.3" data-path="GibbsFree.html"><a href="GibbsFree.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.3</b> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.4" data-path="GibbsFree.html"><a href="GibbsFree.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.4</b> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.5" data-path="GibbsFree.html"><a href="GibbsFree.html#rev9"><i class="fa fa-check"></i><b>9.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="GibbsFree.html"><a href="GibbsFree.html#exer9"><i class="fa fa-check"></i><b>9.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="9.5.2" data-path="GibbsFree.html"><a href="GibbsFree.html#quest9"><i class="fa fa-check"></i><b>9.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>10</b> Chemical Equilibrium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#reaction-quotient-and-equilibrium-constant"><i class="fa fa-check"></i><b>10.1</b> Reaction Quotient and Equilibrium Constant</a></li>
+<li class="chapter" data-level="10.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.2</b> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.3</b> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.4" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#rev10"><i class="fa fa-check"></i><b>10.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#exer10"><i class="fa fa-check"></i><b>10.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.4.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#quest10"><i class="fa fa-check"></i><b>10.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>11</b> Ideal and Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-equation"><i class="fa fa-check"></i><b>11.1</b> The Ideal Gas Equation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="RealGases.html"><a href="RealGases.html#boyles-law"><i class="fa fa-check"></i><b>11.1.1</b> Boyle’s Law</a></li>
+<li class="chapter" data-level="11.1.2" data-path="RealGases.html"><a href="RealGases.html#charless-and-gay-lussacs-laws"><i class="fa fa-check"></i><b>11.1.2</b> Charles’s and Gay-Lussac’s Laws</a></li>
+<li class="chapter" data-level="11.1.3" data-path="RealGases.html"><a href="RealGases.html#avogadros-law"><i class="fa fa-check"></i><b>11.1.3</b> Avogadro’s Law</a></li>
+<li class="chapter" data-level="11.1.4" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-law"><i class="fa fa-check"></i><b>11.1.4</b> The ideal gas Law</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="RealGases.html"><a href="RealGases.html#behaviors-of-non-ideal-gases"><i class="fa fa-check"></i><b>11.2</b> Behaviors of Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="RealGases.html"><a href="RealGases.html#the-van-der-waals-equation"><i class="fa fa-check"></i><b>11.2.1</b> The van der Waals equation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="RealGases.html"><a href="RealGases.html#joulethomson-effect"><i class="fa fa-check"></i><b>11.2.2</b> Joule–Thomson effect</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="RealGases.html"><a href="RealGases.html#critical-phenomena"><i class="fa fa-check"></i><b>11.3</b> Critical Phenomena</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="RealGases.html"><a href="RealGases.html#compressibility-factors"><i class="fa fa-check"></i><b>11.3.1</b> Compressibility factors</a></li>
+<li class="chapter" data-level="11.3.2" data-path="RealGases.html"><a href="RealGases.html#phase-diagram-of-a-non-ideal-gas"><i class="fa fa-check"></i><b>11.3.2</b> Phase diagram of a non-ideal gas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="RealGases.html"><a href="RealGases.html#fugacity"><i class="fa fa-check"></i><b>11.4</b> Fugacity</a></li>
+<li class="chapter" data-level="11.5" data-path="RealGases.html"><a href="RealGases.html#rev11"><i class="fa fa-check"></i><b>11.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="RealGases.html"><a href="RealGases.html#exer11"><i class="fa fa-check"></i><b>11.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.5.2" data-path="RealGases.html"><a href="RealGases.html#quest11"><i class="fa fa-check"></i><b>11.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>12</b> Phase Equilibrium</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#phase-stability"><i class="fa fa-check"></i><b>12.1</b> Phase Stability</a></li>
+<li class="chapter" data-level="12.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#gibbs-phase-rule"><i class="fa fa-check"></i><b>12.2</b> Gibbs Phase Rule</a></li>
+<li class="chapter" data-level="12.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#pt-phase-diagrams"><i class="fa fa-check"></i><b>12.3</b> <span class="math inline">\(PT\)</span> Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#liquid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.1</b> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.2</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-liquid-equilibrium"><i class="fa fa-check"></i><b>12.3.3</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</a></li>
+<li class="chapter" data-level="12.3.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-triple-point-and-the-critical-point"><i class="fa fa-check"></i><b>12.3.4</b> The triple point and the critical point</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
+<li class="chapter" data-level="12.5" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#rev12"><i class="fa fa-check"></i><b>12.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#quest12"><i class="fa fa-check"></i><b>12.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams and Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#activity"><i class="fa fa-check"></i><b>13.3</b> Activity</a></li>
+<li class="chapter" data-level="13.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#colligative-properties"><i class="fa fa-check"></i><b>13.4</b> Colligative Properties</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#vapor-pressure-lowering"><i class="fa fa-check"></i><b>13.4.1</b> Vapor pressure lowering</a></li>
+<li class="chapter" data-level="13.4.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#boiling-point-elevation-and-melting-point-depression"><i class="fa fa-check"></i><b>13.4.2</b> Boiling point elevation and melting point depression</a></li>
+<li class="chapter" data-level="13.4.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#osmotic-pressure"><i class="fa fa-check"></i><b>13.4.3</b> Osmotic pressure</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#rev13"><i class="fa fa-check"></i><b>13.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#quest13"><i class="fa fa-check"></i><b>13.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Kinetics.html"><a href="Kinetics.html"><i class="fa fa-check"></i><b>14</b> Chemical Kinetics</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Kinetics.html"><a href="Kinetics.html#diffintk"><i class="fa fa-check"></i><b>14.1</b> Differential and integrated rate laws</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="Kinetics.html"><a href="Kinetics.html#zeroth-order-reaction"><i class="fa fa-check"></i><b>14.1.1</b> Zeroth-order reaction</a></li>
+<li class="chapter" data-level="14.1.2" data-path="Kinetics.html"><a href="Kinetics.html#first-order-reaction"><i class="fa fa-check"></i><b>14.1.2</b> First-order reaction</a></li>
+<li class="chapter" data-level="14.1.3" data-path="Kinetics.html"><a href="Kinetics.html#second-order-reaction"><i class="fa fa-check"></i><b>14.1.3</b> Second-order reaction</a></li>
+<li class="chapter" data-level="14.1.4" data-path="Kinetics.html"><a href="Kinetics.html#third-and-higher-orders-reaction"><i class="fa fa-check"></i><b>14.1.4</b> Third and higher orders reaction</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="Kinetics.html"><a href="Kinetics.html#complex-rate-laws"><i class="fa fa-check"></i><b>14.2</b> Complex Rate Laws</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Kinetics.html"><a href="Kinetics.html#consecutive-reactions"><i class="fa fa-check"></i><b>14.2.1</b> Consecutive reactions</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Kinetics.html"><a href="Kinetics.html#competitive-reactions"><i class="fa fa-check"></i><b>14.2.2</b> Competitive reactions</a></li>
+<li class="chapter" data-level="14.2.3" data-path="Kinetics.html"><a href="Kinetics.html#opposed-reactions"><i class="fa fa-check"></i><b>14.2.3</b> Opposed reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="Kinetics.html"><a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders"><i class="fa fa-check"></i><b>14.3</b> Experimental Methods for Determination of Reaction Orders</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="Kinetics.html"><a href="Kinetics.html#initial-rates-method"><i class="fa fa-check"></i><b>14.3.1</b> Initial rates method</a></li>
+<li class="chapter" data-level="14.3.2" data-path="Kinetics.html"><a href="Kinetics.html#isolation-method"><i class="fa fa-check"></i><b>14.3.2</b> Isolation method</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Kinetics.html"><a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients"><i class="fa fa-check"></i><b>14.4</b> Temperature Dependence of the Rate Coefficients</a></li>
+<li class="chapter" data-level="14.5" data-path="Kinetics.html"><a href="Kinetics.html#rev15"><i class="fa fa-check"></i><b>14.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="Kinetics.html"><a href="Kinetics.html#exer15"><i class="fa fa-check"></i><b>14.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="14.5.2" data-path="Kinetics.html"><a href="Kinetics.html#quest15"><i class="fa fa-check"></i><b>14.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>15</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-inorganic-substances-at-298-k"><i class="fa fa-check"></i><b>15.1</b> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+<li class="chapter" data-level="15.2" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-organic-substances-at-298-k"><i class="fa fa-check"></i><b>15.2</b> Thermodynamic Data of Organic Substances at 298 K</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="GibbsFree" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Gibbs Energy<a href="GibbsFree.html#GibbsFree" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter, we will concentrate on chemical processes that happen at constant <span class="math inline">\(T\)</span> and constant <span class="math inline">\(P\)</span>.<a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a> As such, we will focus our attention on the Gibbs energy.</p>
+<div id="gibbseqsec" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Gibbs Equation<a href="GibbsFree.html#gibbseqsec" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recalling from chapter <a href="Potentials.html#Potentials">8</a>, the definition of <span class="math inline">\(G\)</span> is:</p>
+<p><span class="math display" id="eq:dgdeftot">\[\begin{equation}
+G = U -TS +PV = H-TS,
+\tag{9.1}
+\end{equation}\]</span></p>
+<p>which, taking the differential at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, becomes:</p>
+<p><span class="math display" id="eq:dgdeftot2">\[\begin{equation}
+dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
+\tag{9.2}
+\end{equation}\]</span></p>
+<p>Integrating eq. <a href="GibbsFree.html#eq:dgdeftot2">(9.2)</a> between the initial and final states of a process results in:</p>
+<p><span class="math display" id="eq:gibbseq">\[\begin{equation}
+\begin{aligned}
+\int_i^f dG &amp;= \int_i^f dH -T \int_i^f dS \\
+\\
+\Delta G &amp;= \Delta H -T \Delta S
+\end{aligned}
+\tag{9.3}
+\end{equation}\]</span></p>
+<p>which is the famous <strong>Gibbs equation</strong> for <span class="math inline">\(\Delta G\)</span>. Using Definition <a href="Potentials.html#def:helmgibbsminimum">8.2</a>, we can use <span class="math inline">\(\Delta G\)</span> to infer the spontaneity of a chemical process that happens at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> using <span class="math inline">\(\Delta G \leq 0\)</span>. If we set ourselves at standard conditions, we can calculate the standard Gibbs energy of formation, <span class="math inline">\(\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, for any reaction as:</p>
+<p><span class="math display" id="eq:gibbseq2">\[\begin{equation}
+\begin{aligned}
+\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}&amp;= \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}-T \Delta_{\text{rxn}} S^{-\kern-6pt{\ominus}\kern-6pt-}\\
+\\
+&amp;= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}- T \sum_i \nu_i S_i^{-\kern-6pt{\ominus}\kern-6pt-},
+\end{aligned}
+\tag{9.4}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in chapters <a href="Thermochemistry.html#Thermochemistry">4</a> and <a href="thirdlaw.html#thirdlaw">7</a>, respectively.<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a></p>
+<p>The following four options are possible for <span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> of a chemical reaction:</p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="3%" />
+<col width="17%" />
+<col width="17%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th></th>
+<th align="center"><span class="math inline">\(\Delta H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th align="center"><span class="math inline">\(\Delta S^{-\kern-6pt{\ominus}\kern-6pt-}\)</span></th>
+<th align="center">Spontaneous?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">–</td>
+<td><em>if</em></td>
+<td align="center">–</td>
+<td align="center">+</td>
+<td align="center"><em>Always</em></td>
+</tr>
+<tr class="even">
+<td align="center">+</td>
+<td><em>if</em></td>
+<td align="center">+</td>
+<td align="center">–</td>
+<td align="center"><em>Never</em></td>
+</tr>
+<tr class="odd">
+<td align="center">–/+</td>
+<td><em>if</em></td>
+<td align="center">–</td>
+<td align="center">–</td>
+<td align="center"><em>Depends on <span class="math inline">\(T\)</span>:</em> <br> <span class="math inline">\(\scriptstyle{\text{spontaneous at low } T}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">+/–</td>
+<td><em>if</em></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"><em>Depends on <span class="math inline">\(T\)</span>:</em> <br> <span class="math inline">\(\scriptstyle{\text{spontaneous at high } T}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Or, in other words:</p>
+<ul>
+<li>Exothermic reactions that increase the entropy are always spontaneous.</li>
+<li>Endothermic reactions that reduce the entropy are always non-spontaneous.</li>
+<li>For the other two cases, the spontaneity of the reaction depends on the temperature:
+<ul>
+<li>Exothermic reactions that reduce the entropy are spontaneous at low <span class="math inline">\(T\)</span>.</li>
+<li>Endothermic reactions that increase the entropy are spontaneous at high <span class="math inline">\(T\)</span>.</li>
+</ul></li>
+</ul>
+<p>A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &gt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing <span class="math inline">\(\left( \left| \sum_\text{products} \nu_i \right| &lt; \left| \sum_\text{reactants} \nu_i \right| \right)\)</span>, the entropy will also reduce.</p>
+<p>As we saw in section <a href="Potentials.html#thermpot">8.2</a>, the natural variables of the Gibbs energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs energy can therefore be expressed using the total differential as (see also, last formula in eq. <a href="Potentials.html#eq:dhagchem2">(8.16)</a>):</p>
+<p><span class="math display" id="eq:dgtotdiff">\[\begin{equation}
+dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
+\tag{9.5}
+\end{equation}\]</span></p>
+<p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in eq. <a href="GibbsFree.html#eq:dgtotdiff">(9.5)</a>, which are given in eq. <a href="Potentials.html#eq:dhagchem3">(8.17)</a>.</p>
+</div>
+<div id="temperature-dependence-of-delta-g" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#temperature-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
+\]</span></p>
+<p>Let’s analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to <span class="math inline">\(-S\)</span> and the entropy is always positive, <span class="math inline">\(G\)</span> must decrease when <span class="math inline">\(T\)</span> increases at constant <span class="math inline">\(P\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and vice versa.</p>
+<p>If we replace this coefficient for <span class="math inline">\(-S\)</span> in the Gibbs equation, eq. <a href="GibbsFree.html#eq:gibbseq">(9.3)</a>, we obtain:</p>
+<p><span class="math display" id="eq:dgconsttt">\[\begin{equation}
+\Delta G = \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}},
+\tag{9.6}
+\end{equation}\]</span></p>
+<p>and since eq. <a href="GibbsFree.html#eq:dgconsttt">(9.6)</a> includes both <span class="math inline">\(\Delta G\)</span> and its partial derivative with respect to temperature <span class="math inline">\(\left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}}\)</span> we need to rearrange it to include the temperature derivative only. To do so, we can start by evaluating the partial derivative of <span class="math inline">\(\left( \frac{\Delta G}{T} \right)\)</span> using the chain rule:</p>
+<p><span class="math display" id="eq:dgconsttt1">\[\begin{equation}
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} = \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2}\Delta G,
+\tag{9.7}
+\end{equation}\]</span></p>
+<p>which, replacing <span class="math inline">\(\Delta G\)</span> from eq. <a href="GibbsFree.html#eq:dgconsttt">(9.6)</a> into eq. <a href="GibbsFree.html#eq:dgconsttt1">(9.7)</a>, becomes:</p>
+<p><span class="math display" id="eq:dgconsttt2">\[\begin{equation}
+\begin{aligned}
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[ \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}} \right] \\
+&amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}}- \frac{\Delta H}{T^2}-\frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}},
+\end{aligned}
+\tag{9.8}
+\end{equation}\]</span></p>
+<p>which simplifies to:</p>
+<p><span class="math display" id="eq:gibbshelm">\[\begin{equation}
+\begin{aligned}
+\left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= - \frac{\Delta H}{T^2}.
+\end{aligned}
+\tag{9.9}
+\end{equation}\]</span></p>
+<p>Equation <a href="GibbsFree.html#eq:gibbshelm">(9.9)</a> is known as the <strong>Gibbs–Helmholtz equation</strong>, and is useful in its integrated form to calculate the Gibbs energy for a chemical reaction at any temperature <span class="math inline">\(T\)</span> by knowing just the standard Gibbs energy of formation and the standard enthalpy of formation for the individual species, which are usually reported at <span class="math inline">\(T=298\;\text{K}\)</span>. The integration is performed as follows:</p>
+<p><span class="math display" id="eq:gibbshelmIbase">\[\begin{equation}
+\begin{aligned}
+\int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\partial\left( \frac{\Delta_{\text{rxn}} G}{T} \right)}{\partial T} &amp;=  - \int_{T_i=298 \;\text{K}}^{T_f=T}  \frac{\Delta_{\text{rxn}} H}{T^2} \\ \\ \frac{\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}(T)}{T} &amp;=  \frac{\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}}{298 \;\text{K}} + \Delta_{\text{rxn}} H^{-\kern-6pt{\ominus}\kern-6pt-}\left( \frac{1}{T} -\frac{1}{298 \;\text{K}} \right),
+\end{aligned}
+\tag{9.10}
+\end{equation}\]</span></p>
+<p>giving the integrated Gibbs–Helmholtz equation:</p>
+<p><span class="math display" id="eq:gibbshelmI">\[\begin{equation}
+\frac{\Delta_{\text{rxn}} G^{-\kern-6pt{\ominus}\kern-6pt-}(T)}{T} =  \frac{\sum_i \nu_i \Delta_{\text{f}} G_i^{-\kern-6pt{\ominus}\kern-6pt-}}{298 \;\text{K}} + \sum_i \nu_i \Delta_{\text{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\left( \frac{1}{T} -\frac{1}{298 \;\text{K}} \right)
+\tag{9.11}
+\end{equation}\]</span></p>
+</div>
+<div id="pressure-dependence-of-delta-g" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Pressure Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#pressure-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
+\]</span></p>
+<p>We can now turn the attention to the second coefficient that gives how the Gibbs energy changes when the pressure change. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From eq. <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
+<p><span class="math display" id="eq:dgconsttp">\[\begin{equation}
+dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
+\tag{9.12}
+\end{equation}\]</span></p>
+<p>which is the differential equation that we were looking for. To study changes of <span class="math inline">\(G\)</span> for macroscopic changes in <span class="math inline">\(P\)</span>, we can integrate eq. <a href="GibbsFree.html#eq:dgconsttp">(9.12)</a> between initial and final pressures, and considering an ideal gas, we obtain:</p>
+<p><span class="math display" id="eq:dgconsttpintegral1">\[\begin{equation}
+\begin{aligned}
+\int_i^f dG &amp;= \int_i^f VdP \\
+\Delta G &amp;= nRT \int_i^f \frac{dP}{P} = nRT \ln \frac{P_f}{P_i}.
+\end{aligned}
+\tag{9.13}
+\end{equation}\]</span></p>
+<p>If we take <span class="math inline">\(P_i = P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \, \text{bar}\)</span>, we can rewrite eq. <a href="GibbsFree.html#eq:dgconsttpintegral1">(9.13)</a> as:</p>
+<p><span class="math display" id="eq:dgconsttpintegral2">\[\begin{equation}
+G = G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
+\tag{9.14}
+\end{equation}\]</span></p>
+<p>which is useful to convert standard Gibbs energies of formation at pressures different than standard pressure, using:</p>
+<p><span class="math display" id="eq:dgconsttpintegral2b">\[\begin{equation}
+\Delta_{\text{f}} G = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln \frac{P_f}{\underbrace{P^{-\kern-6pt{\ominus}\kern-6pt-}}_{=1 \; \text{bar}}} = \Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}+ nRT \ln P_f
+\tag{9.15}
+\end{equation}\]</span></p>
+<p>For liquids and solids, <span class="math inline">\(V\)</span> is essentially independent of <span class="math inline">\(P\)</span> (liquids and solids are incompressible), and eq. <a href="GibbsFree.html#eq:dgconsttp">(9.12)</a> can be integrated as:</p>
+<p><span class="math display" id="eq:dgconsttpintegral3">\[\begin{equation}
+\Delta G = \int_i^f VdP = V \int_i^f dP = V \Delta P.
+\tag{9.16}
+\end{equation}\]</span></p>
+<p>The plots in Figure <a href="GibbsFree.html#fig:gdeppfig">9.1</a> show the remarkable difference in the behaviors of <span class="math inline">\(\Delta_{\text{f}} G\)</span> for a gas and for a liquid, as obtained from eqs. <a href="GibbsFree.html#eq:dgconsttpintegral1">(9.13)</a> and <a href="GibbsFree.html#eq:dgconsttpintegral3">(9.16)</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gdeppfig"></span>
+<img src="pchem1_files/figure-html/gdeppfig-1.png" alt="Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar." width="672" />
+<p class="caption">
+Figure 9.1: Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.
+</p>
+</div>
+</div>
+<div id="composition-dependence-of-delta-g" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Composition Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#composition-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
+\]</span></p>
+<p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
+<p><span class="math display" id="eq:dgconstn">\[\begin{equation}
+\int_0^G d G = \int_0^n \mu^* dn,
+\tag{9.17}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\mu^*\)</span> indicates the chemical potential of a pure substance, which is independent on the number of moles by definition. As such, eq. <a href="GibbsFree.html#eq:dgconstn">(9.17)</a> becomes:</p>
+<p><span class="math display" id="eq:dgconstn1">\[\begin{equation}
+\int_0^G d G = \mu^* \int_0^n dn \quad \rightarrow \quad G = \mu^* n \quad \rightarrow \quad \mu^* = \frac{G}{n},
+\tag{9.18}
+\end{equation}\]</span></p>
+<p>which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs energy.</p>
+<p>We can start from eq. <a href="GibbsFree.html#eq:dgconsttpintegral2">(9.14)</a> and write for a pure substance that is brought from <span class="math inline">\(P_i=P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> to <span class="math inline">\(P_f=P\)</span> at constant <span class="math inline">\(T\)</span>:</p>
+<p><span class="math display" id="eq:dgconstn2">\[\begin{equation}
+G - G^{-\kern-6pt{\ominus}\kern-6pt-}= nRT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
+\tag{9.19}
+\end{equation}\]</span></p>
+<p>dividing both sides by <span class="math inline">\(n\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:dgconstn3">\[\begin{equation}
+\frac{G}{n} - \frac{G^{-\kern-6pt{\ominus}\kern-6pt-}}{n} = RT \ln \frac{P}{P^{-\kern-6pt{\ominus}\kern-6pt-}},
+\tag{9.20}
+\end{equation}\]</span></p>
+<p>which, for a pure substance at <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\)</span>, becomes:</p>
+<p><span class="math display" id="eq:dgconstn4">\[\begin{equation}
+\mu^* - \mu^{-\kern-6pt{\ominus}\kern-6pt-}=      RT \ln P.
+\tag{9.21}
+\end{equation}\]</span></p>
+<p>Notice that, while we use the pressure of the gas inside the logarithm in eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a>, the quantity is formally divided by the standard pressure <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}= 1 \;\text{bar}\)</span>, and therefore it is a dimensionless quantity, as it should be. For simplicity of notation, however, we will omit the division by <span class="math inline">\(P^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> in the remaining of this textbook, especially wherever it does not create confusion.
+Let’s now consider a mixture of ideal gases, and let’s try to find out whether the chemical potential of a pure gas inside the mixture, <span class="math inline">\(\mu_i^{\text{mixture}}\)</span>, is the same as its chemical potential outside the mixture, <span class="math inline">\(\mu^*\)</span>.
+To do so, we can use eq. <a href="GibbsFree.html#eq:dgconstn4">(9.21)</a> and replace the pressure <span class="math inline">\(P\)</span> with the partial pressure <span class="math inline">\(P_i\)</span>:</p>
+<p><span class="math display" id="eq:dgconstn5">\[\begin{equation}
+\mu_i^{\text{mixture}} = \mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P_i,
+\tag{9.22}
+\end{equation}\]</span></p>
+<p>where the partial pressure <span class="math inline">\(P_i\)</span> can be obtained from the simple relation that is known as <strong>Dalton’s Law</strong>:</p>
+<p><span class="math display" id="eq:daltonlaw">\[\begin{equation}
+P_i = y_i P,
+\tag{9.23}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(y_i\)</span> being the concentration of gas <span class="math inline">\(i\)</span> measured as a mole fraction in the gas phase <span class="math inline">\(y_i=\frac{n_i}{n_{\text{TOT}}} &lt; 1\)</span>. Replacing eq. <a href="GibbsFree.html#eq:daltonlaw">(9.23)</a> into eq. <a href="GibbsFree.html#eq:dgconstn5">(9.22)</a>, we obtain:</p>
+<p><span class="math display" id="eq:dgconstn6">\[\begin{equation}
+\begin{aligned}
+\mu_i^{\text{mixture}} &amp;= \mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln (y_i P) \\
+&amp;= \underbrace{\mu_i^{-\kern-6pt{\ominus}\kern-6pt-}+ RT \ln P}_{\mu_i^*} + RT \ln y_i,
+\end{aligned}
+\tag{9.24}
+\end{equation}\]</span></p>
+<p>which then reduces to the following equation:</p>
+<p><span class="math display" id="eq:dgconstn7">\[\begin{equation}
+\mu_i^{\text{mixture}} = \mu_i^* + RT \ln y_i.
+\tag{9.25}
+\end{equation}\]</span></p>
+<p>Analyzing eq. <a href="GibbsFree.html#eq:dgconstn7">(9.25)</a>, we can immediately see that, since <span class="math inline">\(y_i &lt; 1\)</span>:</p>
+<p><span class="math display" id="eq:dgconstn8">\[\begin{equation}
+\mu_i^{\text{mixture}} &lt; \mu_i^*,
+\tag{9.26}
+\end{equation}\]</span></p>
+<p>or, in other words, the chemical potential of a substance in the mixture is always lower than the chemical potential of the pure substance. If we consider a process where we start from two separate pure ideal gases and finish with a mixture of the two, we can calculate the change in Gibbs energy due to the mixing process with:</p>
+<p><span class="math display" id="eq:dgconstn9">\[\begin{equation}
+\Delta_{\text{mixing}} G = \sum n_i \left( \mu_i^{\text{mixture}} - \mu_i^* \right)  &lt; 0,
+\tag{9.27}
+\end{equation}\]</span></p>
+<p>or, in other words, the process is spontaneous under all circumstances, and pure ideal gases will always mix.</p>
+</div>
+<div id="rev9" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Chapter Review<a href="GibbsFree.html#rev9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer9" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> Practice Problems<a href="GibbsFree.html#exer9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Problem 1: Calculating Gibbs Energy Change</strong></p>
+<p>A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is <span class="math inline">\(-50\,\text{kJ/mol}\)</span> and the entropy change is <span class="math inline">\(-0.15\,\text{kJ/(mol·K)}\)</span>. Calculate the Gibbs energy change at <span class="math inline">\(298\,\text{K}\)</span>. Is the reaction spontaneous?</p>
+<p><strong>Solution:</strong> We can use Gibbs equation, eq. <a href="GibbsFree.html#eq:gibbseq">(9.3)</a>, to solve this problem:
+<span class="math display">\[\Delta_{\text{rxn}} G= \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.\]</span>
+Given:</p>
+<p><span class="math inline">\(\Delta_{\text{rxn}} H = -50\,\text{kJ/mol}\)</span>,</p>
+<p><span class="math inline">\(\Delta_{\text{rxn}} S = -0.15\,\text{kJ/(mol·K)}\)</span>,</p>
+<p><span class="math inline">\(T=298\,\text{K}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} - (298\,\text{K})(-0.15\,\text{kJ/(mol·K)})\]</span></p>
+<p><span class="math display">\[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} + 44.7\,\text{kJ/mol}\]</span></p>
+<p><strong>Answer:</strong> the Gibbs energy change for the reaction is <span class="math inline">\(-5.3\,\text{kJ/mol}\)</span>. The reaction is spontaneous.</p>
+<hr />
+<p><strong>Problem 2: Calculating <span class="math inline">\(\Delta G\)</span> of Reaction from Standard Free Energies of Formation</strong></p>
+<p>Calculate <span class="math inline">\(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> at <span class="math inline">\(298\,\text{K}\)</span> for the reaction:</p>
+<p><span class="math display">\[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}\]</span></p>
+<p>Using the standard Gibbs energies of formation reported in the tables at the end of the book.</p>
+<p><strong>Solution:</strong> We can use the equation: <span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i \]</span></p>
+<p>Substituting the values:</p>
+<p><span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = [1(-394.4) + 2(-237.1)] - [1(-50.7) + 2(0)]\]</span></p>
+<p><span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = -817.9\,\text{kJ/mol}\]</span></p>
+<p>WHich gives us the final answer, after fixing the significant digits.</p>
+<p><strong>Answer:</strong> The change in Gibbs energy for the reported reaction at <span class="math inline">\(298\,\text{K}\)</span> is <span class="math inline">\(-818\,\text{kJ/mol}\)</span>.</p>
+</div>
+<div id="quest9" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Study Questions<a href="GibbsFree.html#quest9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Which of the following is the correct definition of the Gibbs energy?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(G = U - TS\)</span>.</li>
+<li><span class="math inline">\(G = H + TS\)</span>.</li>
+<li><span class="math inline">\(G = H - TS\)</span>.</li>
+<li><span class="math inline">\(G = H - PV + TS\)</span>.</li>
+<li><span class="math inline">\(G = H + PV - TS\)</span>.</li>
+</ol>
+<hr />
+<ol start="2" style="list-style-type: decimal">
+<li><strong>For a spontaneous process at constant T and P, which of the following is true?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\Delta G &gt; 0\)</span>.</li>
+<li><span class="math inline">\(\Delta G &lt; 0\)</span>.</li>
+<li><span class="math inline">\(\Delta G = 0\)</span>.</li>
+<li><span class="math inline">\(\Delta G \geq 0\)</span>.</li>
+<li><span class="math inline">\(\Delta G\)</span> is undefined.</li>
+</ol>
+<hr />
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Which of the following is NOT a natural variable of the Gibbs energy?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Temperature.</li>
+<li>Pressure.</li>
+<li>Chemical composition.</li>
+<li>Volume.</li>
+<li>Number of moles.</li>
+</ol>
+<hr />
+<ol start="4" style="list-style-type: decimal">
+<li><strong>What is the temperature dependence coefficient of G?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = S\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -S\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = H\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -H\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = V\)</span>.</li>
+</ol>
+<hr />
+<ol start="5" style="list-style-type: decimal">
+<li><strong>What is the pressure dependence coefficient of G?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -V\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = V\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = S\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -S\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = H\)</span>.</li>
+</ol>
+<hr />
+<ol start="6" style="list-style-type: decimal">
+<li><strong>For an ideal gas, how does G change with pressure at constant T?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} - nRT\ln\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\)</span>.</li>
+<li><span class="math inline">\(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} + nRT\ln\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\)</span>.</li>
+<li><span class="math inline">\(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} + nRT\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\)</span>.</li>
+<li><span class="math inline">\(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} - nRT\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\)</span>.</li>
+<li><span class="math inline">\(G = G^{{-\kern-6pt{\ominus}\kern-6pt-}} + RT\ln\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\)</span>.</li>
+</ol>
+<hr />
+<ol start="7" style="list-style-type: decimal">
+<li><strong>What is the composition dependence coefficient of G?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = -\mu_i\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \mu_i\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\ln\mu_i\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\mu_i\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \frac{\mu_i}{RT}\)</span>.</li>
+</ol>
+<hr />
+<ol start="8" style="list-style-type: decimal">
+<li><strong>For a pure substance, what is the relationship between chemical potential and molar Gibbs energy?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mu^* = \frac{G}{n^2}\)</span>.</li>
+<li><span class="math inline">\(\mu^* = \frac{G}{RT}\)</span>.</li>
+<li><span class="math inline">\(\mu^* = G\)</span>.</li>
+<li><span class="math inline">\(\mu^* = \frac{G}{n}\)</span>.</li>
+<li><span class="math inline">\(\mu^* = nG\)</span>.</li>
+</ol>
+<hr />
+<ol start="9" style="list-style-type: decimal">
+<li><strong>How does the chemical potential of a substance in an ideal gas mixture compare to its chemical potential as a pure substance?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mu_i^{\text{mixture}} &gt; \mu_i^*\)</span>.</li>
+<li><span class="math inline">\(\mu_i^{\text{mixture}} &lt; \mu_i^*\)</span>.</li>
+<li><span class="math inline">\(\mu_i^{\text{mixture}} = \mu_i^*\)</span>.</li>
+<li><span class="math inline">\(\mu_i^{\text{mixture}} = RT\ln\mu_i^*\)</span>.</li>
+<li><span class="math inline">\(\mu_i^{\text{mixture}} = \frac{\mu_i^*}{RT}\)</span>.</li>
+</ol>
+<hr />
+<ol start="10" style="list-style-type: decimal">
+<li><strong>What is the equation for the change in Gibbs energy due to mixing of ideal gases?</strong></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} + \mu_i^*)\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) &gt; 0\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) = 0\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) &lt; 0\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{mixing}}G = RT\sum n_i\ln\mu_i^{\text{mixture}}\)</span>.</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.c, 2.b, 3.d, 4.b, 5.b, 6.b, 7.b, 8.d, 9.b, 10.d
+</span></p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="41">
+<li id="fn41"><p>The majority of chemical reactions in a lab happens at those conditions, and all biological functions happen at those conditions as well.<a href="GibbsFree.html#fnref41" class="footnote-back">↩︎</a></p></li>
+<li id="fn42"><p>It is not uncommon to see values of <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> tabulated alongside <span class="math inline">\(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> and <span class="math inline">\(S_i^{-\kern-6pt{\ominus}\kern-6pt-}\)</span>, which simplifies even further the calculation. In fact, a comprehensive list of standard Gibbs energy of formation of inorganic and organic compounds is reported in the appendix of this book <a href="appendix.html#appendix">15</a>. For cases where <span class="math inline">\(\Delta_{\text{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}\)</span> are not reported, they can always be calculated by their constituents.<a href="GibbsFree.html#fnref42" class="footnote-back">↩︎</a></p></li>
+<li id="fn43"><p>For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.<a href="GibbsFree.html#fnref43" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Potentials.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ChemicalEquilibrium.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem1/edit/master/09_Gibbs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

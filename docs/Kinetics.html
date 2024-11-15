@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>14 Chemical Kinetics | The Live Textbook of Physical Chemistry 1</title>
+  <meta name="description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="14 Chemical Kinetics | The Live Textbook of Physical Chemistry 1" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem1" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="14 Chemical Kinetics | The Live Textbook of Physical Chemistry 1" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 1 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2024-11-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="MCPhaseDiagrams.html"/>
+<link rel="next" href="appendix.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 1</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#authors-note-to-the-august-2024-edition."><i class="fa fa-check"></i>Author’s Note to the August 2024 Edition.</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-note-on-units"><i class="fa fa-check"></i>A note on units</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="SystemVariables.html"><a href="SystemVariables.html"><i class="fa fa-check"></i><b>1</b> Introduction to Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#calculus-for-physical-chemistry-slicing-and-gluing"><i class="fa fa-check"></i><b>1.1</b> Calculus for Physical Chemistry: Slicing and Gluing</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="SystemVariables.html"><a href="SystemVariables.html#infslici"><i class="fa fa-check"></i><b>1.1.1</b> Differentiation: Infinite Slicing</a></li>
+<li class="chapter" data-level="1.1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#integration-gluing-together-differentials"><i class="fa fa-check"></i><b>1.1.2</b> Integration: Gluing Together Differentials</a></li>
+<li class="chapter" data-level="1.1.3" data-path="SystemVariables.html"><a href="SystemVariables.html#calculus-for-thermodynamics"><i class="fa fa-check"></i><b>1.1.3</b> Calculus for Thermodynamics</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-systems"><i class="fa fa-check"></i><b>1.2</b> Thermodynamic Systems</a></li>
+<li class="chapter" data-level="1.3" data-path="SystemVariables.html"><a href="SystemVariables.html#thermodynamic-variables"><i class="fa fa-check"></i><b>1.3</b> Thermodynamic Variables</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="SystemVariables.html"><a href="SystemVariables.html#state-and-path-variables"><i class="fa fa-check"></i><b>1.3.1</b> State and Path Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="SystemVariables.html"><a href="SystemVariables.html#rev1"><i class="fa fa-check"></i><b>1.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="SystemVariables.html"><a href="SystemVariables.html#quest1"><i class="fa fa-check"></i><b>1.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ZerothLaw.html"><a href="ZerothLaw.html"><i class="fa fa-check"></i><b>2</b> Zeroth Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#what-is-thermodynamics"><i class="fa fa-check"></i><b>2.1</b> What is Thermodynamics?</a></li>
+<li class="chapter" data-level="2.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#the-zeroth-law-of-thermodynamics"><i class="fa fa-check"></i><b>2.2</b> The Zeroth Law of Thermodynamics</a></li>
+<li class="chapter" data-level="2.3" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatint"><i class="fa fa-check"></i><b>2.3</b> Calculation of Heat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#processes-at-constant-volume-isochoric"><i class="fa fa-check"></i><b>2.3.1</b> Processes at constant volume (isochoric)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#heatconstp"><i class="fa fa-check"></i><b>2.3.2</b> Processes at constant pressure (isobaric)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ZerothLaw.html"><a href="ZerothLaw.html#workint"><i class="fa fa-check"></i><b>2.4</b> Calculation of Work</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><i class="fa fa-check"></i><b>2.4.1</b> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="ZerothLaw.html"><a href="ZerothLaw.html#rev2"><i class="fa fa-check"></i><b>2.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="ZerothLaw.html"><a href="ZerothLaw.html#exer2"><i class="fa fa-check"></i><b>2.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="2.5.2" data-path="ZerothLaw.html"><a href="ZerothLaw.html#quest2"><i class="fa fa-check"></i><b>2.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="FirstLaw.html"><a href="FirstLaw.html"><i class="fa fa-check"></i><b>3</b> First Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="FirstLaw.html"><a href="FirstLaw.html#energyint"><i class="fa fa-check"></i><b>3.1</b> Calculation of Internal Energy Changes</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="FirstLaw.html"><a href="FirstLaw.html#isothermalE"><i class="fa fa-check"></i><b>3.1.1</b> Internal energy in isothermal processes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-adiabatic-processes"><i class="fa fa-check"></i><b>3.1.2</b> Internal energy in adiabatic processes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="FirstLaw.html"><a href="FirstLaw.html#internal-energy-in-isochoric-processes"><i class="fa fa-check"></i><b>3.1.3</b> Internal energy in isochoric processes</a></li>
+<li class="chapter" data-level="3.1.4" data-path="FirstLaw.html"><a href="FirstLaw.html#enthalpy"><i class="fa fa-check"></i><b>3.1.4</b> Internal energy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="FirstLaw.html"><a href="FirstLaw.html#the-first-law-of-thermodynamics"><i class="fa fa-check"></i><b>3.2</b> The First Law of Thermodynamics</a></li>
+<li class="chapter" data-level="3.3" data-path="FirstLaw.html"><a href="FirstLaw.html#reversible-and-irreversible-processes"><i class="fa fa-check"></i><b>3.3</b> Reversible and Irreversible processes</a></li>
+<li class="chapter" data-level="3.4" data-path="FirstLaw.html"><a href="FirstLaw.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="FirstLaw.html"><a href="FirstLaw.html#exer3"><i class="fa fa-check"></i><b>3.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="3.4.2" data-path="FirstLaw.html"><a href="FirstLaw.html#quest3"><i class="fa fa-check"></i><b>3.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Thermochemistry.html"><a href="Thermochemistry.html"><i class="fa fa-check"></i><b>4</b> Thermochemistry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rxnenthalpy"><i class="fa fa-check"></i><b>4.1</b> Reaction Enthalpies</a></li>
+<li class="chapter" data-level="4.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#formenthalpy"><i class="fa fa-check"></i><b>4.2</b> Standard Enthalpies of Formation</a></li>
+<li class="chapter" data-level="4.3" data-path="Thermochemistry.html"><a href="Thermochemistry.html#hessslaw"><i class="fa fa-check"></i><b>4.3</b> Hess’s Law</a></li>
+<li class="chapter" data-level="4.4" data-path="Thermochemistry.html"><a href="Thermochemistry.html#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><i class="fa fa-check"></i><b>4.4</b> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+<li class="chapter" data-level="4.5" data-path="Thermochemistry.html"><a href="Thermochemistry.html#rev4"><i class="fa fa-check"></i><b>4.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="Thermochemistry.html"><a href="Thermochemistry.html#exer4"><i class="fa fa-check"></i><b>4.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="4.5.2" data-path="Thermochemistry.html"><a href="Thermochemistry.html#quest4"><i class="fa fa-check"></i><b>4.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html"><i class="fa fa-check"></i><b>5</b> Thermodynamic Cycles</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#carnotcyclesect"><i class="fa fa-check"></i><b>5.1</b> Carnot Cycle</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage1"><i class="fa fa-check"></i><b>5.1.1</b> Stage 1: isothermal expansion <span class="math inline">\(A \rightarrow B\)</span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage2"><i class="fa fa-check"></i><b>5.1.2</b> Stage 2: adiabatic expansion <span class="math inline">\(B \rightarrow C\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage3"><i class="fa fa-check"></i><b>5.1.3</b> Stage 3: isothermal compression <span class="math inline">\(C \rightarrow D\)</span></a></li>
+<li class="chapter" data-level="5.1.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#CCstage4"><i class="fa fa-check"></i><b>5.1.4</b> Stage 4: adiabatic compression <span class="math inline">\(D \rightarrow A\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#UWQCarnot"><i class="fa fa-check"></i><b>5.2</b> Energy, Heat, and Work in the Carnot Cycle</a></li>
+<li class="chapter" data-level="5.3" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#efficiency-of-a-carnot-cycle"><i class="fa fa-check"></i><b>5.3</b> Efficiency of a Carnot Cycle</a></li>
+<li class="chapter" data-level="5.4" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#rev5"><i class="fa fa-check"></i><b>5.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#exer5"><i class="fa fa-check"></i><b>5.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="5.4.2" data-path="ThermodynamicCycles.html"><a href="ThermodynamicCycles.html#quest5"><i class="fa fa-check"></i><b>5.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="SecondLaw.html"><a href="SecondLaw.html"><i class="fa fa-check"></i><b>6</b> Entropy and the Second Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="SecondLaw.html"><a href="SecondLaw.html#entropyint"><i class="fa fa-check"></i><b>6.1</b> Entropy</a></li>
+<li class="chapter" data-level="6.2" data-path="SecondLaw.html"><a href="SecondLaw.html#irreversible-cycles"><i class="fa fa-check"></i><b>6.2</b> Irreversible Cycles</a></li>
+<li class="chapter" data-level="6.3" data-path="SecondLaw.html"><a href="SecondLaw.html#secondlaw"><i class="fa fa-check"></i><b>6.3</b> The Second Law of Thermodynamics</a></li>
+<li class="chapter" data-level="6.4" data-path="SecondLaw.html"><a href="SecondLaw.html#boltzmann-entropy"><i class="fa fa-check"></i><b>6.4</b> Boltzmann Entropy</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="SecondLaw.html"><a href="SecondLaw.html#why-disorder-can-be-misleading"><i class="fa fa-check"></i><b>6.4.1</b> Why “Disorder” Can Be Misleading</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="SecondLaw.html"><a href="SecondLaw.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="SecondLaw.html"><a href="SecondLaw.html#exer6"><i class="fa fa-check"></i><b>6.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.5.2" data-path="SecondLaw.html"><a href="SecondLaw.html#quest6"><i class="fa fa-check"></i><b>6.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thirdlaw.html"><a href="thirdlaw.html"><i class="fa fa-check"></i><b>7</b> Calculation of Entropy and the Third Law of Thermodynamics</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="thirdlaw.html"><a href="thirdlaw.html#dssys"><i class="fa fa-check"></i><b>7.1</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isothermal-processes"><i class="fa fa-check"></i><b>7.1.1</b> Entropy in isothermal processes</a></li>
+<li class="chapter" data-level="7.1.2" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-adiabatic-processes"><i class="fa fa-check"></i><b>7.1.2</b> Entropy in adiabatic processes</a></li>
+<li class="chapter" data-level="7.1.3" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isochoric-processes"><i class="fa fa-check"></i><b>7.1.3</b> Entropy in isochoric processes</a></li>
+<li class="chapter" data-level="7.1.4" data-path="thirdlaw.html"><a href="thirdlaw.html#entropy-in-isobaric-processes"><i class="fa fa-check"></i><b>7.1.4</b> Entropy in isobaric processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="thirdlaw.html"><a href="thirdlaw.html#dssurr"><i class="fa fa-check"></i><b>7.2</b> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
+<li class="chapter" data-level="7.3" data-path="thirdlaw.html"><a href="thirdlaw.html#spontS"><i class="fa fa-check"></i><b>7.3</b> Clausius Theorem</a></li>
+<li class="chapter" data-level="7.4" data-path="thirdlaw.html"><a href="thirdlaw.html#thirdlawsect"><i class="fa fa-check"></i><b>7.4</b> The Third Law of Thermodynamics</a></li>
+<li class="chapter" data-level="7.5" data-path="thirdlaw.html"><a href="thirdlaw.html#rev7"><i class="fa fa-check"></i><b>7.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="thirdlaw.html"><a href="thirdlaw.html#exer7"><i class="fa fa-check"></i><b>7.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="7.5.2" data-path="thirdlaw.html"><a href="thirdlaw.html#quest7"><i class="fa fa-check"></i><b>7.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Potentials.html"><a href="Potentials.html"><i class="fa fa-check"></i><b>8</b> Thermodynamic Potentials</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Potentials.html"><a href="Potentials.html#fundeq"><i class="fa fa-check"></i><b>8.1</b> Fundamental Equation of Thermodynamics</a></li>
+<li class="chapter" data-level="8.2" data-path="Potentials.html"><a href="Potentials.html#thermpot"><i class="fa fa-check"></i><b>8.2</b> Thermodynamic Potentials</a></li>
+<li class="chapter" data-level="8.3" data-path="Potentials.html"><a href="Potentials.html#freeenergies"><i class="fa fa-check"></i><b>8.3</b> Gibbs and Helmholtz Energies</a></li>
+<li class="chapter" data-level="8.4" data-path="Potentials.html"><a href="Potentials.html#maxwell"><i class="fa fa-check"></i><b>8.4</b> Maxwell Relations</a></li>
+<li class="chapter" data-level="8.5" data-path="Potentials.html"><a href="Potentials.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="Potentials.html"><a href="Potentials.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="GibbsFree.html"><a href="GibbsFree.html"><i class="fa fa-check"></i><b>9</b> Gibbs Energy</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="GibbsFree.html"><a href="GibbsFree.html#gibbseqsec"><i class="fa fa-check"></i><b>9.1</b> Gibbs Equation</a></li>
+<li class="chapter" data-level="9.2" data-path="GibbsFree.html"><a href="GibbsFree.html#temperature-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.2</b> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.3" data-path="GibbsFree.html"><a href="GibbsFree.html#pressure-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.3</b> Pressure Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.4" data-path="GibbsFree.html"><a href="GibbsFree.html#composition-dependence-of-delta-g"><i class="fa fa-check"></i><b>9.4</b> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
+<li class="chapter" data-level="9.5" data-path="GibbsFree.html"><a href="GibbsFree.html#rev9"><i class="fa fa-check"></i><b>9.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="GibbsFree.html"><a href="GibbsFree.html#exer9"><i class="fa fa-check"></i><b>9.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="9.5.2" data-path="GibbsFree.html"><a href="GibbsFree.html#quest9"><i class="fa fa-check"></i><b>9.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html"><i class="fa fa-check"></i><b>10</b> Chemical Equilibrium</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#reaction-quotient-and-equilibrium-constant"><i class="fa fa-check"></i><b>10.1</b> Reaction Quotient and Equilibrium Constant</a></li>
+<li class="chapter" data-level="10.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#temperature-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.2</b> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#pressure-and-composition-dependence-of-k_texteq"><i class="fa fa-check"></i><b>10.3</b> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+<li class="chapter" data-level="10.4" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#rev10"><i class="fa fa-check"></i><b>10.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#exer10"><i class="fa fa-check"></i><b>10.4.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.4.2" data-path="ChemicalEquilibrium.html"><a href="ChemicalEquilibrium.html#quest10"><i class="fa fa-check"></i><b>10.4.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="RealGases.html"><a href="RealGases.html"><i class="fa fa-check"></i><b>11</b> Ideal and Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-equation"><i class="fa fa-check"></i><b>11.1</b> The Ideal Gas Equation</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="RealGases.html"><a href="RealGases.html#boyles-law"><i class="fa fa-check"></i><b>11.1.1</b> Boyle’s Law</a></li>
+<li class="chapter" data-level="11.1.2" data-path="RealGases.html"><a href="RealGases.html#charless-and-gay-lussacs-laws"><i class="fa fa-check"></i><b>11.1.2</b> Charles’s and Gay-Lussac’s Laws</a></li>
+<li class="chapter" data-level="11.1.3" data-path="RealGases.html"><a href="RealGases.html#avogadros-law"><i class="fa fa-check"></i><b>11.1.3</b> Avogadro’s Law</a></li>
+<li class="chapter" data-level="11.1.4" data-path="RealGases.html"><a href="RealGases.html#the-ideal-gas-law"><i class="fa fa-check"></i><b>11.1.4</b> The ideal gas Law</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="RealGases.html"><a href="RealGases.html#behaviors-of-non-ideal-gases"><i class="fa fa-check"></i><b>11.2</b> Behaviors of Non-Ideal Gases</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="RealGases.html"><a href="RealGases.html#the-van-der-waals-equation"><i class="fa fa-check"></i><b>11.2.1</b> The van der Waals equation</a></li>
+<li class="chapter" data-level="11.2.2" data-path="RealGases.html"><a href="RealGases.html#joulethomson-effect"><i class="fa fa-check"></i><b>11.2.2</b> Joule–Thomson effect</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="RealGases.html"><a href="RealGases.html#critical-phenomena"><i class="fa fa-check"></i><b>11.3</b> Critical Phenomena</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="RealGases.html"><a href="RealGases.html#compressibility-factors"><i class="fa fa-check"></i><b>11.3.1</b> Compressibility factors</a></li>
+<li class="chapter" data-level="11.3.2" data-path="RealGases.html"><a href="RealGases.html#phase-diagram-of-a-non-ideal-gas"><i class="fa fa-check"></i><b>11.3.2</b> Phase diagram of a non-ideal gas</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="RealGases.html"><a href="RealGases.html#fugacity"><i class="fa fa-check"></i><b>11.4</b> Fugacity</a></li>
+<li class="chapter" data-level="11.5" data-path="RealGases.html"><a href="RealGases.html#rev11"><i class="fa fa-check"></i><b>11.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="RealGases.html"><a href="RealGases.html#exer11"><i class="fa fa-check"></i><b>11.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.5.2" data-path="RealGases.html"><a href="RealGases.html#quest11"><i class="fa fa-check"></i><b>11.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html"><i class="fa fa-check"></i><b>12</b> Phase Equilibrium</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#phase-stability"><i class="fa fa-check"></i><b>12.1</b> Phase Stability</a></li>
+<li class="chapter" data-level="12.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#gibbs-phase-rule"><i class="fa fa-check"></i><b>12.2</b> Gibbs Phase Rule</a></li>
+<li class="chapter" data-level="12.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#pt-phase-diagrams"><i class="fa fa-check"></i><b>12.3</b> <span class="math inline">\(PT\)</span> Phase Diagrams</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#liquid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.1</b> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.2" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-gas-equilibrium"><i class="fa fa-check"></i><b>12.3.2</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas equilibrium</a></li>
+<li class="chapter" data-level="12.3.3" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#solid-rightleftarrows-liquid-equilibrium"><i class="fa fa-check"></i><b>12.3.3</b> Solid <span class="math inline">\(\rightleftarrows\)</span> Liquid equilibrium</a></li>
+<li class="chapter" data-level="12.3.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-triple-point-and-the-critical-point"><i class="fa fa-check"></i><b>12.3.4</b> The triple point and the critical point</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#the-clausiusclapeyron-equation"><i class="fa fa-check"></i><b>12.4</b> The Clausius–Clapeyron Equation</a></li>
+<li class="chapter" data-level="12.5" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#rev12"><i class="fa fa-check"></i><b>12.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="PhaseEquilibrium.html"><a href="PhaseEquilibrium.html#quest12"><i class="fa fa-check"></i><b>12.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html"><i class="fa fa-check"></i><b>13</b> Multi-Component Phase Diagrams and Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#raoults-law-and-phase-diagrams-of-ideal-solutions"><i class="fa fa-check"></i><b>13.1</b> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#one-volatile-component"><i class="fa fa-check"></i><b>13.1.1</b> One volatile component</a></li>
+<li class="chapter" data-level="13.1.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#two-volatile-components"><i class="fa fa-check"></i><b>13.1.2</b> Two volatile components</a></li>
+<li class="chapter" data-level="13.1.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#t_textb-phase-diagrams-and-fractional-distillation"><i class="fa fa-check"></i><b>13.1.3</b> <span class="math inline">\(T_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#phase-diagrams-of-non-ideal-solutions"><i class="fa fa-check"></i><b>13.2</b> Phase Diagrams of Non-Ideal Solutions</a></li>
+<li class="chapter" data-level="13.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#activity"><i class="fa fa-check"></i><b>13.3</b> Activity</a></li>
+<li class="chapter" data-level="13.4" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#colligative-properties"><i class="fa fa-check"></i><b>13.4</b> Colligative Properties</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#vapor-pressure-lowering"><i class="fa fa-check"></i><b>13.4.1</b> Vapor pressure lowering</a></li>
+<li class="chapter" data-level="13.4.2" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#boiling-point-elevation-and-melting-point-depression"><i class="fa fa-check"></i><b>13.4.2</b> Boiling point elevation and melting point depression</a></li>
+<li class="chapter" data-level="13.4.3" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#osmotic-pressure"><i class="fa fa-check"></i><b>13.4.3</b> Osmotic pressure</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#rev13"><i class="fa fa-check"></i><b>13.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="MCPhaseDiagrams.html"><a href="MCPhaseDiagrams.html#quest13"><i class="fa fa-check"></i><b>13.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Kinetics.html"><a href="Kinetics.html"><i class="fa fa-check"></i><b>14</b> Chemical Kinetics</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Kinetics.html"><a href="Kinetics.html#diffintk"><i class="fa fa-check"></i><b>14.1</b> Differential and integrated rate laws</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="Kinetics.html"><a href="Kinetics.html#zeroth-order-reaction"><i class="fa fa-check"></i><b>14.1.1</b> Zeroth-order reaction</a></li>
+<li class="chapter" data-level="14.1.2" data-path="Kinetics.html"><a href="Kinetics.html#first-order-reaction"><i class="fa fa-check"></i><b>14.1.2</b> First-order reaction</a></li>
+<li class="chapter" data-level="14.1.3" data-path="Kinetics.html"><a href="Kinetics.html#second-order-reaction"><i class="fa fa-check"></i><b>14.1.3</b> Second-order reaction</a></li>
+<li class="chapter" data-level="14.1.4" data-path="Kinetics.html"><a href="Kinetics.html#third-and-higher-orders-reaction"><i class="fa fa-check"></i><b>14.1.4</b> Third and higher orders reaction</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="Kinetics.html"><a href="Kinetics.html#complex-rate-laws"><i class="fa fa-check"></i><b>14.2</b> Complex Rate Laws</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Kinetics.html"><a href="Kinetics.html#consecutive-reactions"><i class="fa fa-check"></i><b>14.2.1</b> Consecutive reactions</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Kinetics.html"><a href="Kinetics.html#competitive-reactions"><i class="fa fa-check"></i><b>14.2.2</b> Competitive reactions</a></li>
+<li class="chapter" data-level="14.2.3" data-path="Kinetics.html"><a href="Kinetics.html#opposed-reactions"><i class="fa fa-check"></i><b>14.2.3</b> Opposed reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="Kinetics.html"><a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders"><i class="fa fa-check"></i><b>14.3</b> Experimental Methods for Determination of Reaction Orders</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="Kinetics.html"><a href="Kinetics.html#initial-rates-method"><i class="fa fa-check"></i><b>14.3.1</b> Initial rates method</a></li>
+<li class="chapter" data-level="14.3.2" data-path="Kinetics.html"><a href="Kinetics.html#isolation-method"><i class="fa fa-check"></i><b>14.3.2</b> Isolation method</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Kinetics.html"><a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients"><i class="fa fa-check"></i><b>14.4</b> Temperature Dependence of the Rate Coefficients</a></li>
+<li class="chapter" data-level="14.5" data-path="Kinetics.html"><a href="Kinetics.html#rev15"><i class="fa fa-check"></i><b>14.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="Kinetics.html"><a href="Kinetics.html#exer15"><i class="fa fa-check"></i><b>14.5.1</b> Practice Problems</a></li>
+<li class="chapter" data-level="14.5.2" data-path="Kinetics.html"><a href="Kinetics.html#quest15"><i class="fa fa-check"></i><b>14.5.2</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>15</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-inorganic-substances-at-298-k"><i class="fa fa-check"></i><b>15.1</b> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+<li class="chapter" data-level="15.2" data-path="appendix.html"><a href="appendix.html#thermodynamic-data-of-organic-substances-at-298-k"><i class="fa fa-check"></i><b>15.2</b> Thermodynamic Data of Organic Substances at 298 K</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Kinetics" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">14</span> Chemical Kinetics<a href="Kinetics.html#Kinetics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>From thermodynamics, we can determine the spontaneity of a reaction and its extent, using <span class="math inline">\(\Delta G\)</span> and <span class="math inline">\(K_{\text{eq}}\)</span>, respectively. However, thermodynamics does not provide any information on how <em>fast</em> the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.</p>
+<p>A chemical kinetics study aims to find the <em>rate</em> of a reaction and to find the microscopic steps that compose it, determining its <em>mechanism</em>.</p>
+<div id="diffintk" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> Differential and integrated rate laws<a href="Kinetics.html#diffintk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, <span class="math inline">\(k\)</span>, called the <em>rate coefficient</em>, and several parameters found at the exponent of the concentrations of the reactants, and are called <em>reaction orders</em>. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The reaction rate is usually represented with the lowercase letter <span class="math inline">\(k\)</span>, and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter <span class="math inline">\(K\)</span>. Another useful concept in kinetics is the half-life, usually abbreviated with <span class="math inline">\(t_{1/2}\)</span>. The half-life is defined as the time required to reach half of the initial reactant concentration.</p>
+<p>A reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant’s individual orders and is, at most, equal to three. We examine in detail the four most common reaction orders below.</p>
+<div id="zeroth-order-reaction" class="section level3 hasAnchor" number="14.1.1">
+<h3><span class="header-section-number">14.1.1</span> Zeroth-order reaction<a href="Kinetics.html#zeroth-order-reaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a zeroth-order reaction, the reaction rate is independent of the concentration of a reactant. In other words, if we have a reaction of the type:</p>
+<p><span class="math display">\[\begin{equation}
+\text{A}\longrightarrow\text{products}
+\end{equation}\]</span></p>
+<p>the differential rate law can be written:</p>
+<p><span class="math display" id="eq:kin2">\[\begin{equation}
+- \frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0,
+\tag{14.1}
+\end{equation}\]</span></p>
+<p>which shows that any change in the concentration of <span class="math inline">\(\mathrm{A}\)</span> will have no effect on the speed of the reaction. The minus sign at the right-hand-side is required because the rate is always defined as a positive quantity, while the derivative is negative because the concentration of the reactant is diminishing with time.
+Separating the variables <span class="math inline">\([\mathrm{A}]\)</span> and <span class="math inline">\(t\)</span> of eq. <a href="Kinetics.html#eq:kin2">(14.1)</a> and integrating both sides, we obtain the integrated rate law for a zeroth-order reaction as:</p>
+<p><span class="math display" id="eq:kin3">\[\begin{equation}
+\begin{aligned}
+\int_{[\mathrm{A}]_0}^{[A]} d[\mathrm{A}] &amp;= -k_0 \int_{t=0}^{t} dt \\
+[\mathrm{A}]-[\mathrm{A}]_0 &amp;= -k_0 t \\ \\
+[\mathrm{A}]&amp;=[\mathrm{A}]_0 -k_0 t.
+\end{aligned}
+\tag{14.2}
+\end{equation}\]</span></p>
+<p>Using the integrated rate law, we notice that the concentration on the reactant diminishes linearly with respect to time. A plot of <span class="math inline">\([\mathrm{A}]\)</span> as a function of <span class="math inline">\(t\)</span>, therefore, will result in a straight line with an angular coefficient equal to <span class="math inline">\(-k_0\)</span>, as in the plot of Figure <a href="Kinetics.html#fig:figk1">14.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk1"></span>
+<img src="pchem1_files/figure-html/figk1-1.png" alt="Reaction Rate Plot for a Zeroth-Order Reaction." width="672" />
+<p class="caption">
+Figure 14.1: Reaction Rate Plot for a Zeroth-Order Reaction.
+</p>
+</div>
+<p>Eq. <a href="Kinetics.html#eq:kin3">(14.2)</a> also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically <span class="math inline">\(\frac{\mathrm{M}}{\mathrm{s}}\)</span>, with <span class="math inline">\(\mathrm{M}\)</span> being the molar concentration in <span class="math inline">\(\frac{\mathrm{mol}}{\mathrm{L}}\)</span> and <span class="math inline">\(s\)</span> the time in seconds.
+The half-life of a zero order reaction can be calculated from eq. <a href="Kinetics.html#eq:kin3">(14.2)</a>, by replacing <span class="math inline">\([\mathrm{A}]\)</span> with <span class="math inline">\(\frac{1}{2}[\mathrm{A}]_0\)</span>:</p>
+<p><span class="math display" id="eq:kin4">\[\begin{equation}
+\begin{aligned}
+\frac{1}{2}[\mathrm{A}]_0 &amp;=[\mathrm{A}]_0 -k_0 t_{1/2} \\
+t_{1/2} &amp;= \frac{[\mathrm{A}]_0}{2k_0}.
+\end{aligned}
+\tag{14.3}
+\end{equation}\]</span></p>
+<p>Zeroth-order reactions are common in several biochemical processes catalyzed by enzymes, such as the oxidation of ethanol to acetaldehyde in the liver by the alcohol dehydrogenase enzyme, which is zero-order in ethanol.</p>
+</div>
+<div id="first-order-reaction" class="section level3 hasAnchor" number="14.1.2">
+<h3><span class="header-section-number">14.1.2</span> First-order reaction<a href="Kinetics.html#first-order-reaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A first-order reaction depends on the concentration of only one reactant, and is therefore also called a <em>unimolecular reaction</em>. As for the previous case, if we consider a reaction of the type:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{A}\rightarrow \text{products}
+\end{equation}\]</span></p>
+<p>the differential rate law for a first-order reaction is:</p>
+<p><span class="math display" id="eq:kin6">\[\begin{equation}
+- \frac{d[\mathrm{A}]}{dt}=k_1 [\mathrm{A}].
+\tag{14.4}
+\end{equation}\]</span></p>
+<p>Following the usual blueprint of separating the variables, and integrating both sides, we obtain the integrated rate law as:</p>
+<p><span class="math display" id="eq:kin7">\[\begin{equation}
+\begin{aligned}
+\int_{[\mathrm{A}]_0}^{[A]} \frac{d[\mathrm{A}]}{[\mathrm{A}]} &amp;= -k_1 \int_{t=0}^{t} dt \\
+\ln \frac{[\mathrm{A}]}{[\mathrm{A}]_0}&amp;=-k_1 t\\ \\
+[\mathrm{A}] &amp;= [\mathrm{A}]_0 \exp(-k_1 t).
+\end{aligned}
+\tag{14.5}
+\end{equation}\]</span></p>
+<p>Using the integrated rate law to plot the concentration of the reactant, <span class="math inline">\([\mathrm{A}]\)</span>, as a function of time, <span class="math inline">\(t\)</span>, we obtain an exponential decay, as in Figure <a href="Kinetics.html#fig:figk2">14.2</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk2"></span>
+<img src="pchem1_files/figure-html/figk2-1.png" alt="Reaction Rate Plot for a First-Order Reaction." width="672" />
+<p class="caption">
+Figure 14.2: Reaction Rate Plot for a First-Order Reaction.
+</p>
+</div>
+<p>However, if we plot the logarithm of the concentration, <span class="math inline">\(\ln[\mathrm{A}]\)</span>, as a function of time, we obtain a line with angular coefficient <span class="math inline">\(-k_1\)</span>, as in the plot of Figure <a href="Kinetics.html#fig:figk3">14.3</a>. From eq. <a href="Kinetics.html#eq:kin7">(14.5)</a>, we can also obtain the units for the rate coefficient for a first-order reaction, which typically is <span class="math inline">\(\frac{1}{\mathrm{s}}\)</span>, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk3"></span>
+<img src="pchem1_files/figure-html/figk3-1.png" alt="Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axes is ln[A]." width="672" />
+<p class="caption">
+Figure 14.3: Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axes is ln[A].
+</p>
+</div>
+<p>The half-life of a first-order reaction is:</p>
+<p><span class="math display" id="eq:kin8">\[\begin{equation}
+\begin{aligned}
+\ln \frac{\frac{1}{2}[\mathrm{A}]_0}{[\mathrm{A}]_0}&amp;=-k_1 t_{1/2}\\
+t_{1/2} &amp;= \frac{\ln 2}{k_1}.
+\end{aligned}
+\tag{14.6}
+\end{equation}\]</span></p>
+<p>The half-life of a first-order reaction is independent of the initial concentration of the reactant. Therefore, the half-life can be used in place of the rate coefficient to describe the reaction rate. Typical examples of first-order reactions are radioactive decays. For radioactive isotopes, it is common to report their rate of decay in terms of their half-life. For example, the most stable uranium nucleotide, <span class="math inline">\(^{238}\mathrm{U}\)</span>, has a half-life of <span class="math inline">\(4.468\times 10^9\)</span> years, while the most common fissile isotope of uranium, <span class="math inline">\(^{235}\mathrm{U}\)</span>, has a half-life of <span class="math inline">\(7.038\times 10^8\)</span> years.<a href="#fn68" class="footnote-ref" id="fnref68"><sup>68</sup></a> Other examples of first-order reactions in chemistry are the class of S<sub>N</sub>1 nucleophilic substitution reactions in organic chemistry.</p>
+</div>
+<div id="second-order-reaction" class="section level3 hasAnchor" number="14.1.3">
+<h3><span class="header-section-number">14.1.3</span> Second-order reaction<a href="Kinetics.html#second-order-reaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A reaction is second-order when the sum of the reaction orders is two. Elementary second-order reactions are also called <em>bimolecular reactions</em>. There are two possibilities, a simple one, where the reaction order of one reagent is two, or a more complicated one, with two reagents having each a reaction order of one.</p>
+<ul>
+<li>For the simple case, we can write the reaction as:
+<span class="math display">\[\begin{equation}
+2\mathrm{A}\rightarrow \text{products}
+\end{equation}\]</span>
+the differential rate law for a first-order reaction is:
+<span class="math display" id="eq:kin10">\[\begin{equation}
+-\frac{d[\mathrm{A}]}{dt}=k_2 [\mathrm{A}]^2.
+\tag{14.7}
+\end{equation}\]</span>
+Following the same procedure used for the two previous cases, we can obtain the integrated rate law as:
+<span class="math display" id="eq:kin11">\[\begin{equation}
+\begin{aligned}
+\int_{[\mathrm{A}]_0}^{[A]} \frac{d[\mathrm{A}]}{[\mathrm{A}]^2} &amp;= -k_2 \int_{t=0}^{t} dt \\
+\frac{1}{[\mathrm{A}]}-\frac{1}{[\mathrm{A}]_0} &amp;= k_2 t\\ \\
+\frac{1}{[\mathrm{A}]}&amp;=\frac{1}{[\mathrm{A}]_0} + k_2 t.
+\end{aligned}
+\tag{14.8}
+\end{equation}\]</span>
+As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, <span class="math inline">\(\frac{1}{[\mathrm{A}]}\)</span>, as a function of time, <span class="math inline">\(t\)</span>, we obtain a line with angular coefficient <span class="math inline">\(+k_2\)</span>, as in the plot of Figure <a href="Kinetics.html#fig:figk4">14.4</a>.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk4"></span>
+<img src="pchem1_files/figure-html/figk4-1.png" alt="Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axes is 1/[A]." width="672" />
+<p class="caption">
+Figure 14.4: Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axes is 1/[A].
+</p>
+</div>
+<p>Notice that the line has a <em>positive</em> angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of <span class="math inline">\(k\)</span> for a simple second order reaction are calculated from eq. <a href="Kinetics.html#eq:kin11">(14.8)</a> and typically are <span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span>.
+The half-life of a simple second-order reaction is:
+<span class="math display" id="eq:kin12">\[\begin{equation}
+\begin{aligned}
+\frac{1}{\frac{1}{2}[\mathrm{A}]_0}-\frac{1}{[\mathrm{A}]_0} &amp;= k_2 t_{1/2} \\
+t_{1/2} &amp;= \frac{1}{k_2 [\mathrm{A}]_0},
+\end{aligned}
+\tag{14.9}
+\end{equation}\]</span>
+which, perhaps not surprisingly, depends on the initial concentration of the reactant, <span class="math inline">\([\mathrm{A}]_0\)</span>. Therefore, if we start with a higher concentration of the reactant, the half-life will be shorter, and the reaction will be faster. An example of simple second-order behavior is the reaction <span class="math inline">\(\mathrm{NO}_2 + \mathrm{CO} \rightarrow \mathrm{NO} + \mathrm{CO}_2\)</span>, which is second-order in <span class="math inline">\(\mathrm{NO}_2\)</span> and zeroth-order in <span class="math inline">\(\mathrm{CO}\)</span>.</p>
+<ul>
+<li>For the complex second-order case, the reaction is:
+<span class="math display">\[\begin{equation}
+\mathrm{A}+\mathrm{B}\rightarrow \text{products}
+\end{equation}\]</span>
+and the differential rate law is:
+<span class="math display" id="eq:kin14">\[\begin{equation}
+-\frac{d[\mathrm{A}]}{dt}=k&#39;_2 [\mathrm{A}][\mathrm{B}].
+\tag{14.10}
+\end{equation}\]</span>
+The differential equation in eq. <a href="Kinetics.html#eq:kin14">(14.10)</a> has two variables, and cannot be solved exactly unless an additional relationship is specified. If we assume that the initial concentration of the two reactants are equal, then <span class="math inline">\([\mathrm{A}]=[\mathrm{B}]\)</span> at any time <span class="math inline">\(t\)</span>, and eq. <a href="Kinetics.html#eq:kin14">(14.10)</a> reduces to eq. <a href="Kinetics.html#eq:kin10">(14.7)</a>. If the concentration of the reactants are different, then the integrated rate law will assume the following shape:
+<span class="math display" id="eq:kin15">\[\begin{equation}
+\frac{\mathrm{[A]}}{\mathrm{[B]}} = \frac{\mathrm{[A]_0}}{\mathrm{[B]_0}} \exp \left\{ \left(\mathrm{[A]_0} - \mathrm{[B]_0}\right) k&#39;_2t \right\}.
+\tag{14.11}
+\end{equation}\]</span>
+The units of <span class="math inline">\(k\)</span> for a complex second order reaction can be calculated from eq. <a href="Kinetics.html#eq:kin15">(14.11)</a>, and are the same as those for the simple case, <span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span>.
+The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.</li>
+</ul>
+</div>
+<div id="third-and-higher-orders-reaction" class="section level3 hasAnchor" number="14.1.4">
+<h3><span class="header-section-number">14.1.4</span> Third and higher orders reaction<a href="Kinetics.html#third-and-higher-orders-reaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called <em>termolecular reactions</em>. While termolecular reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:</p>
+<p><span class="math display">\[\begin{equation}
+2\text{NO}_{(g)}+\text{O}_{2(g)}\longrightarrow 2\text{NO}_{2(g)}
+\end{equation}\]</span></p>
+<p>for which the differential rate law can be written as:</p>
+<p><span class="math display" id="eq:kin17">\[\begin{equation}
+-\frac{dP_{\mathrm{O}_2}}{dt}=k_3 P_{\mathrm{NO}}^2 P_{\mathrm{O}_2}.
+\tag{14.12}
+\end{equation}\]</span></p>
+</div>
+</div>
+<div id="complex-rate-laws" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Complex Rate Laws<a href="Kinetics.html#complex-rate-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants.</p>
+<div id="consecutive-reactions" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> Consecutive reactions<a href="Kinetics.html#consecutive-reactions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A reaction that happens following a sequence of two elementary steps can be written as follows:</p>
+<p><span class="math display">\[\begin{equation}
+\text{A}\xrightarrow{\;k_1\;}\text{B}\xrightarrow{\;k_2\;}\text{C}
+\end{equation}\]</span></p>
+<p>Assuming that each of the steps follows a first order kinetic law, and that only the reagent <span class="math inline">\(\mathrm{A}\)</span> is present at the beginning of the reaction, we can write the differential change in concentration of each species with respect to infinitesimal time <span class="math inline">\(dt\)</span>, using the following formulas:</p>
+<p><span class="math display" id="eq:kincomp2">\[\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]}{dt}&amp;=k_1 [\mathrm{A}] \Rightarrow [\mathrm{A}] = [\mathrm{A}]_0 \exp(-k_1 t) \\
+\frac{d[\mathrm{B}]}{dt} &amp;=k_1 [\mathrm{A}]-k_2 [\mathrm{B}] \\
+\frac{d[\mathrm{C}]}{dt} &amp;=k_2 [\mathrm{B}].
+\end{aligned}
+\tag{14.13}
+\end{equation}\]</span></p>
+<p>These three equations represent a system of differential equations with three unknown variables. Unfortunately, these equations are linearly dependent on each other, and they are not sufficient to solve the system for each variable. To do so, we need to include a fourth equation, coming from the conservation of mass:</p>
+<p><span class="math display" id="eq:kincomp3">\[\begin{equation}
+[\mathrm{A}]_0=[\mathrm{A}]+[\mathrm{B}]+[\mathrm{C}].
+\tag{14.14}
+\end{equation}\]</span></p>
+<p>Using the first equation in eq. <a href="Kinetics.html#eq:kincomp2">(14.13)</a>, we can now replace the concentration <span class="math inline">\([\mathrm{A}]\)</span> in the second equation and solve for <span class="math inline">\([\mathrm{B}]\)</span>:</p>
+<p><span class="math display" id="eq:kincomp4">\[\begin{equation}
+\frac{d[\mathrm{B}]}{dt}+k_2 [\mathrm{B}]=k_1 [\mathrm{A}]_0 \exp(-k_1 t),
+\tag{14.15}
+\end{equation}\]</span></p>
+<p>which can be simplified by multiplying both sides by <span class="math inline">\(\exp (k_2t)\)</span>:</p>
+<p><span class="math display" id="eq:kincomp5">\[\begin{equation}
+\begin{aligned}
+\left( \frac{d[\mathrm{B}]}{dt}+k_2 [\mathrm{B}] \right) \exp (k_2t) &amp;= k_1 [\mathrm{A}]_0 \exp[(k_2-k_1) t] \\
+\Rightarrow \frac{d\left\{[\mathrm{B}]\exp (k_2t)\right\}}{dt} &amp;= k_1 [\mathrm{A}]_0 \exp[(k_2-k_1) t],
+\end{aligned}
+\tag{14.16}
+\end{equation}\]</span></p>
+<p>which can then be integrated remembering that <span class="math inline">\([B]_0=0\)</span>, and <span class="math inline">\(\int \exp(kx)=\frac{1}{k}\exp(kx)\)</span>:</p>
+<p><span class="math display" id="eq:kincomp6">\[\begin{equation}
+[\mathrm{B}] = \frac{k_1}{k_2-k_1} [\mathrm{A}]_0 [\exp(-k_1t)-\exp(-k_2t)].
+\tag{14.17}
+\end{equation}\]</span></p>
+<p>We can then use both <span class="math inline">\([\mathrm{A}]\)</span>, from eq. <a href="Kinetics.html#eq:kincomp2">(14.13)</a>, and <span class="math inline">\([\mathrm{B}]\)</span>, from eq. <a href="Kinetics.html#eq:kincomp6">(14.17)</a>, in eq. <a href="Kinetics.html#eq:kincomp3">(14.14)</a> to solve for <span class="math inline">\([\mathrm{C}]\)</span>:</p>
+<p><span class="math display" id="eq:kincomp7">\[\begin{equation}
+\begin{aligned}
+\left[\mathrm{C}\right] &amp;= [\mathrm{A}]_0-[\mathrm{A}]-[\mathrm{B}] \\
+&amp;= [\mathrm{A}]_0-[\mathrm{A}]_0 \exp(-k_1 t)-\frac{k_1}{k_2-k_1} [\mathrm{A}]_0 [\exp(-k_1t)-\exp(-k_2t)] \\
+&amp;= [\mathrm{A}]_0\left\{1+\frac{-k_2 \exp(-k_1t)+ k_1 \exp(-k_2t)}{k_2-k_1} \right\}.
+\end{aligned}
+\tag{14.18}
+\end{equation}\]</span></p>
+<p>From these results, we can distinguish two extreme behaviors. The first one is observed when <span class="math inline">\(k_1 \cong k_2\)</span>, and it produces a plot of the concentration of species with respect to time reported in Figure <a href="Kinetics.html#fig:figk5">14.5</a>. This behavior is observed when a process undergoing a series of consecutive reactions present a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equate the rate of the slowest step.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk5"></span>
+<img src="pchem1_files/figure-html/figk5-1.png" alt="Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step." width="672" />
+<p class="caption">
+Figure 14.5: Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step.
+</p>
+</div>
+<p>The second behavior is observed when <span class="math inline">\(k_1\ll k_2\)</span>, and it produces the plot in Figure <a href="Kinetics.html#fig:figk6">14.6</a> In this case, the concentration of the intermediate species <span class="math inline">\(B\)</span> is not relevant throughout the process, and the rate-determining step is the first reaction. As such, the process has the same rate law as an elementary reaction going directly from <span class="math inline">\(A\)</span> to <span class="math inline">\(C\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk6"></span>
+<img src="pchem1_files/figure-html/figk6-1.png" alt="Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step." width="672" />
+<p class="caption">
+Figure 14.6: Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step.
+</p>
+</div>
+<p>Since the concentration of <span class="math inline">\(B\)</span> is small and relatively constant throughout the process, <span class="math inline">\(\frac{d[\mathrm{B}]}{dT}=0\)</span>. We can then simplify the mathematical treatment of these reactions by eliminating it from the process altogether. This simplification is known as the <em>steady-state approximation</em>. It is used in chemical kinetics to study processes that undergo a series of reactions producing intermediate species whose concentrations are constants throughout the entire process.</p>
+<p><span class="math display" id="eq:kincomp8">\[\begin{equation}
+\begin{aligned}
+\text{A} &amp;\xrightarrow{\;k_1\;} \text{I}_1 \xrightarrow{\;k_2\;} \text{I}_2 \xrightarrow{\quad} \cdots \xrightarrow{\;k_n\;}\text{products} \\
+&amp; \text{Steady State Approximation:} \\
+\text{A}&amp;\xrightarrow{\qquad\qquad\qquad\qquad\quad\quad\;\;}\text{products}
+\end{aligned}
+\tag{14.19}
+\end{equation}\]</span></p>
+</div>
+<div id="competitive-reactions" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Competitive reactions<a href="Kinetics.html#competitive-reactions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A process where two elementary reactions happen in parallel, competing with each can be written as follows:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{matrix}
+&amp;_{k_1}  &amp; B\\
+&amp;\nearrow &amp; \\
+A &amp;   &amp; \\
+&amp;\searrow&amp; \\
+  &amp;_{k_2}  &amp; C
+\end{matrix}
+\end{equation}\]</span></p>
+<p>Assuming that each step follows first order kinetic, we can write:</p>
+<p><span class="math display" id="eq:kincomp4b">\[\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]}{dt} &amp;=k_1 [\mathrm{A}]+k_2 [\mathrm{A}] \Rightarrow [\mathrm{A}]=[\mathrm{A}]_0\exp \left[ -(k_1+k_2)t \right] \\
+\frac{d[\mathrm{B}]}{dt} &amp;=k_1 [\mathrm{A}] \Rightarrow [\mathrm{B}]=\frac{k_1}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\} \\
+\frac{d[\mathrm{C}]}{dt} &amp;=k_2 [\mathrm{A}]\Rightarrow [\mathrm{C}]=\frac{k_2}{k_1+k_2}[\mathrm{A}]_0 \left\{ 1-\exp \left[ -(k_1+k_2)t \right] \right\}.
+\end{aligned}
+\tag{14.20}
+\end{equation}\]</span></p>
+<p>The concentration of each of the species can then be plotted against time, obtaining the diagram reported in Figure <a href="Kinetics.html#fig:figk7">14.7</a>. The final concentrations of the products, <span class="math inline">\([\mathrm{B}]_f\)</span> and <span class="math inline">\([\mathrm{C}]_f\)</span>, will depend on the values of the two rate coefficients. For example, if <span class="math inline">\(k_1&gt;k_2\)</span>, <span class="math inline">\([\mathrm{B}]_f&gt;[\mathrm{C}]_f\)</span>, as in Figure <a href="Kinetics.html#fig:figk7">14.7</a>, but if <span class="math inline">\(k_1&lt;k_2\)</span>, <span class="math inline">\([\mathrm{B}]_f&lt;[\mathrm{C}]_f\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk7"></span>
+<img src="pchem1_files/figure-html/figk7-1.png" alt="Concentration Plot for a Process with Two Competitive Reactions." width="672" />
+<p class="caption">
+Figure 14.7: Concentration Plot for a Process with Two Competitive Reactions.
+</p>
+</div>
+<p>An important relationship that can be derived from eq. <a href="Kinetics.html#eq:kincomp2">(14.13)</a> is that:</p>
+<p><span class="math display" id="eq:kincomp5b">\[\begin{equation}
+\frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
+\tag{14.21}
+\end{equation}\]</span></p>
+</div>
+<div id="opposed-reactions" class="section level3 hasAnchor" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> Opposed reactions<a href="Kinetics.html#opposed-reactions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Another case of complex kinetic law happens when a pair of forward and reverse reactions occur simultaneously:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{A}\ce{&lt;=&gt;[k_1][k_{-1}]}\mathrm{B}
+\end{equation}\]</span></p>
+<p>where the rate coefficients for the forward and backwards reaction, <span class="math inline">\(k_1\)</span> and <span class="math inline">\(k_{-1}\)</span> respectively, are not necessarily equal to each other, but comparable in magnitude. We can write the rate laws for each of these elementary steps as:</p>
+<p><span class="math display" id="eq:kinopp1">\[\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]}{dt} &amp;=k_1 [\mathrm{A}]-k_{-1} [\mathrm{B}] = k_1 [\mathrm{A}]-k_{-1}\left([\mathrm{A}]_0-[\mathrm{A}]\right) \\
+\frac{d[\mathrm{A}]}{dt} &amp;=-(k_1+k_{-1})[\mathrm{A}] + k_{-1}[\mathrm{A}]_0,
+\end{aligned}
+\tag{14.22}
+\end{equation}\]</span></p>
+<p>which can then be integrated to:</p>
+<p><span class="math display" id="eq:kinopp2">\[\begin{equation}
+\begin{aligned}
+\left[\mathrm{A}\right] &amp;=[\mathrm{A}]_0\frac{k_{-1}+k_1\exp[-(k_1+k_{-1})t]}{k_1+k_{-1}} \\
+\left[\mathrm{B}\right] &amp;=[\mathrm{A}]_0\left\{ 1-\frac{k_{-1}+k_1\exp[-(k_1+k_{-1})t]}{k_1+k_{-1}}\right\}.
+\end{aligned}
+\tag{14.23}
+\end{equation}\]</span></p>
+<p>These formulas can then be used to obtain the plots in Figure <a href="Kinetics.html#fig:figkK">14.8</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figkK"></span>
+<img src="pchem1_files/figure-html/figkK-1.png" alt="Concentration Plot for a Process with Two Opposed Reactions." width="672" />
+<p class="caption">
+Figure 14.8: Concentration Plot for a Process with Two Opposed Reactions.
+</p>
+</div>
+<p>As can be seen from the plots in Figure <a href="Kinetics.html#fig:figkK">14.8</a>, after a sufficiently long time, the systems reach a dynamic equilibrium, where the concentration of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> don’t change. These equilibrium concentrations can be calculated replacing <span class="math inline">\(t=\infty\)</span> in eq. <a href="Kinetics.html#eq:kinopp1">(14.22)</a>:</p>
+<p><span class="math display" id="eq:kinopp3">\[\begin{equation}
+\begin{aligned}
+\left[\mathrm{A} \right] _{\mathrm{eq}} &amp;= [\mathrm{A}]_0 \frac{k_{-1}}{k_1+k_{-1}} \\
+[\mathrm{B}]_{\mathrm{eq}} &amp;= [\mathrm{A}]_0 \frac{k_{1}}{k_1+k_{-1}}.
+\end{aligned}
+\tag{14.24}
+\end{equation}\]</span></p>
+<p>Considering that the concentrations of the species don’t change at equilibrium:</p>
+<p><span class="math display" id="eq:kinopp4">\[\begin{equation}
+\begin{aligned}
+-\frac{d[\mathrm{A}]_{\mathrm{eq}}}{dt} &amp;= \frac{d[\mathrm{B}]_{\mathrm{eq}}}{dt} = 0\\
+&amp; \Rightarrow \; k_1[\mathrm{A}]_{\mathrm{eq}} = k_{-1}[\mathrm{B}]_{\mathrm{eq}} \\
+&amp; \Rightarrow \;  \frac{k_1}{k_{-1}} =  \frac{[\mathrm{B}]_{\mathrm{eq}}}{[\mathrm{A}]_{\mathrm{eq}}} = K_C, \\
+\end{aligned}
+\tag{14.25}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(K_C\)</span> is the equilibrium constant as defined in chapter <a href="ChemicalEquilibrium.html#ChemicalEquilibrium">10</a>. This is a rare link between kinetics and thermodynamics and appears only for opposed reactions after sufficient time has passed so that the system can reach the dynamic equilibrium.</p>
+</div>
+</div>
+<div id="experimental-methods-for-determination-of-reaction-orders" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Experimental Methods for Determination of Reaction Orders<a href="Kinetics.html#experimental-methods-for-determination-of-reaction-orders" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To experimentally measure the reaction rate, we need a method to measure concentration changes with respect to time. The simplest way to determine the reaction rate is to monitor the entire reaction as it proceeds and then plot the resulting data differently until a linear plot is found. A summary of the results obtained in section <a href="Kinetics.html#diffintk">14.1</a> and that is useful for this task is reported in the following table:</p>
+<table>
+<colgroup>
+<col width="8%" />
+<col width="17%" />
+<col width="14%" />
+<col width="18%" />
+<col width="40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><em>Zeroth-Order</em></th>
+<th align="center"><em>First-Order</em></th>
+<th align="center"><em>Simple Second-Order</em></th>
+<th align="center"><em>Complex Second-Order</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Differential Rate Law</strong></td>
+<td align="center"><span class="math inline">\(-\frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0\)</span></td>
+<td align="center"><span class="math inline">\(-\frac{d[\mathrm{A}]}{dt}=k_1 [\mathrm{A}]\)</span></td>
+<td align="center"><span class="math inline">\(-\frac{d[\mathrm{A}]}{dt}=k_2 [\mathrm{A}]^2\)</span></td>
+<td align="center"><span class="math inline">\(-\frac{d[\mathrm{A}]}{dt}=k&#39;_2 [\mathrm{A}][\mathrm{B}]\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Integrated Rate Law</strong></td>
+<td align="center"><span class="math inline">\([\mathrm{A}]=[\mathrm{A}]_0 -k_0 t\)</span></td>
+<td align="center"><span class="math inline">\([\mathrm{A}]=[\mathrm{A}]_0 e^{-k_1 t}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{[\mathrm{A}]}=\frac{1}{[\mathrm{A}]_0} + k_2 t\)</span></td>
+<td align="center"><span class="math inline">\(\frac{\mathrm{[A]}}{\mathrm{[B]}}=\frac{\mathrm{[A]_0}}{\mathrm{[B]_0}}e^{\left(\mathrm{[A]_0}-\mathrm{[B]_0}\right)k&#39;_2t}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Units of <span class="math inline">\(k\)</span></strong></td>
+<td align="center"><span class="math inline">\(\frac{\mathrm{M}}{\mathrm{s}}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{\mathrm{s}}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{\mathrm{M}\cdot \mathrm{s}}\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Linear Plot vs. <span class="math inline">\(t\)</span></strong></td>
+<td align="center"><span class="math inline">\([\mathrm{A}]\)</span></td>
+<td align="center"><span class="math inline">\(\ln [\mathrm{A}]\)</span></td>
+<td align="center"><span class="math inline">\(\frac{1}{[\mathrm{A}]}\)</span></td>
+<td align="center"><span class="math inline">\(\ln \frac{[\mathrm{A}]_0[\mathrm{B}]}{[\mathrm{B}]_0[\mathrm{A}]}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Half-life</strong></td>
+<td align="center"><span class="math inline">\(t_{1/2}=\frac{[\mathrm{A}]_0}{2k_0}\)</span></td>
+<td align="center"><span class="math inline">\(t_{1/2}=\frac{\ln 2}{k_1}\)</span></td>
+<td align="center"><span class="math inline">\(t_{1/2}=\frac{1}{k_2 [\mathrm{A}]_0}\)</span></td>
+<td align="center">not easily defined</td>
+</tr>
+</tbody>
+</table>
+<p>However, this method works only if the reaction has few reactants, and it requires several measurements, each of which might be complicated to make. More useful methods to determine the reaction rate are the <em>initial rate</em> and the <em>isolation</em> methods that we describe below.</p>
+<div id="initial-rates-method" class="section level3 hasAnchor" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> Initial rates method<a href="Kinetics.html#initial-rates-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <em>initial rates method</em> involves measuring the rate of a reaction as soon as it starts before any significant change in the concentrations of the reactants occurs. The initial rate method is practical only if the reaction is reasonably slow, but it can measure the rate unambiguously when more than one reactant is involved. For example, if we have a reaction with the following stoichiometry:</p>
+<p><span class="math display">\[\begin{equation}
+\alpha \mathrm{A} + \beta \mathrm{B} \xrightarrow{k} \text{products}
+\end{equation}\]</span></p>
+<p>the initial rate method can be used to determine the coefficients of the rate law:</p>
+<p><span class="math display" id="eq:kinini1">\[\begin{equation}
+\text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}
+\tag{14.26}
+\end{equation}\]</span></p>
+<p>by designing three experiment, where the initial concentrations of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span> are appropriately changed. For example, let’s consider the following experimental data from three different experiments:</p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="23%" />
+<col width="23%" />
+<col width="36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="center"><span class="math inline">\([\mathrm{A}]_0 \; (\text{M})\)</span></th>
+<th align="center"><span class="math inline">\([\mathrm{B}]_0 \; (\text{M})\)</span></th>
+<th align="center"><span class="math inline">\(\text{initial rate}\;\left(\frac{M}{s}\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\text{Experiment 1:}\)</span></td>
+<td align="center">0.10</td>
+<td align="center">0.10</td>
+<td align="center">4.32</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\text{Experiment 2:}\)</span></td>
+<td align="center">0.15</td>
+<td align="center">0.10</td>
+<td align="center">9.70</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\text{Experiment 3:}\)</span></td>
+<td align="center">0.10</td>
+<td align="center">0.20</td>
+<td align="center">4.29</td>
+</tr>
+</tbody>
+</table>
+<p>we can calculate <span class="math inline">\(\alpha\)</span> by taking the ratio of the rates measured in experiment 1 and 2:</p>
+<p><span class="math display" id="eq:kiniso1">\[\begin{equation}
+\begin{aligned}
+\frac{\text{Rate}(1)}{\text{Rate}(2)}&amp;=\frac{k(0.10\;\text{M})^\alpha(0.10\;\text{M})^\beta}{k(0.15\;\text{M})^\alpha(0.10\;\text{M})^\beta} \\
+\frac{4.32}{9.70}&amp;=\frac{(0.10\;\text{M})^\alpha}{(0.15\;\text{M})^\alpha} \\
+0.445&amp;=0.667^\alpha \;\rightarrow\; \ln0.445=\alpha \ln0.667 \\
+\alpha &amp;= \frac{-0.81}{-0.405}=2.
+\end{aligned}
+\tag{14.27}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(\beta\)</span> can be calculated similarly by taking the ratio between experiments 1 and 3. Alternatively, we can also notice that the reaction rate does not change when the initial concentration <span class="math inline">\([\mathrm{B}]_0\)</span> is doubled, therefore <span class="math inline">\(\beta=0\)</span>.</p>
+</div>
+<div id="isolation-method" class="section level3 hasAnchor" number="14.3.2">
+<h3><span class="header-section-number">14.3.2</span> Isolation method<a href="Kinetics.html#isolation-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Another method that is widely used to determine reaction orders is the <em>isolation method</em>. This method is performed by using large excess concentrations of all reactants but one. For example, if we have the following reaction with three reagents and unknown rate law:</p>
+<p><span class="math display">\[\begin{equation}
+\alpha \mathrm{A} + \beta \mathrm{B} + \gamma \mathrm{C} \xrightarrow{k} \text{products}
+\end{equation}\]</span></p>
+<p>we can perform three different experiments, in each of which we use an excessive amount of one of the two reagents, such as:</p>
+<ul>
+<li><p>Experiment 1: <span class="math inline">\([\mathrm{A}]_0=1\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},\)</span> in which the reaction order with respect to <span class="math inline">\(\mathrm{A}\)</span> is measured.</p></li>
+<li><p>Experiment 2: <span class="math inline">\([\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},\)</span> in which the reaction order with respect to <span class="math inline">\(\mathrm{B}\)</span> is measured.</p></li>
+<li><p>Experiment 3: <span class="math inline">\([\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1\;\text{M},\)</span> in which the reaction order with respect to <span class="math inline">\(\mathrm{C}\)</span> is measured.</p></li>
+</ul>
+<p>From each experiment we can determine the <em>pseudo-order</em> of the reaction with respect to the reagent that is in minority concentration. For example, for the reaction above, we can write the rate law as:</p>
+<p><span class="math display" id="eq:kiniso2">\[\begin{equation}
+\text{Rate}=k[\mathrm{A}]^{\alpha}[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}
+\tag{14.28}
+\end{equation}\]</span></p>
+<p>and we can write the initial concentrations, <span class="math inline">\([X]_0\)</span>, and the final concentrations, <span class="math inline">\([X]_f\)</span>, of each of the species in experiment 1, as:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+\left[\mathrm{A}\right]_0 =1\;\text{M}\;\longrightarrow &amp;[\mathrm{A}]_f=0\;\text{M} \qquad &amp;\text{(100\% change)} \\
+\left[\mathrm{B}\right]_0 =1000\;\text{M}\;\longrightarrow &amp;[\mathrm{B}]_f=1000-1=999\;\text{M}\cong [\mathrm{B}]_0\qquad &amp;\text{(0.1\% change)}\\
+\left[\mathrm{C}\right]_0 =1000\;\text{M}\;\longrightarrow &amp;[\mathrm{C}]_f=1000-1=999\;\text{M} \cong \left[\mathrm{C}\right]_0. \qquad &amp;\text{(0.1\% change)}
+\end{aligned}
+\end{equation}\]</span></p>
+<p>The coefficient <span class="math inline">\(\alpha\)</span> can then be determined by incorporating the concentration of the reactants in excess into the rate constant as:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+\text{rate}&amp;=k[\mathrm{A}]^{\alpha}\underbrace{[\mathrm{B}]^{\beta}[\mathrm{C}]^{\gamma}}_{\text{constant}} \\
+&amp;= k&#39;[\mathrm{A}]^{\alpha}
+\end{aligned}
+\end{equation}\]</span></p>
+<p>and then determine <span class="math inline">\(\alpha\)</span> by verifying which order the data collected for <span class="math inline">\([\mathrm{A}]\)</span> at various time fit. This can be simply achieved by using the zero-, first-, and second-order kinetic plots, as reported in the table above. We can determine <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span> by repeating the same procedure for the data from the other two experiments. For example, if we find for a specific reaction that <span class="math inline">\(\alpha=\)</span> 1, <span class="math inline">\(\beta=2\)</span>, and <span class="math inline">\(\gamma=0\)</span>, we can then say that the reaction is pseudo-order one in <span class="math inline">\(\mathrm{A}\)</span>, pseudo-order two in <span class="math inline">\(\mathrm{B}\)</span>, and pseudo-order zero in <span class="math inline">\(\mathrm{C}\)</span>, with an overall reaction order of three.</p>
+</div>
+</div>
+<div id="temperature-dependence-of-the-rate-coefficients" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> Temperature Dependence of the Rate Coefficients<a href="Kinetics.html#temperature-dependence-of-the-rate-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The dependence of the rate coefficient, <span class="math inline">\(k\)</span>, on the temperature is given by the <strong>Arrhenius equation</strong>. This formula was derived by Svante August Arrhenius (1859–1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van ’t Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of <span class="math inline">\(k\)</span> when <span class="math inline">\(T\)</span> is increased:</p>
+<p><span class="math display" id="eq:Arr1">\[\begin{equation}
+k=A\exp\left( -\frac{E_a}{RT}\right),
+\tag{14.29}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(A\)</span> is the so-called Arrhenius pre-exponential factor, and <span class="math inline">\(E_a\)</span> is the activation energy. Both of these terms are independent of temperature,<a href="#fn69" class="footnote-ref" id="fnref69"><sup>69</sup></a> and they represent experimental quantities that are unique to each individual reaction. Since there is no known exception to the fact that a temperature increase speeds up chemical reactions, both <span class="math inline">\(A\)</span> and <span class="math inline">\(E_a\)</span> are always positive. The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, <span class="math inline">\(\frac{\mathrm{J}}{\mathrm{mol}}\)</span> in SI.</p>
+<p>The Arrhenius equation is experimentally useful in its linearized form, which is obtained from two Arrhenius experiments, taken at different temperatures. Applying eq. <a href="Kinetics.html#eq:Arr1">(14.29)</a> to two different experiments, and taking the ratio between the results, we obtain:</p>
+<p><span class="math display" id="eq:Arr2">\[\begin{equation}
+\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+\tag{14.30}
+\end{equation}\]</span></p>
+<p>which gives the plot of Figure <a href="Kinetics.html#fig:figk8">14.9</a>, from which <span class="math inline">\(E_a\)</span> can be determined.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk8"></span>
+<img src="pchem1_files/figure-html/figk8-1.png" alt="Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures." width="672" />
+<p class="caption">
+Figure 14.9: Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures.
+</p>
+</div>
+<p>From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in Figure <a href="Kinetics.html#fig:figk9">14.10</a>.<a href="#fn70" class="footnote-ref" id="fnref70"><sup>70</sup></a> The reaction coordinate is defined as the minimum energy path that connects the reactants with the products.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figk9"></span>
+<img src="img/Rxn_coordinate_diagram_5.PNG" alt="Reaction Coordinate Diagram for a Typical Reaction." width="70%" />
+<p class="caption">
+Figure 14.10: Reaction Coordinate Diagram for a Typical Reaction.
+</p>
+</div>
+</div>
+<div id="rev15" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> Chapter Review<a href="Kinetics.html#rev15" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exer15" class="section level3 hasAnchor" number="14.5.1">
+<h3><span class="header-section-number">14.5.1</span> Practice Problems<a href="Kinetics.html#exer15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Problem 1: Determining Reaction Order from Initial Rates</strong></p>
+<p>Determine the reaction order with respect to each reagents and the rate law for the reaction:</p>
+<p><span class="math display">\[2A + B \rightarrow C\]</span></p>
+<p>Given the following initial rate tables:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Experiment</th>
+<th align="center">[A] (M)</th>
+<th align="center">[B] (M)</th>
+<th align="center">Initial Rate (M/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center"><span class="math inline">\(0.1\)</span></td>
+<td align="center"><span class="math inline">\(0.1\)</span></td>
+<td align="center"><span class="math inline">\(2.0 \times 10^{-3}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center"><span class="math inline">\(0.2\)</span></td>
+<td align="center"><span class="math inline">\(0.1\)</span></td>
+<td align="center"><span class="math inline">\(8.0 \times 10^{-3}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(0.1\)</span></td>
+<td align="center"><span class="math inline">\(0.2\)</span></td>
+<td align="center"><span class="math inline">\(4.0 \times 10^{-3}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solution:</strong> To determine the reaction orders, compare rates between experiments:</p>
+<p>For <span class="math inline">\(A\)</span> (comparing experiments 1 and 2):
+<span class="math display">\[\frac{\text{Rate}_2}{\text{Rate}_1} = \frac{8.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 4 = \left(\frac{0.2}{0.1}\right)^x\]</span>
+<span class="math display">\[4 = 2^x\]</span>
+<span class="math display">\[x = 2,\]</span>
+so the reaction is second order in <span class="math inline">\(A\)</span>.</p>
+<p>For <span class="math inline">\(B\)</span> (comparing experiments 1 and 3):
+<span class="math display">\[\frac{\text{Rate}_3}{\text{Rate}_1} = \frac{4.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 2 = \left(\frac{0.2}{0.1}\right)^y\]</span>
+<span class="math display">\[2 = 2^y\]</span>
+<span class="math display">\[y = 1,\]</span>
+so the reaction is first order in <span class="math inline">\(B\)</span>.</p>
+<p><strong>Answer:</strong> The rate law is: Rate = <span class="math inline">\(k[A]^2[B]\)</span>. The reaction is second order in <span class="math inline">\(A\)</span>, first order in <span class="math inline">\(B\)</span>, with an overall order of 3.</p>
+<hr />
+<p><strong>Problem 2: Calculating Half-Life for a First-Order Reaction</strong></p>
+<p>Calculate the half-life of a first-order reaction with rate constant <span class="math inline">\(k = 0.0231\,\text{s}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For a first-order reaction, the half-life is given by eq. <a href="Kinetics.html#eq:kin8">(14.6)</a> as:</p>
+<p><span class="math display">\[t_{1/2} = \frac{\ln 2}{k}\]</span></p>
+<p>Substituting the given rate constant:</p>
+<p><span class="math display">\[t_{1/2} = \frac{\ln 2}{0.0231\,\text{s}^{-1}} = 30.0\,\text{s}\]</span></p>
+<p><strong>Answer:</strong> The half-life of the reaction is <span class="math inline">\(30.0\,\text{s}\)</span>.</p>
+<hr />
+<p><strong>Problem 3: Determining Activation Energy Using the Arrhenius Equation</strong></p>
+<p>The rate of a reaction at <span class="math inline">\(300\,\text{K}\)</span> is
+<span class="math inline">\(2.15 \times 10^{-2}\,\text{s}^{-1}\)</span>. When we increase the temperature to <span class="math inline">\(315\,\text{K}\)</span>, the same reaction has a rate of <span class="math inline">\(3.98 \times 10^{-2}\,\text{s}^{-1}\)</span> Calculate the activation energy for this reaction.</p>
+<p><strong>Solution:</strong> We can use the Arrhenius equation in its linearized form, eq. <a href="Kinetics.html#eq:Arr2">(14.30)</a>:</p>
+<p><span class="math display">\[\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
+\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(k_1 = 2.15 \times 10^{-2}\,\text{s}^{-1}\)</span>,</p>
+<p><span class="math inline">\(k_2 = 3.98 \times 10^{-2}\,\text{s}^{-1}\)</span>,</p>
+<p><span class="math inline">\(T_1 = 300\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(T_2 = 315\,\text{K}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[\ln \frac{3.98 \times 10^{-2}}{2.15 \times 10^{-2}} = -\frac{E_a}{8.314}\left(\frac{1}{315} - \frac{1}{300}\right)\]</span></p>
+<p><span class="math display">\[0.6168 = \frac{E_a}{8.314}(1.587 \times 10^{-4})\]</span></p>
+<p><span class="math display">\[E_a = \frac{0.6168 \times 8.314}{1.587 \times 10^{-4}} = 32300\,\text{J/mol}\]</span>
+Adjusting the significant digits gives us the final answer.</p>
+<p><strong>Answer:</strong> The activation energy is <span class="math inline">\(32.3\,\text{kJ/mol}\)</span>.</p>
+<hr />
+<p><strong>Problem 4: Calculating Concentration in a Second-Order Reaction</strong></p>
+<p>The following second-order reaction:
+<span class="math display">\[2\text{Cl} \rightarrow \text{Cl}_2\]</span>
+has a rate constant of <span class="math inline">\(0.40\,\text{M}^{-1}\text{s}^{-1}\)</span>. Calculate the The concentration of <span class="math inline">\(\text{Cl}\)</span> after <span class="math inline">\(100\,\text{s}\)</span>, if we start the reaction from an initial concentration of <span class="math inline">\(0.50\,\text{M}\)</span>.</p>
+<p><strong>Solution:</strong> For a second-order reaction, the integrated rate law is given by eq. <a href="Kinetics.html#eq:kin11">(14.8)</a>, which for our case is:</p>
+<p><span class="math display">\[\frac{1}{[\text{Cl}]} = \frac{1}{[\text{Cl}]_0} + kt\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\([Cl]_0 = 0.50\,\text{M}\)</span>,</p>
+<p><span class="math inline">\(k = 0.40\,\text{M}^{-1}\text{s}^{-1}\)</span>,</p>
+<p><span class="math inline">\(t = 100\,\text{s}\)</span>,</p>
+<p>Then:</p>
+<p><span class="math display">\[\frac{1}{[\text{Cl}]} = \frac{1}{0.5\,\text{M}} + (0.4\,\text{M}^{-1}\text{s}^{-1})(100\,\text{s})\]</span></p>
+<p><span class="math display">\[\frac{1}{[\text{Cl}]} = 2\,\text{M}^{-1} + 40\,\text{M}^{-1} = 42\,\text{M}^{-1}\]</span></p>
+<p><span class="math display">\[[\text{Cl}] = \frac{1}{42\,\text{M}^{-1}} = 0.0238\,\text{M}\]</span></p>
+<p><strong>Answer:</strong> The concentration of <span class="math inline">\(\text{Cl}\)</span> after <span class="math inline">\(100\,\text{s}\)</span> is <span class="math inline">\(0.024\,\text{M}\)</span>.</p>
+<hr />
+<p><strong>Problem 5: Determining Rate Constant for a Zero-Order Reaction</strong></p>
+<p>The initial concentration of a reactant of a zero-order reaction is <span class="math inline">\(0.80\,\text{M}\)</span>. After <span class="math inline">\(200\,\text{s}\)</span> the concentration has diminished to <span class="math inline">\(0.6\,\text{M}\)</span>. Calculate the rate constant of the reaction.</p>
+<p><strong>Solution:</strong> For a zero-order reaction, the integrated rate law is given by <a href="Kinetics.html#eq:kin3">(14.2)</a>:</p>
+<p><span class="math display">\[[A] = [A]_0 - kt\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\([A]_0 = 0.80\,\text{M}\)</span>,</p>
+<p><span class="math inline">\([A] = 0.6\,\text{M}\)</span>,</p>
+<p><span class="math inline">\(t=200\,\text{s}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[0.6\,\text{M} = 0.8\,\text{M} - k(200\,\text{s})\]</span></p>
+<p><span class="math display">\[0.2\,\text{M} = k(200\,\text{s})\]</span></p>
+<p><span class="math display">\[k = \frac{0.2\,\text{M}}{200\,\text{s}} = 0.001\,\text{M}\text{s}^{-1}\]</span></p>
+<p><strong>Answer:</strong> The rate constant for the zero-order reaction is <span class="math inline">\(0.001\,\text{M}\text{s}^{-1}\)</span>.</p>
+</div>
+<div id="quest15" class="section level3 hasAnchor" number="14.5.2">
+<h3><span class="header-section-number">14.5.2</span> Study Questions<a href="Kinetics.html#quest15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. Which of the following is true for a zeroth-order reaction?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The reaction rate is independent of reactant concentration.</li>
+<li>The reaction rate is directly proportional to reactant concentration.</li>
+<li>The reaction rate is proportional to the square of reactant concentration.</li>
+<li>The reaction rate decreases exponentially with time.</li>
+<li>The reaction rate increases logarithmically with reactant concentration.</li>
+</ol>
+<hr />
+<p><strong>2. What are the units of the rate constant for a second-order reaction?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\text{s}^{-1}\)</span>.</li>
+<li><span class="math inline">\(\text{M}^{-1}\text{s}^{-1}\)</span>.</li>
+<li><span class="math inline">\(\text{M}\text{s}^{-1}\)</span>.</li>
+<li><span class="math inline">\(\text{M}^{-2}\text{s}^{-1}\)</span>.</li>
+<li><span class="math inline">\(\text{M}^2\text{s}^{-1}\)</span>.</li>
+</ol>
+<hr />
+<p><strong>3.In the Arrhenius equation, <span class="math inline">\(k = A\exp(-\frac{E_a}{RT})\)</span>, what does <span class="math inline">\(E_a\)</span> represent?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Activation energy.</li>
+<li>Reaction energy.</li>
+<li>Enthalpy of reaction.</li>
+<li>Gibbs energy.</li>
+<li>Kinetic energy.</li>
+</ol>
+<hr />
+<p><strong>4. For a first-order reaction, how is the half-life related to the rate constant <span class="math inline">\(k\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(t_{1/2} = \frac{\ln 2}{k}\)</span>.</li>
+<li><span class="math inline">\(t_{1/2} = \frac{k}{\ln 2}\)</span>.</li>
+<li><span class="math inline">\(t_{1/2} = \frac{1}{k}\)</span>.</li>
+<li><span class="math inline">\(t_{1/2} = \frac{k}{2}\)</span>.</li>
+<li><span class="math inline">\(t_{1/2} = 2k\)</span>.</li>
+</ol>
+<hr />
+<p><strong>5. Which method is used to determine reaction orders by using large excess concentrations of all reactants but one?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Isolation method.</li>
+<li>Initial rates method.</li>
+<li>Half-life method.</li>
+<li>Integrated rate law method.</li>
+<li>Arrhenius method.</li>
+</ol>
+<hr />
+<p><strong>6. What is the overall reaction order for a reaction with rate law <span class="math inline">\(\text{Rate} = k[A][B]^2\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><ol start="3" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol start="0" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+</ol>
+<hr />
+<p><strong>7. In a consecutive reaction <span class="math inline">\(A \xrightarrow{k_1} B \xrightarrow{k_2} C\)</span>, what condition leads to a rate-determining step in the middle of the sequence?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(k_1 \approx k_2\)</span>.</li>
+<li><span class="math inline">\(k_1 \gg k_2\)</span>.</li>
+<li><span class="math inline">\(k_1 \ll k_2\)</span>.</li>
+<li><span class="math inline">\(k_1 = 0\)</span>.</li>
+<li><span class="math inline">\(k_2 = 0\)</span>.</li>
+</ol>
+<hr />
+<p><strong>8. What is the relationship between the equilibrium constant <span class="math inline">\(K_C\)</span> and the forward and reverse rate constants <span class="math inline">\(k_1\)</span> and <span class="math inline">\(k_{-1}\)</span> for an opposed reaction at equilibrium?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(K_C = \frac{k_1}{k_{-1}}\)</span>.</li>
+<li><span class="math inline">\(K_C = \frac{k_{-1}}{k_1}\)</span>.</li>
+<li><span class="math inline">\(K_C = k_1 k_{-1}\)</span>.</li>
+<li><span class="math inline">\(K_C = k_1 + k_{-1}\)</span>.</li>
+<li><span class="math inline">\(K_C = k_1 - k_{-1}\)</span>.</li>
+</ol>
+<hr />
+<p><strong>9. Which of the following plots would give a straight line for a second-order reaction?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\frac{1}{[A]}\)</span> vs <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\ln[A]\)</span> vs <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\([A]\)</span> vs <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\sqrt{[A]}\)</span> vs <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\frac{1}{[A]^2}\)</span> vs <span class="math inline">\(t\)</span>.</li>
+</ol>
+<hr />
+<p><strong>10. What is the maximum experimentally observed reaction order for elementary reactions?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><ol start="3" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol start="5" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li></li>
+</ol></li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a
+</span></p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="68">
+<li id="fn68"><p>Notice how large these numbers are for uranium. To put these numbers in perspective, we can compare them with the half-life of the most unstable isotope of plutonium, <span class="math inline">\(^{241}\mathrm{Pu}\)</span>, which is <span class="math inline">\(t_{1/2}=14.1\)</span> years.<a href="Kinetics.html#fnref68" class="footnote-back">↩︎</a></p></li>
+<li id="fn69"><p>In theory, both <span class="math inline">\(A\)</span> and <span class="math inline">\(E_a\)</span> show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.<a href="Kinetics.html#fnref69" class="footnote-back">↩︎</a></p></li>
+<li id="fn70"><p>This plot is taken from <a href="https://en.wikipedia.org/wiki/Transition_state_theory">Wikipedia</a>, and have been generated and distributed by Author <a href="https://commons.wikimedia.org/wiki/User:Grimlock">Grimlock</a> under CC-BY-SA license.<a href="Kinetics.html#fnref70" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="MCPhaseDiagrams.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem1/edit/master/15_Kinetics.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem1.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
