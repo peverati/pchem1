@@ -1,11 +1,12 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-%
 \documentclass[
   9pt,
 ]{extbook}
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -36,7 +37,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -49,21 +49,24 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
 \usepackage{booktabs}
 \usepackage{pdfpages}
 \usepackage{amsthm}
@@ -100,11 +103,6 @@
 \let\oldmaketitle\maketitle
 \AtBeginDocument{\let\maketitle\relax}
 
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\usepackage[]{natbib}
-\bibliographystyle{apalike}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -116,7 +114,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{15 November 2024}
+\date{24 November 2025}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -289,9 +287,9 @@ A system can exchange exclusively mass, exclusively energy, or both mass and ene
 When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let's consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of --100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be --100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and --100 to the ingoing one, and the overall total would have stayed the same: +100--100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3125}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1562}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5312}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3125}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1562}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5312}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Type of System}
@@ -3517,7 +3515,7 @@ Given:
 
 \(\Delta_{\text{vap}} H^{-\kern-6pt{\ominus}\kern-6pt-}= 38.56\,\text{kJ/mol}\),
 
-\(T_B = 38.56^\circ\text{C}+273.15=351.51\,\text{K}\).
+\(T_B = 78.35^\circ\text{C}+273.15=351.51\,\text{K}\).
 
 Then:
 
@@ -3897,10 +3895,10 @@ A summary of the four thermodynamic potentials is given in the following table.
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2872}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1277}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3404}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2447}}@{}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2872}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1277}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3404}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2447}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 \textbf{Name}
@@ -4371,11 +4369,11 @@ where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standa
 The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\) of a chemical reaction:
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0382}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1720}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4459}}@{}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1720}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0382}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1720}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1720}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4459}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\)
@@ -5425,13 +5423,13 @@ Substituting the values:
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \(K_P = K_y \cdot \left(\frac{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}{P}\right)^{\Delta n}\).
+  \(K_P = K_y \cdot \left(\frac{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}{P}\right)^{\Delta \nu}\)
 \item
-  \(K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)^{\Delta n}\).
+  \(K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)^{\Delta \nu}\)
 \item
-  \(K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)\).
+  \(K_P = K_y \cdot \left(\frac{P}{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}\right)\)
 \item
-  \(K_P = K_y \cdot \left(\frac{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}{P}\right)\).
+  \(K_P = K_y \cdot \left(\frac{P^{{-\kern-6pt{\ominus}\kern-6pt-}}}{P}\right)\)
 \item
   \(K_P = K_y\).
 \end{enumerate}
@@ -5680,9 +5678,9 @@ The parameter \(a\) accounts for the presence of intermolecular interactions, wh
 \scriptsize
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1250}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5000}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1250}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5000}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3750}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -5794,11 +5792,11 @@ From eq. \eqref{eq:JT6} we can define a new coefficient, called the \emph{Joule-
 The value of \(\mu_{\mathrm{JT}}\) depends on the type of gas, the temperature and pressure before expansion, and the heat capacity at constant pressure of the gas. The temperature at which \(\mu_{\mathrm{JT}}\) changes sign is called the ``Joule--Thomson inversion temperature.'' Since the pressure decreases during an expansion, \(\partial P\) is negative by definition, and the following possibilities are available for \(\mu_{\mathrm{JT}}\):
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3535}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1414}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2121}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1414}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1515}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3535}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1414}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2121}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1414}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1515}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Gas temperature:
@@ -6817,7 +6815,7 @@ The integrated Clausius--Clapeyron equation shows that the vapor pressure depend
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c
+Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.b
 
 \renewcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
 
@@ -7820,11 +7818,11 @@ To experimentally measure the reaction rate, we need a method to measure concent
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0865}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1731}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1474}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1891}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4038}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0865}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1731}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1474}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1891}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4038}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -7869,10 +7867,10 @@ the initial rate method can be used to determine the coefficients of the rate la
 by designing three experiment, where the initial concentrations of \(\mathrm{A}\) and \(\mathrm{B}\) are appropriately changed. For example, let's consider the following experimental data from three different experiments:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1705}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2326}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2326}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3643}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1705}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2326}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2326}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3643}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -8390,11 +8388,11 @@ Answers: 1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1136}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2216}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2273}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2102}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2102}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1136}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2216}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2273}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2102}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2102}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Substance:
@@ -8540,7 +8538,7 @@ CuBr\textsubscript{2}(s) & --141.8 & & & \\
 CuCl(s) & --137.2 & --119.9 & 86.2 & 48.5 \\
 CuCl\textsubscript{2}(s) & --220.1 & --175.7 & 108.1 & 71.9 \\
 CuCN(s) & 96.2 & 111.3 & 84.5 & \\
-F\textsuperscript{--}(aq) & --335.4 & --278.8 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+F\textsuperscript{--}(aq) & --335.4 & --278.8 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
 --13.8 \textbar{} \textbar{}} \\
 F(g) & 79.4 & 62.3 & 158.8 & 22.7 \\
 F\textsubscript{2}(g) & 0 & 0 & 202.8 & 32.3 \\
@@ -8550,10 +8548,10 @@ FB(g) & --122.2 & --149.8 & 200.5 & 58.6 \\
 Fe(g) & 416.3 & 370.7 & 180.5 & 25.7 \\
 Fe(s) & 0 & 0 & 27.3 & 25.1 \\
 FeO(s) & --272.0 & --251.4 & 60.7 & \\
-Fe\textsuperscript{2+}(aq) & --89.1 & --78.9 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+Fe\textsuperscript{2+}(aq) & --89.1 & --78.9 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
 --137.7 \textbar{} \textbar{}} \\
 Fe\textsubscript{2}O\textsubscript{3}(s) & --824.2 & --742.2 & 87.4 & 103.9 \\
-Fe\textsuperscript{3+}(aq) & --48.5 & --4.7 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+Fe\textsuperscript{3+}(aq) & --48.5 & --4.7 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
 --315.9 \textbar{} \textbar{}} \\
 Fe\textsubscript{3}O\textsubscript{4}(s) & --1118.4 & --1015.4 & 146.4 & 143.4 \\
 FeCO\textsubscript{3}(s) & --740.6 & --666.7 & 92.9 & 82.1 \\
@@ -8582,7 +8580,7 @@ HCl(aq) & --167.2 & --131.2 & 56.5 & \\
 HCl(g) & --92.3 & --95.3 & 186.9 & 29.1 \\
 HCN(g) & 135.1 & 124.7 & 201.8 & 35.9 \\
 HCN(l) & 108.9 & 125 & 112.8 & 70.6 \\
-HF(aq) & --332.6 & --278.8 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+HF(aq) & --332.6 & --278.8 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
 --13.8 \textbar{} \textbar{}} \\
 HF(g) & --273.3 & --275.4 & 173.8 & \\
 HI(aq) & --55.2 & --51.6 & 111.3 & \\
@@ -8709,7 +8707,7 @@ NiF\textsubscript{2}(s) & --651.4 & --604.1 & 73.6 & 64.1 \\
 O(g) & 249.2 & 231.7 & 161.1 & 21.9 \\
 O\textsubscript{2}(g) & 0 & 0 & 205.2 & 29.4 \\
 O\textsubscript{3}(g) & 142.7 & 163.2 & 238.9 & 39.2 \\
-OH\textsuperscript{--}(aq) & --230.0 & --157.2 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
+OH\textsuperscript{--}(aq) & --230.0 & --157.2 & \multicolumn{2}{>{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4205} + 2\tabcolsep}@{}}{%
 --10.9 \textbar{} \textbar{}} \\
 Os(g) & 791 & 745 & 192.6 & 20.8 \\
 Os(s) & 0 & 0 & 32.6 & 24.7 \\
@@ -8802,12 +8800,12 @@ ZrCl\textsubscript{4}(s) & --980.5 & --889.9 & 181.6 & 119.8 \\
 \section{Thermodynamic Data of Organic Substances at 298 K}\label{thermodynamic-data-of-organic-substances-at-298-k}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0822}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2055}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1781}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1781}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1689}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1689}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0822}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2055}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1781}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1781}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1689}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1689}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Formula:

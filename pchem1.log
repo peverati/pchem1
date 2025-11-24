@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  15 NOV 2024 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  24 NOV 2025 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -31,6 +31,24 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen142
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
 \@mathmargin=\skip51
@@ -147,24 +165,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
-(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2024-04-26 v4.20 Multi-page Table package (DPC)
 \LTleft=\skip54
@@ -246,6 +246,14 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 )
 \Gin@req@height=\dimen171
 \Gin@req@width=\dimen172
+)
+\pandoc@box=\box62
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip63
+\bibsep=\skip64
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count294
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2024/08/20 v0.6b Insert pages of external PDF documents (AM)
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
@@ -261,14 +269,14 @@ Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2024/08/20 v0.6b Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count294
-\AM@pagebox=\box62
+\pdfpages@includegraphics@status=\count295
+\AM@pagebox=\box63
 \AM@global@opts=\toks27
-\AM@pagecnt=\count295
+\AM@pagecnt=\count296
 \AM@toc@title=\toks28
 \AM@lof@heading=\toks29
-\c@AM@survey=\count296
-\AM@templatesizebox=\box63
+\c@AM@survey=\count297
+\AM@templatesizebox=\box64
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks30
@@ -276,9 +284,9 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks32
 \thm@notefont=\toks33
 \thm@headpunct=\toks34
-\thm@preskip=\skip63
-\thm@postskip=\skip64
-\thm@headsep=\skip65
+\thm@preskip=\skip65
+\thm@postskip=\skip66
+\thm@headsep=\skip67
 \dth@everypar=\toks35
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
@@ -286,29 +294,29 @@ Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
 Package: expl3 2024-08-30 L3 programming layer (loader) 
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
-\l__pdf_internal_box=\box64
+\l__color_backend_stack_int=\count298
+\l__pdf_internal_box=\box65
 )) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/chemgreek/chemgreek.sty (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count298
-\g__chemgreek_tmpa_int=\count299
+\l__chemgreek_tmpa_int=\count299
+\g__chemgreek_tmpa_int=\count300
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count300
-\__mhchem_arrow_extPgfLength_skip=\skip66
-\mhchem@minispace@tmp=\skip67
-\mhchem@minibackspace@tmp=\skip68
-\mhchem@bondwidth=\skip69
-\mhchem@bondheight=\skip70
-\mhchem@smallbondwidth@tmpA=\skip71
-\mhchem@smallbondwidth@tmpB=\skip72
-\mhchem@smallbondwidth=\skip73
-\mhchem@bondtmp@minussidebearingleft=\skip74
-\mhchem@bondtmp@minussidebearingright=\skip75
-\l__mhchem_option_version_int=\count301
+\l__mhchem_ce_distanceFromLastComma_int=\count301
+\__mhchem_arrow_extPgfLength_skip=\skip68
+\mhchem@minispace@tmp=\skip69
+\mhchem@minibackspace@tmp=\skip70
+\mhchem@bondwidth=\skip71
+\mhchem@bondheight=\skip72
+\mhchem@smallbondwidth@tmpA=\skip73
+\mhchem@smallbondwidth@tmpB=\skip74
+\mhchem@smallbondwidth=\skip75
+\mhchem@bondtmp@minussidebearingleft=\skip76
+\mhchem@bondtmp@minussidebearingright=\skip77
+\l__mhchem_option_version_int=\count302
 \mhchem@option@minusmathsidebearingleft=\dimen178
 \mhchem@option@minusmathsidebearingright=\dimen179
 \mhchem@option@minustextsidebearingleft=\dimen180
@@ -320,9 +328,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count302
-\Gm@cntv=\count303
-\c@Gm@tempcnt=\count304
+\Gm@cnth=\count303
+\Gm@cntv=\count304
+\c@Gm@tempcnt=\count305
 \Gm@bindingoffset=\dimen182
 \Gm@wd@mp=\dimen183
 \Gm@odd@mp=\dimen184
@@ -334,21 +342,15 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks36
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip76
-\f@nch@O@elh=\skip77
-\f@nch@O@erh=\skip78
-\f@nch@O@olh=\skip79
-\f@nch@O@orh=\skip80
-\f@nch@O@elf=\skip81
-\f@nch@O@erf=\skip82
-\f@nch@O@olf=\skip83
-\f@nch@O@orf=\skip84
-) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip85
-\bibsep=\skip86
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count305
+\f@nch@headwidth=\skip78
+\f@nch@O@elh=\skip79
+\f@nch@O@erh=\skip80
+\f@nch@O@olh=\skip81
+\f@nch@O@orh=\skip82
+\f@nch@O@elf=\skip83
+\f@nch@O@erf=\skip84
+\f@nch@O@olf=\skip85
+\f@nch@O@orf=\skip86
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -468,30 +470,30 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \c@example=\count324
 \c@exercise=\count325
 \c@hypothesis=\count326
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 138.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 136.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./pchem1.aux)
 \openout1 = `pchem1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -507,7 +509,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 
-Package chemgreek Info: Activating mapping `default' on line 138.
+Package chemgreek Info: Activating mapping `default' on line 136.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -543,38 +545,38 @@ Package chemgreek Info: Activating mapping `default' on line 138.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 138.
+Package hyperref Info: Link coloring OFF on input line 136.
 <FrontPage_6x9.pdf, id=4, 433.62pt x 650.43pt>
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf>
-Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 142.
-(pdftex.def)             Requested size: 303.53854pt x 455.30782pt.
+Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 140.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf>
-Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 142.
-(pdftex.def)             Requested size: 303.53854pt x 455.30782pt.
+Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 140.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 <FrontPage_6x9.pdf, id=7, page=1, 433.62pt x 650.43pt>
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 142.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 140.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 142.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 140.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 142.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 140.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 142.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 140.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 
 
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 142.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 140.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 [1
 
@@ -637,8 +639,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./img/OEP_Figures.000.jpeg, id=256, 806.01125pt x 566.115pt>
 File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.000.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 164.
-(pdftex.def)             Requested size: 242.82603pt x 170.55278pt.
+Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 162.
+(pdftex.def)             Requested size: 242.82706pt x 170.55278pt.
 
 Underfull \vbox (badness 2205) has occurred while \output is active []
 
@@ -649,7 +651,7 @@ Underfull \vbox (badness 2205) has occurred while \output is active []
 [10]
 
 [11]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 205.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 203.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -657,14 +659,14 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [12{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 221.
+(Font)              <7> on input line 219.
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222 
+l.220 
        [1
 
 
@@ -684,8 +686,8 @@ l.222
 <./img/OEP_Figures.001.jpeg, id=339, 901.3675pt x 586.19pt>
 File: ./img/OEP_Figures.001.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.001.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.001.jpeg  used on input line 278.
-(pdftex.def)             Requested size: 212.4678pt x 138.17506pt.
+Package pdftex.def Info: ./img/OEP_Figures.001.jpeg  used on input line 276.
+(pdftex.def)             Requested size: 212.47194pt x 138.17506pt.
 
 
 [7]
@@ -700,16 +702,16 @@ Package pdftex.def Info: ./img/OEP_Figures.001.jpeg  used on input line 278.
 
 [12]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 431.
+LaTeX Warning: Command \dj invalid in math mode on input line 429.
 
 
 
 [13]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 434.
+LaTeX Warning: Command \dj invalid in math mode on input line 432.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 441.
+LaTeX Warning: Command \dj invalid in math mode on input line 439.
 
 
 
@@ -717,8 +719,8 @@ LaTeX Warning: Command \dj invalid in math mode on input line 441.
 <./img/OEP_Figures.002.jpeg, id=412, 810.02625pt x 457.71pt>
 File: ./img/OEP_Figures.002.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.002.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.002.jpeg  used on input line 453.
-(pdftex.def)             Requested size: 182.11208pt x 102.90347pt.
+Package pdftex.def Info: ./img/OEP_Figures.002.jpeg  used on input line 451.
+(pdftex.def)             Requested size: 182.12144pt x 102.90347pt.
 
 
 [15 <./img/OEP_Figures.002.jpeg>]
@@ -727,7 +729,7 @@ Package pdftex.def Info: ./img/OEP_Figures.002.jpeg  used on input line 453.
 
 [17]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 616.
+LaTeX Warning: Command \dj invalid in math mode on input line 614.
 
 
 
@@ -742,28 +744,28 @@ Chapter 2.
 
 [20]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 702.
+LaTeX Warning: Command \dj invalid in math mode on input line 700.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 702.
+LaTeX Warning: Command \dj invalid in math mode on input line 700.
 
 
 
 [21]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 709.
+LaTeX Warning: Command \dj invalid in math mode on input line 707.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 709.
+LaTeX Warning: Command \dj invalid in math mode on input line 707.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 731.
+LaTeX Warning: Command \dj invalid in math mode on input line 729.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 731.
+LaTeX Warning: Command \dj invalid in math mode on input line 729.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 731.
+LaTeX Warning: Command \dj invalid in math mode on input line 729.
 
 
 
@@ -771,55 +773,55 @@ LaTeX Warning: Command \dj invalid in math mode on input line 731.
 <./img/OEP_Figures.004.jpeg, id=512, 778.91pt x 655.44875pt>
 File: ./img/OEP_Figures.004.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.004.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.004.jpeg  used on input line 748.
-(pdftex.def)             Requested size: 151.76204pt x 127.70697pt.
+Package pdftex.def Info: ./img/OEP_Figures.004.jpeg  used on input line 746.
+(pdftex.def)             Requested size: 151.76633pt x 127.70697pt.
 
-LaTeX Warning: Command \dj invalid in math mode on input line 760.
+LaTeX Warning: Command \dj invalid in math mode on input line 758.
 
 
 
 [23 <./img/OEP_Figures.004.jpeg>]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 774.
+LaTeX Warning: Command \dj invalid in math mode on input line 772.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 781.
+LaTeX Warning: Command \dj invalid in math mode on input line 779.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 785.
+LaTeX Warning: Command \dj invalid in math mode on input line 783.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 788.
+LaTeX Warning: Command \dj invalid in math mode on input line 786.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 795.
+LaTeX Warning: Command \dj invalid in math mode on input line 793.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 802.
+LaTeX Warning: Command \dj invalid in math mode on input line 800.
 
 
 
 [24]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 809.
+(Font)              <10> on input line 807.
 <pchem1_files/figure-latex/unnamed-chunk-2-1.pdf, id=542, 410.53375pt x 279.0425pt>
 File: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 813.
-(pdftex.def)             Requested size: 212.47023pt x 144.41742pt.
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 811.
+(pdftex.def)             Requested size: 212.47194pt x 144.41742pt.
 
 
 [25 <./pchem1_files/figure-latex/unnamed-chunk-2-1.pdf>]
 <pchem1_files/figure-latex/unnamed-chunk-3-1.pdf, id=563, 410.53375pt x 279.0425pt>
 File: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 824.
-(pdftex.def)             Requested size: 212.47023pt x 144.41742pt.
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 822.
+(pdftex.def)             Requested size: 212.47194pt x 144.41742pt.
 <pchem1_files/figure-latex/unnamed-chunk-4-1.pdf, id=564, 410.53375pt x 279.0425pt>
 File: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-4-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 833.
-(pdftex.def)             Requested size: 212.47023pt x 144.41742pt.
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 831.
+(pdftex.def)             Requested size: 212.47194pt x 144.41742pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -829,53 +831,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <pchem1_files/figure-latex/unnamed-chunk-5-1.pdf, id=580, 410.53375pt x 279.0425pt>
 File: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 842.
-(pdftex.def)             Requested size: 212.47023pt x 144.41742pt.
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 840.
+(pdftex.def)             Requested size: 212.47194pt x 144.41742pt.
 <pchem1_files/figure-latex/unnamed-chunk-6-1.pdf, id=581, 410.53375pt x 279.0425pt>
 File: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf  used on input line 851.
-(pdftex.def)             Requested size: 212.47023pt x 144.41742pt.
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-6-1.pdf  used on input line 849.
+(pdftex.def)             Requested size: 212.47194pt x 144.41742pt.
 
 
 [27 <./pchem1_files/figure-latex/unnamed-chunk-4-1.pdf> <./pchem1_files/figure-latex/unnamed-chunk-5-1.pdf>]
 <pchem1_files/figure-latex/figures-side-1.pdf, id=604, 436.63126pt x 252.945pt>
 File: pchem1_files/figure-latex/figures-side-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figures-side-1.pdf  used on input line 867.
-(pdftex.def)             Requested size: 151.7639pt x 87.9184pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-1.pdf  used on input line 865.
+(pdftex.def)             Requested size: 151.7639pt x 455.30836pt.
 <pchem1_files/figure-latex/figures-side-2.pdf, id=605, 436.63126pt x 252.945pt>
 File: pchem1_files/figure-latex/figures-side-2.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-2.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figures-side-2.pdf  used on input line 867.
-(pdftex.def)             Requested size: 151.7639pt x 87.9184pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-2.pdf  used on input line 865.
+(pdftex.def)             Requested size: 151.7639pt x 455.30836pt.
 <pchem1_files/figure-latex/figures-side-3.pdf, id=606, 436.63126pt x 252.945pt>
 File: pchem1_files/figure-latex/figures-side-3.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-3.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figures-side-3.pdf  used on input line 867.
-(pdftex.def)             Requested size: 151.7639pt x 87.9184pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-3.pdf  used on input line 865.
+(pdftex.def)             Requested size: 151.7639pt x 455.30836pt.
 <pchem1_files/figure-latex/figures-side-4.pdf, id=607, 436.63126pt x 252.945pt>
 File: pchem1_files/figure-latex/figures-side-4.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figures-side-4.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figures-side-4.pdf  used on input line 867.
-(pdftex.def)             Requested size: 151.7639pt x 87.9184pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figures-side-4.pdf  used on input line 865.
+(pdftex.def)             Requested size: 151.7639pt x 455.30836pt.
 
-Overfull \hbox (2.05067pt too wide) in paragraph at lines 867--868
+Overfull \hbox (2.05067pt too wide) in paragraph at lines 865--866
 [][] []
  []
 
 
-Overfull \hbox (2.05067pt too wide) in paragraph at lines 867--868
+Overfull \hbox (2.05067pt too wide) in paragraph at lines 865--866
 [] [] 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28 <./pchem1_files/figure-latex/unnamed-chunk-6-1.pdf> <./pchem1_files/figure-latex/figures-side-1.pdf> <./pchem1_files/figure-latex/figures-side-2.pdf>]
 
-[29 <./pchem1_files/figure-latex/figures-side-3.pdf> <./pchem1_files/figure-latex/figures-side-4.pdf>]
 
-[30]
+[28 <./pchem1_files/figure-latex/unnamed-chunk-6-1.pdf>]
+
+[29 <./pchem1_files/figure-latex/figures-side-1.pdf> <./pchem1_files/figure-latex/figures-side-2.pdf>]
+
+[30 <./pchem1_files/figure-latex/figures-side-3.pdf> <./pchem1_files/figure-latex/figures-side-4.pdf>]
 
 [31]
 
@@ -887,89 +892,89 @@ Overfull \hbox (2.05067pt too wide) in paragraph at lines 867--868
 
 [35]
 
-[36
+[36]
+
+[37]
+
+[38
 
 
 ]
 Chapter 3.
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1209.
+LaTeX Warning: Command \dj invalid in math mode on input line 1207.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1209.
+LaTeX Warning: Command \dj invalid in math mode on input line 1207.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1216.
-
-
-
-[37]
-<./img/OEP_Figures.006.jpeg, id=761, 1027.84pt x 340.27126pt>
-File: ./img/OEP_Figures.006.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.006.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.006.jpeg  used on input line 1226.
-(pdftex.def)             Requested size: 242.82848pt x 80.3895pt.
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1236.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1243.
-
-
-
-[38 <./img/OEP_Figures.006.jpeg>]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1255.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1258.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1266.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1266.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1269.
+LaTeX Warning: Command \dj invalid in math mode on input line 1214.
 
 
 
 [39]
+<./img/OEP_Figures.006.jpeg, id=769, 1027.84pt x 340.27126pt>
+File: ./img/OEP_Figures.006.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.006.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.006.jpeg  used on input line 1224.
+(pdftex.def)             Requested size: 242.82706pt x 80.3895pt.
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1314.
-
-
-
-[40]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1321.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1345.
+LaTeX Warning: Command \dj invalid in math mode on input line 1234.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1345.
+LaTeX Warning: Command \dj invalid in math mode on input line 1241.
+
+
+
+[40 <./img/OEP_Figures.006.jpeg>]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1253.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1256.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1264.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1264.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1267.
 
 
 
 [41]
-<./img/OEP_Figures.005.jpeg, id=817, 1027.84pt x 770.88pt>
-File: ./img/OEP_Figures.005.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.005.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.005.jpeg  used on input line 1365.
-(pdftex.def)             Requested size: 242.82848pt x 182.12137pt.
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1312.
 
 
-[42 <./img/OEP_Figures.005.jpeg>]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1381.
+[42]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1319.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1343.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1343.
 
 
 
 [43]
+<./img/OEP_Figures.005.jpeg, id=826, 1027.84pt x 770.88pt>
+File: ./img/OEP_Figures.005.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.005.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.005.jpeg  used on input line 1363.
+(pdftex.def)             Requested size: 242.82706pt x 182.12137pt.
 
-[44]
+
+[44 <./img/OEP_Figures.005.jpeg>]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1379.
+
+
 
 [45]
 
@@ -979,152 +984,152 @@ LaTeX Warning: Command \dj invalid in math mode on input line 1381.
 
 [48]
 
+[49]
+
+[50]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 1650.
+
+
 LaTeX Warning: Command \dj invalid in math mode on input line 1652.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1654.
 
+[51]
 
+LaTeX Warning: Command \dj invalid in math mode on input line 1686.
 
-[49]
 
 LaTeX Warning: Command \dj invalid in math mode on input line 1688.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 1690.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 1696.
+LaTeX Warning: Command \dj invalid in math mode on input line 1694.
 
 
 
-[50]
+[52]
 
-[51]
+[53]
 
-[52
+[54
 
 
 ]
 Chapter 4.
 
 
-[53]
-
-[54]
-
 [55]
 
 [56]
 
 [57]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 1978.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 1978.
-
 
 [58]
 
 [59]
-Overfull \hbox (45.58734pt too wide) detected at line 2042
-\OT1/lmr/m/n/9 ^^A[]\OML/lmm/m/it/9 H[] \OT1/lmr/m/n/9 = (2 \OMS/lmsy/m/n/9 ^^B \OT1/lmr/m/n/9 33\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 2 []) \OMS/lmsy/m/n/9 ^^@ \OT1/lmr/m/n/9 (11\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 1 []) = 66\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 4 [] \OMS/lmsy/m/n/9 ^^@ \OT1/lmr/m/n/9 11\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 1 [] = 55\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 3 []\OML/lmm/m/it/9 ;
- []
-
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 1976.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 1976.
 
 
 [60]
 
 [61]
+Overfull \hbox (45.58734pt too wide) detected at line 2040
+\OT1/lmr/m/n/9 ^^A[]\OML/lmm/m/it/9 H[] \OT1/lmr/m/n/9 = (2 \OMS/lmsy/m/n/9 ^^B \OT1/lmr/m/n/9 33\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 2 []) \OMS/lmsy/m/n/9 ^^@ \OT1/lmr/m/n/9 (11\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 1 []) = 66\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 4 [] \OMS/lmsy/m/n/9 ^^@ \OT1/lmr/m/n/9 11\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 1 [] = 55\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 3 []\OML/lmm/m/it/9 ;
+ []
+
+
 
 [62]
 
 [63]
 
 [64]
+
+[65]
+
+[66]
 Chapter 5.
-<./img/OEP_Figures.008.jpeg, id=1101, 1027.84pt x 770.88pt>
+<./img/OEP_Figures.008.jpeg, id=1109, 1027.84pt x 770.88pt>
 File: ./img/OEP_Figures.008.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.008.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.008.jpeg  used on input line 2269.
-(pdftex.def)             Requested size: 242.82848pt x 182.12137pt.
+Package pdftex.def Info: ./img/OEP_Figures.008.jpeg  used on input line 2267.
+(pdftex.def)             Requested size: 242.82706pt x 182.12137pt.
 
 Underfull \vbox (badness 1668) has occurred while \output is active []
 
 
 
-[65
+[67
 
 
 ]
 
-[66 <./img/OEP_Figures.008.jpeg>]
-<pchem1_files/figure-latex/FigCarnotPV-1.pdf, id=1122, 436.63126pt x 250.9375pt>
+[68 <./img/OEP_Figures.008.jpeg>]
+<pchem1_files/figure-latex/FigCarnotPV-1.pdf, id=1131, 436.63126pt x 250.9375pt>
 File: pchem1_files/figure-latex/FigCarnotPV-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/FigCarnotPV-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/FigCarnotPV-1.pdf  used on input line 2301.
-(pdftex.def)             Requested size: 212.47212pt x 122.1104pt.
-<./img/OEP_Figures.007a.png, id=1123, 630.85687pt x 542.025pt>
+Package pdftex.def Info: pchem1_files/figure-latex/FigCarnotPV-1.pdf  used on input line 2299.
+(pdftex.def)             Requested size: 212.47194pt x 122.1104pt.
+<./img/OEP_Figures.007a.png, id=1132, 630.85687pt x 542.025pt>
 File: ./img/OEP_Figures.007a.png Graphic file (type png)
 <use ./img/OEP_Figures.007a.png>
-Package pdftex.def Info: ./img/OEP_Figures.007a.png  used on input line 2310.
-(pdftex.def)             Requested size: 212.46701pt x 182.54922pt.
+Package pdftex.def Info: ./img/OEP_Figures.007a.png  used on input line 2308.
+(pdftex.def)             Requested size: 212.47194pt x 182.54922pt.
 
 
-[67 <./pchem1_files/figure-latex/FigCarnotPV-1.pdf>]
-<./img/OEP_Figures.007b.png, id=1144, 684.30656pt x 503.63156pt>
+[69 <./pchem1_files/figure-latex/FigCarnotPV-1.pdf>]
+<./img/OEP_Figures.007b.png, id=1153, 684.30656pt x 503.63156pt>
 File: ./img/OEP_Figures.007b.png Graphic file (type png)
 <use ./img/OEP_Figures.007b.png>
-Package pdftex.def Info: ./img/OEP_Figures.007b.png  used on input line 2333.
-(pdftex.def)             Requested size: 212.46696pt x 156.37007pt.
+Package pdftex.def Info: ./img/OEP_Figures.007b.png  used on input line 2331.
+(pdftex.def)             Requested size: 212.47194pt x 156.37007pt.
 
 
-[68 <./img/OEP_Figures.007a.png>]
-<./img/OEP_Figures.007c.png, id=1155, 722.7pt x 515.67656pt>
+[70 <./img/OEP_Figures.007a.png>]
+<./img/OEP_Figures.007c.png, id=1163, 722.7pt x 515.67656pt>
 File: ./img/OEP_Figures.007c.png Graphic file (type png)
 <use ./img/OEP_Figures.007c.png>
-Package pdftex.def Info: ./img/OEP_Figures.007c.png  used on input line 2351.
-(pdftex.def)             Requested size: 212.46683pt x 151.60393pt.
+Package pdftex.def Info: ./img/OEP_Figures.007c.png  used on input line 2349.
+(pdftex.def)             Requested size: 212.47194pt x 151.60393pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[69 <./img/OEP_Figures.007b.png>]
-<./img/OEP_Figures.007d.png, id=1164, 730.98094pt x 491.58656pt>
+[71 <./img/OEP_Figures.007b.png>]
+<./img/OEP_Figures.007d.png, id=1172, 730.98094pt x 491.58656pt>
 File: ./img/OEP_Figures.007d.png Graphic file (type png)
 <use ./img/OEP_Figures.007d.png>
-Package pdftex.def Info: ./img/OEP_Figures.007d.png  used on input line 2374.
-(pdftex.def)             Requested size: 212.4698pt x 142.88649pt.
+Package pdftex.def Info: ./img/OEP_Figures.007d.png  used on input line 2372.
+(pdftex.def)             Requested size: 212.47194pt x 142.88649pt.
 
 Underfull \vbox (badness 1490) has occurred while \output is active []
 
 
 
-[70 <./img/OEP_Figures.007c.png>]
+[72 <./img/OEP_Figures.007c.png>]
 
-[71 <./img/OEP_Figures.007d.png>]
+[73 <./img/OEP_Figures.007d.png>]
 
-[72]
-<./img/OEP_Figures.009.jpeg, id=1191, 1027.84pt x 620.3175pt>
+[74]
+<./img/OEP_Figures.009.jpeg, id=1200, 1027.84pt x 620.3175pt>
 File: ./img/OEP_Figures.009.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.009.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.009.jpeg  used on input line 2453.
-(pdftex.def)             Requested size: 242.82848pt x 146.55078pt.
-<./img/OEP_Figures.010.jpeg, id=1195, 1027.84pt x 770.88pt>
+Package pdftex.def Info: ./img/OEP_Figures.009.jpeg  used on input line 2451.
+(pdftex.def)             Requested size: 242.82706pt x 146.55078pt.
+<./img/OEP_Figures.010.jpeg, id=1204, 1027.84pt x 770.88pt>
 File: ./img/OEP_Figures.010.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.010.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.010.jpeg  used on input line 2467.
-(pdftex.def)             Requested size: 154.35754pt x 115.76816pt.
+Package pdftex.def Info: ./img/OEP_Figures.010.jpeg  used on input line 2465.
+(pdftex.def)             Requested size: 154.37135pt x 115.76816pt.
 
 
-[73 <./img/OEP_Figures.009.jpeg>]
+[75 <./img/OEP_Figures.009.jpeg>]
 
-[74 <./img/OEP_Figures.010.jpeg>]
-
-[75]
-
-[76]
+[76 <./img/OEP_Figures.010.jpeg>]
 
 [77]
 
@@ -1136,80 +1141,87 @@ Package pdftex.def Info: ./img/OEP_Figures.010.jpeg  used on input line 2467.
 
 [81]
 
-[82
+[82]
+
+[83]
+
+[84
 
 
 ]
 Chapter 6.
 
 
-[83]
-<pchem1_files/figure-latex/unnamed-chunk-12-1.pdf, id=1332, 410.53375pt x 291.0875pt>
+[85]
+<pchem1_files/figure-latex/unnamed-chunk-12-1.pdf, id=1341, 410.53375pt x 291.0875pt>
 File: pchem1_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 2839.
-(pdftex.def)             Requested size: 212.47023pt x 150.65126pt.
+Package pdftex.def Info: pchem1_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 2837.
+(pdftex.def)             Requested size: 212.47194pt x 150.65126pt.
 
 
-[84 <./pchem1_files/figure-latex/unnamed-chunk-12-1.pdf>]
+[86 <./pchem1_files/figure-latex/unnamed-chunk-12-1.pdf>]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 2859.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2866.
+LaTeX Warning: Command \dj invalid in math mode on input line 2857.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 2889.
+LaTeX Warning: Command \dj invalid in math mode on input line 2864.
 
 
-
-[85]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2896.
-
-<./img/OEP_Figures.011.jpeg, id=1371, 1027.84pt x 770.88pt>
-File: ./img/OEP_Figures.011.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.011.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.011.jpeg  used on input line 2908.
-(pdftex.def)             Requested size: 242.82848pt x 182.12137pt.
-
-
-[86 <./img/OEP_Figures.011.jpeg>]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2918.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2918.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2918.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2926.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2926.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2934.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2934.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 2938.
+LaTeX Warning: Command \dj invalid in math mode on input line 2887.
 
 
 
 [87]
 
-[88]
+LaTeX Warning: Command \dj invalid in math mode on input line 2894.
+
+<./img/OEP_Figures.011.jpeg, id=1379, 1027.84pt x 770.88pt>
+File: ./img/OEP_Figures.011.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.011.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.011.jpeg  used on input line 2906.
+(pdftex.def)             Requested size: 242.82706pt x 182.12137pt.
+
+
+[88 <./img/OEP_Figures.011.jpeg>]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2916.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2916.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2916.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2924.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2924.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2932.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2932.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 2936.
+
+
 
 [89]
 
 [90]
 
 [91]
+
+[92]
+
+[93]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3094.
+
 
 LaTeX Warning: Command \dj invalid in math mode on input line 3096.
 
@@ -1223,100 +1235,100 @@ LaTeX Warning: Command \dj invalid in math mode on input line 3100.
 LaTeX Warning: Command \dj invalid in math mode on input line 3102.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3104.
-
-
-
-[92]
-
-[93]
 
 [94]
+
+[95]
+
+[96]
 Chapter 7.
 
 
-[95
+[97
 
 
 ]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3266.
-
-
-
-[96]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3311.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3315.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3316.
-
-
-
-[97]
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3326.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3342.
+LaTeX Warning: Command \dj invalid in math mode on input line 3264.
 
 
 
 [98]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3365.
+LaTeX Warning: Command \dj invalid in math mode on input line 3309.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3365.
+LaTeX Warning: Command \dj invalid in math mode on input line 3313.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3314.
 
 
 
 [99]
-Overfull \hbox (5.3379pt too wide) detected at line 3408
-[][][][][]
- []
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3324.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3340.
 
 
 
 [100]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3426.
+LaTeX Warning: Command \dj invalid in math mode on input line 3363.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3433.
+LaTeX Warning: Command \dj invalid in math mode on input line 3363.
+
+
+
+[101]
+Overfull \hbox (5.3379pt too wide) detected at line 3406
+[][][][][]
+ []
+
+
+
+[102]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3424.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3431.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3439.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3440.
 
 
 LaTeX Warning: Command \dj invalid in math mode on input line 3441.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3442.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3443.
-
-
-
-[101]
-
-[102]
 
 [103]
-Overfull \hbox (15.77777pt too wide) in paragraph at lines 3526--3527
+
+[104]
+
+[105]
+Overfull \hbox (15.77777pt too wide) in paragraph at lines 3524--3525
 []\T1/lmr/bx/n/9 Answer: \T1/lmr/m/n/9 The stan-dard en-tropy of va-por-iza-tion for ethanol is $\OT1/lmr/m/n/9 109\OML/lmm/m/it/9 :\OT1/lmr/m/n/9 7 [] [][] [][]$\T1/lmr/m/n/9 . 
  []
 
 
 
-[104]
-
-[105]
-
 [106]
 
 [107]
+
+[108]
+
+[109]
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3703.
+
 
 LaTeX Warning: Command \dj invalid in math mode on input line 3705.
 
@@ -1330,33 +1342,26 @@ LaTeX Warning: Command \dj invalid in math mode on input line 3709.
 LaTeX Warning: Command \dj invalid in math mode on input line 3711.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3713.
 
+[110]
 
+[111]
 
-[108]
-
-[109]
-
-[110
+[112
 
 
 ]
 Chapter 8.
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3804.
+LaTeX Warning: Command \dj invalid in math mode on input line 3802.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3805.
+LaTeX Warning: Command \dj invalid in math mode on input line 3803.
 
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3805.
+LaTeX Warning: Command \dj invalid in math mode on input line 3803.
 
 
-
-[111]
-
-[112]
 
 [113]
 
@@ -1364,37 +1369,42 @@ LaTeX Warning: Command \dj invalid in math mode on input line 3805.
 
 [115]
 
-LaTeX Warning: Command \dj invalid in math mode on input line 3967.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3967.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3971.
-
-
-LaTeX Warning: Command \dj invalid in math mode on input line 3971.
-
-
-
 [116]
-<pchem1_files/figure-latex/agfig-1.pdf, id=1740, 432.61626pt x 197.73875pt>
-File: pchem1_files/figure-latex/agfig-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/agfig-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/agfig-1.pdf  used on input line 4029.
-(pdftex.def)             Requested size: 303.54224pt x 138.74203pt.
-
 
 [117]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3965.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3965.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3969.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 3969.
 
 
 
-[118 <./pchem1_files/figure-latex/agfig-1.pdf>]
+[118]
+<pchem1_files/figure-latex/agfig-1.pdf, id=1748, 432.61626pt x 197.73875pt>
+File: pchem1_files/figure-latex/agfig-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/agfig-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/agfig-1.pdf  used on input line 4027.
+(pdftex.def)             Requested size: 432.6152pt x 197.73827pt.
+
+Overfull \hbox (129.08253pt too wide) in paragraph at lines 4027--4028
+ [][] 
+ []
+
+
 
 [119]
 
-[120]
+[120 <./pchem1_files/figure-latex/agfig-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [121]
 
@@ -1403,35 +1413,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [123]
 
 [124]
+
+[125]
+
+[126]
 Chapter 9.
 
 
-[125
+[127
 
 
 ]
 
-[126]
-
-[127]
-
 [128]
 
 [129]
-<pchem1_files/figure-latex/gdeppfig-1.pdf, id=1914, 415.5525pt x 282.05376pt>
-File: pchem1_files/figure-latex/gdeppfig-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/gdeppfig-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/gdeppfig-1.pdf  used on input line 4536.
-(pdftex.def)             Requested size: 303.54736pt x 206.03093pt.
-
 
 [130]
 
-[131 <./pchem1_files/figure-latex/gdeppfig-1.pdf>]
+[131]
+<pchem1_files/figure-latex/gdeppfig-1.pdf, id=1922, 415.5525pt x 282.05376pt>
+File: pchem1_files/figure-latex/gdeppfig-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/gdeppfig-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/gdeppfig-1.pdf  used on input line 4534.
+(pdftex.def)             Requested size: 415.55148pt x 282.05305pt.
+
+Overfull \hbox (112.01881pt too wide) in paragraph at lines 4534--4535
+ [][] 
+ []
+
+
 
 [132]
 
-[133]
+[133 <./pchem1_files/figure-latex/gdeppfig-1.pdf>]
 
 [134]
 
@@ -1442,31 +1457,36 @@ Package pdftex.def Info: pchem1_files/figure-latex/gdeppfig-1.pdf  used on input
 [137]
 
 [138]
+
+[139]
+
+[140]
 Chapter 10.
 
 
-[139
+[141
 
 
 ]
 
-[140]
-
-[141]
-
 [142]
-<pchem1_files/figure-latex/vthoffplt-1.pdf, id=2104, 432.61626pt x 197.73875pt>
-File: pchem1_files/figure-latex/vthoffplt-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/vthoffplt-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/vthoffplt-1.pdf  used on input line 5098.
-(pdftex.def)             Requested size: 303.54224pt x 138.74203pt.
 
-
-[143 <./pchem1_files/figure-latex/vthoffplt-1.pdf>]
+[143]
 
 [144]
+<pchem1_files/figure-latex/vthoffplt-1.pdf, id=2112, 432.61626pt x 197.73875pt>
+File: pchem1_files/figure-latex/vthoffplt-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/vthoffplt-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/vthoffplt-1.pdf  used on input line 5096.
+(pdftex.def)             Requested size: 432.6152pt x 197.73827pt.
 
-[145]
+Overfull \hbox (129.08253pt too wide) in paragraph at lines 5096--5097
+ [][] 
+ []
+
+
+
+[145 <./pchem1_files/figure-latex/vthoffplt-1.pdf>]
 
 [146]
 
@@ -1481,85 +1501,85 @@ Package pdftex.def Info: pchem1_files/figure-latex/vthoffplt-1.pdf  used on inpu
 [151]
 
 [152]
+
+[153]
+
+[154]
 Chapter 11.
 
 
-[153
+[155
 
 
 ]
-<pchem1_files/figure-latex/FigPVideal-1.pdf, id=2258, 436.63126pt x 250.9375pt>
+<pchem1_files/figure-latex/FigPVideal-1.pdf, id=2266, 436.63126pt x 250.9375pt>
 File: pchem1_files/figure-latex/FigPVideal-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/FigPVideal-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/FigPVideal-1.pdf  used on input line 5545.
-(pdftex.def)             Requested size: 212.47212pt x 122.1104pt.
+Package pdftex.def Info: pchem1_files/figure-latex/FigPVideal-1.pdf  used on input line 5543.
+(pdftex.def)             Requested size: 212.47194pt x 122.1104pt.
 
 
-[154 <./pchem1_files/figure-latex/FigPVideal-1.pdf>]
-<pchem1_files/figure-latex/FigTVideal-1.pdf, id=2278, 436.63126pt x 252.945pt>
+[156 <./pchem1_files/figure-latex/FigPVideal-1.pdf>]
+<pchem1_files/figure-latex/FigTVideal-1.pdf, id=2286, 436.63126pt x 252.945pt>
 File: pchem1_files/figure-latex/FigTVideal-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/FigTVideal-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/FigTVideal-1.pdf  used on input line 5572.
-(pdftex.def)             Requested size: 212.47212pt x 123.0873pt.
-<pchem1_files/figure-latex/FigTPideal-1.pdf, id=2280, 436.63126pt x 252.945pt>
+Package pdftex.def Info: pchem1_files/figure-latex/FigTVideal-1.pdf  used on input line 5570.
+(pdftex.def)             Requested size: 212.47194pt x 123.0873pt.
+<pchem1_files/figure-latex/FigTPideal-1.pdf, id=2288, 436.63126pt x 252.945pt>
 File: pchem1_files/figure-latex/FigTPideal-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/FigTPideal-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/FigTPideal-1.pdf  used on input line 5599.
-(pdftex.def)             Requested size: 212.47212pt x 123.0873pt.
+Package pdftex.def Info: pchem1_files/figure-latex/FigTPideal-1.pdf  used on input line 5597.
+(pdftex.def)             Requested size: 212.47194pt x 123.0873pt.
 
 
-[155 <./pchem1_files/figure-latex/FigTVideal-1.pdf>]
+[157 <./pchem1_files/figure-latex/FigTVideal-1.pdf>]
 
-[156 <./pchem1_files/figure-latex/FigTPideal-1.pdf>]
+[158 <./pchem1_files/figure-latex/FigTPideal-1.pdf>]
 
-[157] [158]
-<./img/OEP_Figures.015.jpeg, id=2337, 1027.84pt x 637.38126pt>
+[159] [160]
+<./img/OEP_Figures.015.jpeg, id=2345, 1027.84pt x 637.38126pt>
 File: ./img/OEP_Figures.015.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.015.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.015.jpeg  used on input line 5720.
-(pdftex.def)             Requested size: 242.82848pt x 150.5821pt.
+Package pdftex.def Info: ./img/OEP_Figures.015.jpeg  used on input line 5718.
+(pdftex.def)             Requested size: 242.82706pt x 150.5821pt.
 
 
-[159 <./img/OEP_Figures.015.jpeg>]
+[161 <./img/OEP_Figures.015.jpeg>]
 
-[160]
+[162]
 
-[161]
-<./img/OEP_Figures.012.jpeg, id=2373, 1027.84pt x 484.81125pt>
+[163]
+<./img/OEP_Figures.012.jpeg, id=2382, 1027.84pt x 484.81125pt>
 File: ./img/OEP_Figures.012.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.012.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.012.jpeg  used on input line 5839.
-(pdftex.def)             Requested size: 242.82848pt x 114.53726pt.
+Package pdftex.def Info: ./img/OEP_Figures.012.jpeg  used on input line 5837.
+(pdftex.def)             Requested size: 242.82706pt x 114.53726pt.
 
 
-[162 <./img/OEP_Figures.012.jpeg>]
-<./img/OEP_Figures.013.jpeg, id=2383, 1027.84pt x 404.51125pt>
+[164 <./img/OEP_Figures.012.jpeg>]
+<./img/OEP_Figures.013.jpeg, id=2392, 1027.84pt x 404.51125pt>
 File: ./img/OEP_Figures.013.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.013.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.013.jpeg  used on input line 5874.
-(pdftex.def)             Requested size: 273.17616pt x 107.50975pt.
-<./img/OEP_Figures.014.jpeg, id=2384, 645.41125pt x 538.01pt>
+Package pdftex.def Info: ./img/OEP_Figures.013.jpeg  used on input line 5872.
+(pdftex.def)             Requested size: 273.17754pt x 107.50975pt.
+<./img/OEP_Figures.014.jpeg, id=2393, 645.41125pt x 538.01pt>
 File: ./img/OEP_Figures.014.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.014.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.014.jpeg  used on input line 5897.
-(pdftex.def)             Requested size: 182.12221pt x 151.8157pt.
+Package pdftex.def Info: ./img/OEP_Figures.014.jpeg  used on input line 5895.
+(pdftex.def)             Requested size: 182.12144pt x 151.8157pt.
 
 
-[163 <./img/OEP_Figures.013.jpeg>]
-<./img/PVT_3D_diagram.png, id=2398, 651.93562pt x 731.73375pt>
+[165 <./img/OEP_Figures.013.jpeg>]
+<./img/PVT_3D_diagram.png, id=2406, 651.93562pt x 731.73375pt>
 File: ./img/PVT_3D_diagram.png Graphic file (type png)
 <use ./img/PVT_3D_diagram.png>
-Package pdftex.def Info: ./img/PVT_3D_diagram.png  used on input line 5918.
-(pdftex.def)             Requested size: 151.76247pt x 170.33847pt.
+Package pdftex.def Info: ./img/PVT_3D_diagram.png  used on input line 5916.
+(pdftex.def)             Requested size: 151.76633pt x 170.33847pt.
 
 
-[164 <./img/OEP_Figures.014.jpeg>]
+[166 <./img/OEP_Figures.014.jpeg>]
 
-[165 <./img/PVT_3D_diagram.png>]
-
-[166]
-
-[167]
+[167 <./img/PVT_3D_diagram.png>]
 
 [168]
 
@@ -1574,45 +1594,45 @@ Package pdftex.def Info: ./img/PVT_3D_diagram.png  used on input line 5918.
 [173]
 
 [174]
+
+[175]
+
+[176]
 Chapter 12.
 
 
-[175
+[177
 
 
 ]
-<./img/OEP_Figures.016.jpeg, id=2552, 626.34pt x 531.9875pt>
+<./img/OEP_Figures.016.jpeg, id=2560, 626.34pt x 531.9875pt>
 File: ./img/OEP_Figures.016.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.016.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.016.jpeg  used on input line 6424.
-(pdftex.def)             Requested size: 182.12135pt x 154.68642pt.
+Package pdftex.def Info: ./img/OEP_Figures.016.jpeg  used on input line 6422.
+(pdftex.def)             Requested size: 182.12144pt x 154.68642pt.
 
 
-[176]
-<./img/OEP_Figures.017.jpeg, id=2564, 626.34pt x 538.01pt>
+[178]
+<./img/OEP_Figures.017.jpeg, id=2572, 626.34pt x 538.01pt>
 File: ./img/OEP_Figures.017.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.017.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.017.jpeg  used on input line 6436.
-(pdftex.def)             Requested size: 182.12135pt x 156.43758pt.
+Package pdftex.def Info: ./img/OEP_Figures.017.jpeg  used on input line 6434.
+(pdftex.def)             Requested size: 182.12144pt x 156.43758pt.
 
 
-[177 <./img/OEP_Figures.016.jpeg>]
+[179 <./img/OEP_Figures.016.jpeg>]
 
-[178 <./img/OEP_Figures.017.jpeg>]
-
-[179]
-<./img/OEP_Figures.018.jpeg, id=2594, 630.355pt x 587.19376pt>
-File: ./img/OEP_Figures.018.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.018.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.018.jpeg  used on input line 6502.
-(pdftex.def)             Requested size: 182.11536pt x 169.64568pt.
-
-
-[180 <./img/OEP_Figures.018.jpeg>]
+[180 <./img/OEP_Figures.017.jpeg>]
 
 [181]
+<./img/OEP_Figures.018.jpeg, id=2603, 630.355pt x 587.19376pt>
+File: ./img/OEP_Figures.018.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.018.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.018.jpeg  used on input line 6500.
+(pdftex.def)             Requested size: 182.12144pt x 169.64568pt.
 
-[182]
+
+[182 <./img/OEP_Figures.018.jpeg>]
 
 [183]
 
@@ -1624,267 +1644,306 @@ Package pdftex.def Info: ./img/OEP_Figures.018.jpeg  used on input line 6502.
 
 [187]
 
-[188
+[188]
+
+[189]
+
+[190
 
 
 ]
 Chapter 13.
 
 
-[189]
-<./img/OEP_Figures.019.jpeg, id=2728, 661.47125pt x 619.31375pt>
+[191]
+<./img/OEP_Figures.019.jpeg, id=2736, 661.47125pt x 619.31375pt>
 File: ./img/OEP_Figures.019.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.019.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.019.jpeg  used on input line 6867.
-(pdftex.def)             Requested size: 182.11206pt x 170.50552pt.
+Package pdftex.def Info: ./img/OEP_Figures.019.jpeg  used on input line 6865.
+(pdftex.def)             Requested size: 182.12144pt x 170.50552pt.
 
 
-[190]
-<./img/OEP_Figures.020.jpeg, id=2740, 684.5575pt x 629.35126pt>
+[192]
+<./img/OEP_Figures.020.jpeg, id=2748, 684.5575pt x 629.35126pt>
 File: ./img/OEP_Figures.020.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.020.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.020.jpeg  used on input line 6882.
-(pdftex.def)             Requested size: 182.11716pt x 167.4303pt.
+Package pdftex.def Info: ./img/OEP_Figures.020.jpeg  used on input line 6880.
+(pdftex.def)             Requested size: 182.12144pt x 167.4303pt.
 
 
-[191 <./img/OEP_Figures.019.jpeg>]
+[193 <./img/OEP_Figures.019.jpeg>]
 
-[192 <./img/OEP_Figures.020.jpeg>]
-<./img/OEP_Figures.021.jpeg, id=2759, 677.53125pt x 618.31pt>
+[194 <./img/OEP_Figures.020.jpeg>]
+<./img/OEP_Figures.021.jpeg, id=2768, 677.53125pt x 618.31pt>
 File: ./img/OEP_Figures.021.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.021.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.021.jpeg  used on input line 6927.
-(pdftex.def)             Requested size: 182.11916pt x 166.20059pt.
-<./img/OEP_Figures.022.jpeg, id=2762, 683.55376pt x 620.3175pt>
+Package pdftex.def Info: ./img/OEP_Figures.021.jpeg  used on input line 6925.
+(pdftex.def)             Requested size: 182.12144pt x 166.20059pt.
+<./img/OEP_Figures.022.jpeg, id=2771, 683.55376pt x 620.3175pt>
 File: ./img/OEP_Figures.022.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.022.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.022.jpeg  used on input line 6942.
-(pdftex.def)             Requested size: 182.12132pt x 165.27309pt.
+Package pdftex.def Info: ./img/OEP_Figures.022.jpeg  used on input line 6940.
+(pdftex.def)             Requested size: 182.12144pt x 165.27309pt.
 
 
-[193 <./img/OEP_Figures.021.jpeg>]
-<./img/OEP_Figures.023.jpeg, id=2775, 1027.84pt x 770.88pt>
+[195 <./img/OEP_Figures.021.jpeg>]
+<./img/OEP_Figures.023.jpeg, id=2783, 1027.84pt x 770.88pt>
 File: ./img/OEP_Figures.023.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.023.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.023.jpeg  used on input line 6953.
-(pdftex.def)             Requested size: 182.11743pt x 136.58807pt.
+Package pdftex.def Info: ./img/OEP_Figures.023.jpeg  used on input line 6951.
+(pdftex.def)             Requested size: 182.12144pt x 136.58807pt.
 
 
-[194 <./img/OEP_Figures.022.jpeg>]
-<./img/OEP_Figures.024.jpeg, id=2784, 678.535pt x 618.31pt>
+[196 <./img/OEP_Figures.022.jpeg>]
+<./img/OEP_Figures.024.jpeg, id=2792, 678.535pt x 618.31pt>
 File: ./img/OEP_Figures.024.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.024.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.024.jpeg  used on input line 6968.
-(pdftex.def)             Requested size: 182.11977pt x 165.95529pt.
+Package pdftex.def Info: ./img/OEP_Figures.024.jpeg  used on input line 6966.
+(pdftex.def)             Requested size: 182.12144pt x 165.95529pt.
 
 
-[195 <./img/OEP_Figures.023.jpeg>]
-<./img/OEP_Figures.025.jpeg, id=2795, 1027.84pt x 497.86pt>
+[197 <./img/OEP_Figures.023.jpeg>]
+<./img/OEP_Figures.025.jpeg, id=2803, 1027.84pt x 497.86pt>
 File: ./img/OEP_Figures.025.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.025.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.025.jpeg  used on input line 6986.
-(pdftex.def)             Requested size: 242.82848pt x 117.62004pt.
-<./img/OEP_Figures.026.jpeg, id=2798, 1027.84pt x 497.86pt>
+Package pdftex.def Info: ./img/OEP_Figures.025.jpeg  used on input line 6984.
+(pdftex.def)             Requested size: 242.82706pt x 117.62004pt.
+<./img/OEP_Figures.026.jpeg, id=2806, 1027.84pt x 497.86pt>
 File: ./img/OEP_Figures.026.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.026.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.026.jpeg  used on input line 6997.
-(pdftex.def)             Requested size: 242.82848pt x 117.62004pt.
+Package pdftex.def Info: ./img/OEP_Figures.026.jpeg  used on input line 6995.
+(pdftex.def)             Requested size: 242.82706pt x 117.62004pt.
 
 
-[196 <./img/OEP_Figures.024.jpeg>]
+[198 <./img/OEP_Figures.024.jpeg>]
 
-[197 <./img/OEP_Figures.025.jpeg> <./img/OEP_Figures.026.jpeg>]
+[199 <./img/OEP_Figures.025.jpeg> <./img/OEP_Figures.026.jpeg>]
 
-[198]
-
-[199]
-<./img/OEP_Figures.033.jpeg, id=2842, 1027.84pt x 509.905pt>
-File: ./img/OEP_Figures.033.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.033.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.033.jpeg  used on input line 7079.
-(pdftex.def)             Requested size: 242.82848pt x 120.46568pt.
-
-
-[200 <./img/OEP_Figures.033.jpeg>]
+[200]
 
 [201]
-<./img/OEP_Figures.034.jpeg, id=2866, 667.49374pt x 559.08875pt>
-File: ./img/OEP_Figures.034.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.034.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.034.jpeg  used on input line 7140.
-(pdftex.def)             Requested size: 182.12015pt x 152.54274pt.
+<./img/OEP_Figures.033.jpeg, id=2850, 1027.84pt x 509.905pt>
+File: ./img/OEP_Figures.033.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.033.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.033.jpeg  used on input line 7077.
+(pdftex.def)             Requested size: 242.82706pt x 120.46568pt.
 
 
-[202 <./img/OEP_Figures.034.jpeg>]
+[202 <./img/OEP_Figures.033.jpeg>]
 
 [203]
-<./img/OEP_Figures.035.jpeg, id=2887, 1027.84pt x 613.29124pt>
-File: ./img/OEP_Figures.035.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.035.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.035.jpeg  used on input line 7194.
-(pdftex.def)             Requested size: 242.82848pt x 144.89081pt.
+<./img/OEP_Figures.034.jpeg, id=2874, 667.49374pt x 559.08875pt>
+File: ./img/OEP_Figures.034.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.034.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.034.jpeg  used on input line 7138.
+(pdftex.def)             Requested size: 182.12144pt x 152.54274pt.
 
 
-[204 <./img/OEP_Figures.035.jpeg>]
+[204 <./img/OEP_Figures.034.jpeg>]
 
 [205]
+<./img/OEP_Figures.035.jpeg, id=2896, 1027.84pt x 613.29124pt>
+File: ./img/OEP_Figures.035.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.035.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.035.jpeg  used on input line 7192.
+(pdftex.def)             Requested size: 242.82706pt x 144.89081pt.
 
-[206]
+
+[206 <./img/OEP_Figures.035.jpeg>]
 
 [207]
 
 [208]
+
+[209]
+
+[210]
 Chapter 14.
 
 
-[209
+[211
 
 
 ]
-<pchem1_files/figure-latex/figk1-1.pdf, id=2974, 410.53375pt x 276.03125pt>
+<pchem1_files/figure-latex/figk1-1.pdf, id=2983, 410.53375pt x 276.03125pt>
 File: pchem1_files/figure-latex/figk1-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figk1-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk1-1.pdf  used on input line 7449.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figk1-1.pdf  used on input line 7447.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
 
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7447--7448
+ [][] 
+ []
 
-[210]
-Underfull \vbox (badness 1019) has occurred while \output is active []
-
-
-
-[211 <./pchem1_files/figure-latex/figk1-1.pdf>]
-<pchem1_files/figure-latex/figk2-1.pdf, id=3000, 410.53375pt x 276.03125pt>
-File: pchem1_files/figure-latex/figk2-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/figk2-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk2-1.pdf  used on input line 7499.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
-<pchem1_files/figure-latex/figk3-1.pdf, id=3003, 410.53375pt x 276.03125pt>
-File: pchem1_files/figure-latex/figk3-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/figk3-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk3-1.pdf  used on input line 7510.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
 
 
 [212]
 
-[213 <./pchem1_files/figure-latex/figk2-1.pdf>]
+[213 <./pchem1_files/figure-latex/figk1-1.pdf>]
+<pchem1_files/figure-latex/figk2-1.pdf, id=3008, 410.53375pt x 276.03125pt>
+File: pchem1_files/figure-latex/figk2-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figk2-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figk2-1.pdf  used on input line 7497.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
 
-[214 <./pchem1_files/figure-latex/figk3-1.pdf>]
-<pchem1_files/figure-latex/figk4-1.pdf, id=3041, 410.53375pt x 276.03125pt>
-File: pchem1_files/figure-latex/figk4-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/figk4-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk4-1.pdf  used on input line 7559.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7497--7498
+ [][] 
+ []
+
+<pchem1_files/figure-latex/figk3-1.pdf, id=3011, 410.53375pt x 276.03125pt>
+File: pchem1_files/figure-latex/figk3-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figk3-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figk3-1.pdf  used on input line 7508.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
+
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7508--7509
+ [][] 
+ []
 
 
-[215]
 
-[216 <./pchem1_files/figure-latex/figk4-1.pdf>]
+[214]
+
+[215 <./pchem1_files/figure-latex/figk2-1.pdf>]
+
+[216 <./pchem1_files/figure-latex/figk3-1.pdf>]
 
 [217]
+<pchem1_files/figure-latex/figk4-1.pdf, id=3057, 410.53375pt x 276.03125pt>
+File: pchem1_files/figure-latex/figk4-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figk4-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figk4-1.pdf  used on input line 7557.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
+
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7557--7558
+ [][] 
+ []
+
+
 
 [218]
-<pchem1_files/figure-latex/figk5-1.pdf, id=3093, 410.53375pt x 276.03125pt>
+
+[219 <./pchem1_files/figure-latex/figk4-1.pdf>]
+
+[220]
+
+[221]
+<pchem1_files/figure-latex/figk5-1.pdf, id=3106, 410.53375pt x 276.03125pt>
 File: pchem1_files/figure-latex/figk5-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figk5-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk5-1.pdf  used on input line 7682.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
-<pchem1_files/figure-latex/figk6-1.pdf, id=3095, 410.53375pt x 276.03125pt>
+Package pdftex.def Info: pchem1_files/figure-latex/figk5-1.pdf  used on input line 7680.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
+
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7680--7681
+ [][] 
+ []
+
+<pchem1_files/figure-latex/figk6-1.pdf, id=3108, 410.53375pt x 276.03125pt>
 File: pchem1_files/figure-latex/figk6-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figk6-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk6-1.pdf  used on input line 7693.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figk6-1.pdf  used on input line 7691.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
 
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7691--7692
+ [][] 
+ []
 
-[219]
-
-[220 <./pchem1_files/figure-latex/figk5-1.pdf>]
-
-[221 <./pchem1_files/figure-latex/figk6-1.pdf>]
-<pchem1_files/figure-latex/figk7-1.pdf, id=3131, 410.53375pt x 276.03125pt>
-File: pchem1_files/figure-latex/figk7-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/figk7-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk7-1.pdf  used on input line 7740.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
 
 
 [222]
 
-[223 <./pchem1_files/figure-latex/figk7-1.pdf>]
-<pchem1_files/figure-latex/figkK-1.pdf, id=3156, 410.53375pt x 276.03125pt>
+[223 <./pchem1_files/figure-latex/figk5-1.pdf>]
+
+[224 <./pchem1_files/figure-latex/figk6-1.pdf>]
+<pchem1_files/figure-latex/figk7-1.pdf, id=3145, 410.53375pt x 276.03125pt>
+File: pchem1_files/figure-latex/figk7-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figk7-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figk7-1.pdf  used on input line 7738.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
+
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7738--7739
+ [][] 
+ []
+
+
+
+[225]
+
+[226 <./pchem1_files/figure-latex/figk7-1.pdf>]
+<pchem1_files/figure-latex/figkK-1.pdf, id=3170, 410.53375pt x 276.03125pt>
 File: pchem1_files/figure-latex/figkK-1.pdf Graphic file (type pdf)
 <use pchem1_files/figure-latex/figkK-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figkK-1.pdf  used on input line 7786.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
+Package pdftex.def Info: pchem1_files/figure-latex/figkK-1.pdf  used on input line 7784.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
 
-
-[224]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[225 <./pchem1_files/figure-latex/figkK-1.pdf>]
-Overfull \hbox (15.39172pt too wide) in paragraph at lines 7843--7843
-[]|\T1/lmr/bx/n/5 Differential 
- []
-
-
-Overfull \hbox (12.32228pt too wide) in paragraph at lines 7844--7844
-[]|\T1/lmr/bx/n/5 Integrated 
- []
-
-
-
-[226]
-Overfull \hbox (11.83899pt too wide) in paragraph at lines 7889--7889
-[]|$[]$|  
- []
-
-
-Overfull \hbox (11.83899pt too wide) in paragraph at lines 7890--7890
-[]|$[]$|  
- []
-
-
-Overfull \hbox (11.83899pt too wide) in paragraph at lines 7891--7891
-[]|$[]$|  
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7784--7785
+ [][] 
  []
 
 
 
 [227]
 
-[228]
-<pchem1_files/figure-latex/figk8-1.pdf, id=3212, 410.53375pt x 276.03125pt>
-File: pchem1_files/figure-latex/figk8-1.pdf Graphic file (type pdf)
-<use pchem1_files/figure-latex/figk8-1.pdf>
-Package pdftex.def Info: pchem1_files/figure-latex/figk8-1.pdf  used on input line 7977.
-(pdftex.def)             Requested size: 303.53339pt x 204.08722pt.
+[228 <./pchem1_files/figure-latex/figkK-1.pdf>]
+Overfull \hbox (15.39172pt too wide) in paragraph at lines 7841--7841
+[]|\T1/lmr/bx/n/5 Differential 
+ []
 
 
-[229]
-
-[230 <./pchem1_files/figure-latex/figk8-1.pdf>]
-<./img/Rxn_coordinate_diagram_5.png, id=3237, 854.19125pt x 542.025pt>
-File: ./img/Rxn_coordinate_diagram_5.png Graphic file (type png)
-<use ./img/Rxn_coordinate_diagram_5.png>
-Package pdftex.def Info: ./img/Rxn_coordinate_diagram_5.png  used on input line 7988.
-(pdftex.def)             Requested size: 212.46547pt x 134.81944pt.
-
-
-[231 <./img/Rxn_coordinate_diagram_5.png>]
-Underfull \hbox (badness 2717) in paragraph at lines 8039--8040
-[]\T1/lmr/m/n/9 Calculate the half-life of a first-order re-ac-tion with rate con-stant
+Overfull \hbox (12.32228pt too wide) in paragraph at lines 7842--7842
+[]|\T1/lmr/bx/n/5 Integrated 
  []
 
 
 
+[229]
+Overfull \hbox (11.83899pt too wide) in paragraph at lines 7887--7887
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (11.83899pt too wide) in paragraph at lines 7888--7888
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (11.83899pt too wide) in paragraph at lines 7889--7889
+[]|$[]$|  
+ []
+
+
+
+[230]
+
+[231]
+
 [232]
+<pchem1_files/figure-latex/figk8-1.pdf, id=3231, 410.53375pt x 276.03125pt>
+File: pchem1_files/figure-latex/figk8-1.pdf Graphic file (type pdf)
+<use pchem1_files/figure-latex/figk8-1.pdf>
+Package pdftex.def Info: pchem1_files/figure-latex/figk8-1.pdf  used on input line 7975.
+(pdftex.def)             Requested size: 410.53275pt x 276.03056pt.
 
-[233]
+Overfull \hbox (107.00008pt too wide) in paragraph at lines 7975--7976
+ [][] 
+ []
 
-[234]
+
+
+[233 <./pchem1_files/figure-latex/figk8-1.pdf>]
+<./img/Rxn_coordinate_diagram_5.png, id=3249, 854.19125pt x 542.025pt>
+File: ./img/Rxn_coordinate_diagram_5.png Graphic file (type png)
+<use ./img/Rxn_coordinate_diagram_5.png>
+Package pdftex.def Info: ./img/Rxn_coordinate_diagram_5.png  used on input line 7986.
+(pdftex.def)             Requested size: 212.47194pt x 134.81944pt.
+
+
+[234 <./img/Rxn_coordinate_diagram_5.png>]
+Underfull \hbox (badness 2717) in paragraph at lines 8037--8038
+[]\T1/lmr/m/n/9 Calculate the half-life of a first-order re-ac-tion with rate con-stant
+ []
+
+
 
 [235]
 
@@ -1893,388 +1952,406 @@ Underfull \hbox (badness 2717) in paragraph at lines 8039--8040
 [237]
 
 [238]
+
+[239]
+
+[240]
+
+[241]
+
+[242
+
+
+]
 Chapter 15.
 
-Overfull \hbox (2.95058pt too wide) in paragraph at lines 8400--8401
+Overfull \hbox (2.95058pt too wide) in paragraph at lines 8398--8399
 []\T1/lmr/m/n/5 Substance:  
  []
 
 
-Overfull \hbox (5.17339pt too wide) in paragraph at lines 8422--8422
+Overfull \hbox (5.17339pt too wide) in paragraph at lines 8420--8420
 []|\T1/lmr/m/n/5 Ag$[]$CO$[]$(s)|  
  []
 
 
-Overfull \hbox (1.38173pt too wide) in paragraph at lines 8423--8423
+Overfull \hbox (1.38173pt too wide) in paragraph at lines 8421--8421
 []|\T1/lmr/m/n/5 AgNO$[]$(s)|  
  []
 
 
-Overfull \hbox (5.4094pt too wide) in paragraph at lines 8437--8437
+Overfull \hbox (5.4094pt too wide) in paragraph at lines 8435--8435
 []|\T1/lmr/m/n/5 Al(OH)$[]$(s)|  
  []
 
 
-Overfull \hbox (12.50705pt too wide) in paragraph at lines 8438--8438
+Overfull \hbox (12.50705pt too wide) in paragraph at lines 8436--8436
 []|\T1/lmr/m/n/5 Al(OH)$[]$$[]$(aq)|  
  []
 
 
-Overfull \hbox (1.04138pt too wide) in paragraph at lines 8448--8448
+Overfull \hbox (1.04138pt too wide) in paragraph at lines 8446--8446
 []|\T1/lmr/m/n/5 BaCO$[]$(s)|  
  []
 
 
-Overfull \hbox (6.22197pt too wide) in paragraph at lines 8463--8463
+Overfull \hbox (6.22197pt too wide) in paragraph at lines 8461--8461
 []|\T1/lmr/m/n/5 Be(OH)$[]$(s)|  
  []
 
 
-Overfull \hbox (11.49239pt too wide) in paragraph at lines 8477--8477
+Overfull \hbox (11.49239pt too wide) in paragraph at lines 8475--8475
 []|\T1/lmr/m/n/5 C(s,diamond)|  
  []
 
 
-Overfull \hbox (10.72864pt too wide) in paragraph at lines 8478--8478
+Overfull \hbox (10.72864pt too wide) in paragraph at lines 8476--8476
 []|\T1/lmr/m/n/5 C(s,graphite)|  
  []
 
 
-Overfull \hbox (3.52054pt too wide) in paragraph at lines 8481--8481
+Overfull \hbox (3.52054pt too wide) in paragraph at lines 8479--8479
 []|\T1/lmr/m/n/5 CCl$[]$F$[]$(g)|  
  []
 
 
-Overfull \hbox (6.68704pt too wide) in paragraph at lines 8492--8492
+Overfull \hbox (6.68704pt too wide) in paragraph at lines 8490--8490
 []|\T1/lmr/m/n/5 Ca(OH)$[]$(s)|  
  []
 
 
-Overfull \hbox (18.10439pt too wide) in paragraph at lines 8496--8496
+Overfull \hbox (18.10439pt too wide) in paragraph at lines 8494--8494
 []|\T1/lmr/m/n/5 CaCO$[]$(s,arag.)|  
  []
 
 
-Overfull \hbox (16.71524pt too wide) in paragraph at lines 8497--8497
+Overfull \hbox (16.71524pt too wide) in paragraph at lines 8495--8495
 []|\T1/lmr/m/n/5 CaCO$[]$(s,calc.)|  
  []
 
 
-Overfull \hbox (1.50604pt too wide) in paragraph at lines 8507--8507
+Overfull \hbox (1.50604pt too wide) in paragraph at lines 8505--8505
 []|\T1/lmr/m/n/5 CdCO$[]$(s)|  
  []
 
 
-Overfull \hbox (4.96524pt too wide) in paragraph at lines 8575--8575
+Overfull \hbox (4.96524pt too wide) in paragraph at lines 8573--8573
 []|\T1/lmr/m/n/5 H$[]$SO$[]$(aq)|  
  []
 
 
-Overfull \hbox (0.74973pt too wide) in paragraph at lines 8577--8577
+Overfull \hbox (0.74973pt too wide) in paragraph at lines 8575--8575
 []|\T1/lmr/m/n/5 H$[]$PO$[]$(l)|  
  []
 
 
-Overfull \hbox (1.47871pt too wide) in paragraph at lines 8578--8578
+Overfull \hbox (1.47871pt too wide) in paragraph at lines 8576--8576
 []|\T1/lmr/m/n/5 H$[]$PO$[]$(s)|  
  []
 
 
-Overfull \hbox (2.21524pt too wide) in paragraph at lines 8591--8591
+Overfull \hbox (2.21524pt too wide) in paragraph at lines 8589--8589
 []|\T1/lmr/m/n/5 HNO$[]$(aq)|  
  []
 
 
-Overfull \hbox (2.71465pt too wide) in paragraph at lines 8599--8599
+Overfull \hbox (2.71465pt too wide) in paragraph at lines 8597--8597
 []|\T1/lmr/m/n/5 HgS(s,red)|  
  []
 
 
-Overfull \hbox (4.13173pt too wide) in paragraph at lines 8600--8600
+Overfull \hbox (4.13173pt too wide) in paragraph at lines 8598--8598
 []|\T1/lmr/m/n/5 Hg$[]$SO$[]$(s)|  
  []
 
 
-Overfull \hbox (2.04839pt too wide) in paragraph at lines 8602--8602
+Overfull \hbox (2.04839pt too wide) in paragraph at lines 8600--8600
 []|\T1/lmr/m/n/5 Hg$[]$Cl$[]$(s)|  
  []
 
 
-Overfull \hbox (2.62505pt too wide) in paragraph at lines 8604--8604
+Overfull \hbox (2.62505pt too wide) in paragraph at lines 8602--8602
 []|\T1/lmr/m/n/5 Hg$[]$Br$[]$(s)|  
  []
 
 
-Overfull \hbox (1.9439pt too wide) in paragraph at lines 8618--8618
+Overfull \hbox (1.9439pt too wide) in paragraph at lines 8616--8616
 []|\T1/lmr/m/n/5 K$[]$CO$[]$(s)|  
  []
 
 
-Overfull \hbox (0.90224pt too wide) in paragraph at lines 8621--8621
+Overfull \hbox (0.90224pt too wide) in paragraph at lines 8619--8619
 []|\T1/lmr/m/n/5 K$[]$SO$[]$(s)|  
  []
 
 
-Overfull \hbox (2.94374pt too wide) in paragraph at lines 8627--8627
+Overfull \hbox (2.94374pt too wide) in paragraph at lines 8625--8625
 []|\T1/lmr/m/n/5 KMnO$[]$(s)|  
  []
 
 
-Overfull \hbox (7.83989pt too wide) in paragraph at lines 8645--8645
+Overfull \hbox (7.83989pt too wide) in paragraph at lines 8643--8643
 []|\T1/lmr/m/n/5 Mg(OH)$[]$(s)|  
  []
 
 
-Overfull \hbox (1.27023pt too wide) in paragraph at lines 8647--8647
+Overfull \hbox (1.27023pt too wide) in paragraph at lines 8645--8645
 []|\T1/lmr/m/n/5 MgSO$[]$(s)|  
  []
 
 
-Overfull \hbox (6.00674pt too wide) in paragraph at lines 8655--8655
+Overfull \hbox (6.00674pt too wide) in paragraph at lines 8653--8653
 []|\T1/lmr/m/n/5 MnO$[]$$[]$(aq)|  
  []
 
 
-Overfull \hbox (2.71524pt too wide) in paragraph at lines 8668--8668
+Overfull \hbox (2.71524pt too wide) in paragraph at lines 8666--8666
 []|\T1/lmr/m/n/5 NH$[]$$[]$(aq)|  
  []
 
 
-Overfull \hbox (6.78473pt too wide) in paragraph at lines 8670--8670
+Overfull \hbox (6.78473pt too wide) in paragraph at lines 8668--8668
 []|\T1/lmr/m/n/5 NH$[]$NO$[]$(s)|  
  []
 
 
-Overfull \hbox (2.15274pt too wide) in paragraph at lines 8671--8671
+Overfull \hbox (2.15274pt too wide) in paragraph at lines 8669--8669
 []|\T1/lmr/m/n/5 NH$[]$OH(l)|  
  []
 
 
-Overfull \hbox (14.95139pt too wide) in paragraph at lines 8672--8672
+Overfull \hbox (14.95139pt too wide) in paragraph at lines 8670--8670
 []|\T1/lmr/m/n/5 (NH$[]$)$[]$SO$[]$(s)|  
  []
 
 
-Overfull \hbox (5.17339pt too wide) in paragraph at lines 8683--8683
+Overfull \hbox (5.17339pt too wide) in paragraph at lines 8681--8681
 []|\T1/lmr/m/n/5 Na$[]$CO$[]$(s)|  
  []
 
 
-Overfull \hbox (4.13173pt too wide) in paragraph at lines 8686--8686
+Overfull \hbox (4.13173pt too wide) in paragraph at lines 8684--8684
 []|\T1/lmr/m/n/5 Na$[]$SO$[]$(s)|  
  []
 
 
-Overfull \hbox (5.61824pt too wide) in paragraph at lines 8696--8696
+Overfull \hbox (5.61824pt too wide) in paragraph at lines 8694--8694
 []|\T1/lmr/m/n/5 NaNO$[]$(aq)|  
  []
 
 
-Overfull \hbox (1.38173pt too wide) in paragraph at lines 8697--8697
+Overfull \hbox (1.38173pt too wide) in paragraph at lines 8695--8695
 []|\T1/lmr/m/n/5 NaNO$[]$(s)|  
  []
 
 
-Overfull \hbox (5.4094pt too wide) in paragraph at lines 8705--8705
+Overfull \hbox (5.4094pt too wide) in paragraph at lines 8703--8703
 []|\T1/lmr/m/n/5 Ni(OH)$[]$(s)|  
  []
 
 
-Overfull \hbox (2.6243pt too wide) in paragraph at lines 8718--8718
+Overfull \hbox (2.6243pt too wide) in paragraph at lines 8716--8716
 []|\T1/lmr/m/n/5 P(g,white)|  
  []
 
 
-Overfull \hbox (1.27019pt too wide) in paragraph at lines 8719--8719
+Overfull \hbox (1.27019pt too wide) in paragraph at lines 8717--8717
 []|\T1/lmr/m/n/5 P(s,black)|  
  []
 
 
-Overfull \hbox (1.9643pt too wide) in paragraph at lines 8721--8721
+Overfull \hbox (1.9643pt too wide) in paragraph at lines 8719--8719
 []|\T1/lmr/m/n/5 P(s,white)|  
  []
 
 
-Overfull \hbox (1.21437pt too wide) in paragraph at lines 8733--8733
+Overfull \hbox (1.21437pt too wide) in paragraph at lines 8731--8731
 []|\T1/lmr/m/n/5 PbCO$[]$(s)|  
  []
 
 
-Overfull \hbox (17.58998pt too wide) in paragraph at lines 8734--8734
+Overfull \hbox (17.58998pt too wide) in paragraph at lines 8732--8732
 []|\T1/lmr/m/n/5 PbO(s,litharge)|  
  []
 
 
-Overfull \hbox (15.99231pt too wide) in paragraph at lines 8735--8735
+Overfull \hbox (15.99231pt too wide) in paragraph at lines 8733--8733
 []|\T1/lmr/m/n/5 PbO(s,massic.)|  
  []
 
 
-Overfull \hbox (14.88188pt too wide) in paragraph at lines 8737--8737
+Overfull \hbox (14.88188pt too wide) in paragraph at lines 8735--8735
 []|\T1/lmr/m/n/5 Pb(NO$[]$)$[]$(aq)|  
  []
 
 
-Overfull \hbox (10.64537pt too wide) in paragraph at lines 8738--8738
+Overfull \hbox (10.64537pt too wide) in paragraph at lines 8736--8736
 []|\T1/lmr/m/n/5 Pb(NO$[]$)$[]$(s)|  
  []
 
 
-Overfull \hbox (9.54802pt too wide) in paragraph at lines 8744--8744
+Overfull \hbox (9.54802pt too wide) in paragraph at lines 8742--8742
 []|\T1/lmr/m/n/5 S(g,rhombic)|  
  []
 
 
-Overfull \hbox (8.88802pt too wide) in paragraph at lines 8745--8745
+Overfull \hbox (8.88802pt too wide) in paragraph at lines 8743--8743
 []|\T1/lmr/m/n/5 S(s,rhombic)|  
  []
 
 
-Overfull \hbox (3.46524pt too wide) in paragraph at lines 8748--8748
+Overfull \hbox (3.46524pt too wide) in paragraph at lines 8746--8746
 []|\T1/lmr/m/n/5 SO$[]$$[]$(aq)|  
  []
 
 
-Overfull \hbox (1.52753pt too wide) in paragraph at lines 8750--8750
+Overfull \hbox (1.52753pt too wide) in paragraph at lines 8748--8748
 []|\T1/lmr/m/n/5 Se(g,gray)|  
  []
 
 
-Overfull \hbox (0.86752pt too wide) in paragraph at lines 8751--8751
+Overfull \hbox (0.86752pt too wide) in paragraph at lines 8749--8749
 []|\T1/lmr/m/n/5 Se(s,gray)|  
  []
 
 
-Overfull \hbox (7.32558pt too wide) in paragraph at lines 8754--8754
+Overfull \hbox (7.32558pt too wide) in paragraph at lines 8752--8752
 []|\T1/lmr/m/n/5 SiC(s,cubic)|  
  []
 
 
-Overfull \hbox (10.9025pt too wide) in paragraph at lines 8755--8755
+Overfull \hbox (10.9025pt too wide) in paragraph at lines 8753--8753
 []|\T1/lmr/m/n/5 SiC(s,hexag.)|  
  []
 
 
-Overfull \hbox (5.62431pt too wide) in paragraph at lines 8759--8759
+Overfull \hbox (5.62431pt too wide) in paragraph at lines 8757--8757
 []|\T1/lmr/m/n/5 Sn(g,white)|  
  []
 
 
-Overfull \hbox (1.56194pt too wide) in paragraph at lines 8760--8760
+Overfull \hbox (1.56194pt too wide) in paragraph at lines 8758--8758
 []|\T1/lmr/m/n/5 Sn(s,gray)|  
  []
 
 
-Overfull \hbox (4.96431pt too wide) in paragraph at lines 8761--8761
+Overfull \hbox (4.96431pt too wide) in paragraph at lines 8759--8759
 []|\T1/lmr/m/n/5 Sn(s,white)|  
  []
 
 
-Overfull \hbox (10.24272pt too wide) in paragraph at lines 8793--8793
+Overfull \hbox (10.24272pt too wide) in paragraph at lines 8791--8791
 []|\T1/lmr/m/n/5 Zn(NO$[]$)$[]$(s)|  
  []
 
 
-Overfull \hbox (16.18pt too wide) in paragraph at lines 8794--8794
+Overfull \hbox (16.18pt too wide) in paragraph at lines 8792--8792
 []|\T1/lmr/m/n/5 ZnS(s,sphaler.)|  
  []
 
-[239
-
-
-] [240] [241] [242] [243] [244] [245] [246] [247] [248]
-Overfull \hbox (6.3922pt too wide) in paragraph at lines 8813--8814
+[243] [244] [245] [246] [247] [248] [249] [250] [251] [252]
+Overfull \hbox (6.3922pt too wide) in paragraph at lines 8811--8812
 []\T1/lmr/m/n/5 Formula:  
  []
 
 
-Overfull \hbox (0.96182pt too wide) in paragraph at lines 8833--8833
+Overfull \hbox (0.96182pt too wide) in paragraph at lines 8831--8831
 []|\T1/lmr/m/n/5 CHBr$[]$|  
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8836--8836
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8834--8834
 []|\T1/lmr/m/n/5 CH$[]$O$[]$|  
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8837--8837
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8835--8835
 []|\T1/lmr/m/n/5 CH$[]$O$[]$|  
  []
 
 
-Overfull \hbox (0.96182pt too wide) in paragraph at lines 8839--8839
+Overfull \hbox (0.96182pt too wide) in paragraph at lines 8837--8837
 []|\T1/lmr/m/n/5 CH$[]$Br|  
  []
 
 
-Overfull \hbox (2.26622pt too wide) in paragraph at lines 8839--8839
+Overfull \hbox (2.26622pt too wide) in paragraph at lines 8837--8837
 []|\T1/lmr/m/n/5 Bromomethane(l)|  
  []
 
 
-Overfull \hbox (0.96182pt too wide) in paragraph at lines 8840--8840
+Overfull \hbox (0.96182pt too wide) in paragraph at lines 8838--8838
 []|\T1/lmr/m/n/5 CH$[]$Br|  
  []
 
 
-Overfull \hbox (3.65521pt too wide) in paragraph at lines 8840--8840
+Overfull \hbox (3.65521pt too wide) in paragraph at lines 8838--8838
 []|\T1/lmr/m/n/5 Bromomethane(g)|  
  []
 
 
-Overfull \hbox (4.05089pt too wide) in paragraph at lines 8841--8841
+Overfull \hbox (4.05089pt too wide) in paragraph at lines 8839--8839
 []|\T1/lmr/m/n/5 Chloromethane(g)|  
  []
 
 
-Overfull \hbox (7.5245pt too wide) in paragraph at lines 8845--8845
+Overfull \hbox (7.5245pt too wide) in paragraph at lines 8843--8843
 []|\T1/lmr/m/n/5 CH$[]$NO$[]$|  
  []
 
 
-Overfull \hbox (7.0245pt too wide) in paragraph at lines 8846--8846
+Overfull \hbox (7.0245pt too wide) in paragraph at lines 8844--8844
 []|\T1/lmr/m/n/5 CH$[]$NO2|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8854--8854
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8852--8852
 []|\T1/lmr/m/n/5 C$[]$H4O$[]$|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8855--8855
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8853--8853
 []|\T1/lmr/m/n/5 C$[]$H4O$[]$|  
  []
 
 
-Overfull \hbox (4.86482pt too wide) in paragraph at lines 8856--8856
+Overfull \hbox (4.86482pt too wide) in paragraph at lines 8854--8854
 []|\T1/lmr/m/n/5 C$[]$H$[]$Br|  
  []
 
 
-Overfull \hbox (4.86482pt too wide) in paragraph at lines 8857--8857
+Overfull \hbox (4.86482pt too wide) in paragraph at lines 8855--8855
 []|\T1/lmr/m/n/5 C$[]$H$[]$Br|  
  []
 
 
-Overfull \hbox (4.28816pt too wide) in paragraph at lines 8858--8858
+Overfull \hbox (4.28816pt too wide) in paragraph at lines 8856--8856
 []|\T1/lmr/m/n/5 C$[]$H$[]$Cl|  
  []
 
 
-Overfull \hbox (4.28816pt too wide) in paragraph at lines 8859--8859
+Overfull \hbox (4.28816pt too wide) in paragraph at lines 8857--8857
 []|\T1/lmr/m/n/5 C$[]$H$[]$Cl|  
  []
 
 
-Overfull \hbox (10.9275pt too wide) in paragraph at lines 8860--8860
+Overfull \hbox (10.9275pt too wide) in paragraph at lines 8858--8858
 []|\T1/lmr/m/n/5 C2H$[]$NO$[]$|  
  []
 
 
-Overfull \hbox (10.9275pt too wide) in paragraph at lines 8861--8861
+Overfull \hbox (10.9275pt too wide) in paragraph at lines 8859--8859
 []|\T1/lmr/m/n/5 C2H$[]$NO$[]$|  
+ []
+
+
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8861--8861
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+ []
+
+
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8862--8862
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
@@ -2283,58 +2360,58 @@ Overfull \hbox (2.6215pt too wide) in paragraph at lines 8863--8863
  []
 
 
+Overfull \hbox (8.43271pt too wide) in paragraph at lines 8863--8863
+[]|\T1/lmr/m/n/5 Methoxymethane(l)|  
+ []
+
+
 Overfull \hbox (2.6215pt too wide) in paragraph at lines 8864--8864
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8865--8865
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (8.43271pt too wide) in paragraph at lines 8865--8865
-[]|\T1/lmr/m/n/5 Methoxymethane(l)|  
- []
-
-
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8866--8866
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (9.8217pt too wide) in paragraph at lines 8866--8866
+Overfull \hbox (9.8217pt too wide) in paragraph at lines 8864--8864
 []|\T1/lmr/m/n/5 Methoxymethane(g)|  
  []
 
 
-Overfull \hbox (2.3855pt too wide) in paragraph at lines 8867--8867
+Overfull \hbox (2.3855pt too wide) in paragraph at lines 8865--8865
 []|\T1/lmr/m/n/5 C$[]$H$[]$N|  
  []
 
 
-Overfull \hbox (2.3855pt too wide) in paragraph at lines 8868--8868
+Overfull \hbox (2.3855pt too wide) in paragraph at lines 8866--8866
 []|\T1/lmr/m/n/5 C$[]$H$[]$N|  
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8874--8874
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8872--8872
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8875--8875
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8873--8873
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (6.5245pt too wide) in paragraph at lines 8876--8876
+Overfull \hbox (6.5245pt too wide) in paragraph at lines 8874--8874
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (6.5245pt too wide) in paragraph at lines 8877--8877
+Overfull \hbox (6.5245pt too wide) in paragraph at lines 8875--8875
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8878--8878
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+ []
+
+
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8879--8879
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
@@ -2348,28 +2425,33 @@ Overfull \hbox (2.6215pt too wide) in paragraph at lines 8881--8881
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8882--8882
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8883--8883
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (2.3855pt too wide) in paragraph at lines 8884--8884
+Overfull \hbox (2.3855pt too wide) in paragraph at lines 8882--8882
 []|\T1/lmr/m/n/5 C$[]$H$[]$N|  
  []
 
 
-Overfull \hbox (6.5245pt too wide) in paragraph at lines 8895--8895
+Overfull \hbox (6.5245pt too wide) in paragraph at lines 8893--8893
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (6.5245pt too wide) in paragraph at lines 8896--8896
+Overfull \hbox (6.5245pt too wide) in paragraph at lines 8894--8894
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8895--8895
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (3.46762pt too wide) in paragraph at lines 8895--8895
+\T1/lmr/m/n/5 Methylpropane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8896--8896
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -2378,18 +2460,13 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8897--8897
  []
 
 
-Overfull \hbox (3.46762pt too wide) in paragraph at lines 8897--8897
-\T1/lmr/m/n/5 Methylpropane(g)|  
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8898--8898
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8898--8898
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8899--8899
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8899--8899
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
@@ -2403,13 +2480,13 @@ Overfull \hbox (6.0245pt too wide) in paragraph at lines 8901--8901
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8902--8902
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8906--8906
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8903--8903
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8907--8907
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -2433,23 +2510,28 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8911--8911
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8912--8912
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8913--8913
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8914--8914
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8912--8912
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8915--8915
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8913--8913
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8914--8914
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (10.0441pt too wide) in paragraph at lines 8914--8914
+\T1/lmr/m/n/5 Dimethylpropane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8915--8915
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -2458,23 +2540,18 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8916--8916
  []
 
 
-Overfull \hbox (10.0441pt too wide) in paragraph at lines 8916--8916
-\T1/lmr/m/n/5 Dimethylpropane(g)|  
- []
-
-
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8917--8917
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8918--8918
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8918--8918
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8919--8919
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8919--8919
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
@@ -2503,28 +2580,28 @@ Overfull \hbox (6.0245pt too wide) in paragraph at lines 8924--8924
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8925--8925
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
 Overfull \hbox (6.0245pt too wide) in paragraph at lines 8926--8926
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8928--8928
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (2.3855pt too wide) in paragraph at lines 8932--8932
+Overfull \hbox (2.3855pt too wide) in paragraph at lines 8930--8930
 []|\T1/lmr/m/n/5 C$[]$H$[]$N|  
  []
 
 
-Overfull \hbox (2.3855pt too wide) in paragraph at lines 8933--8933
+Overfull \hbox (2.3855pt too wide) in paragraph at lines 8931--8931
 []|\T1/lmr/m/n/5 C$[]$H$[]$N|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8932--8932
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8933--8933
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -2568,38 +2645,48 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8941--8941
  []
 
 
+Overfull \hbox (18.22488pt too wide) in paragraph at lines 8941--8941
+[]|\T1/lmr/m/n/5 Methylcyclopentane(g)|  
+ []
+
+
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8942--8942
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8943--8943
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (18.22488pt too wide) in paragraph at lines 8943--8943
-[]|\T1/lmr/m/n/5 Methylcyclopentane(g)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8944--8944
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (16.83589pt too wide) in paragraph at lines 8944--8944
+Overfull \hbox (16.83589pt too wide) in paragraph at lines 8942--8942
 []|\T1/lmr/m/n/5 Methylcyclopentane(l)|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8945--8945
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8943--8943
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8946--8946
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8944--8944
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8945--8945
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (6.6411pt too wide) in paragraph at lines 8945--8945
+\T1/lmr/m/n/5 Dimethylbutane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8946--8946
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (5.2521pt too wide) in paragraph at lines 8946--8946
+\T1/lmr/m/n/5 Dimethylbutane(l)|  
  []
 
 
@@ -2608,8 +2695,8 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8947--8947
  []
 
 
-Overfull \hbox (6.6411pt too wide) in paragraph at lines 8947--8947
-\T1/lmr/m/n/5 Dimethylbutane(g)|  
+Overfull \hbox (3.1202pt too wide) in paragraph at lines 8947--8947
+\T1/lmr/m/n/5 Methylpentane(g)|  
  []
 
 
@@ -2618,8 +2705,8 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8948--8948
  []
 
 
-Overfull \hbox (5.2521pt too wide) in paragraph at lines 8948--8948
-\T1/lmr/m/n/5 Dimethylbutane(l)|  
+Overfull \hbox (1.7312pt too wide) in paragraph at lines 8948--8948
+\T1/lmr/m/n/5 Methylpentane(l)|  
  []
 
 
@@ -2648,28 +2735,18 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8951--8951
  []
 
 
-Overfull \hbox (3.1202pt too wide) in paragraph at lines 8951--8951
-\T1/lmr/m/n/5 Methylpentane(g)|  
- []
-
-
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8952--8952
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (1.7312pt too wide) in paragraph at lines 8952--8952
-\T1/lmr/m/n/5 Methylpentane(l)|  
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8953--8953
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8953--8953
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8954--8954
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8954--8954
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
@@ -2683,33 +2760,33 @@ Overfull \hbox (6.0245pt too wide) in paragraph at lines 8956--8956
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8957--8957
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8957--8957
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8958--8958
+Overfull \hbox (2.6215pt too wide) in paragraph at lines 8958--8958
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8959--8959
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (2.6215pt too wide) in paragraph at lines 8960--8960
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (1.90468pt too wide) in paragraph at lines 8961--8961
+Overfull \hbox (1.90468pt too wide) in paragraph at lines 8959--8959
 []|\T1/lmr/m/n/5 Methylbenzene(l)|  
  []
 
 
-Overfull \hbox (3.29367pt too wide) in paragraph at lines 8962--8962
+Overfull \hbox (3.29367pt too wide) in paragraph at lines 8960--8960
 []|\T1/lmr/m/n/5 Methylbenzene(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8961--8961
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8962--8962
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -2728,8 +2805,18 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8965--8965
  []
 
 
+Overfull \hbox (12.33578pt too wide) in paragraph at lines 8965--8965
+[]|\T1/lmr/m/n/5 Ethylcyclopentane(l)|  
+ []
+
+
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8966--8966
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (13.72478pt too wide) in paragraph at lines 8966--8966
+[]|\T1/lmr/m/n/5 Ethylcyclopentane(g)|  
  []
 
 
@@ -2738,8 +2825,8 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8967--8967
  []
 
 
-Overfull \hbox (12.33578pt too wide) in paragraph at lines 8967--8967
-[]|\T1/lmr/m/n/5 Ethylcyclopentane(l)|  
+Overfull \hbox (15.34308pt too wide) in paragraph at lines 8967--8967
+[]|\T1/lmr/m/n/5 Methylcyclohexane(g)|  
  []
 
 
@@ -2748,38 +2835,38 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8968--8968
  []
 
 
-Overfull \hbox (13.72478pt too wide) in paragraph at lines 8968--8968
-[]|\T1/lmr/m/n/5 Ethylcyclopentane(g)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8969--8969
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (15.34308pt too wide) in paragraph at lines 8969--8969
-[]|\T1/lmr/m/n/5 Methylcyclohexane(g)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8970--8970
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (13.95409pt too wide) in paragraph at lines 8970--8970
+Overfull \hbox (13.95409pt too wide) in paragraph at lines 8968--8968
 []|\T1/lmr/m/n/5 Methylcyclohexane(l)|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8971--8971
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8969--8969
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8972--8972
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8970--8970
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8971--8971
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (9.69667pt too wide) in paragraph at lines 8971--8971
+\T1/lmr/m/n/5 Dimethylpentane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8972--8972
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (8.30768pt too wide) in paragraph at lines 8972--8972
+\T1/lmr/m/n/5 Dimethylpentane(l)|  
  []
 
 
@@ -2788,18 +2875,8 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8973--8973
  []
 
 
-Overfull \hbox (9.69667pt too wide) in paragraph at lines 8973--8973
-\T1/lmr/m/n/5 Dimethylpentane(g)|  
- []
-
-
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8974--8974
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (8.30768pt too wide) in paragraph at lines 8974--8974
-\T1/lmr/m/n/5 Dimethylpentane(l)|  
  []
 
 
@@ -2823,23 +2900,23 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8978--8978
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8979--8979
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8980--8980
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8981--8981
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8979--8979
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8982--8982
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8980--8980
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8981--8981
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8982--8982
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -2868,38 +2945,48 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8987--8987
  []
 
 
+Overfull \hbox (9.45398pt too wide) in paragraph at lines 8987--8987
+[]|\T1/lmr/m/n/5 Ethylcyclohexane(l)|  
+ []
+
+
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8988--8988
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8989--8989
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (9.45398pt too wide) in paragraph at lines 8989--8989
-[]|\T1/lmr/m/n/5 Ethylcyclohexane(l)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8990--8990
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (10.84297pt too wide) in paragraph at lines 8990--8990
+Overfull \hbox (10.84297pt too wide) in paragraph at lines 8988--8988
 []|\T1/lmr/m/n/5 Ethylcyclohexane(g)|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8991--8991
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8989--8989
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 8992--8992
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 8990--8990
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8991--8991
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (3.12021pt too wide) in paragraph at lines 8991--8991
+\T1/lmr/m/n/5 Methylheptane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8992--8992
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (1.73122pt too wide) in paragraph at lines 8992--8992
+\T1/lmr/m/n/5 Methylheptane(l)|  
  []
 
 
@@ -2928,38 +3015,38 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 8995--8995
  []
 
 
-Overfull \hbox (3.12021pt too wide) in paragraph at lines 8995--8995
-\T1/lmr/m/n/5 Methylheptane(g)|  
- []
-
-
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 8996--8996
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (1.73122pt too wide) in paragraph at lines 8996--8996
-\T1/lmr/m/n/5 Methylheptane(l)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8997--8997
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 8998--8998
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 8999--8999
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8997--8997
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 9000--9000
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 8998--8998
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 8999--8999
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (6.81487pt too wide) in paragraph at lines 8999--8999
+\T1/lmr/m/n/5 Dimethylhexane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 9000--9000
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (5.42587pt too wide) in paragraph at lines 9000--9000
+\T1/lmr/m/n/5 Dimethylhexane(l)|  
  []
 
 
@@ -2968,8 +3055,8 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 9001--9001
  []
 
 
-Overfull \hbox (6.81487pt too wide) in paragraph at lines 9001--9001
-\T1/lmr/m/n/5 Dimethylhexane(g)|  
+Overfull \hbox (14.24597pt too wide) in paragraph at lines 9001--9001
+[]|\T1/lmr/m/n/5 Propylcyclohexane(g)|  
  []
 
 
@@ -2978,8 +3065,8 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 9002--9002
  []
 
 
-Overfull \hbox (5.42587pt too wide) in paragraph at lines 9002--9002
-\T1/lmr/m/n/5 Dimethylhexane(l)|  
+Overfull \hbox (2.19656pt too wide) in paragraph at lines 9002--9002
+[]|\T1/lmr/m/n/5 Propylbenzene(g)|  
  []
 
 
@@ -2988,38 +3075,38 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 9003--9003
  []
 
 
-Overfull \hbox (14.24597pt too wide) in paragraph at lines 9003--9003
-[]|\T1/lmr/m/n/5 Propylcyclohexane(g)|  
- []
-
-
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 9004--9004
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (2.19656pt too wide) in paragraph at lines 9004--9004
-[]|\T1/lmr/m/n/5 Propylbenzene(g)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 9005--9005
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 9006--9006
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 9007--9007
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 9005--9005
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (9.9275pt too wide) in paragraph at lines 9008--9008
+Overfull \hbox (9.9275pt too wide) in paragraph at lines 9006--9006
 []|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 9007--9007
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (9.69669pt too wide) in paragraph at lines 9007--9007
+\T1/lmr/m/n/5 Dimethylheptane(g)|  
+ []
+
+
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 9008--9008
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (8.3077pt too wide) in paragraph at lines 9008--9008
+\T1/lmr/m/n/5 Dimethylheptane(l)|  
  []
 
 
@@ -3028,42 +3115,32 @@ Overfull \hbox (0.8855pt too wide) in paragraph at lines 9009--9009
  []
 
 
-Overfull \hbox (9.69669pt too wide) in paragraph at lines 9009--9009
-\T1/lmr/m/n/5 Dimethylheptane(g)|  
- []
-
-
 Overfull \hbox (0.8855pt too wide) in paragraph at lines 9010--9010
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (8.3077pt too wide) in paragraph at lines 9010--9010
-\T1/lmr/m/n/5 Dimethylheptane(l)|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 9011--9011
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 9012--9012
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 9013--9013
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 9011--9011
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (6.0245pt too wide) in paragraph at lines 9014--9014
+Overfull \hbox (6.0245pt too wide) in paragraph at lines 9012--9012
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (0.8855pt too wide) in paragraph at lines 9015--9015
+Overfull \hbox (0.8855pt too wide) in paragraph at lines 9013--9013
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9014--9014
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9015--9015
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
@@ -3083,28 +3160,28 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9018--9018
  []
 
 
+Overfull \hbox (9.62799pt too wide) in paragraph at lines 9018--9018
+[]|\T1/lmr/m/n/5 Butylcyclohexane(l)|  
+ []
+
+
 Overfull \hbox (4.2885pt too wide) in paragraph at lines 9019--9019
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9020--9020
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (9.62799pt too wide) in paragraph at lines 9020--9020
-[]|\T1/lmr/m/n/5 Butylcyclohexane(l)|  
- []
-
-
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9021--9021
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (11.01698pt too wide) in paragraph at lines 9021--9021
+Overfull \hbox (11.01698pt too wide) in paragraph at lines 9019--9019
 []|\T1/lmr/m/n/5 Butylcyclohexane(g)|  
+ []
+
+
+Overfull \hbox (13.3305pt too wide) in paragraph at lines 9020--9020
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (13.3305pt too wide) in paragraph at lines 9021--9021
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
@@ -3113,13 +3190,18 @@ Overfull \hbox (13.3305pt too wide) in paragraph at lines 9022--9022
  []
 
 
-Overfull \hbox (13.3305pt too wide) in paragraph at lines 9023--9023
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9023--9023
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (13.3305pt too wide) in paragraph at lines 9024--9024
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+Overfull \hbox (0.7593pt too wide) in paragraph at lines 9023--9023
+\T1/lmr/m/n/5 Methylnonane(g)|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9024--9024
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -3128,33 +3210,38 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9025--9025
  []
 
 
-Overfull \hbox (0.7593pt too wide) in paragraph at lines 9025--9025
-\T1/lmr/m/n/5 Methylnonane(g)|  
- []
-
-
 Overfull \hbox (4.2885pt too wide) in paragraph at lines 9026--9026
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9027--9027
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9028--9028
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (9.4275pt too wide) in paragraph at lines 9029--9029
+Overfull \hbox (9.4275pt too wide) in paragraph at lines 9027--9027
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (9.4275pt too wide) in paragraph at lines 9030--9030
+Overfull \hbox (9.4275pt too wide) in paragraph at lines 9028--9028
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9029--9029
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (14.4746pt too wide) in paragraph at lines 9029--9029
+\T1/lmr/m/n/5 Methylnaphthalene(l)|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9030--9030
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (15.20358pt too wide) in paragraph at lines 9030--9030
+\T1/lmr/m/n/5 Methylnaphthalene(s)|  
  []
 
 
@@ -3163,8 +3250,8 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9031--9031
  []
 
 
-Overfull \hbox (14.4746pt too wide) in paragraph at lines 9031--9031
-\T1/lmr/m/n/5 Methylnaphthalene(l)|  
+Overfull \hbox (15.86359pt too wide) in paragraph at lines 9031--9031
+\T1/lmr/m/n/5 Methylnaphthalene(g)|  
  []
 
 
@@ -3173,18 +3260,8 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9032--9032
  []
 
 
-Overfull \hbox (15.20358pt too wide) in paragraph at lines 9032--9032
-\T1/lmr/m/n/5 Methylnaphthalene(s)|  
- []
-
-
 Overfull \hbox (4.2885pt too wide) in paragraph at lines 9033--9033
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (15.86359pt too wide) in paragraph at lines 9033--9033
-\T1/lmr/m/n/5 Methylnaphthalene(g)|  
  []
 
 
@@ -3193,8 +3270,8 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9034--9034
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9035--9035
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (9.4275pt too wide) in paragraph at lines 9035--9035
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
@@ -3203,18 +3280,18 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9036--9036
  []
 
 
-Overfull \hbox (9.4275pt too wide) in paragraph at lines 9037--9037
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O|  
- []
-
-
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9038--9038
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9037--9037
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9039--9039
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (13.3305pt too wide) in paragraph at lines 9038--9038
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+ []
+
+
+Overfull \hbox (13.3305pt too wide) in paragraph at lines 9039--9039
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
@@ -3223,38 +3300,43 @@ Overfull \hbox (13.3305pt too wide) in paragraph at lines 9040--9040
  []
 
 
-Overfull \hbox (13.3305pt too wide) in paragraph at lines 9041--9041
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
- []
-
-
-Overfull \hbox (13.3305pt too wide) in paragraph at lines 9042--9042
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
- []
-
-
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9043--9043
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9041--9041
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9044--9044
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9042--9042
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (9.4275pt too wide) in paragraph at lines 9045--9045
+Overfull \hbox (9.4275pt too wide) in paragraph at lines 9043--9043
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
  []
 
 
-Overfull \hbox (9.4275pt too wide) in paragraph at lines 9046--9046
+Overfull \hbox (9.4275pt too wide) in paragraph at lines 9044--9044
 []|\T1/lmr/m/n/5 C$[]$H$[]$O|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9045--9045
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9046--9046
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
 Overfull \hbox (4.2885pt too wide) in paragraph at lines 9047--9047
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
+ []
+
+
+Overfull \hbox (12.68326pt too wide) in paragraph at lines 9047--9047
+[]|\T1/lmr/m/n/5 Decylcyclopentane(l)|  
  []
 
 
@@ -3268,11 +3350,6 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9049--9049
  []
 
 
-Overfull \hbox (12.68326pt too wide) in paragraph at lines 9049--9049
-[]|\T1/lmr/m/n/5 Decylcyclopentane(l)|  
- []
-
-
 Overfull \hbox (4.2885pt too wide) in paragraph at lines 9050--9050
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
@@ -3283,13 +3360,13 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9051--9051
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9052--9052
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (13.3305pt too wide) in paragraph at lines 9052--9052
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9053--9053
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
+Overfull \hbox (13.3305pt too wide) in paragraph at lines 9053--9053
+[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
  []
 
 
@@ -3298,13 +3375,13 @@ Overfull \hbox (13.3305pt too wide) in paragraph at lines 9054--9054
  []
 
 
-Overfull \hbox (13.3305pt too wide) in paragraph at lines 9055--9055
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9055--9055
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
-Overfull \hbox (13.3305pt too wide) in paragraph at lines 9056--9056
-[]|\T1/lmr/m/n/5 C$[]$H$[]$O$[]$|  
+Overfull \hbox (4.2885pt too wide) in paragraph at lines 9056--9056
+[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
 
@@ -3317,37 +3394,27 @@ Overfull \hbox (4.2885pt too wide) in paragraph at lines 9058--9058
 []|\T1/lmr/m/n/5 C$[]$H$[]$|  
  []
 
+[253] [254] [255] [256] [257] [258] [259]
 
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9059--9059
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-
-Overfull \hbox (4.2885pt too wide) in paragraph at lines 9060--9060
-[]|\T1/lmr/m/n/5 C$[]$H$[]$|  
- []
-
-[249] [250] [251] [252] [253] [254] [255]
-
-[256] (./pchem1.aux)
+[260] (./pchem1.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17060 strings out of 475539
- 280137 string characters out of 5776837
- 918836 words of memory out of 5000000
+ 17064 strings out of 475539
+ 280175 string characters out of 5776837
+ 918806 words of memory out of 5000000
  37775 multiletter control sequences out of 15000+600000
  665966 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,19n,100p,2440b,736s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,19n,100p,2440b,742s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro8.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on pchem1.pdf (268 pages, 8676960 bytes).
+Output written on pchem1.pdf (272 pages, 8677444 bytes).
 PDF statistics:
- 4176 PDF objects out of 4296 (max. 8388607)
- 3672 compressed objects within 37 object streams
- 1664 named destinations out of 1728 (max. 500000)
+ 4193 PDF objects out of 4296 (max. 8388607)
+ 3685 compressed objects within 37 object streams
+ 1668 named destinations out of 1728 (max. 500000)
  1017 words of extra memory for PDF output out of 10000 (max. 10000000)
 

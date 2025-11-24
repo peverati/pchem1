@@ -334,11 +334,11 @@ e. A fluid at standard temperature and pressure.
     Click to reveal
   </span>
   <span id="reveal-inline-content" style="display: none;">
-1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c
+1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.b
   </span>
   '
 } else if (knitr::is_latex_output()) {
-  'Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.c'
+  'Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.d, 8.a, 9.a, 10.b'
 }`
 
 
