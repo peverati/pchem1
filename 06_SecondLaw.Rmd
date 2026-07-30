@@ -27,7 +27,7 @@ or alternatively:
 
 
 The left hand side of eq. \@ref(eq:effcQTrearr2) contains the sum of two quantities around the Carnot cycle, each calculated as $\frac{Q_{\mathrm{REV}}}{T}$, with $Q_{\mathrm{REV}}$ being the heat exchanged at reversible conditions (recall that according to Definition \@ref(def:carnotcycle) each transformation in a Carnot cycle is reversible). Eq. \@ref(eq:effcQTrearr) can be generalized to a sequence of connected Carnot cycles joining more than two isotherms by taking the summation across different temperatures:
-```{r  echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
+```{r  echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume diagram showing a network of isotherms and adiabats with a cycle highlighted with black curve segments."}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -313,7 +313,7 @@ where the equal sign holds for reversible transformations exclusively, while the
 
 Now we can consider an isolated system undergoing a cycle composed of an irreversible forward transformation (1 $\rightarrow$ 2) and a reversible backward transformation (2 $\rightarrow$ 1), as in Figure \@ref(fig:FigJexpC2). 
 
-```{r FigJexpC2, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Spontaneous and Non-Spontaneous Transformations in a Cycle.'}
+```{r FigJexpC2, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Spontaneous and Non-Spontaneous Transformations in a Cycle.', fig.alt='Diagram comparing spontaneous and non-spontaneous transformations in a thermodynamic cycle. It shows the contrast between naturally favored changes and the reverse changes that require external intervention, reinforcing the directional meaning of the second law.'}
 knitr::include_graphics('./img/OEP_Figures.011.jpeg')
 
 ```

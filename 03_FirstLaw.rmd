@@ -31,7 +31,7 @@ which, using eq. \@ref(eq:Wdef) becomes:
 ### Internal energy in isothermal processes {#isothermalE}
 To study the behavior of the internal energy in a process at constant temperature ($dT=0$), James Prescott Joule (1818–1889) created the apparatus depicted in Figure \@ref(fig:FigJexp).
 
-```{r FigJexp, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule Expansion Experiment.'}
+```{r FigJexp, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule Expansion Experiment.', fig.alt='Diagram of the Joule expansion experiment, showing ideal gas in one chamber and vacuum in the other, both immersed in a water bath. When the barrier is removed, the gas expands into the vacuum with no work done on the surroundings, illustrating that an ideal gas internal energy depends only on temperature.'}
 knitr::include_graphics('./img/OEP_Figures.006.jpeg')
 ```
 
@@ -155,7 +155,7 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 
 Let's now consider the cycle in Figure \@ref(fig:FigRevCyc). The process in this case starts from state 1 (system at $P_1V_1$), expands to state 2 (system at $P_2V_2$), and compresses back to state 1 (system back to $P_1V_1$).
 
-```{r FigRevCyc, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Expansion/Compression Cycle of an Ideal Gas.'}
+```{r FigRevCyc, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Expansion/Compression Cycle of an Ideal Gas.', fig.alt='Diagram of an ideal-gas expansion and compression cycle, showing the sequence of states and path taken during the process. The figure illustrates how the gas moves through expansion and compression steps and helps explain the relationship between work, heat, and internal energy.'}
 knitr::include_graphics('./img/OEP_Figures.005.jpeg')
 ```
 

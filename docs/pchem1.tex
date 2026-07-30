@@ -38,6 +38,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -114,7 +115,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{24 November 2025}
+\date{30 July 2026}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -273,7 +274,7 @@ A thermodynamic system---or just simply a system---is a portion of space with de
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_Figures.001} 
+{\centering \includegraphics[width=0.7\linewidth,alt={Composite figure showing four examples of thermodynamic systems: a liquid in an Erlenmeyer flask, gas inside a balloon, a thundercloud, and an open flame. The figure illustrates that thermodynamic systems may have physical boundaries, such as glass or plastic walls, or nonphysical boundaries defined by conditions at an interface.}]{./img/OEP_Figures.001} 
 
 }
 
@@ -286,6 +287,7 @@ A system can exchange exclusively mass, exclusively energy, or both mass and ene
 
 When a system exchanges mass or energy with its surroundings, some of its parameters (variables) change. For example, if a system loses mass to the surroundings, the number of molecules (or moles) in the system will decrease. Similarly, if a system absorbs some energy, one or more of its variables (such as its temperature) increase. Mass and energy can flow into the system or out of the system. Let's consider mass exchange only. If some molecules of a substance leave the system, and then the same amount of molecules flow back into the system, the system will not be modified. We can count, for example, 100 molecules leaving a system and assign them the value of --100 in an outgoing process, and then observe the same 100 molecules going back into the system and assign them a value of +100. Regardless of the number of molecules present in the system in the first place, the overall balance will be --100 (from the outgoing process) +100 (from the ingoing process) = 0, which brings the system to its initial situation (mass has not changed). However, from a mathematical standpoint, we could have equally assigned the label +100 to the outgoing process and --100 to the ingoing one, and the overall total would have stayed the same: +100--100 = 0. Which of the two labels is best? For this case, it seems natural to define a mass going out of the system as negative (the system is losing it), and a mass going into the system as positive (the system is gaining it), but is it as straightforward for energy?
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3125}}
   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1562}}
@@ -306,6 +308,7 @@ When a system exchanges mass or energy with its surroundings, some of its parame
 \textbf{Closed} & N & Y \\
 \textbf{Isolated} & N & N \\
 \end{longtable}
+}
 
 \begin{quote}
 Here is another example. Let's consider a system that is composed of your body. When you exercise, you lose mass in the form of water (sweat) and CO\textsubscript{2} (from respiration). This mass loss can be easily measured by stepping on a scale before and after exercise. The number you observe on the scale will go down. Hence you have lost weight. After exercise, you will reintegrate the lost mass by drinking and eating. If you have reinstated the same amount you have lost, your weight will be the same as before the exercise (no weight loss). Nevertheless, which label do you attach to the amounts that you have lost and gained? Let's say that you are running a 5 km race without drinking nor eating, and you measure your weight dropping 2 kg after the race. After the race, you drink 1.5 kg of water and eat a 500 g energy bar. Overall you did not lose any weight, and it would seem reasonable to label the 2 kg that you've lost as negative (--2) and the 1.5 kg of water that you drank and the 500 g bar that you ate as positive (+1.5 +0.5 = +2). But is it the only way? After all, you didn't gain nor lose any weight, so why not calling the 2 kg due to exercise +2 and the 2 that you've ingested as --2? It might seem silly, but mathematically it would not make any difference, the total would still be zero. Now, let's consider energy instead of mass. To run the 5km race, you have spent 500 kcal, which then you reintegrate precisely by eating the energy bar. Which sign would you put in front of the kilocalories that you ``burned'' during the race? In principle, you've lost them, so if you want to be consistent, you should use a negative sign. But if you think about it, you've put quite an effort to ``lose'' those kilocalories, so it might not feel bad to assign them a positive sign instead. After all, it's perfectly OK to say, ``I've done a 500 kcal run today'', while it might sound quite awkward to say, ``I've done a --500 kcal run today.'' Our previous exercise with mass demonstrates that it doesn't really matter which sign you put in front of the quantities. As long as you are consistent throughout the process, the signs will cancel out. If you've done a +500 kcal run, you've eaten a bar for --500 kcal, resulting in a total zero loss/gain. Alternatively, if you've done a --500 kcal run, you would have eaten a +500 kcal bar, for a total of again zero loss/gain.
@@ -448,7 +451,7 @@ We will return to exact and inexact differential when we discuss heat and work, 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.002} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Diagram illustrating the difference between a state function and a path function by comparing direct distance between two locations with travel distance along different possible routes. The direct distance depends only on the initial and final states, whereas the travel distance depends on the path taken.}]{./img/OEP_Figures.002} 
 
 }
 
@@ -743,7 +746,7 @@ In thermodynamics, work (\(W\)) is the ability of a system to transfer energy by
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{./img/OEP_Figures.004} 
+{\centering \includegraphics[width=0.5\linewidth,alt={Diagram of an ideal gas undergoing isothermal expansion against a constant external pressure. The figure illustrates a gas in a container with a movable boundary expanding while temperature remains constant, emphasizing the relationship between volume change and external pressure during the process.}]{./img/OEP_Figures.004} 
 
 }
 
@@ -808,7 +811,7 @@ How do we solve the integral in eq. \eqref{eq:Wint}? It turns out that there are
 
 At constant temperature, the piston in Figure \ref{fig:Fig2c3} moves along the following PV diagram (this curve is obtained from an ideal gas at constant \(T=298\) K):
 
-\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-2-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot for an ideal gas at constant temperature, showing a smooth inverse curve with labeled initial and final states. The diagram illustrates the path followed during isothermal expansion from a smaller volume and higher pressure to a larger volume and lower pressure.}]{pchem1_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 An expansion of the gas will happen between \(P_i\) and \(P_f\). If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example \(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)), and solve the integral as:
 
@@ -819,7 +822,7 @@ An expansion of the gas will happen between \(P_i\) and \(P_f\). If the expansio
 
 Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work\footnote{we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition \ref{def:chemistryconv}.} represents the red area of the PV-diagram:
 
-\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot of an ideal-gas isotherm with the rectangular area under the curve shaded in red. The shaded region represents the work for a one-step expansion against constant external pressure from the initial to the final volume.}]{pchem1_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \begin{equation}
 \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
@@ -828,7 +831,7 @@ Notice how the work is negative, since during an expansion the work is performed
 
 If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, \(A\) and \(B\), and solve each one as we did in the previous case. The first process is an expansion between \(P_i\) and \(P_1\), with \(P_1\) constant. The absolute value of the work, \(W_A\), is represented by the blue area:
 
-\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot of an ideal-gas isotherm showing an intermediate state labeled 1 between the initial and final states. The blue shaded area marks the work for the first step of a two-step expansion from the initial volume to the intermediate volume.}]{pchem1_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \begin{equation}
 \left| W_A \right| = P_1 (V_1-V_i)
@@ -837,7 +840,7 @@ If the process happens in two steps by pausing at an intermediate position (1) u
 
 The second process is an expansion between \(P_1\) and \(P_f\), with \(P_f=P_{\text{ext}}\) constant. The absolute value of the work for this second process is represented by the green area:
 
-\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot of an ideal-gas isotherm showing a two-step expansion with an intermediate state. The diagram highlights the work associated with the second step of the expansion from the intermediate state to the final state.}]{pchem1_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \begin{equation}
 \left| W_B \right| = P_f (V_f-V_1)
@@ -846,7 +849,7 @@ The second process is an expansion between \(P_1\) and \(P_f\), with \(P_f=P_{\t
 
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
-\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot of an ideal-gas isotherm showing a two-step expansion with an intermediate state. The diagram highlights the total work associated with the expansion from the intermediate state to the final state.}]{pchem1_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{equation}
   \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
@@ -862,7 +865,13 @@ We can easily extend this procedure to consider processes that happens in 3, 4, 
   \label{eq:WintsolvedV2}
 \end{equation}
 
-\includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-1} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-2} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-3} \includegraphics[width=0.5\linewidth,height=1\textheight]{pchem1_files/figure-latex/figures-side-4}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit.}]{pchem1_files/figure-latex/unnamed-chunk-7-1} \end{center}
+
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit.}]{pchem1_files/figure-latex/unnamed-chunk-7-2} \end{center}
+
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit.}]{pchem1_files/figure-latex/unnamed-chunk-7-3} \end{center}
+
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit.}]{pchem1_files/figure-latex/unnamed-chunk-7-4} \end{center}
 
 The integral on the right hand side of eq. \eqref{eq:WintsolvedV2} can be solved for an ideal gas by calculating the pressure using the ideal gas law \(P=\frac{nRT}{V}\), and solving the integral since \(n\), \(R\), and \(T\) are constant:
 
@@ -1221,7 +1230,7 @@ To study the behavior of the internal energy in a process at constant temperatur
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.006} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram of the Joule expansion experiment, showing ideal gas in one chamber and vacuum in the other, both immersed in a water bath. When the barrier is removed, the gas expands into the vacuum with no work done on the surroundings, illustrating that an ideal gas internal energy depends only on temperature.}]{./img/OEP_Figures.006} 
 
 }
 
@@ -1360,7 +1369,7 @@ Let's now consider the cycle in Figure \ref{fig:FigRevCyc}. The process in this 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.005} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram of an ideal-gas expansion and compression cycle, showing the sequence of states and path taken during the process. The figure illustrates how the gas moves through expansion and compression steps and helps explain the relationship between work, heat, and internal energy.}]{./img/OEP_Figures.005} 
 
 }
 
@@ -2264,7 +2273,7 @@ The first law of thermodynamics places no restrictions on the conversion of ener
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.008} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram showing the Joule expansion experiment closed into a cycle. It illustrates the gas expansion setup with the chambers and water bath, emphasizing the cycle concept used to discuss thermodynamic state changes.}]{./img/OEP_Figures.008} 
 
 }
 
@@ -2296,7 +2305,7 @@ A Carnot cycle connects two ``heat reservoirs'' at temperatures \(T_h\) (hot) an
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/FigCarnotPV-1} 
+{\centering \includegraphics[width=0.7\linewidth,alt={Pressure-volume diagram of a Carnot cycle, with two isotherms and two adiabats connecting four labeled states. The figure shows the closed cycle path and highlights the work enclosed by the loop.}]{pchem1_files/figure-latex/FigCarnotPV-1} 
 
 }
 
@@ -2305,7 +2314,7 @@ A Carnot cycle connects two ``heat reservoirs'' at temperatures \(T_h\) (hot) an
 
 \subsection{\texorpdfstring{Stage 1: isothermal expansion \(A \rightarrow B\)}{Stage 1: isothermal expansion A \textbackslash rightarrow B}}\label{CCstage1}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007a} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Carnot cycle panel showing state A on the pressure-volume path. This panel labels one corner of the cycle and helps identify the sequence of states used to build the full cycle.}]{./img/OEP_Figures.007a} \end{center}
 
 Starting the analysis of the cycle from point \(A\) in Figure \ref{fig:FigCarnotPV},\footnote{The stages of a Carnot depicted at the beginning of each of this section and the following three ones are genetaken from \href{https://en.wikipedia.org/wiki/Carnot_cycle}{Wikipedia}, and have been generated and distributed by Author BlyumJ under CC-BY-SA license.} the first transformation we encounter is an isothermal expansion at \(T_h\). Since the transformation is isothermal:
 
@@ -2328,7 +2337,7 @@ where we denoted \(\left| Q_h \right|\) the absolute value of the heat that gets
 
 \subsection{\texorpdfstring{Stage 2: adiabatic expansion \(B \rightarrow C\)}{Stage 2: adiabatic expansion B \textbackslash rightarrow C}}\label{CCstage2}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007b} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Carnot cycle panel showing state B on the pressure-volume path. This panel marks the next state along the cycle and shows the progression between the labeled corners.}]{./img/OEP_Figures.007b} \end{center}
 
 The second transformation is an adiabatic expansion between \(T_h\) and \(T_l\). Since we are at adiabatic conditions:
 
@@ -2346,7 +2355,7 @@ and the negative energy (expansion work) can be calculated using:
 
 \subsection{\texorpdfstring{Stage 3: isothermal compression \(C \rightarrow D\)}{Stage 3: isothermal compression C \textbackslash rightarrow D}}\label{CCstage3}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007c} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Carnot cycle panel showing state C on the pressure-volume path. This panel identifies another corner of the cycle and helps track the sequence of process steps.}]{./img/OEP_Figures.007c} \end{center}
 
 The third transformation is an isothermal compression at \(T_l\). The formulas are the same as those used for stage 1, but they will results in heat and work with reversed signs (since this is a compression):
 
@@ -2369,7 +2378,7 @@ where \(\left| Q_l \right|\) is the absolute value of the heat that gets \textbf
 
 \subsection{\texorpdfstring{Stage 4: adiabatic compression \(D \rightarrow A\)}{Stage 4: adiabatic compression D \textbackslash rightarrow A}}\label{CCstage4}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{./img/OEP_Figures.007d} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Carnot cycle panel showing state D on the pressure-volume path. This panel completes the set of labeled states used to explain the full Carnot cycle geometry.}]{./img/OEP_Figures.007d} \end{center}
 
 The fourth and final transformation is an adiabatic comprssion that restores the system to point \(A\), bringing it from \(T_l\) to \(T_h\). Similarly to stage 3:
 
@@ -2448,7 +2457,7 @@ or, in other words, more heat is extracted from the hot reservoir than it is put
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.009} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram explaining Carnot cycle efficiency. It shows the relationship between the hot and cold reservoirs and the thermodynamic steps that determine the maximum theoretical efficiency of a heat engine.}]{./img/OEP_Figures.009} 
 
 }
 
@@ -2462,7 +2471,7 @@ or, in other words, more heat is extracted from the hot reservoir than it is put
 \emph{Solution:} When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of \(Q\), \(W\), and \(U\) will be reversed. In this case, the total work would get \textbf{into} the systems, and heat would be transferred from the cold reservoir to the hot one. Figure \ref{fig:FigCarnotEff} would be modified as:
 \end{exercise}
 
-\begin{flushright}\includegraphics[width=0.6\linewidth]{./img/OEP_Figures.010} \end{flushright}
+\begin{flushright}\includegraphics[width=0.6\linewidth,alt={Supplementary thermodynamic diagram accompanying the Carnot cycle discussion, used to reinforce the concept of a Carnot cycle ran in reverse. It is the same as the previous diagram, with all arrows reversed.}]{./img/OEP_Figures.010} \end{flushright}
 
 This reversed mode of operation is the basic principle behind refrigerators and air conditioning.
 \end{quote}
@@ -2834,7 +2843,7 @@ or alternatively:
 
 The left hand side of eq. \eqref{eq:effcQTrearr2} contains the sum of two quantities around the Carnot cycle, each calculated as \(\frac{Q_{\mathrm{REV}}}{T}\), with \(Q_{\mathrm{REV}}\) being the heat exchanged at reversible conditions (recall that according to Definition \ref{def:carnotcycle} each transformation in a Carnot cycle is reversible). Eq. \eqref{eq:effcQTrearr} can be generalized to a sequence of connected Carnot cycles joining more than two isotherms by taking the summation across different temperatures:
 
-\begin{center}\includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/unnamed-chunk-12-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth,alt={Pressure-volume diagram showing a network of isotherms and adiabats with a cycle highlighted with black curve segments.}]{pchem1_files/figure-latex/unnamed-chunk-13-1} \end{center}
 
 \begin{equation}
 \sum_i \frac{Q_{\mathrm{REV}}}{T_i} = 0,
@@ -2903,7 +2912,7 @@ Now we can consider an isolated system undergoing a cycle composed of an irrever
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.011} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram comparing spontaneous and non-spontaneous transformations in a thermodynamic cycle. It shows the contrast between naturally favored changes and the reverse changes that require external intervention, reinforcing the directional meaning of the second law.}]{./img/OEP_Figures.011} 
 
 }
 
@@ -3894,6 +3903,7 @@ A summary of the four thermodynamic potentials is given in the following table.
 
 \tiny
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2872}}
   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1277}}
@@ -3918,6 +3928,7 @@ A summary of the four thermodynamic potentials is given in the following table.
 \textbf{Helmholtz Energy} & \(A\) & \(dA=-SdT-PdV+\sum_i\mu_i dn_i\) & \(T,V,\{n_i\}\) \\
 \textbf{Gibbs Energy} & \(G\) & \(dG=VdP-SdT+\sum_i\mu_i dn_i\) & \(T,P,\{n_i\}\) \\
 \end{longtable}
+}
 
 \normalsize
 
@@ -4024,7 +4035,7 @@ These equations represent the conditions on \(dA\) and \(dG\) for inferring the 
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/agfig-1} 
+{\centering \includegraphics[alt={Two-panel plot showing thermodynamic potentials decreasing during spontaneous processes. The left panel shows Helmholtz energy decreasing with time at constant temperature and volume, and the right panel shows Gibbs energy decreasing with time at constant temperature and pressure.}]{pchem1_files/figure-latex/agfig-1} 
 
 }
 
@@ -4368,6 +4379,7 @@ where \(\Delta_{\mathrm{f}} H_i^{-\kern-6pt{\ominus}\kern-6pt-}\) are the standa
 
 The following four options are possible for \(\Delta G^{-\kern-6pt{\ominus}\kern-6pt-}\) of a chemical reaction:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1720}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0382}}
@@ -4394,6 +4406,7 @@ Spontaneous?
 --/+ & \emph{if} & -- & -- & \emph{Depends on \(T\):} \(\scriptstyle{\text{spontaneous at low } T}\) \\
 +/-- & \emph{if} & + & + & \emph{Depends on \(T\):} \(\scriptstyle{\text{spontaneous at high } T}\) \\
 \end{longtable}
+}
 
 Or, in other words:
 
@@ -4531,7 +4544,7 @@ The plots in Figure \ref{fig:gdeppfig} show the remarkable difference in the beh
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/gdeppfig-1} 
+{\centering \includegraphics[alt={Plot of Gibbs energy of formation for liquid and gaseous ethanol at 310 K as a function of pressure. The two curves cross at the vapor pressure of liquid ethanol, showing the pressure where liquid and vapor have equal Gibbs energy.}]{pchem1_files/figure-latex/gdeppfig-1} 
 
 }
 
@@ -5093,7 +5106,7 @@ which is the equation that produces the so-called \textbf{van 't Hoff plots}, fr
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/vthoffplt-1} 
+{\centering \includegraphics[alt={Two-panel Van t Hoff plot showing ln K versus 1 over T at constant pressure. The left panel represents an endothermic reaction with a downward slope, and the right panel represents an exothermic reaction with an upward slope.}]{pchem1_files/figure-latex/vthoffplt-1} 
 
 }
 
@@ -5540,7 +5553,7 @@ which results in the familiar \(PV\) plots of Figure \ref{fig:FigPVideal}. As we
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/FigPVideal-1} 
+{\centering \includegraphics[width=0.7\linewidth,alt={Pressure-volume diagram of an ideal gas showing two isotherms at different temperatures. The curves illustrate how pressure decreases as volume increases, with the higher-temperature isotherm lying above the lower-temperature one.}]{pchem1_files/figure-latex/FigPVideal-1} 
 
 }
 
@@ -5567,7 +5580,7 @@ which results in the plots of Figure \ref{fig:FigTVideal}. Each of the curves is
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/FigTVideal-1} 
+{\centering \includegraphics[width=0.7\linewidth,alt={Volume-temperature diagram of an ideal gas at constant pressure, showing two isobars as straight lines through absolute zero. The higher-pressure line is steeper, illustrating that volume increases with temperature.}]{pchem1_files/figure-latex/FigTVideal-1} 
 
 }
 
@@ -5594,7 +5607,7 @@ which results in the plots of Figure \ref{fig:FigTPideal}. Each of the curves is
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{pchem1_files/figure-latex/FigTPideal-1} 
+{\centering \includegraphics[width=0.7\linewidth,alt={Pressure-temperature diagram of an ideal gas at constant volume, showing two isochors as horizontal or near-horizontal relationships across temperature. The figure emphasizes that pressure increases with temperature for fixed volume.}]{pchem1_files/figure-latex/FigTPideal-1} 
 
 }
 
@@ -5677,6 +5690,7 @@ The parameter \(a\) accounts for the presence of intermolecular interactions, wh
 
 \scriptsize
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1250}}
   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5000}}
@@ -5708,6 +5722,7 @@ Oxygen & 1.382 & 0.03186 \\
 Radon & 6.601 & 0.06239 \\
 Xenon & 4.250 & 0.05105 \\
 \end{longtable}
+}
 
 \normalsize
 
@@ -5715,7 +5730,7 @@ Xenon & 4.250 & 0.05105 \\
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.015} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram of the Joule-Thomson experiment showing a gas expanding through a throttling device. The setup illustrates cooling or heating during expansion without external work, depending on the gas and conditions.}]{./img/OEP_Figures.015} 
 
 }
 
@@ -5791,6 +5806,7 @@ From eq. \eqref{eq:JT6} we can define a new coefficient, called the \emph{Joule-
 
 The value of \(\mu_{\mathrm{JT}}\) depends on the type of gas, the temperature and pressure before expansion, and the heat capacity at constant pressure of the gas. The temperature at which \(\mu_{\mathrm{JT}}\) changes sign is called the ``Joule--Thomson inversion temperature.'' Since the pressure decreases during an expansion, \(\partial P\) is negative by definition, and the following possibilities are available for \(\mu_{\mathrm{JT}}\):
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3535}}
   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1414}}
@@ -5816,6 +5832,7 @@ The gas will:
 \emph{Below the inversion temperature} & -- & + & -- & cool \\
 \emph{Above the inversion temperature} & -- & -- & + & warm \\
 \end{longtable}
+}
 
 For example, helium has a very low Joule--Thomson inversion temperature at standard pressure \((T=45\;\text{K})\), and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures (\(T=621\;\text{K}\) and \(T=764\;\text{K}\), respectively), and they both cool when expanded at room temperature. Therefore, it is possible to use the Joule--Thomson effect in refrigeration processes such as air conditioning.\footnote{Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule--Thomson expansions are also used for the industrial liquefaction of air.} As we already discussed in chapter \ref{FirstLaw}, the temperature of an ideal gases stays constant in an adiabatic expansion, therefore its Joule--Thomson coefficient is always equal to zero.
 
@@ -5834,7 +5851,7 @@ It is evident from eq. \eqref{eq:comprdef} that the compressibility factor is de
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.012} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram comparing qualitative behaviors of non-ideal gases to ideal-gas behavior. It highlights deviations caused by intermolecular attractions and repulsions under real conditions.}]{./img/OEP_Figures.012} 
 
 }
 
@@ -5869,7 +5886,7 @@ The dependence of the compressibility factor as a function of temperature (Figur
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.9\linewidth]{./img/OEP_Figures.013} 
+{\centering \includegraphics[width=0.9\linewidth,alt={Plot showing how the compressibility factor varies with temperature. The figure illustrates that real gases move closer to ideal behavior as temperature changes, with deviations reflecting intermolecular interactions.}]{./img/OEP_Figures.013} 
 
 }
 
@@ -5892,7 +5909,7 @@ Both type I and type II non-ideal gases will approach the ideal gas behavior as 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.014} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Pressure-volume diagram for a non-ideal gas showing deviation from ideal behavior. The plot emphasizes how real-gas curves differ from the simple hyperbolic ideal-gas relationship.}]{./img/OEP_Figures.014} 
 
 }
 
@@ -5913,7 +5930,7 @@ The critical temperature is the coordinate of a unique point, called the \textbf
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{./img/PVT_3D_diagram} 
+{\centering \includegraphics[width=0.5\linewidth,alt={Three-dimensional pressure-volume-temperature diagram for a non-ideal gas. The surface shows how pressure depends jointly on volume and temperature, visualizing the real-gas equation of state.}]{./img/PVT_3D_diagram} 
 
 }
 
@@ -6419,7 +6436,7 @@ and since the entropy of a gas is always bigger than the entropy of a liquid, wh
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.016} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Plot showing the chemical potentials of solid, liquid, and gas phases as temperature changes at constant pressure. The figure illustrates where the phase curves intersect and how the stable phase changes with temperature.}]{./img/OEP_Figures.016} 
 
 }
 
@@ -6431,7 +6448,7 @@ Water is a noticeable exception to these trend because \(\overline{V}_{\mathrm{H
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.017} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Diagram showing how pressure affects the chemical potential of phases. The figure compares solid, liquid, and gas behavior and highlights how increasing pressure shifts the relative stability of each phase.}]{./img/OEP_Figures.017} 
 
 }
 
@@ -6497,7 +6514,7 @@ The Gibbs phase rule is obtained considering that the number of independent vari
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.018} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Pressure-temperature phase diagram showing the regions where solid, liquid, and gas are stable. The diagram includes phase boundaries and the point where the three phases coexist.}]{./img/OEP_Figures.018} 
 
 }
 
@@ -6825,6 +6842,7 @@ We now move from studying 1-component systems to multi-component ones. Systems t
 
 \scriptsize
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lccl@{}}
 \toprule\noalign{}
 Type: & Solvent & Solute & Examples: \\
@@ -6842,6 +6860,7 @@ Gaseous solutions & Gas & Solid & Smoke, smog \\
 & Gas & Liquid & Aerosols and perfumes \\
 & Gas & Gas & Air \\
 \end{longtable}
+}
 
 \normalsize
 
@@ -6862,7 +6881,7 @@ Raoult's law applied to a system containing only one volatile component describe
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.019} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Pressure-composition phase diagram for an ideal solution with a single volatile component at constant temperature. The diagram shows how total pressure varies with composition and marks the regions where liquid and vapor are in equilibrium.}]{./img/OEP_Figures.019} 
 
 }
 
@@ -6877,7 +6896,7 @@ In an ideal solution, every volatile component follows Raoult's law. Since the v
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.020} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Pressure-composition phase diagram for an ideal solution containing two volatile components at constant temperature. The figure shows bubble-point and dew-point behavior as composition changes across the liquid and vapor regions.}]{./img/OEP_Figures.020} 
 
 }
 
@@ -6922,7 +6941,7 @@ As is clear from the results of Exercise \ref{exr:xaya}, the concentration of th
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.021} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Pressure-composition phase diagram for an ideal binary solution at constant temperature, with the liquidus and dew-point lines highlighted. The emphasis shows the range where liquid, vapor, or both phases are stable.}]{./img/OEP_Figures.021} 
 
 }
 
@@ -6937,7 +6956,7 @@ We can now consider the phase diagram of a 2-component ideal solution as a funct
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.022} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Temperature-composition phase diagram for an ideal binary solution at constant pressure. The figure shows how equilibrium temperatures change with composition and identifies phase boundaries between liquid and vapor.}]{./img/OEP_Figures.022} 
 
 }
 
@@ -6948,7 +6967,7 @@ Compared to the \(Px_{\text{B}}\) diagram of Figure \ref{fig:FigMC3}, the phases
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.023} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Temperature-composition phase diagram illustrating fractional distillation and the count of theoretical plates. The diagram traces repeated equilibrium steps between vapor and liquid during separation.}]{./img/OEP_Figures.023} 
 
 }
 
@@ -6963,7 +6982,7 @@ Non-ideal solutions follow Raoult's law for only a small amount of concentration
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.024} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Pressure-composition phase diagram for a non-ideal solution with one volatile component at constant temperature. The figure shows deviation from ideal behavior in the equilibrium curve as composition changes.}]{./img/OEP_Figures.024} 
 
 }
 
@@ -6981,7 +7000,7 @@ where \(k_{\text{AB}}\) depends on the chemical nature of \(\mathrm{A}\) and \(\
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.025} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Pressure-composition phase diagram for a non-ideal binary solution at constant temperature. The plot shows non-ideal vapor-liquid equilibrium behavior and the separation between liquid and vapor composition ranges.}]{./img/OEP_Figures.025} 
 
 }
 
@@ -6992,7 +7011,7 @@ If we move from the \(Px_{\text{B}}\) diagram to the \(Tx_{\text{B}}\) diagram, 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.026} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Temperature-composition phase diagram for a non-ideal binary solution at constant pressure. The figure shows how phase boundaries shift with composition and highlights the non-ideal equilibrium region.}]{./img/OEP_Figures.026} 
 
 }
 
@@ -7074,7 +7093,7 @@ where \(P_i^{\text{R}}\) is the partial pressure calculated using Raoult's law. 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.033} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Pressure-composition diagram showing both positive and negative deviations from Raoult’s law in non-ideal solutions. The figure contrasts upward and downward departures from ideal vapor-pressure behavior at constant temperature.}]{./img/OEP_Figures.033} 
 
 }
 
@@ -7135,7 +7154,7 @@ Eq. \eqref{eq:collA} proves that the addition of a solute always stabilizes the 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{./img/OEP_Figures.034} 
+{\centering \includegraphics[width=0.6\linewidth,alt={Diagram showing that adding a solute lowers the chemical potential of the liquid phase. The figure illustrates how solute addition changes the thermodynamic driving force in the solution.}]{./img/OEP_Figures.034} 
 
 }
 
@@ -7189,7 +7208,7 @@ The osmotic pressure of a solution is defined as the difference in pressure betw
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{./img/OEP_Figures.035} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Diagram illustrating osmotic pressure in a solution separated by a semipermeable membrane. The figure shows solvent movement and the pressure required to stop net osmosis.}]{./img/OEP_Figures.035} 
 
 }
 
@@ -7444,7 +7463,7 @@ Using the integrated rate law, we notice that the concentration on the reactant 
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk1-1} 
+{\centering \includegraphics[alt={Concentration-versus-time plot for a zeroth-order reaction, showing a straight-line decrease in reactant concentration over time. The diagram emphasizes the constant rate behavior of zeroth-order kinetics.}]{pchem1_files/figure-latex/figk1-1} 
 
 }
 
@@ -7494,7 +7513,7 @@ Using the integrated rate law to plot the concentration of the reactant, \([\mat
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk2-1} 
+{\centering \includegraphics[alt={Concentration-versus-time plot for a first-order reaction, showing an exponential decay of reactant concentration over time. The figure illustrates the characteristic curved decrease of first-order kinetics.}]{pchem1_files/figure-latex/figk2-1} 
 
 }
 
@@ -7505,7 +7524,7 @@ However, if we plot the logarithm of the concentration, \(\ln[\mathrm{A}]\), as 
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk3-1} 
+{\centering \includegraphics[alt={Linearized first-order kinetics plot of ln concentration versus time, showing a straight line with negative slope. The figure illustrates how a first-order reaction becomes linear when concentration is transformed by the natural logarithm.}]{pchem1_files/figure-latex/figk3-1} 
 
 }
 
@@ -7554,7 +7573,7 @@ A reaction is second-order when the sum of the reaction orders is two. Elementar
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk4-1} 
+{\centering \includegraphics[alt={Linearized second-order kinetics plot of inverse concentration versus time, showing a straight line with positive slope. The figure illustrates how second-order behavior becomes linear when concentration is plotted as 1 over [A].}]{pchem1_files/figure-latex/figk4-1} 
 
 }
 
@@ -7677,7 +7696,7 @@ From these results, we can distinguish two extreme behaviors. The first one is o
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk5-1} 
+{\centering \includegraphics[alt={Concentration-versus-time plot for two consecutive reactions where the second step is rate determining. The figure shows the reactant, intermediate, and product concentration profiles over time.}]{pchem1_files/figure-latex/figk5-1} 
 
 }
 
@@ -7688,7 +7707,7 @@ The second behavior is observed when \(k_1\ll k_2\), and it produces the plot in
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk6-1} 
+{\centering \includegraphics[alt={Concentration-versus-time plot for two consecutive reactions where the first step is rate determining. The figure shows how the intermediate builds up and then decays as the reaction proceeds.}]{pchem1_files/figure-latex/figk6-1} 
 
 }
 
@@ -7735,7 +7754,7 @@ The concentration of each of the species can then be plotted against time, obtai
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk7-1} 
+{\centering \includegraphics[alt={Concentration-versus-time plot for two competitive reactions starting from the same reactant. The figure shows how product formation depends on the relative rates of the competing pathways.}]{pchem1_files/figure-latex/figk7-1} 
 
 }
 
@@ -7781,7 +7800,7 @@ These formulas can then be used to obtain the plots in Figure \ref{fig:figkK}.
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figkK-1} 
+{\centering \includegraphics[alt={Concentration-versus-time plot for two opposed reactions approaching equilibrium. The figure shows reactant and product concentrations changing in opposite directions until they level off.}]{pchem1_files/figure-latex/figkK-1} 
 
 }
 
@@ -7817,6 +7836,7 @@ To experimentally measure the reaction rate, we need a method to measure concent
 
 \tiny
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0865}}
   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1731}}
@@ -7844,6 +7864,7 @@ To experimentally measure the reaction rate, we need a method to measure concent
 \textbf{Linear Plot vs.~\(t\)} & \([\mathrm{A}]\) & \(\ln [\mathrm{A}]\) & \(\frac{1}{[\mathrm{A}]}\) & \(\ln \frac{[\mathrm{A}]_0[\mathrm{B}]}{[\mathrm{B}]_0[\mathrm{A}]}\) \\
 \textbf{Half-life} & \(t_{1/2}=\frac{[\mathrm{A}]_0}{2k_0}\) & \(t_{1/2}=\frac{\ln 2}{k_1}\) & \(t_{1/2}=\frac{1}{k_2 [\mathrm{A}]_0}\) & not easily defined \\
 \end{longtable}
+}
 
 \normalsize
 
@@ -7866,6 +7887,7 @@ the initial rate method can be used to determine the coefficients of the rate la
 
 by designing three experiment, where the initial concentrations of \(\mathrm{A}\) and \(\mathrm{B}\) are appropriately changed. For example, let's consider the following experimental data from three different experiments:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1705}}
   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2326}}
@@ -7888,6 +7910,7 @@ by designing three experiment, where the initial concentrations of \(\mathrm{A}\
 \(\text{Experiment 2:}\) & 0.15 & 0.10 & 9.70 \\
 \(\text{Experiment 3:}\) & 0.10 & 0.20 & 4.29 \\
 \end{longtable}
+}
 
 we can calculate \(\alpha\) by taking the ratio of the rates measured in experiment 1 and 2:
 
@@ -7972,7 +7995,7 @@ which gives the plot of Figure \ref{fig:figk8}, from which \(E_a\) can be determ
 
 \begin{figure}
 
-{\centering \includegraphics{pchem1_files/figure-latex/figk8-1} 
+{\centering \includegraphics[alt={Arrhenius plot showing how experimental rate data at two temperatures can be used to determine the activation energy. The figure emphasizes the linear relationship between ln rate constant and inverse temperature.}]{pchem1_files/figure-latex/figk8-1} 
 
 }
 
@@ -7983,7 +8006,7 @@ From empirical arguments, Arrhenius proposed the idea that reactants must acquir
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\linewidth]{./img/Rxn_coordinate_diagram_5} 
+{\centering \includegraphics[width=0.7\linewidth,alt={Reaction coordinate diagram showing the energy profile of a typical chemical reaction from reactants to products through a transition state. The figure illustrates the activation barrier and the overall energy change.}]{./img/Rxn_coordinate_diagram_5} 
 
 }
 
@@ -8002,6 +8025,7 @@ Determine the reaction order with respect to each reagents and the rate law for 
 
 Given the following initial rate tables:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}cccc@{}}
 \toprule\noalign{}
 Experiment & {[}A{]} (M) & {[}B{]} (M) & Initial Rate (M/s) \\
@@ -8013,6 +8037,7 @@ Experiment & {[}A{]} (M) & {[}B{]} (M) & Initial Rate (M/s) \\
 2 & \(0.2\) & \(0.1\) & \(8.0 \times 10^{-3}\) \\
 3 & \(0.1\) & \(0.2\) & \(4.0 \times 10^{-3}\) \\
 \end{longtable}
+}
 
 \textbf{Solution:} To determine the reaction orders, compare rates between experiments:
 
@@ -8387,6 +8412,7 @@ Answers: 1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a
 
 \tiny
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1136}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2216}}
@@ -8796,9 +8822,11 @@ Zr(s) & 0 & 0 & 39 & 25.4 \\
 ZrCl\textsubscript{2}(s) & --502.0 & --386 & 110 & \\
 ZrCl\textsubscript{4}(s) & --980.5 & --889.9 & 181.6 & 119.8 \\
 \end{longtable}
+}
 
 \section{Thermodynamic Data of Organic Substances at 298 K}\label{thermodynamic-data-of-organic-substances-at-298-k}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0822}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2055}}
@@ -9057,5 +9085,6 @@ C\textsubscript{16}H\textsubscript{34} & N-hexadecane(g) & --374.8 & & & \\
 C\textsubscript{18}H\textsubscript{12} & Chrysene(s) & 145.3 & & & \\
 C\textsubscript{18}H\textsubscript{12} & Chrysene(g) & 269.8 & & & \\
 \end{longtable}
+}
 
 \end{document}

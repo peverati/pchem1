@@ -73,7 +73,7 @@ which result in the simple formula:
 ## Calculation of Work {#workint}
 In thermodynamics, work ($W$) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because *work is a path function*. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.  
 
-```{r Fig2c3, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.'}
+```{r Fig2c3, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.', fig.alt='Diagram of an ideal gas undergoing isothermal expansion against a constant external pressure. The figure illustrates a gas in a container with a movable boundary expanding while temperature remains constant, emphasizing the relationship between volume change and external pressure during the process.'}
 knitr::include_graphics('./img/OEP_Figures.004.jpeg')
 ```
 
@@ -135,7 +135,7 @@ How do we solve the integral in eq. \@ref(eq:Wint)? It turns out that there are 
 ### $| W_{\text{max}} |$ and  $| W_{\text{min}} |$ in processes at constant temperature (isothermal)
 At constant temperature, the piston in Figure \@ref(fig:Fig2c3) moves along the following PV diagram (this curve is obtained from an ideal gas at constant $T=298$ K):
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume plot for an ideal gas at constant temperature, showing a smooth inverse curve with labeled initial and final states. The diagram illustrates the path followed during isothermal expansion from a smaller volume and higher pressure to a larger volume and lower pressure."}
 x <- seq(0,1.25,0.01)
 i <- 0.25
 f <- 1
@@ -172,7 +172,7 @@ An expansion of the gas will happen between $P_i$ and $P_f$. If the expansion ha
 
 Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work^[we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to Definition \@ref(def:chemistryconv).] represents the red area of the PV-diagram:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume plot of an ideal-gas isotherm with the rectangular area under the curve shaded in red. The shaded region represents the work for a one-step expansion against constant external pressure from the initial to the final volume."}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -214,7 +214,7 @@ rect(i,i, f, 0.081*298/f, density = 20, angle = 45,
 
 If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, $A$ and $B$, and solve each one as we did in the previous case. The first process is an expansion between $P_i$ and $P_1$, with $P_1$ constant. The absolute value of the work, $W_A$, is represented by the blue area:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume plot of an ideal-gas isotherm showing an intermediate state labeled 1 between the initial and final states. The blue shaded area marks the work for the first step of a two-step expansion from the initial volume to the intermediate volume."}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -263,7 +263,7 @@ rect(i,i, p1, 0.081*298/p1, density = 20, angle = 45,
 
 The second process is an expansion between $P_1$ and $P_f$, with $P_f=P_{\text{ext}}$ constant. The absolute value of the work for this second process is represented by the green area:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume plot of an ideal-gas isotherm showing a two-step expansion with an intermediate state. The diagram highlights the work associated with the second step of the expansion from the intermediate state to the final state."}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -313,7 +313,7 @@ rect(p1,p1, f, 0.081*298/f, density = 20, angle = 45,
 
 The total absolute value of the work for the 2-step process is given by the sum of the two areas:
 
-```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%"}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume plot of an ideal-gas isotherm showing a two-step expansion with an intermediate state. The diagram highlights the total work associated with the expansion from the intermediate state to the final state."}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -369,7 +369,7 @@ We can easily extend this procedure to consider processes that happens in 3, 4, 
 \end{equation}
 
 
-```{r, echo=FALSE, figures-side, fig.show="hold", out.width="50%",out.height="100%"}
+```{r, echo=FALSE, fig.align='center',fig.asp = .62, out.width="70%", fig.alt="Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit."}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1

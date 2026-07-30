@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2025-11-24" />
+<meta name="date" content="2026-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -427,7 +427,7 @@ As you probably recall from general chemistry, the ability of a substance to abs
 <h2><span class="header-section-number">2.4</span> Calculation of Work<a href="ZerothLaw.html#workint" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c3"></span>
-<img src="img/OEP_Figures.004.jpeg" alt="Isothermal Expansion of an Ideal Gas Against a Constant External Pressure." width="50%" />
+<img src="img/OEP_Figures.004.jpeg" alt="Diagram of an ideal gas undergoing isothermal expansion against a constant external pressure. The figure illustrates a gas in a container with a movable boundary expanding while temperature remains constant, emphasizing the relationship between volume change and external pressure during the process." width="50%" />
 <p class="caption">
 Figure 2.1: Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.
 </p>
@@ -473,32 +473,32 @@ How do we solve the integral in eq. <a href="ZerothLaw.html#eq:Wint">(2.12)</a>?
 <div id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)<a href="ZerothLaw.html#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At constant temperature, the piston in Figure <a href="ZerothLaw.html#fig:Fig2c3">2.1</a> moves along the following PV diagram (this curve is obtained from an ideal gas at constant <span class="math inline">\(T=298\)</span> K):</p>
-<p><img src="pchem1_files/figure-html/unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-2-1.png" alt="Pressure-volume plot for an ideal gas at constant temperature, showing a smooth inverse curve with labeled initial and final states. The diagram illustrates the path followed during isothermal expansion from a smaller volume and higher pressure to a larger volume and lower pressure." width="70%" style="display: block; margin: auto;" /></p>
 <p>An expansion of the gas will happen between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example <span class="math inline">\(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)</span>), and solve the integral as:</p>
 <p><span class="math display" id="eq:Wint3">\[\begin{equation}
   W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i),
   \tag{2.13}
 \end{equation}\]</span></p>
 <p>Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> represents the red area of the PV-diagram:</p>
-<p><img src="pchem1_files/figure-html/unnamed-chunk-3-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-3-1.png" alt="Pressure-volume plot of an ideal-gas isotherm with the rectangular area under the curve shaded in red. The shaded region represents the work for a one-step expansion against constant external pressure from the initial to the final volume." width="70%" style="display: block; margin: auto;" /></p>
 <p><span class="math display" id="eq:Warea1">\[\begin{equation}
 \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
   \tag{2.14}
 \end{equation}\]</span></p>
 <p>If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, and solve each one as we did in the previous case. The first process is an expansion between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_1\)</span>, with <span class="math inline">\(P_1\)</span> constant. The absolute value of the work, <span class="math inline">\(W_A\)</span>, is represented by the blue area:</p>
-<p><img src="pchem1_files/figure-html/unnamed-chunk-4-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-4-1.png" alt="Pressure-volume plot of an ideal-gas isotherm showing an intermediate state labeled 1 between the initial and final states. The blue shaded area marks the work for the first step of a two-step expansion from the initial volume to the intermediate volume." width="70%" style="display: block; margin: auto;" /></p>
 <p><span class="math display" id="eq:Warea2">\[\begin{equation}
 \left| W_A \right| = P_1 (V_1-V_i)
   \tag{2.15}
 \end{equation}\]</span></p>
 <p>The second process is an expansion between <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_f\)</span>, with <span class="math inline">\(P_f=P_{\text{ext}}\)</span> constant. The absolute value of the work for this second process is represented by the green area:</p>
-<p><img src="pchem1_files/figure-html/unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-5-1.png" alt="Pressure-volume plot of an ideal-gas isotherm showing a two-step expansion with an intermediate state. The diagram highlights the work associated with the second step of the expansion from the intermediate state to the final state." width="70%" style="display: block; margin: auto;" /></p>
 <p><span class="math display" id="eq:Warea3">\[\begin{equation}
 \left| W_B \right| = P_f (V_f-V_1)
   \tag{2.16}
 \end{equation}\]</span></p>
 <p>The total absolute value of the work for the 2-step process is given by the sum of the two areas:</p>
-<p><img src="pchem1_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-6-1.png" alt="Pressure-volume plot of an ideal-gas isotherm showing a two-step expansion with an intermediate state. The diagram highlights the total work associated with the expansion from the intermediate state to the final state." width="70%" style="display: block; margin: auto;" /></p>
 <p><span class="math display" id="eq:Warea4">\[\begin{equation}
   \left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
   \tag{2.17}
@@ -509,7 +509,7 @@ How do we solve the integral in eq. <a href="ZerothLaw.html#eq:Wint">(2.12)</a>?
   \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
   \tag{2.18}
 \end{equation}\]</span></p>
-<p><img src="pchem1_files/figure-html/figures-side-1.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-2.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-3.png" width="50%" height="100%" /><img src="pchem1_files/figure-html/figures-side-4.png" width="50%" height="100%" /></p>
+<p><img src="pchem1_files/figure-html/unnamed-chunk-7-1.png" alt="Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit." width="70%" style="display: block; margin: auto;" /><img src="pchem1_files/figure-html/unnamed-chunk-7-2.png" alt="Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit." width="70%" style="display: block; margin: auto;" /><img src="pchem1_files/figure-html/unnamed-chunk-7-3.png" alt="Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit." width="70%" style="display: block; margin: auto;" /><img src="pchem1_files/figure-html/unnamed-chunk-7-4.png" alt="Pressure-volume plot comparing multi-step expansion with the continuous isothermal path of an ideal gas. The diagram shows how dividing the expansion into more steps changes the total shaded work area and approaches the maximum work limit." width="70%" style="display: block; margin: auto;" /></p>
 <p>The integral on the right hand side of eq. <a href="ZerothLaw.html#eq:WintsolvedV2">(2.18)</a> can be solved for an ideal gas by calculating the pressure using the ideal gas law <span class="math inline">\(P=\frac{nRT}{V}\)</span>, and solving the integral since <span class="math inline">\(n\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(T\)</span> are constant:</p>
 <p><span class="math display" id="eq:WmaxV">\[\begin{equation}
   \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.

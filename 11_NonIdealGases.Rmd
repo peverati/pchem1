@@ -33,7 +33,7 @@ PV=k_1\quad\text{at const.}\;T,
 
 which results in the familiar $PV$ plots of Figure \@ref(fig:FigPVideal). As we already discussed in chapter \@ref(ZerothLaw), each of the curves in Figure \@ref(fig:FigPVideal) is obtained at constant temperature, and it is therefore called *"isotherm."*
 
-```{r FigPVideal, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of an ideal Gas.', out.width="70%"}
+```{r FigPVideal, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of an ideal Gas.', out.width="70%", fig.alt='Pressure-volume diagram of an ideal gas showing two isotherms at different temperatures. The curves illustrate how pressure decreases as volume increases, with the higher-temperature isotherm lying above the lower-temperature one.'}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -76,7 +76,7 @@ V=k_2 T\quad\text{at const.}\;P,
 
 which results in the plots of Figure \@ref(fig:FigTVideal). Each of the curves is obtained at constant pressure, and it is termed *"isobar."*
 
-```{r FigTVideal, echo=FALSE, fig.align='center', fig.cap='VT-Diagram of an ideal Gas.', out.width="70%"}
+```{r FigTVideal, echo=FALSE, fig.align='center', fig.cap='VT-Diagram of an ideal Gas.', out.width="70%", fig.alt='Volume-temperature diagram of an ideal gas at constant pressure, showing two isobars as straight lines through absolute zero. The higher-pressure line is steeper, illustrating that volume increases with temperature.'}
 x <- seq(-273,200,1)
 i <- 0.2
 f <- 1
@@ -124,7 +124,7 @@ P=k_3 T\quad\text{at const.}\;V,
 
 which results in the plots of Figure \@ref(fig:FigTPideal). Each of the curves is obtained at constant volume, and it is termed *"isochor."*
 
-```{r FigTPideal, echo=FALSE, fig.align='center', fig.cap='PT-Diagram of an ideal Gas.', out.width="70%"}
+```{r FigTPideal, echo=FALSE, fig.align='center', fig.cap='PT-Diagram of an ideal Gas.', out.width="70%", fig.alt='Pressure-temperature diagram of an ideal gas at constant volume, showing two isochors as horizontal or near-horizontal relationships across temperature. The figure emphasizes that pressure increases with temperature for fixed volume.'}
 x <- seq(-273,200,1)
 i <- 0.2
 f <- 1
@@ -246,7 +246,7 @@ The parameter $a$ accounts for the presence of intermolecular interactions, whil
 
 ### Joule–Thomson effect
 
-```{r FigJT, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule–Thomson Experiment.'}
+```{r FigJT, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Joule–Thomson Experiment.', fig.alt='Diagram of the Joule-Thomson experiment showing a gas expanding through a throttling device. The setup illustrates cooling or heating during expansion without external work, depending on the gas and conditions.'}
 knitr::include_graphics('./img/OEP_Figures.015.jpeg')
 ```
 
@@ -337,7 +337,7 @@ z=\frac{\overline{V}}{\overline{V}_{\text{ideal}}} = \frac{P \overline{V}}{RT}.
 
 It is evident from eq. \@ref(eq:comprdef) that the compressibility factor is dependent on the pressure, and for an ideal gas $z=1$ always. For a non-ideal gas at any given pressure, $z$ can be higher or lower than one, separating the behavior of non-ideal gases into two possibilities. The dependence of the compressibility factor against pressure is represented for $\mathrm{H}_2$ and $\mathrm{CO}_2$ in Figure \@ref(fig:FigZb).
 
-```{r FigZb, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Non-Ideal Gases Behaviors.'}
+```{r FigZb, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Non-Ideal Gases Behaviors.', fig.alt='Diagram comparing qualitative behaviors of non-ideal gases to ideal-gas behavior. It highlights deviations caused by intermolecular attractions and repulsions under real conditions.'}
 knitr::include_graphics('./img/OEP_Figures.012.jpeg')
 ```
 
@@ -362,7 +362,7 @@ which is then interpreted as follows:
 
 The dependence of the compressibility factor as a function of temperature (Figure \@ref(fig:Fig1Zb2)) results in different plots for each of the two types of behavior.
 
-```{r Fig1Zb2, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Temperature Dependence of the Compressibility Factor.'}
+```{r Fig1Zb2, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Temperature Dependence of the Compressibility Factor.', fig.alt='Plot showing how the compressibility factor varies with temperature. The figure illustrates that real gases move closer to ideal behavior as temperature changes, with deviations reflecting intermolecular interactions.'}
 knitr::include_graphics('./img/OEP_Figures.013.jpeg')
 ```
 
@@ -374,7 +374,7 @@ Both type I and type II non-ideal gases will approach the ideal gas behavior as 
 
 ### Phase diagram of a non-ideal gas
 
-```{r FigPVni, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Volume Diagram of a Non-Ideal Gas.'}
+```{r FigPVni, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Volume Diagram of a Non-Ideal Gas.', fig.alt='Pressure-volume diagram for a non-ideal gas showing deviation from ideal behavior. The plot emphasizes how real-gas curves differ from the simple hyperbolic ideal-gas relationship.'}
 knitr::include_graphics('./img/OEP_Figures.014.jpeg')
 ```
 
@@ -389,7 +389,7 @@ At the critical temperature and below, the gas liquefies when the pressure is in
 
 The critical temperature is the coordinate of a unique point, called the **critical point**, that can be visualized in the three-dimensional $T,P,V$ diagram of each gas (Figure \@ref(fig:FigTPVd)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) and distributed under CC-BY-SA license.]).
 
-```{r FigTPVd, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The three-dimensional diagram.'}
+```{r FigTPVd, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The three-dimensional diagram.', fig.alt='Three-dimensional pressure-volume-temperature diagram for a non-ideal gas. The surface shows how pressure depends jointly on volume and temperature, visualizing the real-gas equation of state.'}
 knitr::include_graphics('./img/PVT_3D_diagram.png')
 ```
 

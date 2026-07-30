@@ -195,7 +195,7 @@ $\;$
 
 > ```
 
-```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).'}
+```{r agfig, echo=FALSE, fig.align='center', fig.cap='Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).', fig.alt='Two-panel plot showing thermodynamic potentials decreasing during spontaneous processes. The left panel shows Helmholtz energy decreasing with time at constant temperature and volume, and the right panel shows Gibbs energy decreasing with time at constant temperature and pressure.'}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1

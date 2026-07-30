@@ -2,7 +2,7 @@
 
 The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let's consider once again the Joule experiment (Figure \@ref(fig:FigJexp)). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in Figure \@ref(fig:FigJexpC), there are no restrictions imposed on this hypothetical cycle by the first law. 
 
-```{r FigJexpC, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Closing the Cycle in The Joule Expansion Experiment.'}
+```{r FigJexpC, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Closing the Cycle in The Joule Expansion Experiment.', fig.alt='Diagram showing the Joule expansion experiment closed into a cycle. It illustrates the gas expansion setup with the chambers and water bath, emphasizing the cycle concept used to discuss thermodynamic state changes.'}
 knitr::include_graphics('./img/OEP_Figures.008.jpeg')
 
 ```
@@ -30,7 +30,7 @@ A *Carnot cycle* is an idealized process composed of two isothermal and two adia
 
 A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T_l$ (low), respectively. The reservoirs have a large thermal capacity so that their temperatures are unaffected by the cycle. The system is composed exclusively by the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformations of a Carnot cycle on a $PV$ diagram, we obtain the following plot:
 
-```{r FigCarnotPV, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of a Carnot Cycle.', out.width="70%"}
+```{r FigCarnotPV, echo=FALSE, fig.align='center', fig.cap='PV-Diagram of a Carnot Cycle.', out.width="70%", fig.alt='Pressure-volume diagram of a Carnot cycle, with two isotherms and two adiabats connecting four labeled states. The figure shows the closed cycle path and highlights the work enclosed by the loop.'}
 x <- seq(0,1.25,0.01)
 i <- 0.2
 f <- 1
@@ -109,7 +109,7 @@ legend(0.45,22, expression(abs(W[2-step])),box.col = "white", bg = "white", adj=
 
 ### Stage 1: isothermal expansion $A \rightarrow B$ {#CCstage1}
 
-```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center'}
+```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.alt='Carnot cycle panel showing state A on the pressure-volume path. This panel labels one corner of the cycle and helps identify the sequence of states used to build the full cycle.'}
 knitr::include_graphics('./img/OEP_Figures.007a.png')
 ```
 
@@ -136,7 +136,7 @@ where we denoted $\left| Q_h \right|$ the absolute value of the heat that gets *
 
 ### Stage 2: adiabatic expansion $B \rightarrow C$ {#CCstage2}
 
-```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center'}
+```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.alt='Carnot cycle panel showing state B on the pressure-volume path. This panel marks the next state along the cycle and shows the progression between the labeled corners.'}
 knitr::include_graphics('./img/OEP_Figures.007b.png')
 ```
 
@@ -157,7 +157,7 @@ and the negative energy (expansion work) can be calculated using:
 
 ### Stage 3: isothermal compression $C \rightarrow D$ {#CCstage3}
 
-```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center'}
+```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.alt='Carnot cycle panel showing state C on the pressure-volume path. This panel identifies another corner of the cycle and helps track the sequence of process steps.'}
 knitr::include_graphics('./img/OEP_Figures.007c.png')
 ```
 
@@ -183,7 +183,7 @@ where $\left| Q_l \right|$ is the absolute value of the heat that gets **out of*
 
 ### Stage 4: adiabatic compression $D \rightarrow A$ {#CCstage4}
 
-```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center'}
+```{r out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.alt='Carnot cycle panel showing state D on the pressure-volume path. This panel completes the set of labeled states used to explain the full Carnot cycle geometry.'}
 knitr::include_graphics('./img/OEP_Figures.007d.png')
 ```
 
@@ -261,7 +261,7 @@ and, replacing $Q_1$ and $Q_3$ with the absolute values of the heats drawn from 
 
 or, in other words, more heat is extracted from the hot reservoir than it is put into the cold one. The difference between the absolute value of these amounts of heat gives the total work of the cycle. This process is depicted in Figure \@ref(fig:FigCarnotEff).
 
-```{r FigCarnotEff, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Carnot Cycle Diagram.'}
+```{r FigCarnotEff, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Carnot Cycle Diagram.', fig.alt='Diagram explaining Carnot cycle efficiency. It shows the relationship between the hot and cold reservoirs and the thermodynamic steps that determine the maximum theoretical efficiency of a heat engine.'}
 knitr::include_graphics('./img/OEP_Figures.009.jpeg')
 ```
 
@@ -269,7 +269,7 @@ knitr::include_graphics('./img/OEP_Figures.009.jpeg')
 Up to this point, we have discussed Carnot cycles working in the hot $\rightarrow$ cold direction ($A$ $\rightarrow$ $B$ $\rightarrow$ $C$ $\rightarrow$ $D$ $\rightarrow$ $A$), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold $\rightarrow$ hot direction ($A$ $\rightarrow$ $D$ $\rightarrow$ $C$ $\rightarrow$ $B$ $\rightarrow$ $A$). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in sections \@ref(carnotcyclesect) and \@ref(UWQCarnot).
 
 *Solution:* When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of $Q$, $W$, and $U$ will be reversed. In this case, the total work would get **into** the systems, and heat would be transferred from the cold reservoir to the hot one. Figure \@ref(fig:FigCarnotEff) would be modified as:
-> ```{r out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'right'}
+> ```{r out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'right', fig.alt='Supplementary thermodynamic diagram accompanying the Carnot cycle discussion, used to reinforce the concept of a Carnot cycle ran in reverse. It is the same as the previous diagram, with all arrows reversed.'}
 knitr::include_graphics('./img/OEP_Figures.010.jpeg')
 > ```
 This reversed mode of operation is the basic principle behind refrigerators and air conditioning.

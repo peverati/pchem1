@@ -32,7 +32,7 @@ P_i=x_i P_i^*.
 ### One volatile component
 Raoult's law applied to a system containing only one volatile component describes a line in the $Px_{\text{B}}$ plot, as in Figure \@ref(fig:FigMC1).
 
-```{r FigMC1, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.'}
+```{r FigMC1, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.', fig.alt='Pressure-composition phase diagram for an ideal solution with a single volatile component at constant temperature. The diagram shows how total pressure varies with composition and marks the regions where liquid and vapor are in equilibrium.'}
 knitr::include_graphics('./img/OEP_Figures.019.jpeg')
 ```
 
@@ -42,7 +42,7 @@ As emerges from Figure \@ref(fig:FigMC1), Raoult's law divides the diagram into 
 
 In an ideal solution, every volatile component follows Raoult's law. Since the vapors in the gas phase behave ideally, the total pressure can be simply calculated using Dalton's law as the sum of the partial pressures of the two components $P_{\text{TOT}}=P_{\text{A}}+P_{\text{B}}$. The corresponding diagram is reported in Figure \@ref(fig:FigMC2). The total vapor pressure, calculated using Dalton's law, is reported in red. The Raoult's behaviors of each of the two components are also reported using black dashed lines.
 
-```{r FigMC2, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature.'}
+```{r FigMC2, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature.', fig.alt='Pressure-composition phase diagram for an ideal solution containing two volatile components at constant temperature. The figure shows bubble-point and dew-point behavior as composition changes across the liquid and vapor regions.'}
 knitr::include_graphics('./img/OEP_Figures.020.jpeg')
 ```
 
@@ -80,7 +80,7 @@ Notice how the mole fraction of toluene is much higher in the liquid phase, $x_{
 
 As is clear from the results of Exercise \@ref(exr:xaya), the concentration of the components in the gas and vapor phases are different. We can also report the mole fraction in the vapor phase as an additional line in the $Px_{\text{B}}$ diagram of Figure \@ref(fig:FigMC2). When both concentrations are reported in one diagram—as in Figure \@ref(fig:FigMC3)—the line where $x_{\text{B}}$ is obtained is called the *liquidus line*, while the line where the $y_{\text{B}}$ is reported is called the *Dew point line*.
 
-```{r FigMC3, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot.'}
+```{r FigMC3, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot.', fig.alt='Pressure-composition phase diagram for an ideal binary solution at constant temperature, with the liquidus and dew-point lines highlighted. The emphasis shows the range where liquid, vapor, or both phases are stable.'}
 knitr::include_graphics('./img/OEP_Figures.021.jpeg')
 
 ```
@@ -91,14 +91,14 @@ The liquidus and Dew point lines determine a new section in the phase diagram wh
 
 We can now consider the phase diagram of a 2-component ideal solution as a function of temperature at constant pressure. The $T_{\text{B}}$ diagram for two volatile components is reported in Figure \@ref(fig:FigMC4). 
 
-```{r FigMC4, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.'}
+```{r FigMC4, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.', fig.alt='Temperature-composition phase diagram for an ideal binary solution at constant pressure. The figure shows how equilibrium temperatures change with composition and identifies phase boundaries between liquid and vapor.'}
 knitr::include_graphics('./img/OEP_Figures.022.jpeg')
 
 ```
 
 Compared to the $Px_{\text{B}}$ diagram of Figure \@ref(fig:FigMC3), the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high Temperature). The liquidus and Dew point lines are curved and form a lens-shaped region where liquid and vapor coexists. Once again, there are only two degrees of freedom inside the lens, of which the pressure is kept constant by definition.^[This effectively corresponds to a region with just a single degree of freedom in the plot,:either the temperature or the composition can be changed independently.] As such, a liquid solution of initial composition $x_{\text{B}}^i$ can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration $y_{\text{B}}^f$. As is clear from Figure \@ref(fig:FigMC4), the mole fraction of the $\text{B}$ component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component $\text{B}$. This is exemplified in the industrial process of fractional distillation, as schematically depicted in Figure \@ref(fig:FigMC5).
 
-```{r FigMC5, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram.'}
+```{r FigMC5, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram.', fig.alt='Temperature-composition phase diagram illustrating fractional distillation and the count of theoretical plates. The diagram traces repeated equilibrium steps between vapor and liquid during separation.'}
 knitr::include_graphics('./img/OEP_Figures.023.jpeg')
 
 ```
@@ -108,7 +108,7 @@ Each of the horizontal lines in the lens region of the $Tx_{\text{B}}$ diagram o
 ## Phase Diagrams of Non-Ideal Solutions
 Non-ideal solutions follow Raoult's law for only a small amount of concentrations. The typical behavior of a non-ideal solution with a single volatile component is reported in the $Px_{\text{B}}$ plot in Figure \@ref(fig:FigMC6).
 
-```{r FigMC6, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.'}
+```{r FigMC6, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.', fig.alt='Pressure-composition phase diagram for a non-ideal solution with one volatile component at constant temperature. The figure shows deviation from ideal behavior in the equilibrium curve as composition changes.'}
 knitr::include_graphics('./img/OEP_Figures.024.jpeg')
 
 ```
@@ -123,14 +123,14 @@ P_{\text{B}}=k_{\text{AB}} x_{\text{B}},
 where $k_{\text{AB}}$ depends on the chemical nature of $\mathrm{A}$ and $\mathrm{B}$. The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of Figure \@ref(fig:FigMC7). The total pressure is once again calculated as the sum of the two partial pressures. Positive deviations on Raoult's ideal behavior are not the only possible deviation from ideality, and negative deviation also exits, albeit slightly less common. An example of a negative deviation is reported in the right panel of Figure \@ref(fig:FigMC7).
 
 
-```{r FigMC7, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature.'}
+```{r FigMC7, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature.', fig.alt='Pressure-composition phase diagram for a non-ideal binary solution at constant temperature. The plot shows non-ideal vapor-liquid equilibrium behavior and the separation between liquid and vapor composition ranges.'}
 knitr::include_graphics('./img/OEP_Figures.025.jpeg')
 
 ```
 
 If we move from the $Px_{\text{B}}$ diagram to the $Tx_{\text{B}}$ diagram, the behaviors observed in Figure \@ref(fig:FigMC7) will correspond to the diagram in Figure \@ref(fig:FigMC8).
 
-```{r FigMC8, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure.'}
+```{r FigMC8, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure.', fig.alt='Temperature-composition phase diagram for a non-ideal binary solution at constant pressure. The figure shows how phase boundaries shift with composition and highlights the non-ideal equilibrium region.'}
 knitr::include_graphics('./img/OEP_Figures.026.jpeg')
 
 ```
@@ -207,7 +207,7 @@ Comparing eq. \@ref(eq:act8) with Raoult's law, we can calculate the activity co
 
 where $P_i^{\text{R}}$ is the partial pressure calculated using Raoult's law. This result also proves that for an ideal solution, $\gamma=1$. Eq. \@ref(eq:act9) can also be used experimentally to obtain the activity coefficient from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in Figure \@ref(fig:FigSol1). 
 
-```{r FigSol1, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Positive and Negative Deviation from Raoult\'s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.'}
+```{r FigSol1, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Positive and Negative Deviation from Raoult\'s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.', fig.alt='Pressure-composition diagram showing both positive and negative deviations from Raoult’s law in non-ideal solutions. The figure contrasts upward and downward departures from ideal vapor-pressure behavior at constant temperature.'}
 knitr::include_graphics('./img/OEP_Figures.033.jpeg')
 
 ```
@@ -261,7 +261,7 @@ and since $x_{\text{solution}}<1$, the logarithmic term in the last expression i
 
 Eq. \@ref(eq:collA) proves that the addition of a solute always stabilizes the solvent in the liquid phase, and lowers its chemical potential, as shown in Figure \@ref(fig:FigSol2).
 
-```{r FigSol2, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute.'}
+```{r FigSol2, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute.', fig.alt='Diagram showing that adding a solute lowers the chemical potential of the liquid phase. The figure illustrates how solute addition changes the thermodynamic driving force in the solution.'}
 knitr::include_graphics('./img/OEP_Figures.034.jpeg')
 
 ```
@@ -311,7 +311,7 @@ Notice from Figure \@ref(fig:FigSol2) how the depression of the melting point is
 
 The osmotic pressure of a solution is defined as the difference in pressure between the solution and the pure liquid solvent when the two are in equilibrium across a semi-permeable (osmotic) membrane. The osmotic membrane is made of a porous material that allows the flow of solvent molecules but blocks the flow of the solute ones. The osmosis process is depicted in Figure \@ref(fig:FigSol3). 
 
-```{r FigSol3, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Osmotic Pressure of a Solution.'}
+```{r FigSol3, out.width='80%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Osmotic Pressure of a Solution.', fig.alt='Diagram illustrating osmotic pressure in a solution separated by a semipermeable membrane. The figure shows solvent movement and the pressure required to stop net osmosis.'}
 knitr::include_graphics('./img/OEP_Figures.035.jpeg')
 
 ```
