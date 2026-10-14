@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-07-31" />
+<meta name="date" content="2026-10-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -475,13 +475,7 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 </tr>
 </tbody>
 </table>
-<p>The thermodynamic potentials are the analog of the potential energy in classical mechanics. Since the potential energy is interpreted as the capacity to do work, the thermodynamic potentials assume the following interpretations:</p>
-<ul>
-<li>Internal energy (<span class="math inline">\(U\)</span>) is the capacity to do work plus the capacity to release heat.</li>
-<li>Enthalpy (<span class="math inline">\(H\)</span>) is the capacity to do non-mechanical work plus the capacity to release heat.</li>
-<li>Gibbs energy (<span class="math inline">\(G\)</span>) is the capacity to do non-mechanical work.</li>
-<li>Helmholtz energy (<span class="math inline">\(A\)</span>) is the capacity to do mechanical plus non-mechanical work.<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a></li>
-</ul>
+<p>The thermodynamic potentials are the analog of the potential energy in classical mechanics.<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a></p>
 <p>Where non-mechanical work is defined as any type of work that is not expansion or compression (<span class="math inline">\(PV\)</span>–work). A typical example of non-mechanical work is electrical work.</p>
 </div>
 <div id="freeenergies" class="section level2 hasAnchor" number="8.3">
@@ -593,10 +587,10 @@ V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\
 <p>Since <span class="math inline">\(T\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(S\)</span> are now defined as partial first derivatives of a thermodynamic potential, we can now take a second partial derivation with respect to a separate variable, and rely on Schwartz’s theorem to derive the following relations:</p>
 <p><span class="math display" id="eq:maxrelf">\[\begin{equation}
 \begin{aligned}
-\frac{\partial^2 U }{\partial S \partial V} &amp;=&amp; +\left(\frac{\partial T}{\partial V}\right)_{S,\{n_{j \neq i}\}} &amp;=&amp; -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_{j \neq i}\}}   \\
-\frac{\partial^2 H }{\partial S \partial P} &amp;=&amp; +\left(\frac{\partial T}{\partial P}\right)_{S,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial V}{\partial S}\right)_{P,\{n_{j \neq i}\}}  \\
--\frac{\partial^2 A }{\partial T \partial V} &amp;=&amp; +\left(\frac{\partial S}{\partial V}\right)_{T,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial P}{\partial T}\right)_{V,\{n_{j \neq i}\}}  \\
-\frac{\partial^2 G }{\partial T \partial P} &amp;=&amp; -\left(\frac{\partial S}{\partial P}\right)_{T,\{n_{j \neq i}\}} &amp;=&amp; +\left(\frac{\partial V}{\partial T}\right)_{P,\{n_{j \neq i}\}}
+\frac{\partial^2 U }{\partial S \partial V} &amp;=&amp; +\left(\frac{\partial T}{\partial V}\right)_{S,n_{i}} &amp;=&amp; -\left(\frac{\partial P}{\partial S}\right)_{V,n_{i}}   \\
+\frac{\partial^2 H }{\partial S \partial P} &amp;=&amp; +\left(\frac{\partial T}{\partial P}\right)_{S,n_{i}} &amp;=&amp; +\left(\frac{\partial V}{\partial S}\right)_{P,n_{i}}  \\
+-\frac{\partial^2 A }{\partial T \partial V} &amp;=&amp; +\left(\frac{\partial S}{\partial V}\right)_{T,n_{i}} &amp;=&amp; +\left(\frac{\partial P}{\partial T}\right)_{V,n_{i}}  \\
+\frac{\partial^2 G }{\partial T \partial P} &amp;=&amp; -\left(\frac{\partial S}{\partial P}\right)_{T,n_{i}} &amp;=&amp; +\left(\frac{\partial V}{\partial T}\right)_{P,n_{i}}
 \end{aligned}
 \tag{8.18}
 \end{equation}\]</span></p>
@@ -644,7 +638,7 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <li><span class="math inline">\(dU = TdS - VdP\)</span>.</li>
 </ol>
 <hr />
-<p><strong>3. Which of the following formulas is the fundamental equation for the Helmholtz energy?</strong></p>
+<p><strong>2. Which of the following formulas is the fundamental equation for the Helmholtz energy?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(dA = TdS - PdV + \sum_i \mu_i dn_i\)</span>.</li>
 <li><span class="math inline">\(dA = -SdT + VdP + \sum_i \mu_i dn_i\)</span>.</li>
@@ -653,7 +647,7 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <li><span class="math inline">\(dA = -SdT - VdP + \sum_i \mu_i dn_i\)</span>.</li>
 </ol>
 <hr />
-<p><strong>4. Which statement about thermodynamic potentials is NOT correct?</strong></p>
+<p><strong>3. Which statement about thermodynamic potentials is NOT correct?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>Internal energy is the capacity to do work plus the capacity to release heat.</li>
 <li>Enthalpy is the capacity to do non-mechanical work plus the capacity to release heat.</li>
@@ -700,7 +694,7 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 <hr />
 <p><strong>8. Which of the following is a Maxwell relation?</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\left(\frac{\partial T}{\partial V}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial T}{\partial S}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}\)</span>.</li>
 <li><span class="math inline">\(\left(\frac{\partial T}{\partial P}\right)_{S,\{n_i\}} = -\left(\frac{\partial V}{\partial S}\right)_{P,\{n_i\}}\)</span>.</li>
 <li><span class="math inline">\(\left(\frac{\partial S}{\partial V}\right)_{T,\{n_i\}} = -\left(\frac{\partial P}{\partial T}\right)_{V,\{n_i\}}\)</span>.</li>
 <li><span class="math inline">\(\left(\frac{\partial S}{\partial P}\right)_{T,\{n_i\}} = -\left(\frac{\partial V}{\partial T}\right)_{P,\{n_i\}}\)</span>.</li>
@@ -729,7 +723,7 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 Click to reveal
 </span>
 <span id="reveal-inline-content" style="display: none;">
-1.b, 2.d, 3.c, 4.c, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
+1.b, 2.c, 3.c, 4.e, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
 </span></p>
 
 </div>
