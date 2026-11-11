@@ -4,6 +4,8 @@ aliases:
 ---
 
 # Chemical Equilibrium {#sec-ChemicalEquilibrium}
+In @sec-GibbsFree, we learned that the Gibbs energy decreases during a spontaneous process at constant temperature and pressure, and we found how it depends on the composition of a mixture. In this chapter, we will apply these results to chemical reactions. Most reactions do not go all the way to products: they stop at a mixture of reactants and products, the chemical equilibrium. We will see that the composition of this mixture is set by the minimum of the Gibbs energy, which leads us to the equilibrium constant that you know from general chemistry. We will then study how the equilibrium constant changes with temperature and pressure, which gives a mathematical form to Le Chatelier's principle.
+
 ## Reaction Quotient and Equilibrium Constant
 Let's consider a prototypical reaction at constant $T,P$:
 
@@ -68,7 +70,14 @@ $$
 K_{\text{eq}} =\prod_i a_{i,\text{eq}}^{\nu_i},
 $$ {#eq-kdef}
 
-where we have replaced the partial pressure at equilibrium, $P_{i,\text{eq}}$, with a new concept introduced initially by Gilbert Newton Lewis (1875–1946),^[Gilbert Lewis is the same scientist who invented the concept of Lewis Structures.] that he termed **activity**, and represented by the letter $a$. For ideal gases, it is clear that $a_i=P_i/P^\standardstate$. For non-ideal gases, the activity is equal to the fugacity $a_i=f_i/P^\standardstate$, a concept that we will investigate in the next chapter. For pure liquids and solids, the activity is simply $a_i=1$. For dilute solutions, the activity is equal to a measured concentration (such as, for example, the mole fraction $x_i$ in the liquid phase, and $y_i$ in the gas phase, or the molar concentration $[i]/[i]^\standardstate$ with $[i]^\standardstate = 1\;\text{mol/L}$). Finally for concentrated solutions, the activity is related to the measured concentration via an activity coefficient. We will return to the concept of activity in @sec-MCPhaseDiagrams, when we will specifically deal with solutions. For now, it is interesting to use the activity to write the definition of the following two constants:
+where we have replaced the partial pressure at equilibrium, $P_{i,\text{eq}}$, with a new concept introduced initially by Gilbert Newton Lewis (1875–1946),^[Gilbert Lewis is the same scientist who invented the concept of Lewis Structures.] that he termed **activity**, and represented by the letter $a$. The activity is a dimensionless "effective concentration" that tells us how much each species contributes to the equilibrium. Its expression depends on the state of the species:
+
+- **Ideal gases:** the activity is the partial pressure divided by the standard pressure, $a_i=P_i/P^\standardstate$, as in @eq-kpdef.
+- **Non-ideal gases:** the pressure is replaced by an "effective pressure," the fugacity, $a_i=f_i/P^\standardstate$, which we will introduce in @sec-RealGases.
+- **Pure liquids and solids:** the activity is simply $a_i=1$. This is why pure solids and liquids do not appear in the equilibrium constants that you wrote in general chemistry.
+- **Solutions:** for dilute solutions, the activity is approximately equal to a measured concentration, such as the mole fraction, or the molar concentration divided by the standard one, $[i]/[i]^\standardstate$ with $[i]^\standardstate = 1\;\text{mol/L}$. For concentrated solutions, a correction factor is needed. We will derive the activity of solutions in @sec-MCPhaseDiagrams.
+
+For now, it is interesting to use the activity to write the definition of the following two constants:
 
 $$
 K_y =\prod_i \left( y_{i,\text{eq}} \right)^{\nu_i} \qquad \qquad \qquad \qquad K_C =\prod_i \left( [i]_{\text{eq}}/[i]^\standardstate \right)^{\nu_i},
@@ -136,7 +145,7 @@ $$ {#eq-vthoffeqI}
 which is the equation that produces the so-called **van 't Hoff plots**, from which $\Delta H^\standardstate$ can be experimentally determined:
 
 
-![Van 't Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reaction at Constant P.](img/R_10_ChemicalEquilibrium_vthoffplt.png){#fig-vthoffplt fig-alt="Two van 't Hoff plots of ln K versus 1 over T, each with two points labeled 1 and 2. Left, endothermic reaction: a blue line with negative slope, equal to minus the standard reaction enthalpy over R. Right, exothermic reaction: a red line with positive slope."}
+![Van 't Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reaction at Constant P.](img/ch10_vanthoff.png){#fig-vthoffplt fig-alt="Two van 't Hoff plots of ln K versus 1 over T, each with two points labeled 1 and 2. Left, endothermic reaction: a blue line with negative slope, equal to minus the standard reaction enthalpy over R. Right, exothermic reaction: a red line with positive slope." width="85%"}
 
 
 

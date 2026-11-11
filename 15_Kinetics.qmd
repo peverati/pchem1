@@ -6,12 +6,12 @@ aliases:
 # Chemical Kinetics {#sec-Kinetics}
 From thermodynamics, we can determine the spontaneity of a reaction and its extent, using $\Delta G$ and $K_{\text{eq}}$, respectively. However, thermodynamics does not provide any information on how *fast* the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics. 
 
-A chemical kinetics study aims to find the *rate* of a reaction and to find the microscopic steps that compose it, determining its *mechanism*. 
+A chemical kinetics study aims to find the *rate* of a reaction and to find the microscopic steps that compose it, determining its *mechanism*. In this last chapter, we will therefore leave equilibrium behind and look at how concentrations change with time, how we can measure the rate of a reaction, and why reactions speed up when we heat them.
 
 ## Differential and integrated rate laws {#sec-diffintk}
 The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, $k$,  called the *rate coefficient*, and several parameters found at the exponent of the concentrations of the reactants, and are called *reaction orders*. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The rate coefficient is usually represented with the lowercase letter $k$, and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter $K$. Another useful concept in kinetics is the half-life, usually abbreviated with $t_{1/2}$. The half-life is defined as the time required to reach half of the initial reactant concentration. 
 
-A reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant's individual orders and is, at most, equal to three. We examine in detail the four most common reaction orders below.
+A reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant's individual orders and is, at most, equal to three. The number of molecules that take part in an elementary step is called its *molecularity*: an elementary step involving one molecule is *unimolecular*, one involving two molecules is *bimolecular*, and one involving three molecules is *termolecular*. Keep in mind that the order is an experimental property of the rate law, while the molecularity describes a single microscopic step: the two coincide only for elementary reactions. We examine in detail the four most common reaction orders below.
 
 ### Zeroth-order reaction
 For a zeroth-order reaction, the reaction rate is independent of the concentration of a reactant. In other words, if we have a reaction of the type:
@@ -37,10 +37,10 @@ $$
 \end{aligned}
 $$ {#eq-kin3}
 
-Using the integrated rate law, we notice that the concentration of the reactant diminishes linearly with respect to time. A plot of $[\mathrm{A}]$ as a function of $t$, therefore, will result in a straight line with an angular coefficient equal to $-k_0$, as in the plot of @Fig-figk1. 
+Using the integrated rate law, we notice that the concentration of the reactant diminishes linearly with respect to time. A plot of $[\mathrm{A}]$ as a function of $t$, therefore, will result in a straight line with a slope equal to $-k_0$, as in the plot of @Fig-figk1. 
 
 
-![Reaction Rate Plot for a Zeroth-Order Reaction.](img/R_15_Kinetics_figk1.png){#fig-figk1 fig-alt="Concentration of A versus time for a zeroth-order reaction: a straight line that decreases with slope minus k0 and reaches zero."}
+![Reaction Rate Plot for a Zeroth-Order Reaction.](img/ch14_zeroth.png){#fig-figk1 fig-alt="Concentration of A versus time for a zeroth-order reaction: a straight line that decreases with slope minus k0 and reaches zero." width="70%"}
 
 
 @Eq-kin3 also suggests that the units of the rate coefficient for a zeroth-order reaction are of concentration divided by time, typically $\frac{\mathrm{M}}{\mathrm{s}}$, with $\mathrm{M}$ being the molar concentration in $\frac{\mathrm{mol}}{\mathrm{L}}$ and $\mathrm{s}$ the time in seconds.
@@ -56,7 +56,7 @@ $$ {#eq-kin4}
 Zeroth-order reactions are common in several biochemical processes catalyzed by enzymes, such as the oxidation of ethanol to acetaldehyde in the liver by the alcohol dehydrogenase enzyme, which is zero-order in ethanol.
 
 ### First-order reaction
-A first-order reaction depends on the concentration of only one reactant, and is therefore also called a *unimolecular reaction*. As for the previous case, if we consider a reaction of the type:
+In a first-order reaction, the rate is proportional to the concentration of a single reactant. If a first-order reaction is elementary, it involves a single molecule, and it is unimolecular (for example, an isomerization or a radioactive decay). However, many first-order reactions are not elementary, so we should not use the two words as synonyms. As for the previous case, if we consider a reaction of the type:
 
 $$
 \mathrm{A}\rightarrow \text{products}
@@ -81,13 +81,13 @@ $$ {#eq-kin7}
 Using the integrated rate law to plot the concentration of the reactant, $[\mathrm{A}]$, as a function of time, $t$, we obtain an exponential decay, as in @Fig-figk2. 
 
 
-![Reaction Rate Plot for a First-Order Reaction.](img/R_15_Kinetics_figk2.png){#fig-figk2 fig-alt="Concentration of A versus time for a first-order reaction: an exponential decay that approaches zero."}
+![Reaction Rate Plot for a First-Order Reaction.](img/ch14_first.png){#fig-figk2 fig-alt="Concentration of A versus time for a first-order reaction: an exponential decay that approaches zero." width="70%"}
 
 
-However, if we plot the logarithm of the concentration, $\ln[\mathrm{A}]$, as a function of time, we obtain a line with angular coefficient $-k_1$, as in the plot of @Fig-figk3. From @eq-kin7, we can also obtain the units for the rate coefficient for a first-order reaction, which typically is $\frac{1}{\mathrm{s}}$, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.
+However, if we plot the logarithm of the concentration, $\ln[\mathrm{A}]$, as a function of time, we obtain a line with slope $-k_1$, as in the plot of @Fig-figk3. From @eq-kin7, we can also obtain the units for the rate coefficient for a first-order reaction, which typically is $\frac{1}{\mathrm{s}}$, independent of concentration. Since the rate coefficient for first-order reactions has units of inverse time, it is sometimes called the frequency rate.
 
 
-![Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axis is ln[A].](img/R_15_Kinetics_figk3.png){#fig-figk3 fig-alt="Natural logarithm of the concentration of A versus time for a first-order reaction: a straight line with slope minus k1."}
+![Linear Plot for a First-Order Reaction. Notice that the Quantity on the y Axis is ln[A].](img/ch14_first_lin.png){#fig-figk3 fig-alt="Natural logarithm of the concentration of A versus time for a first-order reaction: a straight line with slope minus k1." width="70%"}
 
 
 The half-life of a first-order reaction is:
@@ -120,13 +120,13 @@ $$
 \frac{1}{[\mathrm{A}]}&=\frac{1}{[\mathrm{A}]_0} + k_2 t.
 \end{aligned}
 $$ {#eq-kin11}
-As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, $\frac{1}{[\mathrm{A}]}$, as a function of time, $t$, we obtain a line with angular coefficient $+k_2$, as in the plot of @Fig-figk4. 
+As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, $\frac{1}{[\mathrm{A}]}$, as a function of time, $t$, we obtain a line with slope $+k_2$, as in the plot of @Fig-figk4. 
 
 
-![Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axis is 1/[A].](img/R_15_Kinetics_figk4.png){#fig-figk4 fig-alt="Inverse of the concentration of A versus time for a second-order reaction: a straight line with positive slope k2."}
+![Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axis is 1/[A].](img/ch14_second_lin.png){#fig-figk4 fig-alt="Inverse of the concentration of A versus time for a second-order reaction: a straight line with positive slope k2." width="70%"}
 
 
-Notice that the line has a *positive* angular coefficient, in contrast with the previous two cases, for which the angular coefficients were negative. The units of $k$ for a simple second order reaction are calculated from @eq-kin11 and typically are $\frac{1}{\mathrm{M}\cdot \mathrm{s}}$.
+Notice that the line has a *positive* slope, in contrast with the previous two cases, for which the slopes were negative. The units of $k$ for a simple second order reaction are calculated from @eq-kin11 and typically are $\frac{1}{\mathrm{M}\cdot \mathrm{s}}$.
 The half-life of a simple second-order reaction is:
 $$
 \begin{aligned}
@@ -221,19 +221,33 @@ $$
 \end{aligned}
 $$ {#eq-kincomp7}
 
-From these results, we can distinguish two extreme behaviors. The first one is observed when $k_1 \cong k_2$, and it produces a plot of the concentration of species with respect to time reported in @Fig-figk5. This behavior is observed when a process undergoing a series of consecutive reactions presents a rate-determining step in the middle of the sequence (the second reaction, in the simple case analyzed above). Once the process is established, its rate will equal the rate of the slowest step.
+From these results, we can distinguish two typical behaviors, depending on which of the two steps is the slowest. The slowest step in a sequence is called the *rate-determining step*, since, just like the narrowest point of a funnel, it limits how fast the whole process can go.
+
+The first behavior is observed when the second step is slower than, or comparable to, the first one. For example, @Fig-figk5 reports the concentrations with respect to time for $k_1=2k_2$. In this case, the rate-determining step is the second reaction. $\mathrm{A}$ is converted into $\mathrm{B}$ faster than $\mathrm{B}$ can be converted into $\mathrm{C}$, so the intermediate accumulates: its concentration grows, reaches a maximum, and then decreases as $\mathrm{A}$ runs out. The product $\mathrm{C}$ forms slowly at the beginning (notice the S shape of its curve), since it has to wait for $\mathrm{B}$ to build up.
 
 
-![Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step.](img/R_15_Kinetics_figk5.png){#fig-figk5 fig-alt="Relative concentrations versus time for consecutive reactions A to B to C with similar rate coefficients (k1 equal to 2 k2). A decays exponentially, the intermediate B rises to a maximum of about 0.5 and then decreases, and C grows with an S shape toward 1."}
+![Concentration Plot for a Process with Two Consecutive Reactions with the Second One Being the Rate-Determining Step.](img/ch14_consecutive_slow2.png){#fig-figk5 fig-alt="Relative concentrations versus time for consecutive reactions A to B to C, with k1 equal to 0.08 and k2 equal to 0.04 per second. A decays exponentially, the intermediate B rises to a maximum of about 0.5 and then decreases, and C grows with an S shape toward 1." width="75%"}
 
 
-The second behavior is observed when $k_1\ll k_2$, and it produces the plot in @Fig-figk6. In this case, the concentration of the intermediate species $B$ is not relevant throughout the process, and the rate-determining step is the first reaction. As such, the process has the same rate law as an elementary reaction going directly from $A$ to $C$.
+The second behavior is observed when the first step is much slower than the second one, $k_1\ll k_2$, as in the plot of @Fig-figk6. In this case, the rate-determining step is the first reaction. Every molecule of $\mathrm{B}$ is converted into $\mathrm{C}$ almost as soon as it is formed, so the concentration of the intermediate stays very small at all times, and $\mathrm{C}$ appears as fast as $\mathrm{A}$ disappears. As such, the process has the same rate law as an elementary reaction going directly from $\mathrm{A}$ to $\mathrm{C}$.
 
 
-![Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step.](img/R_15_Kinetics_figk6.png){#fig-figk6 fig-alt="Relative concentrations versus time for consecutive reactions A to B to C where the second step is much faster than the first. A decays exponentially, the intermediate B stays close to zero at all times, and C rises almost as fast as A disappears."}
+![Concentration Plot for a Process with Two Consecutive Reactions with the First One Being the Rate-Determining Step.](img/ch14_consecutive_slow1.png){#fig-figk6 fig-alt="Relative concentrations versus time for consecutive reactions A to B to C, with k1 equal to 0.08 and k2 equal to 2.0 per second. A decays exponentially, the intermediate B stays close to zero at all times, and C rises almost as fast as A disappears." width="75%"}
 
 
-Since the concentration of $B$ is small and relatively constant throughout the process, $\frac{d[\mathrm{B}]}{dt}=0$. We can then simplify the mathematical treatment of these reactions by eliminating it from the process altogether. This simplification is known as the *steady-state approximation*. It is used in chemical kinetics to study processes that undergo a series of reactions producing intermediate species whose concentrations are constant throughout the entire process.
+Since, in this second case, the concentration of $\mathrm{B}$ is small and almost constant throughout the process, we can approximate its derivative to zero. This simplification is known as the *steady-state approximation*, and it allows us to eliminate the intermediate from the treatment. Using the second line of @eq-kincomp2:
+
+$$
+\frac{d[\mathrm{B}]}{dt} = k_1 [\mathrm{A}]-k_2 [\mathrm{B}] \approx 0 \quad \Rightarrow \quad [\mathrm{B}] \approx \frac{k_1}{k_2}[\mathrm{A}],
+$$ {#eq-kinss}
+
+which is indeed very small, since $k_1\ll k_2$. Replacing @eq-kinss into the third line of @eq-kincomp2, the rate of formation of the product becomes:
+
+$$
+\frac{d[\mathrm{C}]}{dt} = k_2 [\mathrm{B}] \approx k_1 [\mathrm{A}],
+$$ {#eq-kinss2}
+
+which is exactly the rate law of an elementary first-order reaction going directly from $\mathrm{A}$ to $\mathrm{C}$, with the rate coefficient of the slow step. The steady-state approximation is widely used to study processes that go through a series of very reactive intermediates, whose concentrations stay small and almost constant throughout the entire process:
 
 $$
 \begin{aligned}
@@ -270,7 +284,7 @@ $$ {#eq-kincomp4b}
 The concentration of each of the species can then be plotted against time, obtaining the diagram reported in @Fig-figk7. The final concentrations of the products, $[\mathrm{B}]_f$ and $[\mathrm{C}]_f$, will depend on the values of the two rate coefficients. For example, if $k_1>k_2$, $[\mathrm{B}]_f>[\mathrm{C}]_f$, as in @Fig-figk7, but if $k_1<k_2$, $[\mathrm{B}]_f<[\mathrm{C}]_f$.
 
 
-![Concentration Plot for a Process with Two Competitive Reactions.](img/R_15_Kinetics_figk7.png){#fig-figk7 fig-alt="Relative concentrations versus time for competitive reactions, A to B and A to C, with k1 equal to 2 k2. A decays exponentially, while B and C grow and level off at two thirds and one third, so their ratio stays equal to k1 over k2."}
+![Concentration Plot for a Process with Two Competitive Reactions.](img/ch14_competitive.png){#fig-figk7 fig-alt="Relative concentrations versus time for competitive reactions, A to B with k1 equal to 0.04 and A to C with k2 equal to 0.02 per second. A decays exponentially, while B and C grow and level off at two thirds and one third, so that their ratio is always equal to k1 over k2." width="75%"}
 
 
 An important relationship that can be derived from @eq-kincomp4b is that:
@@ -308,7 +322,7 @@ $$ {#eq-kinopp2}
 These formulas can then be used to obtain the plots in @Fig-figkK.
 
 
-![Concentration Plot for a Process with Two Opposed Reactions.](img/R_15_Kinetics_figkK.png){#fig-figkK fig-alt="Relative concentrations versus time for opposed reactions, A to B and back, with k1 equal to 2 k minus 1. A decreases and B increases until both level off, at one third and two thirds, after the equilibrium time marked by a dotted vertical line."}
+![Concentration Plot for a Process with Two Opposed Reactions.](img/ch14_opposed.png){#fig-figkK fig-alt="Relative concentrations versus time for opposed reactions, A to B with k1 equal to 0.1 and back with k minus 1 equal to 0.05 per second. A decreases and B increases until they level off at one third and two thirds, marked by dotted lines, so that the ratio of the equilibrium concentrations equals k1 over k minus 1, which is 2." width="75%"}
 
 
 As can be seen from the plots in @Fig-figkK, after a sufficiently long time, the system reaches a dynamic equilibrium, where the concentrations of $\mathrm{A}$ and $\mathrm{B}$ don't change. These equilibrium concentrations can be calculated replacing $t=\infty$ in @eq-kinopp2:
@@ -427,15 +441,21 @@ $$
 and then determine $\alpha$ by verifying which order the data collected for $[\mathrm{A}]$ at various times fits. This can be simply achieved by using the zero-, first-, and second-order kinetic plots, as reported in the table above. We can determine $\beta$ and $\gamma$ by repeating the same procedure for the data from the other two experiments. For example, if we find for a specific reaction that $\alpha=$ 1, $\beta=2$, and $\gamma=0$, we can then say that the reaction is pseudo-order one in $\mathrm{A}$, pseudo-order two in $\mathrm{B}$, and pseudo-order zero in $\mathrm{C}$, with an overall reaction order of three.
 
 ## Temperature Dependence of the Rate Coefficients
-The dependence of the rate coefficient, $k$, on the temperature is given by the **Arrhenius equation**. This formula was derived by Svante August Arrhenius (1859–1927) in 1889 and is based on the simple experimental observation that every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van 't Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of $k$ when $T$ is increased:
+The dependence of the rate coefficient, $k$, on the temperature is given by the **Arrhenius equation**. This formula was derived by Svante August Arrhenius (1859–1927) in 1889 and is based on the simple experimental observation that almost every chemical process gets faster when the temperature is increased. Working on data from equilibrium reactions previously reported by van 't Hoff, Arrhenius proposed the following simple exponential formula to explain the increase of $k$ when $T$ is increased:
 
 $$
 k=A\exp\left( -\frac{E_a}{RT}\right),
 $$ {#eq-Arr1}
 
-where $A$ is the so-called Arrhenius pre-exponential factor, and $E_a$ is the activation energy. Both of these terms are independent of temperature,^[In theory, both $A$ and $E_a$ show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.] and they represent experimental quantities that are unique to each individual reaction. Since there is no known exception to the fact that a temperature increase speeds up chemical reactions, both $A$ and $E_a$ are always positive. The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, $\frac{\mathrm{J}}{\mathrm{mol}}$ in SI. 
+where $A$ is the so-called Arrhenius pre-exponential factor, and $E_a$ is the activation energy. Both of these terms are independent of temperature,^[In theory, both $A$ and $E_a$ show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.] and they represent experimental quantities that are unique to each individual reaction. Since the vast majority of reactions speed up when the temperature increases, both $A$ and $E_a$ are positive.^[A few reactions, such as some recombinations of radicals, slow down when the temperature increases, and they show a negative *apparent* activation energy. These reactions are not elementary: their mechanism involves more than one step, and the measured $E_a$ is a combination of the activation energies of the individual steps.] The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, $\frac{\mathrm{J}}{\mathrm{mol}}$ in SI. 
 
-The Arrhenius equation is experimentally useful in its linearized form, which is obtained from two Arrhenius experiments, taken at different temperatures. Applying @eq-Arr1 to two different experiments, and taking the ratio between the results, we obtain:
+A few important considerations can be made by analyzing @eq-Arr1:
+
+1. **The rate coefficient grows exponentially with temperature.** For a typical activation energy of $50\;\text{kJ/mol}$, increasing the temperature from $298\;\text{K}$ to $308\;\text{K}$ almost doubles $k$. This is the origin of the rule of thumb that reactions near room temperature roughly double their rate for every 10 °C.
+2. **Reactions with larger activation energies are more sensitive to temperature.** The larger $E_a$, the more a change in $T$ affects the exponential.
+3. **The exponential is the fraction of molecules that can react.** As we will see below, $E_a$ is the height of an energy barrier, and $\exp\left(-\frac{E_a}{RT}\right)$ is related to the fraction of collisions that have enough energy to overcome it, while $A$ is related to how often the molecules attempt to react.
+
+The Arrhenius equation is experimentally useful in its linearized form. Taking the logarithm of both sides of @eq-Arr1, we obtain $\ln k = \ln A - \frac{E_a}{R}\frac{1}{T}$, which is a straight line in a plot of $\ln k$ versus $1/T$. Applying @eq-Arr1 to two experiments taken at different temperatures, and taking the ratio between the results, we obtain:
 
 
 $$
@@ -445,13 +465,13 @@ $$ {#eq-Arr2}
 which gives the plot of @Fig-figk8, from which $E_a$ can be determined.
 
 
-![Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures.](img/R_15_Kinetics_figk8.png){#fig-figk8 fig-alt="Arrhenius plot of ln k versus 1 over T: a straight line with negative slope, minus the activation energy over R, through two measured points at 1 over T1 and 1 over T2."}
+![Arrhenius Plot Obtained Using Experimental Data at Two Different Temperatures.](img/ch14_arrhenius.png){#fig-figk8 fig-alt="Arrhenius plot of ln k versus 1 over T: a straight line with negative slope, minus the activation energy over R, through two measured points at 1 over T1 and 1 over T2." width="70%"}
 
 
-From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in @Fig-figk9.^[This plot is taken from [Wikipedia's article on transition state theory](https://en.wikipedia.org/wiki/Transition_state_theory), and has been generated and distributed by Author [Grimlock](https://commons.wikimedia.org/wiki/User:Grimlock) under CC-BY-SA license.] The reaction coordinate is defined as the minimum energy path that connects the reactants with the products.
+From empirical arguments, Arrhenius proposed the idea that reactants must acquire a minimum amount of energy before they can form any product. He called this amount of minimum energy the activation energy. We can motivate this assumption by plotting energy of a reaction along the reaction coordinate, as in @Fig-figk9. The reaction coordinate is defined as the minimum energy path that connects the reactants with the products. Along this path, the energy rises to a maximum, the *transition state*, before decreasing towards the products. The activation energy corresponds to the height of this barrier: only the molecules that collide with enough energy to reach the top of the barrier can turn into products. Notice that the barrier does not depend on whether the reaction is exothermic or endothermic: a reaction can be strongly spontaneous and still be extremely slow if its barrier is high, as in the diamond-to-graphite example at the beginning of this chapter.
 
 
-![Reaction Coordinate Diagram for a Typical Reaction.](img/Rxn_coordinate_diagram_5.PNG){#fig-figk9 fig-alt="Gibbs energy versus reaction coordinate for the reaction of hydroxide with bromomethane to give methanol and bromide. The curve rises from the reactants to a maximum at the transition state, where the bonds to both O and Br are partial, then falls to lower-energy products. The height from reactants to the transition state is labeled delta G double dagger. Ball-and-stick molecules are shown at each stage." width="70%"}
+![Energy Profile of a Reaction along the Reaction Coordinate (Schematic).](img/ch14_reaction_coordinate.png){#fig-figk9 fig-alt="Schematic energy profile of a reaction along the reaction coordinate. The curve starts flat at the reactants, rises to a maximum labeled transition state, and falls to the lower-energy products. A purple double arrow from the reactants to the top of the barrier is labeled E a, and a blue double arrow between reactants and products is labeled delta rxn H." width="70%"}
 
 ## Chapter Review {#sec-rev15}
 ### Study Questions {#sec-quest15}

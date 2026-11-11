@@ -4,7 +4,7 @@ aliases:
 ---
 
 # Gibbs Energy {#sec-GibbsFree}
-In this chapter, we will concentrate on chemical processes that happen at constant $T$ and constant $P$.^[The majority of chemical reactions in a lab happen at those conditions, and all biological functions happen at those conditions as well.] As such, we will focus our attention on the Gibbs energy.
+In @sec-Potentials, we found that, at constant temperature and pressure, a process is spontaneous if it decreases the Gibbs energy of the system. In this chapter, we will concentrate on chemical processes that happen at these conditions.^[The majority of chemical reactions in a lab happen at those conditions, and all biological functions happen at those conditions as well.] We will learn how to calculate the Gibbs energy of a reaction from tabulated data, and how the Gibbs energy changes with temperature, pressure, and composition. These three dependencies will be the foundations of the next chapters on chemical equilibrium, phase equilibrium, and solutions.
 
 ## Gibbs Equation {#sec-gibbseqsec}
 Recalling from @sec-Potentials, the definition of $G$ is:
@@ -60,7 +60,7 @@ Or, in other words:
     - Endothermic reactions that increase the entropy are spontaneous at high $T$.
 
     
-A simple criterion to evaluate the entropic contribution of a reaction is to look at the total number of moles of the reactants and the products (as the sum of the stoichiometric coefficients). If the reaction is producing more molecules than it destroys $\left( \left| \sum_\text{products} \nu_i \right| > \left| \sum_\text{reactants} \nu_i \right| \right)$, it will increase the entropy. Vice versa, if the total number of moles in a reaction is reducing $\left( \left| \sum_\text{products} \nu_i \right| < \left| \sum_\text{reactants} \nu_i \right| \right)$, the entropy will also reduce.
+A simple criterion to estimate the sign of the entropy change of a reaction is to count the moles of *gas* among the reactants and the products. Gases have much larger entropies than liquids and solids, since their molecules can occupy a much larger volume. Therefore, if the reaction produces more moles of gas than it consumes, it will most likely increase the entropy. Vice versa, if the number of moles of gas decreases, the entropy will most likely decrease. For example, the combustion of methane, $\mathrm{CH}_{4(g)} + 2\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2\mathrm{H}_2\mathrm{O}_{(l)}$, goes from 3 moles of gas to 1, and its entropy change is indeed negative. This criterion is only a rule of thumb: when the number of moles of gas does not change, we need the tabulated entropies to decide.
 
 As we saw in @sec-thermpot, the natural variables of the Gibbs energy are the temperature, $T$, the pressure, $P$, and chemical composition, as the number of moles $\{n_i\}$. The Gibbs energy can therefore be expressed using the total differential as (see also the last formula in @eq-dhagchem2):
 
@@ -163,7 +163,7 @@ $$ {#eq-dgconsttpintegral3}
 The plots in @Fig-gdeppfig show the remarkable difference in the behaviors of $\Delta_{\text{f}} G$ for a gas and for a liquid, as obtained from @eq-dgconsttpintegral1 and @eq-dgconsttpintegral3.
 
 
-![Pressure Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.1 bar.](img/R_09_Gibbs_gdeppfig.png){#fig-gdeppfig fig-alt="Gibbs energy of 1 mol of ethanol at 310 K versus pressure from 0 to 10 bar. The liquid line is flat at about minus 174 kJ per mol. The gas curve rises steeply at low pressure and then more slowly, crossing the liquid line at the vapor pressure, 0.1 bar. Below that pressure the gas has the lower Gibbs energy, and above it the liquid does."}
+![Pressure Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Ethanol at T = 310 K. The Curves Cross at the Vapor Pressure of Liquid Ethanol at this Temperature, which is 0.15 bar.](img/ch9_G_vs_P_ethanol.png){#fig-gdeppfig fig-alt="Gibbs energy of formation of 1 mol of ethanol at 310 K versus pressure from 0 to 10 bar. The liquid line is almost flat at about minus 174 kJ per mol. The gas curve rises steeply at low pressure and then more slowly, crossing the liquid line at the vapor pressure, 0.15 bar. Below that pressure the gas has the lower Gibbs energy, and above it the liquid does." width="75%"}
 
 
 ## Composition Dependence of $\Delta G$
@@ -171,13 +171,13 @@ $$
 \left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
 $$
 
-The third and final coefficient gives the chemical potential as the dependence of $G$ on the chemical composition at constant $T$ and $P$. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance $i$, at the beginning of the reaction there will be no moles of it, $n_i=0$, and consequently $G=0$.^[For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.] We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, $n$, and the right-hand side between zero and the Gibbs energy of the product, $G$. The integral will become:
+The third and final coefficient gives the chemical potential as the dependence of $G$ on the chemical composition at constant $T$ and $P$. To understand what the chemical potential means, let's consider a pure substance, and let's imagine building a sample of it by adding small amounts, $dn$, one after the other, at constant $T$ and $P$. Each small amount that we add is identical to what is already in the sample. Therefore, each of them changes the Gibbs energy by the same amount, $dG=\mu^* dn$, where $\mu^*$ indicates the chemical potential of the pure substance. In other words, $\mu^*$ is an intensive property: it depends on $T$ and $P$, but not on how much substance we have. Since the Gibbs energy is extensive, when there is no substance there is also no Gibbs energy. We can then integrate from an empty sample ($n=0$, $G=0$) to a sample with $n$ moles and Gibbs energy $G$:
 
 $$
 \int_0^G d G = \int_0^n \mu^* dn,
 $$ {#eq-dgconstn}
 
-where $\mu^*$ indicates the chemical potential of a pure substance, which is independent of the number of moles by definition. As such, @eq-dgconstn becomes:
+and since $\mu^*$ does not depend on the number of moles, we can take it out of the integral:
 
 $$
 \int_0^G d G = \mu^* \int_0^n dn \quad \rightarrow \quad G = \mu^* n \quad \rightarrow \quad \mu^* = \frac{G}{n},

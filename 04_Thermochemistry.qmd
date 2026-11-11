@@ -4,9 +4,9 @@ aliases:
 ---
 
 # Thermochemistry {#sec-Thermochemistry}
-## Reaction Enthalpies {#sec-rxnenthalpy}
-In @sec-FirstLaw, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and/or some new ones form. This process either absorbs or releases the energy contained in these bonds. For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.
+In @sec-FirstLaw, we have discussed thermodynamical changes in energy in the absence of chemical reactions. When a chemical reaction takes place, some bonds break and some new ones form. Breaking a bond always requires energy, while forming a bond always releases energy. The balance between the energy spent to break the bonds of the reactants and the energy released when the bonds of the products form determines whether the reaction, overall, absorbs or releases energy.^[A common misconception is that energy is "stored" in chemical bonds and released when they break. It is the opposite: a bond is a more stable (lower-energy) arrangement than the separated atoms, so breaking it always costs energy. Fuels release energy when they burn because the bonds that form in the products (for example, in $\mathrm{CO}_2$ and $\mathrm{H}_2\mathrm{O}$) are, overall, stronger than the ones broken in the reactants.] For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance.
 
+## Reaction Enthalpies {#sec-rxnenthalpy}
 In this chapter, we will consider the heat associated with chemical reactions. Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use @eq-dh2 to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. If we call the molecules at the beginning of the reaction "reactants" and the molecules at the end of the reaction "products," the heat associated with the reaction (rxn) is defined as:
 
 $$

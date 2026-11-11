@@ -4,6 +4,8 @@ aliases:
 ---
 
 # First Law of Thermodynamics {#sec-FirstLaw}
+In @sec-ZerothLaw, we learned how to calculate heat and work, and we saw that both of them are path functions: their values depend on how a process is carried out. In this chapter, we will connect heat and work to a state function, the internal energy, and we will see how this connection becomes one of the most fundamental laws of nature, the first law of thermodynamics. Along the way, we will introduce a second state function, the enthalpy, which will be the protagonist of the next chapter.
+
 ## Calculation of Internal Energy Changes {#sec-energyint}
 Energy is a property of a system that can be either transferred or converted. The internal energy ($U$) of a system is a thermodynamic state function defined as:
 
@@ -22,7 +24,7 @@ $$
 dU = đ Q + đ W,
 $$ {#eq-dU}
 
-which, using @eq-Wdef becomes:
+which, for processes where the pressure of the system equals the external pressure (as in the slow processes that we discussed in @sec-workint, and in processes at constant pressure, where the system is in mechanical equilibrium with the atmosphere), using @eq-Wdefrev becomes:
 
 $$
 dU = đ Q - PdV.
@@ -35,13 +37,13 @@ To study the behavior of the internal energy in a process at constant temperatur
 ![The Joule Expansion Experiment.](img/OEP_Figures.006.jpeg){#fig-FigJexp fig-alt="Joule expansion apparatus before and after. Before: a flask of ideal gas, with a thermometer reading the initial temperature, is connected through a closed valve to an evacuated flask. After: the valve is open and the gas fills both flasks, and the thermometer reads the final temperature. Both flasks sit in a water bath." width="80%"}
 
 
-The left side of the Joule apparatus's inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, to guarantee isolation from the environment. When the communication channel between the chambers is open, the gas expands and equilibrates. The work associated with the transformation is:
+The left side of the Joule apparatus's inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, whose temperature is monitored with a thermometer: if the gas absorbed or released any heat during the experiment, the temperature of the water would change. When the valve between the chambers is opened, the gas expands into the empty chamber and equilibrates. The work associated with the transformation is:
 
 $$
 đ W=-P_{\text{ext}}dV = 0,
 $$ {#eq-JexpW}
 
-since the chambers are not in communication with the environment, $P_{\text{ext}}=0$. Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, $T_i$, and at the end of the experiment, $T_f$. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature would not change, $T_i = T_f$. Since the temperature doesn't change, there is no heat transfer, and therefore the internal energy stays constant:
+since the gas expands into a vacuum, there is nothing for it to push against, and $P_{\text{ext}}=0$. Thus, any change in internal energy must be due to heat, which can be detected by monitoring the temperature at the beginning, $T_i$, and at the end of the experiment, $T_f$. Joule observed that, for a gas behaving ideally, the temperature does not change, $T_i = T_f$. Since the temperature doesn't change, no heat is exchanged, and therefore the internal energy stays constant:
 
 $$
 dU = đ Q = 0.
@@ -53,13 +55,13 @@ From this simple experiment, we can conclude that the internal energy of an idea
 
 
 ### Internal energy in adiabatic processes 
-An adiabatic process is defined as a process that happens without the exchange of heat. As such, $đ Q=0$, and the work associated with an adiabatic process becomes a state function:
+An adiabatic process is defined as a process that happens without the exchange of heat. As such, $đ Q=0$, and the work associated with an adiabatic process is equal to the change in internal energy:
 
 $$
 dU=đ W=-PdV,
 $$ {#eq-dUadiabatic}
 
-which can then be calculated using the formulas that we derived in @sec-workint. Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
+which can then be calculated using the formulas that we derived in @sec-workint. Notice that the work is still a path function: in general, its value depends on the path. However, *along adiabatic paths*, the work is fixed by the change of a state function, so all adiabatic paths connecting the same two states require the same amount of work. Notice also that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
 ### Internal energy in isochoric processes
 An isochoric process is a process in which the volume does not change. Therefore, $đ W=0$, and $dU = đ Q_V$, which using @eq-Cvdef, becomes:
@@ -68,7 +70,7 @@ $$
 dU = đ Q_V = n C_V dT.
 $$ {#eq-dUqv}
 
-Since no work is performed at these conditions, the heat becomes a state function. @Eq-dUqv also gives a mathematical justification of the concept of heat capacity at constant volume. $C_V$ can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):
+Since no work is performed at these conditions, the heat exchanged is equal to the change of a state function, $\Delta U$. Once again, heat is still a path function in general, but *along constant-volume paths* its value is fixed by the initial and final states only. @Eq-dUqv also gives a mathematical justification of the concept of heat capacity at constant volume. $C_V$ can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):
 
 $$
 C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n=1},
@@ -181,7 +183,7 @@ W^{\text{cycle}}_{\text{1-step}} {} & =  W^{\text{expansion}}_{\text{1-step}}+W^
 \end{aligned}
 $$ {#eq-Wtot1}
 
-or, in other words, net work is destroyed. 
+or, in other words, the surroundings have to put more work into the compression than they get back from the expansion. Since the gas returns to its initial state, $\oint dU=0$, and this extra work must leave the system as heat. The energy is not destroyed, but part of the work has been degraded into heat.
 
 > In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it, and it moves back up.
 
@@ -196,17 +198,21 @@ W^{\text{cycle}}_{\infty\text{-step}} {} & = W^{\text{expansion}}_{\text{max}}+W
 \end{aligned}
 $$ {#eq-Wtot2}
 
-which means that, in this case, work is neither destroyed nor created. 
+which means that, in this case, the work obtained from the expansion is exactly the work needed for the compression, and no work is degraded into heat.
 
 > In practice, if we were able to perform this cycle manually by pushing the piston down by hand, we would notice that it requires the same amount of energy to push down as the amount it gives back when it moves up.
 
 This process can happen both ways without losses, and is called *reversible*:
 
 ::: {#def-reversible}
-*Reversible process:* a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.^[Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)]
+*Reversible process:* A process whose direction can be inverted at any moment by an infinitesimally small change in the conditions of the surroundings (for example, an infinitesimally small increase of the external pressure), so that the system goes back through exactly the same states.^[Adapted from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley).]
 :::
 
-Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).
+A few important considerations can be made by analyzing @Def-reversible:
+
+1. **A reversible process is infinitely slow.** It happens in an infinite number of infinitesimal steps, and at each step the system is in equilibrium with its surroundings (for example, $P=P_{\text{ext}}$ at every moment).
+2. **A reversible process is the most efficient one.** A reversible expansion gives the maximum work, $W_{\text{max}}$, and a reversible compression requires the minimum work, $W_{\text{min}}$. Running a reversible process forward and then backward leaves no trace, neither in the system nor in the surroundings.
+3. **All real processes are irreversible.** Reversible processes are idealizations, like the ideal gas. We can approach them by carrying out a process very slowly, but never reach them. Despite this, they are extremely useful, since they set the limits that real processes can only approach.
 
 
 ## Chapter Review {#sec-rev3}

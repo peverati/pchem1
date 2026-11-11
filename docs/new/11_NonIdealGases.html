@@ -536,6 +536,7 @@ window.Quarto = {
 </header>
 
 
+<p>Up to this point, we have used the ideal gas as our main example, and in <a href="10_ChemicalEquilibrium.html" class="quarto-xref"><span>chapter 10</span></a> we wrote equilibrium constants in terms of the partial pressures of ideal gases. Real gases, however, are not ideal: their molecules occupy some space, and they attract each other. In this chapter, we will first look back at how the ideal gas law was discovered, and then we will study what happens when its assumptions break down. We will see that non-ideal behavior is responsible for some very useful phenomena, such as the cooling of a gas when it expands and the liquefaction of gases, and we will introduce the fugacity, a quantity that allows us to keep using our thermodynamic formulas for non-ideal gases.</p>
 <section id="the-ideal-gas-equation" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="the-ideal-gas-equation"><span class="header-section-number">11.1</span> The Ideal Gas Equation</h2>
 <p>The concept of an ideal gas is a theoretical construct that allows for straightforward treatment and interpretation of gases’ behavior. As such, the ideal gas is a simplified <em>model</em> that we use to understand nature, and it does not correspond to any real system. In typical “spherical cow” spirit, the ideal gas model strips away many real-world complications so we can focus on the core relationships between pressure, volume, temperature, and amount of gas. The following two assumptions define the ideal gas model:</p>
@@ -558,13 +559,13 @@ P\propto\frac{1}{V}\quad\text{at const.}\;T,
 PV=k_1\quad\text{at const.}\;T,
 \tag{11.2}\]</span></span></p>
 <p>which results in the familiar <span class="math inline">\(PV\)</span> plots of <a href="#fig-FigPVideal" class="quarto-xref">Figure&nbsp;<span>11.1</span></a>. As we already discussed in <a href="02_ZerothLaw.html" class="quarto-xref"><span>chapter 2</span></a>, each of the curves in <a href="#fig-FigPVideal" class="quarto-xref">Figure&nbsp;<span>11.1</span></a> is obtained at constant temperature, and it is therefore called <em>“isotherm.”</em></p>
-<div id="fig-FigPVideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume diagram of an ideal gas at constant temperature with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1.">
+<div id="fig-FigPVideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume diagram of 1 mol of an ideal gas with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigPVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/R_11_NonIdealGases_FigPVideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure-volume diagram of an ideal gas at constant temperature with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1.">
+<img src="img/ch11_PV_ideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure-volume diagram of 1 mol of an ideal gas with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigPVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.1: PV-Diagram of an ideal Gas.
+Figure&nbsp;11.1: PV-Diagram of 1 mol of an Ideal Gas.
 </figcaption>
 </figure>
 </div>
@@ -583,10 +584,10 @@ V=k_2 T\quad\text{at const.}\;P,
 <div id="fig-FigTVideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigTVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/R_11_NonIdealGases_FigTVideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2.">
+<img src="img/ch11_VT_ideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.2: VT-Diagram of an ideal Gas.
+Figure&nbsp;11.2: VT-Diagram of 1 mol of an Ideal Gas.
 </figcaption>
 </figure>
 </div>
@@ -603,10 +604,10 @@ P=k_3 T\quad\text{at const.}\;V,
 <div id="fig-FigTPideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigTPideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/R_11_NonIdealGases_FigTPideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2.">
+<img src="img/ch11_PT_ideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTPideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.3: PT-Diagram of an ideal Gas.
+Figure&nbsp;11.3: PT-Diagram of 1 mol of an Ideal Gas.
 </figcaption>
 </figure>
 </div>
@@ -621,6 +622,17 @@ V\propto n\quad\text{at const.}\;P,T,
 <p><span id="eq-avogadrolaw2"><span class="math display">\[
 V=k_4 n\quad\text{at const.}\;P,T,
 \tag{11.8}\]</span></span></p>
+<p>which results in the straight lines of <a href="#fig-FigVnideal" class="quarto-xref">Figure&nbsp;<span>11.4</span></a>.</p>
+<div id="fig-FigVnideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Volume versus number of moles for an ideal gas at 1 bar: two straight lines through the origin, steeper at 373 K than at 273 K. A marked point shows that 1 mol at 273 K occupies 22.7 L.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigVnideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ch11_V_n_ideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Volume versus number of moles for an ideal gas at 1 bar: two straight lines through the origin, steeper at 373 K than at 273 K. A marked point shows that 1 mol at 273 K occupies 22.7 L.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigVnideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.4: Vn-Diagram of an Ideal Gas at Constant Pressure (1 bar).
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="the-ideal-gas-law" class="level3" data-number="11.1.4">
 <h3 data-number="11.1.4" class="anchored" data-anchor-id="the-ideal-gas-law"><span class="header-section-number">11.1.4</span> The ideal gas Law</h3>
@@ -762,11 +774,11 @@ P &amp;=\frac{RT}{\overline{V} - b}-\frac{a}{\overline{V}^2}.
 <img src="img/OEP_Figures.015.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Joule-Thomson apparatus: a horizontal insulated tube divided by a porous plug, with a piston on each side. The left piston pushes the gas through the plug at temperature T1 and pressure P1, while the right piston moves out as the gas expands to temperature T2 and pressure P2.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigJT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.4: The Joule–Thomson Experiment.
+Figure&nbsp;11.5: The Joule–Thomson Experiment.
 </figcaption>
 </figure>
 </div>
-<p>We have already met William Thomson, also known as Lord Kelvin, and his seminal work on the second law of thermodynamics. In conjunction with that work, Thomson is famous for developing a sensitive method for measuring the temperature changes related to the expansion of a gas. These experiments improved on the earlier work by James Joule, and Lord Kelvin’s improved instrument depicted in <a href="#fig-FigJT" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> is named the Joule–Thomson apparatus. The apparatus is composed of two chambers, each with its own mobile piston. The chambers are connected via a valve or a porous plug. The entire equipment is also thermally isolated from the surroundings. This instrument is a more sensitive version of the Joule expansion apparatus that we already described in <a href="03_FirstLaw.html" class="quarto-xref"><span>chapter 3</span></a> (compare with <a href="03_FirstLaw.html#fig-FigJexp" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>).</p>
+<p>We have already met William Thomson, also known as Lord Kelvin, and his seminal work on the second law of thermodynamics. In conjunction with that work, Thomson is famous for developing a sensitive method for measuring the temperature changes related to the expansion of a gas. These experiments improved on the earlier work by James Joule, and Lord Kelvin’s improved instrument depicted in <a href="#fig-FigJT" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> is named the Joule–Thomson apparatus. The apparatus is composed of two chambers, each with its own mobile piston. The chambers are connected via a valve or a porous plug. The entire equipment is also thermally isolated from the surroundings. This instrument is a more sensitive version of the Joule expansion apparatus that we already described in <a href="03_FirstLaw.html" class="quarto-xref"><span>chapter 3</span></a> (compare with <a href="03_FirstLaw.html#fig-FigJexp" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>).</p>
 <p>Thomson realized that a gas flowing through an obstruction experiences a drop in pressure. If the entire apparatus is insulated, it will not exchange heat with its surroundings (<span class="math inline">\(Q=0\)</span>), and each transformation will happen at adiabatic conditions. Let’s consider an initial condition with 1 mol of gas in the left chamber, occupying a volume <span class="math inline">\(V_l\)</span>, and a completely closed right chamber, for which <span class="math inline">\(V_r^i=0\)</span>. After the process completes, the volume of the left chamber will reduce to <span class="math inline">\(V_l^f=0\)</span>, while the volume of the right chamber will be <span class="math inline">\(V_r\)</span>. Using the first law of thermodynamics, we can write:</p>
 <p><span id="eq-JT1"><span class="math display">\[
 \Delta U=U_r-U_l=\underbrace{Q}_{=0}+W=W_l+W_r,
@@ -854,14 +866,14 @@ dH = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP =0.
 <p><span id="eq-comprdef"><span class="math display">\[
 z=\frac{\overline{V}}{\overline{V}_{\text{ideal}}} = \frac{P \overline{V}}{RT}.
 \tag{11.23}\]</span></span></p>
-<p>It is evident from <a href="#eq-comprdef" class="quarto-xref">eq.&nbsp;<span>11.23</span></a> that the compressibility factor is dependent on the pressure, and for an ideal gas <span class="math inline">\(z=1\)</span> always. For a non-ideal gas at any given pressure, <span class="math inline">\(z\)</span> can be higher or lower than one, separating the behavior of non-ideal gases into two possibilities. The dependence of the compressibility factor against pressure is represented for <span class="math inline">\(\mathrm{H}_2\)</span> and <span class="math inline">\(\mathrm{CO}_2\)</span> in <a href="#fig-FigZb" class="quarto-xref">Figure&nbsp;<span>11.5</span></a>.</p>
-<div id="fig-FigZb" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Compressibility factor z versus pressure. The ideal gas is a horizontal dotted line at z equal to 1. A type I gas (hydrogen) rises above 1 as pressure increases. A type II gas (carbon dioxide) first dips below 1 and then rises above it at high pressure.">
+<p>It is evident from <a href="#eq-comprdef" class="quarto-xref">eq.&nbsp;<span>11.23</span></a> that the compressibility factor is dependent on the pressure, and for an ideal gas <span class="math inline">\(z=1\)</span> always. For a non-ideal gas at any given pressure, <span class="math inline">\(z\)</span> can be higher or lower than one, separating the behavior of non-ideal gases into two possibilities. The dependence of the compressibility factor against pressure is represented for <span class="math inline">\(\mathrm{H}_2\)</span> and <span class="math inline">\(\mathrm{CO}_2\)</span> in <a href="#fig-FigZb" class="quarto-xref">Figure&nbsp;<span>11.6</span></a>.</p>
+<div id="fig-FigZb" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Compressibility factor z versus pressure at 350 K, computed with the van der Waals equation. The ideal gas is a horizontal dotted line at z equal to 1. Hydrogen, a type I gas, rises steadily above 1. Carbon dioxide, a type II gas, first dips to about 0.5 near 140 bar and then rises above 1 at high pressure.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigZb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/OEP_Figures.012.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Compressibility factor z versus pressure. The ideal gas is a horizontal dotted line at z equal to 1. A type I gas (hydrogen) rises above 1 as pressure increases. A type II gas (carbon dioxide) first dips below 1 and then rises above it at high pressure.">
+<img src="img/ch11_z_vs_P.png" class="img-fluid figure-img" style="width:75.0%" alt="Compressibility factor z versus pressure at 350 K, computed with the van der Waals equation. The ideal gas is a horizontal dotted line at z equal to 1. Hydrogen, a type I gas, rises steadily above 1. Carbon dioxide, a type II gas, first dips to about 0.5 near 140 bar and then rises above 1 at high pressure.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigZb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.5: Non-Ideal Gases Behaviors.
+Figure&nbsp;11.6: Compressibility Factor of Hydrogen (Type I) and Carbon Dioxide (Type II) at 350 K, Computed with the van der Waals Equation.
 </figcaption>
 </figure>
 </div>
@@ -869,23 +881,27 @@ Figure&nbsp;11.5: Non-Ideal Gases Behaviors.
 <p><span id="eq-compr1"><span class="math display">\[
 z= \frac{\overline{V}}{RT} \left( \frac{RT}{\overline{V}-b} -\frac{a}{\overline{V}^2} \right),
 \tag{11.24}\]</span></span></p>
-<p>and then we can differentiate this equation at constant temperature with respect to changes in the pressure near <span class="math inline">\(P=0\)</span>, to obtain:</p>
+<p>which can be simplified as <span class="math inline">\(z=\frac{\overline{V}}{\overline{V}-b}-\frac{a}{RT\overline{V}}\)</span>. We are interested in what happens at low pressure, where the molar volume is very large compared to <span class="math inline">\(b\)</span>. In this case, we can use the approximation <span class="math inline">\(\frac{\overline{V}}{\overline{V}-b}=\frac{1}{1-b/\overline{V}} \approx 1+\frac{b}{\overline{V}}\)</span>, which gives:</p>
+<p><span id="eq-compr1b"><span class="math display">\[
+z \approx 1 + \frac{1}{\overline{V}}\left(b-\frac{a}{RT}\right) \approx 1 + \frac{P}{RT}\left(b-\frac{a}{RT}\right),
+\tag{11.25}\]</span></span></p>
+<p>where in the last step we used the ideal gas law, <span class="math inline">\(\frac{1}{\overline{V}} \approx \frac{P}{RT}\)</span>, which is a good approximation at low pressure. <a href="#eq-compr1b" class="quarto-xref">Eq.&nbsp;<span>11.25</span></a> is a straight line in <span class="math inline">\(P\)</span>, and its slope gives the behavior of the compressibility factor near <span class="math inline">\(P=0\)</span>:</p>
 <p><span id="eq-compr2"><span class="math display">\[
 \left. \left( \frac{\partial z}{\partial P}\right)_T \right|_{P=0} = \frac{1}{RT} \left( b -\frac{a}{RT} \right),
-\tag{11.25}\]</span></span></p>
+\tag{11.26}\]</span></span></p>
 <p>which is then interpreted as follows:</p>
 <ul>
 <li><strong>Type I gases</strong>: <span class="math inline">\(b&gt;\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} &gt; 0\)</span> <em>molecular size</em> dominates (<span class="math inline">\(\mathrm{H}_2-\)</span>like behavior).</li>
 <li><strong>Type II gases</strong>: <span class="math inline">\(b&lt;\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} &lt; 0\)</span> <em>attractive forces</em> dominate (<span class="math inline">\(\mathrm{CO}_2-\)</span>like behavior).</li>
 </ul>
-<p>The dependence of the compressibility factor as a function of temperature (<a href="#fig-Fig1Zb2" class="quarto-xref">Figure&nbsp;<span>11.6</span></a>) results in different plots for each of the two types of behavior.</p>
-<div id="fig-Fig1Zb2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Compressibility factor z versus pressure at several temperatures. Left, type I gas (hydrogen): every curve rises above 1, and the curves flatten toward the ideal line as temperature goes from 200 K to 1000 K. Right, type II gas (carbon dioxide): at low temperatures the curves dip below 1 first, at the Boyle temperature of 713 K the curve stays close to 1 over a wide pressure range, and at higher temperatures the curves rise above 1.">
+<p>The dependence of the compressibility factor as a function of temperature (<a href="#fig-Fig1Zb2" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>) results in different plots for each of the two types of behavior.</p>
+<div id="fig-Fig1Zb2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two plots of the compressibility factor z versus pressure at several temperatures, computed with the van der Waals equation. Left, hydrogen at 200, 500, and 1000 K: all curves rise above 1, and they flatten toward 1 as the temperature increases. Right, carbon dioxide at 350, 500, 1026, and 2000 K: at 350 and 500 K the curves dip below 1 before rising, at the Boyle temperature of 1026 K the curve stays close to 1 over a wide pressure range, and at 2000 K it rises slightly above 1.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig1Zb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/OEP_Figures.013.jpeg" class="img-fluid figure-img" style="width:90.0%" alt="Compressibility factor z versus pressure at several temperatures. Left, type I gas (hydrogen): every curve rises above 1, and the curves flatten toward the ideal line as temperature goes from 200 K to 1000 K. Right, type II gas (carbon dioxide): at low temperatures the curves dip below 1 first, at the Boyle temperature of 713 K the curve stays close to 1 over a wide pressure range, and at higher temperatures the curves rise above 1.">
+<img src="img/ch11_z_vs_T.png" class="img-fluid figure-img" style="width:95.0%" alt="Two plots of the compressibility factor z versus pressure at several temperatures, computed with the van der Waals equation. Left, hydrogen at 200, 500, and 1000 K: all curves rise above 1, and they flatten toward 1 as the temperature increases. Right, carbon dioxide at 350, 500, 1026, and 2000 K: at 350 and 500 K the curves dip below 1 before rising, at the Boyle temperature of 1026 K the curve stays close to 1 over a wide pressure range, and at 2000 K it rises slightly above 1.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig1Zb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.6: Temperature Dependence of the Compressibility Factor.
+Figure&nbsp;11.7: Temperature Dependence of the Compressibility Factor, Computed with the van der Waals Equation. The van der Waals Boyle temperature of CO<span class="math inline">\(_2\)</span> (about 1030 K) is higher than the experimental value of 713 K, since the van der Waals equation is only an approximate model.
 </figcaption>
 </figure>
 </div>
@@ -898,43 +914,33 @@ Figure&nbsp;11.6: Temperature Dependence of the Compressibility Factor.
 </section>
 <section id="phase-diagram-of-a-non-ideal-gas" class="level3" data-number="11.3.2">
 <h3 data-number="11.3.2" class="anchored" data-anchor-id="phase-diagram-of-a-non-ideal-gas"><span class="header-section-number">11.3.2</span> Phase diagram of a non-ideal gas</h3>
-<div id="fig-FigPVni" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume diagram of a real gas with isotherms from T1 to T5. At high temperatures the isotherms look like ideal hyperbolas. The critical isotherm, Tc, touches the top of a dome-shaped region labeled liquid plus vapor, at the critical point. Below Tc the isotherms are flat inside the dome, the liquid region is to its left, and the vapor region is to its right. An inset shows a piston compressing vapor above a liquid.">
+<div id="fig-FigPVni" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume diagram of a van der Waals fluid in reduced units, with isotherms from T1 to T5. The critical isotherm Tc, in black, touches the top of a green dome-shaped region labeled liquid plus vapor at the critical point, marked in red. Below Tc, the isotherms are flat inside the dome; the liquid region is to its left, and the vapor region is to its right. Above Tc, the isotherms are smooth, and the region is labeled gas.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigPVni-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/OEP_Figures.014.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Pressure-volume diagram of a real gas with isotherms from T1 to T5. At high temperatures the isotherms look like ideal hyperbolas. The critical isotherm, Tc, touches the top of a dome-shaped region labeled liquid plus vapor, at the critical point. Below Tc the isotherms are flat inside the dome, the liquid region is to its left, and the vapor region is to its right. An inset shows a piston compressing vapor above a liquid.">
+<img src="img/ch11_vdw_isotherms.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure-volume diagram of a van der Waals fluid in reduced units, with isotherms from T1 to T5. The critical isotherm Tc, in black, touches the top of a green dome-shaped region labeled liquid plus vapor at the critical point, marked in red. Below Tc, the isotherms are flat inside the dome; the liquid region is to its left, and the vapor region is to its right. Above Tc, the isotherms are smooth, and the region is labeled gas.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigPVni-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.7: The Pressure–Volume Diagram of a Non-Ideal Gas.
+Figure&nbsp;11.8: The Pressure–Volume Diagram of a Non-Ideal Gas, Computed with the van der Waals Equation in Reduced Units (<span class="math inline">\(P/P_c\)</span> and <span class="math inline">\(\overline{V}/\overline{V}_c\)</span>). Below the Critical Temperature, the Flat Segments Inside the Green Region Mark the Coexistence of Liquid and Vapor.
 </figcaption>
 </figure>
 </div>
-<p>Let’s now turn our attention to the <span class="math inline">\(PV\)</span> phase diagram of a non-ideal gas, reported in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas (<span class="math inline">\(T_5\)</span> and <span class="math inline">\(T_4\)</span> in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>). Lowering the temperature, we start to see the deviation from ideality getting more prominent (<span class="math inline">\(T_3\)</span> in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>) until we reach a particular temperature called the critical temperature, <span class="math inline">\(T_c\)</span>.</p>
+<p>Let’s now turn our attention to the <span class="math inline">\(PV\)</span> phase diagram of a non-ideal gas, reported in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.8</span></a>. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas (<span class="math inline">\(T_5\)</span> and <span class="math inline">\(T_4\)</span> in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.8</span></a>). Lowering the temperature, we start to see the deviation from ideality getting more prominent (<span class="math inline">\(T_3\)</span> in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.8</span></a>) until we reach a particular temperature called the critical temperature, <span class="math inline">\(T_c\)</span>.</p>
 <div id="def-criticalT" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11.2</strong></span> <em>Critical Temperature:</em> The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.</p>
 </div>
 <p>At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a <em>critical phenomenon</em>.</p>
-<p>The critical temperature is the coordinate of a unique point, called the <strong>critical point</strong>, that can be visualized in the three-dimensional <span class="math inline">\(T,P,V\)</span> diagram of each gas (<a href="#fig-FigTPVd" class="quarto-xref">Figure&nbsp;<span>11.8</span></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>).</p>
-<div id="fig-FigTPVd" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional surface of pressure versus specific volume and temperature for a real substance. It shows the solid, liquid, gas, and vapor regions, the coexistence regions solid-liquid, liquid-vapor, and solid-vapor, the triple line, and the critical point at the top of the liquid-vapor region.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-FigTPVd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/PVT_3D_diagram.png" class="img-fluid figure-img" style="width:50.0%" alt="Three-dimensional surface of pressure versus specific volume and temperature for a real substance. It shows the solid, liquid, gas, and vapor regions, the coexistence regions solid-liquid, liquid-vapor, and solid-vapor, the triple line, and the critical point at the top of the liquid-vapor region.">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTPVd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.8: The three-dimensional diagram.
-</figcaption>
-</figure>
-</div>
+<p>The critical temperature is the coordinate of a unique point, called the <strong>critical point</strong>, that can be visualized in the three-dimensional <span class="math inline">\(T,P,V\)</span> diagram of each gas (a surface whose slices at constant temperature are the isotherms of <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.8</span></a>).</p>
 <p>The critical point has coordinates <span class="math inline">\(\{T_c,P_c, \overline{V}_c\}\)</span>. These critical coordinates can be determined from the vdW equation at <span class="math inline">\(T_c\)</span>, as:</p>
 <p><span id="eq-criticpt"><span class="math display">\[
 T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad \overline{V}_c=3b.
-\tag{11.26}\]</span></span></p>
+\tag{11.27}\]</span></span></p>
 <p>These relations are used, in practice, to determine the vdW constants <span class="math inline">\(a,b\)</span> from the experimentally measured critical isotherms.</p>
 <p>The critical compressibility factor, <span class="math inline">\(z_c\)</span>, is predicted from the vdW equation at:</p>
 <p><span id="eq-critiz"><span class="math display">\[
 z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{8a} \right) = \frac{3}{8} = 0.375,
-\tag{11.27}\]</span></span></p>
+\tag{11.28}\]</span></span></p>
 <p>a value that is independent of the gas. Experimentally measured values of <span class="math inline">\(z_c\)</span> for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental <span class="math inline">\(z_c\)</span> is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume.</p>
-<p>Notice how slicing the <span class="math inline">\(PT\overline{V}\)</span> diagram at constant <span class="math inline">\(T\)</span> results in the <span class="math inline">\(PV\)</span> diagram that we reported in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>. On the other hand, slicing the <span class="math inline">\(PT\overline{V}\)</span> diagram at constant <span class="math inline">\(\overline{V}\)</span> results in a <span class="math inline">\(PT\)</span> diagram, similar to the one that we will examine in detail in the next chapter.</p>
+<p>Notice how slicing the <span class="math inline">\(PT\overline{V}\)</span> diagram at constant <span class="math inline">\(T\)</span> results in the <span class="math inline">\(PV\)</span> diagram that we reported in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.8</span></a>. On the other hand, slicing the <span class="math inline">\(PT\overline{V}\)</span> diagram at constant <span class="math inline">\(\overline{V}\)</span> results in a <span class="math inline">\(PT\)</span> diagram, similar to the one that we will examine in detail in the next chapter.</p>
 </section>
 </section>
 <section id="fugacity" class="level2" data-number="11.4">
@@ -942,56 +948,56 @@ z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac
 <p>The chemical potential of a pure ideal gas can be calculated using <a href="09_Gibbs.html#eq-dgconstn4" class="quarto-xref">eq.&nbsp;<span>9.21</span></a>. Since we are not interested in a mixture, we can drop the asterisk in <span class="math inline">\(\mu^*\)</span>, and rewrite <a href="09_Gibbs.html#eq-dgconstn4" class="quarto-xref">eq.&nbsp;<span>9.21</span></a> as:</p>
 <p><span id="eq-dcpig"><span class="math display">\[
 \mu_{\text{ideal}} = \mu^\standardstate + RT \ln \frac{P}{P^\standardstate}.
-\tag{11.28}\]</span></span></p>
-<p>For a non-ideal gas, the pressure cannot be used in <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.28</span></a> because the response of each gas to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.28</span></a> and call it fugacity (<span class="math inline">\(f\)</span>).</p>
+\tag{11.29}\]</span></span></p>
+<p>For a non-ideal gas, the pressure cannot be used in <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> because the response of each gas to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> and call it fugacity (<span class="math inline">\(f\)</span>).</p>
 <div id="def-fugacitydef" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11.3</strong></span> <em>Fugacity:</em> The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.</p>
 </div>
-<p><a href="#eq-dcpig" class="quarto-xref">Eq.&nbsp;<span>11.28</span></a> then becomes:</p>
+<p><a href="#eq-dcpig" class="quarto-xref">Eq.&nbsp;<span>11.29</span></a> then becomes:</p>
 <p><span id="eq-dcpnig"><span class="math display">\[
 \mu_{\text{non-ideal}} = \mu^\standardstate + RT \ln \frac{f}{P^\standardstate}.
-\tag{11.29}\]</span></span></p>
-<p>Since the chemical potential of a gas <span class="math inline">\(\mu\)</span> is equal to the standard chemical potential <span class="math inline">\(\mu^\standardstate\)</span> when <span class="math inline">\(P=P^\standardstate\)</span>, it is easy to use <a href="#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> to demonstrate that:</p>
+\tag{11.30}\]</span></span></p>
+<p>To complete the definition of the fugacity, we need to decide how it relates to the pressure. At very low pressure, the molecules of any gas are so far apart that their volume and their interactions become negligible, and every gas behaves ideally. In this limit, the chemical potential of the non-ideal gas, <a href="#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.30</span></a>, must become equal to that of the ideal gas, <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a>, which is possible only if the fugacity becomes equal to the pressure:</p>
 <p><span id="eq-dcpnigL"><span class="math display">\[
 \lim_{P\rightarrow 0} \frac{f}{P} = 1,
-\tag{11.30}\]</span></span></p>
-<p>in other words, any non-ideal gas will approach the ideal gas behavior as <span class="math inline">\(P\rightarrow 0\)</span>. This condition, in conjunction with the <span class="math inline">\(T\rightarrow \infty\)</span> behavior obtained in the previous section, results in the following statement:</p>
+\tag{11.31}\]</span></span></p>
+<p>in other words, the fugacity is defined so that any non-ideal gas approaches the ideal gas behavior as <span class="math inline">\(P\rightarrow 0\)</span>. This condition, in conjunction with the <span class="math inline">\(T\rightarrow \infty\)</span> behavior obtained in the previous section, results in the following statement:</p>
 <blockquote class="blockquote">
 <p>The highest chances for any gas to behave ideally happen at high temperature and low pressure.</p>
 </blockquote>
 <p>We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs energy of a substance, we can write:</p>
 <p><span id="eq-dmufug1"><span class="math display">\[
 d \mu_{\text{ideal}} = \overline{V}_{\text{ideal}}dP,
-\tag{11.31}\]</span></span></p>
+\tag{11.32}\]</span></span></p>
 <p>and:</p>
 <p><span id="eq-dmufug2"><span class="math display">\[
 d \mu_{\text{non-ideal}} = \overline{V}_{\text{non-ideal}}dP.
-\tag{11.32}\]</span></span></p>
-<p>Subtracting <a href="#eq-dmufug1" class="quarto-xref">eq.&nbsp;<span>11.31</span></a> from <a href="#eq-dmufug2" class="quarto-xref">eq.&nbsp;<span>11.32</span></a>, we obtain:</p>
+\tag{11.33}\]</span></span></p>
+<p>Subtracting <a href="#eq-dmufug1" class="quarto-xref">eq.&nbsp;<span>11.32</span></a> from <a href="#eq-dmufug2" class="quarto-xref">eq.&nbsp;<span>11.33</span></a>, we obtain:</p>
 <p><span id="eq-dmufug3"><span class="math display">\[
 d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP,
-\tag{11.33}\]</span></span></p>
+\tag{11.34}\]</span></span></p>
 <p>which we can then integrate between <span class="math inline">\(0\)</span> and <span class="math inline">\(P\)</span>:</p>
 <p><span id="eq-dmufug4"><span class="math display">\[
 \mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP.
-\tag{11.34}\]</span></span></p>
-<p>Using <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.28</span></a> and <a href="#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> we can then replace the definition of chemical potentials, resulting in:</p>
+\tag{11.35}\]</span></span></p>
+<p>Using <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> and <a href="#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.30</span></a> we can then replace the definition of chemical potentials, resulting in:</p>
 <p><span id="eq-dmufug5"><span class="math display">\[
 \ln f - \ln P = \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}} - \overline{V}_{\text{ideal}} \right) dP,
-\tag{11.35}\]</span></span></p>
+\tag{11.36}\]</span></span></p>
 <p>which gives us a mathematical definition of the fugacity, as:</p>
 <p><span id="eq-dmufug6"><span class="math display">\[
 f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
-\tag{11.36}\]</span></span></p>
-<p>The exponential term in <a href="#eq-dmufug6" class="quarto-xref">eq.&nbsp;<span>11.36</span></a> is complicated to write, but it can be interpreted as a coefficient—unique to each non-ideal gas—that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the <em>fugacity coefficients</em>. Using letter <span class="math inline">\(\phi\)</span> to represent the fugacity coefficient, we can rewrite <a href="#eq-dmufug6" class="quarto-xref">eq.&nbsp;<span>11.36</span></a> as:</p>
+\tag{11.37}\]</span></span></p>
+<p>The exponential term in <a href="#eq-dmufug6" class="quarto-xref">eq.&nbsp;<span>11.37</span></a> is complicated to write, but it can be interpreted as a coefficient—unique to each non-ideal gas—that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the <em>fugacity coefficients</em>. Using letter <span class="math inline">\(\phi\)</span> to represent the fugacity coefficient, we can rewrite <a href="#eq-dmufug6" class="quarto-xref">eq.&nbsp;<span>11.37</span></a> as:</p>
 <p><span id="eq-dmufug7"><span class="math display">\[
 f = \phi P,
-\tag{11.37}\]</span></span></p>
+\tag{11.38}\]</span></span></p>
 <p>which gives us a straightforward interpretation of the fugacity as an effective pressure. As such, the fugacity will have the same unit as the pressure, while the fugacity coefficients will be dimensionless.</p>
 <p>As we already saw in <a href="10_ChemicalEquilibrium.html" class="quarto-xref"><span>chapter 10</span></a>, the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called <span class="math inline">\(K_f\)</span>, and is obtained from:</p>
 <p><span id="eq-kfdef"><span class="math display">\[
 K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
-\tag{11.38}\]</span></span></p>
+\tag{11.39}\]</span></span></p>
 </section>
 <section id="sec-rev11" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="sec-rev11"><span class="header-section-number">11.5</span> Chapter Review</h2>
@@ -1116,7 +1122,6 @@ K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
 <ol>
 <li id="fn1"><p>For more information on empirical equations for non-ideal gases see <a href="https://en.wikipedia.org/wiki/Real_gas">Wikipedia’s article on real gases</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule–Thomson expansions is also used for the industrial liquefaction of air.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>This diagram is taken from <a href="https://en.wikipedia.org">Wikipedia</a> and distributed under CC-BY-SA license.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

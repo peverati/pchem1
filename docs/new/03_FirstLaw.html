@@ -527,6 +527,7 @@ window.Quarto = {
 </header>
 
 
+<p>In <a href="02_ZerothLaw.html" class="quarto-xref"><span>chapter 2</span></a>, we learned how to calculate heat and work, and we saw that both of them are path functions: their values depend on how a process is carried out. In this chapter, we will connect heat and work to a state function, the internal energy, and we will see how this connection becomes one of the most fundamental laws of nature, the first law of thermodynamics. Along the way, we will introduce a second state function, the enthalpy, which will be the protagonist of the next chapter.</p>
 <section id="sec-energyint" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-energyint"><span class="header-section-number">3.1</span> Calculation of Internal Energy Changes</h2>
 <p>Energy is a property of a system that can be either transferred or converted. The internal energy (<span class="math inline">\(U\)</span>) of a system is a thermodynamic state function defined as:</p>
@@ -540,7 +541,7 @@ window.Quarto = {
 <p>which we can write in differential form by considering that the internal energy is a state function, as: <span id="eq-dU"><span class="math display">\[
 dU = đ Q + đ W,
 \tag{3.2}\]</span></span></p>
-<p>which, using <a href="02_ZerothLaw.html#eq-Wdef" class="quarto-xref">eq.&nbsp;<span>2.9</span></a> becomes:</p>
+<p>which, for processes where the pressure of the system equals the external pressure (as in the slow processes that we discussed in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>section 2.4</span></a>, and in processes at constant pressure, where the system is in mechanical equilibrium with the atmosphere), using <a href="02_ZerothLaw.html#eq-Wdefrev" class="quarto-xref">eq.&nbsp;<span>2.10</span></a> becomes:</p>
 <p><span id="eq-dUpdv"><span class="math display">\[
 dU = đ Q - PdV.
 \tag{3.3}\]</span></span></p>
@@ -557,11 +558,11 @@ Figure&nbsp;3.1: The Joule Expansion Experiment.
 </figcaption>
 </figure>
 </div>
-<p>The left side of the Joule apparatus’s inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, to guarantee isolation from the environment. When the communication channel between the chambers is open, the gas expands and equilibrates. The work associated with the transformation is:</p>
+<p>The left side of the Joule apparatus’s inner chamber is filled with an ideal gas, while a vacuum is created in the right chamber. Both chambers are immersed in a water bath, whose temperature is monitored with a thermometer: if the gas absorbed or released any heat during the experiment, the temperature of the water would change. When the valve between the chambers is opened, the gas expands into the empty chamber and equilibrates. The work associated with the transformation is:</p>
 <p><span id="eq-JexpW"><span class="math display">\[
 đ W=-P_{\text{ext}}dV = 0,
 \tag{3.4}\]</span></span></p>
-<p>since the chambers are not in communication with the environment, <span class="math inline">\(P_{\text{ext}}=0\)</span>. Thus, changes in internal energy are associated with the heat transfer of the process, which can be measured by monitoring the temperature of the gas at the beginning, <span class="math inline">\(T_i\)</span>, and at the end of the experiment, <span class="math inline">\(T_f\)</span>. Joule noticed experimentally that if he used an ideal gas for this experiment, the temperature would not change, <span class="math inline">\(T_i = T_f\)</span>. Since the temperature doesn’t change, there is no heat transfer, and therefore the internal energy stays constant:</p>
+<p>since the gas expands into a vacuum, there is nothing for it to push against, and <span class="math inline">\(P_{\text{ext}}=0\)</span>. Thus, any change in internal energy must be due to heat, which can be detected by monitoring the temperature at the beginning, <span class="math inline">\(T_i\)</span>, and at the end of the experiment, <span class="math inline">\(T_f\)</span>. Joule observed that, for a gas behaving ideally, the temperature does not change, <span class="math inline">\(T_i = T_f\)</span>. Since the temperature doesn’t change, no heat is exchanged, and therefore the internal energy stays constant:</p>
 <p><span id="eq-JexpQU"><span class="math display">\[
 dU = đ Q = 0.
 \tag{3.5}\]</span></span></p>
@@ -572,11 +573,11 @@ dU = đ Q = 0.
 </section>
 <section id="internal-energy-in-adiabatic-processes" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="internal-energy-in-adiabatic-processes"><span class="header-section-number">3.1.2</span> Internal energy in adiabatic processes</h3>
-<p>An adiabatic process is defined as a process that happens without the exchange of heat. As such, <span class="math inline">\(đ Q=0\)</span>, and the work associated with an adiabatic process becomes a state function:</p>
+<p>An adiabatic process is defined as a process that happens without the exchange of heat. As such, <span class="math inline">\(đ Q=0\)</span>, and the work associated with an adiabatic process is equal to the change in internal energy:</p>
 <p><span id="eq-dUadiabatic"><span class="math display">\[
 dU=đ W=-PdV,
 \tag{3.6}\]</span></span></p>
-<p>which can then be calculated using the formulas that we derived in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>section 2.4</span></a>. Notice that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system’s boundaries, this does not mean that the system’s temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.</p>
+<p>which can then be calculated using the formulas that we derived in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>section 2.4</span></a>. Notice that the work is still a path function: in general, its value depends on the path. However, <em>along adiabatic paths</em>, the work is fixed by the change of a state function, so all adiabatic paths connecting the same two states require the same amount of work. Notice also that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system’s boundaries, this does not mean that the system’s temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.</p>
 </section>
 <section id="internal-energy-in-isochoric-processes" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="internal-energy-in-isochoric-processes"><span class="header-section-number">3.1.3</span> Internal energy in isochoric processes</h3>
@@ -584,7 +585,7 @@ dU=đ W=-PdV,
 <p><span id="eq-dUqv"><span class="math display">\[
 dU = đ Q_V = n C_V dT.
 \tag{3.7}\]</span></span></p>
-<p>Since no work is performed at these conditions, the heat becomes a state function. <a href="#eq-dUqv" class="quarto-xref">Eq.&nbsp;<span>3.7</span></a> also gives a mathematical justification of the concept of heat capacity at constant volume. <span class="math inline">\(C_V\)</span> can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):</p>
+<p>Since no work is performed at these conditions, the heat exchanged is equal to the change of a state function, <span class="math inline">\(\Delta U\)</span>. Once again, heat is still a path function in general, but <em>along constant-volume paths</em> its value is fixed by the initial and final states only. <a href="#eq-dUqv" class="quarto-xref">Eq.&nbsp;<span>3.7</span></a> also gives a mathematical justification of the concept of heat capacity at constant volume. <span class="math inline">\(C_V\)</span> can now be interpreted as the partial derivative (a coefficient) of a state function (the internal energy):</p>
 <p><span id="eq-cvstatefunc"><span class="math display">\[
 C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n=1},
 \tag{3.8}\]</span></span></p>
@@ -657,7 +658,7 @@ Figure&nbsp;3.2: Expansion/Compression Cycle of an Ideal Gas.
 <p>where the symbol <span class="math inline">\(\oint\)</span> indicates an integral around a cycle. Considering the work associated with the cycle, however, the situation is radically different because it depends on the path that the system is taking, and in general <span id="eq-dw0"><span class="math display">\[
 \oint_{\text{path}} đW \neq 0.
 \tag{3.17}\]</span></span></p>
-<p>For instance, if we perform the expansion in one step, the work associated with it will be (using <a href="02_ZerothLaw.html#eq-Wint3" class="quarto-xref">eq.&nbsp;<span>2.13</span></a>):<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>For instance, if we perform the expansion in one step, the work associated with it will be (using <a href="02_ZerothLaw.html#eq-Wint3" class="quarto-xref">eq.&nbsp;<span>2.14</span></a>):<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p><span id="eq-Wexp1"><span class="math display">\[
 W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{&gt;0})&lt;0,
 \tag{3.18}\]</span></span></p>
@@ -674,11 +675,11 @@ W^{\text{cycle}}_{\text{1-step}} {} &amp; =  W^{\text{expansion}}_{\text{1-step}
 &amp; = (\underbrace{V_2-V_1}_{&gt;0})(\underbrace{P_1-P_2}_{&gt;0}) &gt; 0,
 \end{aligned}
 \tag{3.20}\]</span></span></p>
-<p>or, in other words, net work is destroyed.</p>
+<p>or, in other words, the surroundings have to put more work into the compression than they get back from the expansion. Since the gas returns to its initial state, <span class="math inline">\(\oint dU=0\)</span>, and this extra work must leave the system as heat. The energy is not destroyed, but part of the work has been degraded into heat.</p>
 <blockquote class="blockquote">
 <p>In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it, and it moves back up.</p>
 </blockquote>
-<p>In contrast, if both the expansion and the compression happen in a slow <span class="math inline">\(\infty\)</span>-step manner, the work associated with them will be <span class="math inline">\(W_{\text{max}}\)</span> and <span class="math inline">\(W_{\text{min}}\)</span>, respectively, which are calculated using <a href="02_ZerothLaw.html#eq-WmaxV" class="quarto-xref">eq.&nbsp;<span>2.19</span></a>. The total work related to the cycle will be in this case:</p>
+<p>In contrast, if both the expansion and the compression happen in a slow <span class="math inline">\(\infty\)</span>-step manner, the work associated with them will be <span class="math inline">\(W_{\text{max}}\)</span> and <span class="math inline">\(W_{\text{min}}\)</span>, respectively, which are calculated using <a href="02_ZerothLaw.html#eq-WmaxV" class="quarto-xref">eq.&nbsp;<span>2.20</span></a>. The total work related to the cycle will be in this case:</p>
 <p><span id="eq-Wtot2"><span class="math display">\[
 \begin{aligned}
 W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max}}+W^{\text{compression}}_{\text{min}} \\
@@ -686,15 +687,20 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 &amp; = -nRT \underbrace{\left( \ln \frac{V_f}{V_i} - \ln \frac{V_f}{V_i} \right) }_{=0}  = 0,
 \end{aligned}
 \tag{3.21}\]</span></span></p>
-<p>which means that, in this case, work is neither destroyed nor created.</p>
+<p>which means that, in this case, the work obtained from the expansion is exactly the work needed for the compression, and no work is degraded into heat.</p>
 <blockquote class="blockquote">
 <p>In practice, if we were able to perform this cycle manually by pushing the piston down by hand, we would notice that it requires the same amount of energy to push down as the amount it gives back when it moves up.</p>
 </blockquote>
 <p>This process can happen both ways without losses, and is called <em>reversible</em>:</p>
 <div id="def-reversible" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.5</strong></span> <em>Reversible process:</em> a process whose direction can be returned to its original position by inducing infinitesimal changes to some property of the system via its surroundings.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p><span class="theorem-title"><strong>Definition 3.5</strong></span> <em>Reversible process:</em> A process whose direction can be inverted at any moment by an infinitesimally small change in the conditions of the surroundings (for example, an infinitesimally small increase of the external pressure), so that the system goes back through exactly the same states.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 </div>
-<p>Reversible processes are ideal processes that are hard to realize in practice since they require transformations that happen in an infinite amount of steps (infinitely slowly).</p>
+<p>A few important considerations can be made by analyzing <a href="#def-reversible" class="quarto-xref">Definition&nbsp;<span>3.5</span></a>:</p>
+<ol type="1">
+<li><strong>A reversible process is infinitely slow.</strong> It happens in an infinite number of infinitesimal steps, and at each step the system is in equilibrium with its surroundings (for example, <span class="math inline">\(P=P_{\text{ext}}\)</span> at every moment).</li>
+<li><strong>A reversible process is the most efficient one.</strong> A reversible expansion gives the maximum work, <span class="math inline">\(W_{\text{max}}\)</span>, and a reversible compression requires the minimum work, <span class="math inline">\(W_{\text{min}}\)</span>. Running a reversible process forward and then backward leaves no trace, neither in the system nor in the surroundings.</li>
+<li><strong>All real processes are irreversible.</strong> Reversible processes are idealizations, like the ideal gas. We can approach them by carrying out a process very slowly, but never reach them. Despite this, they are extremely useful, since they set the limits that real processes can only approach.</li>
+</ol>
 </section>
 <section id="sec-rev3" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="sec-rev3"><span class="header-section-number">3.4</span> Chapter Review</h2>
@@ -816,7 +822,7 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li id="fn1"><p>recall that the internal energy is a state function, so its value depends exclusively on the conditions at the beginning and at the end. In a cycle, we’re going back to the same point, so the conditions at the beginning and at the end are equal by definition.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>notice that the work for the expansion is negative, as it should be.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>notice that the work for the compression is positive, as it should be.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Definition from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley.)<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Adapted from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

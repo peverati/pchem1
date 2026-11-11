@@ -27,10 +27,7 @@ $$ {#eq-effcQTrearr2}
 
 The left-hand side of @eq-effcQTrearr2 is a sum of two terms, one for each isothermal stage of the Carnot cycle. Each term is the heat exchanged during that stage, divided by the temperature at which it is exchanged. Since, according to @Def-carnotcycle, each transformation in a Carnot cycle is reversible, these are heats exchanged at reversible conditions, $Q_{\mathrm{REV}}$. The two adiabatic stages do not contribute, since no heat is exchanged during them.
 
-Is this result special to the Carnot cycle? Not really. Any reversible cycle in a $PV$ diagram can be approximated by a sequence of small Carnot cycles, as in the following figure. Inside the black contour, each isotherm and each adiabat is traveled twice, once in each direction, by two neighboring cycles, so their contributions cancel out. Only the outer contour remains. If we apply @eq-effcQTrearr2 to each small cycle and add everything up, we obtain:
-
-![](img/R_06_SecondLaw_1.png){fig-alt="Pressure-volume diagram filled with a grid of isotherms and steeper adiabats. A closed, zig-zag black path made only of isotherm and adiabat segments shows that a general cycle can be built from many small Carnot cycles." width="70%"}
-
+Is this result special to the Carnot cycle? Not really. Any reversible cycle in a $PV$ diagram can be approximated by a sequence of small Carnot cycles, drawn next to each other like tiles, so that their outer edges follow the shape of the cycle in a zig-zag of isotherms and adiabats. Inside the cycle, each isotherm and each adiabat is traveled twice, once in each direction, by two neighboring Carnot cycles, so their contributions cancel out. Only the outer zig-zag contour remains. If we apply @eq-effcQTrearr2 to each small cycle and add everything up, we obtain:
 
 $$
 \sum_i \frac{Q_{\mathrm{REV},i}}{T_i} = 0,

@@ -4,6 +4,8 @@ aliases:
 ---
 
 # Calculation of Entropy and the Third Law of Thermodynamics {#sec-thirdlaw}
+In @sec-SecondLaw, we defined the entropy as a state function, and we found that the entropy of the universe increases in every spontaneous process. A definition, however, is not very useful until we know how to calculate it. In this chapter, we will learn how to calculate the entropy changes of the most common transformations: heating and cooling, expansions and compressions, and phase changes. We will then see how to account for the surroundings, and we will introduce the third law of thermodynamics, which fixes the zero of the entropy scale and allows us to tabulate absolute entropies.
+
 The Second Law can be used to infer the spontaneity of a process, as long as the entropy of the universe is considered. To do so, we need to remind ourselves that the universe can be divided into a system and its surroundings (environment). When we calculate the entropy of the universe as an indicator of the spontaneity of a process, we need to *always* consider changes in entropy in *both* the system (sys) and its surroundings (surr):
 
 $$

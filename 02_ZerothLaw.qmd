@@ -4,18 +4,20 @@ aliases:
 ---
 
 # Zeroth Law of Thermodynamics {#sec-ZerothLaw}
-## What is Thermodynamics? 
-Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A formal definition of these forms of energy is as follows:
+In @sec-SystemVariables, we introduced the tools that we need to study thermodynamics: a bit of calculus, the definition of a system, and the distinction between state and path functions. In this chapter, we will define the two ways in which a system can exchange energy with its surroundings, heat and work, and we will learn how to calculate them. Before we do that, however, we need a solid definition of temperature, which comes from the zeroth law of thermodynamics.
 
-- Work is exchanged if external parameters are changed during the process. 
-- Heat is exchanged if only internal parameters are changed during the process.
+## What is Thermodynamics?
+Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. These are the two ways in which energy can be transferred between a system and its surroundings:
 
-As we saw in @sec-SystemVariables, heat and work are not "well-behaved" quantities because they are path functions. While it might be simple to measure the amount of heat and/or work experimentally, these measured quantities cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the seventeenth century when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related to each other, and how they were related to the other variables that they were able to measure, such as temperature and volume.
+- **Work** is exchanged when the system changes one of its external, macroscopic parameters against a force. The typical example in chemistry is a gas that changes its volume by pushing a piston against an external pressure.
+- **Heat** is exchanged because of a temperature difference between the system and its surroundings, without any change in the external parameters. Heat flows through the random collisions between the molecules at the boundary, from the hotter side to the colder one.
+
+As we saw in @sec-SystemVariables, heat and work are not "well-behaved" quantities because they are path functions. While it might be simple to measure the amount of heat and/or work experimentally, these measured quantities cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origins of thermodynamics date back to the eighteenth and nineteenth centuries, when steam engines started to be used to convert heat into work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related to each other, and how they were related to the other variables that they were able to measure, such as temperature and volume.
 
 Before we even discuss the definition of energy and how it relates to heat and work, it is crucial to introduce the essential concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition at the microscopic level.^[In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.] However, for all our purposes, it is not essential to have a microscopic definition of temperature, as long as we have the guarantee that this quantity can be measured unambiguously. In other words, we only need a mathematical definition of temperature that agrees with the physical existence of thermometers.
 
 ## The Zeroth Law of Thermodynamics
-The mathematical definition that guarantees that thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
+We all know from experience that if we put a hot object in contact with a cold one, after some time they reach the same temperature, and heat stops flowing between them. When this happens, we say that the two objects are in *thermal equilibrium*. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is exactly what makes thermometers possible: the thermometer is the third system, and if it reads the same temperature when in contact with two different objects, we can conclude that the two objects are in thermal equilibrium with each other, even if they have never touched. For this reason, the zeroth law is a fundamental requirement for the mathematical formulation of thermodynamics, and it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:
 
 ::: {#def-zerothlaw}
 *Zeroth Law of Thermodynamics:* If $T_A = T_B$, and $T_B = T_C$, then $T_A = T_C$.
@@ -83,23 +85,29 @@ $$
 đ W = - Fdh,
 $$ {#eq-Wphysics}
 
-where the negative sign comes from the chemistry sign convention, @Def-chemistryconv, since the work in @Fig-Fig2c3 is *performed* by the system (expansion). What kind of force is moving the piston? It is the force due to the pressure of the gas. Relying upon another definition from physics, the pressure is the ratio between the force ($F$) and the area ($A$) that such force acts upon:
+where the negative sign comes from the chemistry sign convention, @Def-chemistryconv, since the work in @Fig-Fig2c3 is *performed* by the system (expansion). Which force should we use? When the gas expands, the work it performs is the energy needed to push back the surroundings, so the relevant force is the one that the surroundings exert on the piston. Relying upon another definition from physics, the pressure is the ratio between the force ($F$) and the area ($A$) that such force acts upon, so the force exerted by the surroundings is related to the external pressure, $P_{\text{ext}}$, by:
 
 $$
-P = F/A.
+P_{\text{ext}} = F/A.
 $$ {#eq-Pphysics}
 
 Obtaining $F$ from @eq-Pphysics and replacing it in @eq-Wphysics, we obtain:
 
 $$
-đ W = - P \underbrace{Adh}_{dV},
+đ W = - P_{\text{ext}} \underbrace{Adh}_{dV},
 $$ {#eq-Wphysics2}
 
 and considering that $Adh$ (area times infinitesimal height) is the definition of an infinitesimal volume $dV$, we obtain:
 
 $$
-đ W = - PdV,
+đ W = - P_{\text{ext}}dV.
 $$ {#eq-Wdef}
+
+The external pressure is not necessarily the same as the pressure of the gas, $P$. In a fast expansion, the gas inside the beaker can be at a much higher pressure than the surroundings. However, if the expansion happens slowly enough that the piston is always balanced, $P_{\text{ext}}=P$ at every moment, and the work can be written using the pressure of the gas:
+
+$$
+đ W = - PdV \qquad \text{(when } P_{\text{ext}}=P\text{)}.
+$$ {#eq-Wdefrev}
 
 If we want to calculate the amount of work performed by a system, $W$, from @eq-Wdef, we need to recall that $đ W$ is an inexact differential. As such, we cannot integrate it from initial to final as for the (exact) differential of a state function, because:
 
@@ -116,7 +124,7 @@ $$ {#eq-Wdiff2}
 where the integration is performed along the *path*. Using @eq-Wdiff2, we can integrate @eq-Wdef as:
 
 $$
-\int đ W = W = - \int_{i}^{f} PdV,
+\int đ W = W = - \int_{i}^{f} P_{\text{ext}}dV,
 $$ {#eq-Wint}
 
 where the integral on the left-hand side is taken along the path,^[from here on we will replace the notation $\int_{\text{path}}$ with the more convenient $\int$ and we will keep in mind that the integral of an inexact differential must be taken along the path.] while the integral on the right-hand side can be taken between the initial and final states, since $V$ is a state function.
@@ -124,10 +132,10 @@ How do we solve the integral in @eq-Wint? It turns out that there are many diffe
 
 
 ### $| W_{\text{max}} |$ and  $| W_{\text{min}} |$ in processes at constant temperature (isothermal)
-At constant temperature, the piston in @Fig-Fig2c3 moves along the following PV diagram (this curve is obtained from an ideal gas at constant $T=298$ K):
+At constant temperature, the piston in @Fig-Fig2c3 moves along the isotherm in @fig-pvIso, obtained for 1 mol of an ideal gas at $T=298$ K.
 
 
-![](img/R_02_ZerothLaw_1.png){fig-alt="Pressure-volume plot of an ideal-gas isotherm at 298 K, a curve that falls as volume increases. Two points are marked: the initial state i at small volume and high pressure, and the final state f at about 1 L and low pressure, with dotted lines to their pressures and volumes." width="70%"}
+![Isotherm of 1 mol of an ideal gas at 298 K, with the initial (i) and final (f) states of an expansion.](img/ch2_pv_isotherm.png){#fig-pvIso fig-alt="Pressure-volume plot of an ideal-gas isotherm at 298 K, a curve that falls as volume increases. The initial state i is at small volume and high pressure, and the final state f is at 1 L and low pressure, with dotted lines to their pressures and volumes." width="70%"}
 
 
 An expansion of the gas will happen between $P_i$ and $P_f$. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example $P_f=P_{\text{ext}} =1\;\mathrm{bar}$), and solve the integral as: 
@@ -136,30 +144,30 @@ $$
 W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i).
 $$ {#eq-Wint3}
 
-Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work^[we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to @Def-chemistryconv.] represents the red area of the PV-diagram:
+Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work^[we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to @Def-chemistryconv.] represents the red area in @fig-pv1step:
 
 
-![](img/R_02_ZerothLaw_2.png){fig-alt="Same isotherm with the initial and final states. A red hatched rectangle under the final pressure, from the initial to the final volume, represents the work of a one-step expansion, equal to the final pressure times the volume change." width="70%"}
+![Work for a one-step expansion against a constant external pressure: the red rectangle under the final pressure.](img/ch2_pv_1step.png){#fig-pv1step fig-alt="Same isotherm. A red hatched rectangle under the final pressure, from the initial to the final volume, represents the work of a one-step expansion, equal to the final pressure times the volume change." width="70%"}
 
 
 $$
 \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
 $$ {#eq-Warea1}
 
-If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, $A$ and $B$, and solve each one as we did in the previous case. The first process is an expansion between $P_i$ and $P_1$, with $P_1$ constant. The absolute value of the work, $W_A$, is represented by the blue area:
+If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, $A$ and $B$, and solve each one as we did in the previous case. The first process is an expansion between $P_i$ and $P_1$, with $P_1$ constant. The absolute value of the work, $W_A$, is represented by the blue area in @fig-pv2stepA:
 
 
-![](img/R_02_ZerothLaw_3.png){fig-alt="Same isotherm with an intermediate state 1 between the initial and final states. A blue hatched rectangle under the intermediate pressure, from the initial volume to the intermediate volume, represents the work of the first step of a two-step expansion." width="70%"}
+![Work for the first step of a two-step expansion: the blue rectangle under the intermediate pressure.](img/ch2_pv_2stepA.png){#fig-pv2stepA fig-alt="Same isotherm with an intermediate state 1. A blue hatched rectangle under the intermediate pressure, from the initial volume to the intermediate volume, represents the work of the first step." width="70%"}
 
 
 $$
 \left| W_A \right| = P_1 (V_1-V_i)
 $$ {#eq-Warea2}
 
-The second process is an expansion between $P_1$ and $P_f$, with $P_f=P_{\text{ext}}$ constant. The absolute value of the work for this second process is represented by the green area:
+The second process is an expansion between $P_1$ and $P_f$, with $P_f=P_{\text{ext}}$ constant. The absolute value of the work for this second process is represented by the green area in @fig-pv2stepB:
 
 
-![](img/R_02_ZerothLaw_4.png){fig-alt="Same isotherm with the intermediate state 1. A green hatched rectangle under the final pressure, from the intermediate volume to the final volume, represents the work of the second step of a two-step expansion." width="70%"}
+![Work for the second step of a two-step expansion: the green rectangle under the final pressure.](img/ch2_pv_2stepB.png){#fig-pv2stepB fig-alt="Same isotherm with the intermediate state 1. A green hatched rectangle under the final pressure, from the intermediate volume to the final volume, represents the work of the second step." width="70%"}
 
 
 $$
@@ -167,10 +175,10 @@ $$
 $$ {#eq-Warea3}
 
 
-The total absolute value of the work for the 2-step process is given by the sum of the two areas:
+The total absolute value of the work for the 2-step process is given by the sum of the two areas, as in @fig-pv2step:
 
 
-![](img/R_02_ZerothLaw_5.png){fig-alt="Same isotherm with the two rectangles of the two-step expansion hatched together. Their combined area, labeled absolute value of the two-step work, is larger than the single rectangle of the one-step expansion." width="70%"}
+![Total work for the two-step expansion: the sum of the blue and green rectangles.](img/ch2_pv_2step.png){#fig-pv2step fig-alt="Same isotherm with the blue and green rectangles of the two-step expansion together. Their combined area is larger than the single rectangle of the one-step expansion." width="70%"}
 
 
 $$
@@ -179,7 +187,7 @@ $$ {#eq-Warea4}
 
 As can be easily verified by comparing the shaded areas in the plots, $\left| W_{\text{2-step}} \right| > \left| W_{\text{1-step}} \right|$.
 
-We can easily extend this procedure to consider processes that happen in 3, 4, 5, ..., $n$ steps. What is the limit of this procedure? In other words, what happens when $n \rightarrow \infty$? A simple answer is given by the plot in the next figure, which clearly demonstrates that the maximum value of the area underneath the curve $\left| W_{\text{max}}\right|$ is achieved in an $\infty$-step process, for which the work is calculated as:
+We can easily extend this procedure to consider processes that happen in 3, 4, 5, ..., $n$ steps. What is the limit of this procedure? In other words, what happens when $n \rightarrow \infty$? A simple answer is given by @fig-pvmax, which clearly demonstrates that the maximum value of the area underneath the curve $\left| W_{\text{max}}\right|$ is achieved in an $\infty$-step process. In this limit, each step is infinitesimally small, the external pressure is always equal to the pressure of the gas, and we can use @eq-Wdefrev to calculate the work as:
 
 $$
 \left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
@@ -187,7 +195,7 @@ $$ {#eq-WintsolvedV2}
 
 
 
-![](img/R_02_ZerothLaw_6.png){fig-alt="Same isotherm with the whole area under the curve, from the initial to the final volume, shaded gray and labeled absolute value of the maximum work. This is the limit of an expansion performed in infinitely many steps." width="70%"}
+![Maximum work for the isothermal expansion: the whole area under the isotherm, which is the limit of an expansion performed in more and more steps (6 steps in orange, 30 steps in green, $\infty$ steps in gray).](img/ch2_pv_max.png){#fig-pvmax fig-alt="Same isotherm with the whole area under the curve, from the initial to the final volume, shaded gray and labeled absolute value of the maximum work. An orange staircase of six steps and a finer green staircase of thirty steps under the curve show how a multi-step expansion approaches this area; the gray area corresponds to infinitely many steps." width="70%"}
 
 
 The integral on the right hand side of @eq-WintsolvedV2 can be solved for an ideal gas by calculating the pressure using the ideal gas law $P=\frac{nRT}{V}$, and solving the integral since $n$, $R$, and $T$ are constant:

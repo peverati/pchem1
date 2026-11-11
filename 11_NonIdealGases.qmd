@@ -4,6 +4,8 @@ aliases:
 ---
 
 # Ideal and Non-Ideal Gases {#sec-RealGases}
+Up to this point, we have used the ideal gas as our main example, and in @sec-ChemicalEquilibrium we wrote equilibrium constants in terms of the partial pressures of ideal gases. Real gases, however, are not ideal: their molecules occupy some space, and they attract each other. In this chapter, we will first look back at how the ideal gas law was discovered, and then we will study what happens when its assumptions break down. We will see that non-ideal behavior is responsible for some very useful phenomena, such as the cooling of a gas when it expands and the liquefaction of gases, and we will introduce the fugacity, a quantity that allows us to keep using our thermodynamic formulas for non-ideal gases.
+
 ## The Ideal Gas Equation
 
 The concept of an ideal gas is a theoretical construct that allows for straightforward treatment and interpretation of gases' behavior. As such, the ideal gas is a simplified *model* that we use to understand nature, and it does not correspond to any real system. In typical "spherical cow" spirit, the ideal gas model strips away many real-world complications so we can focus on the core relationships between pressure, volume, temperature, and amount of gas. The following two assumptions define the ideal gas model:
@@ -31,7 +33,7 @@ $$ {#eq-boylelaw2}
 which results in the familiar $PV$ plots of @Fig-FigPVideal. As we already discussed in @sec-ZerothLaw, each of the curves in @Fig-FigPVideal is obtained at constant temperature, and it is therefore called *"isotherm."*
 
 
-![PV-Diagram of an ideal Gas.](img/R_11_NonIdealGases_FigPVideal.png){#fig-FigPVideal fig-alt="Pressure-volume diagram of an ideal gas at constant temperature with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1." width="70%"}
+![PV-Diagram of 1 mol of an Ideal Gas.](img/ch11_PV_ideal.png){#fig-FigPVideal fig-alt="Pressure-volume diagram of 1 mol of an ideal gas with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1." width="70%"}
 
 
 ### Charles's and Gay-Lussac's Laws
@@ -50,7 +52,7 @@ $$ {#eq-charleslaw2}
 which results in the plots of @Fig-FigTVideal. Each of the curves is obtained at constant pressure, and it is termed *"isobar."*
 
 
-![VT-Diagram of an ideal Gas.](img/R_11_NonIdealGases_FigTVideal.png){#fig-FigTVideal fig-alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2." width="70%"}
+![VT-Diagram of 1 mol of an Ideal Gas.](img/ch11_VT_ideal.png){#fig-FigTVideal fig-alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2." width="70%"}
 
 
 The interesting thing about isobars is that each line seems to converge to a specific point along the temperature line when we extrapolate them to $V\rightarrow 0$. This led to the introduction of the absolute temperature scale, suggesting that the temperature will never get smaller than $-273.15^\circ\mathrm{C}$.
@@ -70,7 +72,7 @@ $$ {#eq-gaylussac2}
 which results in the plots of @Fig-FigTPideal. Each of the curves is obtained at constant volume, and it is termed *"isochor."*
 
 
-![PT-Diagram of an ideal Gas.](img/R_11_NonIdealGases_FigTPideal.png){#fig-FigTPideal fig-alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2." width="70%"}
+![PT-Diagram of 1 mol of an Ideal Gas.](img/ch11_PT_ideal.png){#fig-FigTPideal fig-alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2." width="70%"}
 
 
 ### Avogadro's Law
@@ -85,6 +87,10 @@ or in other terms:
 $$
 V=k_4 n\quad\text{at const.}\;P,T,
 $$ {#eq-avogadrolaw2}
+
+which results in the straight lines of @Fig-FigVnideal.
+
+![Vn-Diagram of an Ideal Gas at Constant Pressure (1 bar).](img/ch11_V_n_ideal.png){#fig-FigVnideal fig-alt="Volume versus number of moles for an ideal gas at 1 bar: two straight lines through the origin, steeper at 373 K than at 273 K. A marked point shows that 1 mol at 273 K occupies 22.7 L." width="70%"}
 
 ### The ideal gas Law
 Despite all of the ingredients being available for more than 20 years, it's only in 1834 that Benoît Paul Émile Clapeyron (1799–1864) was finally able to combine them into what is now known as the **ideal gas Law**. Using the same formulas obtained above, we can write:
@@ -240,7 +246,7 @@ $$ {#eq-comprdef}
 It is evident from @eq-comprdef that the compressibility factor is dependent on the pressure, and for an ideal gas $z=1$ always. For a non-ideal gas at any given pressure, $z$ can be higher or lower than one, separating the behavior of non-ideal gases into two possibilities. The dependence of the compressibility factor against pressure is represented for $\mathrm{H}_2$ and $\mathrm{CO}_2$ in @Fig-FigZb.
 
 
-![Non-Ideal Gases Behaviors.](img/OEP_Figures.012.jpeg){#fig-FigZb fig-alt="Compressibility factor z versus pressure. The ideal gas is a horizontal dotted line at z equal to 1. A type I gas (hydrogen) rises above 1 as pressure increases. A type II gas (carbon dioxide) first dips below 1 and then rises above it at high pressure." width="80%"}
+![Compressibility Factor of Hydrogen (Type I) and Carbon Dioxide (Type II) at 350 K, Computed with the van der Waals Equation.](img/ch11_z_vs_P.png){#fig-FigZb fig-alt="Compressibility factor z versus pressure at 350 K, computed with the van der Waals equation. The ideal gas is a horizontal dotted line at z equal to 1. Hydrogen, a type I gas, rises steadily above 1. Carbon dioxide, a type II gas, first dips to about 0.5 near 140 bar and then rises above 1 at high pressure." width="75%"}
 
 
 The two types of possible behaviors are differentiated based on the compressibility factor at $P\rightarrow 0$. To analyze these situations we can use the vdW equation to calculate the compressibility factor as:
@@ -249,7 +255,13 @@ $$
 z= \frac{\overline{V}}{RT} \left( \frac{RT}{\overline{V}-b} -\frac{a}{\overline{V}^2} \right),
 $$ {#eq-compr1}
 
-and then we can differentiate this equation at constant temperature with respect to changes in the pressure near $P=0$, to obtain:
+which can be simplified as $z=\frac{\overline{V}}{\overline{V}-b}-\frac{a}{RT\overline{V}}$. We are interested in what happens at low pressure, where the molar volume is very large compared to $b$. In this case, we can use the approximation $\frac{\overline{V}}{\overline{V}-b}=\frac{1}{1-b/\overline{V}} \approx 1+\frac{b}{\overline{V}}$, which gives:
+
+$$
+z \approx 1 + \frac{1}{\overline{V}}\left(b-\frac{a}{RT}\right) \approx 1 + \frac{P}{RT}\left(b-\frac{a}{RT}\right),
+$$ {#eq-compr1b}
+
+where in the last step we used the ideal gas law, $\frac{1}{\overline{V}} \approx \frac{P}{RT}$, which is a good approximation at low pressure. @Eq-compr1b is a straight line in $P$, and its slope gives the behavior of the compressibility factor near $P=0$:
 
 $$
 \left. \left( \frac{\partial z}{\partial P}\right)_T \right|_{P=0} = \frac{1}{RT} \left( b -\frac{a}{RT} \right),
@@ -263,7 +275,7 @@ which is then interpreted as follows:
 The dependence of the compressibility factor as a function of temperature (@Fig-Fig1Zb2) results in different plots for each of the two types of behavior.
 
 
-![Temperature Dependence of the Compressibility Factor.](img/OEP_Figures.013.jpeg){#fig-Fig1Zb2 fig-alt="Compressibility factor z versus pressure at several temperatures. Left, type I gas (hydrogen): every curve rises above 1, and the curves flatten toward the ideal line as temperature goes from 200 K to 1000 K. Right, type II gas (carbon dioxide): at low temperatures the curves dip below 1 first, at the Boyle temperature of 713 K the curve stays close to 1 over a wide pressure range, and at higher temperatures the curves rise above 1." width="90%"}
+![Temperature Dependence of the Compressibility Factor, Computed with the van der Waals Equation. The van der Waals Boyle temperature of CO$_2$ (about 1030 K) is higher than the experimental value of 713 K, since the van der Waals equation is only an approximate model.](img/ch11_z_vs_T.png){#fig-Fig1Zb2 fig-alt="Two plots of the compressibility factor z versus pressure at several temperatures, computed with the van der Waals equation. Left, hydrogen at 200, 500, and 1000 K: all curves rise above 1, and they flatten toward 1 as the temperature increases. Right, carbon dioxide at 350, 500, 1026, and 2000 K: at 350 and 500 K the curves dip below 1 before rising, at the Boyle temperature of 1026 K the curve stays close to 1 over a wide pressure range, and at 2000 K it rises slightly above 1." width="95%"}
 
 
 Both type I and type II non-ideal gases will approach the ideal gas behavior as $T\rightarrow \infty$, because $\frac{1}{RT}\rightarrow 0$ as $T\rightarrow \infty$. For type II gases, there are three interesting situations:
@@ -275,7 +287,7 @@ Both type I and type II non-ideal gases will approach the ideal gas behavior as 
 ### Phase diagram of a non-ideal gas
 
 
-![The Pressure–Volume Diagram of a Non-Ideal Gas.](img/OEP_Figures.014.jpeg){#fig-FigPVni fig-alt="Pressure-volume diagram of a real gas with isotherms from T1 to T5. At high temperatures the isotherms look like ideal hyperbolas. The critical isotherm, Tc, touches the top of a dome-shaped region labeled liquid plus vapor, at the critical point. Below Tc the isotherms are flat inside the dome, the liquid region is to its left, and the vapor region is to its right. An inset shows a piston compressing vapor above a liquid." width="60%"}
+![The Pressure–Volume Diagram of a Non-Ideal Gas, Computed with the van der Waals Equation in Reduced Units ($P/P_c$ and $\overline{V}/\overline{V}_c$). Below the Critical Temperature, the Flat Segments Inside the Green Region Mark the Coexistence of Liquid and Vapor.](img/ch11_vdw_isotherms.png){#fig-FigPVni fig-alt="Pressure-volume diagram of a van der Waals fluid in reduced units, with isotherms from T1 to T5. The critical isotherm Tc, in black, touches the top of a green dome-shaped region labeled liquid plus vapor at the critical point, marked in red. Below Tc, the isotherms are flat inside the dome; the liquid region is to its left, and the vapor region is to its right. Above Tc, the isotherms are smooth, and the region is labeled gas." width="70%"}
 
 
 Let's now turn our attention to the $PV$ phase diagram of a non-ideal gas, reported in @Fig-FigPVni. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas ($T_5$ and $T_4$ in @Fig-FigPVni). Lowering the temperature, we start to see the deviation from ideality getting more prominent ($T_3$ in @Fig-FigPVni) until we reach a particular temperature called the critical temperature, $T_c$. 
@@ -286,11 +298,7 @@ Let's now turn our attention to the $PV$ phase diagram of a non-ideal gas, repor
 
 At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a *critical phenomenon*.
 
-The critical temperature is the coordinate of a unique point, called the **critical point**, that can be visualized in the three-dimensional $T,P,V$ diagram of each gas (@Fig-FigTPVd^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) and distributed under CC-BY-SA license.]).
-
-
-![The three-dimensional diagram.](img/PVT_3D_diagram.png){#fig-FigTPVd fig-alt="Three-dimensional surface of pressure versus specific volume and temperature for a real substance. It shows the solid, liquid, gas, and vapor regions, the coexistence regions solid-liquid, liquid-vapor, and solid-vapor, the triple line, and the critical point at the top of the liquid-vapor region." width="50%"}
-
+The critical temperature is the coordinate of a unique point, called the **critical point**, that can be visualized in the three-dimensional $T,P,V$ diagram of each gas (a surface whose slices at constant temperature are the isotherms of @Fig-FigPVni).
 
 The critical point has coordinates $\{T_c,P_c, \overline{V}_c\}$. These critical coordinates can be determined from the vdW equation at $T_c$, as:
 
@@ -329,13 +337,13 @@ $$
 \mu_{\text{non-ideal}} = \mu^\standardstate + RT \ln \frac{f}{P^\standardstate}.
 $$ {#eq-dcpnig}
 
-Since the chemical potential of a gas $\mu$ is equal to the standard chemical potential $\mu^\standardstate$ when $P=P^\standardstate$, it is easy to use @eq-dcpnig to demonstrate that:
+To complete the definition of the fugacity, we need to decide how it relates to the pressure. At very low pressure, the molecules of any gas are so far apart that their volume and their interactions become negligible, and every gas behaves ideally. In this limit, the chemical potential of the non-ideal gas, @eq-dcpnig, must become equal to that of the ideal gas, @eq-dcpig, which is possible only if the fugacity becomes equal to the pressure:
 
 $$
 \lim_{P\rightarrow 0} \frac{f}{P} = 1,
 $$ {#eq-dcpnigL}
 
-in other words, any non-ideal gas will approach the ideal gas behavior as $P\rightarrow 0$. This condition, in conjunction with the $T\rightarrow \infty$ behavior obtained in the previous section, results in the following statement:
+in other words, the fugacity is defined so that any non-ideal gas approaches the ideal gas behavior as $P\rightarrow 0$. This condition, in conjunction with the $T\rightarrow \infty$ behavior obtained in the previous section, results in the following statement:
 
 > The highest chances for any gas to behave ideally happen at high temperature and low pressure.
 
