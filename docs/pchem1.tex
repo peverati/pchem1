@@ -38,6 +38,8 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
 \newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -45,9 +47,6 @@
 \makeatletter
 \patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
 \makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \newsavebox\pandoc@box
@@ -107,6 +106,10 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
 \hypersetup{
   pdftitle={The Live Textbook of Physical Chemistry 1},
   pdfauthor={Dr.~Roberto Peverati},
@@ -115,7 +118,7 @@
 
 \title{The Live Textbook of Physical Chemistry 1}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{14 October 2026}
+\date{11 November 2026}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -159,6 +162,10 @@
 
 \chapter*{Preface}\label{preface}
 \addcontentsline{toc}{chapter}{Preface}
+
+\begin{quote}
+\textbf{A new edition of this textbook is available at \href{https://peverati.github.io/pchem1/new/}{peverati.github.io/pchem1/new}.} This site keeps the previous edition for reference.
+\end{quote}
 
 \begin{center}\includegraphics[width=0.8\linewidth,alt={front page of the book: pictorial representation of the system, environment, and boundaries.}]{./img/OEP_Figures.000} \end{center}
 
@@ -893,7 +900,7 @@ The same considerations that we made up to this point for expansion processes ho
 
 Calculate the heat absorbed by 3.00 moles of an ideal gas when its temperature increases from \(250.\, \text{K}\) to \(350.\, \text{K}\) at constant volume, knowing that its molar heat capacity at constant volume \(C_V\) is \(12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
 
-\textbf{Solution:} For an isochoric process, the heat absorbed is given by eq. \eqref{eq:Cvint}: \[  Q_V \cong n C_V \Delta T.\]
+\textbf{Solution:} For an isochoric process, the heat absorbed is given by eq. \eqref{eq:Cvint}: \[Q_V \cong n C_V \Delta T.\]
 
 Given:
 
@@ -917,7 +924,7 @@ which, using the appropriate amount of significant digits, gives us the final an
 
 Calculate the heat absorbed by 2.0 moles of an ideal gas when its temperature increases from \(300. \,\text{K}\) to \(500. \,\text{K}\) at constant pressure. The molar heat capacity at constant pressure for this gas is \(29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
 
-\textbf{Solution:} For an isochoric process, the heat absorbed is given by eq. \eqref{eq:Cpint}: \[  Q_P \cong n C_P \Delta T.\]
+\textbf{Solution:} For an isochoric process, the heat absorbed is given by eq. \eqref{eq:Cpint}: \[Q_P \cong n C_P \Delta T.\]
 
 Given:
 
@@ -941,7 +948,7 @@ which, using the appropriate amount of significant digits, gives us the right an
 
 Calculate the maximum amount of work that can be done by an ideal gas during an isothermal expansion at \(300.\, \text{K}\) from an initial volume of \(1.0\,\text{L}\) to a final volume of \(3.0\,\text{L}\). Assume there are 2.0 moles of the gas and the gas constant \(R=8.314\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\).
 
-\textbf{Solution:} For an isothermal process, the maximum amount of work done by the gas is obtained when the transformation happens in an infinite amount of steps. The absolute value of the work is given by eq. \eqref{eq:WintsolvedV2}: \[  \left| W_{\text{max}} \right| = nRT \ln \frac{V_f}{V_i}.\]
+\textbf{Solution:} For an isothermal process, the maximum amount of work done by the gas is obtained when the transformation happens in an infinite amount of steps. The absolute value of the work is given by eq. \eqref{eq:WintsolvedV2}: \[\left| W_{\text{max}} \right| = nRT \ln \frac{V_f}{V_i}.\]
 
 Given:
 
@@ -977,7 +984,7 @@ Finally, we should always considerthe chemistry convention of the sign, Definiti
 
 In a room with a high pressure, a baloon is filled with \(2.0\,\text{L}\) of an ideal gas. The baloon is then brought into a different room at a lower external pressure of \(1.5\,\text{atm}\). The baloon expands quickly in this second room to a final volume of \(5.0\,\text{L}\). Calculate the amount of work that the gas releases in the second room. Assume that the temperature is the same across both rooms. Note: \(1 \,\text{atm}\cdotp\text{L} = 101.3\,\text{J}\).
 
-\textbf{Solution:} This problem present an ideal gas that is expanding in a fast, 1-step process, at constant temperature. For this process, the absolute value of the amount of work done by the gas is given by eq. \eqref{eq:Warea1}: \[  \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i).\]
+\textbf{Solution:} This problem present an ideal gas that is expanding in a fast, 1-step process, at constant temperature. For this process, the absolute value of the amount of work done by the gas is given by eq. \eqref{eq:Warea1}: \[\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i).\]
 
 Given:
 
@@ -1459,7 +1466,7 @@ An ideal gas expands isothermally and reversibly at a temperature of \(300. \, \
 
 \textbf{Solution:} The work done in an isothermal reversible expansion of an ideal gas is given by:
 
-\[ W = -nRT \ln \left(\frac{V_f}{V_i}\right) \]
+\[W = -nRT \ln \left(\frac{V_f}{V_i}\right)\]
 
 Given:
 
@@ -1475,13 +1482,13 @@ Given:
 
 Substituting the values:
 
-\[ W = - (1.0\, \text{mol}) (8.3 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (300. \, \text{K})  \ln \left(\frac{5.0\, \text{L}}{2.0\, \text{L}}\right) \]
+\[W = - (1.0\, \text{mol}) (8.3 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (300. \, \text{K})  \ln \left(\frac{5.0\, \text{L}}{2.0\, \text{L}}\right)\]
 
-\[ W = -2500.\, \text{J} \cdot \ln \left(2.5\right) \]
+\[W = -2500.\, \text{J} \cdot \ln \left(2.5\right)\]
 
-\[ W = -2500.\, \text{J} \cdot 0.92 \]
+\[W = -2500.\, \text{J} \cdot 0.92\]
 
-\[ W \approx -2300 \, \text{J} \]
+\[W \approx -2300 \, \text{J}\]
 
 Now we just need to adjust the significant digits.
 
@@ -1495,7 +1502,7 @@ Calculate the change in internal energy, \(\Delta U\), for \(2.0 \, \text{mol}\)
 
 \textbf{Solution:} For an isochoric process, the change in internal energy is given by:
 
-\[ \Delta U = n C_V \Delta T \]
+\[\Delta U = n C_V \Delta T\]
 
 Given:
 
@@ -1507,9 +1514,9 @@ Given:
 
 Substituting the values:
 
-\[ \Delta U = (2.0\, \text{mol})(12.5\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (100.\,\text{K}) \]
+\[\Delta U = (2.0\, \text{mol})(12.5\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (100.\,\text{K})\]
 
-\[ \Delta U = 2500. \, \text{J} \]
+\[\Delta U = 2500. \, \text{J}\]
 
 Finally, again we need to just adjust the significant digits.
 
@@ -1523,7 +1530,7 @@ Determine the heat required to raise the temperature of \(3.0 \, \text{mol}\) of
 
 \textbf{Solution:} The heat required for an isobaric process is given by:
 
-\[ Q_P = n C_P \Delta T \]
+\[Q_P = n C_P \Delta T\]
 
 Given:
 
@@ -1535,9 +1542,9 @@ Given:
 
 Substituting the values:
 
-\[ Q_P = (3.0 \, \text{mol})(21 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200. \, \text{K}) \]
+\[Q_P = (3.0 \, \text{mol})(21 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200. \, \text{K})\]
 
-\[ Q_P = 12600. \, \text{J} \]
+\[Q_P = 12600. \, \text{J}\]
 
 Adjusting the significant digits we get the final answer.
 
@@ -1551,7 +1558,7 @@ A \(2.00 \, \text{mol}\) sample of an ideal gas is heated isochorically (at cons
 
 \textbf{Solution:} The heat absorbed in an isochoric process is given by:
 
-\[ Q = n C_V \Delta T \]
+\[Q = n C_V \Delta T\]
 
 Given:
 
@@ -1565,19 +1572,19 @@ Given:
 
 Rearranging to solve for \(\Delta T\):
 
-\[ \Delta T = \frac{Q}{n C_V} \]
+\[\Delta T = \frac{Q}{n C_V}\]
 
 Substituting the values:
 
-\[ \Delta T = \frac{5000. \, \text{J}}{(2.00\,\text{mol}) (20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})},\]
+\[\Delta T = \frac{5000. \, \text{J}}{(2.00\,\text{mol}) (20.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1})},\]
 
-\[ \Delta T = \frac{5000.}{40.} = 125. \, \text{K} \]
+\[\Delta T = \frac{5000.}{40.} = 125. \, \text{K}\]
 
 The final temperature is:
 
-\[ T_f = T_i + \Delta T \]
+\[T_f = T_i + \Delta T\]
 
-\[ T_f = 300. \, \text{K} + 125. \, \text{K} = 425. \, \text{K} \]
+\[T_f = 300. \, \text{K} + 125. \, \text{K} = 425. \, \text{K}\]
 
 \textbf{Answer:} The final temperature, \(T_f\), is \(425. \, \text{K}\).
 
@@ -1589,7 +1596,7 @@ Calculate the enthalpy change, \(\Delta H\), when \(4.00 \, \text{mol}\) of an i
 
 \textbf{Solution:} The enthalpy change in an isobaric process is given by:
 
-\[ \Delta H = n C_P \Delta T \]
+\[\Delta H = n C_P \Delta T\]
 
 Given:
 
@@ -1601,9 +1608,9 @@ Given:
 
 Substituting the values:
 
-\[ \Delta H = (4.00\, \text{mol}) (29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (200.\,\text{K}),\]
+\[\Delta H = (4.00\, \text{mol}) (29.0 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}) (200.\,\text{K}),\]
 
-\[ \Delta H = 23200 \, \text{J} \]
+\[\Delta H = 23200 \, \text{J}\]
 
 As usual, the final answer requires just an adjustment for the significant digits.
 
@@ -1820,7 +1827,7 @@ In this chapter, we will consider the heat associated with chemical reactions. S
 
 For example, if we take a simple reaction of the form:
 
-\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]
+\[\mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D},\]
 
 the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:
 
@@ -1850,7 +1857,7 @@ Using the chemistry sign convention, Definition \ref{def:chemistryconv}, reactio
 
 If we expand the sample reaction to account for its stoichiometry:
 
-\[ a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; , \]
+\[a\mathrm{A} + b\mathrm{B} \rightarrow c\mathrm{C} + d\mathrm{D}\; ,\]
 
 where \(a,b,c,d\) are the stoichiometric coefficients of species \(\mathrm{A,B,C,D}\). Eq. \eqref{eq:DHrxn2} can be rewritten as:
 
@@ -2009,15 +2016,11 @@ with \(\Delta C_P = \sum_i \nu_i C_{P,i}\).
 \begin{exercise}
 \protect\hypertarget{exr:DHtdiff298}{}\label{exr:DHtdiff298}Calculate \(\Delta_{\text{rxn}}H\) of the following reaction at 398 K, knowing that \(\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}\) at 298 K is -283.0 kJ/mol, and the following \(C_P\) values: \(\mathrm{CO}_{(g)}\) = 29 J/(mol K), \(\mathrm{O}_{2(g)}\) = 30 J/(mol K), \(\mathrm{CO}_{2(g)}\) = 38 J/(mol K):
 
-\[
-\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
-\]
+\[\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},\]
 
 \emph{Solution:} Using eq. \eqref{eq:DrxnHneq298f} we obtain:
 
-\[
- \Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,
-\]
+\[\Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^{-\kern-6pt{\ominus}\kern-6pt-}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,\]
 
 which, assuming that the heat capacities does not depend on the temperature, becomes:
 
@@ -3883,7 +3886,7 @@ The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821
 Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs energy, \(G\), as:
 
 \begin{equation}
-G = U -TS +PV
+G = U -TS +PV = H-TS
 \label{eq:dgdef1}
 \end{equation}
 
@@ -3891,7 +3894,7 @@ which, taking again the differential and using eq. \eqref{eq:dunv2} becomes:
 
 \begin{equation}
 \begin{aligned}
-dG &= dU -SdT -TdS +VdP +PdV \\
+dG &= dU -SdT -TdS +VdP +PdV = dH -SdT -TdS\\
    &= TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS +VdP +PdV \\
    &= VdP -SdT +\sum_i\mu_i dn_i.
 \end{aligned}
@@ -3979,7 +3982,7 @@ TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0 \\
 \label{eq:dadgder1}
 \end{equation}
 
-we can then simplify the definition of each energy, eqs. \eqref{eq:dadef2} and \eqref{eq:dgdef2}:
+we can then simplify the definition of each energy, eqs. \eqref{eq:dadef2} and \eqref{eq:dgdef2}, assuming constant temperature as:
 
 \begin{equation}
 \begin{aligned}
@@ -4430,9 +4433,7 @@ If we know the behavior of \(G\) as we vary each of the three natural variables 
 
 \section{\texorpdfstring{Temperature Dependence of \(\Delta G\)}{Temperature Dependence of \textbackslash Delta G}}\label{temperature-dependence-of-delta-g}
 
-\[
-\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
-\]
+\[\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S\]
 
 Let's analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to \(-S\) and the entropy is always positive, \(G\) must decrease when \(T\) increases at constant \(P\) and \(\{n_i\}\), and vice versa.
 
@@ -4487,9 +4488,7 @@ giving the integrated Gibbs--Helmholtz equation:
 
 \section{\texorpdfstring{Pressure Dependence of \(\Delta G\)}{Pressure Dependence of \textbackslash Delta G}}\label{pressure-dependence-of-delta-g}
 
-\[
-\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
-\]
+\[\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V\]
 
 We can now turn the attention to the second coefficient that gives how the Gibbs energy changes when the pressure change. To do this, we put the system at constant \(T\) and \(\{n_i\}\), and then we consider infinitesimal variations of \(G\). From eq. \eqref{eq:dgdef2}:
 
@@ -4542,9 +4541,7 @@ The plots in Figure \ref{fig:gdeppfig} show the remarkable difference in the beh
 
 \section{\texorpdfstring{Composition Dependence of \(\Delta G\)}{Composition Dependence of \textbackslash Delta G}}\label{composition-dependence-of-delta-g}
 
-\[
-\left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
-\]
+\[\left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i\]
 
 The third and final coefficient gives the chemical potential as the dependence of \(G\) on the chemical composition at constant \(T\) and \(P\). Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance \(i\), at the beginning of the reaction there will be no moles of it \(n_i=0\), and consequently \(G=0\).\footnote{For reactants, the same situation usually applies but in reverse. More complicated cases where the reaction does not consume all reactants are possible, but insignificant for the following treatment.} We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, \(n\), and the right-hand side between zero and the Gibbs energy of the product, \(G\). The integral will become:
 
@@ -4668,7 +4665,7 @@ Calculate \(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\) at \(298\,\
 
 Using the standard Gibbs energies of formation reported in the tables at the end of the book.
 
-\textbf{Solution:} We can use the equation: \[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i \]
+\textbf{Solution:} We can use the equation: \[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i\]
 
 Substituting the values:
 
@@ -5120,9 +5117,7 @@ For example, it is easy to look at eq. \eqref{eq:kxkcdef3} and determine that \(
 Calculate the mole fraction change for the dissociation of \(\mathrm{Cl}_{2(g)}\) when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}\) to \(P_f=2.5 \;\text{bar}\) at constant \(T=2\,298\;\mathrm{K}\), knowing that \(\Delta_{\mathrm{f}} G^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\) and \(\Delta_{\mathrm{f}} H^{-\kern-6pt{\ominus}\kern-6pt-}_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\), and remembering that both of these values are tabulated at \(T=298\;\text{K}\).
 
 \emph{Solution:} Let's consider the reaction:
-\[
-\mathrm{Cl}_{2(g)} \rightleftarrows 2 \mathrm{Cl}_{(g)}
-\]
+\[\mathrm{Cl}_{2(g)} \rightleftarrows 2 \mathrm{Cl}_{(g)}\]
 
 We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at \(T=2\,298\;\mathrm{K}\) from the data at \(T=298\;\mathrm{K}\). In the second one, we will calculate the change in mole fraction when the pressure is increased from \(P^{-\kern-6pt{\ominus}\kern-6pt-}=1\;\text{bar}\) to \(P_f=2.5 \;\text{bar}\).
 
@@ -6185,7 +6180,7 @@ Adjusting the significant digits gives us the final answer.
 
 Then:
 
-\[f = 0.95 \cdot 50\,\text{bar}=47.5\,\text{bar} \]
+\[f = 0.95 \cdot 50\,\text{bar}=47.5\,\text{bar}\]
 
 \textbf{Answer:} The fugacity of the gas is \(48\,\text{bar}\)
 
@@ -8069,8 +8064,7 @@ The rate of a reaction at \(300\,\text{K}\) is
 
 \textbf{Solution:} We can use the Arrhenius equation in its linearized form, eq. \eqref{eq:Arr2}:
 
-\[\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
-\]
+\[\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),\]
 
 Given:
 
@@ -8254,19 +8248,9 @@ Then:
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{2}
-  \tightlist
-  \item
-  \end{enumerate}
+  3.
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{1}
-  \tightlist
-  \item
-  \end{enumerate}
+  2.
 \item
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
@@ -8274,19 +8258,9 @@ Then:
   \item
   \end{enumerate}
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{-1}
-  \tightlist
-  \item
-  \end{enumerate}
+  0.
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{3}
-  \tightlist
-  \item
-  \end{enumerate}
+  4.
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -8354,33 +8328,13 @@ Then:
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{2}
-  \tightlist
-  \item
-  \end{enumerate}
+  3.
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{1}
-  \tightlist
-  \item
-  \end{enumerate}
+  2.
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{3}
-  \tightlist
-  \item
-  \end{enumerate}
+  4.
 \item
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{4}
-  \tightlist
-  \item
-  \end{enumerate}
+  5.
 \item
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}

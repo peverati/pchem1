@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-10-14" />
+<meta name="date" content="2026-11-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -419,13 +419,13 @@ dA &amp;= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
 <p>The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821—1894), and its natural variables are temperature, volume, and the number of moles.</p>
 <p>Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs energy, <span class="math inline">\(G\)</span>, as:</p>
 <p><span class="math display" id="eq:dgdef1">\[\begin{equation}
-G = U -TS +PV
+G = U -TS +PV = H-TS
 \tag{8.7}
 \end{equation}\]</span></p>
 <p>which, taking again the differential and using eq. <a href="Potentials.html#eq:dunv2">(8.2)</a> becomes:</p>
 <p><span class="math display" id="eq:dgdef2">\[\begin{equation}
 \begin{aligned}
-dG &amp;= dU -SdT -TdS +VdP +PdV \\
+dG &amp;= dU -SdT -TdS +VdP +PdV = dH -SdT -TdS\\
    &amp;= TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS +VdP +PdV \\
    &amp;= VdP -SdT +\sum_i\mu_i dn_i.
 \end{aligned}
@@ -433,7 +433,7 @@ dG &amp;= dU -SdT -TdS +VdP +PdV \\
 \end{equation}\]</span></p>
 <p>The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles.</p>
 <p>A summary of the four thermodynamic potentials is given in the following table.</p>
-<table style="width:100%;">
+<table style="width:99%;">
 <colgroup>
 <col width="28%" />
 <col width="12%" />
@@ -511,7 +511,7 @@ TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
 \end{aligned}
 \tag{8.12}
 \end{equation}\]</span></p>
-<p>we can then simplify the definition of each energy, eqs. <a href="Potentials.html#eq:dadef2">(8.6)</a> and <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
+<p>we can then simplify the definition of each energy, eqs. <a href="Potentials.html#eq:dadef2">(8.6)</a> and <a href="Potentials.html#eq:dgdef2">(8.8)</a>, assuming constant temperature as:</p>
 <p><span class="math display" id="eq:dadgder3">\[\begin{equation}
 \begin{aligned}
 \text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\

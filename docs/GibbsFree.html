@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-10-14" />
+<meta name="date" content="2026-11-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -460,9 +460,7 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 </div>
 <div id="temperature-dependence-of-delta-g" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#temperature-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math display">\[
-\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
-\]</span></p>
+<p><span class="math display">\[\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S\]</span></p>
 <p>Let’s analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to <span class="math inline">\(-S\)</span> and the entropy is always positive, <span class="math inline">\(G\)</span> must decrease when <span class="math inline">\(T\)</span> increases at constant <span class="math inline">\(P\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and vice versa.</p>
 <p>If we replace this coefficient for <span class="math inline">\(-S\)</span> in the Gibbs equation, eq. <a href="GibbsFree.html#eq:gibbseq">(9.3)</a>, we obtain:</p>
 <p><span class="math display" id="eq:dgconsttt">\[\begin{equation}
@@ -504,9 +502,7 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 </div>
 <div id="pressure-dependence-of-delta-g" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Pressure Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#pressure-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math display">\[
-\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
-\]</span></p>
+<p><span class="math display">\[\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V\]</span></p>
 <p>We can now turn the attention to the second coefficient that gives how the Gibbs energy changes when the pressure change. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From eq. <a href="Potentials.html#eq:dgdef2">(8.8)</a>:</p>
 <p><span class="math display" id="eq:dgconsttp">\[\begin{equation}
 dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
@@ -545,9 +541,7 @@ Figure 9.1: Dependence of the Gibbs Energy of Formation of Liquid and Gaseous Et
 </div>
 <div id="composition-dependence-of-delta-g" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Composition Dependence of <span class="math inline">\(\Delta G\)</span><a href="GibbsFree.html#composition-dependence-of-delta-g" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math display">\[
-\left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i
-\]</span></p>
+<p><span class="math display">\[\left(\frac{\partial G}{\partial n_i} \right)_{T,P}=\mu_i\]</span></p>
 <p>The third and final coefficient gives the chemical potential as the dependence of <span class="math inline">\(G\)</span> on the chemical composition at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. Similarly to the previous cases, we can take the definition of the coefficient and integrate it directly between the initial and final stages of a reaction. If we consider a reaction product, pure substance <span class="math inline">\(i\)</span>, at the beginning of the reaction there will be no moles of it <span class="math inline">\(n_i=0\)</span>, and consequently <span class="math inline">\(G=0\)</span>.<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a> We can then integrate the left-hand side between zero and the number of moles of product at the end of the reaction, <span class="math inline">\(n\)</span>, and the right-hand side between zero and the Gibbs energy of the product, <span class="math inline">\(G\)</span>. The integral will become:</p>
 <p><span class="math display" id="eq:dgconstn">\[\begin{equation}
 \int_0^G d G = \int_0^n \mu^* dn,
@@ -632,7 +626,7 @@ Given:</p>
 <p>Calculate <span class="math inline">\(\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}}\)</span> at <span class="math inline">\(298\,\text{K}\)</span> for the reaction:</p>
 <p><span class="math display">\[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}\]</span></p>
 <p>Using the standard Gibbs energies of formation reported in the tables at the end of the book.</p>
-<p><strong>Solution:</strong> We can use the equation: <span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i \]</span></p>
+<p><strong>Solution:</strong> We can use the equation: <span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = \sum \nu_i \Delta_f G^{{-\kern-6pt{\ominus}\kern-6pt-}}_i\]</span></p>
 <p>Substituting the values:</p>
 <p><span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = [1(-394.4) + 2(-237.1)] - [1(-50.7) + 2(0)]\]</span></p>
 <p><span class="math display">\[\Delta_{\text{rxn}}G^{{-\kern-6pt{\ominus}\kern-6pt-}} = -817.9\,\text{kJ/mol}\]</span></p>
