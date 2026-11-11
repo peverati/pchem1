@@ -38,7 +38,7 @@ This opens the book in the browser and reloads it every time you save. Stop it w
 quarto render
 ```
 
-Everything goes into `docs/` (the website and `docs/pchem1.pdf`). Check for warnings at the end of the output.
+Everything goes into `docs/new/` (the website and `docs/new/pchem1.pdf`). Check for warnings at the end of the output. Never use `quarto render --to html` or `--to pdf` alone: they empty `docs/new/` first, so the other format disappears.
 
 ### 4. Publish
 
@@ -55,6 +55,11 @@ git push
 ```
 
 GitHub Pages serves the `docs/` folder of the `master` branch; the site updates a minute or two after the push.
+
+- **New edition (this Quarto book):** `docs/new/` → <https://peverati.github.io/pchem1/new/>
+- **Previous edition (bookdown, frozen):** the rest of `docs/` → <https://peverati.github.io/pchem1/>. Its sources are on the `bookdown` branch; don't edit those files on `master`.
+
+To make the new edition the main site later: set `output-dir: docs` in `_quarto.yml`, delete the old files in `docs/`, and render. The old page names (e.g. `GibbsFree.html`) then redirect to the new pages.
 
 ---
 

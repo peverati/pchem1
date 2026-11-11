@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: docs
+  output-dir: docs/new   # new edition at /pchem1/new/; docs/ itself keeps the previous (bookdown) edition
   render:
     - "*.qmd"
   post-render: scripts/sidebar_sections.py
