@@ -5,3 +5,11 @@ _publish.R
 _book
 _bookdown_files
 rsconnect
+# Quarto
+/.quarto/
+/_book-typst/
+/_bookdown-archive/*_files/
+*.typ
+/pchem1.tex
+
+**/*.quarto_ipynb

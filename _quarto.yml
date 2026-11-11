@@ -1,0 +1,107 @@
+project:
+  type: book
+  output-dir: docs/new   # new edition at /pchem1/new/; docs/ itself keeps the previous (bookdown) edition
+  render:
+    - "*.qmd"
+  post-render: scripts/sidebar_sections.py
+  resources:
+    - .nojekyll   # GitHub Pages: serve site_libs/ as is
+    - img/logo-light.png
+    - img/logo-dark.png
+
+lang: en
+language:
+  crossref-ch-prefix: chapter
+  crossref-sec-prefix: section
+
+book:
+  title: "The Live Textbook of Physical Chemistry 1"
+  output-file: pchem1
+  author: "Roberto Peverati"
+  description: "Textbook for the P-Chem 1 class at Florida Tech"
+  date: today
+  date-format: "D MMMM YYYY"
+  repo-url: https://github.com/peverati/pchem1
+  repo-branch: master
+  repo-actions: [edit, issue]
+  downloads: [pdf]
+  search:
+    location: sidebar
+    type: textbox
+  navbar:
+    logo:
+      light:
+        path: img/logo-light.png
+        alt: "Peverati research group logo"
+      dark:
+        path: img/logo-dark.png
+        alt: "Peverati research group logo"
+    logo-href: https://peverati.github.io
+    title: false
+    left:
+      - text: "The Live Textbook of Physical Chemistry 1"
+        href: index.qmd
+  page-footer:
+    center: "Text and figures: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), except third-party images as credited · Scripts: [MIT](https://github.com/peverati/pchem1/blob/master/scripts/LICENSE)"
+  chapters:
+    - index.qmd
+    - 01_Basis.qmd
+    - 02_ZerothLaw.qmd
+    - 03_FirstLaw.qmd
+    - 04_Thermochemistry.qmd
+    - 05_ThermodynamicCycles.qmd
+    - 06_SecondLaw.qmd
+    - 07_ThirdLaw.qmd
+    - 08_Potentials.qmd
+    - 09_Gibbs.qmd
+    - 10_ChemicalEquilibrium.qmd
+    - 11_NonIdealGases.qmd
+    - 12_PhaseEquilibrium.qmd
+    - 13_MCPhaseDiagrams.qmd
+    - 15_Kinetics.qmd
+  appendices:
+    - A1_Appendix.qmd
+
+crossref:
+  eq-prefix: eq.
+  fig-prefix: figure
+  tbl-prefix: table
+  sec-prefix: section
+  def-prefix: definition
+  exr-prefix: exercise
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: quarto.css
+    html-math-method: mathjax
+    include-in-header:
+      - mathjax-macros.html
+      - punctuation.html
+    include-after-body:
+      - sidebar-toc.html
+    number-depth: 3
+    page-layout: full   # no right-hand column: the content uses the space
+    fig-align: center
+  pdf:
+    documentclass: scrbook
+    classoption: [oneside]
+    geometry:
+      - paperwidth=6in
+      - paperheight=9in
+      - margin=0.75in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{cancel}
+        \usepackage{booktabs}
+        \usepackage{pdfpages}
+        \usepackage[version=4]{mhchem}
+        \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+        \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
+        \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+        \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+        \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+    fig-pos: "htbp"

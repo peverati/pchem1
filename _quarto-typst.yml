@@ -1,0 +1,8 @@
+# Alternative PDF built with Typst (faster than LaTeX).
+# Usage:  quarto render --profile typst --to typst
+# Output goes to _book-typst/ so it does not collide with the LaTeX PDF in docs/.
+project:
+  output-dir: _book-typst
+format:
+  typst:
+    papersize: us-letter

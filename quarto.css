@@ -1,0 +1,61 @@
+/* Captions with WCAG AA contrast */
+.figure-caption, figcaption, .table-caption { color: #595959; }
+/* Wide display equations scroll instead of being cut off */
+span.math.display { display: block; max-width: 100%; }
+mjx-container[display="true"] { display: block; max-width: 100%; min-width: 0 !important; overflow-x: auto; overflow-y: hidden; }
+/* Dark mode: keep captions readable */
+body.quarto-dark .figure-caption, body.quarto-dark figcaption, body.quarto-dark .table-caption { color: #b8b8b8; }
+
+/* let the breadcrumb shrink in the narrow top bar */
+.quarto-secondary-nav .container-fluid > nav, .quarto-secondary-nav .container-fluid > a.flex-grow-1 { min-width: 0; overflow: hidden; }
+/* Narrow screens: keep the sidebar (and the chapter arrows) inside the screen, wrap long titles */
+@media (max-width: 991.98px) {
+  #quarto-sidebar { max-width: 100vw; overflow-x: hidden; }
+  #quarto-sidebar .sidebar-item-container > a, #quarto-sidebar .sidebar-title, .sidebar-chapter-toc a { white-space: normal; }
+}
+/* The right-hand table of contents is hidden: the left sidebar lists each chapter's sections.
+   (It is still generated, because scripts/sidebar_sections.py reads it.) */
+#quarto-margin-sidebar nav#TOC { display: none; }
+/* Wide screens: with no right-hand column, let the text use the freed space (capped for readability) */
+@media (min-width: 992px) {
+  /* Sidebar anchored to the left edge (no centered empty margin), text right after it */
+  #quarto-content.page-layout-full {
+    grid-template-columns:
+      [screen-start screen-start-inset page-start] 18rem
+      [page-start-inset body-start-outset body-start] 2.5rem
+      [body-content-start] minmax(0, 1fr)
+      [body-content-end] 2.5rem
+      [body-end body-end-outset page-end-inset page-end screen-end-inset screen-end];
+  }
+  #quarto-content.page-layout-full main.content { grid-column: body-content-start / body-content-end; max-width: 1050px; }
+  #quarto-sidebar { padding-left: 1rem !important; }
+}
+
+/* Top bar: same background as the page (so each logo version keeps its intended contrast), larger logo */
+body.quarto-light #quarto-header .navbar { background-color: #ffffff !important; border-bottom: 1px solid #dee2e6; }
+body.quarto-dark #quarto-header .navbar { background-color: #222222 !important; border-bottom: 1px solid #444444; }
+body.quarto-light #quarto-header .navbar, body.quarto-light #quarto-header .navbar .nav-link, body.quarto-light #quarto-header .navbar .menu-text,
+body.quarto-light #quarto-header .navbar .quarto-navigation-tool, body.quarto-light #quarto-header .navbar .navbar-toggler { color: #212529 !important; }
+body.quarto-dark #quarto-header .navbar, body.quarto-dark #quarto-header .navbar .nav-link, body.quarto-dark #quarto-header .navbar .menu-text,
+body.quarto-dark #quarto-header .navbar .quarto-navigation-tool, body.quarto-dark #quarto-header .navbar .navbar-toggler { color: #e8e8e8 !important; }
+#quarto-header .navbar .nav-link .menu-text { font-size: 1.2rem; font-weight: 500; }
+#quarto-header .navbar-logo { max-height: 46px; height: 46px; width: auto; }
+/* Logo at the far right of the top bar (after the GitHub, PDF, and dark-mode buttons) */
+#quarto-header .navbar-container { display: flex; flex-wrap: nowrap; }
+#quarto-header .navbar-brand-container { order: 999; margin-left: 0.75rem !important; margin-right: 0 !important; }
+#quarto-header .navbar-collapse { order: 1; }
+#quarto-header .navbar-toggler { order: 0; }
+@media (max-width: 991.98px) {
+  #quarto-header .navbar-brand-container { margin-left: auto !important; }
+}
+/* P-Chem 1: wide tables (e.g., the thermodynamic data in the appendix) scroll horizontally on narrow screens */
+@media (max-width: 767.98px) {
+  main table { display: block; max-width: 100%; overflow-x: auto; }
+}
+/* Wide screens: the top bar stays visible while scrolling (on phones it still hides, to leave room for the text) */
+@media (min-width: 992px) {
+  #quarto-header.headroom--unpinned { transform: none !important; top: 0 !important; }
+  /* Quarto moves the sidebar up when it would hide the bar: keep it just below the bar instead
+     (--header-height is set by the script at the end of sidebar-toc.html) */
+  #quarto-sidebar.sidebar-unpinned { top: var(--header-height, 75px) !important; max-height: calc(100vh - var(--header-height, 75px)) !important; }
+}

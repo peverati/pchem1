@@ -1,0 +1,5629 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+
+<title>Appendix A — Appendix – The Live Textbook of Physical Chemistry 1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./15_Kinetics.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- MathJax macros used throughout the book (the PDF defines the same macro in _quarto.yml). -->
+<script type="text/javascript">
+window.MathJax = window.MathJax || {};
+window.MathJax.tex = window.MathJax.tex || {};
+window.MathJax.tex.macros = Object.assign(window.MathJax.tex.macros || {}, {
+  standardstate: "{-\\kern-6pt{\\ominus}\\kern-6pt-}"
+});
+</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem1" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem1.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./A1_Appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="./A1_Appendix.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Basis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_FirstLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Thermochemistry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_ThermodynamicCycles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_SecondLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_ThirdLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Potentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Gibbs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gibbs Energy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_ChemicalEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_NonIdealGases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_PhaseEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_MCPhaseDiagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#thermodynamic-data-of-inorganic-substances-at-298-k" id="toc-thermodynamic-data-of-inorganic-substances-at-298-k" class="nav-link active" data-scroll-target="#thermodynamic-data-of-inorganic-substances-at-298-k"><span class="header-section-number">A.1</span> Thermodynamic Data of Inorganic Substances at 298 K</a></li>
+  <li><a href="#thermodynamic-data-of-organic-substances-at-298-k" id="toc-thermodynamic-data-of-organic-substances-at-298-k" class="nav-link" data-scroll-target="#thermodynamic-data-of-organic-substances-at-298-k"><span class="header-section-number">A.2</span> Thermodynamic Data of Organic Substances at 298 K</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/A1_Appendix.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./A1_Appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="./A1_Appendix.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-appendix" class="quarto-section-identifier">Appendix A — Appendix</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="thermodynamic-data-of-inorganic-substances-at-298-k" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="thermodynamic-data-of-inorganic-substances-at-298-k"><span class="header-section-number">A.1</span> Thermodynamic Data of Inorganic Substances at 298 K</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Substance:</th>
+<th><span class="math inline">\(\Delta_{\text{f}} H^\standardstate\)</span> <span class="math inline">\(\scriptstyle{\text{[kJ/mol]}}\)</span></th>
+<th><span class="math inline">\(\Delta_{\text{f}} G^\standardstate\)</span> <span class="math inline">\(\scriptstyle{\text{[kJ/mol]}}\)</span></th>
+<th><span class="math inline">\(S^\standardstate\)</span> <span class="math inline">\(\scriptstyle{\text{[J/(mol K)]}}\)</span></th>
+<th><span class="math inline">\(C_P\)</span> <span class="math inline">\(\scriptstyle{\text{[J/(mol K)]}}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ag(g)</td>
+<td>284.9</td>
+<td>246</td>
+<td>173</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Ag(s)</td>
+<td>0</td>
+<td>0</td>
+<td>42.6</td>
+<td>25.4</td>
+</tr>
+<tr class="odd">
+<td>Ag<sup>+</sup>(aq)</td>
+<td>105.8</td>
+<td>77.1</td>
+<td>73.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AgCN(s)</td>
+<td>146</td>
+<td>156.9</td>
+<td>107.2</td>
+<td>66.7</td>
+</tr>
+<tr class="odd">
+<td>Ag<sub>2</sub>CO<sub>3</sub>(s)</td>
+<td>–505.8</td>
+<td>–436.8</td>
+<td>167.4</td>
+<td>112.3</td>
+</tr>
+<tr class="even">
+<td>AgNO<sub>3</sub>(s)</td>
+<td>–124.4</td>
+<td>–33.4</td>
+<td>140.9</td>
+<td>93.1</td>
+</tr>
+<tr class="odd">
+<td>Ag<sub>2</sub>O(s)</td>
+<td>–31.1</td>
+<td>–11.2</td>
+<td>121.3</td>
+<td>65.9</td>
+</tr>
+<tr class="even">
+<td>Ag<sub>2</sub>S(s)</td>
+<td>–32.6</td>
+<td>–40.7</td>
+<td>144</td>
+<td>76.5</td>
+</tr>
+<tr class="odd">
+<td>AgBr(s)</td>
+<td>–100.4</td>
+<td>–96.9</td>
+<td>107.1</td>
+<td>52.4</td>
+</tr>
+<tr class="even">
+<td>AgCl(s)</td>
+<td>–127.0</td>
+<td>–109.8</td>
+<td>96.3</td>
+<td>50.8</td>
+</tr>
+<tr class="odd">
+<td>AgF(s)</td>
+<td>–204.6</td>
+<td>–187</td>
+<td>84</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AgI(s)</td>
+<td>–61.8</td>
+<td>–66.2</td>
+<td>115.5</td>
+<td>56.8</td>
+</tr>
+<tr class="odd">
+<td>Al(g)</td>
+<td>330</td>
+<td>289.4</td>
+<td>164.6</td>
+<td>21.4</td>
+</tr>
+<tr class="even">
+<td>Al(s)</td>
+<td>0</td>
+<td>0</td>
+<td>28.3</td>
+<td>24.2</td>
+</tr>
+<tr class="odd">
+<td>Al<sub>2</sub>O<sub>3</sub>(s)</td>
+<td>–1675.7</td>
+<td>–1582.3</td>
+<td>50.9</td>
+<td>79.0</td>
+</tr>
+<tr class="even">
+<td>AlF<sub>3</sub>(s)</td>
+<td>–1510.4</td>
+<td>–1431.1</td>
+<td>66.5</td>
+<td>75.1</td>
+</tr>
+<tr class="odd">
+<td>AlI<sub>3</sub>(s)</td>
+<td>–302.9</td>
+<td></td>
+<td>195.9</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AlBr<sub>3</sub>(s)</td>
+<td>–527.2</td>
+<td></td>
+<td>180.2</td>
+<td>100.6</td>
+</tr>
+<tr class="odd">
+<td>AlCl<sub>3</sub>(s)</td>
+<td>–704.5</td>
+<td>–628.11</td>
+<td>112.3</td>
+<td>91.1</td>
+</tr>
+<tr class="even">
+<td>Al(OH)<sub>3</sub>(s)</td>
+<td>–1277</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Al(OH)<sub>4</sub><sup>-</sup>(aq)</td>
+<td>–1490</td>
+<td>–1297</td>
+<td>117</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AlPO<sub>4</sub>(s)</td>
+<td>–1733.8</td>
+<td>–1617.9</td>
+<td>90.8</td>
+<td>93.2</td>
+</tr>
+<tr class="odd">
+<td>Ar(g)</td>
+<td>0</td>
+<td></td>
+<td>154.9</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>B(s)</td>
+<td>0</td>
+<td>0</td>
+<td>5.9</td>
+<td>11.1</td>
+</tr>
+<tr class="odd">
+<td>B(g)</td>
+<td>565</td>
+<td>521.0</td>
+<td>153.4</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>BH(g)</td>
+<td>442.7</td>
+<td>412.7</td>
+<td>171.8</td>
+<td>29.2</td>
+</tr>
+<tr class="odd">
+<td>BH<sub>3</sub>(g)</td>
+<td>89.2</td>
+<td>93.3</td>
+<td>188.2</td>
+<td>36.0</td>
+</tr>
+<tr class="even">
+<td>B<sub>2</sub>S<sub>3</sub>(s)</td>
+<td>–240.6</td>
+<td></td>
+<td>100.0</td>
+<td>111.7</td>
+</tr>
+<tr class="odd">
+<td>Ba(g)</td>
+<td>180</td>
+<td>146</td>
+<td>170.2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ba(s)</td>
+<td>0</td>
+<td>0</td>
+<td>62.5</td>
+<td>28.1</td>
+</tr>
+<tr class="odd">
+<td>BaCO<sub>3</sub>(s)</td>
+<td>–1213.0</td>
+<td>–1134.4</td>
+<td>112.1</td>
+<td>86.0</td>
+</tr>
+<tr class="even">
+<td>BaH<sub>2</sub>(s)</td>
+<td>–177</td>
+<td>–138.2</td>
+<td>63.0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BaBr<sub>2</sub>(s)</td>
+<td>–757.3</td>
+<td>–736.8</td>
+<td>146.0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>BaCl<sub>2</sub>(s)</td>
+<td>–855</td>
+<td>–806.7</td>
+<td>123.7</td>
+<td>75.1</td>
+</tr>
+<tr class="odd">
+<td>BaF<sub>2</sub>(s)</td>
+<td>–1207.1</td>
+<td>–1156.8</td>
+<td>96.4</td>
+<td>71.2</td>
+</tr>
+<tr class="even">
+<td>BaI<sub>2</sub>(s)</td>
+<td>–602.1</td>
+<td>–597</td>
+<td>167.0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BaO(s)</td>
+<td>–548.0</td>
+<td>–520.3</td>
+<td>72.1</td>
+<td>47.3</td>
+</tr>
+<tr class="even">
+<td>BaSO<sub>4</sub>(s)</td>
+<td>–1473.2</td>
+<td>–1362.2</td>
+<td>132.2</td>
+<td>101.8</td>
+</tr>
+<tr class="odd">
+<td>Be(g)</td>
+<td>324</td>
+<td>286.6</td>
+<td>136.3</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Be(s)</td>
+<td>0</td>
+<td>0</td>
+<td>9.5</td>
+<td>13.4</td>
+</tr>
+<tr class="odd">
+<td>BeBr<sub>2</sub>(s)</td>
+<td>–353.5</td>
+<td></td>
+<td>108</td>
+<td>69.4</td>
+</tr>
+<tr class="even">
+<td>BeCl<sub>2</sub>(s)</td>
+<td>–490.4</td>
+<td>–445.6</td>
+<td>75.8</td>
+<td>62.4</td>
+</tr>
+<tr class="odd">
+<td>BeF<sub>2</sub>(s)</td>
+<td>–1026.8</td>
+<td>–979.4</td>
+<td>53.4</td>
+<td>51.8</td>
+</tr>
+<tr class="even">
+<td>BeI<sub>2</sub>(s)</td>
+<td>–192.5</td>
+<td></td>
+<td>121</td>
+<td>71.1</td>
+</tr>
+<tr class="odd">
+<td>BeO(s)</td>
+<td>–609.4</td>
+<td>–580.1</td>
+<td>13.8</td>
+<td>25.6</td>
+</tr>
+<tr class="even">
+<td>Be(OH)<sub>2</sub>(s)</td>
+<td>–902.5</td>
+<td>–815.0</td>
+<td>45.5</td>
+<td>62.1</td>
+</tr>
+<tr class="odd">
+<td>BeSO<sub>4</sub>(s)</td>
+<td>–1205.2</td>
+<td>–1093.8</td>
+<td>77.9</td>
+<td>85.7</td>
+</tr>
+<tr class="even">
+<td>Bi(g)</td>
+<td>207.1</td>
+<td>168.2</td>
+<td>187</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Bi(s)</td>
+<td>0</td>
+<td>0</td>
+<td>56.7</td>
+<td>25.5</td>
+</tr>
+<tr class="even">
+<td>Bi<sub>2</sub>O<sub>3</sub>(s)</td>
+<td>–573.9</td>
+<td>–493.7</td>
+<td>151.5</td>
+<td>113.5</td>
+</tr>
+<tr class="odd">
+<td>BiCl<sub>3</sub>(s)</td>
+<td>–379.1</td>
+<td>–315.0</td>
+<td>177.0</td>
+<td>105.0</td>
+</tr>
+<tr class="even">
+<td>Br<sup>–</sup>(aq)</td>
+<td>–121.4</td>
+<td>–104.0</td>
+<td>82.6</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Br(g)</td>
+<td>111.9</td>
+<td>82.4</td>
+<td>175</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Br<sub>2</sub>(g)</td>
+<td>30.9</td>
+<td>3.1</td>
+<td>245.5</td>
+<td>36.0</td>
+</tr>
+<tr class="odd">
+<td>Br<sub>2</sub>(l)</td>
+<td>0</td>
+<td>0</td>
+<td>152.2</td>
+<td>75.7</td>
+</tr>
+<tr class="even">
+<td>BrCl(g)</td>
+<td>14.6</td>
+<td>–1</td>
+<td>240.1</td>
+<td>35.0</td>
+</tr>
+<tr class="odd">
+<td>BrF(g)</td>
+<td>–93.8</td>
+<td>–109.2</td>
+<td>229</td>
+<td>33.0</td>
+</tr>
+<tr class="even">
+<td>BrF<sub>3</sub>(g)</td>
+<td>–1136</td>
+<td>1119.4</td>
+<td>254.4</td>
+<td>66.6</td>
+</tr>
+<tr class="odd">
+<td>C(g)</td>
+<td>716.7</td>
+<td>671.3</td>
+<td>158.1</td>
+<td>0.8</td>
+</tr>
+<tr class="even">
+<td>C(s,diamond)</td>
+<td>1.9</td>
+<td>2.9</td>
+<td>2.4</td>
+<td>6.1</td>
+</tr>
+<tr class="odd">
+<td>C(s,graphite)</td>
+<td>0</td>
+<td>0</td>
+<td>5.7</td>
+<td>8.5</td>
+</tr>
+<tr class="even">
+<td>CBr<sub>4</sub>(g)</td>
+<td>83.9</td>
+<td>67</td>
+<td>358.1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CBr<sub>4</sub>(s)</td>
+<td>29.4</td>
+<td>47.7</td>
+<td>212.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CCl<sub>2</sub>F<sub>2</sub>(g)</td>
+<td>–477.4</td>
+<td>–439.4</td>
+<td>300.8</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CCl<sub>2</sub>O(g)</td>
+<td>–219.1</td>
+<td>–204.9</td>
+<td>283.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CCl<sub>4</sub>(g)</td>
+<td>–95.7</td>
+<td>–53.6</td>
+<td>309.9</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CCl<sub>4</sub>(l)</td>
+<td>–128.2</td>
+<td>–62.6</td>
+<td>216.2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CF<sub>4</sub>(g)</td>
+<td>–933.6</td>
+<td>–888.3</td>
+<td>261.6</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CS<sub>2</sub>(g)</td>
+<td>116.7</td>
+<td>67.1</td>
+<td>237.8</td>
+<td>45.4</td>
+</tr>
+<tr class="even">
+<td>CS<sub>2</sub>(l)</td>
+<td>89</td>
+<td>64.6</td>
+<td>151.3</td>
+<td>76.4</td>
+</tr>
+<tr class="odd">
+<td>CO(g)</td>
+<td>–110.5</td>
+<td>–137.2</td>
+<td>197.7</td>
+<td>29.1</td>
+</tr>
+<tr class="even">
+<td>CO<sub>2</sub>(g)</td>
+<td>–393.5</td>
+<td>–394.4</td>
+<td>213.8</td>
+<td>37.1</td>
+</tr>
+<tr class="odd">
+<td>Ca(g)</td>
+<td>177.8</td>
+<td>144</td>
+<td>154.9</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Ca(s)</td>
+<td>0</td>
+<td>0</td>
+<td>41.6</td>
+<td>25.9</td>
+</tr>
+<tr class="odd">
+<td>Ca(OH)<sub>2</sub>(s)</td>
+<td>–985.2</td>
+<td>–897.5</td>
+<td>83.4</td>
+<td>87.5</td>
+</tr>
+<tr class="even">
+<td>CaBr<sub>2</sub>(s)</td>
+<td>–682.8</td>
+<td>–663.6</td>
+<td>130</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CaCl<sub>2</sub>(s)</td>
+<td>–795.4</td>
+<td>–748.8</td>
+<td>108.4</td>
+<td>72.9</td>
+</tr>
+<tr class="even">
+<td>CaCN(s)</td>
+<td>–184.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CaCO<sub>3</sub>(s,arag.)</td>
+<td>–1207.8</td>
+<td>–1128.2</td>
+<td>88</td>
+<td>82.3</td>
+</tr>
+<tr class="even">
+<td>CaCO<sub>3</sub>(s,calc.)</td>
+<td>–1207.6</td>
+<td>–1129.1</td>
+<td>91.7</td>
+<td>83.5</td>
+</tr>
+<tr class="odd">
+<td>CaF<sub>2</sub>(s)</td>
+<td>–1228.0</td>
+<td>–1175.6</td>
+<td>68.5</td>
+<td>67.0</td>
+</tr>
+<tr class="even">
+<td>CaH<sub>2</sub>(s)</td>
+<td>–181.5</td>
+<td>–142.5</td>
+<td>41.4</td>
+<td>41.0</td>
+</tr>
+<tr class="odd">
+<td>CaI<sub>2</sub>(s)</td>
+<td>–533.5</td>
+<td>–528.9</td>
+<td>142</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CaO(s)</td>
+<td>–634.9</td>
+<td>–603.3</td>
+<td>38.1</td>
+<td>42.0</td>
+</tr>
+<tr class="odd">
+<td>CaSO<sub>4</sub>(s)</td>
+<td>–1434.5</td>
+<td>–1322.0</td>
+<td>106.5</td>
+<td>99.7</td>
+</tr>
+<tr class="even">
+<td>Cd(g)</td>
+<td>111.8</td>
+<td></td>
+<td>167.7</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Cd(s)</td>
+<td>0</td>
+<td>0</td>
+<td>51.8</td>
+<td>26.0</td>
+</tr>
+<tr class="even">
+<td>CdBr<sub>2</sub>(s)</td>
+<td>–316.2</td>
+<td>–296.3</td>
+<td>137.2</td>
+<td>76.7</td>
+</tr>
+<tr class="odd">
+<td>CdCl<sub>2</sub>(s)</td>
+<td>–391.5</td>
+<td>–343.9</td>
+<td>115.3</td>
+<td>74.7</td>
+</tr>
+<tr class="even">
+<td>CdCO<sub>3</sub>(s)</td>
+<td>–750.6</td>
+<td>–669.4</td>
+<td>92.5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CdF<sub>2</sub>(s)</td>
+<td>–700.4</td>
+<td>–647.7</td>
+<td>77.4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CdS(s)</td>
+<td>–161.9</td>
+<td>–156.5</td>
+<td>64.9</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CdSO<sub>4</sub>(s)</td>
+<td>–933.3</td>
+<td>–822.7</td>
+<td>123.0</td>
+<td>99.6</td>
+</tr>
+<tr class="even">
+<td>Cl<sup>–</sup>(aq)</td>
+<td>–167.1</td>
+<td>–131.2</td>
+<td>56.6</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Cl(g)</td>
+<td>121.3</td>
+<td>105.3</td>
+<td>165.2</td>
+<td>21.8</td>
+</tr>
+<tr class="even">
+<td>Cl<sub>2</sub>(g)</td>
+<td>0</td>
+<td>0</td>
+<td>223.1</td>
+<td>33.9</td>
+</tr>
+<tr class="odd">
+<td>ClF(g)</td>
+<td>–50.3</td>
+<td>–51.8</td>
+<td>217.9</td>
+<td>32.1</td>
+</tr>
+<tr class="even">
+<td>ClF<sub>3</sub>(g)</td>
+<td>–163.2</td>
+<td>–123.0</td>
+<td>281.6</td>
+<td>63.9</td>
+</tr>
+<tr class="odd">
+<td>ClO<sub>2</sub>(g)</td>
+<td>89.1</td>
+<td>105</td>
+<td>263.7</td>
+<td>46.0</td>
+</tr>
+<tr class="even">
+<td>Cl<sub>2</sub>O(g)</td>
+<td>80.3</td>
+<td>97.9</td>
+<td>266.2</td>
+<td>45.4</td>
+</tr>
+<tr class="odd">
+<td>Co(g)</td>
+<td>424.7</td>
+<td>380.3</td>
+<td>179.5</td>
+<td>23.0</td>
+</tr>
+<tr class="even">
+<td>Co(s)</td>
+<td>0</td>
+<td>0</td>
+<td>30</td>
+<td>24.8</td>
+</tr>
+<tr class="odd">
+<td>CoCl<sub>2</sub>(s)</td>
+<td>–312.5</td>
+<td>–269.8</td>
+<td>109.2</td>
+<td>78.5</td>
+</tr>
+<tr class="even">
+<td>Cr(g)</td>
+<td>396.6</td>
+<td>351.8</td>
+<td>174.5</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Cr(s)</td>
+<td>0</td>
+<td>0</td>
+<td>23.8</td>
+<td>23.4</td>
+</tr>
+<tr class="even">
+<td>Cr<sub>2</sub>O<sub>3</sub>(s)</td>
+<td>–1139.7</td>
+<td>–1058.1</td>
+<td>81.2</td>
+<td>118.7</td>
+</tr>
+<tr class="odd">
+<td>CrCl<sub>2</sub>(s)</td>
+<td>–395.4</td>
+<td>–356</td>
+<td>115.3</td>
+<td>71.2</td>
+</tr>
+<tr class="even">
+<td>CrCl<sub>3</sub>(s)</td>
+<td>–556.5</td>
+<td>–486.1</td>
+<td>123</td>
+<td>91.8</td>
+</tr>
+<tr class="odd">
+<td>CrO<sub>2</sub>(g)</td>
+<td>–598</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CrO<sub>3</sub>(g)</td>
+<td>–292.9</td>
+<td></td>
+<td>266.2</td>
+<td>56.0</td>
+</tr>
+<tr class="odd">
+<td>Cs(g)</td>
+<td>76.5</td>
+<td>49.6</td>
+<td>175.6</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Cs(s)</td>
+<td>0</td>
+<td>0</td>
+<td>85.2</td>
+<td>32.2</td>
+</tr>
+<tr class="odd">
+<td>CsCl(s)</td>
+<td>–443.0</td>
+<td>–414.5</td>
+<td>101.2</td>
+<td>52.5</td>
+</tr>
+<tr class="even">
+<td>Cu(g)</td>
+<td>337.4</td>
+<td>297.7</td>
+<td>166.4</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Cu(s)</td>
+<td>0</td>
+<td>0</td>
+<td>33.2</td>
+<td>24.2</td>
+</tr>
+<tr class="even">
+<td>Cu<sub>2</sub>O(s)</td>
+<td>–168.6</td>
+<td>–146.0</td>
+<td>93.1</td>
+<td>63.6</td>
+</tr>
+<tr class="odd">
+<td>CuO(s)</td>
+<td>–157.3</td>
+<td>–129.7</td>
+<td>42.6</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Cu<sub>2</sub>S(s)</td>
+<td>–79.5</td>
+<td>–86.2</td>
+<td>120.9</td>
+<td>76.3</td>
+</tr>
+<tr class="odd">
+<td>CuS(s)</td>
+<td>–53.1</td>
+<td>–53.6</td>
+<td>66.5</td>
+<td>47.8</td>
+</tr>
+<tr class="even">
+<td>CuSO<sub>4</sub>(s)</td>
+<td>–771.4</td>
+<td>–662.2</td>
+<td>109.2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CuBr(s)</td>
+<td>–104.6</td>
+<td>–100.8</td>
+<td>96.1</td>
+<td>54.7</td>
+</tr>
+<tr class="even">
+<td>CuBr<sub>2</sub>(s)</td>
+<td>–141.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CuCl(s)</td>
+<td>–137.2</td>
+<td>–119.9</td>
+<td>86.2</td>
+<td>48.5</td>
+</tr>
+<tr class="even">
+<td>CuCl<sub>2</sub>(s)</td>
+<td>–220.1</td>
+<td>–175.7</td>
+<td>108.1</td>
+<td>71.9</td>
+</tr>
+<tr class="odd">
+<td>CuCN(s)</td>
+<td>96.2</td>
+<td>111.3</td>
+<td>84.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F<sup>–</sup>(aq)</td>
+<td>–335.4</td>
+<td>–278.8</td>
+<td colspan="2">–13.8 | |</td>
+</tr>
+<tr class="odd">
+<td>F(g)</td>
+<td>79.4</td>
+<td>62.3</td>
+<td>158.8</td>
+<td>22.7</td>
+</tr>
+<tr class="even">
+<td>F<sub>2</sub>(g)</td>
+<td>0</td>
+<td>0</td>
+<td>202.8</td>
+<td>32.3</td>
+</tr>
+<tr class="odd">
+<td>F<sub>2</sub>O(g)</td>
+<td>24.5</td>
+<td>41.8</td>
+<td>247.5</td>
+<td>43.3</td>
+</tr>
+<tr class="even">
+<td>FO(g)</td>
+<td>109</td>
+<td>105.3</td>
+<td>216.4</td>
+<td>32.0</td>
+</tr>
+<tr class="odd">
+<td>FB(g)</td>
+<td>–122.2</td>
+<td>–149.8</td>
+<td>200.5</td>
+<td>58.6</td>
+</tr>
+<tr class="even">
+<td>Fe(g)</td>
+<td>416.3</td>
+<td>370.7</td>
+<td>180.5</td>
+<td>25.7</td>
+</tr>
+<tr class="odd">
+<td>Fe(s)</td>
+<td>0</td>
+<td>0</td>
+<td>27.3</td>
+<td>25.1</td>
+</tr>
+<tr class="even">
+<td>FeO(s)</td>
+<td>–272.0</td>
+<td>–251.4</td>
+<td>60.7</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fe<sup>2+</sup>(aq)</td>
+<td>–89.1</td>
+<td>–78.9</td>
+<td colspan="2">–137.7 | |</td>
+</tr>
+<tr class="even">
+<td>Fe<sub>2</sub>O<sub>3</sub>(s)</td>
+<td>–824.2</td>
+<td>–742.2</td>
+<td>87.4</td>
+<td>103.9</td>
+</tr>
+<tr class="odd">
+<td>Fe<sup>3+</sup>(aq)</td>
+<td>–48.5</td>
+<td>–4.7</td>
+<td colspan="2">–315.9 | |</td>
+</tr>
+<tr class="even">
+<td>Fe<sub>3</sub>O<sub>4</sub>(s)</td>
+<td>–1118.4</td>
+<td>–1015.4</td>
+<td>146.4</td>
+<td>143.4</td>
+</tr>
+<tr class="odd">
+<td>FeCO<sub>3</sub>(s)</td>
+<td>–740.6</td>
+<td>–666.7</td>
+<td>92.9</td>
+<td>82.1</td>
+</tr>
+<tr class="even">
+<td>FeS<sub>2</sub>(s)</td>
+<td>–178.2</td>
+<td>–166.9</td>
+<td>52.9</td>
+<td>62.2</td>
+</tr>
+<tr class="odd">
+<td>FeCl<sub>2</sub>(s)</td>
+<td>–341.8</td>
+<td>–302.3</td>
+<td>118</td>
+<td>75.7</td>
+</tr>
+<tr class="even">
+<td>FeCl<sub>3</sub>(s)</td>
+<td>–399.5</td>
+<td>–334.0</td>
+<td>142.3</td>
+<td>96.7</td>
+</tr>
+<tr class="odd">
+<td>FeBr<sub>2</sub>(s)</td>
+<td>–249.8</td>
+<td>–238.1</td>
+<td>140.6</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FeBr<sub>3</sub>(s)</td>
+<td>–268.2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fe<sub>3</sub>C(s)</td>
+<td>25.1</td>
+<td>20.1</td>
+<td>104.6</td>
+<td>105.9</td>
+</tr>
+<tr class="even">
+<td>H(g)</td>
+<td>218.0</td>
+<td>203.3</td>
+<td>114.7</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>H<sup>+</sup>(aq)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>H<sub>2</sub>(g)</td>
+<td>0</td>
+<td>0</td>
+<td>130.7</td>
+<td>28.8</td>
+</tr>
+<tr class="odd">
+<td>H<sub>2</sub>O(g)</td>
+<td>–241.8</td>
+<td>–228.6</td>
+<td>188.8</td>
+<td>33.6</td>
+</tr>
+<tr class="even">
+<td>H<sub>2</sub>O(l)</td>
+<td>–285.8</td>
+<td>–237.1</td>
+<td>70.0</td>
+<td>75.3</td>
+</tr>
+<tr class="odd">
+<td>H<sub>2</sub>O<sub>2</sub>(g)</td>
+<td>–136.3</td>
+<td>–105.6</td>
+<td>232.7</td>
+<td>43.1</td>
+</tr>
+<tr class="even">
+<td>H<sub>2</sub>O<sub>2</sub>(l)</td>
+<td>–187.8</td>
+<td>–120.4</td>
+<td>109.6</td>
+<td>89.1</td>
+</tr>
+<tr class="odd">
+<td>H<sub>2</sub>S(g)</td>
+<td>–20.6</td>
+<td>–33.4</td>
+<td>205.8</td>
+<td>34.2</td>
+</tr>
+<tr class="even">
+<td>H<sub>2</sub>Se(g)</td>
+<td>29.7</td>
+<td>15.9</td>
+<td>219</td>
+<td>34.7</td>
+</tr>
+<tr class="odd">
+<td>H<sub>2</sub>SO<sub>4</sub>(aq)</td>
+<td>–909.3</td>
+<td>–744.5</td>
+<td>20.1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>H<sub>2</sub>SO<sub>4</sub>(l)</td>
+<td>–814.0</td>
+<td>–690.0</td>
+<td>156.9</td>
+<td>138.9</td>
+</tr>
+<tr class="odd">
+<td>H<sub>3</sub>PO<sub>4</sub>(l)</td>
+<td>–1271.7</td>
+<td>–1123.6</td>
+<td>150.8</td>
+<td>145.0</td>
+</tr>
+<tr class="even">
+<td>H<sub>3</sub>PO<sub>4</sub>(s)</td>
+<td>–1284.4</td>
+<td>–1124.3</td>
+<td>110.5</td>
+<td>106.1</td>
+</tr>
+<tr class="odd">
+<td>HBr(aq)</td>
+<td>–121.6</td>
+<td>–104.0</td>
+<td>82.4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>HBr(g)</td>
+<td>–36.3</td>
+<td>–53.4</td>
+<td>198.7</td>
+<td>29.1</td>
+</tr>
+<tr class="odd">
+<td>HCl(aq)</td>
+<td>–167.2</td>
+<td>–131.2</td>
+<td>56.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>HCl(g)</td>
+<td>–92.3</td>
+<td>–95.3</td>
+<td>186.9</td>
+<td>29.1</td>
+</tr>
+<tr class="odd">
+<td>HCN(g)</td>
+<td>135.1</td>
+<td>124.7</td>
+<td>201.8</td>
+<td>35.9</td>
+</tr>
+<tr class="even">
+<td>HCN(l)</td>
+<td>108.9</td>
+<td>125</td>
+<td>112.8</td>
+<td>70.6</td>
+</tr>
+<tr class="odd">
+<td>HF(aq)</td>
+<td>–332.6</td>
+<td>–278.8</td>
+<td colspan="2">–13.8 | |</td>
+</tr>
+<tr class="even">
+<td>HF(g)</td>
+<td>–273.3</td>
+<td>–275.4</td>
+<td>173.8</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HI(aq)</td>
+<td>–55.2</td>
+<td>–51.6</td>
+<td>111.3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>HI(g)</td>
+<td>26.5</td>
+<td>1.7</td>
+<td>206.6</td>
+<td>29.2</td>
+</tr>
+<tr class="odd">
+<td>HNO<sub>2</sub>(g)</td>
+<td>–79.5</td>
+<td>–46.0</td>
+<td>254.1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>HNO<sub>3</sub>(aq)</td>
+<td>–207.4</td>
+<td>–111.3</td>
+<td>146.4</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HNO<sub>3</sub>(g)</td>
+<td>–133.9</td>
+<td>–73.5</td>
+<td>266.9</td>
+<td>54.1</td>
+</tr>
+<tr class="even">
+<td>HNO<sub>3</sub>(l)</td>
+<td>–174.1</td>
+<td>–80.7</td>
+<td>155.6</td>
+<td>109.9</td>
+</tr>
+<tr class="odd">
+<td>He(g)</td>
+<td>0</td>
+<td>0</td>
+<td>126.2</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Hg(g)</td>
+<td>61.4</td>
+<td>31.8</td>
+<td>175</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hg(l)</td>
+<td>0</td>
+<td>0</td>
+<td>75.9</td>
+<td>28.0</td>
+</tr>
+<tr class="even">
+<td>Hg<sub>2</sub>(g)</td>
+<td>108.8</td>
+<td>68.2</td>
+<td>288.1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HgO(s)</td>
+<td>–90.8</td>
+<td>–58.5</td>
+<td>70.3</td>
+<td>44.1</td>
+</tr>
+<tr class="even">
+<td>HgS(s,red)</td>
+<td>–58.2</td>
+<td>–50.6</td>
+<td>82.4</td>
+<td>48.4</td>
+</tr>
+<tr class="odd">
+<td>Hg<sub>2</sub>SO<sub>4</sub>(s)</td>
+<td>–743.1</td>
+<td>–625.8</td>
+<td>200.7</td>
+<td>132.0</td>
+</tr>
+<tr class="even">
+<td>HgSO<sub>4</sub>(s)</td>
+<td>–707.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hg<sub>2</sub>Cl<sub>2</sub>(s)</td>
+<td>–265.4</td>
+<td>–210.7</td>
+<td>191.6</td>
+<td>191.6</td>
+</tr>
+<tr class="even">
+<td>HgCl<sub>2</sub>(s)</td>
+<td>–224.3</td>
+<td>–178.6</td>
+<td>146.0</td>
+<td>146.0</td>
+</tr>
+<tr class="odd">
+<td>Hg<sub>2</sub>Br<sub>2</sub>(s)</td>
+<td>–206.9</td>
+<td>–181.1</td>
+<td>218.0</td>
+<td>218.0</td>
+</tr>
+<tr class="even">
+<td>HgBr<sub>2</sub>(s)</td>
+<td>–170.7</td>
+<td>–153.1</td>
+<td>172.0</td>
+<td>172.0</td>
+</tr>
+<tr class="odd">
+<td>Hg<sub>2</sub>I<sub>2</sub>(s)</td>
+<td>–121.3</td>
+<td>–111</td>
+<td>233.5</td>
+<td>233.5</td>
+</tr>
+<tr class="even">
+<td>HgI<sub>2</sub>(s)</td>
+<td>–105.4</td>
+<td>–101.7</td>
+<td>180.0</td>
+<td>180.0</td>
+</tr>
+<tr class="odd">
+<td>I<sup>–</sup>(aq)</td>
+<td>–56.8</td>
+<td>–51.6</td>
+<td>106.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>I(g)</td>
+<td>106.8</td>
+<td>70.2</td>
+<td>180.8</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>I<sub>2</sub>(g)</td>
+<td>62.4</td>
+<td>19.3</td>
+<td>260.7</td>
+<td>36.9</td>
+</tr>
+<tr class="even">
+<td>I<sub>2</sub>(s)</td>
+<td>0</td>
+<td>0</td>
+<td>116.1</td>
+<td>54.4</td>
+</tr>
+<tr class="odd">
+<td>HIO<sub>3</sub>(s)</td>
+<td>–230.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>IBr(g)</td>
+<td>40.8</td>
+<td>3.7</td>
+<td>258.8</td>
+<td>36.4</td>
+</tr>
+<tr class="odd">
+<td>ICl(g)</td>
+<td>17.8</td>
+<td>–5.5</td>
+<td>247.6</td>
+<td>35.6</td>
+</tr>
+<tr class="even">
+<td>IF(g)</td>
+<td>–95.7</td>
+<td>–118.5</td>
+<td>236.2</td>
+<td>33.4</td>
+</tr>
+<tr class="odd">
+<td>K(g)</td>
+<td>89.0</td>
+<td>60.5</td>
+<td>160.3</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>K(s)</td>
+<td>0</td>
+<td>0</td>
+<td>64.7</td>
+<td>29.6</td>
+</tr>
+<tr class="odd">
+<td>K<sub>2</sub>CO<sub>3</sub>(s)</td>
+<td>–1151.0</td>
+<td>–1063.5</td>
+<td>155.5</td>
+<td>114.4</td>
+</tr>
+<tr class="even">
+<td>K<sub>2</sub>O(s)</td>
+<td>–361.5</td>
+<td>–322.1</td>
+<td>94.1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>K<sub>2</sub>O<sub>2</sub>(s)</td>
+<td>–494.1</td>
+<td>–425.1</td>
+<td>102.1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>K<sub>2</sub>SO<sub>4</sub>(s)</td>
+<td>–1437.8</td>
+<td>–1321.4</td>
+<td>175.6</td>
+<td>131.5</td>
+</tr>
+<tr class="odd">
+<td>KBr(s)</td>
+<td>–393.8</td>
+<td>–380.7</td>
+<td>95.9</td>
+<td>52.3</td>
+</tr>
+<tr class="even">
+<td>KCl(s)</td>
+<td>–436.5</td>
+<td>–408.5</td>
+<td>82.6</td>
+<td>51.3</td>
+</tr>
+<tr class="odd">
+<td>KF(s)</td>
+<td>–567.3</td>
+<td>–537.8</td>
+<td>66.6</td>
+<td>49.0</td>
+</tr>
+<tr class="even">
+<td>KI(s)</td>
+<td>–327.9</td>
+<td>–324.9</td>
+<td>106.3</td>
+<td>52.9</td>
+</tr>
+<tr class="odd">
+<td>KClO<sub>3</sub>(s)</td>
+<td>–397.7</td>
+<td>–296.3</td>
+<td>143.1</td>
+<td>100.3</td>
+</tr>
+<tr class="even">
+<td>KMnO<sub>4</sub>(s)</td>
+<td>–837.2</td>
+<td>–737.6</td>
+<td>171.7</td>
+<td>117.6</td>
+</tr>
+<tr class="odd">
+<td>KNO<sub>2</sub>(s)</td>
+<td>–369.8</td>
+<td>–306.6</td>
+<td>152.1</td>
+<td>107.4</td>
+</tr>
+<tr class="even">
+<td>KNO<sub>3</sub>(s)</td>
+<td>–494.6</td>
+<td>–394.9</td>
+<td>133.1</td>
+<td>96.4</td>
+</tr>
+<tr class="odd">
+<td>KSCN(s)</td>
+<td>–200.2</td>
+<td>–178.3</td>
+<td>124.3</td>
+<td>88.5</td>
+</tr>
+<tr class="even">
+<td>Kr(g)</td>
+<td>0</td>
+<td>0</td>
+<td>164.1</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Li(g)</td>
+<td>159.3</td>
+<td>126.6</td>
+<td>138.8</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Li(s)</td>
+<td>0</td>
+<td>0</td>
+<td>29.1</td>
+<td>24.9</td>
+</tr>
+<tr class="odd">
+<td>Li<sup>+</sup>(aq)</td>
+<td>–278.5</td>
+<td>–293.3</td>
+<td>12.4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Li<sub>2</sub>O(s)</td>
+<td>–597.9</td>
+<td>–561.2</td>
+<td>37.6</td>
+<td>54.1</td>
+</tr>
+<tr class="odd">
+<td>LiOH(s)</td>
+<td>–487.5</td>
+<td>–441.5</td>
+<td>42.8</td>
+<td>49.6</td>
+</tr>
+<tr class="even">
+<td>LiNO<sub>3</sub>(s)</td>
+<td>–483.1</td>
+<td>–381.1</td>
+<td>90.0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>LiBr(s)</td>
+<td>–351.2</td>
+<td>–342</td>
+<td>74.3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>LiCl(s)</td>
+<td>–408.6</td>
+<td>–384.4</td>
+<td>59.3</td>
+<td>48.0</td>
+</tr>
+<tr class="odd">
+<td>LiF(s)</td>
+<td>–616</td>
+<td>–587.7</td>
+<td>35.7</td>
+<td>41.6</td>
+</tr>
+<tr class="even">
+<td>LiI(s)</td>
+<td>–270.4</td>
+<td>–270.3</td>
+<td>86.8</td>
+<td>51.0</td>
+</tr>
+<tr class="odd">
+<td>Mg(g)</td>
+<td>147.1</td>
+<td>112.5</td>
+<td>148.6</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Mg(s)</td>
+<td>0</td>
+<td>0</td>
+<td>32.7</td>
+<td>24.9</td>
+</tr>
+<tr class="odd">
+<td>MgO(s)</td>
+<td>–601.6</td>
+<td>–569.3</td>
+<td>27.0</td>
+<td>37.2</td>
+</tr>
+<tr class="even">
+<td>Mg(OH)<sub>2</sub>(s)</td>
+<td>–924.5</td>
+<td>–833.5</td>
+<td>63.2</td>
+<td>77.0</td>
+</tr>
+<tr class="odd">
+<td>MgS(s)</td>
+<td>–346.0</td>
+<td>–341.8</td>
+<td>50.3</td>
+<td>45.6</td>
+</tr>
+<tr class="even">
+<td>MgSO<sub>4</sub>(s)</td>
+<td>–1284.9</td>
+<td>–1170.6</td>
+<td>91.6</td>
+<td>96.5</td>
+</tr>
+<tr class="odd">
+<td>MgBr<sub>2</sub>(s)</td>
+<td>–524.3</td>
+<td>–503.8</td>
+<td>117.2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MgCl<sub>2</sub>(s)</td>
+<td>–641.3</td>
+<td>–591.8</td>
+<td>89.6</td>
+<td>71.4</td>
+</tr>
+<tr class="odd">
+<td>MgF<sub>2</sub>(s)</td>
+<td>–1124.2</td>
+<td>–1071.1</td>
+<td>57.2</td>
+<td>61.6</td>
+</tr>
+<tr class="even">
+<td>Mn(g)</td>
+<td>280.7</td>
+<td>238.5</td>
+<td>173.7</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Mn(s)</td>
+<td>0</td>
+<td>0</td>
+<td>32</td>
+<td>26.3</td>
+</tr>
+<tr class="even">
+<td>MnO(s)</td>
+<td>–385.2</td>
+<td>–362.9</td>
+<td>59.7</td>
+<td>45.4</td>
+</tr>
+<tr class="odd">
+<td>MnO<sub>2</sub>(s)</td>
+<td>–520.0</td>
+<td>–465.1</td>
+<td>53.1</td>
+<td>54.1</td>
+</tr>
+<tr class="even">
+<td>MnO<sub>4</sub><sup>–</sup>(aq)</td>
+<td>–541.4</td>
+<td>–447.2</td>
+<td>191.2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>MnBr<sub>2</sub>(s)</td>
+<td>–384.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>MnCl<sub>2</sub>(s)</td>
+<td>–481.3</td>
+<td>–440.5</td>
+<td>118.2</td>
+<td>72.9</td>
+</tr>
+<tr class="odd">
+<td>Mo(g)</td>
+<td>658.1</td>
+<td>612.5</td>
+<td>182</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Mo(s)</td>
+<td>0</td>
+<td>0</td>
+<td>28.7</td>
+<td>24.1</td>
+</tr>
+<tr class="odd">
+<td>MoO<sub>2</sub>(s)</td>
+<td>–588.9</td>
+<td>–533.0</td>
+<td>46.3</td>
+<td>56.0</td>
+</tr>
+<tr class="even">
+<td>MoO<sub>3</sub>(s)</td>
+<td>–745.1</td>
+<td>–668.0</td>
+<td>77.7</td>
+<td>75.0</td>
+</tr>
+<tr class="odd">
+<td>MoS<sub>2</sub>(s)</td>
+<td>–235.1</td>
+<td>–225.9</td>
+<td>62.6</td>
+<td>63.6</td>
+</tr>
+<tr class="even">
+<td>MoS<sub>3</sub>(s)</td>
+<td>–364</td>
+<td>–354</td>
+<td>119</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>N(g)</td>
+<td>472.7</td>
+<td>455.5</td>
+<td>153.3</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>N<sub>2</sub>(g)</td>
+<td>0</td>
+<td>0</td>
+<td>191.6</td>
+<td>29.1</td>
+</tr>
+<tr class="odd">
+<td>NF<sub>3</sub>(g)</td>
+<td>–132.1</td>
+<td>–90.6</td>
+<td>260.8</td>
+<td>53.4</td>
+</tr>
+<tr class="even">
+<td>NH<sub>3</sub>(g)</td>
+<td>–45.9</td>
+<td>–16.4</td>
+<td>192.8</td>
+<td>35.1</td>
+</tr>
+<tr class="odd">
+<td>NH<sub>4</sub><sup>+</sup>(aq)</td>
+<td>–133.3</td>
+<td>–79.3</td>
+<td>111.2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>NH<sub>4</sub>Cl(s)</td>
+<td>–314.4</td>
+<td>–202.9</td>
+<td>94.6</td>
+<td>84.1</td>
+</tr>
+<tr class="odd">
+<td>NH<sub>4</sub>NO<sub>3</sub>(s)</td>
+<td>–365.6</td>
+<td>–183.9</td>
+<td>151.1</td>
+<td>139.3</td>
+</tr>
+<tr class="even">
+<td>NH<sub>4</sub>OH(l)</td>
+<td>–361.2</td>
+<td>–254.0</td>
+<td>165.6</td>
+<td>154.9</td>
+</tr>
+<tr class="odd">
+<td>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>(s)</td>
+<td>–1180.9</td>
+<td>–901.7</td>
+<td>220.1</td>
+<td>187.5</td>
+</tr>
+<tr class="even">
+<td>N<sub>2</sub>H<sub>4</sub>(g)</td>
+<td>95.4</td>
+<td>159.4</td>
+<td>238.5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>N<sub>2</sub>H<sub>4</sub>(l)</td>
+<td>50.6</td>
+<td>149.3</td>
+<td>121.2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>NO<sub>2</sub>(g)</td>
+<td>33.2</td>
+<td>51.3</td>
+<td>240.1</td>
+<td>37.2</td>
+</tr>
+<tr class="odd">
+<td>N<sub>2</sub>O(g)</td>
+<td>81.6</td>
+<td>103.7</td>
+<td>220</td>
+<td>38.6</td>
+</tr>
+<tr class="even">
+<td>NO(g)</td>
+<td>91.3</td>
+<td>87.6</td>
+<td>210.8</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>N<sub>2</sub>O<sub>4</sub>(g)</td>
+<td>11.1</td>
+<td>99.8</td>
+<td>304.4</td>
+<td>79.2</td>
+</tr>
+<tr class="even">
+<td>N<sub>2</sub>O<sub>4</sub>(l)</td>
+<td>–19.5</td>
+<td>97.5</td>
+<td>209.2</td>
+<td>142.7</td>
+</tr>
+<tr class="odd">
+<td>Na(g)</td>
+<td>107.5</td>
+<td>77</td>
+<td>153.7</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Na(s)</td>
+<td>0</td>
+<td>0</td>
+<td>51.3</td>
+<td>28.2</td>
+</tr>
+<tr class="odd">
+<td>Na<sup>+</sup>(aq)</td>
+<td>–240.2</td>
+<td>–261.9</td>
+<td>58.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Na<sub>2</sub>CO<sub>3</sub>(s)</td>
+<td>–1130.7</td>
+<td>–1044.4</td>
+<td>135</td>
+<td>112.3</td>
+</tr>
+<tr class="odd">
+<td>Na<sub>2</sub>O(s)</td>
+<td>–414.2</td>
+<td>–375.5</td>
+<td>75.1</td>
+<td>69.1</td>
+</tr>
+<tr class="even">
+<td>Na<sub>2</sub>O<sub>2</sub>(s)</td>
+<td>–510.9</td>
+<td>–447.7</td>
+<td>95</td>
+<td>89.2</td>
+</tr>
+<tr class="odd">
+<td>Na<sub>2</sub>SO<sub>4</sub>(s)</td>
+<td>–1387.1</td>
+<td>–1270.2</td>
+<td>149.6</td>
+<td>128.2</td>
+</tr>
+<tr class="even">
+<td>NaBr(aq)</td>
+<td>–361.7</td>
+<td>–365.8</td>
+<td>141.4</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>NaBr(g)</td>
+<td>–143.1</td>
+<td>–177.1</td>
+<td>241.2</td>
+<td>36.3</td>
+</tr>
+<tr class="even">
+<td>NaBr(s)</td>
+<td>–361.1</td>
+<td>–349.0</td>
+<td>86.8</td>
+<td>51.4</td>
+</tr>
+<tr class="odd">
+<td>NaCl(aq)</td>
+<td>–407.3</td>
+<td>–393.1</td>
+<td>115.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>NaCl(s)</td>
+<td>–411.2</td>
+<td>–384.1</td>
+<td>72.1</td>
+<td>50.5</td>
+</tr>
+<tr class="odd">
+<td>NaCN(s)</td>
+<td>–87.5</td>
+<td>–76.4</td>
+<td>115.6</td>
+<td>70.4</td>
+</tr>
+<tr class="even">
+<td>NaF(aq)</td>
+<td>–572.8</td>
+<td>–540.7</td>
+<td>45.2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>NaF(s)</td>
+<td>–576.6</td>
+<td>–546.3</td>
+<td>51.1</td>
+<td>46.9</td>
+</tr>
+<tr class="even">
+<td>NaN<sub>3</sub>(s)</td>
+<td>21.7</td>
+<td>93.8</td>
+<td>96.9</td>
+<td>76.6</td>
+</tr>
+<tr class="odd">
+<td>NaNO<sub>3</sub>(aq)</td>
+<td>–447.5</td>
+<td>–373.2</td>
+<td>205.4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>NaNO<sub>3</sub>(s)</td>
+<td>–467.9</td>
+<td>–367.0</td>
+<td>116.5</td>
+<td>92.9</td>
+</tr>
+<tr class="odd">
+<td>NaO<sub>2</sub>(s)</td>
+<td>–260.2</td>
+<td>–218.4</td>
+<td>115.9</td>
+<td>72.1</td>
+</tr>
+<tr class="even">
+<td>NaOH(s)</td>
+<td>–425.8</td>
+<td>–379.7</td>
+<td>64.4</td>
+<td>59.5</td>
+</tr>
+<tr class="odd">
+<td>NaH(s)</td>
+<td>–56.3</td>
+<td>–33.6</td>
+<td>40</td>
+<td>36.4</td>
+</tr>
+<tr class="even">
+<td>Ne(g)</td>
+<td>0</td>
+<td>0</td>
+<td>146.3</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Ni(g)</td>
+<td>429.7</td>
+<td>384.5</td>
+<td>182.2</td>
+<td>23.4</td>
+</tr>
+<tr class="even">
+<td>Ni(s)</td>
+<td>0</td>
+<td>0</td>
+<td>29.9</td>
+<td>26.1</td>
+</tr>
+<tr class="odd">
+<td>Ni<sub>2</sub>O<sub>3</sub>(s)</td>
+<td>–489.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ni(OH)<sub>2</sub>(s)</td>
+<td>–529.7</td>
+<td>–447.2</td>
+<td>88</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>NiBr<sub>2</sub>(s)</td>
+<td>–212.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>NiCl<sub>2</sub>(s)</td>
+<td>–305.3</td>
+<td>–259.0</td>
+<td>97.7</td>
+<td>71.7</td>
+</tr>
+<tr class="odd">
+<td>NiF<sub>2</sub>(s)</td>
+<td>–651.4</td>
+<td>–604.1</td>
+<td>73.6</td>
+<td>64.1</td>
+</tr>
+<tr class="even">
+<td>O(g)</td>
+<td>249.2</td>
+<td>231.7</td>
+<td>161.1</td>
+<td>21.9</td>
+</tr>
+<tr class="odd">
+<td>O<sub>2</sub>(g)</td>
+<td>0</td>
+<td>0</td>
+<td>205.2</td>
+<td>29.4</td>
+</tr>
+<tr class="even">
+<td>O<sub>3</sub>(g)</td>
+<td>142.7</td>
+<td>163.2</td>
+<td>238.9</td>
+<td>39.2</td>
+</tr>
+<tr class="odd">
+<td>OH<sup>–</sup>(aq)</td>
+<td>–230.0</td>
+<td>–157.2</td>
+<td colspan="2">–10.9 | |</td>
+</tr>
+<tr class="even">
+<td>Os(g)</td>
+<td>791</td>
+<td>745</td>
+<td>192.6</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Os(s)</td>
+<td>0</td>
+<td>0</td>
+<td>32.6</td>
+<td>24.7</td>
+</tr>
+<tr class="even">
+<td>OsO<sub>4</sub>(g)</td>
+<td>–337.2</td>
+<td>–292.8</td>
+<td>293.8</td>
+<td>74.1</td>
+</tr>
+<tr class="odd">
+<td>OsO<sub>4</sub>(s)</td>
+<td>–394.1</td>
+<td>–304.9</td>
+<td>143.9</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>P(g,white)</td>
+<td>316.5</td>
+<td>280.1</td>
+<td>163.2</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>P(s,black)</td>
+<td>–39.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>P(s,red)</td>
+<td>–17.6</td>
+<td>–12.5</td>
+<td>22.8</td>
+<td>21.2</td>
+</tr>
+<tr class="odd">
+<td>P(s,white)</td>
+<td>0</td>
+<td>0</td>
+<td>41.1</td>
+<td>23.8</td>
+</tr>
+<tr class="even">
+<td>P<sub>2</sub>(g)</td>
+<td>144.0</td>
+<td>103.5</td>
+<td>218.1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>P<sub>4</sub>(g)</td>
+<td>58.9</td>
+<td>24.4</td>
+<td>280.0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>PCl<sub>3</sub>(g)</td>
+<td>–287.0</td>
+<td>–267.8</td>
+<td>311.8</td>
+<td>71.8</td>
+</tr>
+<tr class="odd">
+<td>PCl<sub>3</sub>(l)</td>
+<td>–319.7</td>
+<td>–272.3</td>
+<td>217.1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>PCl<sub>5</sub>(g)</td>
+<td>–374.9</td>
+<td>–305.0</td>
+<td>364.6</td>
+<td>112.8</td>
+</tr>
+<tr class="odd">
+<td>PH<sub>3</sub>(g)</td>
+<td>5.4</td>
+<td>13.5</td>
+<td>210.2</td>
+<td>37.1</td>
+</tr>
+<tr class="even">
+<td>POCl<sub>3</sub>(g)</td>
+<td>–558.5</td>
+<td>–512.9</td>
+<td>325.5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POCl<sub>3</sub>(l)</td>
+<td>–597.1</td>
+<td>–520.8</td>
+<td>222.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Pb(g)</td>
+<td>195.2</td>
+<td>162.2</td>
+<td>175.4</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Pb(s)</td>
+<td>0</td>
+<td>0</td>
+<td>64.8</td>
+<td>26.8</td>
+</tr>
+<tr class="even">
+<td>PbCl<sub>2</sub>(s)</td>
+<td>–359.4</td>
+<td>–314.1</td>
+<td>136</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>PbCO<sub>3</sub>(s)</td>
+<td>–699.1</td>
+<td>–625.5</td>
+<td>131</td>
+<td>87.4</td>
+</tr>
+<tr class="even">
+<td>PbO(s,litharge)</td>
+<td>–219.0</td>
+<td>–188.9</td>
+<td>66.5</td>
+<td>45.8</td>
+</tr>
+<tr class="odd">
+<td>PbO(s,massic.)</td>
+<td>–217.3</td>
+<td>–187.9</td>
+<td>68.7</td>
+<td>45.8</td>
+</tr>
+<tr class="even">
+<td>PbO<sub>2</sub>(s)</td>
+<td>–277.4</td>
+<td>–217.3</td>
+<td>68.6</td>
+<td>64.6</td>
+</tr>
+<tr class="odd">
+<td>Pb(NO<sub>3</sub>)<sub>2</sub>(aq)</td>
+<td>–416.3</td>
+<td>–246.9</td>
+<td>303.3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Pb(NO<sub>3</sub>)<sub>2</sub>(s)</td>
+<td>–451.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>PbS(s)</td>
+<td>–100.4</td>
+<td>–98.7</td>
+<td>91.2</td>
+<td>49.5</td>
+</tr>
+<tr class="even">
+<td>PbSO<sub>4</sub>(s)</td>
+<td>–920.0</td>
+<td>–813.0</td>
+<td>148.5</td>
+<td>103.2</td>
+</tr>
+<tr class="odd">
+<td>Rb(g)</td>
+<td>80.9</td>
+<td>53.1</td>
+<td>170.1</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Rb(s)</td>
+<td>0</td>
+<td>0</td>
+<td>76.8</td>
+<td>31.1</td>
+</tr>
+<tr class="odd">
+<td>RbCl(s)</td>
+<td>–435.4</td>
+<td>–407.8</td>
+<td>95.9</td>
+<td>52.4</td>
+</tr>
+<tr class="even">
+<td>S(g,rhombic)</td>
+<td>277.2</td>
+<td>236.7</td>
+<td>167.8</td>
+<td>23.7</td>
+</tr>
+<tr class="odd">
+<td>S(s,rhombic)</td>
+<td>0</td>
+<td>0</td>
+<td>32.1</td>
+<td>22.6</td>
+</tr>
+<tr class="even">
+<td>SO<sub>2</sub>(g)</td>
+<td>–296.8</td>
+<td>–300.1</td>
+<td>248.2</td>
+<td>39.9</td>
+</tr>
+<tr class="odd">
+<td>SO<sub>3</sub>(g)</td>
+<td>–395.7</td>
+<td>–371.1</td>
+<td>256.8</td>
+<td>50.7</td>
+</tr>
+<tr class="even">
+<td>SO<sub>4</sub><sup>2–</sup>(aq)</td>
+<td>–909.3</td>
+<td>–744.5</td>
+<td>18.5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SOCl<sub>2</sub>(g)</td>
+<td>–212.5</td>
+<td>–198.3</td>
+<td>309.8</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Se(g,gray)</td>
+<td>227.1</td>
+<td>187</td>
+<td>176.7</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Se(s,gray)</td>
+<td>0</td>
+<td>0</td>
+<td>42.4</td>
+<td>25.4</td>
+</tr>
+<tr class="even">
+<td>Si(g)</td>
+<td>450</td>
+<td>405.5</td>
+<td>168.0</td>
+<td>22.3</td>
+</tr>
+<tr class="odd">
+<td>Si(s)</td>
+<td>0</td>
+<td>0</td>
+<td>18.8</td>
+<td>20.0</td>
+</tr>
+<tr class="even">
+<td>SiC(s,cubic)</td>
+<td>–65.3</td>
+<td>–62.8</td>
+<td>16.6</td>
+<td>26.9</td>
+</tr>
+<tr class="odd">
+<td>SiC(s,hexag.)</td>
+<td>–62.8</td>
+<td>–60.2</td>
+<td>16.5</td>
+<td>26.7</td>
+</tr>
+<tr class="even">
+<td>SiCl<sub>4</sub>(g)</td>
+<td>–657.0</td>
+<td>–617.0</td>
+<td>330.7</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SiCl<sub>4</sub>(l)</td>
+<td>–687.0</td>
+<td>–619.8</td>
+<td>239.7</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SiH<sub>4</sub>(g)</td>
+<td>34.3</td>
+<td>56.9</td>
+<td>204.6</td>
+<td>42.8</td>
+</tr>
+<tr class="odd">
+<td>Sn(g,white)</td>
+<td>301</td>
+<td>266.2</td>
+<td>168.5</td>
+<td>21.3</td>
+</tr>
+<tr class="even">
+<td>Sn(s,gray)</td>
+<td>–2.1</td>
+<td>0.1</td>
+<td>44.1</td>
+<td>25.8</td>
+</tr>
+<tr class="odd">
+<td>Sn(s,white)</td>
+<td>0</td>
+<td>0</td>
+<td>51.2</td>
+<td>27.0</td>
+</tr>
+<tr class="even">
+<td>SnCl<sub>4</sub>(g)</td>
+<td>–471.5</td>
+<td>–432.2</td>
+<td>365.8</td>
+<td>98.3</td>
+</tr>
+<tr class="odd">
+<td>SnCl<sub>4</sub>(l)</td>
+<td>–511.3</td>
+<td>–440.1</td>
+<td>258.6</td>
+<td>165.3</td>
+</tr>
+<tr class="even">
+<td>SnO<sub>2</sub>(s)</td>
+<td>–557.6</td>
+<td>–515.8</td>
+<td>49</td>
+<td>52.6</td>
+</tr>
+<tr class="odd">
+<td>Ti(g)</td>
+<td>473</td>
+<td>428.4</td>
+<td>180.3</td>
+<td>24.4</td>
+</tr>
+<tr class="even">
+<td>Ti(s)</td>
+<td>0</td>
+<td>0</td>
+<td>30.7</td>
+<td>25.1</td>
+</tr>
+<tr class="odd">
+<td>TiCl<sub>2</sub>(s)</td>
+<td>–513.8</td>
+<td>–464.4</td>
+<td>87.4</td>
+<td>69.8</td>
+</tr>
+<tr class="even">
+<td>TiCl<sub>3</sub>(s)</td>
+<td>–720.9</td>
+<td>–653.5</td>
+<td>139.7</td>
+<td>97.2</td>
+</tr>
+<tr class="odd">
+<td>TiCl<sub>4</sub>(g)</td>
+<td>–763</td>
+<td>–726.3</td>
+<td>353</td>
+<td>95.4</td>
+</tr>
+<tr class="even">
+<td>TiCl<sub>4</sub>(l)</td>
+<td>–804.2</td>
+<td>–737.2</td>
+<td>252.3</td>
+<td>145.2</td>
+</tr>
+<tr class="odd">
+<td>TiO<sub>2</sub>(s)</td>
+<td>–944.0</td>
+<td>–888.8</td>
+<td>50.6</td>
+<td>55.0</td>
+</tr>
+<tr class="even">
+<td>U(g)</td>
+<td>533</td>
+<td>488.4</td>
+<td>199.8</td>
+<td>23.7</td>
+</tr>
+<tr class="odd">
+<td>U(s)</td>
+<td>0</td>
+<td>0</td>
+<td>50.2</td>
+<td>27.7</td>
+</tr>
+<tr class="even">
+<td>UF<sub>4</sub>(g)</td>
+<td>–1598.7</td>
+<td>–1572.7</td>
+<td>368</td>
+<td>91.2</td>
+</tr>
+<tr class="odd">
+<td>UF<sub>4</sub>(s)</td>
+<td>–1914.2</td>
+<td>–1823.3</td>
+<td>151.7</td>
+<td>116.0</td>
+</tr>
+<tr class="even">
+<td>UF<sub>6</sub>(g)</td>
+<td>–2147.4</td>
+<td>–2063.7</td>
+<td>377.9</td>
+<td>129.6</td>
+</tr>
+<tr class="odd">
+<td>UF<sub>6</sub>(s)</td>
+<td>–2197.0</td>
+<td>–2068.5</td>
+<td>227.6</td>
+<td>166.8</td>
+</tr>
+<tr class="even">
+<td>UO<sub>2</sub>(g)</td>
+<td>–465.7</td>
+<td>–471.5</td>
+<td>274.6</td>
+<td>51.4</td>
+</tr>
+<tr class="odd">
+<td>UO<sub>2</sub>(s)</td>
+<td>–1085.0</td>
+<td>–1031.8</td>
+<td>77.0</td>
+<td>63.6</td>
+</tr>
+<tr class="even">
+<td>V(g)</td>
+<td>514.2</td>
+<td>754.4</td>
+<td>182.3</td>
+<td>26.0</td>
+</tr>
+<tr class="odd">
+<td>V(s)</td>
+<td>0</td>
+<td>0</td>
+<td>28.9</td>
+<td>24.9</td>
+</tr>
+<tr class="even">
+<td>V<sub>2</sub>O<sub>5</sub>(s)</td>
+<td>–1550.6</td>
+<td>–1419.5</td>
+<td>131.0</td>
+<td>127.7</td>
+</tr>
+<tr class="odd">
+<td>VCl<sub>3</sub>(s)</td>
+<td>–580.7</td>
+<td>–511.2</td>
+<td>131.0</td>
+<td>93.2</td>
+</tr>
+<tr class="even">
+<td>VCl<sub>4</sub>(g)</td>
+<td>–525.5</td>
+<td>–492.0</td>
+<td>362.4</td>
+<td>96.2</td>
+</tr>
+<tr class="odd">
+<td>VCl<sub>4</sub>(l)</td>
+<td>–569.4</td>
+<td>–503.7</td>
+<td>255.0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Xe(g)</td>
+<td>0</td>
+<td>0</td>
+<td>169.7</td>
+<td>20.8</td>
+</tr>
+<tr class="odd">
+<td>Zn(g)</td>
+<td>130.4</td>
+<td>94.8</td>
+<td>161.0</td>
+<td>20.8</td>
+</tr>
+<tr class="even">
+<td>Zn(s)</td>
+<td>0</td>
+<td>0</td>
+<td>41.6</td>
+<td>25.4</td>
+</tr>
+<tr class="odd">
+<td>ZnBr<sub>2</sub>(s)</td>
+<td>–328.7</td>
+<td>–312.1</td>
+<td>138.5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ZnCl<sub>2</sub>(s)</td>
+<td>–415.1</td>
+<td>–369.4</td>
+<td>111.5</td>
+<td>71.3</td>
+</tr>
+<tr class="odd">
+<td>ZnF<sub>2</sub>(s)</td>
+<td>–764.4</td>
+<td>–713.3</td>
+<td>73.7</td>
+<td>65.7</td>
+</tr>
+<tr class="even">
+<td>ZnI<sub>2</sub>(s)</td>
+<td>–208.0</td>
+<td>–209.0</td>
+<td>161.1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Zn(NO<sub>3</sub>)<sub>2</sub>(s)</td>
+<td>–483.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ZnS(s,sphaler.)</td>
+<td>–206.0</td>
+<td>–201.3</td>
+<td>57.7</td>
+<td>46.0</td>
+</tr>
+<tr class="odd">
+<td>ZnSO<sub>4</sub>(s)</td>
+<td>–982.8</td>
+<td>–871.5</td>
+<td>110.5</td>
+<td>99.2</td>
+</tr>
+<tr class="even">
+<td>Zr(g)</td>
+<td>608.8</td>
+<td>566.5</td>
+<td>181.4</td>
+<td>26.7</td>
+</tr>
+<tr class="odd">
+<td>Zr(s)</td>
+<td>0</td>
+<td>0</td>
+<td>39</td>
+<td>25.4</td>
+</tr>
+<tr class="even">
+<td>ZrCl<sub>2</sub>(s)</td>
+<td>–502.0</td>
+<td>–386</td>
+<td>110</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>ZrCl<sub>4</sub>(s)</td>
+<td>–980.5</td>
+<td>–889.9</td>
+<td>181.6</td>
+<td>119.8</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="thermodynamic-data-of-organic-substances-at-298-k" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="thermodynamic-data-of-organic-substances-at-298-k"><span class="header-section-number">A.2</span> Thermodynamic Data of Organic Substances at 298 K</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formula:</th>
+<th>Name:</th>
+<th><span class="math inline">\(\Delta_{\text{f}} H^\standardstate\)</span> <span class="math inline">\(\scriptstyle{\text{[kJ/mol]}}\)</span></th>
+<th><span class="math inline">\(\Delta_{\text{f}} G^\standardstate\)</span> <span class="math inline">\(\scriptstyle{\text{[kJ/mol]}}\)</span></th>
+<th><span class="math inline">\(S^\standardstate\)</span> <span class="math inline">\(\scriptstyle{\text{[J/(mol K)]}}\)</span></th>
+<th><span class="math inline">\(C_P\)</span> <span class="math inline">\(\scriptstyle{\text{[J/(mol K)]}}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CHBr<sub>3</sub></td>
+<td>Bromoform(g)</td>
+<td>25</td>
+<td>16</td>
+<td>331</td>
+<td>71</td>
+</tr>
+<tr class="even">
+<td>CHCl<sub>3</sub></td>
+<td>Chloroform(l)</td>
+<td>–134.1</td>
+<td>–73.7</td>
+<td>201.7</td>
+<td>114.2</td>
+</tr>
+<tr class="odd">
+<td>CHCl<sub>3</sub></td>
+<td>Chloroform(g)</td>
+<td>–102.7</td>
+<td>6.0</td>
+<td>295.7</td>
+<td>65.7</td>
+</tr>
+<tr class="even">
+<td>CH<sub>2</sub>O<sub>2</sub></td>
+<td>Formic acid(l)</td>
+<td>–425</td>
+<td>–361.4</td>
+<td>129</td>
+<td>99</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>2</sub>O<sub>2</sub></td>
+<td>Formic acid(g)</td>
+<td>–378.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CH<sub>3</sub></td>
+<td>Methyl(g)</td>
+<td>145.7</td>
+<td>47.9</td>
+<td>194.2</td>
+<td>38.7</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>3</sub>Br</td>
+<td>Bromomethane(l)</td>
+<td>–59.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CH<sub>3</sub>Br</td>
+<td>Bromomethane(g)</td>
+<td>–35.4</td>
+<td>–26.3</td>
+<td>246.4</td>
+<td>42.4</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>3</sub>Cl</td>
+<td>Chloromethane(g)</td>
+<td>–81.9</td>
+<td>–63</td>
+<td>234.6</td>
+<td>40.8</td>
+</tr>
+<tr class="even">
+<td>CH<sub>3</sub>F</td>
+<td>Fluoromethane(g)</td>
+<td>–234</td>
+<td>–210</td>
+<td>222.9</td>
+<td>37.5</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>3</sub>I</td>
+<td>Iodomethane(l)</td>
+<td>–13.6</td>
+<td></td>
+<td>136.2</td>
+<td>126</td>
+</tr>
+<tr class="even">
+<td>CH<sub>3</sub>I</td>
+<td>Iodomethane(g)</td>
+<td>14.4</td>
+<td>16</td>
+<td>254.1</td>
+<td>44.1</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>3</sub>NO<sub>2</sub></td>
+<td>Nitromethane(l)</td>
+<td>–112.6</td>
+<td>–14.4</td>
+<td>171.8</td>
+<td>106.6</td>
+</tr>
+<tr class="even">
+<td>CH<sub>3</sub>NO2</td>
+<td>Nitromethane(g)</td>
+<td>–80.8</td>
+<td>–7</td>
+<td>282.9</td>
+<td>55.5</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>4</sub></td>
+<td>Methane(g)</td>
+<td>–74.6</td>
+<td>–50.5</td>
+<td>186.3</td>
+<td>35.7</td>
+</tr>
+<tr class="even">
+<td>CH<sub>4</sub>O</td>
+<td>Methanol(l)</td>
+<td>–239.2</td>
+<td>–166.6</td>
+<td>126.8</td>
+<td>81.1</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>4</sub>O</td>
+<td>Methanol(g)</td>
+<td>–201</td>
+<td>–162.3</td>
+<td>239.9</td>
+<td>44.1</td>
+</tr>
+<tr class="even">
+<td>CH<sub>5</sub>N</td>
+<td>Methylamine(l)</td>
+<td>–47.3</td>
+<td>35.7</td>
+<td>150.2</td>
+<td>102.1</td>
+</tr>
+<tr class="odd">
+<td>CH<sub>5</sub>N</td>
+<td>Methylamine(g)</td>
+<td>–22.5</td>
+<td>32.7</td>
+<td>242.9</td>
+<td>50.1</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>2</sub></td>
+<td>Ethyne (acetylene)(g)</td>
+<td>226.9</td>
+<td>209</td>
+<td>201</td>
+<td>44</td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H<sub>4</sub></td>
+<td>Ethene(g)</td>
+<td>52.5</td>
+<td>68.4</td>
+<td>219.3</td>
+<td>42.9</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H4O<sub>2</sub></td>
+<td>Acetic acid(l)</td>
+<td>–484.3</td>
+<td>–389.9</td>
+<td>159.8</td>
+<td>123.3</td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H4O<sub>2</sub></td>
+<td>Acetic acid(g)</td>
+<td>–432.2</td>
+<td>–374.2</td>
+<td>283.5</td>
+<td>63.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>5</sub>Br</td>
+<td>Bromoethane(l)</td>
+<td>–90.5</td>
+<td>–25.8</td>
+<td>198.7</td>
+<td>100.8</td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H<sub>5</sub>Br</td>
+<td>Bromoethane(g)</td>
+<td>–61.9</td>
+<td>–23.9</td>
+<td>286.7</td>
+<td>64.5</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>5</sub>Cl</td>
+<td>Chloroethane(l)</td>
+<td>–136.8</td>
+<td>–59.3</td>
+<td>190.8</td>
+<td>104.3</td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H<sub>5</sub>Cl</td>
+<td>Chloroethane(g)</td>
+<td>–112.1</td>
+<td>–60.4</td>
+<td>276</td>
+<td>62.8</td>
+</tr>
+<tr class="even">
+<td>C2H<sub>5</sub>NO<sub>2</sub></td>
+<td>Nitroethane(l)</td>
+<td>–143.9</td>
+<td></td>
+<td></td>
+<td>134.4</td>
+</tr>
+<tr class="odd">
+<td>C2H<sub>5</sub>NO<sub>2</sub></td>
+<td>Nitroethane(g)</td>
+<td>–103.8</td>
+<td>–5</td>
+<td>320.5</td>
+<td>79</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>6</sub></td>
+<td>Ethane(g)</td>
+<td>–84</td>
+<td>–32</td>
+<td>229.2</td>
+<td>52.5</td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H<sub>6</sub>O</td>
+<td>Ethanol(l)</td>
+<td>–277.6</td>
+<td>–174.8</td>
+<td>160.7</td>
+<td>112.3</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>6</sub>O</td>
+<td>Ethanol(g)</td>
+<td>–234.8</td>
+<td>–167.9</td>
+<td>281.6</td>
+<td>65.6</td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H<sub>6</sub>O</td>
+<td>Methoxymethane(l)</td>
+<td>–203,3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>6</sub>O</td>
+<td>Methoxymethane(g)</td>
+<td>–184.1</td>
+<td>–112.6</td>
+<td>266.4</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>2</sub>H<sub>7</sub>N</td>
+<td>Ethylamine(l)</td>
+<td>–74.1</td>
+<td></td>
+<td></td>
+<td>130</td>
+</tr>
+<tr class="even">
+<td>C<sub>2</sub>H<sub>7</sub>N</td>
+<td>Ethylamine(g)</td>
+<td>–47.5</td>
+<td>36.3</td>
+<td>283.8</td>
+<td>71.5</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>4</sub></td>
+<td>Cyclopropene(g)</td>
+<td>277.1</td>
+<td>286</td>
+<td>244</td>
+<td>53</td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>4</sub></td>
+<td>Propyne(g)</td>
+<td>185</td>
+<td>194</td>
+<td>248</td>
+<td>61</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>6</sub></td>
+<td>Cyclopropane(l)</td>
+<td>35.2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>6</sub></td>
+<td>Cyclopropane(g)</td>
+<td>53.3</td>
+<td>104.5</td>
+<td>237.5</td>
+<td>55.6</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>6</sub></td>
+<td>Propene(g)</td>
+<td>20</td>
+<td>62</td>
+<td>267</td>
+<td>64</td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>6</sub>O</td>
+<td>Acetone(l)</td>
+<td>–248.4</td>
+<td></td>
+<td>199.8</td>
+<td>126.3</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>6</sub>O</td>
+<td>Acetone(g)</td>
+<td>–217.1</td>
+<td>–152.7</td>
+<td>295.3</td>
+<td>74.5</td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>6</sub>O<sub>2</sub></td>
+<td>Propanoic acid(l)</td>
+<td>–510.7</td>
+<td></td>
+<td>191</td>
+<td>152.8</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>6</sub>O<sub>2</sub></td>
+<td>Propanoic acid(g)</td>
+<td>–455.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>8</sub></td>
+<td>Propane(l)</td>
+<td>–120.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>8</sub></td>
+<td>Propane(g)</td>
+<td>–103.8</td>
+<td>–23.4</td>
+<td>270.3</td>
+<td>73.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>8</sub>O</td>
+<td>1-Propanol(l)</td>
+<td>–302.6</td>
+<td></td>
+<td>193.6</td>
+<td>143.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>8</sub>O</td>
+<td>1-Propanol(g)</td>
+<td>–255.1</td>
+<td></td>
+<td>322.6</td>
+<td>85.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>8</sub>O</td>
+<td>2-Propanol(l)</td>
+<td>–318.1</td>
+<td></td>
+<td>181.1</td>
+<td>156.5</td>
+</tr>
+<tr class="odd">
+<td>C<sub>3</sub>H<sub>8</sub>O</td>
+<td>2-Propanol(g)</td>
+<td>–272.6</td>
+<td></td>
+<td>309.2</td>
+<td>89.3</td>
+</tr>
+<tr class="even">
+<td>C<sub>3</sub>H<sub>9</sub>N</td>
+<td>1-Propanamine(g)</td>
+<td>–72</td>
+<td>40</td>
+<td>324</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>6</sub></td>
+<td>1-Butyne(l)</td>
+<td>141.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>6</sub></td>
+<td>1-Butyne(g)</td>
+<td>165.2</td>
+<td>202</td>
+<td>291</td>
+<td>81</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>6</sub></td>
+<td>2-Butyne(l)</td>
+<td>119.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>6</sub></td>
+<td>2-Butyne(g)</td>
+<td>145.7</td>
+<td>185</td>
+<td>283</td>
+<td>78</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>6</sub></td>
+<td>Cyclobutene(g)</td>
+<td>156.7</td>
+<td>175</td>
+<td>64</td>
+<td>64</td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>8</sub></td>
+<td>2-Methyl-1-propene(g)</td>
+<td>–17</td>
+<td>58</td>
+<td>294</td>
+<td>89</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>8</sub></td>
+<td>1-Butene(l)</td>
+<td>–20.8</td>
+<td></td>
+<td>227</td>
+<td>118</td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>8</sub></td>
+<td>1-Butene(g)</td>
+<td>0.1</td>
+<td>71</td>
+<td>306</td>
+<td>86</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>8</sub></td>
+<td>Cyclobutane(l)</td>
+<td>3.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>8</sub></td>
+<td>Cyclobutane(g)</td>
+<td>27.7</td>
+<td>110</td>
+<td>265</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>8</sub>O<sub>2</sub></td>
+<td>Butanoic acid(l)</td>
+<td>–533.8</td>
+<td></td>
+<td>222.2</td>
+<td>178.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>8</sub>O<sub>2</sub></td>
+<td>Butanoic acid(g)</td>
+<td>–475.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>10</sub></td>
+<td>2-Methylpropane(g)</td>
+<td>–135</td>
+<td>–21</td>
+<td>295</td>
+<td>97</td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>10</sub></td>
+<td>Butane(l)</td>
+<td>–147.3</td>
+<td></td>
+<td></td>
+<td>140.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>10</sub></td>
+<td>Butane(g)</td>
+<td>–125.7</td>
+<td>–17</td>
+<td>310</td>
+<td>98</td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>10</sub>O</td>
+<td>1-Butanol(l)</td>
+<td>–327.3</td>
+<td></td>
+<td>225.8</td>
+<td>177.2</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>10</sub>O</td>
+<td>1-Butanol(g)</td>
+<td>–274.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>4</sub>H<sub>10</sub>O</td>
+<td>2-Butanol(l)</td>
+<td>–342.6</td>
+<td></td>
+<td>214.9</td>
+<td>196.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>4</sub>H<sub>10</sub>O</td>
+<td>2-Butanol(g)</td>
+<td>–292.8</td>
+<td></td>
+<td>359.5</td>
+<td>112.7</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>8</sub></td>
+<td>1-Pentyne(g)</td>
+<td>144</td>
+<td>210</td>
+<td>330</td>
+<td>105</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>8</sub></td>
+<td>2-Pentyne(g)</td>
+<td>129</td>
+<td>194</td>
+<td>332</td>
+<td>99</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>8</sub></td>
+<td>Cyclopentene(l)</td>
+<td>4.3</td>
+<td></td>
+<td>201.2</td>
+<td>122.4</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>8</sub></td>
+<td>Cyclopentene(g)</td>
+<td>34</td>
+<td>111</td>
+<td>290</td>
+<td>75</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>10</sub></td>
+<td>1-Pentene(l)</td>
+<td>–46.9</td>
+<td></td>
+<td>262.6</td>
+<td>154</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>10</sub></td>
+<td>1-Pentene(g)</td>
+<td>–21.1</td>
+<td>79</td>
+<td>346</td>
+<td>110</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>10</sub></td>
+<td>2-Methyl-1-butene(g)</td>
+<td>–35.2</td>
+<td>66</td>
+<td>340</td>
+<td>112</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>10</sub></td>
+<td>2-Methyl-1-butene(l)</td>
+<td>–61.1</td>
+<td></td>
+<td>254</td>
+<td>157.2</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>10</sub></td>
+<td>Cyclopentane(l)</td>
+<td>–105.1</td>
+<td></td>
+<td>204.5</td>
+<td>128.8</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>10</sub></td>
+<td>Cyclopentane(g)</td>
+<td>–76.4</td>
+<td>39</td>
+<td>293</td>
+<td>83</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>10</sub>O<sub>2</sub></td>
+<td>Pentanoic acid(l)</td>
+<td>–559.4</td>
+<td></td>
+<td>259.8</td>
+<td>210.3</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>10</sub>O<sub>2</sub></td>
+<td>Pentanoic acid(g)</td>
+<td>–491.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>12</sub></td>
+<td>2,2-Dimethylpropane(g)</td>
+<td>–166</td>
+<td>–15</td>
+<td>306</td>
+<td>122</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>12</sub></td>
+<td>2-Methylbutane(g)</td>
+<td>–155</td>
+<td>–15</td>
+<td>344</td>
+<td>119</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>12</sub></td>
+<td>Pentane(l)</td>
+<td>–173.5</td>
+<td></td>
+<td></td>
+<td>167.2</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>12</sub></td>
+<td>Pentane(g)</td>
+<td>–146.9</td>
+<td>–8</td>
+<td>349</td>
+<td>120</td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>1-Pentanol(l)</td>
+<td>–351.6</td>
+<td></td>
+<td></td>
+<td>208.1</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>1-Pentanol(g)</td>
+<td>–294.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>2-Pentanol(l)</td>
+<td>–365.2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>2-Pentanol(g)</td>
+<td>–311</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>3-Pentanol(l)</td>
+<td>–368.9</td>
+<td></td>
+<td></td>
+<td>239.7</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>3-Pentanol(g)</td>
+<td>–314.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>Methyl tert-butyl ether(l)</td>
+<td>–313.6</td>
+<td></td>
+<td>265.3</td>
+<td>187.5</td>
+</tr>
+<tr class="odd">
+<td>C<sub>5</sub>H<sub>12</sub>O</td>
+<td>Methyl tert-butyl ether(g)</td>
+<td>–283.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>6</sub></td>
+<td>Benzene(l)</td>
+<td>49.1</td>
+<td>124.5</td>
+<td>173.4</td>
+<td>136</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>6</sub></td>
+<td>Benzene(g)</td>
+<td>82.9</td>
+<td>129.7</td>
+<td>269.2</td>
+<td>82.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>7</sub>N</td>
+<td>Aniline(l)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>191.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>7</sub>N</td>
+<td>Aniline(g)</td>
+<td>87.5</td>
+<td>–7</td>
+<td>317.9</td>
+<td>107.9</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>10</sub></td>
+<td>1-Hexyne(g)</td>
+<td>124</td>
+<td>219</td>
+<td>369</td>
+<td>128</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>10</sub></td>
+<td>Cyclohexene(l)</td>
+<td>–28.5</td>
+<td></td>
+<td>214.6</td>
+<td>148.3</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>10</sub></td>
+<td>Cyclohexene(g)</td>
+<td>–5</td>
+<td>107</td>
+<td>311</td>
+<td>105</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>1-Hexene(l)</td>
+<td>–74.2</td>
+<td></td>
+<td>295.2</td>
+<td>183.3</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>1-Hexene(g)</td>
+<td>–43.5</td>
+<td>87</td>
+<td>385</td>
+<td>132</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>2-Methyl-1-pentene(g)</td>
+<td>–59.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>2-Methyl-1-pentene(l)</td>
+<td>–90</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>Cyclohexane(l)</td>
+<td>–156.4</td>
+<td></td>
+<td></td>
+<td>154.9</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>Cyclohexane(g)</td>
+<td>–123.4</td>
+<td>32</td>
+<td>298</td>
+<td>106</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>Methylcyclopentane(g)</td>
+<td>–106.2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>12</sub></td>
+<td>Methylcyclopentane(l)</td>
+<td>–137.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>12</sub>O<sub>2</sub></td>
+<td>Hexanoic acid(l)</td>
+<td>–583.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>12</sub>O<sub>2</sub></td>
+<td>Hexanoic acid(g)</td>
+<td>–511.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>2,2-Dimethylbutane(g)</td>
+<td>–185.9</td>
+<td>–10</td>
+<td>358</td>
+<td>142</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>2,2-Dimethylbutane(l)</td>
+<td>–213.8</td>
+<td></td>
+<td>272.5</td>
+<td>191.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>2-Methylpentane(g)</td>
+<td>–174.6</td>
+<td>–5</td>
+<td>381</td>
+<td>144</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>2-Methylpentane(l)</td>
+<td>–204.6</td>
+<td></td>
+<td>290.6</td>
+<td>193.7</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>3-Methylpentane(g)</td>
+<td>–171.9</td>
+<td>–2</td>
+<td>380</td>
+<td>143</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>3-Methylpentane(l)</td>
+<td>–202.4</td>
+<td></td>
+<td>292.5</td>
+<td>190.7</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>Hexane(l)</td>
+<td>–198.7</td>
+<td></td>
+<td></td>
+<td>195.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>14</sub></td>
+<td>Hexane(g)</td>
+<td>–166.9</td>
+<td>–0.3</td>
+<td>388</td>
+<td>143</td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>14</sub>O</td>
+<td>1-Hexanol(l)</td>
+<td>–377.5</td>
+<td></td>
+<td>287.4</td>
+<td>240.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>14</sub>O</td>
+<td>1-Hexanol(g)</td>
+<td>315.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>6</sub>H<sub>14</sub>O</td>
+<td>2-Hexanol(l)</td>
+<td>–392</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>6</sub>H<sub>14</sub>O</td>
+<td>2-Hexanol(g)</td>
+<td>–333.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>6</sub>O</td>
+<td>Phenol(s)</td>
+<td>–165.1</td>
+<td></td>
+<td>144</td>
+<td>127.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>6</sub>O</td>
+<td>Phenol(g)</td>
+<td>–96.4</td>
+<td>–33</td>
+<td>316</td>
+<td>104</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>8</sub></td>
+<td>Methylbenzene(l)</td>
+<td>12.0</td>
+<td></td>
+<td>220</td>
+<td>156</td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>8</sub></td>
+<td>Methylbenzene(g)</td>
+<td>50.0</td>
+<td>122</td>
+<td>321</td>
+<td>104</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>1-Heptene(l)</td>
+<td>–97.9</td>
+<td></td>
+<td>327.6</td>
+<td>211.8</td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>1-Heptene(g)</td>
+<td>–62.3</td>
+<td>96</td>
+<td>424</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>Cycloheptane(l)</td>
+<td>–156.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>Cycloheptane(g)</td>
+<td>–118.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>Ethylcyclopentane(l)</td>
+<td>–163.4</td>
+<td></td>
+<td>279.9</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>Ethylcyclopentane(g)</td>
+<td>–126.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>Methylcyclohexane(g)</td>
+<td>–154.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>14</sub></td>
+<td>Methylcyclohexane(l)</td>
+<td>–190.1</td>
+<td></td>
+<td></td>
+<td>184.8</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>14</sub>O<sub>2</sub></td>
+<td>Heptanoic acid(l)</td>
+<td>–610.2</td>
+<td></td>
+<td></td>
+<td>265.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>14</sub>O<sub>2</sub></td>
+<td>Heptanoic acid(g)</td>
+<td>–536.2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>2,2-Dimethylpentane(g)</td>
+<td>–205.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>2,2-Dimethylpentane(l)</td>
+<td>–238.3</td>
+<td></td>
+<td>300.3</td>
+<td>221.1</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>2-Methylhexane(g)</td>
+<td>–194.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>2-Methylhexane(l)</td>
+<td>–229.5</td>
+<td></td>
+<td>323.3</td>
+<td>222.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>3-Methylhexane(g)</td>
+<td>–191.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>3-Methylhexane(l)</td>
+<td>–226.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>Heptane(l)</td>
+<td>–224.2</td>
+<td></td>
+<td></td>
+<td>224.7</td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>16</sub></td>
+<td>Heptane(g)</td>
+<td>–187.6</td>
+<td>8</td>
+<td>428</td>
+<td>166</td>
+</tr>
+<tr class="odd">
+<td>C<sub>7</sub>H<sub>16</sub>O</td>
+<td>1-Heptanol(l)</td>
+<td>–403.3</td>
+<td></td>
+<td></td>
+<td>272.1</td>
+</tr>
+<tr class="even">
+<td>C<sub>7</sub>H<sub>16</sub>O</td>
+<td>1-Heptanol(g)</td>
+<td>–336.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>10</sub></td>
+<td>Ethylbenzene(l)</td>
+<td>–12.3</td>
+<td></td>
+<td></td>
+<td>183.2</td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>10</sub></td>
+<td>Ethylbenzene(g)</td>
+<td>29.9</td>
+<td>131</td>
+<td>361</td>
+<td>128</td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>16</sub></td>
+<td>1-Octene(l)</td>
+<td>–124.5</td>
+<td></td>
+<td></td>
+<td>241</td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>16</sub></td>
+<td>1-Octene(g)</td>
+<td>–81.3</td>
+<td>104</td>
+<td>463</td>
+<td>178</td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>16</sub></td>
+<td>Cyclooctane(l)</td>
+<td>–167.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>16</sub></td>
+<td>Cyclooctane(g)</td>
+<td>–124.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>16</sub></td>
+<td>Ethylcyclohexane(l)</td>
+<td>–212.1</td>
+<td></td>
+<td>280.9</td>
+<td>211.8</td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>16</sub></td>
+<td>Ethylcyclohexane(g)</td>
+<td>–171.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>16</sub>O<sub>2</sub></td>
+<td>Octanoic acid(l)</td>
+<td>–636</td>
+<td></td>
+<td></td>
+<td>297.9</td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>16</sub>O<sub>2</sub></td>
+<td>Octanoic acid(g)</td>
+<td>–554.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>18</sub></td>
+<td>2-Methylheptane(g)</td>
+<td>–215.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>18</sub></td>
+<td>2-Methylheptane(l)</td>
+<td>–255</td>
+<td></td>
+<td>356.4</td>
+<td>252</td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>18</sub></td>
+<td>3-Methylheptane(g)</td>
+<td>–212.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>18</sub></td>
+<td>3-Methylheptane(l)</td>
+<td>–252.3</td>
+<td></td>
+<td>362.6</td>
+<td>250.2</td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>18</sub></td>
+<td>Octane(l)</td>
+<td>–250.1</td>
+<td></td>
+<td></td>
+<td>254.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>18</sub></td>
+<td>Octane(g)</td>
+<td>–208.5</td>
+<td>16</td>
+<td>467</td>
+<td>189</td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>18</sub>O</td>
+<td>1-Octanol(l)</td>
+<td>–426.5</td>
+<td></td>
+<td></td>
+<td>305.2</td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>18</sub>O</td>
+<td>1-Octanol(g)</td>
+<td>–355.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>8</sub>H<sub>19</sub></td>
+<td>2,2-Dimethylhexane(g)</td>
+<td>–224.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>8</sub>H<sub>19</sub></td>
+<td>2,2-Dimethylhexane(l)</td>
+<td>–261.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>9</sub>H<sub>18</sub></td>
+<td>Propylcyclohexane(g)</td>
+<td>–192</td>
+<td></td>
+<td>420</td>
+<td>242</td>
+</tr>
+<tr class="even">
+<td>C<sub>9</sub>H<sub>12</sub></td>
+<td>Propylbenzene(g)</td>
+<td>8</td>
+<td>137</td>
+<td>401</td>
+<td>154</td>
+</tr>
+<tr class="odd">
+<td>C<sub>9</sub>H<sub>16</sub></td>
+<td>1-Nonyne(l)</td>
+<td>16.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>9</sub>H<sub>16</sub></td>
+<td>1-Nonyne(g)</td>
+<td>62.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>9</sub>H<sub>18</sub>O<sub>2</sub></td>
+<td>Nonanoic acid(l)</td>
+<td>–659.7</td>
+<td></td>
+<td></td>
+<td>362.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>9</sub>H<sub>18</sub>O<sub>2</sub></td>
+<td>Nonanoic acid(g)</td>
+<td>–577.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>9</sub>H<sub>20</sub></td>
+<td>2,2-Dimethylheptane(g)</td>
+<td>–246</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>9</sub>H<sub>20</sub></td>
+<td>2,2-Dimethylheptane(l)</td>
+<td>–288.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>9</sub>H<sub>20</sub></td>
+<td>Nonane(l)</td>
+<td>–274.7</td>
+<td></td>
+<td></td>
+<td>284.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>9</sub>H<sub>20</sub></td>
+<td>Nonane(g)</td>
+<td>–228.2</td>
+<td>25</td>
+<td>506</td>
+<td>212</td>
+</tr>
+<tr class="odd">
+<td>C<sub>9</sub>H<sub>20</sub>O</td>
+<td>1-Nonanol(l)</td>
+<td>–453.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>9</sub>H<sub>20</sub>O</td>
+<td>1-Nonanol(g)</td>
+<td>–376.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>8</sub></td>
+<td>Naphthalene(g)</td>
+<td>151</td>
+<td>224</td>
+<td>336</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>14</sub></td>
+<td>Butylbenzene(l)</td>
+<td>–63.2</td>
+<td></td>
+<td>321.2</td>
+<td>243.4</td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>14</sub></td>
+<td>Butylbenzene(g)</td>
+<td>–11.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>20</sub></td>
+<td>1-Decene(l)</td>
+<td>–173.8</td>
+<td></td>
+<td>425</td>
+<td>300.8</td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>20</sub></td>
+<td>1-Decene(g)</td>
+<td>–123.3</td>
+<td></td>
+<td></td>
+<td>301</td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>20</sub></td>
+<td>Butylcyclohexane(l)</td>
+<td>–263.1</td>
+<td></td>
+<td>345</td>
+<td>271</td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>20</sub></td>
+<td>Butylcyclohexane(g)</td>
+<td>–213.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>20</sub>O<sub>2</sub></td>
+<td>Decanoic acid(s)</td>
+<td>–713.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>20</sub>O<sub>2</sub></td>
+<td>Decanoic acid(l)</td>
+<td>–684.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>20</sub>O<sub>2</sub></td>
+<td>Decanoic acid(g)</td>
+<td>–594.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>22</sub></td>
+<td>2-Methylnonane(g)</td>
+<td>–260.2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>22</sub></td>
+<td>2-Methylnonane(l)</td>
+<td>–309.8</td>
+<td></td>
+<td>420.1</td>
+<td>313.3</td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>22</sub></td>
+<td>Decane(l)</td>
+<td>–300.9</td>
+<td></td>
+<td></td>
+<td>314.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>22</sub></td>
+<td>Decane(g)</td>
+<td>–249.5</td>
+<td>33</td>
+<td>545</td>
+<td>235</td>
+</tr>
+<tr class="odd">
+<td>C<sub>10</sub>H<sub>22</sub>O</td>
+<td>1-Decanol(l)</td>
+<td>–478.1</td>
+<td></td>
+<td></td>
+<td>370.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>10</sub>H<sub>22</sub>O</td>
+<td>1-Decanol(g)</td>
+<td>–396.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>11</sub>H<sub>10</sub></td>
+<td>1-Methylnaphthalene(l)</td>
+<td>56.3</td>
+<td></td>
+<td>254.8</td>
+<td>224.4</td>
+</tr>
+<tr class="even">
+<td>C<sub>11</sub>H<sub>10</sub></td>
+<td>2-Methylnaphthalene(s)</td>
+<td>44.9</td>
+<td></td>
+<td>220</td>
+<td>196</td>
+</tr>
+<tr class="odd">
+<td>C<sub>11</sub>H<sub>10</sub></td>
+<td>2-Methylnaphthalene(g)</td>
+<td>106.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>11</sub>H<sub>22</sub></td>
+<td>1-Undecene(g)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>344.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>11</sub>H<sub>24</sub></td>
+<td>Undecane(l)</td>
+<td>–327.2</td>
+<td></td>
+<td></td>
+<td>344.9</td>
+</tr>
+<tr class="even">
+<td>C<sub>11</sub>H<sub>24</sub></td>
+<td>Undecane(g)</td>
+<td>–270.8</td>
+<td>42</td>
+<td>584</td>
+<td>257</td>
+</tr>
+<tr class="odd">
+<td>C<sub>11</sub>H<sub>24</sub>O</td>
+<td>1-Undecanol(l)</td>
+<td>–504.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>12</sub>H<sub>24</sub></td>
+<td>1-Dodecene(l)</td>
+<td>–226.2</td>
+<td></td>
+<td>484.8</td>
+<td>360.7</td>
+</tr>
+<tr class="odd">
+<td>C<sub>12</sub>H<sub>24</sub></td>
+<td>1-Dodecene(g)</td>
+<td>–165.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>12</sub>H<sub>24</sub>O<sub>2</sub></td>
+<td>Dodecanoic acid(s)</td>
+<td>–774.6</td>
+<td></td>
+<td></td>
+<td>404.3</td>
+</tr>
+<tr class="odd">
+<td>C<sub>12</sub>H<sub>24</sub>O<sub>2</sub></td>
+<td>Dodecanoic acid(l)</td>
+<td>–737.9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>12</sub>H<sub>24</sub>O<sub>2</sub></td>
+<td>Dodecanoic acid(g)</td>
+<td>642</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>12</sub>H<sub>26</sub></td>
+<td>Dodecane(l)</td>
+<td>–350.9</td>
+<td></td>
+<td></td>
+<td>375.8</td>
+</tr>
+<tr class="even">
+<td>C<sub>12</sub>H<sub>26</sub></td>
+<td>Dodecane(g)</td>
+<td>–289.4</td>
+<td>50</td>
+<td>623</td>
+<td>280</td>
+</tr>
+<tr class="odd">
+<td>C<sub>12</sub>H<sub>26</sub>O</td>
+<td>1-Dodecanol(l)</td>
+<td>–528.5</td>
+<td></td>
+<td></td>
+<td>438.1</td>
+</tr>
+<tr class="even">
+<td>C<sub>12</sub>H<sub>26</sub>O</td>
+<td>1-Dodecanol(g)</td>
+<td>–436.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>14</sub>H<sub>10</sub></td>
+<td>Anthracene(g)</td>
+<td>231</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>14</sub>H<sub>10</sub></td>
+<td>Phenanthrene(g)</td>
+<td>207</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>15</sub>H<sub>30</sub></td>
+<td>Decylcyclopentane(l)</td>
+<td>–367.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>16</sub>H<sub>26</sub></td>
+<td>Decylbenzene(l)</td>
+<td>–218.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>16</sub>H<sub>26</sub></td>
+<td>Decylbenzene(g)</td>
+<td>–138.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>16</sub>H<sub>32</sub></td>
+<td>1-Hexadecene(l)</td>
+<td>–328.7</td>
+<td></td>
+<td>587.9</td>
+<td>488.9</td>
+</tr>
+<tr class="odd">
+<td>C<sub>16</sub>H<sub>32</sub></td>
+<td>1-Hexadecene(g)</td>
+<td>–248.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>16</sub>H<sub>32</sub>O<sub>2</sub></td>
+<td>Hexadecanoic acid(s)</td>
+<td>–891.5</td>
+<td></td>
+<td>452.4</td>
+<td>460.7</td>
+</tr>
+<tr class="odd">
+<td>C<sub>16</sub>H<sub>32</sub>O<sub>2</sub></td>
+<td>Hexadecanoic acid(l)</td>
+<td>–838.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>16</sub>H<sub>32</sub>O<sub>2</sub></td>
+<td>Hexadecanoic acid(g)</td>
+<td>–737.1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>16</sub>H<sub>34</sub></td>
+<td>Hexadecane(l)</td>
+<td>–456.1</td>
+<td></td>
+<td></td>
+<td>501.6</td>
+</tr>
+<tr class="even">
+<td>C<sub>16</sub>H<sub>34</sub></td>
+<td>Hexadecane(g)</td>
+<td>–374.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C<sub>18</sub>H<sub>12</sub></td>
+<td>Chrysene(s)</td>
+<td>145.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>C<sub>18</sub>H<sub>12</sub></td>
+<td>Chrysene(g)</td>
+<td>269.8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+    // section titles with math (e.g., "Temperature Dependence of ΔG") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
+  }).catch(function () {});
+});
+</script>
+<script>
+// Wide screens keep the top bar visible (see quarto.css): measure its height for the sidebar offset.
+(function () {
+  function setHeight() {
+    var h = document.querySelector("#quarto-header");
+    if (h) document.documentElement.style.setProperty("--header-height", h.offsetHeight + "px");
+  }
+  setHeight();
+  window.addEventListener("resize", setHeight);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./15_Kinetics.html" class="pagination-link" aria-label="Chemical Kinetics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>, except third-party images as credited · Scripts: <a href="https://github.com/peverati/pchem1/blob/master/scripts/LICENSE">MIT</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/A1_Appendix.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

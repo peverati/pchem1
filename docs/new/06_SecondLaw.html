@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+
+<title>6&nbsp; Entropy and the Second Law of Thermodynamics – The Live Textbook of Physical Chemistry 1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./07_ThirdLaw.html" rel="next">
+<link href="./05_ThermodynamicCycles.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- MathJax macros used throughout the book (the PDF defines the same macro in _quarto.yml). -->
+<script type="text/javascript">
+window.MathJax = window.MathJax || {};
+window.MathJax.tex = window.MathJax.tex || {};
+window.MathJax.tex.macros = Object.assign(window.MathJax.tex.macros || {}, {
+  standardstate: "{-\\kern-6pt{\\ominus}\\kern-6pt-}"
+});
+</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem1" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem1.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_SecondLaw.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Basis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_FirstLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Thermochemistry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_ThermodynamicCycles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_SecondLaw.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_ThirdLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Potentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Gibbs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gibbs Energy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_ChemicalEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_NonIdealGases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_PhaseEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_MCPhaseDiagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-entropyint" id="toc-sec-entropyint" class="nav-link active" data-scroll-target="#sec-entropyint"><span class="header-section-number">6.1</span> Entropy</a></li>
+  <li><a href="#irreversible-cycles" id="toc-irreversible-cycles" class="nav-link" data-scroll-target="#irreversible-cycles"><span class="header-section-number">6.2</span> Irreversible Cycles</a></li>
+  <li><a href="#sec-secondlaw" id="toc-sec-secondlaw" class="nav-link" data-scroll-target="#sec-secondlaw"><span class="header-section-number">6.3</span> The Second Law of Thermodynamics</a></li>
+  <li><a href="#boltzmann-entropy" id="toc-boltzmann-entropy" class="nav-link" data-scroll-target="#boltzmann-entropy"><span class="header-section-number">6.4</span> Boltzmann Entropy</a>
+  <ul class="collapse">
+  <li><a href="#why-disorder-can-be-misleading" id="toc-why-disorder-can-be-misleading" class="nav-link" data-scroll-target="#why-disorder-can-be-misleading"><span class="header-section-number">6.4.1</span> Why “Disorder” Can Be Misleading</a></li>
+  </ul></li>
+  <li><a href="#sec-rev6" id="toc-sec-rev6" class="nav-link" data-scroll-target="#sec-rev6"><span class="header-section-number">6.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-exer6" id="toc-sec-exer6" class="nav-link" data-scroll-target="#sec-exer6"><span class="header-section-number">6.5.1</span> Practice Problems</a></li>
+  <li><a href="#sec-quest6" id="toc-sec-quest6" class="nav-link" data-scroll-target="#sec-quest6"><span class="header-section-number">6.5.2</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/06_SecondLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-SecondLaw" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In <a href="05_ThermodynamicCycles.html" class="quarto-xref"><span>chapter 5</span></a>, we have discussed heat engines as a means of understanding how some processes are spontaneous while others are not. Carnot’s findings did not just simply inspire Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822–1888) to introduce the concept of entropy.</p>
+<section id="sec-entropyint" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-entropyint"><span class="header-section-number">6.1</span> Entropy</h2>
+<p>Let’s return to the definition of efficiency of a Carnot cycle and bring together <a href="05_ThermodynamicCycles.html#eq-effCC2" class="quarto-xref">eq.&nbsp;<span>5.17</span></a> and <a href="05_ThermodynamicCycles.html#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>5.18</span></a>:</p>
+<p><span id="eq-effcQT"><span class="math display">\[
+\varepsilon = 1+\frac{Q_3}{Q_1} = 1-\frac{T_l}{T_h}.
+\tag{6.1}\]</span></span></p>
+<p>Simplifying this equality, we obtain:</p>
+<p><span id="eq-effcQTrearr"><span class="math display">\[
+\frac{Q_3}{T_l} = -\frac{Q_1}{T_h},
+\tag{6.2}\]</span></span></p>
+<p>or alternatively:</p>
+<p><span id="eq-effcQTrearr2"><span class="math display">\[
+\frac{Q_3}{T_l} + \frac{Q_1}{T_h} = 0.
+\tag{6.3}\]</span></span></p>
+<p>The left hand side of <a href="#eq-effcQTrearr2" class="quarto-xref">eq.&nbsp;<span>6.3</span></a> contains the sum of two quantities around the Carnot cycle, each calculated as <span class="math inline">\(\frac{Q_{\mathrm{REV}}}{T}\)</span>, with <span class="math inline">\(Q_{\mathrm{REV}}\)</span> being the heat exchanged at reversible conditions (recall that according to <a href="05_ThermodynamicCycles.html#def-carnotcycle" class="quarto-xref">Definition&nbsp;<span>5.1</span></a> each transformation in a Carnot cycle is reversible). <a href="#eq-effcQTrearr" class="quarto-xref">Eq.&nbsp;<span>6.2</span></a> can be generalized to a sequence of connected Carnot cycles joining more than two isotherms by taking the summation across different temperatures:</p>
+<p><img src="img/R_06_SecondLaw_1.png" class="img-fluid" style="width:70.0%" alt="Pressure-volume diagram filled with a grid of isotherms and steeper adiabats. A closed, zig-zag black path made only of isotherm and adiabat segments shows that a general cycle can be built from many small Carnot cycles."></p>
+<p><span id="eq-effQrevT"><span class="math display">\[
+\sum_i \frac{Q_{\mathrm{REV}}}{T_i} = 0,
+\tag{6.4}\]</span></span></p>
+<p>where the summation happens across a sequence of Carnot cycles that connects different temperatures. <a href="#eq-effcQTrearr2" class="quarto-xref">Eq.&nbsp;<span>6.3</span></a> and <a href="#eq-effQrevT" class="quarto-xref">eq.&nbsp;<span>6.4</span></a> show that for a Carnot cycle—or a series of connected Carnot cycles—there exists a conserved quantity obtained by dividing the heat associated with each reversible stage by the temperature at which such heat is exchanged. If a quantity is conserved around a cycle, it must be independent of the path, and therefore it is a state function. Looking at similar equations, Clausius introduced in 1865 a new state function in thermodynamics, which he decided to call entropy and indicate with the letter <span class="math inline">\(S\)</span>:</p>
+<div id="def-entropy" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6.1</strong></span> <em>Entropy:</em> <span class="math display">\[
+S = \frac{Q_{\mathrm{REV}}}{T}.
+\]</span></p>
+</div>
+<p>We can use the new state function to generalize <a href="#eq-effQrevT" class="quarto-xref">eq.&nbsp;<span>6.4</span></a> to any reversible cycle in a <span class="math inline">\(PV\)</span>-diagram by using the rules of calculus. First, we will slice <span class="math inline">\(S\)</span> into an infinitesimal quantity:</p>
+<p><span id="eq-dentropy"><span class="math display">\[
+dS = \frac{đQ_{\mathrm{REV}}}{T},
+\tag{6.5}\]</span></span></p>
+<p>then we can extend the summation across temperatures of <a href="#eq-effQrevT" class="quarto-xref">eq.&nbsp;<span>6.4</span></a> to a sum over infinitesimal quantities—that is the integral—around the cycle:</p>
+<p><span id="eq-ds0"><span class="math display">\[
+\oint dS = \oint \frac{đQ_{\mathrm{REV}}}{T} = 0.
+\tag{6.6}\]</span></span></p>
+</section>
+<section id="irreversible-cycles" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="irreversible-cycles"><span class="header-section-number">6.2</span> Irreversible Cycles</h2>
+<p>Up to this point, we have discussed <em>reversible</em> cycles only. Notice that the heat that enters the definition of entropy (<a href="#def-entropy" class="quarto-xref">Definition&nbsp;<span>6.1</span></a>) is the heat exchanged at reversible conditions since it is only at those conditions that the right-hand side of <a href="#eq-dentropy" class="quarto-xref">eq.&nbsp;<span>6.5</span></a> becomes a state function. What happens when we face an irreversible cycle? The efficiency of a Carnot cycle in <a href="05_ThermodynamicCycles.html#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>5.18</span></a> is the maximum efficiency that an idealized thermodynamic cycle can reach. As such, any irreversible cycle will incontrovertibly have an efficiency smaller than the maximum efficiency of the idealized Carnot cycle. Therefore, <a href="#eq-effcQT" class="quarto-xref">eq.&nbsp;<span>6.1</span></a> for an <em>irreversible</em> cycle will not hold anymore and must be rewritten as:</p>
+<p><span id="eq-effcIRR"><span class="math display">\[
+\overbrace{1+\frac{Q_3}{Q_1}}^{\varepsilon_{\mathrm{IRR}}} &lt; \overbrace{1-\frac{T_l}{T_h}}^{\varepsilon_{\mathrm{REV}}},
+\tag{6.7}\]</span></span></p>
+<p>and, following the same procedure used in <a href="#sec-entropyint" class="quarto-xref"><span>section 6.1</span></a>, we can rewrite <a href="#eq-effcIRR" class="quarto-xref">eq.&nbsp;<span>6.7</span></a> as:</p>
+<p><span id="eq-effcIRR2"><span class="math display">\[
+\frac{Q^{\mathrm{IRR}}_3}{Q^{\mathrm{IRR}}_1} &lt; - \frac{T_l}{T_h} \longrightarrow \frac{Q^{\mathrm{IRR}}_3}{T_l} + \frac{Q^{\mathrm{IRR}}_1}{T_h} &lt; 0 \longrightarrow \sum_i \frac{Q_{\mathrm{IRR}}}{T_i} &lt; 0,
+\tag{6.8}\]</span></span></p>
+<p>which can be generalized using calculus to:</p>
+<p><span id="eq-dqirrineq"><span class="math display">\[
+\oint \frac{đQ_{\mathrm{IRR}}}{T} &lt; 0.
+\tag{6.9}\]</span></span></p>
+<p>Putting <a href="#eq-ds0" class="quarto-xref">eq.&nbsp;<span>6.6</span></a> and <a href="#eq-dqirrineq" class="quarto-xref">eq.&nbsp;<span>6.9</span></a> together, we obtain:</p>
+<p><span id="eq-clausiusineq"><span class="math display">\[
+\oint \frac{đQ}{T} \leq 0,
+\tag{6.10}\]</span></span></p>
+<p>where the equal sign holds for reversible transformations exclusively, while the inequality sign holds for irreversible ones. <a href="#eq-clausiusineq" class="quarto-xref">Eq.&nbsp;<span>6.10</span></a> is known as <strong>Clausius inequality</strong>.</p>
+</section>
+<section id="sec-secondlaw" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-secondlaw"><span class="header-section-number">6.3</span> The Second Law of Thermodynamics</h2>
+<p>Now we can consider an isolated system undergoing a cycle composed of an irreversible forward transformation (1 <span class="math inline">\(\rightarrow\)</span> 2) and a reversible backward transformation (2 <span class="math inline">\(\rightarrow\)</span> 1), as in <a href="#fig-FigJexpC2" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>.</p>
+<div id="fig-FigJexpC2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cycle between state 1 (pressure P1, volume V1) and state 2 (pressure P2, volume V2). The top arrow, from 1 to 2, is labeled irreversible and spontaneous with a green check mark. The bottom arrow, from 2 to 1, is labeled reversible and non-spontaneous with a red cross.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigJexpC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.011.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Cycle between state 1 (pressure P1, volume V1) and state 2 (pressure P2, volume V2). The top arrow, from 1 to 2, is labeled irreversible and spontaneous with a green check mark. The bottom arrow, from 2 to 1, is labeled reversible and non-spontaneous with a red cross.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigJexpC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
+</figcaption>
+</figure>
+</div>
+<p>This cycle is similar to the cycle depicted in <a href="05_ThermodynamicCycles.html#fig-FigJexpC" class="quarto-xref">Figure&nbsp;<span>5.1</span></a> for the Joule’s expansion experiment. In this case, we have an intuitive understanding of the spontaneity of the irreversible expansion process, as well as of the non-spontaneity of the backward compression. Since the cycle has at least one irreversible step, it is overall irreversible, and we can calculate:</p>
+<p><span id="eq-qirrcycle"><span class="math display">\[
+\oint \frac{đQ_{\mathrm{IRR}}}{T} = \int_1^2 \frac{đQ_{\mathrm{IRR}}}{T} + \int_2^1 \frac{đQ_{\mathrm{REV}}}{T}.
+\tag{6.11}\]</span></span></p>
+<p>We can then use Clausius inequality (<a href="#eq-clausiusineq" class="quarto-xref">eq.&nbsp;<span>6.10</span></a>) to write:</p>
+<p><span id="eq-qirrcycle1"><span class="math display">\[
+\begin{aligned}
+\int_1^2 \frac{đQ_{\mathrm{IRR}}}{T} + \int_2^1 \frac{đQ_{\mathrm{REV}}}{T} &lt; 0,
+\end{aligned}
+\tag{6.12}\]</span></span></p>
+<p>which can be rearranged as:</p>
+<p><span id="eq-qirrcycle2"><span class="math display">\[
+\underbrace{\int_1^2 \frac{đQ_{\mathrm{REV}}}{T}}_{\int_1^2 dS = \Delta S} &gt; \underbrace{\int_1^2 \frac{đQ_{\mathrm{IRR}}}{T}}_{=0},
+\tag{6.13}\]</span></span></p>
+<p>where we have used the fact that, for an isolated system (the universe), <span class="math inline">\(đQ_{\mathrm{IRR}}=0\)</span>. <a href="#eq-qirrcycle2" class="quarto-xref">Eq.&nbsp;<span>6.13</span></a> can be rewritten as:</p>
+<p><span id="eq-secondlaweq"><span class="math display">\[
+\Delta S &gt; 0,
+\tag{6.14}\]</span></span></p>
+<p>which proves that for any irreversible process in an isolated system, the entropy is increasing. Using <a href="#eq-secondlaweq" class="quarto-xref">eq.&nbsp;<span>6.14</span></a> and considering that the only system that is truly isolated is the universe, we can write a concise statement for a new fundamental law of thermodynamics:</p>
+<div id="def-secondlawdef" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6.2</strong></span> <em>Second Law of Thermodynamics:</em> for any spontaneous process, the entropy of the universe is increasing.</p>
+</div>
+</section>
+<section id="boltzmann-entropy" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="boltzmann-entropy"><span class="header-section-number">6.4</span> Boltzmann Entropy</h2>
+<p>Earlier in this chapter, we introduced Clausius’s entropy to describe how heat and work interact in macroscopic systems, and we saw how entropy increases in isolated systems, with this increase being linked to irreversibility and the second law of thermodynamics. From this perspective, entropy is a tool that explains how energy transformations behave, and what limits the efficiency of those processes. However, in order to connect the molecular behaviors that chemistry describes with the macroscopic laws of thermodynamics, we need to explore what entropy really <em>is</em>. To do this, we need to dive into the microscopic world, where entropy is interpreted in terms of the underlying microstates that define the system.</p>
+<p>This exploration of entropy from a microscopic perspective was pioneered by Ludwig Eduard Boltzmann (1844–1906), who introduced a formula to describe a statistical concept, which he then linked to Clausius’s thermodynamic entropy. The microscopic definition of Boltzmann’s entropy is summarized in the formula that became famous as the Boltzmann equation:</p>
+<p><span id="eq-boltzmanneq"><span class="math display">\[
+S = k_B \ln \Omega,
+\tag{6.15}\]</span></span></p>
+<p>where <span class="math inline">\(S\)</span> is the entropy, <span class="math inline">\(k_B\)</span> is the Boltzmann constant, <span class="math inline">\(k_B = R/N_A = 1.380649 \times 10^{-23} \, \text{J/K}\)</span>, where <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(N_A\)</span> Avogadro’s constant, and finally <span class="math inline">\(\Omega\)</span> is the multiplicity of the system (that is, the number of possible microstates that correspond to a given macrostate). Boltzmann equation tells us that this statistical form of entropy is directly related to the number of microscopic configurations (microstates) available to a system. More microstates mean more entropy. The logarithmic relationship ensures that entropy scales appropriately with the size of the system and that small changes in the number of microstates lead to measurable changes in entropy. It is important to notice that the microscopic statistical entropy of Boltzmann is, in principle, a different concept than the macroscopic thermodynamic entropy of Clausius. The beauty of Boltzmann equation is that it shows how these two concepts are connected with each other. In particular, the key role in the equation is played by the Boltzmann constant, which is the proportionality factor between the two concepts of entropy. This constant is a fundamental constant of nature at the microscopic level, relating the thermal energy of a gas with its temperature. At the macroscopic level, however, it can be obtained simply from the ideal gas law as:</p>
+<p><span id="eq-stat2"><span class="math display">\[
+k_B = \frac{PV}{TN},
+\tag{6.16}\]</span></span></p>
+<p>with <span class="math inline">\(N=nN_A\)</span> being the number of molecules in a system.</p>
+<p>The second key concept in the Boltzmann equation is that the state of a system at the microscopic level is described by a <strong>microstate</strong>. A microstate specifies the exact arrangement of each particle in the system, including their positions and momenta. For example, in an ideal gas, a microstate would tell us the precise position and velocity of every individual gas molecule at a given moment. In contrast, a <strong>macrostate</strong> describes the system using macroscopic variables like pressure, temperature, and volume. A single macrostate can correspond to a large number of different microstates, since there are many ways the particles can be arranged that result in the same overall macroscopic properties.</p>
+<p>The <strong>multiplicity</strong> of a system, denoted by <span class="math inline">\(\Omega\)</span>, is the number of distinct microstates that correspond to a given macrostate. Systems naturally evolve toward macrostates with higher multiplicities because these are more probable. In other words, a system is more likely to be found in a macrostate that is associated with a high number of possible microstates, simply because there are more ways to arrange the particles. Consider an example where a gas expands into a larger volume. Initially, the particles are confined to a smaller volume, which corresponds to a relatively small number of microstates. When the gas expands, the particles have more space to occupy, leading to a greater number of possible microstates. As a result, the multiplicity <span class="math inline">\(\Omega\)</span> increases, and so does the entropy.</p>
+<p>Boltzmann equation gives us a powerful tool to link the macroscopic behavior of a system (entropy) to the microscopic behavior of its individual particles (microstates). The more microstates available to the system, the higher the entropy. Systems naturally evolve toward macrostates with the highest multiplicity (i.e., the largest number of microstates), which explains why entropy tends to increase in isolated systems, as stated by the second law of thermodynamics.</p>
+<section id="why-disorder-can-be-misleading" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="why-disorder-can-be-misleading"><span class="header-section-number">6.4.1</span> Why “Disorder” Can Be Misleading</h3>
+<p>As first shown by Boltzmann himself, although thermodynamic entropy and statistical entropy arise from different perspectives, they describe the same underlying reality. One common misconception about entropy is that it is simply a measure of “disorder.” While there is some truth to this idea, it can be misleading. A more accurate description of entropy is that it measures the number of possible ways a system can be arranged, which corresponds to the amount of “information” needed to describe the system at the microscopic level. For example, when ice melts into water, the entropy of the system increases, but the resulting liquid is not necessarily more “disordered” than the solid ice. Instead, the liquid has more possible microstates, as the water molecules can move more freely compared to the fixed structure of ice. While we would be able to describe the solid macrostate using a small number of microstates (in principle the number of microstates for a solid could be even as small as one), we would always need many more microstates to describe the liquid one. The common misconception of a messy room having more entropy than a tidier one is indeed a mistake, as entropy (at least the thermodynamic entropy that we are discussing here) doesn’t play a role in either of these situations. If we want to stretch the analogy and treat objects in a room the same way we treat particles in a system, the analogy also doesn’t work, as both the messy room and the tidy one represent only one way of arranging the objects in the room (a microstate), so the entropy is zero for both, since <span class="math inline">\(S=k_B \ln(1)=0\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+</section>
+<section id="sec-rev6" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="sec-rev6"><span class="header-section-number">6.5</span> Chapter Review</h2>
+<section id="sec-exer6" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="sec-exer6"><span class="header-section-number">6.5.1</span> Practice Problems</h3>
+<p><strong>Problem 1: Efficiency of an Irreversible Cycle</strong></p>
+<p>An irreversible heat engine operates between reservoirs at <span class="math inline">\(600\,\text{K}\)</span> and <span class="math inline">\(300\,\text{K}\)</span>. If its efficiency is 80% of the maximum possible efficiency, calculate its actual efficiency.</p>
+<p><strong>Solution:</strong> The maximum possible efficiency is that of a Carnot cycle:</p>
+<p><span class="math display">\[\varepsilon_{\text{max}} = 1 - \frac{T_l}{T_h} = 1 - \frac{300\,\text{K}}{600\,\text{K}} = 0.5\]</span></p>
+<p>The actual efficiency for this cycle is 80% of the maximum one:</p>
+<p><span class="math display">\[\varepsilon_{\text{actual}} = 0.8 \cdot \varepsilon_{\text{max}} = 0.8 \cdot 0.5 = 0.4\]</span></p>
+<p><strong>Answer:</strong> The actual efficiency of the irreversible heat engine is 0.4 or 40%.</p>
+<hr>
+<p><strong>Problem 2: Calculating Heat Rejected in a Carnot Cycle</strong></p>
+<p>A Carnot engine operates between a hot reservoir at <span class="math inline">\(400\,\text{K}\)</span> and a cold reservoir at <span class="math inline">\(300\,\text{K}\)</span>. The engine absorbs <span class="math inline">\(1000\,\text{J}\)</span> of heat from the hot reservoir. Calculate the heat rejected to the cold reservoir.</p>
+<p><strong>Solution:</strong> For a Carnot cycle, we can use the equation:</p>
+<p><span class="math display">\[\frac{Q_h}{T_h} + \frac{Q_l}{T_l} = 0\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(Q_h\)</span> = <span class="math inline">\(1000\,\text{J}\)</span></p>
+<p><span class="math inline">\(T_h\)</span> = <span class="math inline">\(400\,\text{K}\)</span></p>
+<p><span class="math inline">\(T_l\)</span> = <span class="math inline">\(300\,\text{K}\)</span></p>
+<p>Then:</p>
+<p><span class="math display">\[\frac{1000\,\text{J}}{400\,\text{K}} + \frac{Q_l}{300\,\text{K}} = 0\]</span></p>
+<p><span class="math display">\[2.5\,\frac{\text{J}}{\text{K}} + \frac{Q_l}{300\,\text{K}} = 0\]</span></p>
+<p><span class="math display">\[\frac{Q_l}{300\,\text{K}} = -2.5\,\frac{\text{J}}{\text{K}}\]</span></p>
+<p><span class="math display">\[Q_l = -2.5\,\frac{\text{J}}{\text{K}} \cdot 300\,\text{K} = -750\,\text{J}\]</span></p>
+<p><strong>Answer:</strong> The heat rejected to the cold reservoir is <span class="math inline">\(-750\,\text{J}\)</span>. The negative sign indicates that heat is leaving the system.</p>
+</section>
+<section id="sec-quest6" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="sec-quest6"><span class="header-section-number">6.5.2</span> Study Questions</h3>
+<p><strong>1. What concept did Rudolf Clausius introduce inspired by Carnot’s findings?</strong></p>
+<ol type="a">
+<li>Efficiency.</li>
+<li>Entropy.</li>
+<li>Heat engines.</li>
+<li>Reversibility.</li>
+<li>Adiabatic processes.</li>
+</ol>
+<hr>
+<p><strong>2. In the definition of entropy, what does <span class="math inline">\(Q_{\mathrm{REV}}\)</span> represent?</strong></p>
+<ol type="a">
+<li>Heat lost to the surroundings.</li>
+<li>Heat exchanged at irreversible conditions.</li>
+<li>Total heat of the system.</li>
+<li>Heat capacity of the system.</li>
+<li>Heat exchanged at reversible conditions.</li>
+</ol>
+<hr>
+<p><strong>3. Which of the following correctly defines entropy according to Clausius?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(S = \frac{Q_{\mathrm{REV}}}{T}\)</span>.</li>
+<li><span class="math inline">\(S = \frac{Q_{\mathrm{IRR}}}{T}\)</span>.</li>
+<li><span class="math inline">\(S = Q_{\mathrm{REV}} \cdot T\)</span>.</li>
+<li><span class="math inline">\(S = Q_{\mathrm{IRR}} \cdot T\)</span>.</li>
+<li><span class="math inline">\(S = \frac{T}{Q_{\mathrm{REV}}}\)</span>.</li>
+</ol>
+<hr>
+<p><strong>4. Which of the following is the correct expression for the Clausius inequality?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\oint \frac{đQ}{T} &gt; 0\)</span>.</li>
+<li><span class="math inline">\(\oint \frac{đQ}{T} \geq 0\)</span>.</li>
+<li><span class="math inline">\(\oint \frac{đQ}{T} = 0\)</span>.</li>
+<li><span class="math inline">\(\oint \frac{đQ}{T} \leq 0\)</span>.</li>
+<li><span class="math inline">\(\oint \frac{đQ}{T} &lt; 0\)</span>.</li>
+</ol>
+<hr>
+<p><strong>5. For an irreversible cycle, which of the following is true?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\sum_i \frac{Q_{\mathrm{IRR}}}{T_i} &lt; 0\)</span>.</li>
+<li><span class="math inline">\(\sum_i \frac{Q_{\mathrm{IRR}}}{T_i} &gt; 0\)</span>.</li>
+<li><span class="math inline">\(\sum_i \frac{Q_{\mathrm{IRR}}}{T_i} = 0\)</span>.</li>
+<li><span class="math inline">\(\sum_i \frac{Q_{\mathrm{IRR}}}{T_i} \geq 0\)</span>.</li>
+<li><span class="math inline">\(\sum_i \frac{Q_{\mathrm{IRR}}}{T_i} \leq 0\)</span>.</li>
+</ol>
+<hr>
+<p><strong>6. What is the Second Law of Thermodynamics as stated in the text?</strong></p>
+<ol type="a">
+<li>For any spontaneous process, the energy of the universe is increasing.</li>
+<li>For any spontaneous process, the energy of the universe is conserved.</li>
+<li>For any spontaneous process, the entropy of the universe is increasing.</li>
+<li>For any spontaneous process, the entropy of the universe is decreasing.</li>
+<li>For any spontaneous process, the entropy of the universe remains constant.</li>
+</ol>
+<hr>
+<p><strong>7. What is the significance of the quantity <span class="math inline">\(\frac{Q_{\mathrm{REV}}}{T}\)</span> in a Carnot cycle?</strong></p>
+<ol type="a">
+<li>It represents the total work done by the system.</li>
+<li>It is a conserved quantity.</li>
+<li>It is always increasing.</li>
+<li>It represents the heat capacity of the system.</li>
+<li>It is always decreasing.</li>
+</ol>
+<hr>
+<p><strong>8. Which system is the only one that can be considered truly isolated?</strong></p>
+<ol type="a">
+<li>The universe.</li>
+<li>A perfect heat engine.</li>
+<li>A closed thermodynamic system.</li>
+<li>An adiabatic process.</li>
+<li>A reversible cycle.</li>
+</ol>
+<hr>
+<p><strong>9. What is the relationship between the efficiency of an irreversible cycle (<span class="math inline">\(\varepsilon_{\text{IRR}}\)</span>) and the efficiency of a Carnot cycle (<span class="math inline">\(\varepsilon_{\text{REV}}\)</span>)?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\varepsilon_{\text{IRR}} &lt; \varepsilon_{\text{REV}}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon_{\text{IRR}} &gt; \varepsilon_{\text{REV}}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon_{\text{IRR}} = \varepsilon_{\text{REV}}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon_{\text{IRR}} \geq \varepsilon_{\text{REV}}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon_{\text{IRR}} \leq \varepsilon_{\text{REV}}\)</span>.</li>
+</ol>
+<hr>
+<p><strong>10. For a reversible cycle, what is true about the integral of <span class="math inline">\(\frac{đQ_{\mathrm{REV}}}{T}\)</span> around the cycle?</strong></p>
+<ol type="a">
+<li>It is greater than zero.</li>
+<li>It is less than zero.</li>
+<li>It equals zero.</li>
+<li>It approaches infinity.</li>
+<li>It approaches negative infinity.</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.b, 2.e, 3.a, 4.d, 5.a, 6.c, 7.b, 8.a, 9.a, 10.c</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>If we really want to use this analogy, then a better version would be that of a hotel with identical rooms containing the same objects. The configuration of all unmade rooms in the morning has a higher entropy than the configuration of the same rooms after the housekeepers have arranged all the objects in every room exactly the same way.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+    // section titles with math (e.g., "Temperature Dependence of ΔG") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
+  }).catch(function () {});
+});
+</script>
+<script>
+// Wide screens keep the top bar visible (see quarto.css): measure its height for the sidebar offset.
+(function () {
+  function setHeight() {
+    var h = document.querySelector("#quarto-header");
+    if (h) document.documentElement.style.setProperty("--header-height", h.offsetHeight + "px");
+  }
+  setHeight();
+  window.addEventListener("resize", setHeight);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./05_ThermodynamicCycles.html" class="pagination-link" aria-label="Thermodynamic Cycles">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./07_ThirdLaw.html" class="pagination-link" aria-label="Calculation of Entropy and the Third Law of Thermodynamics">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>, except third-party images as credited · Scripts: <a href="https://github.com/peverati/pchem1/blob/master/scripts/LICENSE">MIT</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/06_SecondLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
