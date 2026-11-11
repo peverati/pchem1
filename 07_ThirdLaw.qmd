@@ -17,7 +17,7 @@ d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}}.
 $$ {#eq-dsunivd}
 
 ## Calculation of $\Delta S^{\mathrm{sys}}$ {#sec-dssys}
-In general $\Delta S^{\mathrm{sys}}$ can be calculated using either its definition, @def-entropy, or its differential formula, @eq-dentropy. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example: 
+In general $\Delta S^{\mathrm{sys}}$ can be calculated from its definition, @def-entropy, integrated along a reversible path, @eq-dentropyint. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example: 
 
 $$
 \begin{aligned}
