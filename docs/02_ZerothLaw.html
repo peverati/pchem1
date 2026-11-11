@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+
+<title>2&nbsp; Zeroth Law of Thermodynamics – The Live Textbook of Physical Chemistry 1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03_FirstLaw.html" rel="next">
+<link href="./01_Basis.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- MathJax macros used throughout the book (the PDF defines the same macro in _quarto.yml). -->
+<script type="text/javascript">
+window.MathJax = window.MathJax || {};
+window.MathJax.tex = window.MathJax.tex || {};
+window.MathJax.tex.macros = Object.assign(window.MathJax.tex.macros || {}, {
+  standardstate: "{-\\kern-6pt{\\ominus}\\kern-6pt-}"
+});
+</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem1" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem1.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_ZerothLaw.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Basis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_FirstLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Thermochemistry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_ThermodynamicCycles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_SecondLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_ThirdLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Potentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Gibbs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gibbs Energy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_ChemicalEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_NonIdealGases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_PhaseEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_MCPhaseDiagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-thermodynamics" id="toc-what-is-thermodynamics" class="nav-link active" data-scroll-target="#what-is-thermodynamics"><span class="header-section-number">2.1</span> What is Thermodynamics?</a></li>
+  <li><a href="#the-zeroth-law-of-thermodynamics" id="toc-the-zeroth-law-of-thermodynamics" class="nav-link" data-scroll-target="#the-zeroth-law-of-thermodynamics"><span class="header-section-number">2.2</span> The Zeroth Law of Thermodynamics</a></li>
+  <li><a href="#sec-heatint" id="toc-sec-heatint" class="nav-link" data-scroll-target="#sec-heatint"><span class="header-section-number">2.3</span> Calculation of Heat</a>
+  <ul class="collapse">
+  <li><a href="#processes-at-constant-volume-isochoric" id="toc-processes-at-constant-volume-isochoric" class="nav-link" data-scroll-target="#processes-at-constant-volume-isochoric"><span class="header-section-number">2.3.1</span> Processes at constant volume (isochoric)</a></li>
+  <li><a href="#sec-heatconstp" id="toc-sec-heatconstp" class="nav-link" data-scroll-target="#sec-heatconstp"><span class="header-section-number">2.3.2</span> Processes at constant pressure (isobaric)</a></li>
+  </ul></li>
+  <li><a href="#sec-workint" id="toc-sec-workint" class="nav-link" data-scroll-target="#sec-workint"><span class="header-section-number">2.4</span> Calculation of Work</a>
+  <ul class="collapse">
+  <li><a href="#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" id="toc-w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="nav-link" data-scroll-target="#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+  </ul></li>
+  <li><a href="#sec-rev2" id="toc-sec-rev2" class="nav-link" data-scroll-target="#sec-rev2"><span class="header-section-number">2.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-exer2" id="toc-sec-exer2" class="nav-link" data-scroll-target="#sec-exer2"><span class="header-section-number">2.5.1</span> Practice Problems</a></li>
+  <li><a href="#sec-quest2" id="toc-sec-quest2" class="nav-link" data-scroll-target="#sec-quest2"><span class="header-section-number">2.5.2</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/02_ZerothLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-ZerothLaw" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-is-thermodynamics" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="what-is-thermodynamics"><span class="header-section-number">2.1</span> What is Thermodynamics?</h2>
+<p>Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. As the definition suggests, thermodynamics is concerned with two types of energy: heat and work. A formal definition of these forms of energy is as follows:</p>
+<ul>
+<li>Work is exchanged if external parameters are changed during the process.</li>
+<li>Heat is exchanged if only internal parameters are changed during the process.</li>
+</ul>
+<p>As we saw in <a href="01_Basis.html" class="quarto-xref"><span>chapter 1</span></a>, heat and work are not “well-behaved” quantities because they are path functions. While it might be simple to measure the amount of heat and/or work experimentally, these measured quantities cannot be used to define the state of a system. Since heat and work are path functions, their values depend directly on the methods used to transfer them (their paths). Understanding and quantifying these energy transfers is the reason why thermodynamics was developed in the first place. The origin of thermodynamics dates back to the seventeenth century when people began to use heat and work for technological applications. These early scientists needed a mathematical tool to understand how heat and work were related to each other, and how they were related to the other variables that they were able to measure, such as temperature and volume.</p>
+<p>Before we even discuss the definition of energy and how it relates to heat and work, it is crucial to introduce the essential concept of temperature. Temperature is an intuitive concept that has a surprisingly complex definition at the microscopic level.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> However, for all our purposes, it is not essential to have a microscopic definition of temperature, as long as we have the guarantee that this quantity can be measured unambiguously. In other words, we only need a mathematical definition of temperature that agrees with the physical existence of thermometers.</p>
+</section>
+<section id="the-zeroth-law-of-thermodynamics" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-zeroth-law-of-thermodynamics"><span class="header-section-number">2.2</span> The Zeroth Law of Thermodynamics</h2>
+<p>The mathematical definition that guarantees that thermal equilibrium is an equivalence relation is called the zeroth law of thermodynamics. The zeroth law of thermodynamics states that if two thermodynamic systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other. The law might appear trivial and possibly redundant, but it is a fundamental requirement for the mathematical formulation of thermodynamics, so it needs to be stated. The zeroth law can be summarized by the following simple mathematical relation:</p>
+<div id="def-zerothlaw" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.1</strong></span> <em>Zeroth Law of Thermodynamics:</em> If <span class="math inline">\(T_A = T_B\)</span>, and <span class="math inline">\(T_B = T_C\)</span>, then <span class="math inline">\(T_A = T_C\)</span>.</p>
+</div>
+<p>Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at <span class="math inline">\(P=1\;\mathrm{bar}\)</span>. Its temperature, <span class="math inline">\(T_{H_2O}\)</span>, is about 373 K. Let’s now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature <span class="math inline">\(T_W = T_{H_2O}\)</span>. Similarly, the metal coin will also be in thermal equilibrium with the water, hence <span class="math inline">\(T_M = T_{H_2O}\)</span>. According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same <span class="math inline">\(T_W = T_M = 373\;\mathrm{K}\)</span>, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will feel just warm, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.</p>
+</section>
+<section id="sec-heatint" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-heatint"><span class="header-section-number">2.3</span> Calculation of Heat</h2>
+<p>Heat (<span class="math inline">\(Q\)</span>) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because <em>heat is a path function</em>. As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in <span class="math inline">\(\frac{\text{J}}{\text{mol K}}\)</span>. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.</p>
+<section id="processes-at-constant-volume-isochoric" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="processes-at-constant-volume-isochoric"><span class="header-section-number">2.3.1</span> Processes at constant volume (isochoric)</h3>
+<p>The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recalling from general chemistry, the molar heat capacity at constant volume has the following formal definition:</p>
+<blockquote class="blockquote">
+<p>The molar heat capacity at constant volume is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</p>
+</blockquote>
+<p>This is a procedural definition that defines how we can measure <span class="math inline">\(C_V\)</span> in practice. While this procedure is useful in laboratory settings and in introductory chemistry courses, we need to go beyond it to understand its origin and its meaning. Have you ever wondered why you need to increase the temperature by 1 K? What if you want to increase it by 2? Or 1/2, or 1/1000? Also, the definition is highly imprecise, as there certainly has to be a difference when we increase the temperature of a substance from 1 K to 2 K, to when we increase it from 1001 K to 1002 K. Those situations certainly cannot lead to the same results. How are we going to circumvent this poor definition? We need to apply calculus to remove those arbitrary units and arbitrary increments (remember that differentials are all the same size, and unitless):</p>
+<p><span id="eq-Cvdef"><span class="math display">\[
+C_V = \frac{đ Q_V}{n dT} \Rightarrow đ Q_V = n C_V dT.
+\tag{2.1}\]</span></span></p>
+<p>This new differential definition of <span class="math inline">\(C_V\)</span> is independent of the unit we use to measure it, and does not require a procedural definition. Given a known value of <span class="math inline">\(C_V\)</span>, the amount of heat that gets transferred can be easily calculated by measuring the changes in temperature, after integration of <a href="#eq-Cvdef" class="quarto-xref">eq.&nbsp;<span>2.1</span></a>:</p>
+<p><span id="eq-Cvint1"><span class="math display">\[
+đ Q_V = n C_V dT \rightarrow \int đ Q_V = n \int_{T_i}^{T_f}C_V dT \rightarrow Q_V = n C_V \int_{T_i}^{T_f}dT,
+\tag{2.2}\]</span></span></p>
+<p>which, assuming <span class="math inline">\(C_V\)</span> independent of temperature, simply becomes:</p>
+<p><span id="eq-Cvint"><span class="math display">\[
+Q_V \cong n C_V \Delta T.
+\tag{2.3}\]</span></span></p>
+</section>
+<section id="sec-heatconstp" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-heatconstp"><span class="header-section-number">2.3.2</span> Processes at constant pressure (isobaric)</h3>
+<p>Similarly to the previous case, the heat capacity at constant pressure measures the ability of a substance to absorb heat at constant pressure. Recalling again from general chemistry:</p>
+<blockquote class="blockquote">
+<p>The molar heat capacity at constant pressure is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</p>
+</blockquote>
+<p>And once again, applying calculus to obtain a differential definition of <span class="math inline">\(C_P\)</span>, we get:</p>
+<p><span id="eq-Cpdef"><span class="math display">\[
+C_P = \frac{đ Q_P}{n dT} \Rightarrow đ Q_P = n C_P dT \rightarrow \int đ Q_P = n \int_{T_i}^{T_f}C_P dT,
+\tag{2.4}\]</span></span></p>
+<p>which results in the simple formula:</p>
+<p><span id="eq-Cpint"><span class="math display">\[
+Q_P \cong n C_P \Delta T.
+\tag{2.5}\]</span></span></p>
+</section>
+</section>
+<section id="sec-workint" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-workint"><span class="header-section-number">2.4</span> Calculation of Work</h2>
+<p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
+<div id="fig-Fig2c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Beaker closed by a movable piston. The gas inside pushes on the piston with pressure P from below, while the external pressure pushes down from above. The piston rises from an initial position i to a final position f, a total height h obtained by summing the small displacements dh.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig2c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.004.jpeg" class="img-fluid figure-img" style="width:50.0%" alt="Beaker closed by a movable piston. The gas inside pushes on the piston with pressure P from below, while the external pressure pushes down from above. The piston rises from an initial position i to a final position f, a total height h obtained by summing the small displacements dh.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig2c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.
+</figcaption>
+</figure>
+</div>
+<p>Let’s consider the situation in <a href="#fig-Fig2c3" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>, where a special beaker with a piston that is free to move is filled with an ideal gas. The beaker sits on a desk, so the piston is not subject to any external forces other than the external pressure, <span class="math inline">\(P_{\text{ext}}\)</span>, and the internal pressure of the gas, <span class="math inline">\(P\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The piston is initially compressed to a position that is not in equilibrium <span class="math inline">\((i)\)</span>. After the process, the piston reaches a final equilibrium position <span class="math inline">\((f)\)</span>. How do we calculate the work (<span class="math inline">\(W\)</span>) performed by the system?</p>
+<p>From basic physics, we recall that the infinitesimal amount of work associated with an object moving in space is given by the force acting on the object (<span class="math inline">\(F\)</span>) multiplied by the infinitesimal amount it gets displaced (<span class="math inline">\(d h\)</span>):</p>
+<p><span id="eq-Wphysics"><span class="math display">\[
+đ W = - Fdh,
+\tag{2.6}\]</span></span></p>
+<p>where the negative sign comes from the chemistry sign convention, <a href="01_Basis.html#def-chemistryconv" class="quarto-xref">Definition&nbsp;<span>1.1</span></a>, since the work in <a href="#fig-Fig2c3" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> is <em>performed</em> by the system (expansion). What kind of force is moving the piston? It is the force due to the pressure of the gas. Relying upon another definition from physics, the pressure is the ratio between the force (<span class="math inline">\(F\)</span>) and the area (<span class="math inline">\(A\)</span>) that such force acts upon:</p>
+<p><span id="eq-Pphysics"><span class="math display">\[
+P = F/A.
+\tag{2.7}\]</span></span></p>
+<p>Obtaining <span class="math inline">\(F\)</span> from <a href="#eq-Pphysics" class="quarto-xref">eq.&nbsp;<span>2.7</span></a> and replacing it in <a href="#eq-Wphysics" class="quarto-xref">eq.&nbsp;<span>2.6</span></a>, we obtain:</p>
+<p><span id="eq-Wphysics2"><span class="math display">\[
+đ W = - P \underbrace{Adh}_{dV},
+\tag{2.8}\]</span></span></p>
+<p>and considering that <span class="math inline">\(Adh\)</span> (area times infinitesimal height) is the definition of an infinitesimal volume <span class="math inline">\(dV\)</span>, we obtain:</p>
+<p><span id="eq-Wdef"><span class="math display">\[
+đ W = - PdV,
+\tag{2.9}\]</span></span></p>
+<p>If we want to calculate the amount of work performed by a system, <span class="math inline">\(W\)</span>, from <a href="#eq-Wdef" class="quarto-xref">eq.&nbsp;<span>2.9</span></a>, we need to recall that <span class="math inline">\(đ W\)</span> is an inexact differential. As such, we cannot integrate it from initial to final as for the (exact) differential of a state function, because:</p>
+<p><span id="eq-Wdiff"><span class="math display">\[
+\int_{i}^{f}đ W \neq W_f - W_i,
+\tag{2.10}\]</span></span></p>
+<p>but rather:</p>
+<p><span id="eq-Wdiff2"><span class="math display">\[
+\int_{\text{path}} đ W = W,
+\tag{2.11}\]</span></span></p>
+<p>where the integration is performed along the <em>path</em>. Using <a href="#eq-Wdiff2" class="quarto-xref">eq.&nbsp;<span>2.11</span></a>, we can integrate <a href="#eq-Wdef" class="quarto-xref">eq.&nbsp;<span>2.9</span></a> as:</p>
+<p><span id="eq-Wint"><span class="math display">\[
+\int đ W = W = - \int_{i}^{f} PdV,
+\tag{2.12}\]</span></span></p>
+<p>where the integral on the left-hand side is taken along the path,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(V\)</span> is a state function. How do we solve the integral in <a href="#eq-Wint" class="quarto-xref">eq.&nbsp;<span>2.12</span></a>? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.</p>
+<section id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</h3>
+<p>At constant temperature, the piston in <a href="#fig-Fig2c3" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> moves along the following PV diagram (this curve is obtained from an ideal gas at constant <span class="math inline">\(T=298\)</span> K):</p>
+<p><img src="img/R_02_ZerothLaw_1.png" class="img-fluid" style="width:70.0%" alt="Pressure-volume plot of an ideal-gas isotherm at 298 K, a curve that falls as volume increases. Two points are marked: the initial state i at small volume and high pressure, and the final state f at about 1 L and low pressure, with dotted lines to their pressures and volumes."></p>
+<p>An expansion of the gas will happen between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example <span class="math inline">\(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)</span>), and solve the integral as:</p>
+<p><span id="eq-Wint3"><span class="math display">\[
+W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i).
+\tag{2.13}\]</span></span></p>
+<p>Notice how the work is negative, since during an expansion the work is performed by the system (recall the chemistry sign convention). The absolute value of the work<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> represents the red area of the PV-diagram:</p>
+<p><img src="img/R_02_ZerothLaw_2.png" class="img-fluid" style="width:70.0%" alt="Same isotherm with the initial and final states. A red hatched rectangle under the final pressure, from the initial to the final volume, represents the work of a one-step expansion, equal to the final pressure times the volume change."></p>
+<p><span id="eq-Warea1"><span class="math display">\[
+\left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i)
+\tag{2.14}\]</span></span></p>
+<p>If the process happens in two steps by pausing at an intermediate position (1) until equilibrium is reached, then we should calculate the work by dividing it into two separate processes, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, and solve each one as we did in the previous case. The first process is an expansion between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_1\)</span>, with <span class="math inline">\(P_1\)</span> constant. The absolute value of the work, <span class="math inline">\(W_A\)</span>, is represented by the blue area:</p>
+<p><img src="img/R_02_ZerothLaw_3.png" class="img-fluid" style="width:70.0%" alt="Same isotherm with an intermediate state 1 between the initial and final states. A blue hatched rectangle under the intermediate pressure, from the initial volume to the intermediate volume, represents the work of the first step of a two-step expansion."></p>
+<p><span id="eq-Warea2"><span class="math display">\[
+\left| W_A \right| = P_1 (V_1-V_i)
+\tag{2.15}\]</span></span></p>
+<p>The second process is an expansion between <span class="math inline">\(P_1\)</span> and <span class="math inline">\(P_f\)</span>, with <span class="math inline">\(P_f=P_{\text{ext}}\)</span> constant. The absolute value of the work for this second process is represented by the green area:</p>
+<p><img src="img/R_02_ZerothLaw_4.png" class="img-fluid" style="width:70.0%" alt="Same isotherm with the intermediate state 1. A green hatched rectangle under the final pressure, from the intermediate volume to the final volume, represents the work of the second step of a two-step expansion."></p>
+<p><span id="eq-Warea3"><span class="math display">\[
+\left| W_B \right| = P_f (V_f-V_1)
+\tag{2.16}\]</span></span></p>
+<p>The total absolute value of the work for the 2-step process is given by the sum of the two areas:</p>
+<p><img src="img/R_02_ZerothLaw_5.png" class="img-fluid" style="width:70.0%" alt="Same isotherm with the two rectangles of the two-step expansion hatched together. Their combined area, labeled absolute value of the two-step work, is larger than the single rectangle of the one-step expansion."></p>
+<p><span id="eq-Warea4"><span class="math display">\[
+\left| W_{\text{2-step}} \right| = \left| W_A \right| + \left| W_B \right| = P_1 (V_1-V_i)+P_f (V_f-V_1).
+\tag{2.17}\]</span></span></p>
+<p>As can be easily verified by comparing the shaded areas in the plots, <span class="math inline">\(\left| W_{\text{2-step}} \right| &gt; \left| W_{\text{1-step}} \right|\)</span>.</p>
+<p>We can easily extend this procedure to consider processes that happen in 3, 4, 5, …, <span class="math inline">\(n\)</span> steps. What is the limit of this procedure? In other words, what happens when <span class="math inline">\(n \rightarrow \infty\)</span>? A simple answer is given by the plot in the next figure, which clearly demonstrates that the maximum value of the area underneath the curve <span class="math inline">\(\left| W_{\text{max}}\right|\)</span> is achieved in an <span class="math inline">\(\infty\)</span>-step process, for which the work is calculated as:</p>
+<p><span id="eq-WintsolvedV2"><span class="math display">\[
+\left| W_{\infty \text{-step}} \right| = \left| W_{\text{max}} \right| = \sum_{n}^{\infty} P_n(V_n-V_{n-1}) = \int_{i}^{f} PdV.
+\tag{2.18}\]</span></span></p>
+<p><img src="img/R_02_ZerothLaw_6.png" class="img-fluid" style="width:70.0%" alt="Same isotherm with the whole area under the curve, from the initial to the final volume, shaded gray and labeled absolute value of the maximum work. This is the limit of an expansion performed in infinitely many steps."></p>
+<p>The integral on the right hand side of <a href="#eq-WintsolvedV2" class="quarto-xref">eq.&nbsp;<span>2.18</span></a> can be solved for an ideal gas by calculating the pressure using the ideal gas law <span class="math inline">\(P=\frac{nRT}{V}\)</span>, and solving the integral since <span class="math inline">\(n\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(T\)</span> are constant:</p>
+<p><span id="eq-WmaxV"><span class="math display">\[
+\left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
+\tag{2.19}\]</span></span></p>
+<p>This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an <span class="math inline">\(\infty\)</span>-step process.</p>
+<p>The same considerations that we made up to this point for expansion processes apply in reverse to compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite number of steps will be an upper bound to the minimum amount of work required to compress the system.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> <span class="math inline">\(\left| W_{\text{min}} \right|\)</span> for compressions is calculated as the area underneath the <span class="math inline">\(PV\)</span> curve, exactly as <span class="math inline">\(\left| W_{\text{max}} \right|\)</span> for expansions in <a href="#eq-WintsolvedV2" class="quarto-xref">eq.&nbsp;<span>2.18</span></a>.</p>
+</section>
+</section>
+<section id="sec-rev2" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-rev2"><span class="header-section-number">2.5</span> Chapter Review</h2>
+<section id="sec-exer2" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="sec-exer2"><span class="header-section-number">2.5.1</span> Practice Problems</h3>
+<p><strong>Problem 1: Calculation of Heat in an Isochoric Process</strong></p>
+<p>Calculate the heat absorbed by 3.00 moles of an ideal gas when its temperature increases from <span class="math inline">\(250.\, \text{K}\)</span> to <span class="math inline">\(350.\, \text{K}\)</span> at constant volume, knowing that its molar heat capacity at constant volume <span class="math inline">\(C_V\)</span> is <span class="math inline">\(12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For an isochoric process, the heat absorbed is given by <a href="#eq-Cvint" class="quarto-xref">eq.&nbsp;<span>2.3</span></a>: <span class="math display">\[  Q_V \cong n C_V \Delta T.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(n=3.00 \, \text{mol}\)</span>,</p>
+<p><span class="math inline">\(C_V=12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
+<p><span class="math inline">\(\Delta T = (350.-250.) \text{K}=100.\, \text{K}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[Q_V=(3.00 \, \text{mol})(12.5\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(100.\,\text{K})=3750\,\text{J,}\]</span></p>
+<p>which, using the appropriate amount of significant digits, gives us the final answer.</p>
+<p><strong>Answer:</strong> The heat absorbed is <span class="math inline">\(3.75\,\text{kJ}.\)</span></p>
+<hr>
+<p><strong>Problem 2: Calculation of Heat in an Isobaric Process</strong></p>
+<p>Calculate the heat absorbed by 2.0 moles of an ideal gas when its temperature increases from <span class="math inline">\(300. \,\text{K}\)</span> to <span class="math inline">\(500. \,\text{K}\)</span> at constant pressure. The molar heat capacity at constant pressure for this gas is <span class="math inline">\(29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For an isobaric process, the heat absorbed is given by <a href="#eq-Cpint" class="quarto-xref">eq.&nbsp;<span>2.5</span></a>: <span class="math display">\[  Q_P \cong n C_P \Delta T.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(n=2.0\,\text{mol}\)</span></p>
+<p><span class="math inline">\(C_P =29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
+<p><span class="math inline">\(\Delta T= (500.-300.)\,\text{K}=200.\,\text{K}\)</span></p>
+<p>Then:</p>
+<p><span class="math display">\[Q_P=(2.0\,\text{mol})(29.1\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200.\,\text{K}) = 11640\,\text{J},\]</span></p>
+<p>which, using the appropriate amount of significant digits, gives us the right answer. (Notice the difference with respect to the previous problem.)</p>
+<p><strong>Answer:</strong> The heat absorbed is <span class="math inline">\(12.\, \text{kJ}.\)</span></p>
+<hr>
+<p><strong>Problem 3: Calculation of Work in an Isothermal Process</strong></p>
+<p>Calculate the maximum amount of work that can be done by an ideal gas during an isothermal expansion at <span class="math inline">\(300.\, \text{K}\)</span> from an initial volume of <span class="math inline">\(1.0\,\text{L}\)</span> to a final volume of <span class="math inline">\(3.0\,\text{L}\)</span>. Assume there are 2.0 moles of the gas and the gas constant <span class="math inline">\(R=8.314\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
+<p><strong>Solution:</strong> For an isothermal process, the maximum amount of work done by the gas is obtained when the transformation happens in an infinite amount of steps. The absolute value of the work is given by <a href="#eq-WintsolvedV2" class="quarto-xref">eq.&nbsp;<span>2.18</span></a>: <span class="math display">\[  \left| W_{\text{max}} \right| = nRT \ln \frac{V_f}{V_i}.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(n=2.0\,\text{mol}\)</span>,</p>
+<p><span class="math inline">\(T=300.\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(V_i=1.0\,\text{L}\)</span>,</p>
+<p><span class="math inline">\(V_f=3.0\,\text{L}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[\left| W_{\text{max}} \right|=(2.0\,\text{mol})(8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(300.\,\text{K})\ln\left(\frac{3.0\,\text{L}}{1.0\,\text{L}}\right),\]</span></p>
+<p><span class="math display">\[\left| W_{\text{max}} \right|=4988.4\,\text{J}\cdot \ln(3),\]</span></p>
+<p>and considering that:</p>
+<p><span class="math display">\[\ln(3)\approx 1.0986,\]</span></p>
+<p>then:</p>
+<p><span class="math display">\[\left| W_{\text{max}} \right|\approx 4988.4\,\text{J} \cdot 1.0986 \approx 5480\,\text{J},\]</span></p>
+<p>Finally, we should always consider the chemistry convention of the sign, <a href="01_Basis.html#def-chemistryconv" class="quarto-xref">Definition&nbsp;<span>1.1</span></a>, according to which the work <em>performed</em> by the system (our ideal gas) in an expansion is always <em>negative</em>.</p>
+<p><strong>Answer:</strong> The work done by the system is <span class="math inline">\(-5.5\,\text{kJ}\)</span>.</p>
+<hr>
+<p><strong>Problem 4: Calculation of Work in an Expansion Against Constant External Pressure</strong></p>
+<p>In a room with a high pressure, a balloon is filled with <span class="math inline">\(2.0\,\text{L}\)</span> of an ideal gas. The balloon is then brought into a different room at a lower external pressure of <span class="math inline">\(1.5\,\text{atm}\)</span>. The balloon expands quickly in this second room to a final volume of <span class="math inline">\(5.0\,\text{L}\)</span>. Calculate the amount of work that the gas releases in the second room. Assume that the temperature is the same across both rooms. Note: <span class="math inline">\(1 \,\text{atm}\cdotp\text{L} = 101.3\,\text{J}\)</span>.</p>
+<p><strong>Solution:</strong> This problem presents an ideal gas that is expanding in a fast, 1-step process, at constant temperature. For this process, the absolute value of the amount of work done by the gas is given by <a href="#eq-Warea1" class="quarto-xref">eq.&nbsp;<span>2.14</span></a>: <span class="math display">\[  \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i).\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(P_{\text{ext}}=1.5\,\text{atm}\)</span>,</p>
+<p><span class="math inline">\(\Delta V =(5.0-2.0)\,\text{L}=3.0\,\text{L}\)</span>,</p>
+<p><span class="math inline">\(1 \, \text{atm}\cdotp\text{L}=101.3\,\text{J}\)</span></p>
+<p>Then:</p>
+<p><span class="math display">\[\left| W_{\text{1-step}} \right|=(1.5\,\text{atm})(3.0\,\text{L}) = 4.5\,\text{atm}\cdotp \text{L}.\]</span></p>
+<p>Converting <span class="math inline">\(\text{atm}\cdot\text{L}\)</span> to <span class="math inline">\(\text{J}\)</span> and accounting for the chemistry convention of the sign we get:</p>
+<p><span class="math display">\[W_{\text{1-step}}= -4.5\,\text{atm}\cdotp \text{L} \cdot 101.3 \,\text{J}\,(\text{atm}\cdotp\text{L})^{-1} = -456\,\text{J},\]</span></p>
+<p>hence, using the correct amount of significant digits, we get the final answer.</p>
+<p><strong>Answer:</strong> The amount of work released by the gas is <span class="math inline">\(-4.6 \cdot 10^{-1}\,\text{kJ}\)</span>.</p>
+</section>
+<section id="sec-quest2" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="sec-quest2"><span class="header-section-number">2.5.2</span> Study Questions</h3>
+<p><strong>1. What is the primary focus of thermodynamics?</strong></p>
+<ol type="a">
+<li>The study of chemical reactions.</li>
+<li>The relationship between heat, work, and energy.</li>
+<li>The behavior of gases under different pressures.</li>
+<li>The study of atomic structures.</li>
+<li>The analysis of electromagnetic waves.</li>
+</ol>
+<hr>
+<p><strong>2. Which law of thermodynamics states that if two systems are each in thermal equilibrium with a third system, then they are in thermal equilibrium with each other?</strong></p>
+<ol type="a">
+<li>The First Law of Thermodynamics.</li>
+<li>The Second Law of Thermodynamics.</li>
+<li>The Third Law of Thermodynamics.</li>
+<li>The Zeroth Law of Thermodynamics.</li>
+<li>The Law of Conservation of Energy.</li>
+</ol>
+<hr>
+<p><strong>3. What is the formal definition of the molar heat capacity at constant volume?</strong></p>
+<ol type="a">
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</li>
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</li>
+<li>The amount of heat required to increase the temperature of a system by 1°C at constant pressure.</li>
+<li>The amount of heat required to increase the temperature of a system by 1°C at constant volume.</li>
+<li>The energy required to change the state of 1 mol of a substance.</li>
+</ol>
+<hr>
+<p><strong>4. What is the formal definition of the molar heat capacity at constant pressure?</strong></p>
+<ol type="a">
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</li>
+<li>The amount of heat required to increase the temperature of a system by 1°C at constant volume.</li>
+<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</li>
+<li>The energy required to change the state of 1 mol of a substance.</li>
+<li>The heat required to raise the temperature of a system by 1 K regardless of volume or pressure.</li>
+</ol>
+<hr>
+<p><strong>5. In an isothermal process for an ideal gas, what is the expression for the absolute value of the maximum work done by the system?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\left| W \right|=P\Delta V\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=nR \Delta T\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=nRT\ln\frac{V_f}{V_i}\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=-P_{\text{ext}}(V_f-V_i)\)</span>.</li>
+<li><span class="math inline">\(\left| W \right|=nC_V \Delta T\)</span>.</li>
+</ol>
+<hr>
+<p><strong>6. Which of the following formulas can <em>always</em> be used to calculate the work in a thermodynamic process involving a gas and a movable piston?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(W= - \int_{i}^{f} PdV\)</span>.</li>
+<li><span class="math inline">\(W = P \Delta T\)</span>.</li>
+<li><span class="math inline">\(W = nRT \Delta V\)</span>.</li>
+<li><span class="math inline">\(W = nC_P \Delta T\)</span>.</li>
+<li><span class="math inline">\(W = \int_{i}^{f} VdP\)</span>.</li>
+</ol>
+<hr>
+<p><strong>7. Which of the following is true about heat (Q) in thermodynamics?</strong></p>
+<ol type="a">
+<li>It is a state function.</li>
+<li>It can be directly used to define the state of a system.</li>
+<li>It is always negative.</li>
+<li>It is an extensive property.</li>
+<li>It is a path function.</li>
+</ol>
+<hr>
+<p><strong>8. What happens to the temperature of two objects in thermal equilibrium with a third object, according to the Zeroth Law of Thermodynamics?</strong></p>
+<ol type="a">
+<li>They both increase.</li>
+<li>They both decrease.</li>
+<li>They reach the same temperature.</li>
+<li>They remain at different temperatures.</li>
+<li>They oscillate around a mean temperature.</li>
+</ol>
+<hr>
+<p><strong>9. What is the expression for the heat transferred in a process at constant volume?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(Q = nC_V \Delta T\)</span></li>
+<li><span class="math inline">\(Q = P \Delta V\)</span></li>
+<li><span class="math inline">\(Q = n C_P \Delta T\)</span></li>
+<li><span class="math inline">\(Q = nRT \ln \frac{V_f}{V_i}\)</span></li>
+<li><span class="math inline">\(Q = \int PdV\)</span></li>
+</ol>
+<hr>
+<p><strong>10. Which scenario represents the minimum work required for a compression process in thermodynamics?</strong></p>
+<ol type="a">
+<li>A one-step fast compression.</li>
+<li>An infinitely slow compression.</li>
+<li>A constant temperature compression.</li>
+<li>A constant volume compression.</li>
+<li>A compression with variable external pressure.</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.b, 2.d, 3.b, 4.c, 5.c, 6.a, 7.e, 8.c, 9.a, 10.b</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>In fact, we will not even give a rigorous microscopic definition of temperature within this textbook.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For this simple thought experiment, we will ignore any external force that is not significant. In other words, we will not consider the friction of the piston on the beaker walls or any other foreign influence.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>from here on we will replace the notation <span class="math inline">\(\int_{\text{path}}\)</span> with the more convenient <span class="math inline">\(\int\)</span> and we will keep in mind that the integral of an inexact differential must be taken along the path.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>we use the absolute value to avoid confusions due to the fact that the expansion work is negative according to <a href="01_Basis.html#def-chemistryconv" class="quarto-xref">Definition&nbsp;<span>1.1</span></a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>In contrast to a lower bound for expansion processes.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+    // section titles with math (e.g., "Temperature Dependence of ΔG") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
+  }).catch(function () {});
+});
+</script>
+<script>
+// Wide screens keep the top bar visible (see quarto.css): measure its height for the sidebar offset.
+(function () {
+  function setHeight() {
+    var h = document.querySelector("#quarto-header");
+    if (h) document.documentElement.style.setProperty("--header-height", h.offsetHeight + "px");
+  }
+  setHeight();
+  window.addEventListener("resize", setHeight);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./01_Basis.html" class="pagination-link" aria-label="Introduction to Thermodynamics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03_FirstLaw.html" class="pagination-link" aria-label="First Law of Thermodynamics">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>, except third-party images as credited · Scripts: <a href="https://github.com/peverati/pchem1/blob/master/scripts/LICENSE">MIT</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/02_ZerothLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

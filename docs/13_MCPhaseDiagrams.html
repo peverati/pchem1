@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+
+<title>13&nbsp; Multi-Component Phase Diagrams and Solutions – The Live Textbook of Physical Chemistry 1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./15_Kinetics.html" rel="next">
+<link href="./12_PhaseEquilibrium.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- MathJax macros used throughout the book (the PDF defines the same macro in _quarto.yml). -->
+<script type="text/javascript">
+window.MathJax = window.MathJax || {};
+window.MathJax.tex = window.MathJax.tex || {};
+window.MathJax.tex.macros = Object.assign(window.MathJax.tex.macros || {}, {
+  standardstate: "{-\\kern-6pt{\\ominus}\\kern-6pt-}"
+});
+</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem1" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem1.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./13_MCPhaseDiagrams.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Basis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_FirstLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Thermochemistry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_ThermodynamicCycles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_SecondLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_ThirdLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Potentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Gibbs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gibbs Energy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_ChemicalEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_NonIdealGases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_PhaseEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_MCPhaseDiagrams.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#raoults-law-and-phase-diagrams-of-ideal-solutions" id="toc-raoults-law-and-phase-diagrams-of-ideal-solutions" class="nav-link active" data-scroll-target="#raoults-law-and-phase-diagrams-of-ideal-solutions"><span class="header-section-number">13.1</span> Raoult’s Law and Phase Diagrams of Ideal Solutions</a>
+  <ul class="collapse">
+  <li><a href="#one-volatile-component" id="toc-one-volatile-component" class="nav-link" data-scroll-target="#one-volatile-component"><span class="header-section-number">13.1.1</span> One volatile component</a></li>
+  <li><a href="#two-volatile-components" id="toc-two-volatile-components" class="nav-link" data-scroll-target="#two-volatile-components"><span class="header-section-number">13.1.2</span> Two volatile components</a></li>
+  <li><a href="#tx_textb-phase-diagrams-and-fractional-distillation" id="toc-tx_textb-phase-diagrams-and-fractional-distillation" class="nav-link" data-scroll-target="#tx_textb-phase-diagrams-and-fractional-distillation"><span class="header-section-number">13.1.3</span> <span class="math inline">\(Tx_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+  </ul></li>
+  <li><a href="#phase-diagrams-of-non-ideal-solutions" id="toc-phase-diagrams-of-non-ideal-solutions" class="nav-link" data-scroll-target="#phase-diagrams-of-non-ideal-solutions"><span class="header-section-number">13.2</span> Phase Diagrams of Non-Ideal Solutions</a></li>
+  <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity"><span class="header-section-number">13.3</span> Activity</a></li>
+  <li><a href="#colligative-properties" id="toc-colligative-properties" class="nav-link" data-scroll-target="#colligative-properties"><span class="header-section-number">13.4</span> Colligative Properties</a>
+  <ul class="collapse">
+  <li><a href="#vapor-pressure-lowering" id="toc-vapor-pressure-lowering" class="nav-link" data-scroll-target="#vapor-pressure-lowering"><span class="header-section-number">13.4.1</span> Vapor pressure lowering</a></li>
+  <li><a href="#boiling-point-elevation-and-melting-point-depression" id="toc-boiling-point-elevation-and-melting-point-depression" class="nav-link" data-scroll-target="#boiling-point-elevation-and-melting-point-depression"><span class="header-section-number">13.4.2</span> Boiling point elevation and melting point depression</a></li>
+  <li><a href="#osmotic-pressure" id="toc-osmotic-pressure" class="nav-link" data-scroll-target="#osmotic-pressure"><span class="header-section-number">13.4.3</span> Osmotic pressure</a></li>
+  </ul></li>
+  <li><a href="#sec-rev13" id="toc-sec-rev13" class="nav-link" data-scroll-target="#sec-rev13"><span class="header-section-number">13.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.5.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/13_MCPhaseDiagrams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-MCPhaseDiagrams" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We now move from studying 1-component systems to multi-component ones. Systems that include two or more chemical species are usually called <em>solutions</em>. Solutions are possible for all three states of matter:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type:</th>
+<th style="text-align: center;">Solvent</th>
+<th style="text-align: center;">Solute</th>
+<th>Examples:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Solid solutions</td>
+<td style="text-align: center;">Solid</td>
+<td style="text-align: center;">Solid</td>
+<td>Alloys: brass, bronze</td>
+</tr>
+<tr class="even">
+<td></td>
+<td style="text-align: center;">Solid</td>
+<td style="text-align: center;">Liquid</td>
+<td>Dental amalgam</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td style="text-align: center;">Solid</td>
+<td style="text-align: center;">Gas</td>
+<td>Hydrogen stored in palladium</td>
+</tr>
+<tr class="even">
+<td>Liquid solutions</td>
+<td style="text-align: center;">Liquid</td>
+<td style="text-align: center;">Solid</td>
+<td>Saltwater, bleach</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td style="text-align: center;">Liquid</td>
+<td style="text-align: center;">Liquid</td>
+<td>Alcoholic beverages, vinegar</td>
+</tr>
+<tr class="even">
+<td></td>
+<td style="text-align: center;">Liquid</td>
+<td style="text-align: center;">Gas</td>
+<td>Carbonated drinks</td>
+</tr>
+<tr class="odd">
+<td>Gaseous solutions</td>
+<td style="text-align: center;">Gas</td>
+<td style="text-align: center;">Solid</td>
+<td>Smoke, smog</td>
+</tr>
+<tr class="even">
+<td></td>
+<td style="text-align: center;">Gas</td>
+<td style="text-align: center;">Liquid</td>
+<td>Aerosols and perfumes</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td style="text-align: center;">Gas</td>
+<td style="text-align: center;">Gas</td>
+<td>Air</td>
+</tr>
+</tbody>
+</table>
+<p>The number of degrees of freedom for binary solutions (solutions containing two components) is calculated from the Gibbs phase rule as <span class="math inline">\(f=2-p+2=4-p\)</span>. When one phase is present, binary solutions require <span class="math inline">\(4-1=3\)</span> variables to be described, usually temperature (<span class="math inline">\(T\)</span>), pressure (<span class="math inline">\(P\)</span>), and mole fraction (<span class="math inline">\(y_i\)</span> in the gas phase and <span class="math inline">\(x_i\)</span> in the liquid phase). Single-phase, 2-component systems require a three-dimensional <span class="math inline">\(T,P,x_i\)</span> diagram to be described. When two phases are present (e.g., gas and liquid), only two variables are independent: pressure and concentration. Thus, we can study the behavior of the partial pressure of a gas–liquid solution in a 2-dimensional plot. If the gas phase in a solution exhibits properties similar to those of a mixture of ideal gases, it is called an <em>ideal solution</em>. The obvious difference between ideal solutions and ideal gases is that the intermolecular interactions in the liquid phase cannot be neglected as for the gas phase. The main advantage of ideal solutions is that the interactions between particles in the liquid phase have similar mean strength throughout the entire phase. We will consider ideal solutions first, and then we’ll discuss deviation from ideal behavior and non-ideal solutions.</p>
+<section id="raoults-law-and-phase-diagrams-of-ideal-solutions" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="raoults-law-and-phase-diagrams-of-ideal-solutions"><span class="header-section-number">13.1</span> Raoult’s Law and Phase Diagrams of Ideal Solutions</h2>
+<p>The behavior of the vapor pressure of an ideal solution can be mathematically described by a simple law established by François-Marie Raoult (1830–1901). <strong>Raoult’s law</strong> states that the partial pressure of each component, <span class="math inline">\(i\)</span>, of an ideal mixture of liquids, <span class="math inline">\(P_i\)</span>, is equal to the vapor pressure of the pure component <span class="math inline">\(P_i^*\)</span> multiplied by its mole fraction in the mixture <span class="math inline">\(x_i\)</span>:</p>
+<p><span id="eq-mc1"><span class="math display">\[
+P_i=x_i P_i^*.
+\tag{13.1}\]</span></span></p>
+<section id="one-volatile-component" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="one-volatile-component"><span class="header-section-number">13.1.1</span> One volatile component</h3>
+<p>Raoult’s law applied to a system containing only one volatile component describes a line in the <span class="math inline">\(Px_{\text{B}}\)</span> plot, as in <a href="#fig-FigMC1" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>.</p>
+<div id="fig-FigMC1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus mole fraction of B, from 0 (pure A) to 1 (pure B). Only A is volatile. A straight line goes from the vapor pressure of pure A at the left axis down to zero at pure B. The liquid region is above the line and the vapor region is below it.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.019.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Pressure versus mole fraction of B, from 0 (pure A) to 1 (pure B). Only A is volatile. A straight line goes from the vapor pressure of pure A at the left axis down to zero at pure B. The liquid region is above the line and the vapor region is below it.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.1: The Pressure–Composition Phase Diagram of an Ideal Solution Containing a Single Volatile Component at Constant Temperature.
+</figcaption>
+</figure>
+</div>
+<p>As emerges from <a href="#fig-FigMC1" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>, Raoult’s law divides the diagram into two distinct areas, each with three degrees of freedom.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Each area contains a phase, with the vapor at the bottom (low pressure), and the liquid at the top (high pressure). Raoult’s law acts as an additional constraint for the points sitting on the line. Therefore, the number of independent variables along the line is only two. Once the temperature is fixed, and the vapor pressure is measured, the mole fraction of the volatile component in the liquid phase is determined.</p>
+</section>
+<section id="two-volatile-components" class="level3" data-number="13.1.2">
+<h3 data-number="13.1.2" class="anchored" data-anchor-id="two-volatile-components"><span class="header-section-number">13.1.2</span> Two volatile components</h3>
+<p>In an ideal solution, every volatile component follows Raoult’s law. Since the vapors in the gas phase behave ideally, the total pressure can be simply calculated using Dalton’s law as the sum of the partial pressures of the two components <span class="math inline">\(P_{\text{TOT}}=P_{\text{A}}+P_{\text{B}}\)</span>. The corresponding diagram is reported in <a href="#fig-FigMC2" class="quarto-xref">Figure&nbsp;<span>13.2</span></a>. The total vapor pressure, calculated using Dalton’s law, is reported in red. The Raoult’s behaviors of each of the two components are also reported using black dashed lines.</p>
+<div id="fig-FigMC2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus mole fraction of B for an ideal solution of two volatile components. Two dotted straight lines show the partial pressures of A and of B, each following Raoult's law. Their sum, the total pressure, is a red straight line from the vapor pressure of pure A to that of pure B, with liquid above it and vapor below it.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.020.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Pressure versus mole fraction of B for an ideal solution of two volatile components. Two dotted straight lines show the partial pressures of A and of B, each following Raoult's law. Their sum, the total pressure, is a red straight line from the vapor pressure of pure A to that of pure B, with liquid above it and vapor below it.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.2: The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature.
+</figcaption>
+</figure>
+</div>
+<div id="exr-xaya" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 13.1</strong></span> Calculate the mole fraction in the vapor phase of a liquid solution composed of 67% of toluene (<span class="math inline">\(\mathrm{A}\)</span>) and 33% of benzene (<span class="math inline">\(\mathrm{B}\)</span>), given the vapor pressures of the pure substances: <span class="math inline">\(P_{\text{A}}^*=0.03\;\text{bar}\)</span>, and <span class="math inline">\(P_{\text{B}}^*=0.10\;\text{bar}\)</span>.</p>
+<p><em>Solution:</em> The data available for the system are summarized as follows: <span id="eq-mc2"><span class="math display">\[
+\begin{aligned}
+x_{\text{A}}=0.67  \qquad &amp; \qquad x_{\text{B}}=0.33 \\
+P_{\text{A}}^* = 0.03\;\text{bar} \qquad &amp; \qquad P_{\text{B}}^* = 0.10\;\text{bar} \\
+&amp; P_{\text{TOT}} = ? \\
+y_{\text{A}}=? \qquad &amp; \qquad y_{\text{B}}=?
+\end{aligned}
+\tag{13.2}\]</span></span> The total pressure of the vapors can be calculated combining Dalton’s and Raoult’s laws: <span id="eq-mc3"><span class="math display">\[
+\begin{aligned}
+P_{\text{TOT}} &amp;= P_{\text{A}}+P_{\text{B}}=x_{\text{A}} P_{\text{A}}^* + x_{\text{B}} P_{\text{B}}^* \\
+&amp;= 0.67\cdot 0.03+0.33\cdot 0.10 \\
+&amp;= 0.02 + 0.03 = 0.05 \;\text{bar}
+\end{aligned}
+\tag{13.3}\]</span></span> We can then calculate the mole fraction of the components in the vapor phase as: <span id="eq-mc4"><span class="math display">\[
+\begin{aligned}
+y_{\text{A}}=\frac{P_{\text{A}}}{P_{\text{TOT}}} &amp; \qquad y_{\text{B}}=\frac{P_{\text{B}}}{P_{\text{TOT}}} \\
+y_{\text{A}}=\frac{0.02}{0.05}=0.40 &amp; \qquad y_{\text{B}}=\frac{0.03}{0.05}=0.60
+\end{aligned}
+\tag{13.4}\]</span></span> Notice how the mole fraction of toluene is much higher in the liquid phase, <span class="math inline">\(x_{\text{A}}=0.67\)</span>, than in the vapor phase, <span class="math inline">\(y_{\text{A}}=0.40\)</span>.</p>
+</div>
+<p>As is clear from the results of <a href="#exr-xaya" class="quarto-xref">Exercise&nbsp;<span>13.1</span></a>, the concentrations of the components in the liquid and vapor phases are different. We can also report the mole fraction in the vapor phase as an additional line in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of <a href="#fig-FigMC2" class="quarto-xref">Figure&nbsp;<span>13.2</span></a>. When both concentrations are reported in one diagram—as in <a href="#fig-FigMC3" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>—the line where <span class="math inline">\(x_{\text{B}}\)</span> is obtained is called the <em>liquidus line</em>, while the line where the <span class="math inline">\(y_{\text{B}}\)</span> is reported is called the <em>dew point line</em>.</p>
+<div id="fig-FigMC3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus mole fraction of B for an ideal solution. The upper red straight line is the liquidus line, liquid composition x B. The lower blue curve is the dew point line, vapor composition y B. Between them is a liquid plus vapor region. An arrow shows a liquid of composition x B i whose pressure is lowered until it reaches the liquidus line, where it forms vapor of composition y B f.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.021.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Pressure versus mole fraction of B for an ideal solution. The upper red straight line is the liquidus line, liquid composition x B. The lower blue curve is the dew point line, vapor composition y B. Between them is a liquid plus vapor region. An arrow shows a liquid of composition x B i whose pressure is lowered until it reaches the liquidus line, where it forms vapor of composition y B f.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.3: The Pressure–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Temperature. Both the Liquidus and Dew Point Line are Emphasized in this Plot.
+</figcaption>
+</figure>
+</div>
+<p>The liquidus and dew point lines determine a new section in the phase diagram where the liquid and vapor phases coexist. Since the degrees of freedom inside the area are only 2, for a system at constant temperature, a point inside the coexistence area has fixed mole fractions for both phases. We can reduce the pressure on top of a liquid solution with concentration <span class="math inline">\(x^i_{\text{B}}\)</span> (see <a href="#fig-FigMC3" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>) until the solution hits the liquidus line. At this pressure, the solution forms a vapor phase with mole fraction given by the corresponding point on the dew point line, <span class="math inline">\(y^f_{\text{B}}\)</span>.</p>
+</section>
+<section id="tx_textb-phase-diagrams-and-fractional-distillation" class="level3" data-number="13.1.3">
+<h3 data-number="13.1.3" class="anchored" data-anchor-id="tx_textb-phase-diagrams-and-fractional-distillation"><span class="header-section-number">13.1.3</span> <span class="math inline">\(Tx_{\text{B}}\)</span> phase diagrams and fractional distillation</h3>
+<p>We can now consider the phase diagram of a 2-component ideal solution as a function of temperature at constant pressure. The <span class="math inline">\(Tx_{\text{B}}\)</span> diagram for two volatile components is reported in <a href="#fig-FigMC4" class="quarto-xref">Figure&nbsp;<span>13.4</span></a>.</p>
+<div id="fig-FigMC4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Temperature versus mole fraction of B for an ideal solution at constant pressure. A lens-shaped region of liquid plus vapor lies between the lower red liquidus line and the upper blue dew point line, which join at the boiling points of pure A and of pure B. Liquid is below, vapor above. An arrow shows a liquid of composition x B i heated until it boils, giving vapor of composition y B f that is richer in A.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.022.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Temperature versus mole fraction of B for an ideal solution at constant pressure. A lens-shaped region of liquid plus vapor lies between the lower red liquidus line and the upper blue dew point line, which join at the boiling points of pure A and of pure B. Liquid is below, vapor above. An arrow shows a liquid of composition x B i heated until it boils, giving vapor of composition y B f that is richer in A.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.4: The Temperature–Composition Phase Diagram of an Ideal Solution Containing Two Volatile Components at Constant Pressure.
+</figcaption>
+</figure>
+</div>
+<p>Compared to the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of <a href="#fig-FigMC3" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>, the phases are now in reversed order, with the liquid at the bottom (low temperature), and the vapor on top (high temperature). The liquidus and dew point lines are curved and form a lens-shaped region where liquid and vapor coexist. Once again, there are only two degrees of freedom inside the lens, of which the pressure is kept constant by definition.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> As such, a liquid solution of initial composition <span class="math inline">\(x_{\text{B}}^i\)</span> can be heated until it hits the liquidus line. At this temperature the solution boils, producing a vapor with concentration <span class="math inline">\(y_{\text{B}}^f\)</span>. As is clear from <a href="#fig-FigMC4" class="quarto-xref">Figure&nbsp;<span>13.4</span></a>, the mole fraction of the <span class="math inline">\(\text{B}\)</span> component in the gas phase is lower than the mole fraction in the liquid phase. This fact can be exploited to separate the two components of the solution. In particular, if we set up a series of consecutive evaporations and condensations, we can distill fractions of the solution with an increasingly lower concentration of the less volatile component <span class="math inline">\(\text{B}\)</span>. This is exemplified in the industrial process of fractional distillation, as schematically depicted in <a href="#fig-FigMC5" class="quarto-xref">Figure&nbsp;<span>13.5</span></a>.</p>
+<div id="fig-FigMC5" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left: the same temperature-composition lens with a staircase of horizontal and vertical steps, each step being one theoretical plate, moving the composition from x B i toward pure A. Right: schematic of a fractional distillation column with trays, a feed inlet, a reboiler at the bottom, and a condenser at the top.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.023.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Left: the same temperature-composition lens with a staircase of horizontal and vertical steps, each step being one theoretical plate, moving the composition from x B i toward pure A. Right: schematic of a fractional distillation column with trays, a feed inlet, a reboiler at the bottom, and a condenser at the top.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.5: The Fractional Distillation Process and Theoretical Plates Calculated on a Temperature–Composition Phase Diagram.
+</figcaption>
+</figure>
+</div>
+<p>Each of the horizontal lines in the lens region of the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram of <a href="#fig-FigMC5" class="quarto-xref">Figure&nbsp;<span>13.5</span></a> corresponds to a condensation/evaporation process and is called a <em>theoretical plate</em>. These plates are industrially realized on large columns with several floors equipped with condensation trays. The temperature decreases with the height of the column. A condensation/evaporation process will happen on each level, and a solution concentrated in the most volatile component is collected. The theoretical plates and the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram are crucial for sizing the industrial fractional distillation columns.</p>
+</section>
+</section>
+<section id="phase-diagrams-of-non-ideal-solutions" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="phase-diagrams-of-non-ideal-solutions"><span class="header-section-number">13.2</span> Phase Diagrams of Non-Ideal Solutions</h2>
+<p>Non-ideal solutions follow Raoult’s law for only a small range of concentrations. The typical behavior of a non-ideal solution with a single volatile component is reported in the <span class="math inline">\(Px_{\text{B}}\)</span> plot in <a href="#fig-FigMC6" class="quarto-xref">Figure&nbsp;<span>13.6</span></a>.</p>
+<div id="fig-FigMC6" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus mole fraction of B for a non-ideal solution where only A is volatile. The black curve starts at the vapor pressure of pure A and follows the dotted blue Raoult's law line when A is abundant, near x B equal to 0. Near pure B it follows a steeper dotted green line labeled Henry's law.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.024.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Pressure versus mole fraction of B for a non-ideal solution where only A is volatile. The black curve starts at the vapor pressure of pure A and follows the dotted blue Raoult's law line when A is abundant, near x B equal to 0. Near pure B it follows a steeper dotted green line labeled Henry's law.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.6: The Pressure–Composition Phase Diagram of a Non-Ideal Solution Containing a Single Volatile Component at Constant Temperature.
+</figcaption>
+</figure>
+</div>
+<p>Raoult’s behavior is observed for high concentrations of the volatile component. This behavior is observed at <span class="math inline">\(x_{\text{B}} \rightarrow 0\)</span> in <a href="#fig-FigMC6" class="quarto-xref">Figure&nbsp;<span>13.6</span></a>, since the volatile component in this diagram is <span class="math inline">\(\mathrm{A}\)</span>. At low concentrations of the volatile component <span class="math inline">\(x_{\text{B}} \rightarrow 1\)</span> in <a href="#fig-FigMC6" class="quarto-xref">Figure&nbsp;<span>13.6</span></a>, the solution follows a behavior along a steeper line, which is known as <strong>Henry’s law</strong>. William Henry (1774–1836) has extensively studied the behavior of gases dissolved in liquids. His studies resulted in a simple law that relates the vapor pressure of a solution to a constant, called the Henry’s law constant:</p>
+<p><span id="eq-mc1b"><span class="math display">\[
+P_{\text{B}}=k_{\text{AB}} x_{\text{B}},
+\tag{13.5}\]</span></span></p>
+<p>where <span class="math inline">\(k_{\text{AB}}\)</span> depends on the chemical nature of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>. The corresponding diagram for non-ideal solutions with two volatile components is reported on the left panel of <a href="#fig-FigMC7" class="quarto-xref">Figure&nbsp;<span>13.7</span></a>. The total pressure is once again calculated as the sum of the two partial pressures. Positive deviations from Raoult’s ideal behavior are not the only possible deviation from ideality, and negative deviations also exist, albeit slightly less common. An example of a negative deviation is reported in the right panel of <a href="#fig-FigMC7" class="quarto-xref">Figure&nbsp;<span>13.7</span></a>.</p>
+<div id="fig-FigMC7" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two pressure-composition diagrams of non-ideal solutions of two volatile components. Left, positive deviation: the total pressure curve bulges above the straight line of Raoult's law. Right, negative deviation: it sags below that line. Dotted curves show the partial pressures of A and B.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.025.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Two pressure-composition diagrams of non-ideal solutions of two volatile components. Left, positive deviation: the total pressure curve bulges above the straight line of Raoult's law. Right, negative deviation: it sags below that line. Dotted curves show the partial pressures of A and B.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.7: The Pressure–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Temperature.
+</figcaption>
+</figure>
+</div>
+<p>If we move from the <span class="math inline">\(Px_{\text{B}}\)</span> diagram to the <span class="math inline">\(Tx_{\text{B}}\)</span> diagram, the behaviors observed in <a href="#fig-FigMC7" class="quarto-xref">Figure&nbsp;<span>13.7</span></a> will correspond to the diagram in <a href="#fig-FigMC8" class="quarto-xref">Figure&nbsp;<span>13.8</span></a>.</p>
+<div id="fig-FigMC8" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two temperature-composition diagrams of non-ideal solutions. Left: the liquidus and dew point lines dip to a common minimum, a minimum-boiling azeotrope, which splits the diagram into two liquid plus vapor regions. Right: they rise to a common maximum, a maximum-boiling azeotrope.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigMC8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.026.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Two temperature-composition diagrams of non-ideal solutions. Left: the liquidus and dew point lines dip to a common minimum, a minimum-boiling azeotrope, which splits the diagram into two liquid plus vapor regions. Right: they rise to a common maximum, a maximum-boiling azeotrope.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigMC8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.8: The Temperature–Composition Phase Diagram of Non-Ideal Solutions Containing Two Volatile Components at Constant Pressure.
+</figcaption>
+</figure>
+</div>
+<p>The minimum (left plot) and maximum (right plot) points in <a href="#fig-FigMC8" class="quarto-xref">Figure&nbsp;<span>13.8</span></a> represent the so-called <em>azeotrope</em>.</p>
+<p>An azeotrope is a constant boiling point solution whose composition cannot be altered or changed by simple distillation. This happens because the liquidus and dew point lines coincide at this point. Therefore, the liquid and the vapor phases have the same composition, and distillation cannot occur. Two types of azeotropes exist, representative of the two types of non-ideal behavior of solutions. The first type is the positive azeotrope (left plot in <a href="#fig-FigMC8" class="quarto-xref">Figure&nbsp;<span>13.8</span></a>). A well-known example of this behavior at atmospheric pressure is the ethanol/water mixture, with composition 95.63% ethanol by mass. This positive azeotrope boils at <span class="math inline">\(T=78.2\;^\circ \text{C}\)</span>, a temperature that is lower than the boiling points of the pure constituents, since ethanol boils at <span class="math inline">\(T=78.4\;^\circ \text{C}\)</span> and water at <span class="math inline">\(T=100\;^\circ \text{C}\)</span>. The second type is the negative azeotrope (right plot in <a href="#fig-FigMC8" class="quarto-xref">Figure&nbsp;<span>13.8</span></a>). An example of this behavior at atmospheric pressure is the hydrochloric acid/water mixture with composition 20.2% hydrochloric acid by mass. This negative azeotrope boils at <span class="math inline">\(T=110\;^\circ \text{C}\)</span>, a temperature that is higher than the boiling points of the pure constituents, since hydrochloric acid boils at <span class="math inline">\(T=-84\;^\circ \text{C}\)</span> and water at <span class="math inline">\(T=100\;^\circ \text{C}\)</span>.</p>
+</section>
+<section id="activity" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="activity"><span class="header-section-number">13.3</span> Activity</h2>
+<p>For non-ideal gases, we introduced in <a href="11_NonIdealGases.html" class="quarto-xref"><span>chapter 11</span></a> the concept of <em>fugacity</em> as an <em>effective pressure</em> that accounts for non-ideal behavior. If we extend this concept to non-ideal solutions, we can introduce the <em>activity</em> of a liquid or a solid, <span class="math inline">\(a\)</span>, as:</p>
+<p><span id="eq-act1"><span class="math display">\[
+\mu_{\text{non-ideal}} = \mu^{\standardstate} + RT \ln a,
+\tag{13.6}\]</span></span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the chemical potential of the substance or the mixture, and <span class="math inline">\(\mu^{\standardstate}\)</span> is the chemical potential at standard state. Comparing this definition to <a href="11_NonIdealGases.html#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a>, it is clear that the activity is equal to the fugacity for a non-ideal gas (which, in turn, is equal to the pressure for an ideal gas). However, for a liquid and a liquid mixture, it depends on the chemical potential at standard state. This means that the activity is not an absolute quantity, but rather a relative term describing how “active” a compound is compared to standard state conditions. The choice of the standard state is, in principle, arbitrary, but conventions are often chosen out of mathematical or experimental convenience. We already discussed the convention that standard state for a gas is at <span class="math inline">\(P^{\standardstate}=1\;\text{bar}\)</span>, so the activity is equal to the fugacity. The standard state for a component in a solution is the pure component at the temperature and pressure of the solution. This definition is equivalent to setting the activity of a pure component, <span class="math inline">\(i\)</span>, at <span class="math inline">\(a_i=1\)</span>.</p>
+<p>For a component in a solution we can use <a href="11_NonIdealGases.html#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> to write the chemical potential in the gas phase as:</p>
+<p><span id="eq-act2"><span class="math display">\[
+\mu_i^{\text{vapor}} = \mu_i^{\standardstate} + RT \ln \frac{P_i}{P^{\standardstate}}.
+\tag{13.7}\]</span></span></p>
+<p>If the gas phase is in equilibrium with the liquid solution, then:</p>
+<p><span id="eq-act3"><span class="math display">\[
+\mu_i^{\text{solution}} = \mu_i^{\text{vapor}} = \mu_i^*,
+\tag{13.8}\]</span></span></p>
+<p>where <span class="math inline">\(\mu_i^*\)</span> is the chemical potential of the pure component. Subtracting <a href="#eq-act3" class="quarto-xref">eq.&nbsp;<span>13.8</span></a> from <a href="#eq-act2" class="quarto-xref">eq.&nbsp;<span>13.7</span></a>, we obtain:</p>
+<p><span id="eq-act4"><span class="math display">\[
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \frac{P_i}{P^*_i}.
+\tag{13.9}\]</span></span></p>
+<p>For an ideal solution, we can use Raoult’s law, <a href="#eq-mc1" class="quarto-xref">eq.&nbsp;<span>13.1</span></a>, to rewrite <a href="#eq-act4" class="quarto-xref">eq.&nbsp;<span>13.9</span></a> as:</p>
+<p><span id="eq-act5"><span class="math display">\[
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln x_i,
+\tag{13.10}\]</span></span></p>
+<p>which relates the chemical potential of a component in an ideal solution to the chemical potential of the pure liquid and its mole fraction in the solution. For a non-ideal solution, the partial pressure in <a href="#eq-act4" class="quarto-xref">eq.&nbsp;<span>13.9</span></a> is either larger (positive deviation) or smaller (negative deviation) than the pressure calculated using Raoult’s law. The chemical potential of a component in the mixture is then calculated using:</p>
+<p><span id="eq-act6"><span class="math display">\[
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \left(\gamma_i x_i\right),
+\tag{13.11}\]</span></span></p>
+<p>where <span class="math inline">\(\gamma_i\)</span> is a positive coefficient that accounts for deviations from ideality. This coefficient is either larger than one (for positive deviations), or smaller than one (for negative deviations). The activity of component <span class="math inline">\(i\)</span> can be calculated as an <em>effective mole fraction</em>, using:</p>
+<p><span id="eq-act7"><span class="math display">\[
+a_i = \gamma_i x_i,
+\tag{13.12}\]</span></span></p>
+<p>where <span class="math inline">\(\gamma_i\)</span> is defined as the <em>activity coefficient</em>. The partial pressure of the component can then be related to its vapor pressure, using:</p>
+<p><span id="eq-act8"><span class="math display">\[
+P_i = a_i P_i^*.
+\tag{13.13}\]</span></span></p>
+<p>Comparing <a href="#eq-act8" class="quarto-xref">eq.&nbsp;<span>13.13</span></a> with Raoult’s law, we can calculate the activity coefficient as:</p>
+<p><span id="eq-act9"><span class="math display">\[
+\gamma_i = \frac{P_i}{x_i P_i^*} = \frac{P_i}{P_i^{\text{R}}},
+\tag{13.14}\]</span></span></p>
+<p>where <span class="math inline">\(P_i^{\text{R}}\)</span> is the partial pressure calculated using Raoult’s law. This result also proves that for an ideal solution, <span class="math inline">\(\gamma=1\)</span>. <a href="#eq-act9" class="quarto-xref">Eq.&nbsp;<span>13.14</span></a> can also be used experimentally to obtain the activity coefficient from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in <a href="#fig-FigSol1" class="quarto-xref">Figure&nbsp;<span>13.9</span></a>.</p>
+<div id="fig-FigSol1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two pressure-composition diagrams showing how to read the activity coefficient. Left, gamma greater than 1: at composition x i the measured partial pressure P i lies above the Raoult's law value. Right, gamma between 0 and 1: the measured value lies below it.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigSol1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.033.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Two pressure-composition diagrams showing how to read the activity coefficient. Left, gamma greater than 1: at composition x i the measured partial pressure P i lies above the Raoult's law value. Right, gamma between 0 and 1: the measured value lies below it.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigSol1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.9: Positive and Negative Deviation from Raoult’s Law in the Pressure–Composition Phase Diagram of Non-Ideal Solutions at Constant Temperature.
+</figcaption>
+</figure>
+</div>
+<p>As we already discussed in <a href="10_ChemicalEquilibrium.html" class="quarto-xref"><span>chapter 10</span></a>, the activity is the most general quantity that we can use to define the equilibrium constant of a reaction (or the reaction quotient). The advantage of using the activity is that it’s defined for ideal and non-ideal gases and mixtures of gases, as well as for ideal and non-ideal solutions in both the liquid and the solid phase.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</section>
+<section id="colligative-properties" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="colligative-properties"><span class="header-section-number">13.4</span> Colligative Properties</h2>
+<p>Colligative properties are properties of solutions that depend on the number of particles in the solution and not on the nature of the chemical species. More specifically, a colligative property depends on the ratio between the number of particles of the solute and the number of particles of the solvent. This ratio can be measured using any unit of concentration, such as mole fraction, molarity, and normality. For dilute solutions, however, the most useful concentration for studying colligative properties is the molality, <span class="math inline">\(m\)</span>, which measures the ratio between the number of particles of the solute (in moles) and the mass of the solvent (in kg):</p>
+<p><span id="eq-coll1"><span class="math display">\[
+m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
+\tag{13.15}\]</span></span></p>
+<p>Colligative properties usually result from the dissolution of a nonvolatile solute in a volatile liquid solvent, and they are properties of the solvent, modified by the presence of the solute. They are physically explained by the fact that the solute particles displace some solvent molecules in the liquid phase, thereby reducing the concentration of the solvent. This explanation shows how colligative properties are independent of the nature of the chemical species in a solution only if the solution is ideal. For non-ideal solutions, the formulas that we will derive below are valid only in an approximate manner. We will discuss the following four colligative properties: relative lowering of the vapor pressure, elevation of the boiling point, depression of the melting point, and osmotic pressure.</p>
+<section id="vapor-pressure-lowering" class="level3" data-number="13.4.1">
+<h3 data-number="13.4.1" class="anchored" data-anchor-id="vapor-pressure-lowering"><span class="header-section-number">13.4.1</span> Vapor pressure lowering</h3>
+<p>As we have already discussed earlier in this chapter, the vapor pressure of an ideal solution follows Raoult’s law. Its difference with respect to the vapor pressure of the pure solvent can be calculated as:</p>
+<p><span id="eq-coll2"><span class="math display">\[
+\begin{aligned}
+P_{\text{solvent}}^* &amp;- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{solvent}} P_{\text{solvent}}^* \\
+&amp; = \left( 1-x_{\text{solvent}}\right)P_{\text{solvent}}^* =x_{\text{solute}} P_{\text{solvent}}^*,
+\end{aligned}
+\tag{13.16}\]</span></span></p>
+<p>which shows that the vapor pressure lowering depends only on the concentration of the solute. As such, it is a colligative property.</p>
+</section>
+<section id="boiling-point-elevation-and-melting-point-depression" class="level3" data-number="13.4.2">
+<h3 data-number="13.4.2" class="anchored" data-anchor-id="boiling-point-elevation-and-melting-point-depression"><span class="header-section-number">13.4.2</span> Boiling point elevation and melting point depression</h3>
+<p>The following two colligative properties are explained by reporting the changes due to the solute molecules in the plot of the chemical potential as a function of temperature (<a href="12_PhaseEquilibrium.html#fig-FigPhase1" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>).</p>
+<p>At the boiling point, the chemical potential of the solution is equal to the chemical potential of the vapor, and the following relation can be obtained:</p>
+<p><span id="eq-collA"><span class="math display">\[
+\begin{aligned}
+\mu_{\text{solution}} &amp;=\mu_{\text{vap}}=\mu_{\text{solvent}}^{\standardstate} + RT \ln P_{\text{solution}} \\
+&amp;= \mu_{\text{solvent}}^{\standardstate} + RT \ln \left(x_{\text{solvent}} P_{\text{solvent}}^* \right)\\
+&amp;= \underbrace{\mu_{\text{solvent}}^{\standardstate} + RT \ln P_{\text{solvent}}^*}_{\mu_{\text{solvent}}^*} + RT \ln x_{\text{solvent}} \\
+&amp;= \mu_{\text{solvent}}^* + RT \ln x_{\text{solvent}},
+\end{aligned}
+\tag{13.17}\]</span></span></p>
+<p>and since <span class="math inline">\(x_{\text{solvent}}&lt;1\)</span>, the logarithmic term in the last expression is negative, and:</p>
+<p><span id="eq-collB"><span class="math display">\[
+\mu_{\text{solution}} &lt; \mu_{\text{solvent}}^*.
+\tag{13.18}\]</span></span></p>
+<p><a href="#eq-collA" class="quarto-xref">Eq.&nbsp;<span>13.17</span></a> proves that the addition of a solute always stabilizes the solvent in the liquid phase, and lowers its chemical potential, as shown in <a href="#fig-FigSol2" class="quarto-xref">Figure&nbsp;<span>13.10</span></a>.</p>
+<div id="fig-FigSol2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Chemical potential versus temperature for the solid, liquid, and gas phases. Adding a solute lowers the liquid line from the pure solvent position to the solution position. The liquid now crosses the solid line at a lower temperature, a melting point decrease, and crosses the gas line at a higher temperature, a boiling point increase.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigSol2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.034.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Chemical potential versus temperature for the solid, liquid, and gas phases. Adding a solute lowers the liquid line from the pure solvent position to the solution position. The liquid now crosses the solid line at a lower temperature, a melting point decrease, and crosses the gas line at a higher temperature, a boiling point increase.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigSol2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.10: Reduction of the Chemical Potential of the Liquid Phase Due to the Addition of a Solute.
+</figcaption>
+</figure>
+</div>
+<p>The elevation of the boiling point can be quantified using:</p>
+<p><span id="eq-coll3"><span class="math display">\[
+\Delta T_{\text{b}}=T_{\text{b}}^{\text{solution}}-T_{\text{b}}^{\text{solvent}}=iK_{\text{b}}m,
+\tag{13.19}\]</span></span></p>
+<p>where <span class="math inline">\(i\)</span> is the <em>van ’t Hoff factor</em>, a coefficient that measures the number of solute particles for each formula unit, <span class="math inline">\(K_{\text{b}}\)</span> is the ebullioscopic constant of the solvent, and <span class="math inline">\(m\)</span> is the molality of the solution, as introduced in <a href="#eq-coll1" class="quarto-xref">eq.&nbsp;<span>13.15</span></a> above. For a solute that does not dissociate in solution, <span class="math inline">\(i=1\)</span>. For a solute that dissociates in solution, the number of particles in solutions depends on how many particles it dissociates into, and <span class="math inline">\(i&gt;1\)</span>. For example, the strong electrolyte <span class="math inline">\(\mathrm{Ca}\mathrm{Cl}_2\)</span> completely dissociates into three particles in solution, one <span class="math inline">\(\mathrm{Ca}^{2+}\)</span> and two <span class="math inline">\(\mathrm{Cl}^-\)</span>, and <span class="math inline">\(i=3\)</span>. For cases of partial dissociation, such as weak acids, weak bases, and their salts, <span class="math inline">\(i\)</span> can assume non-integer values.</p>
+<p>If we assume ideal solution behavior, the ebullioscopic constant can be obtained from the thermodynamic condition for liquid-vapor equilibrium. At the boiling point of the solution, the chemical potential of the solvent in the solution phase equals the chemical potential in the pure vapor phase above the solution:</p>
+<p><span id="eq-coll4"><span class="math display">\[
+\mu_{\text{solution}} (T_{\text{b}})  = \mu_{\text{solvent}}^*(T_b)  + RT\ln x_{\text{solvent}},
+\tag{13.20}\]</span></span></p>
+<p>from which we can derive, using the Gibbs–Helmholtz equation, <a href="09_Gibbs.html#eq-gibbshelm" class="quarto-xref">eq.&nbsp;<span>9.9</span></a>:</p>
+<p><span id="eq-coll5"><span class="math display">\[
+K_{\text{b}}=\frac{RMT_{\text{b}}^{2}}{\Delta_{\mathrm{vap}} H},
+\tag{13.21}\]</span></span></p>
+<p>where <span class="math inline">\(R\)</span> is the ideal gas constant, <span class="math inline">\(M\)</span> is the molar mass of the solvent, and <span class="math inline">\(\Delta_{\mathrm{vap}} H\)</span> is its molar enthalpy of vaporization.</p>
+<p>The reduction of the melting point is similarly obtained by:</p>
+<p><span id="eq-coll6"><span class="math display">\[
+\Delta T_{\text{m}}=T_{\text{m}}^{\text{solution}}-T_{\text{m}}^{\text{solvent}}=-iK_{\text{m}}m,
+\tag{13.22}\]</span></span></p>
+<p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(K_{\text{m}}\)</span> is the <em>cryoscopic constant</em> of the solvent, <span class="math inline">\(m\)</span> is the molality, and the minus sign accounts for the fact that the melting temperature of the solution is lower than the melting temperature of the pure solvent (<span class="math inline">\(\Delta T_{\text{m}}\)</span> is defined as a negative quantity, while <span class="math inline">\(i\)</span>, <span class="math inline">\(K_{\text{m}}\)</span>, and <span class="math inline">\(m\)</span> are all positive). Similarly to the previous case, the cryoscopic constant can be related to the molar enthalpy of fusion of the solvent using the equivalence of the chemical potential of the solid and the liquid phases at the melting point, and employing the Gibbs–Helmholtz equation:</p>
+<p><span id="eq-coll7"><span class="math display">\[
+K_{\text{m}}=\frac{RMT_{\text{m}}^{2}}{\Delta_{\mathrm{fus}}H}.
+\tag{13.23}\]</span></span></p>
+<p>Notice from <a href="#fig-FigSol2" class="quarto-xref">Figure&nbsp;<span>13.10</span></a> how the depression of the melting point is always larger than the elevation of the boiling point. This is because the chemical potential of the solid is essentially flat, while the chemical potential of the gas is steep. Consequently, the value of the cryoscopic constant is always bigger than the value of the ebullioscopic constant. For example, for water <span class="math inline">\(K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\)</span>, while <span class="math inline">\(K_{\text{b}} = 0.512\; \frac{\text{K kg}}{\text{mol}}\)</span>. This is also proven by the fact that the enthalpy of vaporization is larger than the enthalpy of fusion.</p>
+</section>
+<section id="osmotic-pressure" class="level3" data-number="13.4.3">
+<h3 data-number="13.4.3" class="anchored" data-anchor-id="osmotic-pressure"><span class="header-section-number">13.4.3</span> Osmotic pressure</h3>
+<p>The osmotic pressure of a solution is defined as the difference in pressure between the solution and the pure liquid solvent when the two are in equilibrium across a semi-permeable (osmotic) membrane. The osmotic membrane is made of a porous material that allows the flow of solvent molecules but blocks the flow of the solute ones. The osmosis process is depicted in <a href="#fig-FigSol3" class="quarto-xref">Figure&nbsp;<span>13.11</span></a>.</p>
+<div id="fig-FigSol3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="U-shaped tube with a semi-permeable membrane at the bottom, before and after. Before: the left arm contains solution with solute particles, the right arm contains pure solvent, and the levels are equal under the same external pressure. After: solvent has moved into the left arm, whose level is higher by a height delta h, matching the osmotic pressure pi.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigSol3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.035.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="U-shaped tube with a semi-permeable membrane at the bottom, before and after. Before: the left arm contains solution with solute particles, the right arm contains pure solvent, and the levels are equal under the same external pressure. After: solvent has moved into the left arm, whose level is higher by a height delta h, matching the osmotic pressure pi.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigSol3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.11: Osmotic Pressure of a Solution.
+</figcaption>
+</figure>
+</div>
+<p>Starting from a solvent at atmospheric pressure in the apparatus depicted in <a href="#fig-FigSol3" class="quarto-xref">Figure&nbsp;<span>13.11</span></a>, we can add solute particles to the left side of the apparatus. The increase in concentration on the left causes a net transfer of solvent across the membrane. This flow stops when the pressure difference equals the osmotic pressure, <span class="math inline">\(\pi\)</span>. The formula that governs the osmotic pressure was initially proposed by van ’t Hoff and later refined by Harmon Northrop Morse (1848–1920). The Morse formula reads:</p>
+<p><span id="eq-coll8"><span class="math display">\[
+\pi = imRT,
+\tag{13.24}\]</span></span></p>
+<p>where <span class="math inline">\(i\)</span> is the van ’t Hoff factor introduced above, <span class="math inline">\(m\)</span> is the molality of the solution, <span class="math inline">\(R\)</span> is the ideal gas constant, and <span class="math inline">\(T\)</span> the temperature of the solution. As with the other colligative properties, the Morse equation is a consequence of the equality of the chemical potentials of the solvent and the solution at equilibrium.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</section>
+</section>
+<section id="sec-rev13" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="sec-rev13"><span class="header-section-number">13.5</span> Chapter Review</h2>
+<section id="sec-quest13" class="level3" data-number="13.5.1">
+<h3 data-number="13.5.1" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.5.1</span> Study Questions</h3>
+<p><strong>1. What is the Gibbs phase rule for binary solutions with one phase present?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(f = 2 - p + 2\)</span>.</li>
+<li><span class="math inline">\(f = 4 - p\)</span>.</li>
+<li><span class="math inline">\(f = 3 - p + 2\)</span>.</li>
+<li><span class="math inline">\(f = 3 - p\)</span>.</li>
+<li><span class="math inline">\(f = 2 - p + 1\)</span>.</li>
+</ol>
+<hr>
+<p><strong>2. Which of the following is NOT an example of a liquid solution?</strong></p>
+<ol type="a">
+<li>Saltwater.</li>
+<li>Vinegar.</li>
+<li>Carbonated drinks.</li>
+<li>Dental amalgam.</li>
+<li>Alcoholic beverages.</li>
+</ol>
+<hr>
+<p><strong>3. Raoult’s law states that the partial pressure of each component <span class="math inline">\(i\)</span> of an ideal mixture of liquids is:</strong></p>
+<ol type="a">
+<li><span class="math inline">\(P_i = x_i P^*_i\)</span>.</li>
+<li><span class="math inline">\(P_i = y_i P^*_i\)</span>.</li>
+<li><span class="math inline">\(P_i = \frac{x_i}{P^*_i}\)</span>.</li>
+<li><span class="math inline">\(P_i = x_i RT\)</span>.</li>
+<li><span class="math inline">\(P_i = y_i RT\)</span>.</li>
+</ol>
+<hr>
+<p><strong>4. In a <span class="math inline">\(T-x_B\)</span> phase diagram of an ideal solution with two volatile components, where is the liquid phase located?</strong></p>
+<ol type="a">
+<li>At the top of the diagram.</li>
+<li>At the bottom of the diagram.</li>
+<li>In the middle of the diagram.</li>
+<li>On the left side of the diagram.</li>
+<li>On the right side of the diagram.</li>
+</ol>
+<hr>
+<p><strong>5. What is an azeotrope?</strong></p>
+<ol type="a">
+<li>A solution with a constant boiling point that cannot be altered by simple distillation.</li>
+<li>A solution with a variable boiling point that can be easily separated by distillation.</li>
+<li>A solution where the vapor and liquid phases have different compositions.</li>
+<li>A solution that follows Raoult’s law perfectly.</li>
+<li>A solution with only one volatile component.</li>
+</ol>
+<hr>
+<p><strong>6. How is the activity of a component in a non-ideal solution defined?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(a_i = \gamma_i x_i\)</span>.</li>
+<li><span class="math inline">\(a_i = x_i\)</span>.</li>
+<li><span class="math inline">\(a_i = \frac{P_i}{P^*_i}\)</span>.</li>
+<li><span class="math inline">\(a_i = \gamma_i P_i\)</span>.</li>
+<li><span class="math inline">\(a_i = \frac{x_i}{P^*_i}\)</span>.</li>
+</ol>
+<hr>
+<p><strong>7. Which of the following is NOT a colligative property?</strong></p>
+<ol type="a">
+<li>Vapor pressure lowering.</li>
+<li>Boiling point elevation.</li>
+<li>Melting point depression.</li>
+<li>Osmotic pressure.</li>
+<li>Molar mass.</li>
+</ol>
+<hr>
+<p><strong>8. Which of the following is the correct formula for boiling point elevation?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\Delta T_b = iK_b m\)</span>.</li>
+<li><span class="math inline">\(\Delta T_b = -iK_b m\)</span>.</li>
+<li><span class="math inline">\(\Delta T_b = \frac{iK_b}{m}\)</span>.</li>
+<li><span class="math inline">\(\Delta T_b = iK_b RT\)</span>.</li>
+<li><span class="math inline">\(\Delta T_b = iK_b P\)</span>.</li>
+</ol>
+<hr>
+<p><strong>9. What does the van ’t Hoff factor <span class="math inline">\(i\)</span> in colligative property equations represent?</strong></p>
+<ol type="a">
+<li>The number of solute particles for each formula unit.</li>
+<li>The molality of the solution.</li>
+<li>The molar mass of the solvent.</li>
+<li>The vapor pressure of the solution.</li>
+<li>The enthalpy of vaporization.</li>
+</ol>
+<hr>
+<p><strong>10. According to the Morse equation, the osmotic pressure <span class="math inline">\(\pi\)</span> is given by:</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\pi = imRT\)</span>.</li>
+<li><span class="math inline">\(\pi = \frac{imRT}{P}\)</span>.</li>
+<li><span class="math inline">\(\pi = imP\)</span>.</li>
+<li><span class="math inline">\(\pi = \frac{im}{RT}\)</span>.</li>
+<li><span class="math inline">\(\pi = imT\)</span>.</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Only two degrees of freedom are visible in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram. Temperature represents the third independent variable.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This effectively corresponds to a region with just a single degree of freedom in the plot: either the temperature or the composition can be changed independently.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Notice that, since the activity is a relative measure, the equilibrium constant expressed in terms of the activities is also a relative concept. In other words, it measures equilibrium relative to a standard state. This fact, however, should not surprise us, since the equilibrium constant is also related to <span class="math inline">\(\Delta_{\text{rxn}} G^{\standardstate}\)</span> using Gibbs’ relation. This is why the definition of a universally agreed-upon <a href="https://en.wikipedia.org/wiki/Standard_state">standard state</a> is such an essential concept in chemistry, and why it is defined by the <a href="https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry">International Union of Pure and Applied Chemistry (IUPAC)</a> and followed systematically by chemists around the globe.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>For a derivation, see <a href="https://en.wikipedia.org/wiki/Osmotic_pressure">Wikipedia’s article on osmotic pressure</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+    // section titles with math (e.g., "Temperature Dependence of ΔG") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
+  }).catch(function () {});
+});
+</script>
+<script>
+// Wide screens keep the top bar visible (see quarto.css): measure its height for the sidebar offset.
+(function () {
+  function setHeight() {
+    var h = document.querySelector("#quarto-header");
+    if (h) document.documentElement.style.setProperty("--header-height", h.offsetHeight + "px");
+  }
+  setHeight();
+  window.addEventListener("resize", setHeight);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./12_PhaseEquilibrium.html" class="pagination-link" aria-label="Phase Equilibrium">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./15_Kinetics.html" class="pagination-link" aria-label="Chemical Kinetics">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>, except third-party images as credited · Scripts: <a href="https://github.com/peverati/pchem1/blob/master/scripts/LICENSE">MIT</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/13_MCPhaseDiagrams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

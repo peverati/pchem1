@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+
+<title>11&nbsp; Ideal and Non-Ideal Gases – The Live Textbook of Physical Chemistry 1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./12_PhaseEquilibrium.html" rel="next">
+<link href="./10_ChemicalEquilibrium.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- MathJax macros used throughout the book (the PDF defines the same macro in _quarto.yml). -->
+<script type="text/javascript">
+window.MathJax = window.MathJax || {};
+window.MathJax.tex = window.MathJax.tex || {};
+window.MathJax.tex.macros = Object.assign(window.MathJax.tex.macros || {}, {
+  standardstate: "{-\\kern-6pt{\\ominus}\\kern-6pt-}"
+});
+</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem1" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem1.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11_NonIdealGases.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Basis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_FirstLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Thermochemistry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_ThermodynamicCycles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_SecondLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_ThirdLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Potentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Gibbs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gibbs Energy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_ChemicalEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_NonIdealGases.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_PhaseEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_MCPhaseDiagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-ideal-gas-equation" id="toc-the-ideal-gas-equation" class="nav-link active" data-scroll-target="#the-ideal-gas-equation"><span class="header-section-number">11.1</span> The Ideal Gas Equation</a>
+  <ul class="collapse">
+  <li><a href="#boyles-law" id="toc-boyles-law" class="nav-link" data-scroll-target="#boyles-law"><span class="header-section-number">11.1.1</span> Boyle’s Law</a></li>
+  <li><a href="#charless-and-gay-lussacs-laws" id="toc-charless-and-gay-lussacs-laws" class="nav-link" data-scroll-target="#charless-and-gay-lussacs-laws"><span class="header-section-number">11.1.2</span> Charles’s and Gay-Lussac’s Laws</a></li>
+  <li><a href="#avogadros-law" id="toc-avogadros-law" class="nav-link" data-scroll-target="#avogadros-law"><span class="header-section-number">11.1.3</span> Avogadro’s Law</a></li>
+  <li><a href="#the-ideal-gas-law" id="toc-the-ideal-gas-law" class="nav-link" data-scroll-target="#the-ideal-gas-law"><span class="header-section-number">11.1.4</span> The ideal gas Law</a></li>
+  </ul></li>
+  <li><a href="#behaviors-of-non-ideal-gases" id="toc-behaviors-of-non-ideal-gases" class="nav-link" data-scroll-target="#behaviors-of-non-ideal-gases"><span class="header-section-number">11.2</span> Behaviors of Non-Ideal Gases</a>
+  <ul class="collapse">
+  <li><a href="#the-van-der-waals-equation" id="toc-the-van-der-waals-equation" class="nav-link" data-scroll-target="#the-van-der-waals-equation"><span class="header-section-number">11.2.1</span> The van der Waals equation</a></li>
+  <li><a href="#joulethomson-effect" id="toc-joulethomson-effect" class="nav-link" data-scroll-target="#joulethomson-effect"><span class="header-section-number">11.2.2</span> Joule–Thomson effect</a></li>
+  </ul></li>
+  <li><a href="#critical-phenomena" id="toc-critical-phenomena" class="nav-link" data-scroll-target="#critical-phenomena"><span class="header-section-number">11.3</span> Critical Phenomena</a>
+  <ul class="collapse">
+  <li><a href="#compressibility-factors" id="toc-compressibility-factors" class="nav-link" data-scroll-target="#compressibility-factors"><span class="header-section-number">11.3.1</span> Compressibility factors</a></li>
+  <li><a href="#phase-diagram-of-a-non-ideal-gas" id="toc-phase-diagram-of-a-non-ideal-gas" class="nav-link" data-scroll-target="#phase-diagram-of-a-non-ideal-gas"><span class="header-section-number">11.3.2</span> Phase diagram of a non-ideal gas</a></li>
+  </ul></li>
+  <li><a href="#fugacity" id="toc-fugacity" class="nav-link" data-scroll-target="#fugacity"><span class="header-section-number">11.4</span> Fugacity</a></li>
+  <li><a href="#sec-rev11" id="toc-sec-rev11" class="nav-link" data-scroll-target="#sec-rev11"><span class="header-section-number">11.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-exer11" id="toc-sec-exer11" class="nav-link" data-scroll-target="#sec-exer11"><span class="header-section-number">11.5.1</span> Practice Problems</a></li>
+  <li><a href="#sec-quest11" id="toc-sec-quest11" class="nav-link" data-scroll-target="#sec-quest11"><span class="header-section-number">11.5.2</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/11_NonIdealGases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-RealGases" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-ideal-gas-equation" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="the-ideal-gas-equation"><span class="header-section-number">11.1</span> The Ideal Gas Equation</h2>
+<p>The concept of an ideal gas is a theoretical construct that allows for straightforward treatment and interpretation of gases’ behavior. As such, the ideal gas is a simplified <em>model</em> that we use to understand nature, and it does not correspond to any real system. In typical “spherical cow” spirit, the ideal gas model strips away many real-world complications so we can focus on the core relationships between pressure, volume, temperature, and amount of gas. The following two assumptions define the ideal gas model:</p>
+<div id="def-iedalgasdef" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11.1</strong></span> &nbsp;</p>
+<ul>
+<li>The particles that compose an ideal gas do not occupy any volume.</li>
+<li>The particles that compose an ideal gas do not interact with each other.</li>
+</ul>
+</div>
+<p>Because of its simplicity, the ideal gas model has been the historical foundation of thermodynamics and of science in general. The first studies of the ideal gas behavior date back to the seventeenth century, and the scientists that performed them are among the founders of modern science.</p>
+<section id="boyles-law" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="boyles-law"><span class="header-section-number">11.1.1</span> Boyle’s Law</h3>
+<p>In 1662 Robert Boyle (1627–1691) found that the pressure and the volume of an ideal gas are inversely related at constant temperature. Boyle’s Law has the following mathematical description:</p>
+<p><span id="eq-boylelaw1"><span class="math display">\[
+P\propto\frac{1}{V}\quad\text{at const.}\;T,
+\tag{11.1}\]</span></span></p>
+<p>or, in other terms:</p>
+<p><span id="eq-boylelaw2"><span class="math display">\[
+PV=k_1\quad\text{at const.}\;T,
+\tag{11.2}\]</span></span></p>
+<p>which results in the familiar <span class="math inline">\(PV\)</span> plots of <a href="#fig-FigPVideal" class="quarto-xref">Figure&nbsp;<span>11.1</span></a>. As we already discussed in <a href="02_ZerothLaw.html" class="quarto-xref"><span>chapter 2</span></a>, each of the curves in <a href="#fig-FigPVideal" class="quarto-xref">Figure&nbsp;<span>11.1</span></a> is obtained at constant temperature, and it is therefore called <em>“isotherm.”</em></p>
+<div id="fig-FigPVideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume diagram of an ideal gas at constant temperature with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigPVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/R_11_NonIdealGases_FigPVideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure-volume diagram of an ideal gas at constant temperature with two hyperbolic isotherms. The isotherm at the higher temperature, T2, lies above the one at T1.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigPVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: PV-Diagram of an ideal Gas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="charless-and-gay-lussacs-laws" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="charless-and-gay-lussacs-laws"><span class="header-section-number">11.1.2</span> Charles’s and Gay-Lussac’s Laws</h3>
+<p>It took scientists more than a century to expand Boyle’s work and study the relationship between volume and temperature. In 1787 Jacques Alexandre César Charles (1746–1823) wrote the relationship known as Charles’s Law:</p>
+<p><span id="eq-charleslaw1"><span class="math display">\[
+V\propto T\quad\text{at const.}\;P,
+\tag{11.3}\]</span></span></p>
+<p>or, in other terms:</p>
+<p><span id="eq-charleslaw2"><span class="math display">\[
+V=k_2 T\quad\text{at const.}\;P,
+\tag{11.4}\]</span></span></p>
+<p>which results in the plots of <a href="#fig-FigTVideal" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>. Each of the curves is obtained at constant pressure, and it is termed <em>“isobar.”</em></p>
+<div id="fig-FigTVideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigTVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/R_11_NonIdealGases_FigTVideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Volume versus temperature in degrees Celsius for an ideal gas at constant pressure. Two straight isobars both extrapolate to zero volume at minus 273.15 degrees Celsius. The line at the lower pressure, P1, is steeper than the one at the higher pressure, P2.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTVideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.2: VT-Diagram of an ideal Gas.
+</figcaption>
+</figure>
+</div>
+<p>The interesting thing about isobars is that each line seems to converge to a specific point along the temperature line when we extrapolate them to <span class="math inline">\(V\rightarrow 0\)</span>. This led to the introduction of the absolute temperature scale, suggesting that the temperature will never get smaller than <span class="math inline">\(-273.15^\circ\mathrm{C}\)</span>.</p>
+<p>It took an additional 21 years to write a formal relationship between pressure and temperature. The following relationships were proposed by Joseph Louis Gay-Lussac (1778–1850) in 1808:</p>
+<p><span id="eq-gaylussac1"><span class="math display">\[
+P\propto T\quad\text{at const.}\;V,
+\tag{11.5}\]</span></span></p>
+<p>or, in other terms:</p>
+<p><span id="eq-gaylussac2"><span class="math display">\[
+P=k_3 T\quad\text{at const.}\;V,
+\tag{11.6}\]</span></span></p>
+<p>which results in the plots of <a href="#fig-FigTPideal" class="quarto-xref">Figure&nbsp;<span>11.3</span></a>. Each of the curves is obtained at constant volume, and it is termed <em>“isochor.”</em></p>
+<div id="fig-FigTPideal" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigTPideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/R_11_NonIdealGases_FigTPideal.png" class="img-fluid figure-img" style="width:70.0%" alt="Pressure versus temperature in degrees Celsius for an ideal gas at constant volume. Two straight isochors both extrapolate to zero pressure at minus 273.15 degrees Celsius. The line at the smaller volume, V1, is steeper than the one at the larger volume, V2.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTPideal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.3: PT-Diagram of an ideal Gas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="avogadros-law" class="level3" data-number="11.1.3">
+<h3 data-number="11.1.3" class="anchored" data-anchor-id="avogadros-law"><span class="header-section-number">11.1.3</span> Avogadro’s Law</h3>
+<p>Three years later, in 1811, Amedeo Avogadro (1776–1856) discovered a seemingly unrelated principle by studying the composition of matter. His Avogadro’s Law encodes the relationship between the number of moles in an ideal gas and its volume as:</p>
+<p><span id="eq-avogadrolaw1"><span class="math display">\[
+V\propto n\quad\text{at const.}\;P,T,
+\tag{11.7}\]</span></span></p>
+<p>or in other terms:</p>
+<p><span id="eq-avogadrolaw2"><span class="math display">\[
+V=k_4 n\quad\text{at const.}\;P,T,
+\tag{11.8}\]</span></span></p>
+</section>
+<section id="the-ideal-gas-law" class="level3" data-number="11.1.4">
+<h3 data-number="11.1.4" class="anchored" data-anchor-id="the-ideal-gas-law"><span class="header-section-number">11.1.4</span> The ideal gas Law</h3>
+<p>Despite all of the ingredients being available for more than 20 years, it’s only in 1834 that Benoît Paul Émile Clapeyron (1799–1864) was finally able to combine them into what is now known as the <strong>ideal gas Law</strong>. Using the same formulas obtained above, we can write:</p>
+<p><span id="eq-ideallaw1"><span class="math display">\[
+PV=\underbrace{k_3 T}_{\text{from Gay-Lussac's}} \cdot \underbrace{k_4 n,}_{\text{from Avogadro's}}
+\tag{11.9}\]</span></span></p>
+<p>which by renaming the product of the two constants <span class="math inline">\(k_3\)</span> and <span class="math inline">\(k_4\)</span> as <span class="math inline">\(R\)</span>, becomes:</p>
+<p><span id="eq-ideallaw2"><span class="math display">\[
+PV=nRT
+\tag{11.10}\]</span></span></p>
+<p>The value of the constant <span class="math inline">\(R\)</span> can be determined experimentally by measuring the volume that 1 mol of an ideal gas occupies at a constant temperature (e.g., at <span class="math inline">\(T=0^\circ\mathrm{C}\)</span>) and a constant pressure (e.g., atmospheric pressure <span class="math inline">\(P=1\;\mathrm{atm}\)</span>). At those conditions, the volume is measured at 22.4 L, resulting in the following value of <span class="math inline">\(R\)</span>:</p>
+<p><span id="eq-ideallaw3"><span class="math display">\[
+R=\frac{VP}{nT}=\frac{22.4 \cdot 1}{1 \cdot 273}=0.082 \;\frac{\text{L atm}}{\text{mol K}},
+\tag{11.11}\]</span></span></p>
+<p>which a simple conversion to SI units transforms into:</p>
+<p><span id="eq-RvalueSI"><span class="math display">\[
+R=8.31\;\frac{\text{J}}{\text{mol K}}.
+\tag{11.12}\]</span></span></p>
+</section>
+</section>
+<section id="behaviors-of-non-ideal-gases" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="behaviors-of-non-ideal-gases"><span class="header-section-number">11.2</span> Behaviors of Non-Ideal Gases</h2>
+<p>Non-ideal gases (sometimes also referred to as “real gases”), do not behave as ideal gases because at least one of the assumptions in <a href="#def-iedalgasdef" class="quarto-xref">definition&nbsp;<span>11.1</span></a> is violated. What characterizes non-ideal gases is that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental models, none of which is superior to the other. The van der Waals (vdW) equation is the only model that we will analyze in detail because of its simple interpretation. However, it is far from universal, and for several non-ideal gases, it is severely inaccurate. Other popular non-ideal gas equations are the Clausius equation, the virial equation, the Redlich–Kwong equation and several others.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="the-van-der-waals-equation" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="the-van-der-waals-equation"><span class="header-section-number">11.2.1</span> The van der Waals equation</h3>
+<p>One of the simplest empirical equations that describe non-ideal gases was obtained in 1873 by Johannes Diderik van der Waals (1837–1923). The vdW equation includes two empirical parameters (<span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>) with different values for different non-ideal gases. Each of the parameters corresponds to a correction for the breaking of one of the two conditions that define the ideal gas behavior (<a href="#def-iedalgasdef" class="quarto-xref">definition&nbsp;<span>11.1</span></a>). The vdW equation is obtained from the ideal gas equation performing the following simple substitutions:</p>
+<p><span id="eq-vdWeq1"><span class="math display">\[
+\begin{aligned}
+P &amp; \;\rightarrow\;\left( P + \frac{a}{\overline{V}^2} \right)\\
+\overline{V} &amp; \;\rightarrow\;\left( \overline{V} - b\right),\\
+\end{aligned}
+\tag{11.13}\]</span></span></p>
+<p>which results in:</p>
+<p><span id="eq-vdWeq2"><span class="math display">\[
+\begin{aligned}
+P\overline{V} &amp;=RT \; \rightarrow \; \left( P + \frac{a}{\overline{V}^2} \right)\left( \overline{V} - b\right)=RT\\
+P &amp;=\frac{RT}{\overline{V} - b}-\frac{a}{\overline{V}^2}.
+\end{aligned}
+\tag{11.14}\]</span></span></p>
+<p>The parameter <span class="math inline">\(a\)</span> accounts for the presence of intermolecular interactions, while the parameter <span class="math inline">\(b\)</span> accounts for the non-negligible volume of the gas molecules. Despite the parameters having simple interpretations, their values for each gas must be determined experimentally. Values for these parameters for some significant non-ideal gases are reported below:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 50%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;"><span class="math inline">\(a \left[ \frac{\mathrm{L}^2\mathrm{bar}}{\mathrm{mol}^2} \right]\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(b \left[ \frac{\mathrm{L}}{\mathrm{mol}} \right]\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ammonia</td>
+<td style="text-align: center;">4.225</td>
+<td style="text-align: center;">0.0371</td>
+</tr>
+<tr class="even">
+<td>Argon</td>
+<td style="text-align: center;">1.355</td>
+<td style="text-align: center;">0.03201</td>
+</tr>
+<tr class="odd">
+<td>Carbon dioxide</td>
+<td style="text-align: center;">3.640</td>
+<td style="text-align: center;">0.04267</td>
+</tr>
+<tr class="even">
+<td>Carbon monoxide</td>
+<td style="text-align: center;">1.505</td>
+<td style="text-align: center;">0.03985</td>
+</tr>
+<tr class="odd">
+<td>Chlorine</td>
+<td style="text-align: center;">6.579</td>
+<td style="text-align: center;">0.05622</td>
+</tr>
+<tr class="even">
+<td>Freon</td>
+<td style="text-align: center;">10.78</td>
+<td style="text-align: center;">0.0998</td>
+</tr>
+<tr class="odd">
+<td>Helium</td>
+<td style="text-align: center;">0.0346</td>
+<td style="text-align: center;">0.0238</td>
+</tr>
+<tr class="even">
+<td>Hydrogen</td>
+<td style="text-align: center;">0.2476</td>
+<td style="text-align: center;">0.02661</td>
+</tr>
+<tr class="odd">
+<td>Mercury</td>
+<td style="text-align: center;">8.200</td>
+<td style="text-align: center;">0.01696</td>
+</tr>
+<tr class="even">
+<td>Methane</td>
+<td style="text-align: center;">2.283</td>
+<td style="text-align: center;">0.04278</td>
+</tr>
+<tr class="odd">
+<td>Neon</td>
+<td style="text-align: center;">0.2135</td>
+<td style="text-align: center;">0.01709</td>
+</tr>
+<tr class="even">
+<td>Nitrogen</td>
+<td style="text-align: center;">1.370</td>
+<td style="text-align: center;">0.0387</td>
+</tr>
+<tr class="odd">
+<td>Oxygen</td>
+<td style="text-align: center;">1.382</td>
+<td style="text-align: center;">0.03186</td>
+</tr>
+<tr class="even">
+<td>Radon</td>
+<td style="text-align: center;">6.601</td>
+<td style="text-align: center;">0.06239</td>
+</tr>
+<tr class="odd">
+<td>Xenon</td>
+<td style="text-align: center;">4.250</td>
+<td style="text-align: center;">0.05105</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="joulethomson-effect" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="joulethomson-effect"><span class="header-section-number">11.2.2</span> Joule–Thomson effect</h3>
+<div id="fig-FigJT" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Joule-Thomson apparatus: a horizontal insulated tube divided by a porous plug, with a piston on each side. The left piston pushes the gas through the plug at temperature T1 and pressure P1, while the right piston moves out as the gas expands to temperature T2 and pressure P2.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigJT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.015.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Joule-Thomson apparatus: a horizontal insulated tube divided by a porous plug, with a piston on each side. The left piston pushes the gas through the plug at temperature T1 and pressure P1, while the right piston moves out as the gas expands to temperature T2 and pressure P2.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigJT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.4: The Joule–Thomson Experiment.
+</figcaption>
+</figure>
+</div>
+<p>We have already met William Thomson, also known as Lord Kelvin, and his seminal work on the second law of thermodynamics. In conjunction with that work, Thomson is famous for developing a sensitive method for measuring the temperature changes related to the expansion of a gas. These experiments improved on the earlier work by James Joule, and Lord Kelvin’s improved instrument depicted in <a href="#fig-FigJT" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> is named the Joule–Thomson apparatus. The apparatus is composed of two chambers, each with its own mobile piston. The chambers are connected via a valve or a porous plug. The entire equipment is also thermally isolated from the surroundings. This instrument is a more sensitive version of the Joule expansion apparatus that we already described in <a href="03_FirstLaw.html" class="quarto-xref"><span>chapter 3</span></a> (compare with <a href="03_FirstLaw.html#fig-FigJexp" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>).</p>
+<p>Thomson realized that a gas flowing through an obstruction experiences a drop in pressure. If the entire apparatus is insulated, it will not exchange heat with its surroundings (<span class="math inline">\(Q=0\)</span>), and each transformation will happen at adiabatic conditions. Let’s consider an initial condition with 1 mol of gas in the left chamber, occupying a volume <span class="math inline">\(V_l\)</span>, and a completely closed right chamber, for which <span class="math inline">\(V_r^i=0\)</span>. After the process completes, the volume of the left chamber will reduce to <span class="math inline">\(V_l^f=0\)</span>, while the volume of the right chamber will be <span class="math inline">\(V_r\)</span>. Using the first law of thermodynamics, we can write:</p>
+<p><span id="eq-JT1"><span class="math display">\[
+\Delta U=U_r-U_l=\underbrace{Q}_{=0}+W=W_l+W_r,
+\tag{11.15}\]</span></span></p>
+<p>with:</p>
+<p><span id="eq-JT2"><span class="math display">\[
+\begin{aligned}
+W_l &amp;=-\int_{V_l}^0 P_l dV = P_l V_l\\
+W_r &amp;=-\int_0^{V_r} P_r dV = - P_r V_r.
+\end{aligned}
+\tag{11.16}\]</span></span></p>
+<p>Replacing <a href="#eq-JT2" class="quarto-xref">eq.&nbsp;<span>11.16</span></a> into <a href="#eq-JT1" class="quarto-xref">eq.&nbsp;<span>11.15</span></a>, results in:</p>
+<p><span id="eq-JT3"><span class="math display">\[
+\begin{aligned}
+U_r-U_l &amp;=P_l V_l-P_r V_r \\
+\underbrace{U_r+P_r V_r}_{H_r} &amp;= \underbrace{U_l + P_l V_l}_{H_l},
+\end{aligned}
+\tag{11.17}\]</span></span></p>
+<p>which, replacing the definition of enthalpy <span class="math inline">\(H=U+PV\)</span>, we obtain:</p>
+<p><span id="eq-JT4"><span class="math display">\[
+\begin{aligned}
+H_r &amp;=H_l \\
+\Delta H &amp;=0,
+\end{aligned}
+\tag{11.18}\]</span></span></p>
+<p>or, in other words, the process is <strong>isenthalpic</strong>. Using the total differential of <span class="math inline">\(H\)</span>:</p>
+<p><span id="eq-JT5"><span class="math display">\[
+dH=\left(\frac{\partial H}{\partial T} \right)_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP,
+\tag{11.19}\]</span></span></p>
+<p>we obtain:</p>
+<p><span id="eq-JT6b"><span class="math display">\[
+\Delta H=\int dH = \int C_P dT + \int \left(\frac{\partial H}{\partial P} \right)_T dP =0,
+\tag{11.20}\]</span></span></p>
+<p>or, in purely differential form:</p>
+<p><span id="eq-JT6"><span class="math display">\[
+dH = C_P dT + \left(\frac{\partial H}{\partial P} \right)_T dP =0.
+\tag{11.21}\]</span></span></p>
+<p>From <a href="#eq-JT6" class="quarto-xref">eq.&nbsp;<span>11.21</span></a> we can define a new coefficient, called the <em>Joule–Thomson coefficient</em>, <span class="math inline">\(\mu_{\mathrm{JT}}\)</span>, that measures the rate of change of temperature of a gas with respect to pressure in the Joule–Thomson process:</p>
+<p><span id="eq-muJT"><span class="math display">\[
+\mu_{\mathrm{JT}}=\left( \frac{\partial T}{\partial P} \right)_H=-\frac{1}{C_P} \left( \frac{\partial H}{\partial P} \right)_T.
+\tag{11.22}\]</span></span></p>
+<p>The value of <span class="math inline">\(\mu_{\mathrm{JT}}\)</span> depends on the type of gas, the temperature and pressure before expansion, and the heat capacity at constant pressure of the gas. The temperature at which <span class="math inline">\(\mu_{\mathrm{JT}}\)</span> changes sign is called the “Joule–Thomson inversion temperature.” Since the pressure decreases during an expansion, <span class="math inline">\(\partial P\)</span> is negative by definition, and the following possibilities are available for <span class="math inline">\(\mu_{\mathrm{JT}}\)</span>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 14%">
+<col style="width: 21%">
+<col style="width: 14%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gas temperature:</th>
+<th style="text-align: center;"><span class="math inline">\(\partial P\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mu_{\mathrm{JT}}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\partial T\)</span></th>
+<th style="text-align: center;">The gas will:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Below the inversion temperature</em></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">cool</td>
+</tr>
+<tr class="even">
+<td><em>Above the inversion temperature</em></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">warm</td>
+</tr>
+</tbody>
+</table>
+<p>For example, helium has a very low Joule–Thomson inversion temperature at standard pressure <span class="math inline">\((T=45\;\text{K})\)</span>, and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures (<span class="math inline">\(T=621\;\text{K}\)</span> and <span class="math inline">\(T=764\;\text{K}\)</span>, respectively), and they both cool when expanded at room temperature. Therefore, it is possible to use the Joule–Thomson effect in refrigeration processes such as air conditioning.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> As we already discussed in <a href="03_FirstLaw.html" class="quarto-xref"><span>chapter 3</span></a>, the temperature of an ideal gas stays constant in an adiabatic expansion, therefore its Joule–Thomson coefficient is always equal to zero.</p>
+</section>
+</section>
+<section id="critical-phenomena" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="critical-phenomena"><span class="header-section-number">11.3</span> Critical Phenomena</h2>
+<section id="compressibility-factors" class="level3" data-number="11.3.1">
+<h3 data-number="11.3.1" class="anchored" data-anchor-id="compressibility-factors"><span class="header-section-number">11.3.1</span> Compressibility factors</h3>
+<p>The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behavior. It is usually represented with the symbol <span class="math inline">\(z\)</span>, and is calculated as:</p>
+<p><span id="eq-comprdef"><span class="math display">\[
+z=\frac{\overline{V}}{\overline{V}_{\text{ideal}}} = \frac{P \overline{V}}{RT}.
+\tag{11.23}\]</span></span></p>
+<p>It is evident from <a href="#eq-comprdef" class="quarto-xref">eq.&nbsp;<span>11.23</span></a> that the compressibility factor is dependent on the pressure, and for an ideal gas <span class="math inline">\(z=1\)</span> always. For a non-ideal gas at any given pressure, <span class="math inline">\(z\)</span> can be higher or lower than one, separating the behavior of non-ideal gases into two possibilities. The dependence of the compressibility factor against pressure is represented for <span class="math inline">\(\mathrm{H}_2\)</span> and <span class="math inline">\(\mathrm{CO}_2\)</span> in <a href="#fig-FigZb" class="quarto-xref">Figure&nbsp;<span>11.5</span></a>.</p>
+<div id="fig-FigZb" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Compressibility factor z versus pressure. The ideal gas is a horizontal dotted line at z equal to 1. A type I gas (hydrogen) rises above 1 as pressure increases. A type II gas (carbon dioxide) first dips below 1 and then rises above it at high pressure.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigZb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.012.jpeg" class="img-fluid figure-img" style="width:80.0%" alt="Compressibility factor z versus pressure. The ideal gas is a horizontal dotted line at z equal to 1. A type I gas (hydrogen) rises above 1 as pressure increases. A type II gas (carbon dioxide) first dips below 1 and then rises above it at high pressure.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigZb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.5: Non-Ideal Gases Behaviors.
+</figcaption>
+</figure>
+</div>
+<p>The two types of possible behaviors are differentiated based on the compressibility factor at <span class="math inline">\(P\rightarrow 0\)</span>. To analyze these situations we can use the vdW equation to calculate the compressibility factor as:</p>
+<p><span id="eq-compr1"><span class="math display">\[
+z= \frac{\overline{V}}{RT} \left( \frac{RT}{\overline{V}-b} -\frac{a}{\overline{V}^2} \right),
+\tag{11.24}\]</span></span></p>
+<p>and then we can differentiate this equation at constant temperature with respect to changes in the pressure near <span class="math inline">\(P=0\)</span>, to obtain:</p>
+<p><span id="eq-compr2"><span class="math display">\[
+\left. \left( \frac{\partial z}{\partial P}\right)_T \right|_{P=0} = \frac{1}{RT} \left( b -\frac{a}{RT} \right),
+\tag{11.25}\]</span></span></p>
+<p>which is then interpreted as follows:</p>
+<ul>
+<li><strong>Type I gases</strong>: <span class="math inline">\(b&gt;\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} &gt; 0\)</span> <em>molecular size</em> dominates (<span class="math inline">\(\mathrm{H}_2-\)</span>like behavior).</li>
+<li><strong>Type II gases</strong>: <span class="math inline">\(b&lt;\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} &lt; 0\)</span> <em>attractive forces</em> dominate (<span class="math inline">\(\mathrm{CO}_2-\)</span>like behavior).</li>
+</ul>
+<p>The dependence of the compressibility factor as a function of temperature (<a href="#fig-Fig1Zb2" class="quarto-xref">Figure&nbsp;<span>11.6</span></a>) results in different plots for each of the two types of behavior.</p>
+<div id="fig-Fig1Zb2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Compressibility factor z versus pressure at several temperatures. Left, type I gas (hydrogen): every curve rises above 1, and the curves flatten toward the ideal line as temperature goes from 200 K to 1000 K. Right, type II gas (carbon dioxide): at low temperatures the curves dip below 1 first, at the Boyle temperature of 713 K the curve stays close to 1 over a wide pressure range, and at higher temperatures the curves rise above 1.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig1Zb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.013.jpeg" class="img-fluid figure-img" style="width:90.0%" alt="Compressibility factor z versus pressure at several temperatures. Left, type I gas (hydrogen): every curve rises above 1, and the curves flatten toward the ideal line as temperature goes from 200 K to 1000 K. Right, type II gas (carbon dioxide): at low temperatures the curves dip below 1 first, at the Boyle temperature of 713 K the curve stays close to 1 over a wide pressure range, and at higher temperatures the curves rise above 1.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig1Zb2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.6: Temperature Dependence of the Compressibility Factor.
+</figcaption>
+</figure>
+</div>
+<p>Both type I and type II non-ideal gases will approach the ideal gas behavior as <span class="math inline">\(T\rightarrow \infty\)</span>, because <span class="math inline">\(\frac{1}{RT}\rightarrow 0\)</span> as <span class="math inline">\(T\rightarrow \infty\)</span>. For type II gases, there are three interesting situations:</p>
+<ul>
+<li>At low <span class="math inline">\(T\)</span>: <span class="math inline">\(b&lt;\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} &lt; 0,\)</span> which is the behavior described above.</li>
+<li>At high <span class="math inline">\(T\)</span>: <span class="math inline">\(b&gt;\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} &gt; 0,\)</span> which is the same behavior of type I gases.</li>
+<li>At a very specific temperature, inversion will occur (i.e., at <span class="math inline">\(T=713 \; \mathrm{K}\)</span> for <span class="math inline">\(\mathrm{CO}_2\)</span>). This temperature is called the <strong>Boyle temperature</strong>, <span class="math inline">\(T_{\mathrm{B}}\)</span>, and is the temperature at which the attractive and repulsive forces balance out. It can be calculated from the vdW equation, since <span class="math inline">\(b-\frac{a}{RT_{\mathrm{B}}}=0 \; \Rightarrow \; T_{\mathrm{B}}=\frac{a}{bR}.\)</span> At the Boyle temperature a type II gas shows ideal gas behavior over a large range of pressure.</li>
+</ul>
+</section>
+<section id="phase-diagram-of-a-non-ideal-gas" class="level3" data-number="11.3.2">
+<h3 data-number="11.3.2" class="anchored" data-anchor-id="phase-diagram-of-a-non-ideal-gas"><span class="header-section-number">11.3.2</span> Phase diagram of a non-ideal gas</h3>
+<div id="fig-FigPVni" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume diagram of a real gas with isotherms from T1 to T5. At high temperatures the isotherms look like ideal hyperbolas. The critical isotherm, Tc, touches the top of a dome-shaped region labeled liquid plus vapor, at the critical point. Below Tc the isotherms are flat inside the dome, the liquid region is to its left, and the vapor region is to its right. An inset shows a piston compressing vapor above a liquid.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigPVni-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/OEP_Figures.014.jpeg" class="img-fluid figure-img" style="width:60.0%" alt="Pressure-volume diagram of a real gas with isotherms from T1 to T5. At high temperatures the isotherms look like ideal hyperbolas. The critical isotherm, Tc, touches the top of a dome-shaped region labeled liquid plus vapor, at the critical point. Below Tc the isotherms are flat inside the dome, the liquid region is to its left, and the vapor region is to its right. An inset shows a piston compressing vapor above a liquid.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigPVni-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.7: The Pressure–Volume Diagram of a Non-Ideal Gas.
+</figcaption>
+</figure>
+</div>
+<p>Let’s now turn our attention to the <span class="math inline">\(PV\)</span> phase diagram of a non-ideal gas, reported in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas (<span class="math inline">\(T_5\)</span> and <span class="math inline">\(T_4\)</span> in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>). Lowering the temperature, we start to see the deviation from ideality getting more prominent (<span class="math inline">\(T_3\)</span> in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>) until we reach a particular temperature called the critical temperature, <span class="math inline">\(T_c\)</span>.</p>
+<div id="def-criticalT" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11.2</strong></span> <em>Critical Temperature:</em> The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.</p>
+</div>
+<p>At the critical temperature and below, the gas liquefies when the pressure is increased. For this reason, the liquefaction of a gas is called a <em>critical phenomenon</em>.</p>
+<p>The critical temperature is the coordinate of a unique point, called the <strong>critical point</strong>, that can be visualized in the three-dimensional <span class="math inline">\(T,P,V\)</span> diagram of each gas (<a href="#fig-FigTPVd" class="quarto-xref">Figure&nbsp;<span>11.8</span></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>).</p>
+<div id="fig-FigTPVd" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional surface of pressure versus specific volume and temperature for a real substance. It shows the solid, liquid, gas, and vapor regions, the coexistence regions solid-liquid, liquid-vapor, and solid-vapor, the triple line, and the critical point at the top of the liquid-vapor region.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FigTPVd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PVT_3D_diagram.png" class="img-fluid figure-img" style="width:50.0%" alt="Three-dimensional surface of pressure versus specific volume and temperature for a real substance. It shows the solid, liquid, gas, and vapor regions, the coexistence regions solid-liquid, liquid-vapor, and solid-vapor, the triple line, and the critical point at the top of the liquid-vapor region.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FigTPVd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.8: The three-dimensional diagram.
+</figcaption>
+</figure>
+</div>
+<p>The critical point has coordinates <span class="math inline">\(\{T_c,P_c, \overline{V}_c\}\)</span>. These critical coordinates can be determined from the vdW equation at <span class="math inline">\(T_c\)</span>, as:</p>
+<p><span id="eq-criticpt"><span class="math display">\[
+T_c=\frac{8a}{27Rb} \qquad P_c=\frac{a}{27b^2} \qquad \overline{V}_c=3b.
+\tag{11.26}\]</span></span></p>
+<p>These relations are used, in practice, to determine the vdW constants <span class="math inline">\(a,b\)</span> from the experimentally measured critical isotherms.</p>
+<p>The critical compressibility factor, <span class="math inline">\(z_c\)</span>, is predicted from the vdW equation at:</p>
+<p><span id="eq-critiz"><span class="math display">\[
+z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{8a} \right) = \frac{3}{8} = 0.375,
+\tag{11.27}\]</span></span></p>
+<p>a value that is independent of the gas. Experimentally measured values of <span class="math inline">\(z_c\)</span> for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental <span class="math inline">\(z_c\)</span> is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume.</p>
+<p>Notice how slicing the <span class="math inline">\(PT\overline{V}\)</span> diagram at constant <span class="math inline">\(T\)</span> results in the <span class="math inline">\(PV\)</span> diagram that we reported in <a href="#fig-FigPVni" class="quarto-xref">Figure&nbsp;<span>11.7</span></a>. On the other hand, slicing the <span class="math inline">\(PT\overline{V}\)</span> diagram at constant <span class="math inline">\(\overline{V}\)</span> results in a <span class="math inline">\(PT\)</span> diagram, similar to the one that we will examine in detail in the next chapter.</p>
+</section>
+</section>
+<section id="fugacity" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="fugacity"><span class="header-section-number">11.4</span> Fugacity</h2>
+<p>The chemical potential of a pure ideal gas can be calculated using <a href="09_Gibbs.html#eq-dgconstn4" class="quarto-xref">eq.&nbsp;<span>9.21</span></a>. Since we are not interested in a mixture, we can drop the asterisk in <span class="math inline">\(\mu^*\)</span>, and rewrite <a href="09_Gibbs.html#eq-dgconstn4" class="quarto-xref">eq.&nbsp;<span>9.21</span></a> as:</p>
+<p><span id="eq-dcpig"><span class="math display">\[
+\mu_{\text{ideal}} = \mu^\standardstate + RT \ln \frac{P}{P^\standardstate}.
+\tag{11.28}\]</span></span></p>
+<p>For a non-ideal gas, the pressure cannot be used in <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.28</span></a> because the response of each gas to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.28</span></a> and call it fugacity (<span class="math inline">\(f\)</span>).</p>
+<div id="def-fugacitydef" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11.3</strong></span> <em>Fugacity:</em> The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.</p>
+</div>
+<p><a href="#eq-dcpig" class="quarto-xref">Eq.&nbsp;<span>11.28</span></a> then becomes:</p>
+<p><span id="eq-dcpnig"><span class="math display">\[
+\mu_{\text{non-ideal}} = \mu^\standardstate + RT \ln \frac{f}{P^\standardstate}.
+\tag{11.29}\]</span></span></p>
+<p>Since the chemical potential of a gas <span class="math inline">\(\mu\)</span> is equal to the standard chemical potential <span class="math inline">\(\mu^\standardstate\)</span> when <span class="math inline">\(P=P^\standardstate\)</span>, it is easy to use <a href="#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> to demonstrate that:</p>
+<p><span id="eq-dcpnigL"><span class="math display">\[
+\lim_{P\rightarrow 0} \frac{f}{P} = 1,
+\tag{11.30}\]</span></span></p>
+<p>in other words, any non-ideal gas will approach the ideal gas behavior as <span class="math inline">\(P\rightarrow 0\)</span>. This condition, in conjunction with the <span class="math inline">\(T\rightarrow \infty\)</span> behavior obtained in the previous section, results in the following statement:</p>
+<blockquote class="blockquote">
+<p>The highest chances for any gas to behave ideally happen at high temperature and low pressure.</p>
+</blockquote>
+<p>We can now return our attention to the definition of fugacity. Remembering that the chemical potential is the molar Gibbs energy of a substance, we can write:</p>
+<p><span id="eq-dmufug1"><span class="math display">\[
+d \mu_{\text{ideal}} = \overline{V}_{\text{ideal}}dP,
+\tag{11.31}\]</span></span></p>
+<p>and:</p>
+<p><span id="eq-dmufug2"><span class="math display">\[
+d \mu_{\text{non-ideal}} = \overline{V}_{\text{non-ideal}}dP.
+\tag{11.32}\]</span></span></p>
+<p>Subtracting <a href="#eq-dmufug1" class="quarto-xref">eq.&nbsp;<span>11.31</span></a> from <a href="#eq-dmufug2" class="quarto-xref">eq.&nbsp;<span>11.32</span></a>, we obtain:</p>
+<p><span id="eq-dmufug3"><span class="math display">\[
+d \mu_{\text{non-ideal}}-d \mu_{\text{ideal}} = \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP,
+\tag{11.33}\]</span></span></p>
+<p>which we can then integrate between <span class="math inline">\(0\)</span> and <span class="math inline">\(P\)</span>:</p>
+<p><span id="eq-dmufug4"><span class="math display">\[
+\mu_{\text{non-ideal}}-\mu_{\text{ideal}} = \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP.
+\tag{11.34}\]</span></span></p>
+<p>Using <a href="#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.28</span></a> and <a href="#eq-dcpnig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a> we can then replace the definition of chemical potentials, resulting in:</p>
+<p><span id="eq-dmufug5"><span class="math display">\[
+\ln f - \ln P = \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}} - \overline{V}_{\text{ideal}} \right) dP,
+\tag{11.35}\]</span></span></p>
+<p>which gives us a mathematical definition of the fugacity, as:</p>
+<p><span id="eq-dmufug6"><span class="math display">\[
+f = P \cdot \underbrace{\exp\left[ \frac{1}{RT} \int_0^P \left(\overline{V}_{\text{non-ideal}}-\overline{V}_{\text{ideal}} \right) dP \right]}_{\text{fugacity coefficient, }\phi(T,P)}.
+\tag{11.36}\]</span></span></p>
+<p>The exponential term in <a href="#eq-dmufug6" class="quarto-xref">eq.&nbsp;<span>11.36</span></a> is complicated to write, but it can be interpreted as a coefficient—unique to each non-ideal gas—that can be measured experimentally. Such coefficients are dependent on pressure and temperature and are called the <em>fugacity coefficients</em>. Using letter <span class="math inline">\(\phi\)</span> to represent the fugacity coefficient, we can rewrite <a href="#eq-dmufug6" class="quarto-xref">eq.&nbsp;<span>11.36</span></a> as:</p>
+<p><span id="eq-dmufug7"><span class="math display">\[
+f = \phi P,
+\tag{11.37}\]</span></span></p>
+<p>which gives us a straightforward interpretation of the fugacity as an effective pressure. As such, the fugacity will have the same unit as the pressure, while the fugacity coefficients will be dimensionless.</p>
+<p>As we already saw in <a href="10_ChemicalEquilibrium.html" class="quarto-xref"><span>chapter 10</span></a>, the fugacity can be used to replace the pressure in the definition of the equilibrium constant for reactions that involve non-ideal gases. The new constant is usually called <span class="math inline">\(K_f\)</span>, and is obtained from:</p>
+<p><span id="eq-kfdef"><span class="math display">\[
+K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
+\tag{11.38}\]</span></span></p>
+</section>
+<section id="sec-rev11" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="sec-rev11"><span class="header-section-number">11.5</span> Chapter Review</h2>
+<section id="sec-exer11" class="level3" data-number="11.5.1">
+<h3 data-number="11.5.1" class="anchored" data-anchor-id="sec-exer11"><span class="header-section-number">11.5.1</span> Practice Problems</h3>
+<p><strong>Problem 1: Calculating the van der Waals Constants</strong></p>
+<p>A gas has a critical temperature of <span class="math inline">\(400\,\text{K}\)</span> and critical pressure of <span class="math inline">\(80\,\text{bar}\)</span>. Calculate its van der Waals constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p><strong>Solution:</strong> Consider the first two formulas in <a href="#eq-criticpt" class="quarto-xref">eq.&nbsp;<span>11.26</span></a>:</p>
+<p><span class="math display">\[T_c = \frac{8a}{27Rb},\]</span></p>
+<p><span class="math display">\[P_c = \frac{a}{27b^2}.\]</span></p>
+<p>We can rearrange the equation for the critical pressure, to get:</p>
+<p><span class="math display">\[a = 27b^2P_c,\]</span></p>
+<p>then replace this into the equation for the critical temperature:</p>
+<p><span class="math display">\[T_c = \frac{8(27b^2P_c)}{27Rb} = \frac{8bP_c}{R},\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(T_c = 400\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(P_c = 80.0\,\text{bar}\)</span>,</p>
+<p><span class="math inline">\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\)</span>.</p>
+<p>We can now solve for <span class="math inline">\(b\)</span>:</p>
+<p><span class="math display">\[b = \frac{RT_c}{8P_c} = \frac{0.083145 \cdot 400}{8 \cdot 80} = 0.0519\,\text{L}/\text{mol}.\]</span></p>
+<p>Now we can calculate <span class="math inline">\(a\)</span>:</p>
+<p><span class="math display">\[a = 27b^2P_c = 27 \cdot (0.0519)^2 \cdot 80 = 5.82\,\text{L}^2\cdot\text{bar}/\text{mol}^2\]</span></p>
+<p><strong>Answer:</strong> The van der Waals constants for the given gas are: <span class="math inline">\(a = 5.82\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)</span> <span class="math inline">\(b = 0.0519\,\text{L}/\text{mol}\)</span></p>
+<hr>
+<p><strong>Problem 2: Determining the Joule-Thomson Coefficient</strong></p>
+<p>Calculate the Joule-Thomson coefficient for a gas with <span class="math inline">\(C_P = 30\,\frac{\text{J}}{\text{mol}\,\text{K}}\)</span> and <span class="math inline">\(\left(\frac{\partial H}{\partial P}\right)_T = -0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\)</span> at <span class="math inline">\(300\,\text{K}\)</span> and <span class="math inline">\(1.0\,\text{bar}\)</span>.</p>
+<p><strong>Solution:</strong> The Joule-Thomson coefficient is defined in <a href="#eq-muJT" class="quarto-xref">eq.&nbsp;<span>11.22</span></a> as:</p>
+<p><span class="math display">\[\mu_{JT} = \left(\frac{\partial T}{\partial P}\right)_H = -\frac{1}{C_P}\left(\frac{\partial H}{\partial P}\right)_T.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(C_P = 30\,\frac{\text{J}}{\text{mol}\,\text{K}}\)</span>,</p>
+<p><span class="math inline">\(\left(\frac{\partial H}{\partial P}\right)_T = -0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\)</span>,</p>
+<p><span class="math inline">\(T = 300\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(P = 1.0\,\text{bar}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[\mu_{JT} = -\frac{1}{30\,\frac{\text{J}}{\text{mol}\,\text{K}}} \cdot \left(-0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\right) = 6.667 \times 10^{-4}\,\text{K}/\text{bar}\]</span></p>
+<p>Adjusting the significant digits gives us the final answer.</p>
+<p><strong>Answer:</strong> The Joule-Thomson coefficient for the gas is <span class="math inline">\(6.7 \times 10^{-4}\,\text{K}/\text{bar}\)</span></p>
+<hr>
+<p><strong>Problem 3: Calculating the Boyle Temperature</strong></p>
+<p>Calculate the Boyle temperature for a gas with van der Waals constants <span class="math inline">\(a = 3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)</span> and <span class="math inline">\(b = 0.04\,\text{L}/\text{mol}\)</span>.</p>
+<p><strong>Solution:</strong> The Boyle temperature is defined as:</p>
+<p><span class="math display">\[T_B = \frac{a}{bR}.\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(a = 3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)</span>,</p>
+<p><span class="math inline">\(b = 0.04\,\text{L}/\text{mol}\)</span>,</p>
+<p><span class="math inline">\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[T_B = \frac{3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2}{0.04\,\text{L}/\text{mol} \cdot 0.083145\,\text{L}\cdot\text{bar}/\text{mol}\cdot\text{K}}=1052\,\text{K}\]</span></p>
+<p><strong>Answer:</strong> The Boyle temperature for the gas is <span class="math inline">\(1052\,\text{K}\)</span></p>
+<hr>
+<p><strong>Problem 4: Determining the Critical Compressibility Factor</strong></p>
+<p>A gas has a critical temperature of <span class="math inline">\(350\,\text{K}\)</span>, critical pressure of <span class="math inline">\(70\,\text{bar}\)</span>, and critical volume of <span class="math inline">\(0.15\,\text{L}/\text{mol}\)</span>. Calculate its critical compressibility factor.</p>
+<p><strong>Solution:</strong> The critical compressibility factor is given by <a href="#eq-critiz" class="quarto-xref">eq.&nbsp;<span>11.27</span></a> as:</p>
+<p><span class="math display">\[z_c = \frac{P_cV_c}{RT_c}\]</span></p>
+<p>Given: <span class="math inline">\(T_c = 350\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(P_c = 70\,\text{bar}\)</span>,</p>
+<p><span class="math inline">\(V_c = 0.15\,\text{L}/\text{mol}\)</span>,</p>
+<p><span class="math inline">\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[z_c = \frac{70\,\text{bar} \cdot 0.15\,\text{L}/\text{mol}}{0.083145\,\text{L}\cdot\text{bar}/\text{mol}\cdot\text{K} \cdot 350\,\text{K}}=0.361\]</span></p>
+<p>Adjusting the significant digits gives us the final answer.</p>
+<p><strong>Answer:</strong> The critical compressibility factor for the gas is <span class="math inline">\(0.36\)</span></p>
+<hr>
+<p><strong>Problem 5: Calculating Fugacity</strong></p>
+<p>A gas at <span class="math inline">\(300\,\text{K}\)</span> and <span class="math inline">\(50\,\text{bar}\)</span> has a fugacity coefficient of 0.95. Calculate its fugacity.</p>
+<p><strong>Solution:</strong> The fugacity is defined in <a href="#eq-dmufug7" class="quarto-xref">eq.&nbsp;<span>11.37</span></a> as:</p>
+<p><span class="math display">\[f = \phi P\]</span></p>
+<p>Given:</p>
+<p><span class="math inline">\(T = 300\,\text{K}\)</span>,</p>
+<p><span class="math inline">\(P = 50\,\text{bar}\)</span>,</p>
+<p><span class="math inline">\(\phi = 0.95\)</span>.</p>
+<p>Then:</p>
+<p><span class="math display">\[f = 0.95 \cdot 50\,\text{bar}=47.5\,\text{bar} \]</span></p>
+<p>Adjusting the significant digits gives us the final answer.</p>
+<p><strong>Answer:</strong> The fugacity of the gas is <span class="math inline">\(48\,\text{bar}\)</span></p>
+</section>
+<section id="sec-quest11" class="level3" data-number="11.5.2">
+<h3 data-number="11.5.2" class="anchored" data-anchor-id="sec-quest11"><span class="header-section-number">11.5.2</span> Study Questions</h3>
+<p><strong>1. Which of the following is NOT an assumption of the ideal gas model?</strong></p>
+<ol type="a">
+<li>The particles occupy no volume.</li>
+<li>The particles do not interact with each other.</li>
+<li>The particles have no kinetic energy.</li>
+<li>The particles are in constant motion.</li>
+<li>The particles undergo perfectly elastic collisions.</li>
+</ol>
+<hr>
+<p><strong>2. What does the Joule-Thomson coefficient measure?</strong></p>
+<ol type="a">
+<li>The rate of change of volume with respect to temperature.</li>
+<li>The rate of change of pressure with respect to volume.</li>
+<li>The rate of change of temperature with respect to pressure at constant enthalpy.</li>
+<li>The rate of change of entropy with respect to temperature.</li>
+<li>The rate of change of enthalpy with respect to pressure.</li>
+</ol>
+<hr>
+<p><strong>3. What is the value of the critical compressibility factor predicted by the van der Waals equation?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(1/3\)</span>.</li>
+<li><span class="math inline">\(3/8\)</span>.</li>
+<li><span class="math inline">\(1/2\)</span>.</li>
+<li><span class="math inline">\(2/3\)</span>.</li>
+<li><span class="math inline">\(1/4\)</span>.</li>
+</ol>
+<hr>
+<p><strong>4. Which of the following statements about fugacity is correct?</strong></p>
+<ol type="a">
+<li>Fugacity has units of pressure squared.</li>
+<li>The fugacity coefficient is always greater than 1.</li>
+<li>As pressure approaches zero, the ratio of fugacity to pressure approaches infinity.</li>
+<li>Fugacity is independent of temperature for all gases.</li>
+<li>Fugacity is used to replace pressure in equilibrium constant calculations for non-ideal gases.</li>
+</ol>
+<hr>
+<p><strong>5. How is the critical temperature of a gas defined?</strong></p>
+<ol type="a">
+<li>The temperature at which the gas becomes a supercritical fluid.</li>
+<li>The temperature above which the gas cannot be liquefied by pressure alone.</li>
+<li>The temperature at which the gas occupies its largest volume.</li>
+<li>The temperature at which the gas behaves most ideally.</li>
+<li>The temperature at which the gas has zero compressibility.</li>
+</ol>
+<hr>
+<p><strong>6. The compressibility factor <span class="math inline">\(z\)</span> for an ideal gas is always:</strong></p>
+<ol type="a">
+<li>Greater than 1.</li>
+<li>Less than 1.</li>
+<li>Equal to 0.</li>
+<li>Equal to 1.</li>
+<li>Dependent on pressure.</li>
+</ol>
+<hr>
+<p><strong>7. How is the Boyle temperature defined?</strong></p>
+<ol type="a">
+<li>The temperature at which a gas liquefies.</li>
+<li>The temperature at which a gas behaves most ideally over a large pressure range.</li>
+<li>The critical temperature of a gas.</li>
+<li>The temperature at which a gas solidifies.</li>
+<li>The temperature at which a gas has maximum entropy.</li>
+</ol>
+<hr>
+<p><strong>8. In the van der Waals equation, what does the parameter ‘<span class="math inline">\(a\)</span>’ account for?</strong></p>
+<ol type="a">
+<li>The volume of gas molecules.</li>
+<li>The pressure of the gas.</li>
+<li>The temperature of the gas.</li>
+<li>The number of moles of the gas.</li>
+<li>The intermolecular forces between gas molecules.</li>
+</ol>
+<hr>
+<p><strong>9. Which of the following is true regarding the fugacity of a gas?</strong></p>
+<ol type="a">
+<li>It is always greater than its pressure.</li>
+<li>It is always less than its pressure.</li>
+<li>It is the effective pressure that corresponds to the chemical potential of the real gas.</li>
+<li>It is independent of temperature.</li>
+<li>It is only applicable to ideal gases.</li>
+</ol>
+<hr>
+<p><strong>10. Which of the following gases is likely to have a Joule-Thomson inversion temperature below room temperature?</strong></p>
+<ol type="a">
+<li>Nitrogen.</li>
+<li>Oxygen.</li>
+<li>Carbon dioxide.</li>
+<li>Helium.</li>
+<li>Water vapor.</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.c, 2.c, 3.b, 4.e, 5.b, 6.d, 7.b, 8.e, 9.c, 10.d</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>For more information on empirical equations for non-ideal gases see <a href="https://en.wikipedia.org/wiki/Real_gas">Wikipedia’s article on real gases</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule–Thomson expansions is also used for the industrial liquefaction of air.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>This diagram is taken from <a href="https://en.wikipedia.org">Wikipedia</a> and distributed under CC-BY-SA license.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+    // section titles with math (e.g., "Temperature Dependence of ΔG") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
+  }).catch(function () {});
+});
+</script>
+<script>
+// Wide screens keep the top bar visible (see quarto.css): measure its height for the sidebar offset.
+(function () {
+  function setHeight() {
+    var h = document.querySelector("#quarto-header");
+    if (h) document.documentElement.style.setProperty("--header-height", h.offsetHeight + "px");
+  }
+  setHeight();
+  window.addEventListener("resize", setHeight);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./10_ChemicalEquilibrium.html" class="pagination-link" aria-label="Chemical Equilibrium">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./12_PhaseEquilibrium.html" class="pagination-link" aria-label="Phase Equilibrium">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>, except third-party images as credited · Scripts: <a href="https://github.com/peverati/pchem1/blob/master/scripts/LICENSE">MIT</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/11_NonIdealGases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
