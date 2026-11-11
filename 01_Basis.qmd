@@ -192,108 +192,108 @@ as the left hand side of this equation is not defined.^[Technically, the integra
 
 ## Chapter Review {#sec-rev1}
 ### Study Questions {#sec-quest1}
-**1. What is the primary purpose of calculus in thermodynamics?**
+**1. What is a differential, such as $dL$?**
 
-a. To measure the length of objects.
-b. To understand and analyze change in physical systems.
-c. To create complex mathematical formulas.
-d. To predict the weather.
-e. To calculate the mass of atoms.
-
----
-
-**2. What does the term "differential" represent?**
-
-a. The final state of a system.
-b. The initial state of a system.
-c. An infinitesimally small change in a quantity.
-d. The total energy of a system.
-e. The mass of a system.
+a. The derivative of $L$ with respect to position.
+b. A small but finite change in $L$, such as 1 mm.
+c. An infinitesimally small piece of $L$ that keeps the dimension of a length.
+d. The total length $L$ of the object.
+e. A pure number with no dimension.
 
 ---
 
-**3. Which of the following is NOT a characteristic of a good thermodynamic system?**
+**2. What does integration do, in the language of this chapter?**
 
-a. It has defined boundaries.
-b. It can exchange energy with its surroundings.
-c. It can be open, closed, or isolated.
-d. It must always have a physical barrier.
-e. It can be a portion of space containing matter.
-
----
-
-**4. According to the chemistry convention of signs, how is energy entering a system represented?**
-
-a. With a negative sign.
-b. With a positive sign.
-c. With no sign.
-d. With a multiplication symbol.
-e. With a division symbol.
+a. It glues together infinitely many infinitesimal pieces to reconstruct the whole quantity.
+b. It slices a quantity into infinitesimal pieces.
+c. It calculates the slope of a function at a point.
+d. It converts a quantity from one unit to another.
+e. It removes the dimension from a quantity.
 
 ---
 
-**5. Which of the following is an example of an intensive variable in the ideal gas law?**
+**3. Which of the following does an isolated system exchange with its surroundings?**
 
-a. Volume ($V$).
-b. Number of moles ($n$).
-c. Pressure ($P$).
-d. Total energy ($E$).
-e. Mass ($m$).
-
----
-
-**6. Which of the following is a valid expression for the ideal gas law?**
-
-a. $P=nRTV$.
-b. $\frac{P}{T}=\frac{nR}{V}$.
-c. $P+V=nRT$.
-d. $PVT=nR$.
-e. $PT=nRV$.
+a. Mass only.
+b. Energy only.
+c. Both mass and energy.
+d. Neither mass nor energy.
+e. Heat, but not work.
 
 ---
 
-**7. What is a key difference between state variables and path variables?**
+**4. According to the chemistry sign convention, what is the sign of the heat released by a system to its surroundings?**
 
-a. State variables are always intensive, while path variables are always extensive.
-b. State variables can be integrated, while path variables cannot be integrated exactly.
-c. State variables depend on the system's history, while path variables do not.
-d. State variables are always measured in SI units, while path variables are not.
-e. State variables are only used for gases, while path variables are used for liquids.
-
----
-
-**8. Which of the following is an example of a path variable?**
-
-a. Temperature ($T$).
-b. Pressure ($P$).
-c. Heat ($Q$).
-d. Volume ($V$).
-e. Molar volume ($\overline{V}$).
+a. Positive, since heat is energy.
+b. Negative, since the system is losing energy.
+c. Zero, since energy is conserved.
+d. Positive if the process is fast, negative if it is slow.
+e. It depends on the temperature of the surroundings.
 
 ---
 
-**9. In the context of thermodynamics, what does the symbol $đ$ represent when used instead of $d$ in a differential?**
+**5. Which of the following is an intensive variable?**
+
+a. Volume.
+b. Number of moles.
+c. Mass.
+d. Temperature.
+e. Total energy.
+
+---
+
+**6. What is the total differential of the pressure of an ideal gas, $P(T,\overline{V})$?**
+
+a. $dP = \frac{dT}{d\overline{V}}$.
+b. $dP = PdT + Pd\overline{V}$.
+c. $dP = \frac{\partial P}{\partial T} + \frac{\partial P}{\partial \overline{V}}$.
+d. $dP = \left(\frac{\partial T}{\partial P}\right)dT + \left(\frac{\partial \overline{V}}{\partial P}\right)d\overline{V}$.
+e. $dP = \left(\frac{\partial P}{\partial T}\right)dT + \left(\frac{\partial P}{\partial \overline{V}}\right)d\overline{V}$.
+
+---
+
+**7. What does Schwarz's theorem state for a state function?**
+
+a. The mixed second partial derivatives are equal, regardless of the order of differentiation.
+b. The first derivatives are always zero.
+c. The function cannot be integrated.
+d. The function depends on the path.
+e. The second derivatives are always positive.
+
+---
+
+**8. Which of the following is a path function?**
+
+a. Pressure.
+b. Temperature.
+c. Work.
+d. Molar volume.
+e. Internal energy.
+
+---
+
+**9. What does the symbol $đ$ indicate, as in $đQ$?**
 
 a. An exact differential.
-b. An inexact differential.
+b. An inexact differential, whose integral depends on the path.
 c. A partial derivative.
 d. A state function.
-e. An intensive variable.
+e. A very large change.
 
 ---
 
-**10. What is the correct expression for the total differential of pressure, $P$, as a function of temperature, $T$, and molar volume, $\overline{V}$?**
+**10. In the example of the trip from New York to Los Angeles, why is the air distance a state function?**
 
-a. $dP = \left(\frac{\partial P}{\partial T}\right)dT + \left(\frac{\partial P}{\partial \overline{V}}\right)d\overline{V}$
-b. $dP = \left(\frac{\partial T}{\partial P}\right)dT + \left(\frac{\partial \overline{V}}{\partial P}\right)d\overline{V}$
-c. $dP = \frac{\partial P}{\partial T} + \frac{\partial P}{\partial \overline{V}}$
-d. $dP = \frac{dT}{d\overline{V}}$
-e. $dP = PdT + Pd\overline{V}$
+a. Because it depends on the means of transportation.
+b. Because it changes with the weather.
+c. Because it depends only on the positions of the two cities, not on the route.
+d. Because it is always longer than the travel distance.
+e. Because it is measured in kilometers.
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.b, 2.c, 3.d, 4.b, 5.c, 6.b, 7.b, 8.c, 9.b, 10.a
+1.c, 2.a, 3.d, 4.b, 5.d, 6.e, 7.a, 8.c, 9.b, 10.c
 :::

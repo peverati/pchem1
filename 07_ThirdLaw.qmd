@@ -217,235 +217,109 @@ An interesting corollary to the third law states that it is impossible to find a
 
 
 ## Chapter Review {#sec-rev7}
-### Practice Problems {#sec-exer7}
-**Problem 1: Entropy Change in an Isothermal Expansion.**
-
-An ideal gas expands isothermally from a volume of $2.0\,\text{L}$ to $5.0\,\text{L}$ at $300\,\text{K}$. Calculate the change in entropy of the system if there are $0.5\,\text{mol}$ of gas.
-
-**Solution:** For an isothermal expansion of an ideal gas, we use the equation:
-
-$$\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)$$
-
-Given: 
-
-$n = 0.5\,\text{mol}$, 
-
-$R = 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, 
-
-$V_i = 2.0\,\text{L}$,
-
-$V_f = 5.0\,\text{L}$.
-
-Then:
-
-$$\Delta S^{\text{sys}} = 0.5\,\text{mol} \cdot 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \frac{5.0\,\text{L}}{2.0\,\text{L}}$$
-
-$$\Delta S^{\text{sys}} = 4.157\,\text{J/K} \cdot 0.916 = 3.808\,\text{J/K}$$
-Adjusting for the significant digits, we get the final answer.
-
-**Answer:** The change in entropy of the system is $3.8\,\text{J/K}$.
-
-
----
-
-**Problem 2: Entropy of Vaporization.**
-
-Calculate the standard entropy of vaporization for ethanol at its boiling point of $78.35^\circ\text{C}$, given that its enthalpy of vaporization is $38.56\,\text{kJ/mol}$.
-
-**Solution:** We use the equation for entropy of vaporization:
-
-$$\Delta_{\text{vap}} S^\standardstate = \frac{\Delta_{\text{vap}} H^\standardstate}{T_B}$$
-
-Given:
-
-$\Delta_{\text{vap}} H^\standardstate = 38.56\,\text{kJ/mol}$,
-
-$T_B = 78.35^\circ\text{C}+273.15=351.50\,\text{K}$.
-
-Then:
-
-$$\Delta_{\text{vap}} S = \frac{38.56\,\text{kJ/mol}}{351.50\,\text{K}} = 0.1097\,\text{kJ/(mol K)}.$$
-
-**Answer:** The standard entropy of vaporization for ethanol is $109.7\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$.
-
----
-
-**Problem 3: Entropy Change in the Surroundings.**
-
-A system releases $500\,\text{J}$ of heat to its surroundings at a constant temperature of $25^\circ\text{C}$. Calculate the entropy change of the surroundings.
-
-**Solution:** We use the equation for entropy change in the surroundings:
-
-$$\Delta S^{\text{surr}} = -\frac{Q_{\text{sys}}}{T_{\text{surr}}}$$
-
-Given:
-
-$Q_{sys} = -500\,\text{J}$ (negative because the system releases heat),
-
-$T_{surr} = 25\,\text{°C} + 273.15 = 298.15\,\text{K}$.
-
-Then:
-
-$$\Delta S^{\text{surr}} = -\frac{-500\,\text{J}}{298.15\,\text{K}} = 1.677\,\text{J/K}$$
-Fixing the significant digits gives us the final answer.
-
-**Answer:** The entropy in the surroundings changes by $1.7\,\text{J/K}$.
-
----
-
-**Problem 4: Entropy Change in an Isobaric Process**
-
-Calculate the entropy change when $2.0\,\text{mol}$ of an ideal gas is heated from $300\,\text{K}$ to $400\,\text{K}$ at constant pressure. Assume $C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$ and is independent of temperature.
-
-**Solution:** For an isobaric process, we use the equation:
-
-$$\Delta S^{\text{sys}} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)$$
-
-Given:
-
-$n = 2.0\,\text{mol}$, 
-
-$C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, 
-
-$T_i = 300\,\text{K}$, 
-
-$T_f = 400\,\text{K}$.
-
-Then:
-
-$$\Delta S^{\text{sys}} = 2.0\,\text{mol} \cdot 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \left(\frac{400\,\text{K}}{300\,\text{K}}\right)$$
-
-$$\Delta S^{\text{sys}} = 58.\,\text{J/K} \cdot 0.2877 = 16.69\,\text{J/K}$$
-Adjusting the significant digits gives us the final answer.
-
-**Answer:** The entropy change in the system is $17\,\text{J/K}$.
-
----
-
-**Problem 5: Reaction Entropy.**
-
-Calculate the standard reaction entropy for the combustion of methane:
-
-$$\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_2\text{O}_{(\text{l})}$$
-
-using the standard entropies reported in the tables at the end of the book.
-
-**Solution:** We can use @eq-thirdlaweq to calculate the reaction entropy:
-
-$$\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S^\standardstate_i$$
-
-$$\Delta_{\text{rxn}} S^\standardstate = [S^\standardstate_{\text{CO}_{2\text{(g)}}} + 2S^\standardstate_{\text{H}_2\text{O}_{\text{(l)}}}] - [S^\standardstate_{\text{CH}_{4 \text{(g)}}} + 2S^\standardstate_{\text{O}_{2\text{(g)}}}]$$
-
-$$\Delta_{\text{rxn}} S^\standardstate = [213.8 + 2(70.0)] - [186.3 + 2(205.2)]$$
-
-$$\Delta_{\text{rxn}} S^\standardstate = 353.8 - 596.7 = -242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$$
-
-**Answer:** The standard reaction entropy for the combustion of methane is $-242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$
-
 ### Study Questions {#sec-quest7}
-**1. What is the formula for calculating the change in entropy of the universe?**
+**1. How is the entropy change of the universe calculated?**
 
-a. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}$.
-b. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}$.
-c. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} \cdot \Delta S^{\text{surr}}$.
-d. $\Delta S_{\text{universe}} = \Delta S^{\text{sys}} / \Delta S^{\text{surr}}$.
-e. $\Delta S_{\text{universe}} = (\Delta S^{\text{sys}})^2 + (\Delta S^{\text{surr}})^2$.
-
----
-
-**2. For an ideal gas undergoing an isothermal process, which formula correctly represents the change in entropy?**
-
-a. $\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)$.
-b. $\Delta S^{\text{sys}} = nR \ln \left(\frac{P_f}{P_i}\right)$.
-c. $\Delta S^{\text{sys}} = nR (V_f - V_i)$.
-d. $\Delta S^{\text{sys}} = nR (P_f - P_i)$.
-e. $\Delta S^{\text{sys}} = nR (T_f - T_i)$.
+a. $\Delta S^{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}$.
+b. $\Delta S^{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}$.
+c. $\Delta S^{\text{universe}} = \Delta S^{\text{sys}}$.
+d. $\Delta S^{\text{universe}} = \Delta S^{\text{sys}} \cdot \Delta S^{\text{surr}}$.
+e. $\Delta S^{\text{universe}} = 0$ always.
 
 ---
 
-**3. What is Trouton's rule for the entropy of vaporization?**
+**2. What is the entropy change of an ideal gas in an isothermal expansion?**
 
-a. $\Delta_{\text{vap}} S \approx 5.5R$.
-b. $\Delta_{\text{vap}} S \approx 15.5R$.
-c. $\Delta_{\text{vap}} S \approx 10.5R$.
-d. $\Delta_{\text{vap}} S \approx 20.5R$.
-e. $\Delta_{\text{vap}} S \approx 1.5R$.
-
----
-
-**4. Which statement is true for a reversible adiabatic process?**
-
-a. $\Delta S^{\text{sys}} > 0$.
-b. $\Delta S^{\text{sys}} < 0$.
-c. $\Delta S^{\text{sys}} = 0$.
-d. $Q_{\mathrm{REV}} > 0$.
-e. $Q_{\mathrm{IRR}} = 0$.
+a. $\Delta S = 0$.
+b. $\Delta S = nC_V \ln\frac{T_f}{T_i}$.
+c. $\Delta S = nR \ln\frac{V_f}{V_i}$.
+d. $\Delta S = nR(V_f-V_i)$.
+e. $\Delta S = \frac{W}{T}$.
 
 ---
 
-**5. How is the entropy change of the surroundings calculated?**
+**3. How is the entropy of vaporization of a liquid calculated at its boiling point?**
 
-a. $\Delta S^{\text{surr}} = \frac{-Q_{\text{surr}}}{T_{surr}}$.
-b. $\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{sys}}$.
-c. $\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{surr}}$.
-d. $\Delta S^{\text{surr}} = \frac{Q_{\text{sys}}}{T_{surr}}$.
-e. $\Delta S^{\text{surr}} = \frac{Q_{\text{surr}}}{T_{sys}}$.
-
----
-
-**6. Which of the following formulas describes what the Clausius theorem states?**
-
-a. $dS^{\text{sys}} =    \frac{đQ}{T}$.
-b. $dS^{\text{sys}} <    \frac{đQ}{T}$.
-c. $dS^{\text{sys}} >    \frac{đQ}{T}$.
-d. $dS^{\text{sys}} \leq \frac{đQ}{T}$.
-e. $dS^{\text{sys}} \geq \frac{đQ}{T}$.
+a. $\Delta_{\text{vap}}S = \Delta_{\text{vap}}H \cdot T_B$.
+b. $\Delta_{\text{vap}}S = nR\ln T_B$.
+c. $\Delta_{\text{vap}}S = 0$.
+d. $\Delta_{\text{vap}}S = \Delta_{\text{vap}}H - T_B$.
+e. $\Delta_{\text{vap}}S = \frac{\Delta_{\text{vap}}H}{T_B}$.
 
 ---
 
-**7. According to the Third Law of Thermodynamics, what is the entropy of a perfectly ordered, pure, crystalline substance at $T = 0\,\text{K}$?**
+**4. Why does water deviate from Trouton's rule?**
 
-a. 1 J/K.
-b. 0 J/K.
-c. -1 J/K.
-d. Infinity.
-e. Undefined.
-
----
-
-**8. How can reaction entropies be calculated using standard entropies?**
-
-a. $\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S^\standardstate_i$.
-b. $\Delta_{\text{rxn}} S^\standardstate = \prod_i \nu_i S^\standardstate_i$.
-c. $\Delta_{\text{rxn}} S^\standardstate = \sum_i S^\standardstate_i / \nu_i$.
-d. $\Delta_{\text{rxn}} S^\standardstate = \sum_i (\nu_i S^\standardstate_i)^2$.
-e. $\Delta_{\text{rxn}} S^\standardstate = \ln(\sum_i \nu_i S^\standardstate_i)$.
+a. Because it boils at 100 °C.
+b. Because of the hydrogen bonds between its molecules.
+c. Because its molar mass is small.
+d. Because it is an ideal liquid.
+e. Because its enthalpy of vaporization is negative.
 
 ---
 
-**9. How is the change in entropy of the system calculated for an isobaric process? Note: Assume $C_P$ to be independent of temperature.**
+**5. What is the entropy change of the system in a reversible adiabatic process?**
 
-a. $\Delta S^{\text{sys}} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)$.
-b. $\Delta S^{\text{sys}} \approx nC_V \ln \left(\frac{T_f}{T_i}\right)$.
-c. $\Delta S^{\text{sys}} \approx nC_P (T_f - T_i)$.
-d. $\Delta S^{\text{sys}} \approx nR \ln \left(\frac{T_f}{T_i}\right)$.
-e. $\Delta S^{\text{sys}} \approx \frac{nC_P}{\ln (T_f/T_i)}$.
+a. Always positive.
+b. Always negative.
+c. Equal to $\frac{Q}{T}$ with $Q>0$.
+d. Zero, since the process is isentropic.
+e. Infinite.
 
 ---
 
-**10. Which of the following is a corollary to the Third Law of Thermodynamics?**
+**6. What is the entropy change for heating a substance at constant pressure, with $C_P$ independent of temperature?**
 
-a. It is possible to reach T = 0 K in a single step.
-b. It is impossible to reach T = 0 K in a finite number of steps.
-c. All substances have non-zero entropy at T = 0 K.
-d. The entropy of a substance is always negative at T > 0 K.
-e. The entropy of a substance is always infinity at T < 0 K.
+a. $\Delta S \approx nC_P \ln\frac{T_f}{T_i}$.
+b. $\Delta S \approx nC_P(T_f-T_i)$.
+c. $\Delta S \approx nR \ln\frac{T_f}{T_i}$.
+d. $\Delta S \approx \frac{nC_P}{T_f-T_i}$.
+e. $\Delta S = 0$.
+
+---
+
+**7. How is the entropy change of the surroundings calculated?**
+
+a. $\Delta S^{\text{surr}} = \frac{Q_{\text{sys}}}{T_{\text{sys}}}$.
+b. $\Delta S^{\text{surr}} = -\Delta S^{\text{sys}}$.
+c. $\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{\text{surr}}}$.
+d. $\Delta S^{\text{surr}} = 0$.
+e. $\Delta S^{\text{surr}} = nR\ln\frac{V_f}{V_i}$.
+
+---
+
+**8. Supercooled water freezes spontaneously at –10 °C, even though the entropy of the water decreases. How is this possible?**
+
+a. The entropy of the universe decreases, which is allowed for freezing.
+b. The second law does not apply to phase changes.
+c. The process is reversible.
+d. The entropy of the water actually increases.
+e. The heat released to the surroundings increases their entropy by more than the water loses.
+
+---
+
+**9. What does the Clausius theorem state?**
+
+a. $dS^{\text{sys}} = \frac{đQ}{T}$ always.
+b. $dS^{\text{sys}} \geq \frac{đQ}{T}$, with the equality for reversible processes.
+c. $dS^{\text{sys}} \leq \frac{đQ}{T}$ for spontaneous processes.
+d. $dS^{\text{sys}} = 0$ for all processes.
+e. $dS^{\text{universe}} < 0$ for spontaneous processes.
+
+---
+
+**10. What does the third law of thermodynamics make possible for the entropy that is not possible for the enthalpy?**
+
+a. Calculating changes at constant pressure.
+b. Measuring it with a calorimeter.
+c. Using it for chemical reactions.
+d. Tabulating absolute values, since it fixes the zero of the entropy scale.
+e. Making it independent of temperature.
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.b, 2.a, 3.c, 4.c, 5.c, 6.e, 7.b, 8.a, 9.a, 10.b
+1.a, 2.c, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d
 :::
-

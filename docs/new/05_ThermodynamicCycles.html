@@ -499,8 +499,7 @@ window.Quarto = {
   <li><a href="#efficiency-of-a-carnot-cycle" id="toc-efficiency-of-a-carnot-cycle" class="nav-link" data-scroll-target="#efficiency-of-a-carnot-cycle"><span class="header-section-number">5.3</span> Efficiency of a Carnot Cycle</a></li>
   <li><a href="#sec-rev5" id="toc-sec-rev5" class="nav-link" data-scroll-target="#sec-rev5"><span class="header-section-number">5.4</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer5" id="toc-sec-exer5" class="nav-link" data-scroll-target="#sec-exer5"><span class="header-section-number">5.4.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest5" id="toc-sec-quest5" class="nav-link" data-scroll-target="#sec-quest5"><span class="header-section-number">5.4.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest5" id="toc-sec-quest5" class="nav-link" data-scroll-target="#sec-quest5"><span class="header-section-number">5.4.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/05_ThermodynamicCycles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -695,156 +694,96 @@ Figure&nbsp;5.3: Carnot Cycle Diagram.
 </section>
 <section id="sec-rev5" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-rev5"><span class="header-section-number">5.4</span> Chapter Review</h2>
-<section id="sec-exer5" class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="sec-exer5"><span class="header-section-number">5.4.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Calculating Work in a Carnot Cycle</strong></p>
-<p>A Carnot cycle operates between temperatures of <span class="math inline">\(400 \,\text{K}\)</span> and <span class="math inline">\(300 \,\text{K}\)</span>. The volume of the gas expands from <span class="math inline">\(2.0\,\text{L}\)</span> to <span class="math inline">\(5.0\,\text{L}\)</span> during the isothermal expansion stage. If 2.0 moles of an ideal gas are used, calculate the total work done by the system.</p>
-<p><strong>Solution:</strong> The total work in a Carnot cycle is given by <a href="#eq-WtotCC2" class="quarto-xref">eq.&nbsp;<span>5.12</span></a>:</p>
-<p><span class="math display">\[W_{TOT} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(n = 2.0 \,\text{mol}\)</span></p>
-<p><span class="math inline">\(R = 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1}\)</span></p>
-<p><span class="math inline">\(T_h = 400\,\text{K}\)</span></p>
-<p><span class="math inline">\(T_l = 300\,\text{K}\)</span></p>
-<p><span class="math inline">\(V_B = 5.0\,\text{L}\)</span></p>
-<p><span class="math inline">\(V_A = 2.0\,\text{L}\)</span></p>
-<p>Then:</p>
-<p><span class="math display">\[W_{TOT} = -2.0 \,\text{mol} \cdot 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1} \cdot(400\,\text{K} - 300\,\text{K})\cdot \ln\frac{5.0\,\text{L}}{2.0\,\text{L}}\]</span> <span class="math display">\[W_{TOT} = -1662.8\,\text{J} \cdot \ln(2.5) = -1662.8 \,\text{J} \cdot 0.916 = -1523.13\,\text{J}\]</span></p>
-<p>Adjusting the significant digits we get the final answer.</p>
-<p><strong>Answer:</strong> The total work done by the system is <span class="math inline">\(-1.5 \,\text{kJ}\)</span>.</p>
-<hr>
-<p><strong>Problem 2: Efficiency of a Carnot Cycle</strong></p>
-<p>A Carnot engine operates between a hot reservoir at <span class="math inline">\(500\,\text{K}\)</span> and a cold reservoir at <span class="math inline">\(250\,\text{K}\)</span>. Calculate the efficiency of this engine.</p>
-<p><strong>Solution:</strong> The efficiency of a Carnot cycle is given by <a href="#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>5.18</span></a>:</p>
-<p><span class="math display">\[\varepsilon = 1 - \frac{T_l}{T_h}.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(T_h = 500\,\text{K}\)</span></p>
-<p><span class="math inline">\(T_l = 250\,\text{K}\)</span></p>
-<p>Then:</p>
-<p><span class="math display">\[\varepsilon = 1 - \frac{250\,\text{K}}{500\,\text{K}} = 1 - 0.5 = 0.5\]</span></p>
-<p><strong>Answer:</strong> The efficiency of the Carnot engine is 50%.</p>
-<hr>
-<p><strong>Problem 3: Determining Cold Reservoir Temperature in a Carnot Cycle</strong></p>
-<p>A Carnot engine operates between a hot reservoir at <span class="math inline">\(600 \,\text{K}\)</span> and an unknown cold reservoir temperature. The engine absorbs <span class="math inline">\(5000\,\text{J}\)</span> of heat from the hot reservoir and performs <span class="math inline">\(2000\,\text{J}\)</span> of work in each cycle. Calculate the temperature of the cold reservoir.</p>
-<p><strong>Solution:</strong> We can use <a href="#eq-effCC1" class="quarto-xref">eq.&nbsp;<span>5.16</span></a> and <a href="#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>5.18</span></a> to solve this problem:</p>
-<p><span class="math display">\[\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(T_h = 600\,\text{K}\)</span></p>
-<p><span class="math inline">\(|W_{TOT}| = 2000\,\text{J}\)</span></p>
-<p><span class="math inline">\(|Q_h| = 5000\,\text{J}\)</span></p>
-<p>First, we calculate the efficiency of the engine:</p>
-<p><span class="math display">\[\varepsilon = \frac{|W_{TOT}|}{|Q_h|} = \frac{2000\,\text{J}}{5000 \,\text{J}} = 0.4\]</span></p>
-<p>Then, we can use this efficiency to find <span class="math inline">\(T_l\)</span>:</p>
-<p><span class="math display">\[0.4 = 1 - \frac{T_l}{600\,\text{K}}\]</span></p>
-<p><span class="math display">\[\frac{T_l}{600\,\text{K}} = 1 - 0.4 = 0.6\]</span></p>
-<p><span class="math display">\[T_l = 0.6 \cdot 600\,\text{K} = 360 \,\text{K}\]</span></p>
-<p><strong>Answer:</strong> The temperature of the cold reservoir is 360 K.</p>
-<hr>
-<p><strong>Problem 4: Heat Absorbed in a Carnot Cycle</strong></p>
-<p>A Carnot engine performs <span class="math inline">\(1000\,\text{J}\)</span> of work in each cycle. If it operates between temperatures of <span class="math inline">\(600\,\text{K}\)</span> and <span class="math inline">\(300\,\text{K}\)</span>, calculate the amount of heat absorbed from the hot reservoir in each cycle.</p>
-<p><strong>Solution:</strong> As for the previous problem, we can use <a href="#eq-effCC1" class="quarto-xref">eq.&nbsp;<span>5.16</span></a> and <a href="#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>5.18</span></a> to solve this problem:</p>
-<p><span class="math display">\[\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(T_h = 600\,\text{K}\)</span></p>
-<p><span class="math inline">\(T_l = 300\,\text{K}\)</span></p>
-<p><span class="math inline">\(|W_{TOT}| = 1000\,\text{J}\)</span></p>
-<p>First, we calculate the efficiency:</p>
-<p><span class="math display">\[\varepsilon = 1 - \frac{300\,\text{K}}{600\,\text{K}} = 0.5\]</span></p>
-<p>Then, we can use this to find <span class="math inline">\(|Q_h|\)</span>:</p>
-<p><span class="math display">\[0.5 = \frac{1000\,\text{J}}{|Q_h|}\]</span></p>
-<p><span class="math display">\[|Q_h| = \frac{1000\,\text{J}}{0.5} = 2000\,\text{J}\]</span></p>
-<p><strong>Answer:</strong> The heat absorbed from the hot reservoir in each cycle is <span class="math inline">\(2000 \,\text{J}\)</span>.</p>
-</section>
-<section id="sec-quest5" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="sec-quest5"><span class="header-section-number">5.4.2</span> Study Questions</h3>
-<p><strong>1. Which of the following is the basic principle behind refrigerators and air conditioning?</strong></p>
+<section id="sec-quest5" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="sec-quest5"><span class="header-section-number">5.4.1</span> Study Questions</h3>
+<p><strong>1. What does the first law of thermodynamics say about a gas that spontaneously compresses back into one side of the Joule apparatus?</strong></p>
 <ol type="a">
-<li>A Carnot cycle operating in the normal direction.</li>
-<li>A Carnot cycle operating in reverse order.</li>
-<li>An isothermal expansion followed by an adiabatic compression.</li>
-<li>A series of isochoric processes.</li>
-<li>A continuously expanding system.</li>
+<li>It forbids it, since energy would not be conserved.</li>
+<li>It requires work to be done on the gas.</li>
+<li>It requires heat to flow out of the gas.</li>
+<li>Nothing: the process would conserve energy, so the first law does not forbid it.</li>
+<li>It shows that the process is spontaneous.</li>
 </ol>
 <hr>
-<p><strong>2. In a Carnot cycle, how many isothermal and how many adiabatic transformations are there?</strong></p>
+<p><strong>2. What transformations make up a Carnot cycle?</strong></p>
 <ol type="a">
-<li>1 isothermal and 3 adiabatic.</li>
-<li>2 isothermal and 2 adiabatic.</li>
-<li>3 isothermal and 1 adiabatic.</li>
-<li>4 isothermal and no adiabatic.</li>
-<li>No isothermal and 4 adiabatic.</li>
+<li>Two isochoric and two isobaric transformations.</li>
+<li>Two isothermal and two adiabatic reversible transformations.</li>
+<li>Four isothermal transformations.</li>
+<li>Four adiabatic transformations.</li>
+<li>One isothermal, one adiabatic, one isochoric, and one isobaric transformation.</li>
 </ol>
 <hr>
-<p><strong>3. What is the total change in internal energy (<span class="math inline">\(\Delta U_{\text{TOT}}\)</span>) for a complete Carnot cycle?</strong></p>
+<p><strong>3. What happens during the isothermal expansion at <span class="math inline">\(T_h\)</span> in a Carnot cycle?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta U_{\text{TOT}}=nR(T_h - T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
-<li><span class="math inline">\(\Delta U_{\text{TOT}}=nRT_h\ln\frac{V_B}{V_A}\)</span>.</li>
-<li><span class="math inline">\(-\Delta U_{\text{TOT}}=nR(T_h - T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
-<li><span class="math inline">\(\Delta U_{\text{TOT}}=0\)</span>.</li>
-<li><span class="math inline">\(\Delta U_{\text{TOT}}=nC_V(T_h - T_l)\)</span>.</li>
+<li><span class="math inline">\(\Delta U = 0\)</span>, heat is absorbed from the hot reservoir, and the same amount of energy leaves as work.</li>
+<li>No heat is exchanged.</li>
+<li>The temperature drops from <span class="math inline">\(T_h\)</span> to <span class="math inline">\(T_l\)</span>.</li>
+<li>Heat is released to the cold reservoir.</li>
+<li>Work is done on the gas.</li>
 </ol>
 <hr>
-<p><strong>4. Which of the following equations correctly represents the total work done in a Carnot cycle?</strong></p>
+<p><strong>4. What happens during the adiabatic expansion in a Carnot cycle?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(W_{TOT} = nR(T_h - T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
+<li>Heat is absorbed from the hot reservoir.</li>
+<li>The internal energy stays constant.</li>
+<li>Heat is released to the cold reservoir.</li>
+<li>The volume decreases.</li>
+<li>No heat is exchanged, the gas performs work, and its temperature drops from <span class="math inline">\(T_h\)</span> to <span class="math inline">\(T_l\)</span>.</li>
+</ol>
+<hr>
+<p><strong>5. What is the total change in internal energy for a complete Carnot cycle?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(nR(T_h-T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
+<li><span class="math inline">\(nC_V(T_h-T_l)\)</span>.</li>
+<li>Zero, since the internal energy is a state function.</li>
+<li>Equal to the total work.</li>
+<li>Equal to the heat absorbed from the hot reservoir.</li>
+</ol>
+<hr>
+<p><strong>6. What is the total work of a Carnot cycle?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(W_{TOT} = nR(T_h-T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
+<li><span class="math inline">\(W_{TOT} = -nR(T_h-T_l)\ln\frac{V_B}{V_A}\)</span>.</li>
+<li><span class="math inline">\(W_{TOT} = 0\)</span>.</li>
 <li><span class="math inline">\(W_{TOT} = nRT_h\ln\frac{V_B}{V_A}\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = nRT_l\ln\frac{V_D}{V_C}\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = n\int_{T_l}^{T_h}C_V dT\)</span>.</li>
+<li><span class="math inline">\(W_{TOT} = nC_V(T_h-T_l)\)</span>.</li>
 </ol>
 <hr>
-<p><strong>5. What is the relationship between the total work and total heat in a Carnot cycle?</strong></p>
+<p><strong>7. How is the efficiency of a heat engine defined?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(W_{TOT} = Q_{\text{TOT}}\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = Q_3 - Q_1\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = Q_1 + Q_3\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = Q_1 - Q_3\)</span>.</li>
-<li><span class="math inline">\(W_{TOT} = -Q_{\text{TOT}}\)</span>.</li>
-</ol>
-<hr>
-<p><strong>6. How is the efficiency (<span class="math inline">\(\varepsilon\)</span>) of a Carnot cycle defined?</strong></p>
-<ol type="a">
-<li><span class="math inline">\(\varepsilon = \frac{|Q_{\text{TOT}}|}{|W_{TOT}|}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon = \frac{|Q_h|}{|W_{TOT}|}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon = \frac{|Q_l|}{|Q_h|}\)</span>.</li>
 <li><span class="math inline">\(\varepsilon = \frac{|W_{TOT}|}{|Q_l|}\)</span>.</li>
 <li><span class="math inline">\(\varepsilon = \frac{|W_{TOT}|}{|Q_h|}\)</span>.</li>
-<li><span class="math inline">\(\varepsilon = \frac{|Q_h|}{|Q_l|}\)</span>.</li>
-<li><span class="math inline">\(\varepsilon = \frac{|Q_h|}{|W_{TOT}|}\)</span>.</li>
-</ol>
-<hr>
-<p><strong>7. Which of the following formulas allows us to calculate the efficiency of a Carnot cycle?</strong></p>
-<ol type="a">
 <li><span class="math inline">\(\varepsilon = \frac{T_h}{T_l}\)</span>.</li>
-<li><span class="math inline">\(\varepsilon = 1 - \frac{T_h}{T_l}\)</span>.</li>
-<li><span class="math inline">\(\varepsilon = 1 - \frac{T_l}{T_h}\)</span>.</li>
-<li><span class="math inline">\(\varepsilon = \frac{T_h - T_l}{T_h + T_l}\)</span>.</li>
-<li><span class="math inline">\(\varepsilon = \frac{T_h - T_l}{T_l}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>8. What happens when a Carnot cycle operates in reverse?</strong></p>
+<p><strong>8. What is the efficiency of a Carnot cycle in terms of the reservoir temperatures?</strong></p>
 <ol type="a">
-<li>It produces more work than a forward cycle.</li>
-<li>It transfers heat from the cold reservoir to the hot reservoir.</li>
-<li>It violates the laws of thermodynamics.</li>
-<li>It has 100% efficiency.</li>
-<li>It only performs adiabatic transformations.</li>
+<li><span class="math inline">\(\varepsilon = 1-\frac{T_l}{T_h}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon = 1-\frac{T_h}{T_l}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon = \frac{T_h}{T_l}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon = \frac{T_h-T_l}{T_l}\)</span>.</li>
+<li><span class="math inline">\(\varepsilon = 1\)</span>.</li>
 </ol>
 <hr>
-<p><strong>9. What is the relationship between the volumes at different stages of the Carnot cycle?</strong></p>
+<p><strong>9. Why is the efficiency of a Carnot cycle always smaller than 1?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\frac{V_C}{V_D} = \frac{V_A}{V_B}\)</span>.</li>
-<li><span class="math inline">\(\frac{V_C}{V_D} = \frac{V_B}{V_A}\)</span>.</li>
-<li><span class="math inline">\(\frac{V_B}{V_A} = \frac{V_D}{V_C}\)</span>.</li>
-<li><span class="math inline">\(V_A = V_C\)</span> and <span class="math inline">\(V_B = V_D\)</span>.</li>
-<li><span class="math inline">\(V_A &gt; V_B &gt; V_C &gt; V_D\)</span>.</li>
+<li>Because of friction in the engine.</li>
+<li>Because the gas is not ideal.</li>
+<li>Because heat is a state function.</li>
+<li>Because the cycle is irreversible.</li>
+<li>Because it would be 1 only if <span class="math inline">\(T_l=0\;\text{K}\)</span> or <span class="math inline">\(T_h=\infty\)</span>, which are impossible.</li>
 </ol>
 <hr>
-<p><strong>10. What is the significance of the Carnot cycle in the development of thermodynamics?</strong></p>
+<p><strong>10. What happens when a Carnot cycle is run in reverse?</strong></p>
 <ol type="a">
-<li>It proved the existence of absolute zero.</li>
-<li>It demonstrated that not all heat can be converted to work in a cyclic process.</li>
-<li>It disproved the existence of ideal gases.</li>
-<li>It showed that all thermodynamic processes are reversible.</li>
-<li>It proved that energy can be created in closed systems.</li>
+<li>It produces more work than the forward cycle.</li>
+<li>It reaches 100% efficiency.</li>
+<li>Work is put into the system, and heat is moved from the cold reservoir to the hot one, as in a refrigerator.</li>
+<li>Heat flows from the hot reservoir to the cold one without work.</li>
+<li>It violates the first law.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -859,7 +798,7 @@ Figure&nbsp;5.3: Carnot Cycle Diagram.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b</p>
+<p>1.d, 2.b, 3.a, 4.e, 5.c, 6.b, 7.d, 8.a, 9.e, 10.c</p>
 </div>
 </div>
 </div>

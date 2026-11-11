@@ -500,8 +500,7 @@ window.Quarto = {
   <li><a href="#sec-thirdlawsect" id="toc-sec-thirdlawsect" class="nav-link" data-scroll-target="#sec-thirdlawsect"><span class="header-section-number">7.4</span> The Third Law of Thermodynamics</a></li>
   <li><a href="#sec-rev7" id="toc-sec-rev7" class="nav-link" data-scroll-target="#sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer7" id="toc-sec-exer7" class="nav-link" data-scroll-target="#sec-exer7"><span class="header-section-number">7.5.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/07_ThirdLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -694,159 +693,96 @@ d S^{\mathrm{sys}} &lt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{non-spontan
 </section>
 <section id="sec-rev7" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</h2>
-<section id="sec-exer7" class="level3" data-number="7.5.1">
-<h3 data-number="7.5.1" class="anchored" data-anchor-id="sec-exer7"><span class="header-section-number">7.5.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Entropy Change in an Isothermal Expansion.</strong></p>
-<p>An ideal gas expands isothermally from a volume of <span class="math inline">\(2.0\,\text{L}\)</span> to <span class="math inline">\(5.0\,\text{L}\)</span> at <span class="math inline">\(300\,\text{K}\)</span>. Calculate the change in entropy of the system if there are <span class="math inline">\(0.5\,\text{mol}\)</span> of gas.</p>
-<p><strong>Solution:</strong> For an isothermal expansion of an ideal gas, we use the equation:</p>
-<p><span class="math display">\[\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(n = 0.5\,\text{mol}\)</span>,</p>
-<p><span class="math inline">\(R = 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>,</p>
-<p><span class="math inline">\(V_i = 2.0\,\text{L}\)</span>,</p>
-<p><span class="math inline">\(V_f = 5.0\,\text{L}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\Delta S^{\text{sys}} = 0.5\,\text{mol} \cdot 8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \frac{5.0\,\text{L}}{2.0\,\text{L}}\]</span></p>
-<p><span class="math display">\[\Delta S^{\text{sys}} = 4.157\,\text{J/K} \cdot 0.916 = 3.808\,\text{J/K}\]</span> Adjusting for the significant digits, we get the final answer.</p>
-<p><strong>Answer:</strong> The change in entropy of the system is <span class="math inline">\(3.8\,\text{J/K}\)</span>.</p>
-<hr>
-<p><strong>Problem 2: Entropy of Vaporization.</strong></p>
-<p>Calculate the standard entropy of vaporization for ethanol at its boiling point of <span class="math inline">\(78.35^\circ\text{C}\)</span>, given that its enthalpy of vaporization is <span class="math inline">\(38.56\,\text{kJ/mol}\)</span>.</p>
-<p><strong>Solution:</strong> We use the equation for entropy of vaporization:</p>
-<p><span class="math display">\[\Delta_{\text{vap}} S^\standardstate = \frac{\Delta_{\text{vap}} H^\standardstate}{T_B}\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(\Delta_{\text{vap}} H^\standardstate = 38.56\,\text{kJ/mol}\)</span>,</p>
-<p><span class="math inline">\(T_B = 78.35^\circ\text{C}+273.15=351.50\,\text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\Delta_{\text{vap}} S = \frac{38.56\,\text{kJ/mol}}{351.50\,\text{K}} = 0.1097\,\text{kJ/(mol K)}.\]</span></p>
-<p><strong>Answer:</strong> The standard entropy of vaporization for ethanol is <span class="math inline">\(109.7\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
-<hr>
-<p><strong>Problem 3: Entropy Change in the Surroundings.</strong></p>
-<p>A system releases <span class="math inline">\(500\,\text{J}\)</span> of heat to its surroundings at a constant temperature of <span class="math inline">\(25^\circ\text{C}\)</span>. Calculate the entropy change of the surroundings.</p>
-<p><strong>Solution:</strong> We use the equation for entropy change in the surroundings:</p>
-<p><span class="math display">\[\Delta S^{\text{surr}} = -\frac{Q_{\text{sys}}}{T_{\text{surr}}}\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(Q_{sys} = -500\,\text{J}\)</span> (negative because the system releases heat),</p>
-<p><span class="math inline">\(T_{surr} = 25\,\text{°C} + 273.15 = 298.15\,\text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\Delta S^{\text{surr}} = -\frac{-500\,\text{J}}{298.15\,\text{K}} = 1.677\,\text{J/K}\]</span> Fixing the significant digits gives us the final answer.</p>
-<p><strong>Answer:</strong> The entropy in the surroundings changes by <span class="math inline">\(1.7\,\text{J/K}\)</span>.</p>
-<hr>
-<p><strong>Problem 4: Entropy Change in an Isobaric Process</strong></p>
-<p>Calculate the entropy change when <span class="math inline">\(2.0\,\text{mol}\)</span> of an ideal gas is heated from <span class="math inline">\(300\,\text{K}\)</span> to <span class="math inline">\(400\,\text{K}\)</span> at constant pressure. Assume <span class="math inline">\(C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span> and is independent of temperature.</p>
-<p><strong>Solution:</strong> For an isobaric process, we use the equation:</p>
-<p><span class="math display">\[\Delta S^{\text{sys}} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(n = 2.0\,\text{mol}\)</span>,</p>
-<p><span class="math inline">\(C_P = 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>,</p>
-<p><span class="math inline">\(T_i = 300\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(T_f = 400\,\text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\Delta S^{\text{sys}} = 2.0\,\text{mol} \cdot 29\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1} \cdot \ln \left(\frac{400\,\text{K}}{300\,\text{K}}\right)\]</span></p>
-<p><span class="math display">\[\Delta S^{\text{sys}} = 58.\,\text{J/K} \cdot 0.2877 = 16.69\,\text{J/K}\]</span> Adjusting the significant digits gives us the final answer.</p>
-<p><strong>Answer:</strong> The entropy change in the system is <span class="math inline">\(17\,\text{J/K}\)</span>.</p>
-<hr>
-<p><strong>Problem 5: Reaction Entropy.</strong></p>
-<p>Calculate the standard reaction entropy for the combustion of methane:</p>
-<p><span class="math display">\[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_2\text{O}_{(\text{l})}\]</span></p>
-<p>using the standard entropies reported in the tables at the end of the book.</p>
-<p><strong>Solution:</strong> We can use <a href="#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>7.23</span></a> to calculate the reaction entropy:</p>
-<p><span class="math display">\[\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S^\standardstate_i\]</span></p>
-<p><span class="math display">\[\Delta_{\text{rxn}} S^\standardstate = [S^\standardstate_{\text{CO}_{2\text{(g)}}} + 2S^\standardstate_{\text{H}_2\text{O}_{\text{(l)}}}] - [S^\standardstate_{\text{CH}_{4 \text{(g)}}} + 2S^\standardstate_{\text{O}_{2\text{(g)}}}]\]</span></p>
-<p><span class="math display">\[\Delta_{\text{rxn}} S^\standardstate = [213.8 + 2(70.0)] - [186.3 + 2(205.2)]\]</span></p>
-<p><span class="math display">\[\Delta_{\text{rxn}} S^\standardstate = 353.8 - 596.7 = -242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\]</span></p>
-<p><strong>Answer:</strong> The standard reaction entropy for the combustion of methane is <span class="math inline">\(-242.9\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
-</section>
-<section id="sec-quest7" class="level3" data-number="7.5.2">
-<h3 data-number="7.5.2" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.2</span> Study Questions</h3>
-<p><strong>1. What is the formula for calculating the change in entropy of the universe?</strong></p>
+<section id="sec-quest7" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</h3>
+<p><strong>1. How is the entropy change of the universe calculated?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} \cdot \Delta S^{\text{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S_{\text{universe}} = \Delta S^{\text{sys}} / \Delta S^{\text{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S_{\text{universe}} = (\Delta S^{\text{sys}})^2 + (\Delta S^{\text{surr}})^2\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{universe}} = \Delta S^{\text{sys}} - \Delta S^{\text{surr}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{universe}} = \Delta S^{\text{sys}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{universe}} = \Delta S^{\text{sys}} \cdot \Delta S^{\text{surr}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{universe}} = 0\)</span> always.</li>
 </ol>
 <hr>
-<p><strong>2. For an ideal gas undergoing an isothermal process, which formula correctly represents the change in entropy?</strong></p>
+<p><strong>2. What is the entropy change of an ideal gas in an isothermal expansion?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta S^{\text{sys}} = nR \ln \left(\frac{V_f}{V_i}\right)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} = nR \ln \left(\frac{P_f}{P_i}\right)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} = nR (V_f - V_i)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} = nR (P_f - P_i)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} = nR (T_f - T_i)\)</span>.</li>
+<li><span class="math inline">\(\Delta S = 0\)</span>.</li>
+<li><span class="math inline">\(\Delta S = nC_V \ln\frac{T_f}{T_i}\)</span>.</li>
+<li><span class="math inline">\(\Delta S = nR \ln\frac{V_f}{V_i}\)</span>.</li>
+<li><span class="math inline">\(\Delta S = nR(V_f-V_i)\)</span>.</li>
+<li><span class="math inline">\(\Delta S = \frac{W}{T}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>3. What is Trouton’s rule for the entropy of vaporization?</strong></p>
+<p><strong>3. How is the entropy of vaporization of a liquid calculated at its boiling point?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta_{\text{vap}} S \approx 5.5R\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{vap}} S \approx 15.5R\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{vap}} S \approx 10.5R\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{vap}} S \approx 20.5R\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{vap}} S \approx 1.5R\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{vap}}S = \Delta_{\text{vap}}H \cdot T_B\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{vap}}S = nR\ln T_B\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{vap}}S = 0\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{vap}}S = \Delta_{\text{vap}}H - T_B\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{vap}}S = \frac{\Delta_{\text{vap}}H}{T_B}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>4. Which statement is true for a reversible adiabatic process?</strong></p>
+<p><strong>4. Why does water deviate from Trouton’s rule?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta S^{\text{sys}} &gt; 0\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} &lt; 0\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} = 0\)</span>.</li>
-<li><span class="math inline">\(Q_{\mathrm{REV}} &gt; 0\)</span>.</li>
-<li><span class="math inline">\(Q_{\mathrm{IRR}} = 0\)</span>.</li>
+<li>Because it boils at 100 °C.</li>
+<li>Because of the hydrogen bonds between its molecules.</li>
+<li>Because its molar mass is small.</li>
+<li>Because it is an ideal liquid.</li>
+<li>Because its enthalpy of vaporization is negative.</li>
 </ol>
 <hr>
-<p><strong>5. How is the entropy change of the surroundings calculated?</strong></p>
+<p><strong>5. What is the entropy change of the system in a reversible adiabatic process?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{-Q_{\text{surr}}}{T_{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{sys}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{Q_{\text{sys}}}{T_{surr}}\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{Q_{\text{surr}}}{T_{sys}}\)</span>.</li>
+<li>Always positive.</li>
+<li>Always negative.</li>
+<li>Equal to <span class="math inline">\(\frac{Q}{T}\)</span> with <span class="math inline">\(Q&gt;0\)</span>.</li>
+<li>Zero, since the process is isentropic.</li>
+<li>Infinite.</li>
 </ol>
 <hr>
-<p><strong>6. Which of the following formulas describes what the Clausius theorem states?</strong></p>
+<p><strong>6. What is the entropy change for heating a substance at constant pressure, with <span class="math inline">\(C_P\)</span> independent of temperature?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(dS^{\text{sys}} =    \frac{đQ}{T}\)</span>.</li>
-<li><span class="math inline">\(dS^{\text{sys}} &lt;    \frac{đQ}{T}\)</span>.</li>
-<li><span class="math inline">\(dS^{\text{sys}} &gt;    \frac{đQ}{T}\)</span>.</li>
-<li><span class="math inline">\(dS^{\text{sys}} \leq \frac{đQ}{T}\)</span>.</li>
-<li><span class="math inline">\(dS^{\text{sys}} \geq \frac{đQ}{T}\)</span>.</li>
+<li><span class="math inline">\(\Delta S \approx nC_P \ln\frac{T_f}{T_i}\)</span>.</li>
+<li><span class="math inline">\(\Delta S \approx nC_P(T_f-T_i)\)</span>.</li>
+<li><span class="math inline">\(\Delta S \approx nR \ln\frac{T_f}{T_i}\)</span>.</li>
+<li><span class="math inline">\(\Delta S \approx \frac{nC_P}{T_f-T_i}\)</span>.</li>
+<li><span class="math inline">\(\Delta S = 0\)</span>.</li>
 </ol>
 <hr>
-<p><strong>7. According to the Third Law of Thermodynamics, what is the entropy of a perfectly ordered, pure, crystalline substance at <span class="math inline">\(T = 0\,\text{K}\)</span>?</strong></p>
+<p><strong>7. How is the entropy change of the surroundings calculated?</strong></p>
 <ol type="a">
-<li>1 J/K.</li>
-<li>0 J/K.</li>
-<li>-1 J/K.</li>
-<li>Infinity.</li>
-<li>Undefined.</li>
+<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{Q_{\text{sys}}}{T_{\text{sys}}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{surr}} = -\Delta S^{\text{sys}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{surr}} = \frac{-Q_{\text{sys}}}{T_{\text{surr}}}\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{surr}} = 0\)</span>.</li>
+<li><span class="math inline">\(\Delta S^{\text{surr}} = nR\ln\frac{V_f}{V_i}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>8. How can reaction entropies be calculated using standard entropies?</strong></p>
+<p><strong>8. Supercooled water freezes spontaneously at –10 °C, even though the entropy of the water decreases. How is this possible?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S^\standardstate_i\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = \prod_i \nu_i S^\standardstate_i\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = \sum_i S^\standardstate_i / \nu_i\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = \sum_i (\nu_i S^\standardstate_i)^2\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = \ln(\sum_i \nu_i S^\standardstate_i)\)</span>.</li>
+<li>The entropy of the universe decreases, which is allowed for freezing.</li>
+<li>The second law does not apply to phase changes.</li>
+<li>The process is reversible.</li>
+<li>The entropy of the water actually increases.</li>
+<li>The heat released to the surroundings increases their entropy by more than the water loses.</li>
 </ol>
 <hr>
-<p><strong>9. How is the change in entropy of the system calculated for an isobaric process? Note: Assume <span class="math inline">\(C_P\)</span> to be independent of temperature.</strong></p>
+<p><strong>9. What does the Clausius theorem state?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta S^{\text{sys}} \approx nC_P \ln \left(\frac{T_f}{T_i}\right)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} \approx nC_V \ln \left(\frac{T_f}{T_i}\right)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} \approx nC_P (T_f - T_i)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} \approx nR \ln \left(\frac{T_f}{T_i}\right)\)</span>.</li>
-<li><span class="math inline">\(\Delta S^{\text{sys}} \approx \frac{nC_P}{\ln (T_f/T_i)}\)</span>.</li>
+<li><span class="math inline">\(dS^{\text{sys}} = \frac{đQ}{T}\)</span> always.</li>
+<li><span class="math inline">\(dS^{\text{sys}} \geq \frac{đQ}{T}\)</span>, with the equality for reversible processes.</li>
+<li><span class="math inline">\(dS^{\text{sys}} \leq \frac{đQ}{T}\)</span> for spontaneous processes.</li>
+<li><span class="math inline">\(dS^{\text{sys}} = 0\)</span> for all processes.</li>
+<li><span class="math inline">\(dS^{\text{universe}} &lt; 0\)</span> for spontaneous processes.</li>
 </ol>
 <hr>
-<p><strong>10. Which of the following is a corollary to the Third Law of Thermodynamics?</strong></p>
+<p><strong>10. What does the third law of thermodynamics make possible for the entropy that is not possible for the enthalpy?</strong></p>
 <ol type="a">
-<li>It is possible to reach T = 0 K in a single step.</li>
-<li>It is impossible to reach T = 0 K in a finite number of steps.</li>
-<li>All substances have non-zero entropy at T = 0 K.</li>
-<li>The entropy of a substance is always negative at T &gt; 0 K.</li>
-<li>The entropy of a substance is always infinity at T &lt; 0 K.</li>
+<li>Calculating changes at constant pressure.</li>
+<li>Measuring it with a calorimeter.</li>
+<li>Using it for chemical reactions.</li>
+<li>Tabulating absolute values, since it fixes the zero of the entropy scale.</li>
+<li>Making it independent of temperature.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -861,7 +797,7 @@ d S^{\mathrm{sys}} &lt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{non-spontan
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.b, 2.a, 3.c, 4.c, 5.c, 6.e, 7.b, 8.a, 9.a, 10.b</p>
+<p>1.a, 2.c, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d</p>
 </div>
 </div>
 </div>

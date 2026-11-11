@@ -508,8 +508,7 @@ window.Quarto = {
   <li><a href="#fugacity" id="toc-fugacity" class="nav-link" data-scroll-target="#fugacity"><span class="header-section-number">11.4</span> Fugacity</a></li>
   <li><a href="#sec-rev11" id="toc-sec-rev11" class="nav-link" data-scroll-target="#sec-rev11"><span class="header-section-number">11.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer11" id="toc-sec-exer11" class="nav-link" data-scroll-target="#sec-exer11"><span class="header-section-number">11.5.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest11" id="toc-sec-quest11" class="nav-link" data-scroll-target="#sec-quest11"><span class="header-section-number">11.5.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest11" id="toc-sec-quest11" class="nav-link" data-scroll-target="#sec-quest11"><span class="header-section-number">11.5.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/11_NonIdealGases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -996,169 +995,100 @@ K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
 </section>
 <section id="sec-rev11" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="sec-rev11"><span class="header-section-number">11.5</span> Chapter Review</h2>
-<section id="sec-exer11" class="level3" data-number="11.5.1">
-<h3 data-number="11.5.1" class="anchored" data-anchor-id="sec-exer11"><span class="header-section-number">11.5.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Calculating the van der Waals Constants</strong></p>
-<p>A gas has a critical temperature of <span class="math inline">\(400\,\text{K}\)</span> and critical pressure of <span class="math inline">\(80\,\text{bar}\)</span>. Calculate its van der Waals constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
-<p><strong>Solution:</strong> Consider the first two formulas in <a href="#eq-criticpt" class="quarto-xref">eq.&nbsp;<span>11.26</span></a>:</p>
-<p><span class="math display">\[T_c = \frac{8a}{27Rb},\]</span></p>
-<p><span class="math display">\[P_c = \frac{a}{27b^2}.\]</span></p>
-<p>We can rearrange the equation for the critical pressure, to get:</p>
-<p><span class="math display">\[a = 27b^2P_c,\]</span></p>
-<p>then replace this into the equation for the critical temperature:</p>
-<p><span class="math display">\[T_c = \frac{8(27b^2P_c)}{27Rb} = \frac{8bP_c}{R},\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(T_c = 400\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(P_c = 80.0\,\text{bar}\)</span>,</p>
-<p><span class="math inline">\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\)</span>.</p>
-<p>We can now solve for <span class="math inline">\(b\)</span>:</p>
-<p><span class="math display">\[b = \frac{RT_c}{8P_c} = \frac{0.083145 \cdot 400}{8 \cdot 80} = 0.0519\,\text{L}/\text{mol}.\]</span></p>
-<p>Now we can calculate <span class="math inline">\(a\)</span>:</p>
-<p><span class="math display">\[a = 27b^2P_c = 27 \cdot (0.0519)^2 \cdot 80 = 5.82\,\text{L}^2\cdot\text{bar}/\text{mol}^2\]</span></p>
-<p><strong>Answer:</strong> The van der Waals constants for the given gas are: <span class="math inline">\(a = 5.82\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)</span> <span class="math inline">\(b = 0.0519\,\text{L}/\text{mol}\)</span></p>
-<hr>
-<p><strong>Problem 2: Determining the Joule-Thomson Coefficient</strong></p>
-<p>Calculate the Joule-Thomson coefficient for a gas with <span class="math inline">\(C_P = 30\,\frac{\text{J}}{\text{mol}\,\text{K}}\)</span> and <span class="math inline">\(\left(\frac{\partial H}{\partial P}\right)_T = -0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\)</span> at <span class="math inline">\(300\,\text{K}\)</span> and <span class="math inline">\(1.0\,\text{bar}\)</span>.</p>
-<p><strong>Solution:</strong> The Joule-Thomson coefficient is defined in <a href="#eq-muJT" class="quarto-xref">eq.&nbsp;<span>11.22</span></a> as:</p>
-<p><span class="math display">\[\mu_{JT} = \left(\frac{\partial T}{\partial P}\right)_H = -\frac{1}{C_P}\left(\frac{\partial H}{\partial P}\right)_T.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(C_P = 30\,\frac{\text{J}}{\text{mol}\,\text{K}}\)</span>,</p>
-<p><span class="math inline">\(\left(\frac{\partial H}{\partial P}\right)_T = -0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\)</span>,</p>
-<p><span class="math inline">\(T = 300\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(P = 1.0\,\text{bar}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\mu_{JT} = -\frac{1}{30\,\frac{\text{J}}{\text{mol}\,\text{K}}} \cdot \left(-0.02\,\frac{\text{J}}{\text{mol}\,\text{bar}}\right) = 6.667 \times 10^{-4}\,\text{K}/\text{bar}\]</span></p>
-<p>Adjusting the significant digits gives us the final answer.</p>
-<p><strong>Answer:</strong> The Joule-Thomson coefficient for the gas is <span class="math inline">\(6.7 \times 10^{-4}\,\text{K}/\text{bar}\)</span></p>
-<hr>
-<p><strong>Problem 3: Calculating the Boyle Temperature</strong></p>
-<p>Calculate the Boyle temperature for a gas with van der Waals constants <span class="math inline">\(a = 3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)</span> and <span class="math inline">\(b = 0.04\,\text{L}/\text{mol}\)</span>.</p>
-<p><strong>Solution:</strong> The Boyle temperature is defined as:</p>
-<p><span class="math display">\[T_B = \frac{a}{bR}.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(a = 3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2\)</span>,</p>
-<p><span class="math inline">\(b = 0.04\,\text{L}/\text{mol}\)</span>,</p>
-<p><span class="math inline">\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[T_B = \frac{3.5\,\text{L}^2\cdot\text{bar}/\text{mol}^2}{0.04\,\text{L}/\text{mol} \cdot 0.083145\,\text{L}\cdot\text{bar}/\text{mol}\cdot\text{K}}=1052\,\text{K}\]</span></p>
-<p><strong>Answer:</strong> The Boyle temperature for the gas is <span class="math inline">\(1052\,\text{K}\)</span></p>
-<hr>
-<p><strong>Problem 4: Determining the Critical Compressibility Factor</strong></p>
-<p>A gas has a critical temperature of <span class="math inline">\(350\,\text{K}\)</span>, critical pressure of <span class="math inline">\(70\,\text{bar}\)</span>, and critical volume of <span class="math inline">\(0.15\,\text{L}/\text{mol}\)</span>. Calculate its critical compressibility factor.</p>
-<p><strong>Solution:</strong> The critical compressibility factor is given by <a href="#eq-critiz" class="quarto-xref">eq.&nbsp;<span>11.27</span></a> as:</p>
-<p><span class="math display">\[z_c = \frac{P_cV_c}{RT_c}\]</span></p>
-<p>Given: <span class="math inline">\(T_c = 350\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(P_c = 70\,\text{bar}\)</span>,</p>
-<p><span class="math inline">\(V_c = 0.15\,\text{L}/\text{mol}\)</span>,</p>
-<p><span class="math inline">\(R = 0.083145\,\frac{\text{L}\,\text{bar}}{\text{mol}\,\text{K}}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[z_c = \frac{70\,\text{bar} \cdot 0.15\,\text{L}/\text{mol}}{0.083145\,\text{L}\cdot\text{bar}/\text{mol}\cdot\text{K} \cdot 350\,\text{K}}=0.361\]</span></p>
-<p>Adjusting the significant digits gives us the final answer.</p>
-<p><strong>Answer:</strong> The critical compressibility factor for the gas is <span class="math inline">\(0.36\)</span></p>
-<hr>
-<p><strong>Problem 5: Calculating Fugacity</strong></p>
-<p>A gas at <span class="math inline">\(300\,\text{K}\)</span> and <span class="math inline">\(50\,\text{bar}\)</span> has a fugacity coefficient of 0.95. Calculate its fugacity.</p>
-<p><strong>Solution:</strong> The fugacity is defined in <a href="#eq-dmufug7" class="quarto-xref">eq.&nbsp;<span>11.37</span></a> as:</p>
-<p><span class="math display">\[f = \phi P\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(T = 300\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(P = 50\,\text{bar}\)</span>,</p>
-<p><span class="math inline">\(\phi = 0.95\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[f = 0.95 \cdot 50\,\text{bar}=47.5\,\text{bar} \]</span></p>
-<p>Adjusting the significant digits gives us the final answer.</p>
-<p><strong>Answer:</strong> The fugacity of the gas is <span class="math inline">\(48\,\text{bar}\)</span></p>
-</section>
-<section id="sec-quest11" class="level3" data-number="11.5.2">
-<h3 data-number="11.5.2" class="anchored" data-anchor-id="sec-quest11"><span class="header-section-number">11.5.2</span> Study Questions</h3>
-<p><strong>1. Which of the following is NOT an assumption of the ideal gas model?</strong></p>
+<section id="sec-quest11" class="level3" data-number="11.5.1">
+<h3 data-number="11.5.1" class="anchored" data-anchor-id="sec-quest11"><span class="header-section-number">11.5.1</span> Study Questions</h3>
+<p><strong>1. Which two assumptions define the ideal gas model?</strong></p>
 <ol type="a">
-<li>The particles occupy no volume.</li>
-<li>The particles do not interact with each other.</li>
-<li>The particles have no kinetic energy.</li>
-<li>The particles are in constant motion.</li>
-<li>The particles undergo perfectly elastic collisions.</li>
+<li>The particles are spheres, and they move slowly.</li>
+<li>The particles have the same mass, and they collide elastically.</li>
+<li>The particles do not occupy any volume, and they do not interact with each other.</li>
+<li>The particles are at rest, and they attract each other.</li>
+<li>The gas is at low temperature and high pressure.</li>
 </ol>
 <hr>
-<p><strong>2. What does the Joule-Thomson coefficient measure?</strong></p>
+<p><strong>2. How did Charles’s isobars lead to the idea of an absolute temperature scale?</strong></p>
 <ol type="a">
-<li>The rate of change of volume with respect to temperature.</li>
-<li>The rate of change of pressure with respect to volume.</li>
-<li>The rate of change of temperature with respect to pressure at constant enthalpy.</li>
-<li>The rate of change of entropy with respect to temperature.</li>
-<li>The rate of change of enthalpy with respect to pressure.</li>
+<li>When extrapolated to zero volume, all isobars meet at the same temperature, <span class="math inline">\(-273.15\;^\circ\text{C}\)</span>.</li>
+<li>They show that the volume is constant.</li>
+<li>They are horizontal lines.</li>
+<li>They meet at 0 °C.</li>
+<li>They show that the pressure can be negative.</li>
 </ol>
 <hr>
-<p><strong>3. What is the value of the critical compressibility factor predicted by the van der Waals equation?</strong></p>
+<p><strong>3. What does the parameter <span class="math inline">\(a\)</span> in the van der Waals equation account for?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(1/3\)</span>.</li>
-<li><span class="math inline">\(3/8\)</span>.</li>
-<li><span class="math inline">\(1/2\)</span>.</li>
-<li><span class="math inline">\(2/3\)</span>.</li>
-<li><span class="math inline">\(1/4\)</span>.</li>
-</ol>
-<hr>
-<p><strong>4. Which of the following statements about fugacity is correct?</strong></p>
-<ol type="a">
-<li>Fugacity has units of pressure squared.</li>
-<li>The fugacity coefficient is always greater than 1.</li>
-<li>As pressure approaches zero, the ratio of fugacity to pressure approaches infinity.</li>
-<li>Fugacity is independent of temperature for all gases.</li>
-<li>Fugacity is used to replace pressure in equilibrium constant calculations for non-ideal gases.</li>
-</ol>
-<hr>
-<p><strong>5. How is the critical temperature of a gas defined?</strong></p>
-<ol type="a">
-<li>The temperature at which the gas becomes a supercritical fluid.</li>
-<li>The temperature above which the gas cannot be liquefied by pressure alone.</li>
-<li>The temperature at which the gas occupies its largest volume.</li>
-<li>The temperature at which the gas behaves most ideally.</li>
-<li>The temperature at which the gas has zero compressibility.</li>
-</ol>
-<hr>
-<p><strong>6. The compressibility factor <span class="math inline">\(z\)</span> for an ideal gas is always:</strong></p>
-<ol type="a">
-<li>Greater than 1.</li>
-<li>Less than 1.</li>
-<li>Equal to 0.</li>
-<li>Equal to 1.</li>
-<li>Dependent on pressure.</li>
-</ol>
-<hr>
-<p><strong>7. How is the Boyle temperature defined?</strong></p>
-<ol type="a">
-<li>The temperature at which a gas liquefies.</li>
-<li>The temperature at which a gas behaves most ideally over a large pressure range.</li>
-<li>The critical temperature of a gas.</li>
-<li>The temperature at which a gas solidifies.</li>
-<li>The temperature at which a gas has maximum entropy.</li>
-</ol>
-<hr>
-<p><strong>8. In the van der Waals equation, what does the parameter ‘<span class="math inline">\(a\)</span>’ account for?</strong></p>
-<ol type="a">
-<li>The volume of gas molecules.</li>
-<li>The pressure of the gas.</li>
+<li>The volume of the gas molecules.</li>
 <li>The temperature of the gas.</li>
-<li>The number of moles of the gas.</li>
-<li>The intermolecular forces between gas molecules.</li>
+<li>The number of moles.</li>
+<li>The molar mass of the gas.</li>
+<li>The attractive interactions between the gas molecules.</li>
 </ol>
 <hr>
-<p><strong>9. Which of the following is true regarding the fugacity of a gas?</strong></p>
+<p><strong>4. What quantity stays constant in a Joule–Thomson expansion?</strong></p>
 <ol type="a">
-<li>It is always greater than its pressure.</li>
-<li>It is always less than its pressure.</li>
-<li>It is the effective pressure that corresponds to the chemical potential of the real gas.</li>
-<li>It is independent of temperature.</li>
-<li>It is only applicable to ideal gases.</li>
+<li>The temperature.</li>
+<li>The enthalpy.</li>
+<li>The pressure.</li>
+<li>The volume.</li>
+<li>The internal energy.</li>
 </ol>
 <hr>
-<p><strong>10. Which of the following gases is likely to have a Joule-Thomson inversion temperature below room temperature?</strong></p>
+<p><strong>5. When does a gas cool down in a Joule–Thomson expansion?</strong></p>
 <ol type="a">
-<li>Nitrogen.</li>
-<li>Oxygen.</li>
-<li>Carbon dioxide.</li>
-<li>Helium.</li>
-<li>Water vapor.</li>
+<li>Always.</li>
+<li>Never.</li>
+<li>Only if it is an ideal gas.</li>
+<li>When its temperature is below its inversion temperature (<span class="math inline">\(\mu_{\mathrm{JT}}&gt;0\)</span>).</li>
+<li>When its temperature is above its inversion temperature.</li>
+</ol>
+<hr>
+<p><strong>6. What is the compressibility factor of an ideal gas?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(z = 1\)</span> at all conditions.</li>
+<li><span class="math inline">\(z = 0\)</span>.</li>
+<li><span class="math inline">\(z &gt; 1\)</span> at high pressure.</li>
+<li><span class="math inline">\(z &lt; 1\)</span> at low temperature.</li>
+<li><span class="math inline">\(z = 3/8\)</span>.</li>
+</ol>
+<hr>
+<p><strong>7. How is the Boyle temperature obtained from the van der Waals parameters?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(T_{\text{B}} = \frac{8a}{27Rb}\)</span>.</li>
+<li><span class="math inline">\(T_{\text{B}} = \frac{bR}{a}\)</span>.</li>
+<li><span class="math inline">\(T_{\text{B}} = \frac{a}{bR}\)</span>.</li>
+<li><span class="math inline">\(T_{\text{B}} = \frac{a}{27b^2}\)</span>.</li>
+<li><span class="math inline">\(T_{\text{B}} = 3b\)</span>.</li>
+</ol>
+<hr>
+<p><strong>8. What is the critical temperature of a gas?</strong></p>
+<ol type="a">
+<li>The temperature at which the gas freezes.</li>
+<li>The temperature at which the gas behaves ideally.</li>
+<li>The boiling temperature at 1 bar.</li>
+<li>The temperature at which the compressibility factor is zero.</li>
+<li>The temperature above which the gas cannot be liquefied, no matter how high the pressure.</li>
+</ol>
+<hr>
+<p><strong>9. The van der Waals equation predicts a critical compressibility factor <span class="math inline">\(z_c=3/8=0.375\)</span>, while experiments give 0.2–0.3. What does this tell us?</strong></p>
+<ol type="a">
+<li>That the experiments are wrong.</li>
+<li>That the van der Waals equation is only an approximate model.</li>
+<li>That all gases are ideal at the critical point.</li>
+<li>That the van der Waals equation is exact.</li>
+<li>That the critical point does not exist.</li>
+</ol>
+<hr>
+<p><strong>10. What is the value of the fugacity coefficient, <span class="math inline">\(\phi = f/P\)</span>, of any gas as <span class="math inline">\(P\rightarrow 0\)</span>?</strong></p>
+<ol type="a">
+<li><ol start="0" type="1">
+<li></li>
+</ol></li>
+<li>Infinity.</li>
+<li>3/8.</li>
+<li><ol type="1">
+<li></li>
+</ol></li>
+<li>It depends on the gas.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1173,7 +1103,7 @@ K_f=\prod_i f_{i,\text{eq}}^{\nu_i} = K_P \prod_i \phi_{i}^{\nu_i}.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.c, 2.c, 3.b, 4.e, 5.b, 6.d, 7.b, 8.e, 9.c, 10.d</p>
+<p>1.c, 2.a, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d</p>
 </div>
 </div>
 </div>

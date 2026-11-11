@@ -264,109 +264,108 @@ which is the last of Maxwell relations, as defined in @eq-maxrelf. This relation
 
 ## Chapter Review {#sec-rev8}
 ### Study Questions {#sec-quest8}
-**1. Which of the following formulas is the fundamental equation of thermodynamics for closed systems?**
+**1. What is the fundamental equation of thermodynamics for a closed system?**
 
-a. $dU = đQ_{\mathrm{REV}} - PdV$.
-b. $dU = TdS - PdV$.
-c. $dU = TdS + PdV$.
-d. $dU = đQ_{\mathrm{REV}} + PdV$.
+a. $dU = TdS + PdV$.
+b. $dU = đQ - PdV$ only for reversible processes.
+c. $dU = TdS - PdV$.
+d. $dU = SdT - VdP$.
 e. $dU = TdS - VdP$.
 
 ---
 
-**2. Which of the following formulas is the fundamental equation for the Helmholtz energy?**
+**2. Why does the fundamental equation apply to irreversible processes too, even if it was derived for reversible ones?**
+
+a. Because it contains only state functions.
+b. Because irreversible processes do not exist.
+c. Because heat is a state function.
+d. Because it contains the entropy.
+e. Because it is an approximation.
+
+---
+
+**3. What is the chemical potential?**
+
+a. The energy stored in chemical bonds.
+b. The potential energy of a molecule.
+c. The pressure of a chemical species.
+d. The energy needed to break a molecule into atoms.
+e. The amount of energy absorbed or released due to a change in the number of particles of a chemical species.
+
+---
+
+**4. What are the natural variables of the internal energy?**
+
+a. $T$, $P$, $\{n_i\}$.
+b. $S$, $V$, $\{n_i\}$.
+c. $T$, $V$, $\{n_i\}$.
+d. $S$, $P$, $\{n_i\}$.
+e. $U$, $V$, $T$.
+
+---
+
+**5. What does a Legendre transformation do?**
+
+a. It adds heat to the system.
+b. It removes all information from the original function.
+c. It converts a path function into a state function.
+d. It defines a new function by subtracting a product of conjugate variables, replacing one natural variable with its conjugate.
+e. It changes the units of the energy.
+
+---
+
+**6. What are the natural variables of the Gibbs energy?**
+
+a. $T$, $P$, $\{n_i\}$.
+b. $S$, $V$, $\{n_i\}$.
+c. $T$, $V$, $\{n_i\}$.
+d. $S$, $P$, $\{n_i\}$.
+e. $G$, $H$, $S$.
+
+---
+
+**7. What is the fundamental equation for the Helmholtz energy?**
 
 a. $dA = TdS - PdV + \sum_i \mu_i dn_i$.
 b. $dA = -SdT + VdP + \sum_i \mu_i dn_i$.
 c. $dA = -SdT - PdV + \sum_i \mu_i dn_i$.
 d. $dA = TdS + VdP + \sum_i \mu_i dn_i$.
-e. $dA = -SdT - VdP + \sum_i \mu_i dn_i$.
+e. $dA = SdT + PdV$.
 
 ---
 
-**3. Which statement about thermodynamic potentials is NOT correct?**
+**8. What is the condition for a spontaneous process at constant temperature and pressure?**
 
-a. The natural variables of the enthalpy are $S$, $P$, and $\{n_i\}$.
-b. The Helmholtz energy is obtained from the internal energy with a Legendre transformation that replaces $S$ with $T$.
-c. The natural variables of the Gibbs energy are $S$, $V$, and $\{n_i\}$.
-d. All thermodynamic potentials contain the same information as the internal energy.
-e. The Gibbs energy can be written as $G = H - TS$.
-
----
-
-**4. Which of the following is NOT a thermodynamic potential?**
-
-a. Internal energy.
-b. Enthalpy.
-c. Gibbs energy.
-d. Helmholtz energy.
-e. Chemical potential.
+a. $dA < 0$.
+b. $dS = 0$.
+c. $dH > 0$.
+d. $dG > 0$.
+e. $dG < 0$, until $dG = 0$ at equilibrium.
 
 ---
 
-**5. What are the natural variables of the Gibbs energy?**
+**9. From which mathematical property do the Maxwell relations follow?**
 
-a. $T$, $V$, $\{n_i\}$.
-b. $S$, $P$, $\{n_i\}$.
-c. $T$, $P$, $\{n_i\}$.
-d. $S$, $V$, $\{n_i\}$.
-e. $U$, $P$, $\{n_i\}$.
-
----
-
-**6. Which thermodynamic potential has temperature and volume among its natural variables?**
-
-a. Internal energy.
-b. Enthalpy.
-c. Gibbs energy.
-d. Helmholtz energy.
-e. Chemical potential.
+a. The first law of thermodynamics.
+b. The equality of the mixed second derivatives of a state function (Schwarz's theorem).
+c. The ideal gas law.
+d. The definition of the chemical potential.
+e. The Clausius inequality.
 
 ---
 
-**7. What is the condition for a spontaneous process at constant temperature and pressure?**
+**10. Why is the Maxwell relation $\left(\frac{\partial V}{\partial T}\right)_P = -\left(\frac{\partial S}{\partial P}\right)_T$ useful?**
 
-a. $dA > 0$.
-b. $dG = 0$.
-c. $dG < 0$.
-d. $dS > 0$.
-e. $dU < 0$.
-
----
-
-**8. Which of the following is a Maxwell relation?**
-
-a. $\left(\frac{\partial T}{\partial S}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}$.
-b. $\left(\frac{\partial T}{\partial P}\right)_{S,\{n_i\}} = -\left(\frac{\partial V}{\partial S}\right)_{P,\{n_i\}}$.
-c. $\left(\frac{\partial S}{\partial V}\right)_{T,\{n_i\}} = -\left(\frac{\partial P}{\partial T}\right)_{V,\{n_i\}}$.
-d. $\left(\frac{\partial S}{\partial P}\right)_{T,\{n_i\}} = -\left(\frac{\partial V}{\partial T}\right)_{P,\{n_i\}}$.
-e. $\left(\frac{\partial U}{\partial V}\right)_{S,\{n_i\}} = -\left(\frac{\partial P}{\partial S}\right)_{V,\{n_i\}}$.
-
----
-
-**9. What is the definition of the chemical potential?**
-
-a. The amount of heat absorbed or released due to a change in particle number.
-b. The amount of work done due to a change in particle number.
-c. The amount of energy absorbed or released due to a change in particle number.
-d. The amount of entropy change due to a change in particle number.
-e. The amount of volume change due to a change in particle number.
-
----
-
-**10. Which of the following is true about the Legendre transformation?**
-
-a. It changes the natural variables of a thermodynamic potential.
-b. It adds products of conjugate variables to define new functions.
-c. It only applies to the internal energy function.
-d. It removes all information from the original function.
-e. It can only be performed once on a given function.
+a. Because it shows that the entropy is constant.
+b. Because it defines the temperature.
+c. Because it is valid only for ideal gases.
+d. Because it relates a quantity that is hard to measure (how $S$ changes with $P$) to one that is easy to measure (thermal expansion).
+e. Because it gives the value of the Gibbs energy.
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.b, 2.c, 3.c, 4.e, 5.c, 6.d, 7.c, 8.d, 9.c, 10.a
+1.c, 2.a, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d
 :::
-

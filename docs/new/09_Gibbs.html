@@ -494,8 +494,7 @@ window.Quarto = {
   <li><a href="#composition-dependence-of-delta-g" id="toc-composition-dependence-of-delta-g" class="nav-link" data-scroll-target="#composition-dependence-of-delta-g"><span class="header-section-number">9.4</span> Composition Dependence of <span class="math inline">\(\Delta G\)</span></a></li>
   <li><a href="#sec-rev9" id="toc-sec-rev9" class="nav-link" data-scroll-target="#sec-rev9"><span class="header-section-number">9.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer9" id="toc-sec-exer9" class="nav-link" data-scroll-target="#sec-exer9"><span class="header-section-number">9.5.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest9" id="toc-sec-quest9" class="nav-link" data-scroll-target="#sec-quest9"><span class="header-section-number">9.5.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest9" id="toc-sec-quest9" class="nav-link" data-scroll-target="#sec-quest9"><span class="header-section-number">9.5.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/09_Gibbs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -752,51 +751,97 @@ P_i = y_i P,
 </section>
 <section id="sec-rev9" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="sec-rev9"><span class="header-section-number">9.5</span> Chapter Review</h2>
-<section id="sec-exer9" class="level3" data-number="9.5.1">
-<h3 data-number="9.5.1" class="anchored" data-anchor-id="sec-exer9"><span class="header-section-number">9.5.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Calculating Gibbs Energy Change</strong></p>
-<p>A chemical reaction occurs at constant temperature and pressure. The enthalpy change of the reaction is <span class="math inline">\(-50\,\text{kJ/mol}\)</span> and the entropy change is <span class="math inline">\(-0.15\,\text{kJ/(mol·K)}\)</span>. Calculate the Gibbs energy change at <span class="math inline">\(298\,\text{K}\)</span>. Is the reaction spontaneous?</p>
-<p><strong>Solution:</strong> We can use Gibbs equation, <a href="#eq-gibbseq" class="quarto-xref">eq.&nbsp;<span>9.3</span></a>, to solve this problem: <span class="math display">\[\Delta_{\text{rxn}} G= \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.\]</span> Given:</p>
-<p><span class="math inline">\(\Delta_{\text{rxn}} H = -50\,\text{kJ/mol}\)</span>,</p>
-<p><span class="math inline">\(\Delta_{\text{rxn}} S = -0.15\,\text{kJ/(mol·K)}\)</span>,</p>
-<p><span class="math inline">\(T=298\,\text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} - (298\,\text{K})(-0.15\,\text{kJ/(mol·K)})\]</span></p>
-<p><span class="math display">\[\Delta_{\text{rxn}} G = -50\,\text{kJ/mol} + 44.7\,\text{kJ/mol}\]</span></p>
-<p><strong>Answer:</strong> The Gibbs energy change for the reaction is <span class="math inline">\(-5.3\,\text{kJ/mol}\)</span>. The reaction is spontaneous.</p>
+<section id="sec-quest9" class="level3" data-number="9.5.1">
+<h3 data-number="9.5.1" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.5.1</span> Study Questions</h3>
+<p><strong>1. Which equation gives the Gibbs energy change of a process at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\Delta G = \Delta H + T\Delta S\)</span>.</li>
+<li><span class="math inline">\(\Delta G = \Delta H - T\Delta S\)</span>.</li>
+<li><span class="math inline">\(\Delta G = \Delta U - T\Delta S\)</span>.</li>
+<li><span class="math inline">\(\Delta G = T\Delta S - \Delta H\)</span>.</li>
+<li><span class="math inline">\(\Delta G = \Delta H \cdot \Delta S\)</span>.</li>
+</ol>
 <hr>
-<p><strong>Problem 2: Calculating <span class="math inline">\(\Delta G\)</span> of Reaction from Standard Free Energies of Formation</strong></p>
-<p>Calculate <span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate}\)</span> at <span class="math inline">\(298\,\text{K}\)</span> for the reaction:</p>
-<p><span class="math display">\[\text{CH}_{4(\text{g})} + 2\text{O}_{2(\text{g})} \rightarrow \text{CO}_{2(\text{g})} + 2\text{H}_{2}\text{O}_{(\text{l})}\]</span></p>
-<p>using the standard Gibbs energies of formation reported in the tables at the end of the book.</p>
-<p><strong>Solution:</strong> We can use the equation: <span class="math display">\[\Delta_{\text{rxn}}G^{\standardstate} = \sum \nu_i \Delta_f G^{\standardstate}_i \]</span></p>
-<p>Substituting the values:</p>
-<p><span class="math display">\[\Delta_{\text{rxn}}G^{\standardstate} = [1(-394.4) + 2(-237.1)] - [1(-50.5) + 2(0)]\]</span></p>
-<p><span class="math display">\[\Delta_{\text{rxn}}G^{\standardstate} = -818.1\,\text{kJ/mol}\]</span></p>
-<p>Which gives us the final answer, after fixing the significant digits.</p>
-<p><strong>Answer:</strong> The change in Gibbs energy for the reported reaction at <span class="math inline">\(298\,\text{K}\)</span> is <span class="math inline">\(-818\,\text{kJ/mol}\)</span>.</p>
-</section>
-<section id="sec-quest9" class="level3" data-number="9.5.2">
-<h3 data-number="9.5.2" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.5.2</span> Study Questions</h3>
-<p><strong>1. Which of the following is the correct definition of the Gibbs energy?</strong> a. <span class="math inline">\(G = U - TS\)</span>. b. <span class="math inline">\(G = H + TS\)</span>. c.&nbsp;<span class="math inline">\(G = H - TS\)</span>. d.&nbsp;<span class="math inline">\(G = H - PV + TS\)</span>. e. <span class="math inline">\(G = H + PV - TS\)</span>.</p>
+<p><strong>2. An exothermic reaction decreases the entropy of the system. When is it spontaneous?</strong></p>
+<ol type="a">
+<li>Always.</li>
+<li>Never.</li>
+<li>Only at high temperature.</li>
+<li>Only at low temperature.</li>
+<li>Only at high pressure.</li>
+</ol>
 <hr>
-<p><strong>2. For a spontaneous process at constant T and P, which of the following is true?</strong> a. <span class="math inline">\(\Delta G &gt; 0\)</span>. b. <span class="math inline">\(\Delta G &lt; 0\)</span>. c.&nbsp;<span class="math inline">\(\Delta G = 0\)</span>. d.&nbsp;<span class="math inline">\(\Delta G \geq 0\)</span>. e. <span class="math inline">\(\Delta G\)</span> is undefined.</p>
+<p><strong>3. An endothermic reaction increases the entropy of the system. When is it spontaneous?</strong></p>
+<ol type="a">
+<li>Only at high temperature.</li>
+<li>Only at low temperature.</li>
+<li>Always.</li>
+<li>Never.</li>
+<li>Only at low pressure.</li>
+</ol>
 <hr>
-<p><strong>3. Which of the following is NOT a natural variable of the Gibbs energy?</strong> a. Temperature. b. Pressure. c.&nbsp;Chemical composition. d.&nbsp;Volume. e. Number of moles.</p>
+<p><strong>4. Since <span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -S\)</span>, how does the Gibbs energy of a substance change when the temperature increases?</strong></p>
+<ol type="a">
+<li>It increases, since the entropy is positive.</li>
+<li>It stays constant.</li>
+<li>It increases linearly with the volume.</li>
+<li>It oscillates.</li>
+<li>It decreases, since the entropy is positive.</li>
+</ol>
 <hr>
-<p><strong>4. What is the temperature dependence coefficient of G?</strong> a. <span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = S\)</span>. b. <span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -S\)</span>. c.&nbsp;<span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = H\)</span>. d.&nbsp;<span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -H\)</span>. e. <span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = V\)</span>.</p>
+<p><strong>5. What is the Gibbs–Helmholtz equation?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_T = V\)</span>.</li>
+<li><span class="math inline">\(\Delta G = \Delta H - T\Delta S\)</span>.</li>
+<li><span class="math inline">\(\left[\frac{\partial (\Delta G/T)}{\partial T}\right]_P = -\frac{\Delta H}{T^2}\)</span>.</li>
+<li><span class="math inline">\(\left[\frac{\partial (\Delta G/T)}{\partial T}\right]_P = \frac{\Delta S}{T^2}\)</span>.</li>
+<li><span class="math inline">\(\Delta G = -RT\ln K\)</span>.</li>
+</ol>
 <hr>
-<p><strong>5. What is the pressure dependence coefficient of G?</strong> a. <span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -V\)</span>. b. <span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = V\)</span>. c.&nbsp;<span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = S\)</span>. d.&nbsp;<span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -S\)</span>. e. <span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = H\)</span>.</p>
+<p><strong>6. What is the pressure dependence coefficient of the Gibbs energy?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -V\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = V\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -S\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = H\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = 0\)</span>.</li>
+</ol>
 <hr>
-<p><strong>6. For an ideal gas, how does G change with pressure at constant T?</strong> a. <span class="math inline">\(G = G^{\standardstate} - nRT\ln\frac{P}{P^{\standardstate}}\)</span>. b. <span class="math inline">\(G = G^{\standardstate} + nRT\ln\frac{P}{P^{\standardstate}}\)</span>. c.&nbsp;<span class="math inline">\(G = G^{\standardstate} + nRT\frac{P}{P^{\standardstate}}\)</span>. d.&nbsp;<span class="math inline">\(G = G^{\standardstate} - nRT\frac{P}{P^{\standardstate}}\)</span>. e. <span class="math inline">\(G = G^{\standardstate} + RT\ln\frac{P}{P^{\standardstate}}\)</span>.</p>
+<p><strong>7. How does the Gibbs energy of an ideal gas depend on the pressure at constant temperature?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(G = G^{\standardstate} - nRT\ln\frac{P}{P^{\standardstate}}\)</span>.</li>
+<li><span class="math inline">\(G = G^{\standardstate} + nRT\frac{P}{P^{\standardstate}}\)</span>.</li>
+<li><span class="math inline">\(G = G^{\standardstate} + V\Delta P\)</span>.</li>
+<li><span class="math inline">\(G = G^{\standardstate} + nRT\ln\frac{P}{P^{\standardstate}}\)</span>.</li>
+<li><span class="math inline">\(G\)</span> does not depend on <span class="math inline">\(P\)</span>.</li>
+</ol>
 <hr>
-<p><strong>7. What is the composition dependence coefficient of G?</strong> a. <span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = -\mu_i\)</span>. b. <span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \mu_i\)</span>. c.&nbsp;<span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\ln\mu_i\)</span>. d.&nbsp;<span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = RT\mu_i\)</span>. e. <span class="math inline">\(\left(\frac{\partial G}{\partial n_i}\right)_{T,P,\{n_{j\neq i}\}} = \frac{\mu_i}{RT}\)</span>.</p>
+<p><strong>8. Why does the Gibbs energy of a liquid change much less with pressure than that of a gas?</strong></p>
+<ol type="a">
+<li>Because the molar volume of a liquid is small and almost independent of pressure.</li>
+<li>Because liquids have zero entropy.</li>
+<li>Because liquids are always at standard pressure.</li>
+<li>Because the Gibbs energy of a liquid is zero.</li>
+<li>Because liquids do not have a chemical potential.</li>
+</ol>
 <hr>
-<p><strong>8. For a pure substance, what is the relationship between chemical potential and molar Gibbs energy?</strong> a. <span class="math inline">\(\mu^* = \frac{G}{n^2}\)</span>. b. <span class="math inline">\(\mu^* = \frac{G}{RT}\)</span>. c.&nbsp;<span class="math inline">\(\mu^* = G\)</span>. d.&nbsp;<span class="math inline">\(\mu^* = \frac{G}{n}\)</span>. e. <span class="math inline">\(\mu^* = nG\)</span>.</p>
+<p><strong>9. What is the chemical potential of a pure substance?</strong></p>
+<ol type="a">
+<li>Its enthalpy.</li>
+<li>Its entropy per mole.</li>
+<li>Its pressure divided by <span class="math inline">\(RT\)</span>.</li>
+<li>Zero at standard conditions.</li>
+<li>Its molar Gibbs energy, <span class="math inline">\(\mu^* = G/n\)</span>.</li>
+</ol>
 <hr>
-<p><strong>9. How does the chemical potential of a substance in an ideal gas mixture compare to its chemical potential as a pure substance?</strong> a. <span class="math inline">\(\mu_i^{\text{mixture}} &gt; \mu_i^*\)</span>. b. <span class="math inline">\(\mu_i^{\text{mixture}} &lt; \mu_i^*\)</span>. c.&nbsp;<span class="math inline">\(\mu_i^{\text{mixture}} = \mu_i^*\)</span>. d.&nbsp;<span class="math inline">\(\mu_i^{\text{mixture}} = RT\ln\mu_i^*\)</span>. e. <span class="math inline">\(\mu_i^{\text{mixture}} = \frac{\mu_i^*}{RT}\)</span>.</p>
-<hr>
-<p><strong>10. What is the equation for the change in Gibbs energy due to mixing of ideal gases?</strong> a. <span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} + \mu_i^*)\)</span>. b. <span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) &gt; 0\)</span>. c.&nbsp;<span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) = 0\)</span>. d.&nbsp;<span class="math inline">\(\Delta_{\text{mixing}}G = \sum n_i(\mu_i^{\text{mixture}} - \mu_i^*) &lt; 0\)</span>. e. <span class="math inline">\(\Delta_{\text{mixing}}G = RT\sum n_i\ln\mu_i^{\text{mixture}}\)</span>.</p>
+<p><strong>10. Two pure ideal gases are allowed to mix at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. What is the sign of <span class="math inline">\(\Delta_{\text{mixing}}G\)</span>?</strong></p>
+<ol type="a">
+<li>Positive, so the gases do not mix.</li>
+<li>Zero, since ideal gases do not interact.</li>
+<li>Negative, so the gases always mix spontaneously.</li>
+<li>It depends on the gases.</li>
+<li>It depends on the temperature.</li>
+</ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -810,7 +855,7 @@ P_i = y_i P,
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.c, 2.b, 3.d, 4.b, 5.b, 6.b, 7.b, 8.d, 9.b, 10.d</p>
+<p>1.b, 2.d, 3.a, 4.e, 5.c, 6.b, 7.d, 8.a, 9.e, 10.c</p>
 </div>
 </div>
 </div>

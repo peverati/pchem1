@@ -505,8 +505,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev13" id="toc-sec-rev13" class="nav-link" data-scroll-target="#sec-rev13"><span class="header-section-number">13.6</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer13" id="toc-sec-exer13" class="nav-link" data-scroll-target="#sec-exer13"><span class="header-section-number">13.6.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.6.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.6.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/13_MCPhaseDiagrams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -935,129 +934,106 @@ Figure&nbsp;13.11: Osmotic Pressure of a Solution.
 </section>
 <section id="sec-rev13" class="level2" data-number="13.6">
 <h2 data-number="13.6" class="anchored" data-anchor-id="sec-rev13"><span class="header-section-number">13.6</span> Chapter Review</h2>
-<section id="sec-exer13" class="level3" data-number="13.6.1">
-<h3 data-number="13.6.1" class="anchored" data-anchor-id="sec-exer13"><span class="header-section-number">13.6.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Vapor Composition Above an Ideal Solution</strong></p>
-<p>A liquid mixture of benzene and toluene contains 40.% benzene (in moles). Calculate the total vapor pressure above the mixture at <span class="math inline">\(25\;^\circ\text{C}\)</span>, and the mole fraction of benzene in the vapor, knowing that at this temperature the vapor pressures of the pure liquids are <span class="math inline">\(P_{\text{benzene}}^*=0.127\;\text{bar}\)</span> and <span class="math inline">\(P_{\text{toluene}}^*=0.038\;\text{bar}\)</span>. Assume that the mixture behaves as an ideal solution.</p>
-<p><strong>Solution:</strong> Using Raoult’s law, <a href="#eq-mc1" class="quarto-xref">eq.&nbsp;<span>13.2</span></a>, for each component:</p>
-<p><span class="math display">\[P_{\text{benzene}} = x_{\text{benzene}} P_{\text{benzene}}^* = 0.40 \cdot 0.127\;\text{bar} = 0.0508\;\text{bar},\]</span></p>
-<p><span class="math display">\[P_{\text{toluene}} = x_{\text{toluene}} P_{\text{toluene}}^* = 0.60 \cdot 0.038\;\text{bar} = 0.0228\;\text{bar}.\]</span></p>
-<p>The total pressure is obtained from Dalton’s law:</p>
-<p><span class="math display">\[P_{\text{TOT}} = 0.0508\;\text{bar} + 0.0228\;\text{bar} = 0.0736\;\text{bar},\]</span></p>
-<p>and the mole fraction of benzene in the vapor is:</p>
-<p><span class="math display">\[y_{\text{benzene}} = \frac{P_{\text{benzene}}}{P_{\text{TOT}}} = \frac{0.0508}{0.0736} = 0.690.\]</span></p>
-<p><strong>Answer:</strong> The total vapor pressure is <span class="math inline">\(0.074\;\text{bar}\)</span>, and the vapor contains 69% benzene (in moles), much more than the 40% in the liquid.</p>
-<hr>
-<p><strong>Problem 2: Boiling Point Elevation</strong></p>
-<p>Calculate the boiling point of a solution obtained by dissolving <span class="math inline">\(10.0\;\text{g}\)</span> of glucose (<span class="math inline">\(M=180.16\;\text{g/mol}\)</span>) in <span class="math inline">\(250.\;\text{g}\)</span> of water at <span class="math inline">\(1\;\text{atm}\)</span>. For water, <span class="math inline">\(K_{\text{b}}=0.512\;\frac{\text{K kg}}{\text{mol}}\)</span>.</p>
-<p><strong>Solution:</strong> Glucose does not dissociate in water, so <span class="math inline">\(i=1\)</span>. The molality of the solution is:</p>
-<p><span class="math display">\[m = \frac{n_{\text{glucose}}}{m_{\text{water}}} = \frac{10.0\;\text{g} / 180.16\;\text{g/mol}}{0.250\;\text{kg}} = \frac{0.0555\;\text{mol}}{0.250\;\text{kg}} = 0.222\;\text{mol/kg}.\]</span></p>
-<p>Using <a href="#eq-coll3" class="quarto-xref">eq.&nbsp;<span>13.23</span></a>:</p>
-<p><span class="math display">\[\Delta T_{\text{b}} = iK_{\text{b}}m = 1 \cdot 0.512\;\frac{\text{K kg}}{\text{mol}} \cdot 0.222\;\frac{\text{mol}}{\text{kg}} = 0.114\;\text{K}.\]</span></p>
-<p><strong>Answer:</strong> The solution boils at <span class="math inline">\(100.114\;^\circ\text{C}\)</span>, only about a tenth of a degree above pure water.</p>
-<hr>
-<p><strong>Problem 3: Melting Point Depression of a Salt Solution</strong></p>
-<p>Calculate the melting point of an aqueous solution of <span class="math inline">\(\mathrm{CaCl}_2\)</span> with molality <span class="math inline">\(0.100\;\text{mol/kg}\)</span>. For water, <span class="math inline">\(K_{\text{m}}=1.86\;\frac{\text{K kg}}{\text{mol}}\)</span>. Assume complete dissociation.</p>
-<p><strong>Solution:</strong> <span class="math inline">\(\mathrm{CaCl}_2\)</span> dissociates into one <span class="math inline">\(\mathrm{Ca}^{2+}\)</span> and two <span class="math inline">\(\mathrm{Cl}^-\)</span> ions, so <span class="math inline">\(i=3\)</span>. Using <a href="#eq-coll6" class="quarto-xref">eq.&nbsp;<span>13.24</span></a>:</p>
-<p><span class="math display">\[\Delta T_{\text{m}} = -iK_{\text{m}}m = -3 \cdot 1.86\;\frac{\text{K kg}}{\text{mol}} \cdot 0.100\;\frac{\text{mol}}{\text{kg}} = -0.558\;\text{K}.\]</span></p>
-<p><strong>Answer:</strong> The solution melts at <span class="math inline">\(-0.558\;^\circ\text{C}\)</span>. Notice how the same molality of a non-dissociating solute would lower the melting point only by one third of this amount.</p>
-<hr>
-<p><strong>Problem 4: Osmotic Pressure</strong></p>
-<p>Calculate the osmotic pressure of an aqueous solution of sucrose with concentration <span class="math inline">\(0.0100\;\text{mol/L}\)</span> at <span class="math inline">\(25\;^\circ\text{C}\)</span>.</p>
-<p><strong>Solution:</strong> Sucrose does not dissociate in water, so <span class="math inline">\(i=1\)</span>. Using <a href="#eq-coll8" class="quarto-xref">eq.&nbsp;<span>13.27</span></a> with <span class="math inline">\(R=0.08314\;\frac{\text{L bar}}{\text{mol K}}\)</span>:</p>
-<p><span class="math display">\[\pi = icRT = 1 \cdot 0.0100\;\frac{\text{mol}}{\text{L}} \cdot 0.08314\;\frac{\text{L bar}}{\text{mol K}} \cdot 298\;\text{K} = 0.248\;\text{bar}.\]</span></p>
-<p><strong>Answer:</strong> The osmotic pressure is <span class="math inline">\(0.248\;\text{bar}\)</span>. Even such a dilute solution pushes a column of water up by about 2.5 m.</p>
-</section>
-<section id="sec-quest13" class="level3" data-number="13.6.2">
-<h3 data-number="13.6.2" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.6.2</span> Study Questions</h3>
-<p><strong>1. What is the Gibbs phase rule for binary solutions with one phase present?</strong></p>
+<section id="sec-quest13" class="level3" data-number="13.6.1">
+<h3 data-number="13.6.1" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.6.1</span> Study Questions</h3>
+<p><strong>1. What is an ideal solution?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(f = 1 - p + 2\)</span>.</li>
-<li><span class="math inline">\(f = 4 - p\)</span>.</li>
-<li><span class="math inline">\(f = 3 - p + 2\)</span>.</li>
-<li><span class="math inline">\(f = 3 - p\)</span>.</li>
-<li><span class="math inline">\(f = 2 - p + 1\)</span>.</li>
+<li>A solution where the interactions between different molecules (<span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{B}\)</span>) are, on average, the same as those between equal molecules (<span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>–<span class="math inline">\(\mathrm{B}\)</span>).</li>
+<li>A solution where the molecules do not interact at all.</li>
+<li>A solution whose vapor is an ideal gas.</li>
+<li>A solution of a single component.</li>
+<li>A solution that cannot be distilled.</li>
 </ol>
 <hr>
-<p><strong>2. Which of the following is NOT an example of a liquid solution?</strong></p>
+<p><strong>2. What does Raoult’s law state?</strong></p>
 <ol type="a">
-<li>Saltwater.</li>
-<li>Vinegar.</li>
-<li>Carbonated drinks.</li>
-<li>Dental amalgam.</li>
-<li>Alcoholic beverages.</li>
-</ol>
-<hr>
-<p><strong>3. Raoult’s law states that the partial pressure of each component <span class="math inline">\(i\)</span> of an ideal mixture of liquids is:</strong></p>
-<ol type="a">
-<li><span class="math inline">\(P_i = x_i P^*_i\)</span>.</li>
-<li><span class="math inline">\(P_i = y_i P^*_i\)</span>.</li>
-<li><span class="math inline">\(P_i = \frac{x_i}{P^*_i}\)</span>.</li>
+<li><span class="math inline">\(P_i = y_i P_{\text{TOT}}\)</span>.</li>
+<li><span class="math inline">\(P_i = k_{\text{H},i} x_i\)</span>.</li>
+<li><span class="math inline">\(P_i = x_i P_i^*\)</span>.</li>
+<li><span class="math inline">\(P_i = \frac{x_i}{P_i^*}\)</span>.</li>
 <li><span class="math inline">\(P_i = x_i RT\)</span>.</li>
-<li><span class="math inline">\(P_i = y_i RT\)</span>.</li>
 </ol>
 <hr>
-<p><strong>4. In a <span class="math inline">\(T-x_B\)</span> phase diagram of an ideal solution with two volatile components, where is the liquid phase located?</strong></p>
+<p><strong>3. What is the composition of the vapor above an ideal solution of two volatile components?</strong></p>
 <ol type="a">
-<li>At the top of the diagram.</li>
-<li>At the bottom of the diagram.</li>
-<li>In the middle of the diagram.</li>
-<li>On the left side of the diagram.</li>
-<li>On the right side of the diagram.</li>
+<li>The same as the liquid.</li>
+<li>Pure solvent.</li>
+<li>Richer in the less volatile component.</li>
+<li>Always 50% of each component.</li>
+<li>Richer in the more volatile component.</li>
 </ol>
 <hr>
-<p><strong>5. What is an azeotrope?</strong></p>
+<p><strong>4. How many degrees of freedom does a binary system have when a liquid and its vapor coexist?</strong></p>
 <ol type="a">
-<li>A solution with a constant boiling point that cannot be altered by simple distillation.</li>
-<li>A solution with a variable boiling point that can be easily separated by distillation.</li>
-<li>A solution where the vapor and liquid phases have different compositions.</li>
-<li>A solution that follows Raoult’s law perfectly.</li>
-<li>A solution with only one volatile component.</li>
+<li><ol start="0" type="1">
+<li></li>
+</ol></li>
+<li><ol start="2" type="1">
+<li></li>
+</ol></li>
+<li><ol start="3" type="1">
+<li></li>
+</ol></li>
+<li><ol start="4" type="1">
+<li></li>
+</ol></li>
+<li><ol type="1">
+<li></li>
+</ol></li>
 </ol>
 <hr>
-<p><strong>6. How is the activity of a component in a non-ideal solution defined?</strong></p>
+<p><strong>5. Why is the melting point depression of water larger than its boiling point elevation, for the same amount of solute?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(a_i = \gamma_i x_i\)</span>.</li>
-<li><span class="math inline">\(a_i = x_i\)</span>.</li>
-<li><span class="math inline">\(a_i = \frac{P^*_i}{P_i}\)</span>.</li>
-<li><span class="math inline">\(a_i = \gamma_i P_i\)</span>.</li>
-<li><span class="math inline">\(a_i = \frac{x_i}{P^*_i}\)</span>.</li>
+<li>Because ice is less dense than water.</li>
+<li>Because the solute dissolves in ice.</li>
+<li>Because the vapor contains the solute.</li>
+<li>Because the entropy of fusion is much smaller than the entropy of vaporization.</li>
+<li>Because water has a high heat capacity.</li>
 </ol>
 <hr>
-<p><strong>7. Which of the following is NOT a colligative property?</strong></p>
+<p><strong>6. When does a component of a solution follow Henry’s law?</strong></p>
 <ol type="a">
-<li>Vapor pressure lowering.</li>
-<li>Boiling point elevation.</li>
-<li>Melting point depression.</li>
-<li>Osmotic pressure.</li>
-<li>Molar mass.</li>
+<li>When it is dilute (its mole fraction is close to zero).</li>
+<li>When it is the solvent.</li>
+<li>When it is pure.</li>
+<li>When the solution is ideal.</li>
+<li>When it is not volatile.</li>
 </ol>
 <hr>
-<p><strong>8. Which of the following is the correct formula for boiling point elevation?</strong></p>
+<p><strong>7. What is the molecular origin of a positive deviation from Raoult’s law?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta T_b = iK_b m\)</span>.</li>
-<li><span class="math inline">\(\Delta T_b = -iK_b m\)</span>.</li>
-<li><span class="math inline">\(\Delta T_b = \frac{iK_b}{m}\)</span>.</li>
-<li><span class="math inline">\(\Delta T_b = iK_b RT\)</span>.</li>
-<li><span class="math inline">\(\Delta T_b = iK_b P\)</span>.</li>
+<li>The <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{B}\)</span> interactions are stronger than the <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>–<span class="math inline">\(\mathrm{B}\)</span> ones.</li>
+<li>The solution is ideal.</li>
+<li>The <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{B}\)</span> interactions are weaker than the <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>–<span class="math inline">\(\mathrm{B}\)</span> ones.</li>
+<li>The solute is nonvolatile.</li>
+<li>The vapor is not an ideal gas.</li>
 </ol>
 <hr>
-<p><strong>9. What does the van ’t Hoff factor <span class="math inline">\(i\)</span> in colligative property equations represent?</strong></p>
+<p><strong>8. Why can an azeotrope not be separated by simple distillation?</strong></p>
 <ol type="a">
-<li>The number of solute particles for each formula unit.</li>
-<li>The molality of the solution.</li>
-<li>The molar mass of the solvent.</li>
-<li>The vapor pressure of the solution.</li>
-<li>The enthalpy of vaporization.</li>
+<li>Because it does not boil.</li>
+<li>Because it boils at 100 °C.</li>
+<li>Because it contains only one component.</li>
+<li>Because its components react with each other.</li>
+<li>Because the liquid and the vapor have the same composition.</li>
 </ol>
 <hr>
-<p><strong>10. According to the Morse equation, the osmotic pressure <span class="math inline">\(\pi\)</span> is given by:</strong></p>
+<p><strong>9. What is the activity coefficient of a component that shows a positive deviation from Raoult’s law?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\pi = imRT\)</span>.</li>
-<li><span class="math inline">\(\pi = \frac{imRT}{P}\)</span>.</li>
-<li><span class="math inline">\(\pi = imP\)</span>.</li>
-<li><span class="math inline">\(\pi = \frac{im}{RT}\)</span>.</li>
-<li><span class="math inline">\(\pi = imT\)</span>.</li>
+<li><span class="math inline">\(\gamma_i = 0\)</span>.</li>
+<li><span class="math inline">\(\gamma_i &gt; 1\)</span>.</li>
+<li><span class="math inline">\(\gamma_i = 1\)</span>.</li>
+<li><span class="math inline">\(0 &lt; \gamma_i &lt; 1\)</span>.</li>
+<li><span class="math inline">\(\gamma_i &lt; 0\)</span>.</li>
+</ol>
+<hr>
+<p><strong>10. What is the common origin of all colligative properties?</strong></p>
+<ol type="a">
+<li>The solute reacts with the solvent.</li>
+<li>The solute increases the vapor pressure of the solvent.</li>
+<li>The solute increases the chemical potential of the solvent.</li>
+<li>The solute lowers the chemical potential of the solvent, an entropic effect that depends only on the mole fraction.</li>
+<li>The solute changes the molar mass of the solvent.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1072,7 +1048,7 @@ Figure&nbsp;13.11: Osmotic Pressure of a Solution.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a</p>
+<p>1.a, 2.c, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d</p>
 </div>
 </div>
 </div>

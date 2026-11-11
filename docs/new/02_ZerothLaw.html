@@ -501,8 +501,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev2" id="toc-sec-rev2" class="nav-link" data-scroll-target="#sec-rev2"><span class="header-section-number">2.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer2" id="toc-sec-exer2" class="nav-link" data-scroll-target="#sec-exer2"><span class="header-section-number">2.5.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest2" id="toc-sec-quest2" class="nav-link" data-scroll-target="#sec-quest2"><span class="header-section-number">2.5.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest2" id="toc-sec-quest2" class="nav-link" data-scroll-target="#sec-quest2"><span class="header-section-number">2.5.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/02_ZerothLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -673,154 +672,96 @@ W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{
 </section>
 <section id="sec-rev2" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="sec-rev2"><span class="header-section-number">2.5</span> Chapter Review</h2>
-<section id="sec-exer2" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="sec-exer2"><span class="header-section-number">2.5.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Calculation of Heat in an Isochoric Process</strong></p>
-<p>Calculate the heat absorbed by 3.00 moles of an ideal gas when its temperature increases from <span class="math inline">\(250.\, \text{K}\)</span> to <span class="math inline">\(350.\, \text{K}\)</span> at constant volume, knowing that its molar heat capacity at constant volume <span class="math inline">\(C_V\)</span> is <span class="math inline">\(12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
-<p><strong>Solution:</strong> For an isochoric process, the heat absorbed is given by <a href="#eq-Cvint" class="quarto-xref">eq.&nbsp;<span>2.3</span></a>: <span class="math display">\[  Q_V \cong n C_V \Delta T.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(n=3.00 \, \text{mol}\)</span>,</p>
-<p><span class="math inline">\(C_V=12.5 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
-<p><span class="math inline">\(\Delta T = (350.-250.) \text{K}=100.\, \text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[Q_V=(3.00 \, \text{mol})(12.5\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(100.\,\text{K})=3750\,\text{J,}\]</span></p>
-<p>which, using the appropriate amount of significant digits, gives us the final answer.</p>
-<p><strong>Answer:</strong> The heat absorbed is <span class="math inline">\(3.75\,\text{kJ}.\)</span></p>
-<hr>
-<p><strong>Problem 2: Calculation of Heat in an Isobaric Process</strong></p>
-<p>Calculate the heat absorbed by 2.0 moles of an ideal gas when its temperature increases from <span class="math inline">\(300. \,\text{K}\)</span> to <span class="math inline">\(500. \,\text{K}\)</span> at constant pressure. The molar heat capacity at constant pressure for this gas is <span class="math inline">\(29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
-<p><strong>Solution:</strong> For an isobaric process, the heat absorbed is given by <a href="#eq-Cpint" class="quarto-xref">eq.&nbsp;<span>2.5</span></a>: <span class="math display">\[  Q_P \cong n C_P \Delta T.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(n=2.0\,\text{mol}\)</span></p>
-<p><span class="math inline">\(C_P =29.1 \, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span></p>
-<p><span class="math inline">\(\Delta T= (500.-300.)\,\text{K}=200.\,\text{K}\)</span></p>
-<p>Then:</p>
-<p><span class="math display">\[Q_P=(2.0\,\text{mol})(29.1\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(200.\,\text{K}) = 11640\,\text{J},\]</span></p>
-<p>which, using the appropriate amount of significant digits, gives us the right answer. (Notice the difference with respect to the previous problem.)</p>
-<p><strong>Answer:</strong> The heat absorbed is <span class="math inline">\(12.\, \text{kJ}.\)</span></p>
-<hr>
-<p><strong>Problem 3: Calculation of Work in an Isothermal Process</strong></p>
-<p>Calculate the maximum amount of work that can be done by an ideal gas during an isothermal expansion at <span class="math inline">\(300.\, \text{K}\)</span> from an initial volume of <span class="math inline">\(1.0\,\text{L}\)</span> to a final volume of <span class="math inline">\(3.0\,\text{L}\)</span>. Assume there are 2.0 moles of the gas and the gas constant <span class="math inline">\(R=8.314\, \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>.</p>
-<p><strong>Solution:</strong> For an isothermal process, the maximum amount of work done by the gas is obtained when the transformation happens in an infinite amount of steps. The absolute value of the work is given by <a href="#eq-WintsolvedV2" class="quarto-xref">eq.&nbsp;<span>2.18</span></a>: <span class="math display">\[  \left| W_{\text{max}} \right| = nRT \ln \frac{V_f}{V_i}.\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(n=2.0\,\text{mol}\)</span>,</p>
-<p><span class="math inline">\(T=300.\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(V_i=1.0\,\text{L}\)</span>,</p>
-<p><span class="math inline">\(V_f=3.0\,\text{L}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\left| W_{\text{max}} \right|=(2.0\,\text{mol})(8.314\,\text{J} \, \text{mol}^{-1} \, \text{K}^{-1})(300.\,\text{K})\ln\left(\frac{3.0\,\text{L}}{1.0\,\text{L}}\right),\]</span></p>
-<p><span class="math display">\[\left| W_{\text{max}} \right|=4988.4\,\text{J}\cdot \ln(3),\]</span></p>
-<p>and considering that:</p>
-<p><span class="math display">\[\ln(3)\approx 1.0986,\]</span></p>
-<p>then:</p>
-<p><span class="math display">\[\left| W_{\text{max}} \right|\approx 4988.4\,\text{J} \cdot 1.0986 \approx 5480\,\text{J},\]</span></p>
-<p>Finally, we should always consider the chemistry convention of the sign, <a href="01_Basis.html#def-chemistryconv" class="quarto-xref">Definition&nbsp;<span>1.1</span></a>, according to which the work <em>performed</em> by the system (our ideal gas) in an expansion is always <em>negative</em>.</p>
-<p><strong>Answer:</strong> The work done by the system is <span class="math inline">\(-5.5\,\text{kJ}\)</span>.</p>
-<hr>
-<p><strong>Problem 4: Calculation of Work in an Expansion Against Constant External Pressure</strong></p>
-<p>In a room with a high pressure, a balloon is filled with <span class="math inline">\(2.0\,\text{L}\)</span> of an ideal gas. The balloon is then brought into a different room at a lower external pressure of <span class="math inline">\(1.5\,\text{atm}\)</span>. The balloon expands quickly in this second room to a final volume of <span class="math inline">\(5.0\,\text{L}\)</span>. Calculate the amount of work that the gas releases in the second room. Assume that the temperature is the same across both rooms. Note: <span class="math inline">\(1 \,\text{atm}\cdotp\text{L} = 101.3\,\text{J}\)</span>.</p>
-<p><strong>Solution:</strong> This problem presents an ideal gas that is expanding in a fast, 1-step process, at constant temperature. For this process, the absolute value of the amount of work done by the gas is given by <a href="#eq-Warea1" class="quarto-xref">eq.&nbsp;<span>2.14</span></a>: <span class="math display">\[  \left| W_{\text{1-step}} \right| = P_{\text{ext}} (V_f-V_i).\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(P_{\text{ext}}=1.5\,\text{atm}\)</span>,</p>
-<p><span class="math inline">\(\Delta V =(5.0-2.0)\,\text{L}=3.0\,\text{L}\)</span>,</p>
-<p><span class="math inline">\(1 \, \text{atm}\cdotp\text{L}=101.3\,\text{J}\)</span></p>
-<p>Then:</p>
-<p><span class="math display">\[\left| W_{\text{1-step}} \right|=(1.5\,\text{atm})(3.0\,\text{L}) = 4.5\,\text{atm}\cdotp \text{L}.\]</span></p>
-<p>Converting <span class="math inline">\(\text{atm}\cdot\text{L}\)</span> to <span class="math inline">\(\text{J}\)</span> and accounting for the chemistry convention of the sign we get:</p>
-<p><span class="math display">\[W_{\text{1-step}}= -4.5\,\text{atm}\cdotp \text{L} \cdot 101.3 \,\text{J}\,(\text{atm}\cdotp\text{L})^{-1} = -456\,\text{J},\]</span></p>
-<p>hence, using the correct amount of significant digits, we get the final answer.</p>
-<p><strong>Answer:</strong> The amount of work released by the gas is <span class="math inline">\(-4.6 \cdot 10^{-1}\,\text{kJ}\)</span>.</p>
-</section>
-<section id="sec-quest2" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="sec-quest2"><span class="header-section-number">2.5.2</span> Study Questions</h3>
-<p><strong>1. What is the primary focus of thermodynamics?</strong></p>
+<section id="sec-quest2" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="sec-quest2"><span class="header-section-number">2.5.1</span> Study Questions</h3>
+<p><strong>1. What does the zeroth law of thermodynamics state?</strong></p>
 <ol type="a">
-<li>The study of chemical reactions.</li>
-<li>The relationship between heat, work, and energy.</li>
-<li>The behavior of gases under different pressures.</li>
-<li>The study of atomic structures.</li>
-<li>The analysis of electromagnetic waves.</li>
+<li>If two systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other.</li>
+<li>The energy of the universe is conserved.</li>
+<li>The entropy of the universe increases.</li>
+<li>Heat always flows from hot to cold objects.</li>
+<li>The entropy of a perfect crystal is zero at 0 K.</li>
 </ol>
 <hr>
-<p><strong>2. Which law of thermodynamics states that if two systems are each in thermal equilibrium with a third system, then they are in thermal equilibrium with each other?</strong></p>
+<p><strong>2. A wooden coin and a metal coin are left for a long time in boiling water. What can we say about their temperatures?</strong></p>
 <ol type="a">
-<li>The First Law of Thermodynamics.</li>
-<li>The Second Law of Thermodynamics.</li>
-<li>The Third Law of Thermodynamics.</li>
-<li>The Zeroth Law of Thermodynamics.</li>
-<li>The Law of Conservation of Energy.</li>
+<li>The metal coin is hotter, because it burns when touched.</li>
+<li>The wooden coin is hotter, because wood is an insulator.</li>
+<li>We cannot say anything without a thermometer.</li>
+<li>They have the same temperature, even if they feel different to the touch.</li>
+<li>Their temperatures depend on their masses.</li>
 </ol>
 <hr>
-<p><strong>3. What is the formal definition of the molar heat capacity at constant volume?</strong></p>
+<p><strong>3. What is the differential definition of the molar heat capacity at constant volume?</strong></p>
 <ol type="a">
-<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</li>
-<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</li>
-<li>The amount of heat required to increase the temperature of a system by 1°C at constant pressure.</li>
-<li>The amount of heat required to increase the temperature of a system by 1°C at constant volume.</li>
-<li>The energy required to change the state of 1 mol of a substance.</li>
+<li><span class="math inline">\(C_V = \frac{Q_V}{\Delta T}\)</span>.</li>
+<li><span class="math inline">\(C_V = \frac{đQ_V}{n\,dT}\)</span>.</li>
+<li><span class="math inline">\(C_V = n\,đQ_V\,dT\)</span>.</li>
+<li><span class="math inline">\(C_V = \frac{dT}{đQ_V}\)</span>.</li>
+<li><span class="math inline">\(C_V = \frac{đQ_P}{n\,dT}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>4. What is the formal definition of the molar heat capacity at constant pressure?</strong></p>
+<p><strong>4. How is the heat exchanged at constant pressure calculated, assuming <span class="math inline">\(C_P\)</span> independent of temperature?</strong></p>
 <ol type="a">
-<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</li>
-<li>The amount of heat required to increase the temperature of a system by 1°C at constant volume.</li>
-<li>The amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</li>
-<li>The energy required to change the state of 1 mol of a substance.</li>
-<li>The heat required to raise the temperature of a system by 1 K regardless of volume or pressure.</li>
+<li><span class="math inline">\(Q_P = n C_V \Delta T\)</span>.</li>
+<li><span class="math inline">\(Q_P = P \Delta V\)</span>.</li>
+<li><span class="math inline">\(Q_P = nRT \ln \frac{V_f}{V_i}\)</span>.</li>
+<li><span class="math inline">\(Q_P = 0\)</span>.</li>
+<li><span class="math inline">\(Q_P = n C_P \Delta T\)</span>.</li>
 </ol>
 <hr>
-<p><strong>5. In an isothermal process for an ideal gas, what is the expression for the absolute value of the maximum work done by the system?</strong></p>
+<p><strong>5. Why is the work of an expansion negative in the chemistry sign convention?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\left| W \right|=P\Delta V\)</span>.</li>
-<li><span class="math inline">\(\left| W \right|=nR \Delta T\)</span>.</li>
-<li><span class="math inline">\(\left| W \right|=nRT\ln\frac{V_f}{V_i}\)</span>.</li>
-<li><span class="math inline">\(\left| W \right|=-P_{\text{ext}}(V_f-V_i)\)</span>.</li>
-<li><span class="math inline">\(\left| W \right|=nC_V \Delta T\)</span>.</li>
+<li>Because the volume decreases.</li>
+<li>Because the pressure is negative.</li>
+<li>Because the work is performed by the system, which loses energy.</li>
+<li>Because the temperature decreases.</li>
+<li>Because work is a path function.</li>
 </ol>
 <hr>
-<p><strong>6. Which of the following formulas can <em>always</em> be used to calculate the work in a thermodynamic process involving a gas and a movable piston?</strong></p>
+<p><strong>6. What is the work for a one-step expansion against a constant external pressure?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(W= - \int_{i}^{f} PdV\)</span>.</li>
-<li><span class="math inline">\(W = P \Delta T\)</span>.</li>
-<li><span class="math inline">\(W = nRT \Delta V\)</span>.</li>
-<li><span class="math inline">\(W = nC_P \Delta T\)</span>.</li>
-<li><span class="math inline">\(W = \int_{i}^{f} VdP\)</span>.</li>
+<li><span class="math inline">\(W = -P_{\text{ext}}(V_f-V_i)\)</span>.</li>
+<li><span class="math inline">\(W = P_{\text{ext}}(V_f-V_i)\)</span>.</li>
+<li><span class="math inline">\(W = -nRT \ln \frac{V_f}{V_i}\)</span>.</li>
+<li><span class="math inline">\(W = 0\)</span>.</li>
+<li><span class="math inline">\(W = n C_V \Delta T\)</span>.</li>
 </ol>
 <hr>
-<p><strong>7. Which of the following is true about heat (Q) in thermodynamics?</strong></p>
+<p><strong>7. A gas expands isothermally between the same initial and final states in one step, in two steps, or in infinitely many steps. In which case is the absolute value of the work the largest?</strong></p>
 <ol type="a">
-<li>It is a state function.</li>
-<li>It can be directly used to define the state of a system.</li>
-<li>It is always negative.</li>
-<li>It is an extensive property.</li>
-<li>It is a path function.</li>
+<li>One step.</li>
+<li>Two steps.</li>
+<li>It is the same in all cases.</li>
+<li>Infinitely many steps.</li>
+<li>It depends on the gas.</li>
 </ol>
 <hr>
-<p><strong>8. What happens to the temperature of two objects in thermal equilibrium with a third object, according to the Zeroth Law of Thermodynamics?</strong></p>
+<p><strong>8. What is the absolute value of the maximum work for the isothermal expansion of an ideal gas?</strong></p>
 <ol type="a">
-<li>They both increase.</li>
-<li>They both decrease.</li>
-<li>They reach the same temperature.</li>
-<li>They remain at different temperatures.</li>
-<li>They oscillate around a mean temperature.</li>
+<li><span class="math inline">\(\left|W_{\text{max}}\right| = P_{\text{ext}}\Delta V\)</span>.</li>
+<li><span class="math inline">\(\left|W_{\text{max}}\right| = nRT \ln \frac{V_f}{V_i}\)</span>.</li>
+<li><span class="math inline">\(\left|W_{\text{max}}\right| = nR\Delta T\)</span>.</li>
+<li><span class="math inline">\(\left|W_{\text{max}}\right| = n C_V \Delta T\)</span>.</li>
+<li><span class="math inline">\(\left|W_{\text{max}}\right| = nRT\frac{V_f}{V_i}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>9. What is the expression for the heat transferred in a process at constant volume?</strong></p>
+<p><strong>9. What do the one-step, two-step, and infinitely-many-step expansions demonstrate?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(Q = nC_V \Delta T\)</span></li>
-<li><span class="math inline">\(Q = P \Delta V\)</span></li>
-<li><span class="math inline">\(Q = n C_P \Delta T\)</span></li>
-<li><span class="math inline">\(Q = nRT \ln \frac{V_f}{V_i}\)</span></li>
-<li><span class="math inline">\(Q = \int PdV\)</span></li>
+<li>That work is a state function.</li>
+<li>That the temperature changes during an isothermal process.</li>
+<li>That heat and work are the same thing.</li>
+<li>That the ideal gas law is not valid.</li>
+<li>That work depends on how the process is carried out between the same initial and final states.</li>
 </ol>
 <hr>
-<p><strong>10. Which scenario represents the minimum work required for a compression process in thermodynamics?</strong></p>
+<p><strong>10. How must a compression be performed to require the minimum amount of work?</strong></p>
 <ol type="a">
-<li>A one-step fast compression.</li>
-<li>An infinitely slow compression.</li>
-<li>A constant temperature compression.</li>
-<li>A constant volume compression.</li>
-<li>A compression with variable external pressure.</li>
+<li>As fast as possible, in one step.</li>
+<li>In two steps.</li>
+<li>Infinitely slowly, in infinitely many steps.</li>
+<li>At constant volume.</li>
+<li>Against zero external pressure.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -835,7 +776,7 @@ W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.b, 2.d, 3.b, 4.c, 5.c, 6.a, 7.e, 8.c, 9.a, 10.b</p>
+<p>1.a, 2.d, 3.b, 4.e, 5.c, 6.a, 7.d, 8.b, 9.e, 10.c</p>
 </div>
 </div>
 </div>

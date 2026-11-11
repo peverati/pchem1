@@ -317,170 +317,109 @@ where $c$ is the molar concentration of the solute, and we have introduced again
 @Eq-coll8 was proposed by van 't Hoff, and it is remarkably similar to the ideal gas law. Morse later refined it by using the molality instead of the molar concentration, which gives better results at higher concentrations.^[The Morse equation reads $\pi = imRT$. For dilute aqueous solutions, molality and molarity are nearly equal, since 1 kg of water occupies about 1 L.] Osmotic pressures can be surprisingly large: a solution with $c=0.10\;\text{mol/L}$ of sugar at room temperature has $\pi \approx 2.5\;\text{bar}$, enough to push a column of water up by about 25 m. This is why intravenous fluids must have the same osmotic pressure as blood: if the solution were too dilute, water would flow into the red blood cells, making them swell and burst. If we apply to the solution side a pressure higher than $\pi$, we can reverse the flow and push pure solvent out of the solution. This process, called *reverse osmosis*, is widely used to obtain drinkable water from seawater.
 
 ## Chapter Review {#sec-rev13}
-### Practice Problems {#sec-exer13}
-**Problem 1: Vapor Composition Above an Ideal Solution**
-
-A liquid mixture of benzene and toluene contains 40.% benzene (in moles). Calculate the total vapor pressure above the mixture at $25\;^\circ\text{C}$, and the mole fraction of benzene in the vapor, knowing that at this temperature the vapor pressures of the pure liquids are $P_{\text{benzene}}^*=0.127\;\text{bar}$ and $P_{\text{toluene}}^*=0.038\;\text{bar}$. Assume that the mixture behaves as an ideal solution.
-
-**Solution:** Using Raoult's law, @eq-mc1, for each component:
-
-$$P_{\text{benzene}} = x_{\text{benzene}} P_{\text{benzene}}^* = 0.40 \cdot 0.127\;\text{bar} = 0.0508\;\text{bar},$$
-
-$$P_{\text{toluene}} = x_{\text{toluene}} P_{\text{toluene}}^* = 0.60 \cdot 0.038\;\text{bar} = 0.0228\;\text{bar}.$$
-
-The total pressure is obtained from Dalton's law:
-
-$$P_{\text{TOT}} = 0.0508\;\text{bar} + 0.0228\;\text{bar} = 0.0736\;\text{bar},$$
-
-and the mole fraction of benzene in the vapor is:
-
-$$y_{\text{benzene}} = \frac{P_{\text{benzene}}}{P_{\text{TOT}}} = \frac{0.0508}{0.0736} = 0.690.$$
-
-**Answer:** The total vapor pressure is $0.074\;\text{bar}$, and the vapor contains 69% benzene (in moles), much more than the 40% in the liquid.
-
----
-
-**Problem 2: Boiling Point Elevation**
-
-Calculate the boiling point of a solution obtained by dissolving $10.0\;\text{g}$ of glucose ($M=180.16\;\text{g/mol}$) in $250.\;\text{g}$ of water at $1\;\text{atm}$. For water, $K_{\text{b}}=0.512\;\frac{\text{K kg}}{\text{mol}}$.
-
-**Solution:** Glucose does not dissociate in water, so $i=1$. The molality of the solution is:
-
-$$m = \frac{n_{\text{glucose}}}{m_{\text{water}}} = \frac{10.0\;\text{g} / 180.16\;\text{g/mol}}{0.250\;\text{kg}} = \frac{0.0555\;\text{mol}}{0.250\;\text{kg}} = 0.222\;\text{mol/kg}.$$
-
-Using @eq-coll3:
-
-$$\Delta T_{\text{b}} = iK_{\text{b}}m = 1 \cdot 0.512\;\frac{\text{K kg}}{\text{mol}} \cdot 0.222\;\frac{\text{mol}}{\text{kg}} = 0.114\;\text{K}.$$
-
-**Answer:** The solution boils at $100.114\;^\circ\text{C}$, only about a tenth of a degree above pure water.
-
----
-
-**Problem 3: Melting Point Depression of a Salt Solution**
-
-Calculate the melting point of an aqueous solution of $\mathrm{CaCl}_2$ with molality $0.100\;\text{mol/kg}$. For water, $K_{\text{m}}=1.86\;\frac{\text{K kg}}{\text{mol}}$. Assume complete dissociation.
-
-**Solution:** $\mathrm{CaCl}_2$ dissociates into one $\mathrm{Ca}^{2+}$ and two $\mathrm{Cl}^-$ ions, so $i=3$. Using @eq-coll6:
-
-$$\Delta T_{\text{m}} = -iK_{\text{m}}m = -3 \cdot 1.86\;\frac{\text{K kg}}{\text{mol}} \cdot 0.100\;\frac{\text{mol}}{\text{kg}} = -0.558\;\text{K}.$$
-
-**Answer:** The solution melts at $-0.558\;^\circ\text{C}$. Notice how the same molality of a non-dissociating solute would lower the melting point only by one third of this amount.
-
----
-
-**Problem 4: Osmotic Pressure**
-
-Calculate the osmotic pressure of an aqueous solution of sucrose with concentration $0.0100\;\text{mol/L}$ at $25\;^\circ\text{C}$.
-
-**Solution:** Sucrose does not dissociate in water, so $i=1$. Using @eq-coll8 with $R=0.08314\;\frac{\text{L bar}}{\text{mol K}}$:
-
-$$\pi = icRT = 1 \cdot 0.0100\;\frac{\text{mol}}{\text{L}} \cdot 0.08314\;\frac{\text{L bar}}{\text{mol K}} \cdot 298\;\text{K} = 0.248\;\text{bar}.$$
-
-**Answer:** The osmotic pressure is $0.248\;\text{bar}$. Even such a dilute solution pushes a column of water up by about 2.5 m.
-
 ### Study Questions {#sec-quest13}
-**1. What is the Gibbs phase rule for binary solutions with one phase present?**
+**1. What is an ideal solution?**
 
-a. $f = 1 - p + 2$.
-b. $f = 4 - p$.
-c. $f = 3 - p + 2$.
-d. $f = 3 - p$.
-e. $f = 2 - p + 1$.
-
----
-
-**2. Which of the following is NOT an example of a liquid solution?**
-
-a. Saltwater.
-b. Vinegar.
-c. Carbonated drinks.
-d. Dental amalgam.
-e. Alcoholic beverages.
+a. A solution where the interactions between different molecules ($\mathrm{A}$–$\mathrm{B}$) are, on average, the same as those between equal molecules ($\mathrm{A}$–$\mathrm{A}$ and $\mathrm{B}$–$\mathrm{B}$).
+b. A solution where the molecules do not interact at all.
+c. A solution whose vapor is an ideal gas.
+d. A solution of a single component.
+e. A solution that cannot be distilled.
 
 ---
 
-**3. Raoult's law states that the partial pressure of each component $i$ of an ideal mixture of liquids is:**
+**2. What does Raoult's law state?**
 
-a. $P_i = x_i P^*_i$.
-b. $P_i = y_i P^*_i$.
-c. $P_i = \frac{x_i}{P^*_i}$.
-d. $P_i = x_i RT$.
-e. $P_i = y_i RT$.
-
----
-
-**4. In a $T-x_B$ phase diagram of an ideal solution with two volatile components, where is the liquid phase located?**
-
-a. At the top of the diagram.
-b. At the bottom of the diagram.
-c. In the middle of the diagram.
-d. On the left side of the diagram.
-e. On the right side of the diagram.
+a. $P_i = y_i P_{\text{TOT}}$.
+b. $P_i = k_{\text{H},i} x_i$.
+c. $P_i = x_i P_i^*$.
+d. $P_i = \frac{x_i}{P_i^*}$.
+e. $P_i = x_i RT$.
 
 ---
 
-**5. What is an azeotrope?**
+**3. What is the composition of the vapor above an ideal solution of two volatile components?**
 
-a. A solution with a constant boiling point that cannot be altered by simple distillation.
-b. A solution with a variable boiling point that can be easily separated by distillation.
-c. A solution where the vapor and liquid phases have different compositions.
-d. A solution that follows Raoult's law perfectly.
-e. A solution with only one volatile component.
-
----
-
-**6. How is the activity of a component in a non-ideal solution defined?**
-
-a. $a_i = \gamma_i x_i$.
-b. $a_i = x_i$.
-c. $a_i = \frac{P^*_i}{P_i}$.
-d. $a_i = \gamma_i P_i$.
-e. $a_i = \frac{x_i}{P^*_i}$.
+a. The same as the liquid.
+b. Pure solvent.
+c. Richer in the less volatile component.
+d. Always 50% of each component.
+e. Richer in the more volatile component.
 
 ---
 
-**7. Which of the following is NOT a colligative property?**
+**4. How many degrees of freedom does a binary system have when a liquid and its vapor coexist?**
 
-a. Vapor pressure lowering.
-b. Boiling point elevation.
-c. Melting point depression.
-d. Osmotic pressure.
-e. Molar mass.
-
----
-
-**8. Which of the following is the correct formula for boiling point elevation?**
-
-a. $\Delta T_b = iK_b m$.
-b. $\Delta T_b = -iK_b m$.
-c. $\Delta T_b = \frac{iK_b}{m}$.
-d. $\Delta T_b = iK_b RT$.
-e. $\Delta T_b = iK_b P$.
+a. 0.
+b. 2.
+c. 3.
+d. 4.
+e. 1.
 
 ---
 
-**9. What does the van 't Hoff factor $i$ in colligative property equations represent?**
+**5. Why is the melting point depression of water larger than its boiling point elevation, for the same amount of solute?**
 
-a. The number of solute particles for each formula unit.
-b. The molality of the solution.
-c. The molar mass of the solvent.
-d. The vapor pressure of the solution.
-e. The enthalpy of vaporization.
+a. Because ice is less dense than water.
+b. Because the solute dissolves in ice.
+c. Because the vapor contains the solute.
+d. Because the entropy of fusion is much smaller than the entropy of vaporization.
+e. Because water has a high heat capacity.
 
 ---
 
-**10. According to the Morse equation, the osmotic pressure $\pi$ is given by:**
+**6. When does a component of a solution follow Henry's law?**
 
-a. $\pi = imRT$.
-b. $\pi = \frac{imRT}{P}$.
-c. $\pi = imP$.
-d. $\pi = \frac{im}{RT}$.
-e. $\pi = imT$.
+a. When it is dilute (its mole fraction is close to zero).
+b. When it is the solvent.
+c. When it is pure.
+d. When the solution is ideal.
+e. When it is not volatile.
+
+---
+
+**7. What is the molecular origin of a positive deviation from Raoult's law?**
+
+a. The $\mathrm{A}$–$\mathrm{B}$ interactions are stronger than the $\mathrm{A}$–$\mathrm{A}$ and $\mathrm{B}$–$\mathrm{B}$ ones.
+b. The solution is ideal.
+c. The $\mathrm{A}$–$\mathrm{B}$ interactions are weaker than the $\mathrm{A}$–$\mathrm{A}$ and $\mathrm{B}$–$\mathrm{B}$ ones.
+d. The solute is nonvolatile.
+e. The vapor is not an ideal gas.
+
+---
+
+**8. Why can an azeotrope not be separated by simple distillation?**
+
+a. Because it does not boil.
+b. Because it boils at 100 °C.
+c. Because it contains only one component.
+d. Because its components react with each other.
+e. Because the liquid and the vapor have the same composition.
+
+---
+
+**9. What is the activity coefficient of a component that shows a positive deviation from Raoult's law?**
+
+a. $\gamma_i = 0$.
+b. $\gamma_i > 1$.
+c. $\gamma_i = 1$.
+d. $0 < \gamma_i < 1$.
+e. $\gamma_i < 0$.
+
+---
+
+**10. What is the common origin of all colligative properties?**
+
+a. The solute reacts with the solvent.
+b. The solute increases the vapor pressure of the solvent.
+c. The solute increases the chemical potential of the solvent.
+d. The solute lowers the chemical potential of the solvent, an entropic effect that depends only on the mole fraction.
+e. The solute changes the molar mass of the solvent.
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.b, 2.d, 3.a, 4.b, 5.a, 6.a, 7.e, 8.a, 9.a, 10.a
+1.a, 2.c, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d
 :::

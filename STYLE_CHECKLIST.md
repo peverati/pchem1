@@ -7,7 +7,7 @@ Items marked **(rigor)** state something imprecise or wrong. The others are plac
 ## Book-wide
 - [ ] Most chapters start straight with a section, without the short opening that links to the previous chapter and says what this one does (as in P-Chem 2). Only ch. 5, 6, 7, 9 and 14 have one.
 - [ ] Key results are rarely followed by an interpretation ("A few important considerations…" list), as P-Chem 2 does.
-- [ ] Practice problems and study questions have a flatter, generated voice than the chapters. Revise them together with the open problem issues (ch. 10).
+- [x] Practice problems removed from every chapter (11 November 2026; they will move to a separate problem website). Study questions rewritten: 10 per chapter on the key concepts, 5 options each.
 
 ## Chapter by chapter
 - **Preface:** OK. The author's note is dated 2024 and needs a new-edition update.
@@ -33,7 +33,7 @@ Items marked **(rigor)** state something imprecise or wrong. The others are plac
 - **9 Gibbs Energy:**
   - [ ] **(rigor)** The "Composition dependence" integration ("G = 0 when n = 0", integrating μ* dn) is hand-wavy.
   - [ ] **(rigor)** The entropy criterion counts moles of everything; it should count moles of gas.
-- **10 Chemical Equilibrium:** mostly OK. The activity paragraph (ideal gas, real gas, pure solids, solutions, all at once) is a dense list. The practice problems have known numerical errors.
+- **10 Chemical Equilibrium:** mostly OK. The activity paragraph (ideal gas, real gas, pure solids, solutions, all at once) is a dense list.
 - **11 Ideal and Non-Ideal Gases:**
   - [ ] **(rigor)** The fugacity section's step "since μ = μ° when P = P°, it is easy to demonstrate that f/P → 1" is a non-sequitur.
   - [ ] The compressibility-factor derivative "near P = 0" skips all steps.

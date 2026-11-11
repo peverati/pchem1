@@ -193,153 +193,109 @@ As we notice from this result, a difference in temperature of 100 K translates i
 
 
 ## Chapter Review {#sec-rev4}
-### Practice Problems {#sec-exer4}
-**Problem 1:** Calculating $\Delta H$ of a Reaction from Standard Enthalpies of Formation
-
-Determine the enthalpy change, $\Delta_{\text{rxn}} H^\standardstate$, when 1 mole of $\text{N}_2 \text{O}_{4\text{(g)}}$ dissociates into 2 moles of $\text{NO}_{2\text{(g)}}$ at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
-
-**Solution:** The reaction under consideration is:
-
-$$\text{N}_2 \text{O}_{4\text{(g)}} \rightarrow 2 \text{NO}_{2\text{(g)}}$$
-
-
-Using Hess's Law, @eq-Hess, we get:
-
-$$\Delta_{\text{rxn}} H^\standardstate = 2 \Delta_{\mathrm{f}} H_{\text{NO}_{2\text{(g)}}}^\standardstate -\Delta_{\mathrm{f}} H_{\text{N}_2 \text{O}_{4\text{(g)}}}^\standardstate$$
-
-$$\Delta_{\text{rxn}} H^\standardstate = (2 \times 33.2 \, \text{kJ/mol}) - (11.1 \, \text{kJ/mol}) = 66.4 \, \text{kJ/mol} - 11.1 \, \text{kJ/mol} = 55.3 \, \text{kJ/mol},$$
-
-and, since we are asked to calculate the enthalpy change for 1 mole, we directly get our final answer.
-
-**Answer:**  $\Delta_{\text{rxn}} H^\standardstate = 55.3 \, \text{kJ}$
-
----
-
-**Problem 2:** Calculating $\Delta H$ of a Reaction from Standard Enthalpies of Formation
-
-Determine the enthalpy change $\Delta_{\text{rxn}} H^\standardstate$ when 1 mole of $\text{SO}_{2\text{(g)}}$ is oxidized to $\text{SO}_{3\text{(g)}}$ at constant standard pressure. Use the standard enthalpy of formation tables at the end of the book to fetch the data that you need.
-
-
-**Solution:** The reaction under consideration is:
-$$2\text{SO}_{2\text{(g)}}+ \text{O}_{2\text{(g)}} \rightarrow 2 \text{SO}_{3\text{(g)}}$$
-
-Using Hess's Law, @eq-Hess, we get:
-
-$$\Delta_{\text{rxn}} H^\standardstate = 2 \Delta_{\mathrm{f}} H_{\text{SO}_{3\text{(g)}}}^\standardstate - \left(2\Delta_{\mathrm{f}} H_{\text{SO}_{2\text{(g)}}}^\standardstate+\Delta_{\mathrm{f}} H_{\text{O}_{2\text{(g)}}}^\standardstate\right)$$
-
-
-$$\Delta_{\text{rxn}} H^\standardstate  = \left[2 \times \left(-395.7 \, \text{kJ/mol}\right)\right] - \left[2 \times \left(-296.8 \, \text{kJ/mol}\right) + 0\right]$$
-
-$$\Delta_{\text{rxn}} H^\standardstate  = -791.4 \, \text{kJ/mol} + 593.6 \, \text{kJ/mol} = -197.8 \, \text{kJ/mol}$$
-
-However, we now have to pay attention to the question to provide the right answer, since the question is asking for the reaction enthalpy when 1 mole is oxidized, while the balanced reaction contains 2 moles. 
-
-**Answer:** $\Delta_{\text{rxn}} H^\standardstate = \frac{-197.8 \, \text{kJ/mol}}{2\,\text{mol}} = -98.9 \, \text{kJ}$
-
-
 ### Study Questions {#sec-quest4}
-**1. What is the standard enthalpy of formation of a compound?**
+**1. What characterizes an endothermic reaction?**
 
-a. The change in enthalpy when 1 mole of the compound is formed from its elements in their standard states.
-b. The change in enthalpy when 1 mole of the compound is formed from its elements at 273 K.
-c. The change in enthalpy when 1 mole of the compound is formed from its elements in the gaseous state.
-d. The total energy content of 1 mole of the compound.
-e. The amount of heat required to decompose 1 mole of the compound into its elements.
-
----
-
-**2. Which of the following is true for an exothermic reaction at constant pressure?**
-
-a. $\Delta_{\text{rxn}} H > 0$.
-b. $\Delta_{\text{rxn}} H < 0$.
-c. $\Delta_{\text{rxn}} H = 0$.
-d. The reaction absorbs heat from the surroundings.
-e. The reaction releases heat only when carried out in a closed system.
+a. $\Delta_{\text{rxn}}H < 0$, and heat is released by the system.
+b. $\Delta_{\text{rxn}}H = 0$.
+c. $\Delta_{\text{rxn}}H > 0$, and heat is gained by the system.
+d. The reaction is always spontaneous.
+e. The reaction happens at constant volume.
 
 ---
 
-**3. What is the relationship between $\Delta_{\text{rxn}} H$ and the stoichiometric coefficients in a reaction?**
+**2. What is the sign convention for the stoichiometric coefficients $\nu_i$?**
 
-a. $\Delta_{\text{rxn}} H$ is independent of stoichiometric coefficients.
-b. $\Delta_{\text{rxn}} H$ is directly proportional to the sum of the stoichiometric coefficients.
-c. $\Delta_{\text{rxn}} H$ depends on the difference between the stoichiometric coefficients of products and reactants.
-d. $\Delta_{\text{rxn}} H$ is directly proportional to the product of the stoichiometric coefficients.
-e. $\Delta H_{\text{rxn}}$ is inversely proportional to the stoichiometric coefficients.
-
----
-
-**4. Which of the following represents Hess's Law?**
-
-a. The total enthalpy change for a reaction is the sum of the enthalpy changes for the individual steps.
-b. The enthalpy change of a reaction depends on the pathway taken.
-c. The enthalpy change of a reaction is independent of the physical states of reactants and products.
-d. The total entropy change for a reaction is the sum of the entropy changes for the individual steps.
-e. The enthalpy change for a reaction is equal to the heat absorbed at constant volume.
+a. Positive for products and negative for reactants.
+b. Positive for reactants and negative for products.
+c. Always positive.
+d. Positive for gases and negative for liquids.
+e. Positive for elements and negative for compounds.
 
 ---
 
-**5. What is the standard enthalpy of formation of $\text{O}_{2\text{(g)}}$ at $298\,\text{K}$?**
+**3. What is the standard enthalpy of formation of a compound?**
 
-a. $0\,\text{kJ/mol}$.
-b. $32\,\text{kJ/mol}$.
-c. $-286\,\text{kJ/mol}$.
-d. $-394\,\text{kJ/mol}$.
-e. $75\,\text{kJ/mol}$.
-
----
-
-**6. What is the enthalpy change associated with the bond dissociation of $\text{Cl}_{2\text{(g)}}$ into two chlorine atoms?**
-
-a. The enthalpy change is negative because energy is released when bonds are broken.
-b. The enthalpy change is positive because energy is required to break bonds.
-c. The enthalpy change is zero because the process does not involve a chemical reaction.
-d. The enthalpy change is negative because $\text{Cl}_{2\text{(g)}}$ is in its standard state.
-e. The enthalpy change is undefined because $\text{Cl}_{2\text{(g)}}$ is a diatomic molecule.
+a. The enthalpy of the compound at 0 K.
+b. The enthalpy change when 1 mol of the compound is decomposed into atoms.
+c. The heat released when the compound burns in oxygen.
+d. The absolute enthalpy of the compound at 298 K.
+e. The enthalpy change when 1 mol of the compound is formed from its elements, with all substances in their standard states.
 
 ---
 
-**7. What is the significance of the latent heat $\Delta H_{\text{vap}}$ of water?**
+**4. What is the standard pressure used in thermodynamic tables?**
 
-a. It is the heat required to convert water from solid to liquid.
-b. It is the heat released when water condenses from gas to liquid.
-c. It is the heat required to convert water from liquid to gas.
-d. It is the heat required to heat water from $273\,\text{K}$ to $373 \,\text{K}$.
-e. It is the heat released when water freezes from liquid to solid.
-
----
-
-**8. Which of the following statements is true regarding the calculation of enthalpies of reaction at temperatures different from $298\,\text{K}$?**
-
-a. The enthalpy of reaction remains constant with temperature.
-b. The enthalpy of reaction is independent of the specific heat capacities of reactants and products.
-c. The enthalpy of reaction can be calculated using heat capacities and temperature changes.
-d. The enthalpy of reaction decreases linearly with temperature.
-e. The enthalpy of reaction cannot be calculated for temperatures different from $298\,\text{K}$.
+a. 0 bar.
+b. 1 bar.
+c. 1 atm exactly.
+d. 10 bar.
+e. It depends on the substance.
 
 ---
 
-**9. Which of the following is true about the standard state of a substance?**
+**5. What is the standard enthalpy of formation of $\mathrm{O}_{2(g)}$?**
 
-a. The standard state of a substance is always at $273\,\text{K}$ and $1\,\text{bar}$ pressure.
-b. The standard state of a substance is the gas phase at $1\,\text{bar}$ pressure and $298 \,\text{K}$.
-c. The standard state of a substance is defined only for elements, not for compounds.
-d. The standard state of a substance is its liquid form at $1\,\text{bar}$ pressure and $298\,\text{K}$.
-e. The standard state of a substance is the most stable form of the substance at $1\,\text{bar}$ pressure and a specified temperature, usually $298 \,\text{K}$.
+a. $-286\;\text{kJ/mol}$.
+b. $-394\;\text{kJ/mol}$.
+c. $+498\;\text{kJ/mol}$.
+d. $0\;\text{kJ/mol}$, since it is an element in its standard state.
+e. It cannot be measured.
 
 ---
 
-**10. According to Hess's Law, what kind of reaction is one where the sum of the enthalpies of the products is greater than that of the reactants?**
+**6. Which formula expresses Hess's law?**
 
-a. The reaction is endothermic.
-b. The reaction is exothermic.
-c. The reaction is spontaneous.
-d. The reaction is non-spontaneous.
-e. The reaction does not occur.
+a. $\Delta_{\text{rxn}}H^{\standardstate} = \sum_i \nu_i \Delta_{\text{f}}H_i^{\standardstate}$.
+b. $\Delta_{\text{rxn}}H^{\standardstate} = \sum_i \Delta_{\text{f}}H_i^{\standardstate}$.
+c. $\Delta_{\text{rxn}}H^{\standardstate} = \prod_i \nu_i \Delta_{\text{f}}H_i^{\standardstate}$.
+d. $\Delta_{\text{rxn}}H^{\standardstate} = Q_V$.
+e. $\Delta_{\text{rxn}}H^{\standardstate} = \sum_i \nu_i S_i^{\standardstate}$.
+
+---
+
+**7. Why can Hess's law be used to calculate reaction enthalpies?**
+
+a. Because all reactions are exothermic.
+b. Because heat is a state function.
+c. Because the enthalpy is a state function, so its change does not depend on the path.
+d. Because all reactions happen at standard conditions.
+e. Because enthalpies of formation are always negative.
+
+---
+
+**8. What does the difference between the enthalpies of formation of $\mathrm{H}_2\mathrm{O}_{(g)}$ and $\mathrm{H}_2\mathrm{O}_{(l)}$ represent?**
+
+a. The enthalpy of formation of water.
+b. The heat capacity of water.
+c. The enthalpy of combustion of hydrogen.
+d. Zero, since they are the same substance.
+e. The enthalpy (latent heat) of vaporization of water.
+
+---
+
+**9. How can a reaction enthalpy at a temperature $T'$ be calculated from its value at 298 K?**
+
+a. $\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298} \cdot \frac{T'}{298}$.
+b. $\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298} + \int_{298}^{T'} \Delta C_P\,dT$.
+c. $\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298}$ always.
+d. $\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298} - T'\Delta S$.
+e. $\Delta_{\text{rxn}}H_{T'} = \int_{298}^{T'} C_P\,dT$.
+
+---
+
+**10. What did the calculation for the oxidation of CO at 398 K show about the temperature dependence of reaction enthalpies?**
+
+a. Reaction enthalpies double every 100 K.
+b. Reaction enthalpies change sign above 298 K.
+c. Reaction enthalpies cannot be calculated above 298 K.
+d. Reaction enthalpies usually depend only weakly on temperature.
+e. Reaction enthalpies are zero at high temperature.
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.a, 2.b, 3.c, 4.a, 5.a, 6.b, 7.c, 8.c, 9.e, 10.a
+1.c, 2.a, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d
 :::

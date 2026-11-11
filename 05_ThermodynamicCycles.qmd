@@ -205,230 +205,109 @@ which proves that the efficiency of a Carnot cycle is strictly smaller than 1.^[
 
 
 ## Chapter Review {#sec-rev5}
-### Practice Problems {#sec-exer5}
-**Problem 1: Calculating Work in a Carnot Cycle**
-
-A Carnot cycle operates between temperatures of $400 \,\text{K}$ and $300 \,\text{K}$. The volume of the gas expands from $2.0\,\text{L}$ to $5.0\,\text{L}$ during the isothermal expansion stage. If 2.0 moles of an ideal gas are used, calculate the total work done by the system.
-
-**Solution:** The total work in a Carnot cycle is given by @eq-WtotCC2:
-
-$$W_{TOT} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}.$$
-
-Given:
-
-$n = 2.0 \,\text{mol}$
-
-$R = 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1}$
-
-$T_h = 400\,\text{K}$
-
-$T_l = 300\,\text{K}$
-
-$V_B = 5.0\,\text{L}$
-
-$V_A = 2.0\,\text{L}$
-
-Then:
-
-$$W_{TOT} = -2.0 \,\text{mol} \cdot 8.314\,\text{J}\,\text{mol}^{-1}\text{K}^{-1} \cdot(400\,\text{K} - 300\,\text{K})\cdot \ln\frac{5.0\,\text{L}}{2.0\,\text{L}}$$
-$$W_{TOT} = -1662.8\,\text{J} \cdot \ln(2.5) = -1662.8 \,\text{J} \cdot 0.916 = -1523.13\,\text{J}$$
-
-Adjusting the significant digits we get the final answer.
-
-**Answer:** The total work done by the system is $-1.5 \,\text{kJ}$.
-
----
-
-**Problem 2: Efficiency of a Carnot Cycle**
-
-A Carnot engine operates between a hot reservoir at $500\,\text{K}$ and a cold reservoir at $250\,\text{K}$. Calculate the efficiency of this engine.
-
-**Solution:** The efficiency of a Carnot cycle is given by @eq-effCC3:
-
-$$\varepsilon = 1 - \frac{T_l}{T_h}.$$
-
-Given:
-
-$T_h = 500\,\text{K}$
-
-$T_l = 250\,\text{K}$
-
-Then:
-
-$$\varepsilon = 1 - \frac{250\,\text{K}}{500\,\text{K}} = 1 - 0.5 = 0.5$$
-
-**Answer:** The efficiency of the Carnot engine is 50%.
-
----
-
-**Problem 3: Determining Cold Reservoir Temperature in a Carnot Cycle**
-
-A Carnot engine operates between a hot reservoir at $600 \,\text{K}$ and an unknown cold reservoir temperature. The engine absorbs $5000\,\text{J}$ of heat from the hot reservoir and performs $2000\,\text{J}$ of work in each cycle. Calculate the temperature of the cold reservoir.
-
-**Solution:** We can use @eq-effCC1 and @eq-effCC3 to solve this problem:
-
-$$\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.$$
-
-
-Given:
-
-$T_h = 600\,\text{K}$
-
-$|W_{TOT}| = 2000\,\text{J}$
-
-$|Q_h| = 5000\,\text{J}$
-
-
-First, we calculate the efficiency of the engine:
-
-$$\varepsilon = \frac{|W_{TOT}|}{|Q_h|} = \frac{2000\,\text{J}}{5000 \,\text{J}} = 0.4$$
-
-Then, we can use this efficiency to find $T_l$:
-
-$$0.4 = 1 - \frac{T_l}{600\,\text{K}}$$
-
-$$\frac{T_l}{600\,\text{K}} = 1 - 0.4 = 0.6$$
-
-$$T_l = 0.6 \cdot 600\,\text{K} = 360 \,\text{K}$$
-
-**Answer:** The temperature of the cold reservoir is 360 K.
-
----
-
-**Problem 4: Heat Absorbed in a Carnot Cycle**
-
-A Carnot engine performs $1000\,\text{J}$ of work in each cycle. If it operates between temperatures of $600\,\text{K}$ and $300\,\text{K}$, calculate the amount of heat absorbed from the hot reservoir in each cycle.
-
-**Solution:**  As for the previous problem, we can use @eq-effCC1 and @eq-effCC3 to solve this problem:
-
-$$\varepsilon = 1 - \frac{T_l}{T_h} = \frac{|W_{TOT}|}{|Q_h|}.$$
-
-Given:
-
-$T_h = 600\,\text{K}$
-
-$T_l = 300\,\text{K}$
-
-$|W_{TOT}| = 1000\,\text{J}$
-
-First, we calculate the efficiency:
-
-$$\varepsilon = 1 - \frac{300\,\text{K}}{600\,\text{K}} = 0.5$$
-
-Then, we can use this to find $|Q_h|$:
-
-$$0.5 = \frac{1000\,\text{J}}{|Q_h|}$$
-
-$$|Q_h| = \frac{1000\,\text{J}}{0.5} = 2000\,\text{J}$$
-
-**Answer:** The heat absorbed from the hot reservoir in each cycle is $2000 \,\text{J}$.
-
-
-
 ### Study Questions {#sec-quest5}
-**1. Which of the following is the basic principle behind refrigerators and air conditioning?**
+**1. What does the first law of thermodynamics say about a gas that spontaneously compresses back into one side of the Joule apparatus?**
 
-a. A Carnot cycle operating in the normal direction.
-b. A Carnot cycle operating in reverse order.
-c. An isothermal expansion followed by an adiabatic compression.
-d. A series of isochoric processes.
-e. A continuously expanding system.
-
----
-
-**2. In a Carnot cycle, how many isothermal and how many adiabatic transformations are there?**
-
-a. 1 isothermal and 3 adiabatic.
-b. 2 isothermal and 2 adiabatic.
-c. 3 isothermal and 1 adiabatic.
-d. 4 isothermal and no adiabatic.
-e. No isothermal and 4 adiabatic.
+a. It forbids it, since energy would not be conserved.
+b. It requires work to be done on the gas.
+c. It requires heat to flow out of the gas.
+d. Nothing: the process would conserve energy, so the first law does not forbid it.
+e. It shows that the process is spontaneous.
 
 ---
 
-**3. What is the total change in internal energy ($\Delta U_{\text{TOT}}$) for a complete Carnot cycle?**
+**2. What transformations make up a Carnot cycle?**
 
-a. $\Delta U_{\text{TOT}}=nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
-b. $\Delta U_{\text{TOT}}=nRT_h\ln\frac{V_B}{V_A}$.
-c. $-\Delta U_{\text{TOT}}=nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
-d. $\Delta U_{\text{TOT}}=0$.
-e. $\Delta U_{\text{TOT}}=nC_V(T_h - T_l)$.
-
----
-
-**4. Which of the following equations correctly represents the total work done in a Carnot cycle?**
-
-a. $W_{TOT} = nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
-b. $W_{TOT} = -nR(T_h - T_l)\ln\frac{V_B}{V_A}$.
-c. $W_{TOT} = nRT_h\ln\frac{V_B}{V_A}$.
-d. $W_{TOT} = nRT_l\ln\frac{V_D}{V_C}$.
-e. $W_{TOT} = n\int_{T_l}^{T_h}C_V dT$.
+a. Two isochoric and two isobaric transformations.
+b. Two isothermal and two adiabatic reversible transformations.
+c. Four isothermal transformations.
+d. Four adiabatic transformations.
+e. One isothermal, one adiabatic, one isochoric, and one isobaric transformation.
 
 ---
 
-**5. What is the relationship between the total work and total heat in a Carnot cycle?**
+**3. What happens during the isothermal expansion at $T_h$ in a Carnot cycle?**
 
-a. $W_{TOT} = Q_{\text{TOT}}$.
-b. $W_{TOT} = Q_3 - Q_1$.
-c. $W_{TOT} = Q_1 + Q_3$.
-d. $W_{TOT} = Q_1 - Q_3$.
-e. $W_{TOT} = -Q_{\text{TOT}}$.
-
----
-
-**6. How is the efficiency ($\varepsilon$) of a Carnot cycle defined?**
-
-a. $\varepsilon = \frac{|Q_{\text{TOT}}|}{|W_{TOT}|}$.
-b. $\varepsilon = \frac{|W_{TOT}|}{|Q_l|}$.
-c. $\varepsilon = \frac{|W_{TOT}|}{|Q_h|}$.
-d. $\varepsilon = \frac{|Q_h|}{|Q_l|}$.
-e. $\varepsilon = \frac{|Q_h|}{|W_{TOT}|}$.
+a. $\Delta U = 0$, heat is absorbed from the hot reservoir, and the same amount of energy leaves as work.
+b. No heat is exchanged.
+c. The temperature drops from $T_h$ to $T_l$.
+d. Heat is released to the cold reservoir.
+e. Work is done on the gas.
 
 ---
 
-**7. Which of the following formulas allows us to calculate the efficiency of a Carnot cycle?**
+**4. What happens during the adiabatic expansion in a Carnot cycle?**
 
-a. $\varepsilon = \frac{T_h}{T_l}$.
-b. $\varepsilon = 1 - \frac{T_h}{T_l}$.
-c. $\varepsilon = 1 - \frac{T_l}{T_h}$.
-d. $\varepsilon = \frac{T_h - T_l}{T_h + T_l}$.
-e. $\varepsilon = \frac{T_h - T_l}{T_l}$.
-
----
-
-**8. What happens when a Carnot cycle operates in reverse?**
-
-a. It produces more work than a forward cycle.
-b. It transfers heat from the cold reservoir to the hot reservoir.
-c. It violates the laws of thermodynamics.
-d. It has 100% efficiency.
-e. It only performs adiabatic transformations.
+a. Heat is absorbed from the hot reservoir.
+b. The internal energy stays constant.
+c. Heat is released to the cold reservoir.
+d. The volume decreases.
+e. No heat is exchanged, the gas performs work, and its temperature drops from $T_h$ to $T_l$.
 
 ---
 
-**9. What is the relationship between the volumes at different stages of the Carnot cycle?**
+**5. What is the total change in internal energy for a complete Carnot cycle?**
 
-a. $\frac{V_C}{V_D} = \frac{V_A}{V_B}$.
-b. $\frac{V_C}{V_D} = \frac{V_B}{V_A}$.
-c. $\frac{V_B}{V_A} = \frac{V_D}{V_C}$.
-d. $V_A = V_C$ and $V_B = V_D$.
-e. $V_A > V_B > V_C > V_D$.
+a. $nR(T_h-T_l)\ln\frac{V_B}{V_A}$.
+b. $nC_V(T_h-T_l)$.
+c. Zero, since the internal energy is a state function.
+d. Equal to the total work.
+e. Equal to the heat absorbed from the hot reservoir.
 
 ---
 
-**10. What is the significance of the Carnot cycle in the development of thermodynamics?**
+**6. What is the total work of a Carnot cycle?**
 
-a. It proved the existence of absolute zero.
-b. It demonstrated that not all heat can be converted to work in a cyclic process.
-c. It disproved the existence of ideal gases.
-d. It showed that all thermodynamic processes are reversible.
-e. It proved that energy can be created in closed systems.
+a. $W_{TOT} = nR(T_h-T_l)\ln\frac{V_B}{V_A}$.
+b. $W_{TOT} = -nR(T_h-T_l)\ln\frac{V_B}{V_A}$.
+c. $W_{TOT} = 0$.
+d. $W_{TOT} = nRT_h\ln\frac{V_B}{V_A}$.
+e. $W_{TOT} = nC_V(T_h-T_l)$.
+
+---
+
+**7. How is the efficiency of a heat engine defined?**
+
+a. $\varepsilon = \frac{|Q_h|}{|W_{TOT}|}$.
+b. $\varepsilon = \frac{|Q_l|}{|Q_h|}$.
+c. $\varepsilon = \frac{|W_{TOT}|}{|Q_l|}$.
+d. $\varepsilon = \frac{|W_{TOT}|}{|Q_h|}$.
+e. $\varepsilon = \frac{T_h}{T_l}$.
+
+---
+
+**8. What is the efficiency of a Carnot cycle in terms of the reservoir temperatures?**
+
+a. $\varepsilon = 1-\frac{T_l}{T_h}$.
+b. $\varepsilon = 1-\frac{T_h}{T_l}$.
+c. $\varepsilon = \frac{T_h}{T_l}$.
+d. $\varepsilon = \frac{T_h-T_l}{T_l}$.
+e. $\varepsilon = 1$.
+
+---
+
+**9. Why is the efficiency of a Carnot cycle always smaller than 1?**
+
+a. Because of friction in the engine.
+b. Because the gas is not ideal.
+c. Because heat is a state function.
+d. Because the cycle is irreversible.
+e. Because it would be 1 only if $T_l=0\;\text{K}$ or $T_h=\infty$, which are impossible.
+
+---
+
+**10. What happens when a Carnot cycle is run in reverse?**
+
+a. It produces more work than the forward cycle.
+b. It reaches 100% efficiency.
+c. Work is put into the system, and heat is moved from the cold reservoir to the hot one, as in a refrigerator.
+d. Heat flows from the hot reservoir to the cold one without work.
+e. It violates the first law.
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.b, 2.b, 3.d, 4.b, 5.e, 6.c, 7.c, 8.b, 9.b, 10.b
+1.d, 2.b, 3.a, 4.e, 5.c, 6.b, 7.d, 8.a, 9.e, 10.c
 :::
-

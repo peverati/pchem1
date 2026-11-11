@@ -509,8 +509,7 @@ window.Quarto = {
   <li><a href="#temperature-dependence-of-the-rate-coefficients" id="toc-temperature-dependence-of-the-rate-coefficients" class="nav-link" data-scroll-target="#temperature-dependence-of-the-rate-coefficients"><span class="header-section-number">14.4</span> Temperature Dependence of the Rate Coefficients</a></li>
   <li><a href="#sec-rev15" id="toc-sec-rev15" class="nav-link" data-scroll-target="#sec-rev15"><span class="header-section-number">14.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer15" id="toc-sec-exer15" class="nav-link" data-scroll-target="#sec-exer15"><span class="header-section-number">14.5.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest15" id="toc-sec-quest15" class="nav-link" data-scroll-target="#sec-quest15"><span class="header-section-number">14.5.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest15" id="toc-sec-quest15" class="nav-link" data-scroll-target="#sec-quest15"><span class="header-section-number">14.5.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/15_Kinetics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -1032,209 +1031,96 @@ Figure&nbsp;14.10: Reaction Coordinate Diagram for a Typical Reaction.
 </section>
 <section id="sec-rev15" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="sec-rev15"><span class="header-section-number">14.5</span> Chapter Review</h2>
-<section id="sec-exer15" class="level3" data-number="14.5.1">
-<h3 data-number="14.5.1" class="anchored" data-anchor-id="sec-exer15"><span class="header-section-number">14.5.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Determining Reaction Order from Initial Rates</strong></p>
-<p>Determine the reaction order with respect to each reagent and the rate law for the reaction:</p>
-<p><span class="math display">\[2A + B \rightarrow C\]</span></p>
-<p>Given the following initial rate tables:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Experiment</th>
-<th style="text-align: center;">[A] (M)</th>
-<th style="text-align: center;">[B] (M)</th>
-<th style="text-align: center;">Initial Rate (M/s)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;"><span class="math inline">\(0.1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0.1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2.0 \times 10^{-3}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;"><span class="math inline">\(0.2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0.1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(8.0 \times 10^{-3}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;"><span class="math inline">\(0.1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0.2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(4.0 \times 10^{-3}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Solution:</strong> To determine the reaction orders, compare rates between experiments:</p>
-<p>For <span class="math inline">\(A\)</span> (comparing experiments 1 and 2): <span class="math display">\[\frac{\text{Rate}_2}{\text{Rate}_1} = \frac{8.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 4 = \left(\frac{0.2}{0.1}\right)^x\]</span> <span class="math display">\[4 = 2^x\]</span> <span class="math display">\[x = 2,\]</span> so the reaction is second order in <span class="math inline">\(A\)</span>.</p>
-<p>For <span class="math inline">\(B\)</span> (comparing experiments 1 and 3): <span class="math display">\[\frac{\text{Rate}_3}{\text{Rate}_1} = \frac{4.0 \times 10^{-3}}{2.0 \times 10^{-3}} = 2 = \left(\frac{0.2}{0.1}\right)^y\]</span> <span class="math display">\[2 = 2^y\]</span> <span class="math display">\[y = 1,\]</span> so the reaction is first order in <span class="math inline">\(B\)</span>.</p>
-<p><strong>Answer:</strong> The rate law is: Rate = <span class="math inline">\(k[A]^2[B]\)</span>. The reaction is second order in <span class="math inline">\(A\)</span>, first order in <span class="math inline">\(B\)</span>, with an overall order of 3.</p>
-<hr>
-<p><strong>Problem 2: Calculating Half-Life for a First-Order Reaction</strong></p>
-<p>Calculate the half-life of a first-order reaction with rate constant <span class="math inline">\(k = 0.0231\,\text{s}^{-1}\)</span>.</p>
-<p><strong>Solution:</strong> For a first-order reaction, the half-life is given by <a href="#eq-kin8" class="quarto-xref">eq.&nbsp;<span>14.6</span></a> as:</p>
-<p><span class="math display">\[t_{1/2} = \frac{\ln 2}{k}\]</span></p>
-<p>Substituting the given rate constant:</p>
-<p><span class="math display">\[t_{1/2} = \frac{\ln 2}{0.0231\,\text{s}^{-1}} = 30.0\,\text{s}\]</span></p>
-<p><strong>Answer:</strong> The half-life of the reaction is <span class="math inline">\(30.0\,\text{s}\)</span>.</p>
-<hr>
-<p><strong>Problem 3: Determining Activation Energy Using the Arrhenius Equation</strong></p>
-<p>The rate constant of a reaction at <span class="math inline">\(300\,\text{K}\)</span> is <span class="math inline">\(2.15 \times 10^{-2}\,\text{s}^{-1}\)</span>. When we increase the temperature to <span class="math inline">\(315\,\text{K}\)</span>, the same reaction has a rate constant of <span class="math inline">\(3.98 \times 10^{-2}\,\text{s}^{-1}\)</span>. Calculate the activation energy for this reaction.</p>
-<p><strong>Solution:</strong> We can use the Arrhenius equation in its linearized form, <a href="#eq-Arr2" class="quarto-xref">eq.&nbsp;<span>14.30</span></a>:</p>
-<p><span class="math display">\[\ln \frac{k_{T_2}}{k_{T_1}}=-\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right),
-\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(k_1 = 2.15 \times 10^{-2}\,\text{s}^{-1}\)</span>,</p>
-<p><span class="math inline">\(k_2 = 3.98 \times 10^{-2}\,\text{s}^{-1}\)</span>,</p>
-<p><span class="math inline">\(T_1 = 300\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(T_2 = 315\,\text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\ln \frac{3.98 \times 10^{-2}}{2.15 \times 10^{-2}} = -\frac{E_a}{8.314}\left(\frac{1}{315} - \frac{1}{300}\right)\]</span></p>
-<p><span class="math display">\[0.6158 = \frac{E_a}{8.314}(1.587 \times 10^{-4})\]</span></p>
-<p><span class="math display">\[E_a = \frac{0.6158 \times 8.314}{1.587 \times 10^{-4}} = 32300\,\text{J/mol}\]</span> Adjusting the significant digits gives us the final answer.</p>
-<p><strong>Answer:</strong> The activation energy is <span class="math inline">\(32.3\,\text{kJ/mol}\)</span>.</p>
-<hr>
-<p><strong>Problem 4: Calculating Concentration in a Second-Order Reaction</strong></p>
-<p>The following second-order reaction: <span class="math display">\[2\text{Cl} \rightarrow \text{Cl}_2\]</span> has a rate constant of <span class="math inline">\(0.40\,\text{M}^{-1}\text{s}^{-1}\)</span>. Calculate the concentration of <span class="math inline">\(\text{Cl}\)</span> after <span class="math inline">\(100\,\text{s}\)</span>, if we start the reaction from an initial concentration of <span class="math inline">\(0.50\,\text{M}\)</span>.</p>
-<p><strong>Solution:</strong> For a second-order reaction, the integrated rate law is given by <a href="#eq-kin11" class="quarto-xref">eq.&nbsp;<span>14.8</span></a>, which for our case is:</p>
-<p><span class="math display">\[\frac{1}{[\text{Cl}]} = \frac{1}{[\text{Cl}]_0} + kt\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\([Cl]_0 = 0.50\,\text{M}\)</span>,</p>
-<p><span class="math inline">\(k = 0.40\,\text{M}^{-1}\text{s}^{-1}\)</span>,</p>
-<p><span class="math inline">\(t = 100\,\text{s}\)</span>,</p>
-<p>Then:</p>
-<p><span class="math display">\[\frac{1}{[\text{Cl}]} = \frac{1}{0.5\,\text{M}} + (0.4\,\text{M}^{-1}\text{s}^{-1})(100\,\text{s})\]</span></p>
-<p><span class="math display">\[\frac{1}{[\text{Cl}]} = 2\,\text{M}^{-1} + 40\,\text{M}^{-1} = 42\,\text{M}^{-1}\]</span></p>
-<p><span class="math display">\[[\text{Cl}] = \frac{1}{42\,\text{M}^{-1}} = 0.0238\,\text{M}\]</span></p>
-<p><strong>Answer:</strong> The concentration of <span class="math inline">\(\text{Cl}\)</span> after <span class="math inline">\(100\,\text{s}\)</span> is <span class="math inline">\(0.024\,\text{M}\)</span>.</p>
-<hr>
-<p><strong>Problem 5: Determining Rate Constant for a Zero-Order Reaction</strong></p>
-<p>The initial concentration of a reactant of a zero-order reaction is <span class="math inline">\(0.80\,\text{M}\)</span>. After <span class="math inline">\(200\,\text{s}\)</span> the concentration has diminished to <span class="math inline">\(0.6\,\text{M}\)</span>. Calculate the rate constant of the reaction.</p>
-<p><strong>Solution:</strong> For a zero-order reaction, the integrated rate law is given by <a href="#eq-kin3" class="quarto-xref">eq.&nbsp;<span>14.2</span></a>:</p>
-<p><span class="math display">\[[A] = [A]_0 - kt\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\([A]_0 = 0.80\,\text{M}\)</span>,</p>
-<p><span class="math inline">\([A] = 0.6\,\text{M}\)</span>,</p>
-<p><span class="math inline">\(t=200\,\text{s}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[0.6\,\text{M} = 0.8\,\text{M} - k(200\,\text{s})\]</span></p>
-<p><span class="math display">\[0.2\,\text{M} = k(200\,\text{s})\]</span></p>
-<p><span class="math display">\[k = \frac{0.2\,\text{M}}{200\,\text{s}} = 0.001\,\text{M}\text{s}^{-1}\]</span></p>
-<p><strong>Answer:</strong> The rate constant for the zero-order reaction is <span class="math inline">\(0.001\,\text{M}\text{s}^{-1}\)</span>.</p>
-</section>
-<section id="sec-quest15" class="level3" data-number="14.5.2">
-<h3 data-number="14.5.2" class="anchored" data-anchor-id="sec-quest15"><span class="header-section-number">14.5.2</span> Study Questions</h3>
-<p><strong>1. Which of the following is true for a zeroth-order reaction?</strong></p>
+<section id="sec-quest15" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="sec-quest15"><span class="header-section-number">14.5.1</span> Study Questions</h3>
+<p><strong>1. How does the rate of a zeroth-order reaction depend on the concentration of the reactant?</strong></p>
 <ol type="a">
-<li>The reaction rate is independent of reactant concentration.</li>
-<li>The reaction rate is directly proportional to reactant concentration.</li>
-<li>The reaction rate is proportional to the square of reactant concentration.</li>
-<li>The reaction rate decreases exponentially with time.</li>
-<li>The reaction rate increases logarithmically with reactant concentration.</li>
+<li>It is proportional to the concentration.</li>
+<li>It is proportional to the square of the concentration.</li>
+<li>It is independent of the concentration.</li>
+<li>It decreases exponentially with the concentration.</li>
+<li>It is inversely proportional to the concentration.</li>
 </ol>
 <hr>
-<p><strong>2. What are the units of the rate constant for a second-order reaction?</strong></p>
+<p><strong>2. Which plot gives a straight line for a first-order reaction?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\text{s}^{-1}\)</span>.</li>
-<li><span class="math inline">\(\text{M}^{-1}\text{s}^{-1}\)</span>.</li>
-<li><span class="math inline">\(\text{M}\text{s}^{-1}\)</span>.</li>
-<li><span class="math inline">\(\text{M}^{-2}\text{s}^{-1}\)</span>.</li>
-<li><span class="math inline">\(\text{M}^2\text{s}^{-1}\)</span>.</li>
+<li><span class="math inline">\(\ln[\mathrm{A}]\)</span> versus <span class="math inline">\(t\)</span>, with slope <span class="math inline">\(-k_1\)</span>.</li>
+<li><span class="math inline">\([\mathrm{A}]\)</span> versus <span class="math inline">\(t\)</span>, with slope <span class="math inline">\(-k_1\)</span>.</li>
+<li><span class="math inline">\(\frac{1}{[\mathrm{A}]}\)</span> versus <span class="math inline">\(t\)</span>, with slope <span class="math inline">\(k_1\)</span>.</li>
+<li><span class="math inline">\([\mathrm{A}]^2\)</span> versus <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\ln[\mathrm{A}]\)</span> versus <span class="math inline">\(\frac{1}{T}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>3. In the Arrhenius equation, <span class="math inline">\(k = A\exp(-\frac{E_a}{RT})\)</span>, what does <span class="math inline">\(E_a\)</span> represent?</strong></p>
+<p><strong>3. What is special about the half-life of a first-order reaction?</strong></p>
 <ol type="a">
-<li>Activation energy.</li>
-<li>Reaction energy.</li>
-<li>Enthalpy of reaction.</li>
-<li>Gibbs energy.</li>
-<li>Kinetic energy.</li>
+<li>It is proportional to the initial concentration.</li>
+<li>It is inversely proportional to the initial concentration.</li>
+<li>It increases as the reaction proceeds.</li>
+<li>It is always 1 second.</li>
+<li>It does not depend on the initial concentration, since <span class="math inline">\(t_{1/2}=\frac{\ln 2}{k_1}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>4. For a first-order reaction, how is the half-life related to the rate constant <span class="math inline">\(k\)</span>?</strong></p>
+<p><strong>4. Which plot gives a straight line for a simple second-order reaction?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(t_{1/2} = \frac{\ln 2}{k}\)</span>.</li>
-<li><span class="math inline">\(t_{1/2} = \frac{k}{\ln 2}\)</span>.</li>
-<li><span class="math inline">\(t_{1/2} = \frac{1}{k}\)</span>.</li>
-<li><span class="math inline">\(t_{1/2} = \frac{k}{2}\)</span>.</li>
-<li><span class="math inline">\(t_{1/2} = 2k\)</span>.</li>
+<li><span class="math inline">\([\mathrm{A}]\)</span> versus <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\frac{1}{[\mathrm{A}]}\)</span> versus <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\ln[\mathrm{A}]\)</span> versus <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\sqrt{[\mathrm{A}]}\)</span> versus <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\([\mathrm{A}]^2\)</span> versus <span class="math inline">\(t\)</span>.</li>
 </ol>
 <hr>
-<p><strong>5. Which method is used to determine reaction orders by using large excess concentrations of all reactants but one?</strong></p>
+<p><strong>5. When are the order of a reaction and its molecularity equal?</strong></p>
 <ol type="a">
-<li>Isolation method.</li>
-<li>Initial rates method.</li>
-<li>Half-life method.</li>
-<li>Integrated rate law method.</li>
-<li>Arrhenius method.</li>
+<li>Always.</li>
+<li>Never.</li>
+<li>Only for first-order reactions.</li>
+<li>Only for elementary reactions.</li>
+<li>Only for reactions in the gas phase.</li>
 </ol>
 <hr>
-<p><strong>6. What is the overall reaction order for a reaction with rate law <span class="math inline">\(\text{Rate} = k[A][B]^2\)</span>?</strong></p>
+<p><strong>6. In the consecutive reactions <span class="math inline">\(\mathrm{A}\rightarrow\mathrm{B}\rightarrow\mathrm{C}\)</span> with <span class="math inline">\(k_1 \ll k_2\)</span>, what happens to the intermediate <span class="math inline">\(\mathrm{B}\)</span>?</strong></p>
 <ol type="a">
-<li><ol start="3" type="1">
-<li></li>
-</ol></li>
-<li><ol start="2" type="1">
-<li></li>
-</ol></li>
-<li><ol type="1">
-<li></li>
-</ol></li>
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
-<li><ol start="4" type="1">
-<li></li>
-</ol></li>
+<li>Its concentration stays small and almost constant, which justifies the steady-state approximation.</li>
+<li>It accumulates and becomes the main product.</li>
+<li>It is never formed.</li>
+<li>Its concentration equals that of <span class="math inline">\(\mathrm{A}\)</span>.</li>
+<li>It reacts back to <span class="math inline">\(\mathrm{A}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>7. In a consecutive reaction <span class="math inline">\(A \xrightarrow{k_1} B \xrightarrow{k_2} C\)</span>, what condition leads to a rate-determining step in the middle of the sequence?</strong></p>
+<p><strong>7. For two competitive first-order reactions, <span class="math inline">\(\mathrm{A}\rightarrow\mathrm{B}\)</span> (<span class="math inline">\(k_1\)</span>) and <span class="math inline">\(\mathrm{A}\rightarrow\mathrm{C}\)</span> (<span class="math inline">\(k_2\)</span>), what is the ratio of the products?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(k_1 \approx k_2\)</span>.</li>
-<li><span class="math inline">\(k_1 \gg k_2\)</span>.</li>
-<li><span class="math inline">\(k_1 \ll k_2\)</span>.</li>
-<li><span class="math inline">\(k_1 = 0\)</span>.</li>
-<li><span class="math inline">\(k_2 = 0\)</span>.</li>
+<li><span class="math inline">\(\frac{[\mathrm{B}]}{[\mathrm{C}]} = 1\)</span>.</li>
+<li><span class="math inline">\(\frac{[\mathrm{B}]}{[\mathrm{C}]} = \frac{k_2}{k_1}\)</span>.</li>
+<li><span class="math inline">\(\frac{[\mathrm{B}]}{[\mathrm{C}]} = \frac{k_1}{k_2}\)</span>.</li>
+<li><span class="math inline">\(\frac{[\mathrm{B}]}{[\mathrm{C}]} = k_1 k_2\)</span>.</li>
+<li>It changes with time.</li>
 </ol>
 <hr>
-<p><strong>8. What is the relationship between the equilibrium constant <span class="math inline">\(K_C\)</span> and the forward and reverse rate constants <span class="math inline">\(k_1\)</span> and <span class="math inline">\(k_{-1}\)</span> for an opposed reaction at equilibrium?</strong></p>
+<p><strong>8. For opposed reactions, <span class="math inline">\(\mathrm{A}\rightleftharpoons\mathrm{B}\)</span>, how is the equilibrium constant related to the rate coefficients?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(K_C = \frac{k_1}{k_{-1}}\)</span>.</li>
 <li><span class="math inline">\(K_C = \frac{k_{-1}}{k_1}\)</span>.</li>
-<li><span class="math inline">\(K_C = k_1 k_{-1}\)</span>.</li>
 <li><span class="math inline">\(K_C = k_1 + k_{-1}\)</span>.</li>
+<li><span class="math inline">\(K_C = k_1 k_{-1}\)</span>.</li>
 <li><span class="math inline">\(K_C = k_1 - k_{-1}\)</span>.</li>
+<li><span class="math inline">\(K_C = \frac{k_1}{k_{-1}}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>9. Which of the following plots would give a straight line for a second-order reaction?</strong></p>
+<p><strong>9. How is the isolation method performed?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\frac{1}{[A]}\)</span> vs <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(\ln[A]\)</span> vs <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\([A]\)</span> vs <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(\sqrt{[A]}\)</span> vs <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(\frac{1}{[A]^2}\)</span> vs <span class="math inline">\(t\)</span>.</li>
+<li>By measuring only the initial rate.</li>
+<li>By using a large excess of all reactants but one.</li>
+<li>By separating the products as they form.</li>
+<li>By running the reaction at very low temperature.</li>
+<li>By using equal concentrations of all reactants.</li>
 </ol>
 <hr>
-<p><strong>10. What is the maximum experimentally observed reaction order for elementary reactions?</strong></p>
+<p><strong>10. How can the activation energy be obtained from the Arrhenius equation?</strong></p>
 <ol type="a">
-<li><ol start="3" type="1">
-<li></li>
-</ol></li>
-<li><ol start="2" type="1">
-<li></li>
-</ol></li>
-<li><ol start="4" type="1">
-<li></li>
-</ol></li>
-<li><ol start="5" type="1">
-<li></li>
-</ol></li>
-<li><ol type="1">
-<li></li>
-</ol></li>
+<li>From the intercept of a plot of <span class="math inline">\(k\)</span> versus <span class="math inline">\(T\)</span>.</li>
+<li>From the half-life of the reaction.</li>
+<li>From the equilibrium constant.</li>
+<li>From the slope of a plot of <span class="math inline">\(\ln k\)</span> versus <span class="math inline">\(\frac{1}{T}\)</span>, which is <span class="math inline">\(-\frac{E_a}{R}\)</span>.</li>
+<li>From the reaction enthalpy.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1249,7 +1135,7 @@ Figure&nbsp;14.10: Reaction Coordinate Diagram for a Typical Reaction.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.a, 2.b, 3.a, 4.a, 5.a, 6.a, 7.a, 8.a, 9.a, 10.a</p>
+<p>1.c, 2.a, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d</p>
 </div>
 </div>
 </div>

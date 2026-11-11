@@ -493,8 +493,7 @@ window.Quarto = {
   <li><a href="#pressure-and-composition-dependence-of-k_texteq" id="toc-pressure-and-composition-dependence-of-k_texteq" class="nav-link" data-scroll-target="#pressure-and-composition-dependence-of-k_texteq"><span class="header-section-number">10.3</span> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
   <li><a href="#sec-rev10" id="toc-sec-rev10" class="nav-link" data-scroll-target="#sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-exer10" id="toc-sec-exer10" class="nav-link" data-scroll-target="#sec-exer10"><span class="header-section-number">10.4.1</span> Practice Problems</a></li>
-  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.4.2</span> Study Questions</a></li>
+  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/10_ChemicalEquilibrium.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -691,142 +690,100 @@ y_{\mathrm{Cl}_{(g)}}^f=0.507 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^f
 </section>
 <section id="sec-rev10" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</h2>
-<section id="sec-exer10" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-exer10"><span class="header-section-number">10.4.1</span> Practice Problems</h3>
-<p><strong>Problem 1: Pressure Dependence of Equilibrium Composition</strong></p>
-<p>The equilibrium constant at <span class="math inline">\(500\,\text{K}\)</span> for the following reaction is <span class="math inline">\(K_P = 1.8\)</span>. If the equilibrium mixture contains <span class="math inline">\(0.60\)</span> mole fraction of <span class="math inline">\(\text{PCl}_5\)</span> at <span class="math inline">\(1\,\text{bar}\)</span>, calculate the mole fraction of <span class="math inline">\(\text{PCl}_5\)</span> when the pressure is increased to <span class="math inline">\(5\,\text{bar}\)</span> at constant temperature.</p>
-<p><span class="math display">\[\text{PCl}_{5(\text{g})} \rightleftharpoons \text{PCl}_{3(\text{g})} + \text{Cl}_{2(\text{g})}.\]</span></p>
-<p><strong>Solution:</strong> First, let’s calculate <span class="math inline">\(K_y\)</span> at <span class="math inline">\(1\,\text{bar}\)</span>:</p>
-<p><span class="math display">\[K_P = K_y \cdot \left(\frac{P}{P^{\standardstate}}\right)^{\Delta n},\]</span></p>
-<p><span class="math display">\[1.8 = K_y \cdot \left(\frac{1\,\text{bar}}{1\,\text{bar}}\right)^1 = 1.8.\]</span></p>
-<p>At <span class="math inline">\(1\,\text{bar}\)</span>:</p>
-<p><span class="math display">\[y_{\text{PCl}_5} = 0.60,\]</span></p>
-<p><span class="math display">\[y_{\text{PCl}_3} = y_{\text{Cl}_2} = 0.20.\]</span></p>
-<p>At <span class="math inline">\(5\,\text{bar}\)</span>:</p>
-<p><span class="math display">\[K_y = \frac{1.8}{5} = 0.36,\]</span></p>
-<p><span class="math display">\[K_y = \frac{y_{\text{PCl}_3} \cdot y_{\text{Cl}_2}}{y_{\text{PCl}_5}} = \frac{(1-y_{\text{PCl}_5})^2}{4y_{\text{PCl}_5}} = 0.36\]</span></p>
-<p>Solving this quadratic equation, we get:</p>
-<p><span class="math display">\[y_{\text{PCl}_5} = 0.77\]</span></p>
-<p><strong>Answer:</strong> The mole fraction of <span class="math inline">\(\text{PCl}_5\)</span> at <span class="math inline">\(5\,\text{bar}\)</span> is <span class="math inline">\(0.77\)</span>.</p>
-<hr>
-<p><strong>Problem 2: Temperature Dependence of Equilibrium Constant</strong></p>
-<p>Calculate <span class="math inline">\(K_P\)</span> at <span class="math inline">\(500\,\text{K}\)</span> for the following reaction, knowing that <span class="math inline">\(\Delta H^{\standardstate} = -92.2\,\text{kJ/mol}\)</span>, and <span class="math inline">\(K_P = 6.8 \times 10^{-1}\)</span> at <span class="math inline">\(298\,\text{K}\)</span>:</p>
-<p><span class="math display">\[\text{N}_{2(\text{g})} + 3\text{H}_{2(\text{g})} \rightleftharpoons 2\text{NH}_{3(\text{g})}.\]</span></p>
-<p><strong>Solution:</strong> We can use the integrated van ’t Hoff equation, <a href="#eq-vthoffeqI" class="quarto-xref">eq.&nbsp;<span>10.19</span></a>, to solve this problem:</p>
-<p><span class="math display">\[\ln K_{\text{eq}}(2) = \ln K_{\text{eq}}(1) - \frac{\Delta H^\standardstate}{R} \left( \frac{1}{T_2}-\frac{1}{T_1} \right).\]</span></p>
-<p>Given:</p>
-<p><span class="math inline">\(\Delta H^{\standardstate} = -92.2\,\text{kJ/mol}\)</span>,</p>
-<p><span class="math inline">\(K_P (298 \text{K})= 6.8 \times 10^{-1}\)</span>,</p>
-<p><span class="math inline">\(T_1=298\,\text{K}\)</span>,</p>
-<p><span class="math inline">\(T_2=500\,\text{K}\)</span>.</p>
-<p>Then:</p>
-<p><span class="math display">\[\ln K_{P}(500\text{K}) = \ln \left(6.8 \times 10^{-1}\right) -\frac{-92200\,\text{J/mol}}{8.314\,\text{J/mol·K}}\left(\frac{1}{500\,\text{K}} - \frac{1}{298\,\text{K}}\right)\]</span></p>
-<p><span class="math display">\[\ln K_{P}(500\text{K}) = \ln(6.8 \times 10^{-1}) - 6.31 = -6.69\]</span></p>
-<p><span class="math display">\[K_{P}(500\text{K}) = e^{-6.69} = 1.24 \times 10^{-3}\]</span></p>
-<p>And finally, we adjust for the significant digits to get the final answer.</p>
-<p><strong>Answer:</strong> The equilibrium constant for the given reaction is <span class="math inline">\(1.2 \times 10^{-3}\)</span> at <span class="math inline">\(500\,\text{K}\)</span>.</p>
-<hr>
-<p><strong>Problem 3: Calculating Standard Enthalpy of Reaction from <span class="math inline">\(K_P\)</span> Values</strong></p>
-<p>For the reaction: <span class="math display">\[2\text{SO}_{2(\text{g})} + \text{O}_{2(\text{g})} \rightleftharpoons 2\text{SO}_{3(\text{g})}\]</span></p>
-<p><span class="math inline">\(K_P = 2.50 \times 10^{10}\)</span> at <span class="math inline">\(600\,\text{K}\)</span> and <span class="math inline">\(K_P = 3.90 \times 10^8\)</span> at <span class="math inline">\(700\,\text{K}\)</span>. Calculate <span class="math inline">\(\Delta H^{\standardstate}\)</span> for this reaction.</p>
-<p><strong>Solution:</strong> As for the previous problem, we can use the integrated van ’t Hoff equation, <a href="#eq-vthoffeqI" class="quarto-xref">eq.&nbsp;<span>10.19</span></a>, as:</p>
-<p><span class="math display">\[\ln \frac{K_{P2}}{K_{P1}} = -\frac{\Delta H^{\standardstate}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\]</span></p>
-<p>Substituting the values:</p>
-<p><span class="math display">\[\ln \frac{3.90 \times 10^8}{2.50 \times 10^{10}} = -\frac{\Delta H^{\standardstate}}{8.314\,\text{J/mol·K}}\left(\frac{1}{700\,\text{K}} - \frac{1}{600\,\text{K}}\right)\]</span></p>
-<p><span class="math display">\[-3.86 = -\frac{\Delta H^{\standardstate}}{8.314}\left(\frac{1}{700} - \frac{1}{600}\right)\]</span></p>
-<p><span class="math display">\[\Delta H^{\standardstate} = -196\,\text{kJ/mol}\]</span></p>
-<p><strong>Answer:</strong> The standard enthalpy of reaction is <span class="math inline">\(-196\,\text{kJ/mol}\)</span></p>
-</section>
-<section id="sec-quest10" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.2</span> Study Questions</h3>
-<p><strong>1. What is the definition of the reaction quotient <span class="math inline">\(Q_P\)</span> for a general reaction?</strong></p>
+<section id="sec-quest10" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</h3>
+<p><strong>1. How is the Gibbs energy of a reaction related to the reaction quotient?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(Q_P = \prod_i P_i^{\nu_i}\)</span>.</li>
-<li><span class="math inline">\(Q_P = \prod_i a_i^{\nu_i}\)</span>.</li>
-<li><span class="math inline">\(Q_P = \sum_i P_i^{\nu_i}\)</span>.</li>
-<li><span class="math inline">\(Q_P = \prod_i f_i^{\nu_i}\)</span>.</li>
-<li><span class="math inline">\(Q_P = \sum_i f_i^{\nu_i}\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} + RT\ln Q\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} - RT\ln Q\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G = RTQ\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate}\,Q\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G = -RT\ln K\)</span>.</li>
 </ol>
 <hr>
-<p><strong>2. What is the relationship between <span class="math inline">\(\Delta_{\text{rxn}}G\)</span> and <span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate}\)</span>?</strong></p>
+<p><strong>2. What is true at chemical equilibrium?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} - RT\ln Q_P\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} + RT\ln Q_P\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} \cdot Q_P\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} + RTQ_P\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} - RTQ_P\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = 0\)</span>.</li>
+<li><span class="math inline">\(Q = 1\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G = 0\)</span>, and the reaction quotient equals the equilibrium constant.</li>
+<li>The reaction stops because the reactants are used up.</li>
+<li><span class="math inline">\(K = 0\)</span>.</li>
 </ol>
 <hr>
-<p><strong>3. At chemical equilibrium, what is true about <span class="math inline">\(\Delta_{\text{rxn}}G\)</span>?</strong></p>
-<ol type="a">
-<li><span class="math inline">\(\Delta_{\text{rxn}}G &gt; 0\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G &lt; 0\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = 0\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = RT\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G = -RT\)</span>.</li>
-</ol>
-<hr>
-<p><strong>4. What is the relationship between <span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate}\)</span> and the equilibrium constant <span class="math inline">\(K_{\text{eq}}\)</span>?</strong></p>
+<p><strong>3. How is the standard Gibbs energy of reaction related to the equilibrium constant?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = RT\ln K_{\text{eq}}\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = -RT\ln K_{\text{eq}}\)</span>.</li>
 <li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = K_{\text{eq}}/RT\)</span>.</li>
 <li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = RTK_{\text{eq}}\)</span>.</li>
-<li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = -K_{\text{eq}}/RT\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = 0\)</span> at equilibrium.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate} = -RT\ln K_{\text{eq}}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>5. Which of the following is the correct expression of the van ’t Hoff equation?</strong></p>
+<p><strong>4. The dissociation of <span class="math inline">\(\mathrm{Cl}_{2(g)}\)</span> has a large positive <span class="math inline">\(\Delta_{\text{rxn}}G^{\standardstate}\)</span> at 298 K. What does this tell us about its equilibrium constant?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta S^{\standardstate}}{RT^2}\)</span>.</li>
-<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta H^{\standardstate}}{RT}\)</span>.</li>
-<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta H^{\standardstate}}{RT^2}\)</span>.</li>
-<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_{P,\{n_i\}} = -\frac{\Delta H^{\standardstate}}{RT^2}\)</span>.</li>
-<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_{P,\{n_i\}} = \frac{\Delta G^{\standardstate}}{RT^2}\)</span>.</li>
+<li>It is very large.</li>
+<li>It is very small.</li>
+<li>It is equal to 1.</li>
+<li>It is negative.</li>
+<li>It cannot be defined.</li>
 </ol>
 <hr>
-<p><strong>6. How does the equilibrium constant <span class="math inline">\(K_P\)</span> change with temperature for an exothermic reaction?</strong></p>
+<p><strong>5. What is the activity of a pure liquid or solid?</strong></p>
 <ol type="a">
-<li>It increases as temperature increases.</li>
-<li>It decreases as temperature increases.</li>
-<li>It remains constant with temperature change.</li>
-<li>It first increases then decreases with temperature.</li>
-<li>It oscillates with temperature change.</li>
+<li>Its mole fraction.</li>
+<li>Its molar concentration.</li>
+<li>Its vapor pressure.</li>
+<li><ol type="1">
+<li></li>
+</ol></li>
+<li><ol start="0" type="1">
+<li></li>
+</ol></li>
 </ol>
 <hr>
-<p><strong>7. What is the relationship between <span class="math inline">\(K_P\)</span> and <span class="math inline">\(K_y\)</span> for a gas-phase reaction?</strong></p>
+<p><strong>6. How are <span class="math inline">\(K_P\)</span> and <span class="math inline">\(K_y\)</span> related for a reaction between ideal gases?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(K_P = K_y \cdot \left(\frac{P^{\standardstate}}{P}\right)^{\Delta \nu}\)</span></li>
-<li><span class="math inline">\(K_P = K_y \cdot \left(\frac{P}{P^{\standardstate}}\right)^{\Delta \nu}\)</span></li>
-<li><span class="math inline">\(K_P = K_y \cdot \left(\frac{P}{P^{\standardstate}}\right)\)</span></li>
-<li><span class="math inline">\(K_P = K_y \cdot \left(\frac{P^{\standardstate}}{P}\right)\)</span></li>
-<li><span class="math inline">\(K_P = K_y\)</span>.</li>
+<li><span class="math inline">\(K_P = K_y \left(\frac{P}{P^{\standardstate}}\right)^{\Delta\nu}\)</span>.</li>
+<li><span class="math inline">\(K_P = K_y\)</span> always.</li>
+<li><span class="math inline">\(K_P = K_y \left(\frac{P^{\standardstate}}{P}\right)^{\Delta\nu}\)</span>.</li>
+<li><span class="math inline">\(K_P = K_y\,RT\)</span>.</li>
+<li><span class="math inline">\(K_P = K_y^{\Delta\nu}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>8. How does pressure affect the equilibrium composition for a reaction where <span class="math inline">\(\Delta n \neq 0\)</span>?</strong></p>
+<p><strong>7. What is the van ’t Hoff equation?</strong></p>
 <ol type="a">
-<li>Increasing pressure always shifts equilibrium towards products.</li>
-<li>Increasing pressure always shifts equilibrium towards reactants.</li>
-<li>Increasing pressure shifts equilibrium towards fewer moles of gas.</li>
-<li>Increasing pressure shifts equilibrium towards more moles of gas.</li>
-<li>Pressure has no effect on equilibrium composition.</li>
+<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_P = -\frac{\Delta H^{\standardstate}}{RT^2}\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_P = \frac{\Delta S^{\standardstate}}{R}\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial \ln K_{\text{eq}}}{\partial T}\right)_P = \frac{\Delta H^{\standardstate}}{RT^2}\)</span>.</li>
+<li><span class="math inline">\(\left(\frac{\partial K_{\text{eq}}}{\partial P}\right)_T = 0\)</span>.</li>
+<li><span class="math inline">\(\ln K_{\text{eq}} = -\frac{\Delta G^{\standardstate}}{R}\)</span>.</li>
 </ol>
 <hr>
-<p><strong>9. What is the integrated form of the van ’t Hoff equation?</strong></p>
+<p><strong>8. How does the equilibrium constant of an exothermic reaction change when the temperature increases?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\ln\frac{K_2}{K_1} = \frac{\Delta H^{\standardstate}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\)</span>.</li>
-<li><span class="math inline">\(\ln\frac{K_2}{K_1} = -\frac{\Delta H^{\standardstate}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\)</span>.</li>
-<li><span class="math inline">\(\ln\frac{K_2}{K_1} = \frac{\Delta S^{\standardstate}}{R}\left(T_2 - T_1\right)\)</span>.</li>
-<li><span class="math inline">\(\ln\frac{K_2}{K_1} = -\frac{\Delta G^{\standardstate}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)\)</span>.</li>
-<li><span class="math inline">\(\ln\frac{K_2}{K_1} = \frac{\Delta H^{\standardstate}}{R}\left(T_2 - T_1\right)\)</span>.</li>
+<li>It increases.</li>
+<li>It stays constant.</li>
+<li>It becomes negative.</li>
+<li>It first increases, then decreases.</li>
+<li>It decreases.</li>
 </ol>
 <hr>
-<p><strong>10. Which of the following is true about the pressure dependence of <span class="math inline">\(K_P\)</span>?</strong></p>
+<p><strong>9. In a van ’t Hoff plot of <span class="math inline">\(\ln K\)</span> versus <span class="math inline">\(1/T\)</span>, what is the slope of the line?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(K_P\)</span> increases with increasing pressure.</li>
-<li><span class="math inline">\(K_P\)</span> decreases with increasing pressure.</li>
-<li><span class="math inline">\(K_P\)</span> is independent of pressure.</li>
-<li><span class="math inline">\(K_P\)</span> first increases then decreases with pressure.</li>
-<li><span class="math inline">\(K_P\)</span> depends on pressure only for non-ideal gases.</li>
+<li><span class="math inline">\(\frac{\Delta H^{\standardstate}}{R}\)</span>.</li>
+<li><span class="math inline">\(-\frac{\Delta H^{\standardstate}}{R}\)</span>.</li>
+<li><span class="math inline">\(\frac{\Delta S^{\standardstate}}{R}\)</span>.</li>
+<li><span class="math inline">\(-\Delta G^{\standardstate}\)</span>.</li>
+<li><span class="math inline">\(RT\)</span>.</li>
+</ol>
+<hr>
+<p><strong>10. What happens when the total pressure of a gas-phase reaction at equilibrium is increased, if the number of moles of gas changes in the reaction?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(K_P\)</span> increases, and the equilibrium shifts towards the products.</li>
+<li><span class="math inline">\(K_P\)</span> decreases, and the equilibrium shifts towards the reactants.</li>
+<li>Nothing changes.</li>
+<li><span class="math inline">\(K_P\)</span> does not change, but the equilibrium shifts towards the side with fewer moles of gas.</li>
+<li>The equilibrium shifts towards the side with more moles of gas.</li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -841,7 +798,7 @@ y_{\mathrm{Cl}_{(g)}}^f=0.507 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^f
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.a, 2.b, 3.c, 4.b, 5.c, 6.b, 7.b, 8.c, 9.b, 10.c</p>
+<p>1.a, 2.c, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d</p>
 </div>
 </div>
 </div>
