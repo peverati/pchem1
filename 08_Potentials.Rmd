@@ -80,7 +80,7 @@ The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821
 Finally, suppose we perform a Legendre transformation on the internal energy to replace both the entropy and the volume with intensive variables. In that case, we can define a new function called the Gibbs energy, $G$, as:
 
 \begin{equation}
-G = U -TS +PV
+G = U -TS +PV = H-TS
 (\#eq:dgdef1)
 \end{equation}
 
@@ -88,7 +88,7 @@ which, taking again the differential and using eq. \@ref(eq:dunv2) becomes:
 
 \begin{equation}
 \begin{aligned}
-dG &= dU -SdT -TdS +VdP +PdV \\
+dG &= dU -SdT -TdS +VdP +PdV = dH -SdT -TdS\\
    &= TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS +VdP +PdV \\
    &= VdP -SdT +\sum_i\mu_i dn_i.
 \end{aligned}
@@ -156,7 +156,7 @@ TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0 \\
 (\#eq:dadgder1)
 \end{equation}
 
-we can then simplify the definition of each energy, eqs. \@ref(eq:dadef2) and \@ref(eq:dgdef2):
+we can then simplify the definition of each energy, eqs. \@ref(eq:dadef2) and \@ref(eq:dgdef2), assuming constant temperature as:
 
 \begin{equation}
 \begin{aligned}
