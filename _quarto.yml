@@ -18,7 +18,7 @@ book:
   title: "The Live Textbook of Physical Chemistry 1"
   output-file: pchem1
   author: "Roberto Peverati"
-  description: "Volume 1 — Which Way and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics"   # tentative title, same as the PDF
+  description: "Volume 1 — Which Way and How Fast: Thermodynamics, Equilibria, Solutions, and Chemical Kinetics"   # tentative title, same as the PDF
   date: today
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/peverati/pchem1
@@ -86,7 +86,7 @@ format:
     page-layout: full   # no right-hand column: the content uses the space
     fig-align: center
   pdf:
-    subtitle: "Thermodynamics, Equilibria, and Chemical Kinetics"   # print subtitle (tentative)
+    subtitle: "Thermodynamics, Equilibria, Solutions, and Chemical Kinetics"   # print subtitle (tentative)
     documentclass: scrbook
     classoption: [oneside]
     geometry:
