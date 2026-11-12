@@ -1,6 +1,6 @@
-"""Figures for chapters 4, 7, and 9: Hess cycle for methane combustion, entropy of water vs T,
-and Gibbs energy of reaction vs T for the four sign combinations of Delta H and Delta S.
-Usage: python3 scripts/make_figures_ch4_7_9.py img"""
+"""Figures for chapters 6, 7, and 9: entropy of water vs T and the unattainability of 0 K (ch. 6),
+Hess cycle for methane combustion (ch. 7), and Gibbs energy of reaction vs T for the four sign combinations of Delta H and Delta S.
+Usage: python3 scripts/make_figures_ch6_7_9.py img"""
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,7 +28,7 @@ ax.text(-0.17, H_r, r"$\Delta_{\mathrm{f}}H^{\ominus}_{\mathrm{CH_4}} = -75$", f
 ax.set_xlim(-1.05, 2.5); ax.set_ylim(-1060, 70)
 ax.set_xticks([]); ax.spines["bottom"].set_visible(False)
 ax.set_ylabel(r"$H^{\ominus}$ relative to the elements [kJ/mol]")
-save(fig, f"{out}/ch4_hess_methane.png")
+save(fig, f"{out}/ch7_hess_methane.png")
 
 # ---------- ch. 7: absolute entropy of water at 1 bar vs T (approximate heat capacities) ----------
 Tm, Tb = 273.15, 373.15
@@ -53,9 +53,33 @@ ax.annotate(r"third law: $S=0$ at $0\;\mathrm{K}$", (0, 0), xytext=(25, 40), tex
 ax.set_xlim(0, 450); ax.set_ylim(0, 220)
 ax.set_xticks([0, 100, 200, Tm, Tb]); ax.set_xticklabels(["0", "100", "200", r"$T_{\mathrm{m}}$", r"$T_{\mathrm{b}}$"])
 ax.set_xlabel("Temperature [K]"); ax.set_ylabel(r"$S$ [J/(mol K)]")
-save(fig, f"{out}/ch7_S_vs_T_water.png")
+save(fig, f"{out}/ch6_S_vs_T_water.png")
 print(f"S(ice, Tm) = {S_m_s:.1f}, S(liq, Tm) = {S_m_l:.1f}, S(liq, 298) = {S_m_l + Cp_liq*np.log(298.15/Tm):.1f}, "
       f"S(liq, Tb) = {S_b_l:.1f}, S(gas, Tb) = {S_b_g:.1f}")
+
+# ---------- ch. 7: unattainability of absolute zero (cooling by alternating isothermal and adiabatic steps) ----------
+Tg = np.linspace(0, 1, 300)
+S1 = lambda T: 1.0 * T ** 0.8          # entropy with the control parameter at its first value (e.g., zero magnetic field)
+S2 = lambda T: 0.55 * T ** 0.8         # second value (e.g., high field): lower entropy at the same T; both reach S = 0 at T = 0
+fig, ax = plt.subplots(figsize=(7.5, 5))
+ax.plot(Tg, S1(Tg), color="tab:blue", lw=2.6); ax.plot(Tg, S2(Tg), color="tab:red", lw=2.6)
+ax.text(0.93, S1(0.93) + 0.04, "parameter $X_1$", color="tab:blue", fontsize=13, ha="right")
+ax.text(0.97, S2(0.7) - 0.05, "parameter $X_2$", color="tab:red", fontsize=13, ha="right", va="top")
+T = 0.9
+for k in range(7):
+    s_hi, s_lo = S1(T), S2(T)
+    ax.plot([T, T], [s_hi, s_lo], color=PURPLE, lw=1.8)                       # isothermal step: X1 -> X2
+    Tn = (s_lo / 1.0) ** (1 / 0.8)                                             # adiabatic step: X2 -> X1 at constant S
+    ax.plot([T, Tn], [s_lo, s_lo], color=PURPLE, lw=1.8, ls="--")
+    T = Tn
+ax.text(0.89, (S1(0.9) + S2(0.9)) / 2, "isothermal", color=PURPLE, fontsize=12, va="center", ha="right")
+ax.text(0.62, S2(0.9) + 0.025, "adiabatic", color=PURPLE, fontsize=12)
+ax.plot(0, 0, "o", color="k", ms=7, clip_on=False, zorder=5)
+ax.annotate("both curves reach $S=0$\nat $T=0$ (third law)", (0, 0), xytext=(0.12, 0.62), fontsize=12,
+            arrowprops=dict(arrowstyle="-", color="0.3", lw=1))
+ax.set_xlim(0, 1); ax.set_ylim(0, 1.0); ax.set_xticks([0]); ax.set_yticks([])
+ax.set_xlabel("$T$"); ax.set_ylabel("$S$")
+save(fig, f"{out}/ch6_unattainability.png")
 
 # ---------- ch. 9: Delta G = Delta H - T Delta S for the four sign combinations ----------
 T = np.linspace(0, 1000, 200)

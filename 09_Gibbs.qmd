@@ -59,6 +59,8 @@ Or, in other words:
     - Exothermic reactions that reduce the entropy are spontaneous at low $T$.
     - Endothermic reactions that increase the entropy are spontaneous at high $T$.
 
+The synthesis of ammonia is an example of the third case. Its standard Gibbs energy of reaction at $298\;\text{K}$ is $\Delta_{\text{rxn}} G^\standardstate = -91.8 - 298 \times (-0.1981) = -32.8\;\text{kJ/mol}$, the same number that we obtained from the entropy of the universe in @sec-rxnspont, and the same that we get from the tabulated Gibbs energy of formation of ammonia, $2\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{NH}_{3(g)}} = 2(-16.4)\;\text{kJ/mol}$. The reaction is spontaneous at room temperature, but it becomes non-spontaneous at high temperature, where the $-T\Delta_{\text{rxn}}S^\standardstate$ term wins. If we assume that $\Delta_{\text{rxn}}H^\standardstate$ and $\Delta_{\text{rxn}}S^\standardstate$ do not depend on temperature, the switch happens where $\Delta_{\text{rxn}}G^\standardstate=0$, at $T = \frac{91.8\times 10^3}{198.1} \approx 463\;\text{K}$.
+
 @fig-dGvsT shows the four cases as lines, since, if $\Delta H$ and $\Delta S$ do not depend much on the temperature, $\Delta G = \Delta H - T\Delta S$ is a straight line with intercept $\Delta H$ and slope $-\Delta S$. In the two cases where the spontaneity depends on the temperature, the line crosses $\Delta G=0$ at $T=\frac{\Delta H}{\Delta S}$, the temperature at which the reaction changes direction.
 
 ![Gibbs Energy of Reaction as a Function of Temperature for the Four Combinations of the Signs of $\Delta H$ and $\Delta S$ (Schematic). Reactions Are Spontaneous Where $\Delta G<0$ (Shaded Region).](img/ch9_dG_vs_T.png){#fig-dGvsT fig-alt="Plot of delta G equal to delta H minus T delta S against temperature, with four straight lines. Orange: positive delta H and negative delta S, a line rising from a positive intercept, never spontaneous. Green: negative delta H and positive delta S, a line falling from a negative intercept, always spontaneous. Blue: negative delta H and negative delta S, a line rising from a negative intercept and crossing zero, spontaneous at low temperature. Red: positive delta H and positive delta S, a line falling from a positive intercept and crossing zero, spontaneous at high temperature. The red and blue lines cross zero at the same purple point, labeled T equals delta H over delta S. The region below zero is shaded green and labeled spontaneous." width="85%"}
@@ -189,6 +191,28 @@ $$ {#eq-dgconstn1}
 
 which gives a straightforward interpretation of the chemical potential of a pure substance as the molar Gibbs energy.
 
+In a mixture, the chemical potential of a component is no longer simply $G/n$, since its molecules are surrounded by molecules of other kinds. The derivative $\mu_i = \left(\frac{\partial G}{\partial n_i}\right)_{T,P,n_{j\neq i}}$ is an example of a *partial molar quantity*:
+
+::: {#def-partialmolar}
+The *partial molar quantity* of component $i$, $\overline{X}_i = \left(\frac{\partial X}{\partial n_i}\right)_{T,P,n_{j\neq i}}$, is the change in the extensive property $X$ per mole of $i$ added to a mixture, at constant temperature, pressure, and amounts of all the other components.
+:::
+
+The most intuitive example is the volume. Adding 1 mol of water ($18\;\text{cm}^3$) to a large amount of pure water increases the volume by $18\;\text{cm}^3$, but adding it to a large amount of ethanol increases the volume by only about $14\;\text{cm}^3$, because the water molecules pack tightly around the ethanol molecules. Partial molar quantities depend on the composition of the mixture. The chemical potential is the partial molar Gibbs energy, $\mu_i = \overline{G}_i$.
+
+Repeating the argument of @eq-dgconstn for a mixture built by adding all the components at once, at constant composition, gives:
+
+$$
+G = \sum_i n_i \mu_i.
+$$ {#eq-Gsumnmu}
+
+Differentiating @eq-Gsumnmu gives $dG = \sum_i \mu_i dn_i + \sum_i n_i d\mu_i$, and at constant $T$ and $P$, @eq-dhagchem2 gives $dG = \sum_i \mu_i dn_i$. The two expressions agree only if:
+
+$$
+\sum_i n_i d\mu_i = 0 \qquad \text{(constant } T, P\text{)},
+$$ {#eq-gibbsduhem}
+
+which is the **Gibbs–Duhem equation**. It tells us that the chemical potentials of the components of a mixture cannot change independently. For a binary mixture, $d\mu_{\text{B}} = -\frac{n_{\text{A}}}{n_{\text{B}}} d\mu_{\text{A}}$: if the chemical potential of one component increases, the other one must decrease.
+
 We can start from @eq-dgconsttpintegral2 and write for a pure substance that is brought from $P_i=P^\standardstate$ to $P_f=P$ at constant $T$:
 
 $$
@@ -257,6 +281,7 @@ or, in other words, the process is spontaneous under all circumstances, and pure
 - **Temperature dependence:** $\left(\frac{\partial G}{\partial T}\right)_{P} = -S$, and the Gibbs–Helmholtz equation gives $\Delta G$ at other temperatures from $\Delta H$.
 - **Pressure dependence:** $\left(\frac{\partial G}{\partial P}\right)_{T} = V$. For an ideal gas, $G = G^\standardstate + nRT\ln\frac{P}{P^\standardstate}$; for liquids and solids, $G$ barely changes with $P$.
 - **Chemical potential:** for a pure substance, $\mu^* = G/n$; for an ideal gas in a mixture, $\mu_i = \mu_i^\standardstate + RT\ln P_i$.
+- **Partial molar quantities:** in a mixture, $\mu_i = \left(\frac{\partial G}{\partial n_i}\right)_{T,P,n_{j\neq i}}$ is the partial molar Gibbs energy, $G=\sum_i n_i\mu_i$, and the Gibbs–Duhem equation, $\sum_i n_i\,d\mu_i = 0$, links the changes of the chemical potentials.
 - **Mixing:** ideal gases always mix spontaneously, since $\Delta_{\text{mixing}}G < 0$.
 
 ### Study Questions {#sec-quest9}

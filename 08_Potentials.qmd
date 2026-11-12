@@ -4,7 +4,7 @@ aliases:
 ---
 
 # Thermodynamic Potentials {#sec-Potentials}
-In @sec-SecondLaw and @sec-thirdlaw, we learned that the entropy of the universe tells us whether a process is spontaneous. This criterion is general, but it is not very practical: to use it, we always need to calculate what happens to the surroundings, in addition to what happens to the system. Chemists would much rather have a criterion that depends only on the system, and that works at the conditions that we can easily control in a lab, such as constant temperature and constant pressure. In this chapter, we will build such criteria. We will start by combining the first and second laws into a single equation, and we will then use a simple mathematical trick to define new state functions, called *thermodynamic potentials*, each tailored to a specific set of experimental conditions. One of them, the Gibbs energy, will be the protagonist of the rest of this book.
+In @sec-SecondLaw and @sec-thirdlaw, we learned that the entropy of the universe tells us whether a process is spontaneous, and in @sec-rxnspont we used it to show that the synthesis of ammonia is spontaneous. This criterion is general, but it is not very practical: to use it, we always need to calculate what happens to the surroundings, in addition to what happens to the system. Chemists would much rather have a criterion that depends only on the system, and that works at the conditions that we can easily control in a lab, such as constant temperature and constant pressure. At the end of @sec-Thermochemistry, we already found a hint: for a reaction at constant $T$ and $P$, the combination $\Delta H - T\Delta S$ of the system alone tells us whether the reaction is spontaneous (@eq-TdSuniv). In this chapter, we will build such criteria. We will start by combining the first and second laws into a single equation, and we will then use a simple mathematical trick to define new state functions, called *thermodynamic potentials*, each tailored to a specific set of experimental conditions. One of them, the Gibbs energy, will be the protagonist of the rest of this book.
 
 ## Fundamental Equation of Thermodynamics {#sec-fundeq}
 Let's summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems, the first law gives us the change in internal energy, and the definition of entropy gives us the reversible heat:
@@ -51,8 +51,6 @@ The term $TdS$ has disappeared, and it has been replaced by $-SdT$. The new func
 
 ![The Legendre transformations as knob swaps. Starting from the internal energy, whose knobs are $S$, $V$, and $\{n_i\}$, we obtain the enthalpy by swapping the volume knob for the pressure knob, the Helmholtz energy by swapping the entropy knob for the temperature knob, and the Gibbs energy by swapping both. The knob of each variable has the same color in all the figures of this chapter.](img/ch8_legendre_machines.png){#fig-legendremachines fig-alt="Diagram with the internal energy machine on the left, with knobs S, V, and n i, and three purple arrows going to three machines on the right. The top arrow, labeled H equals U plus P V, swap V for P, goes to the enthalpy machine with knobs S, P, and n i. The middle arrow, labeled A equals U minus T S, swap S for T, goes to the Helmholtz energy machine with knobs T, V, and n i. The bottom arrow, labeled G equals U minus T S plus P V, swap both, goes to the Gibbs energy machine with knobs T, P, and n i. Each variable has its own knob color." width="85%"}
 
-![The enthalpy as a machine. Compared with the internal energy, the volume knob has been replaced by the pressure knob: its natural variables are $S$, $P$, and $\{n_i\}$.](img/machine_H.png){#fig-machineH fig-alt="Machine drawn as a rounded box labeled enthalpy, with a display showing H and three knobs labeled S, P, and n i, each with a curved arrow labeled dS, dP, and dn i." width="60%"}
-
 We have already used this trick, without saying it, when we defined the enthalpy in @sec-enthalpy. If we take the internal energy and subtract the product of the conjugate variables $-P$ and $V$, we obtain $U-(-P)V=U+PV=H$, as in @eq-enthalpydef. Taking the differential of this definition, we obtain:
 
 $$
@@ -70,8 +68,6 @@ $$ {#eq-dhdef2}
 
 which is the fundamental equation for enthalpy. The natural variables of the enthalpy are $S$, $P$, and $\{n_i\}$. The Legendre transformation has allowed us to go from $U(S,V,\{n_i\})$ to $H(S,P,\{n_i\})$ by replacing the dependence on the extensive variable, $V$, with an intensive one, $P$.
 
-![The Helmholtz energy as a machine. Compared with the internal energy, the entropy knob has been replaced by the temperature knob: its natural variables are $T$, $V$, and $\{n_i\}$.](img/machine_A.png){#fig-machineA fig-alt="Machine drawn as a rounded box labeled Helmholtz energy, with a display showing A and three knobs labeled T, V, and n i, each with a curved arrow labeled dT, dV, and dn i." width="60%"}
-
 The function that we have obtained in @eq-legendretrick, where we replaced the entropy with the temperature, is called the Helmholtz energy, $A$:
 
 $$
@@ -88,8 +84,6 @@ dA &= dU -SdT -TdS = TdS - PdV +\sum_i \mu_i dn_i -SdT -TdS  \\
 $$ {#eq-dadef2}
 
 The Helmholtz energy is named after Hermann Ludwig Ferdinand von Helmholtz (1821–1894), and its natural variables are temperature, volume, and the number of moles.
-
-![The Gibbs energy as a machine. Both the entropy and the volume knobs have been replaced, by temperature and pressure: its natural variables are $T$, $P$, and $\{n_i\}$, the knobs that we control when we run a reaction in an open beaker.](img/machine_G.png){#fig-machineG fig-alt="Machine drawn as a rounded box labeled Gibbs energy, with a display showing G and three knobs labeled T, P, and n i, each with a curved arrow labeled dT, dP, and dn i." width="60%"}
 
 Finally, we can perform both Legendre transformations at once, to replace both the entropy and the volume with their intensive partners. In that case, we define a new function called the Gibbs energy, $G$, as:
 
@@ -149,7 +143,6 @@ $$
 d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
 $$ {#eq-dssyscrit}
 
-
 where in the second step we multiplied both sides by $T$, the temperature of the system and of its surroundings, which we keep constant. We can now consider two cases, side by side: constant $V$ (left), where no work is done and the heat is $đQ_V=dU$, and constant $P$ (right), where the heat is $đQ_P=dH$:
 
 $$
@@ -193,9 +186,7 @@ $\;$
 - During a spontaneous process at constant *temperature* and *pressure*, the *Gibbs energy* will decrease $(dG<0)$, until it reaches a stationary point at which the system will be at equilibrium $(dG=0)$.
 :::
 
-
 ![Behavior of Helmholtz (red) and Gibbs (blue) Energies for Spontaneous Processes at Constant $T,V$ (left) and Constant $T,P$ (right).](img/ch8_AG_minimum.png){#fig-agfig fig-alt="Two plots against time. Left, at constant temperature and volume: the Helmholtz energy, in red, decreases and levels off at a minimum, marked as equilibrium. Right, at constant temperature and pressure: the Gibbs energy, in blue, does the same." width="85%"}
-
 
 ## Maxwell Relations {#sec-maxwell}
 Let's consider the fundamental equations for the thermodynamic potentials that we have derived in @sec-thermpot:

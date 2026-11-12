@@ -4,7 +4,7 @@ aliases:
 ---
 
 # First Law of Thermodynamics {#sec-FirstLaw}
-In @sec-ZerothLaw, we learned how to calculate heat and work, and we saw that both of them are path functions: their values depend on how a process is carried out. In this chapter, we will connect heat and work to a state function, the internal energy, and we will see how this connection becomes one of the most fundamental laws of nature, the first law of thermodynamics. Along the way, we will introduce a second state function, the enthalpy, which will be the protagonist of the next chapter.
+In @sec-ZerothLaw, we learned how to calculate heat and work, and we saw that both of them are path functions: their values depend on how a process is carried out. In this chapter, we will connect heat and work to a state function, the internal energy, and we will see how this connection becomes one of the most fundamental laws of nature, the first law of thermodynamics. Along the way, we will introduce a second state function, the enthalpy, which will become the protagonist when we study the heat of chemical reactions in @sec-Thermochemistry.
 
 ## Calculation of Internal Energy Changes {#sec-energyint}
 Energy is a property of a system that can be either transferred or converted. The internal energy ($U$) of a system is a thermodynamic state function defined as:
@@ -210,7 +210,7 @@ This process can happen both ways without losses, and is called *reversible*:
 
 What does @Def-reversible imply in practice? Three things:
 
-1. **A reversible process is quasi-static, and more.** It happens in an infinite number of infinitesimal steps, so the system passes through equilibrium states only (@def-quasistatic). In addition, at each step the system is balanced with its surroundings (for example, $P=P_{\text{ext}}$ at every moment), and there is no friction or other dissipation. Every reversible process is quasi-static, but a quasi-static process is not necessarily reversible: a piston that moves very slowly but with friction converts part of the work into heat at every step, and the process cannot be undone without leaving a trace.
+1. **A reversible process is quasi-static, and more.** It happens in an infinite number of infinitesimal steps, so the system passes through equilibrium states only (@def-quasistatic). In addition, at each step the system is balanced with its surroundings (for example, $P=P_{\text{ext}}$ at every moment), and there is no friction or other dissipation. Every reversible process is quasi-static, but a quasi-static process is not necessarily reversible: a piston that moves very slowly but with friction converts part of the work into heat at every step, and the process cannot be undone without leaving a trace. We will see a second example, a slow flow of heat between two bodies at different temperatures, in @sec-secondlaw.
 2. **A reversible process is the most efficient one.** A reversible expansion gives the maximum work, $W_{\text{max}}$, and a reversible compression requires the minimum work, $W_{\text{min}}$. Running a reversible process forward and then backward leaves no trace, neither in the system nor in the surroundings.
 3. **All real processes are irreversible.** Reversible processes are idealizations, like the ideal gas. We can approach them by carrying out a process slowly compared to the relaxation time of the system, and with as little friction as possible, but never reach them. Despite this, they are extremely useful, since they set the limits that real processes can only approach.
 

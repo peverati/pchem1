@@ -1,4 +1,4 @@
-"""Figures for chapters 5 and 6 (Carnot cycle). Usage: python3 scripts/make_figures_ch5.py img"""
+"""Figures for chapters 4 and 5 (Carnot cycle). Usage: python3 scripts/make_figures_ch4.py img"""
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,7 +36,7 @@ ax.text(0.55, P(0.55, Tl) - 12, r"isotherm $T_l$", color="tab:blue", fontsize=14
 ax.text(0.205, 60, "adiabats", color="0.25", fontsize=14)
 ax.set_xlim(0.15, 0.62); ax.set_ylim(30, 230)
 ax.set_xlabel("Volume [L]"); ax.set_ylabel("Pressure [bar]")
-save(fig, f"{out}/ch5_carnot_pv.png")
+save(fig, f"{out}/ch4_carnot_pv.png")
 
 
 # ---------- the four stages ----------
@@ -68,7 +68,7 @@ def stage(path, contact, piston_up, particles, heat):
     save(fig, path)
 
 
-stage(f"{out}/ch5_carnot_stage1.png", "hot", True, "#d62728", "in")
-stage(f"{out}/ch5_carnot_stage2.png", "insulated", True, "#9467bd", None)
-stage(f"{out}/ch5_carnot_stage3.png", "cold", False, "#1f77b4", "out")
-stage(f"{out}/ch5_carnot_stage4.png", "insulated", False, "#9467bd", None)
+stage(f"{out}/ch4_carnot_stage1.png", "hot", True, "#d62728", "in")
+stage(f"{out}/ch4_carnot_stage2.png", "insulated", True, "#9467bd", None)
+stage(f"{out}/ch4_carnot_stage3.png", "cold", False, "#1f77b4", "out")
+stage(f"{out}/ch4_carnot_stage4.png", "insulated", False, "#9467bd", None)

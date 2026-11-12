@@ -1,6 +1,7 @@
 ---
 aliases:
   - ThermodynamicCycles.html
+  - 05_ThermodynamicCycles.html
 ---
 
 # Thermodynamic Cycles {#sec-ThermodynamicCycles}
@@ -30,11 +31,11 @@ A *Carnot cycle* is an idealized process composed of two isothermal and two adia
 A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T_l$ (low), respectively. The reservoirs have a large thermal capacity so that their temperatures are unaffected by the cycle. The system is composed exclusively of the ideal gas, which is the only substance that changes temperature throughout the cycle. If we report the four transformations of a Carnot cycle on a $PV$ diagram, we obtain the following plot:
 
 
-![PV-Diagram of a Carnot Cycle (computed for 1 mol of a monatomic ideal gas between $T_h=600\;\text{K}$ and $T_l=300\;\text{K}$).](img/ch5_carnot_pv.png){#fig-FigCarnotPV fig-alt="Pressure-volume diagram of a Carnot cycle for 1 mol of a monatomic ideal gas. The cycle runs from A to B along the hot isotherm (stage 1, red), from B to C along an adiabat (stage 2), from C to D along the cold isotherm (stage 3, blue), and from D back to A along a second adiabat (stage 4). The adiabats are steeper than the isotherms." width="70%"}
+![PV-Diagram of a Carnot Cycle (computed for 1 mol of a monatomic ideal gas between $T_h=600\;\text{K}$ and $T_l=300\;\text{K}$).](img/ch4_carnot_pv.png){#fig-FigCarnotPV fig-alt="Pressure-volume diagram of a Carnot cycle for 1 mol of a monatomic ideal gas. The cycle runs from A to B along the hot isotherm (stage 1, red), from B to C along an adiabat (stage 2), from C to D along the cold isotherm (stage 3, blue), and from D back to A along a second adiabat (stage 4). The adiabats are steeper than the isotherms." width="70%"}
 
 
 ### Stage 1: Isothermal Expansion $A \rightarrow B$ {#sec-CCstage1}
-![Stage 1 of a Carnot cycle: isothermal expansion. The cylinder is in contact with the hot reservoir, from which the gas absorbs the heat $|Q_h|$.](img/ch5_carnot_stage1.png){#fig-carnotstage1 fig-alt="Cylinder with a movable piston sitting on a red hot reservoir at temperature T h. The gas particles are red, the piston moves up (expansion), and a purple arrow shows heat Q h entering the gas from the reservoir." width="50%"}
+![Stage 1 of a Carnot cycle: isothermal expansion. The cylinder is in contact with the hot reservoir, from which the gas absorbs the heat $|Q_h|$.](img/ch4_carnot_stage1.png){#fig-carnotstage1 fig-alt="Cylinder with a movable piston sitting on a red hot reservoir at temperature T h. The gas particles are red, the piston moves up (expansion), and a purple arrow shows heat Q h entering the gas from the reservoir." width="50%"}
 
 
 Starting the analysis of the cycle from point $A$ in @Fig-FigCarnotPV, (@fig-carnotstage1)(https://en.wikipedia.org/wiki/Carnot_cycle), and have been generated and distributed by Author BlyumJ under CC-BY-SA license.] the first transformation we encounter is an isothermal expansion at $T_h$. Since the transformation is isothermal:
@@ -57,7 +58,7 @@ where we denoted $\left| Q_h \right|$ the absolute value of the heat that gets *
 
 
 ### Stage 2: Adiabatic Expansion $B \rightarrow C$ {#sec-CCstage2}
-![Stage 2 of a Carnot cycle: adiabatic expansion. The cylinder is insulated, no heat is exchanged, and the gas cools down while it keeps expanding.](img/ch5_carnot_stage2.png){#fig-carnotstage2 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves up (expansion) and the gas particles are drawn in purple, cooling down." width="50%"}
+![Stage 2 of a Carnot cycle: adiabatic expansion. The cylinder is insulated, no heat is exchanged, and the gas cools down while it keeps expanding.](img/ch4_carnot_stage2.png){#fig-carnotstage2 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves up (expansion) and the gas particles are drawn in purple, cooling down." width="50%"}
 
 
 The second transformation is an adiabatic expansion between $T_h$ and $T_l$. Since we are at adiabatic conditions:
@@ -74,7 +75,7 @@ $$ {#eq-CCst2b}
 
 
 ### Stage 3: Isothermal Compression $C \rightarrow D$ {#sec-CCstage3}
-![Stage 3 of a Carnot cycle: isothermal compression. The cylinder is in contact with the cold reservoir, to which the gas releases the heat $|Q_l|$.](img/ch5_carnot_stage3.png){#fig-carnotstage3 fig-alt="Cylinder with a movable piston sitting on a blue cold reservoir at temperature T l. The gas particles are blue, the piston moves down (compression), and a purple arrow shows heat Q l leaving the gas towards the reservoir." width="50%"}
+![Stage 3 of a Carnot cycle: isothermal compression. The cylinder is in contact with the cold reservoir, to which the gas releases the heat $|Q_l|$.](img/ch4_carnot_stage3.png){#fig-carnotstage3 fig-alt="Cylinder with a movable piston sitting on a blue cold reservoir at temperature T l. The gas particles are blue, the piston moves down (compression), and a purple arrow shows heat Q l leaving the gas towards the reservoir." width="50%"}
 
 
 The third transformation is an isothermal compression at $T_l$. The formulas are the same as those used for stage 1, but they will result in heat and work with reversed signs (since this is a compression):
@@ -96,7 +97,7 @@ where $\left| Q_l \right|$ is the absolute value of the heat that gets **out of*
 
 
 ### Stage 4: Adiabatic Compression $D \rightarrow A$ {#sec-CCstage4}
-![Stage 4 of a Carnot cycle: adiabatic compression. The cylinder is insulated again, and the compression warms the gas back to its initial temperature.](img/ch5_carnot_stage4.png){#fig-carnotstage4 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves down (compression) and the gas particles, drawn in purple, warm back up." width="50%"}
+![Stage 4 of a Carnot cycle: adiabatic compression. The cylinder is insulated again, and the compression warms the gas back to its initial temperature.](img/ch4_carnot_stage4.png){#fig-carnotstage4 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves down (compression) and the gas particles, drawn in purple, warm back up." width="50%"}
 
 
 The fourth and final transformation is an adiabatic compression that restores the system to point $A$, bringing it from $T_l$ to $T_h$. Similarly to stage 2:
@@ -170,7 +171,7 @@ or, in other words, more heat is extracted from the hot reservoir than it is put
 
 
 ::: {#exm-CarnotEx}
-## A Carnot cycle run in reverse
+## A Carnot Cycle Run in Reverse
 
 Up to this point, we have discussed Carnot cycles working in the hot $\rightarrow$ cold direction ($A$ $\rightarrow$ $B$ $\rightarrow$ $C$ $\rightarrow$ $D$ $\rightarrow$ $A$), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold $\rightarrow$ hot direction ($A$ $\rightarrow$ $D$ $\rightarrow$ $C$ $\rightarrow$ $B$ $\rightarrow$ $A$). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in @sec-carnotcyclesect and @sec-UWQCarnot.
 
@@ -204,18 +205,29 @@ $$ {#eq-effCC3}
 
 which proves that the efficiency of a Carnot cycle is strictly smaller than 1.^[@Eq-effCC3 can be equal to 1 only if $T_l=0 \; \text{K}$ or $T_h=\infty$, two conditions that are both equally impossible.] In other words, no cycle can convert 100% of the heat into work it extracts from a hot reservoir. This finding had remarkable consequences on the entire thermodynamics field and set the foundation for the introduction of entropy. We will use @eq-effCC1 and @eq-effCC3 for this purpose in the next chapter, but we conclude the discussion on Carnot cycles by returning to Lord Kelvin. In 1851 he used this finding to formulate his statement "It is impossible for a self-acting machine, unaided by any external agency, to convey heat from one body to another at a higher temperature. It is impossible, by means of inanimate material agency, to derive mechanical effect from any portion of matter by cooling it below the temperature of the coldest of the surrounding objects."^[Thomson W. [Transactions of the Royal Society of Edinburgh. 1851 XX 261–268, 289–298.](https://www.biodiversitylibrary.org/item/126047#page/295/mode/1up).] This statement conclusively disproved Joule's original theories and demonstrated that there is some fundamental principle to govern the flow of heat beyond the first law of thermodynamics.
 
+### Refrigerators and Heat Pumps
+For a cycle run in reverse, as in @fig-FigCarnotRef, the efficiency is replaced by the *coefficient of performance* (COP), the ratio between what we want and the work that we pay for it. A refrigerator is meant to extract the heat $\left| Q_l \right|$ from the cold reservoir (the inside of the fridge), while a heat pump is meant to deliver the heat $\left| Q_h \right|$ to the hot reservoir (the inside of a house in winter). Following the same steps as for @eq-effCC3, for a Carnot cycle:
+
+$$
+\text{COP}_{\text{refrigerator}} = \frac{\left| Q_l \right|}{\left| W_{TOT} \right|} = \frac{T_l}{T_h-T_l}, \qquad \qquad
+\text{COP}_{\text{heat pump}} = \frac{\left| Q_h \right|}{\left| W_{TOT} \right|} = \frac{T_h}{T_h-T_l}.
+$$ {#eq-COP}
+
+Unlike the efficiency, the COP can be (and usually is) larger than 1, since the work is used only to *move* heat, not to create it. For example, a heat pump that keeps a house at $20\;°\text{C}$ ($293\;\text{K}$) when it is $0\;°\text{C}$ outside ($273\;\text{K}$) has a Carnot COP of $\frac{293}{20} \approx 15$: in the ideal case, every joule of electricity delivers 15 joules of heat to the house. Real heat pumps reach COPs of about 3–4, which still makes them much more efficient than electric heaters, whose COP is 1. The COP decreases as the temperature difference grows, which is why heat pumps work less well in very cold climates.
 
 
-## Chapter Review {#sec-rev5}
+
+## Chapter Review {#sec-rev4}
 ### Key Ideas
 - **The first law is not enough:** it allows processes that never happen, such as a gas spontaneously compressing into half of its container.
 - **The Carnot cycle** is made of two reversible isotherms and two reversible adiabats, between a hot reservoir at $T_h$ and a cold one at $T_l$.
 - **Over a full cycle,** $\Delta U = 0$, so the total work equals minus the total heat exchanged.
 - **Efficiency** is the work produced divided by the heat absorbed from the hot reservoir. For a Carnot cycle, $\varepsilon = 1 - \frac{T_l}{T_h} < 1$.
 - **No engine converts all of its heat into work,** because some heat must always be released to the cold reservoir.
+- **Refrigerators and heat pumps** are reversed cycles, rated by their coefficient of performance: $\frac{T_l}{T_h-T_l}$ and $\frac{T_h}{T_h-T_l}$ for Carnot cycles. The COP is usually larger than 1.
 - **Run in reverse,** a Carnot cycle uses work to move heat from the cold to the hot reservoir: it works as a refrigerator.
 
-### Study Questions {#sec-quest5}
+### Study Questions {#sec-quest4}
 **1. What does the first law of thermodynamics say about a gas that spontaneously compresses back into one side of the Joule apparatus?**
 
 a. It forbids it, since energy would not be conserved.

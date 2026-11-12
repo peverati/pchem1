@@ -45,20 +45,28 @@ book:
     center: "Text and figures: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), except third-party images as credited · Scripts: [MIT](https://github.com/peverati/pchem1/blob/master/scripts/LICENSE)"
   chapters:
     - index.qmd
-    - 01_Basis.qmd
-    - 02_ZerothLaw.qmd
-    - 03_FirstLaw.qmd
-    - 04_Thermochemistry.qmd
-    - 05_ThermodynamicCycles.qmd
-    - 06_SecondLaw.qmd
-    - 07_ThirdLaw.qmd
-    - 08_Potentials.qmd
-    - 09_Gibbs.qmd
-    - 10_ChemicalEquilibrium.qmd
-    - 11_NonIdealGases.qmd
-    - 12_PhaseEquilibrium.qmd
-    - 13_MCPhaseDiagrams.qmd
-    - 14_Kinetics.qmd
+    - part: "The Laws of Thermodynamics"
+      chapters:
+        - 01_Basis.qmd
+        - 02_ZerothLaw.qmd
+        - 03_FirstLaw.qmd
+        - 04_ThermodynamicCycles.qmd
+        - 05_SecondLaw.qmd
+        - 06_ThirdLaw.qmd
+    - part: "Chemical Thermodynamics"
+      chapters:
+        - 07_Thermochemistry.qmd
+        - 08_Potentials.qmd
+        - 09_Gibbs.qmd
+        - 10_ChemicalEquilibrium.qmd
+    - part: "Phase Equilibria and Solutions"
+      chapters:
+        - 11_NonIdealGases.qmd
+        - 12_PhaseEquilibrium.qmd
+        - 13_MCPhaseDiagrams.qmd
+    - part: "Chemical Kinetics"
+      chapters:
+        - 14_Kinetics.qmd
   appendices:
     - A1_Appendix.qmd
 

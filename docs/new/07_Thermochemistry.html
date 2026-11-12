@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Volume 1 — Which Way and How Fast: Thermodynamics, Equilibria, Solutions, and Chemical Kinetics">
+
+<title>7&nbsp; Thermochemistry – The Live Textbook of Physical Chemistry 1</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./08_Potentials.html" rel="next">
+<link href="./06_ThirdLaw.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- MathJax macros used throughout the book (the PDF defines the same macro in _quarto.yml). -->
+<script type="text/javascript">
+window.MathJax = window.MathJax || {};
+window.MathJax.tex = window.MathJax.tex || {};
+window.MathJax.tex.macros = Object.assign(window.MathJax.tex.macros || {}, {
+  standardstate: "{-\\kern-6pt{\\ominus}\\kern-6pt-}"
+});
+</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 1</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem1" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem1.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_Thermochemistry.html">Chemical Thermodynamics</a></li><li class="breadcrumb-item"><a href="./07_Thermochemistry.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thermochemistry</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">The Laws of Thermodynamics</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Basis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Thermodynamics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_FirstLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_ThermodynamicCycles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thermodynamic Cycles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_SecondLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Entropy and the Second Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_ThirdLaw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Chemical Thermodynamics</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Thermochemistry.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Potentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Gibbs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gibbs Energy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_ChemicalEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chemical Equilibrium</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Phase Equilibria and Solutions</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_NonIdealGases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ideal and Non-Ideal Gases</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_PhaseEquilibrium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phase Equilibrium</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_MCPhaseDiagrams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Multi-Component Phase Diagrams and Solutions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Chemical Kinetics</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-rxnenthalpy" id="toc-sec-rxnenthalpy" class="nav-link active" data-scroll-target="#sec-rxnenthalpy"><span class="header-section-number">7.1</span> Reaction Enthalpies</a></li>
+  <li><a href="#sec-calorimetry" id="toc-sec-calorimetry" class="nav-link" data-scroll-target="#sec-calorimetry"><span class="header-section-number">7.2</span> Calorimetry</a></li>
+  <li><a href="#sec-formenthalpy" id="toc-sec-formenthalpy" class="nav-link" data-scroll-target="#sec-formenthalpy"><span class="header-section-number">7.3</span> Standard Enthalpies of Formation</a></li>
+  <li><a href="#sec-hessslaw" id="toc-sec-hessslaw" class="nav-link" data-scroll-target="#sec-hessslaw"><span class="header-section-number">7.4</span> Hess’s Law</a></li>
+  <li><a href="#sec-bondenthalpy" id="toc-sec-bondenthalpy" class="nav-link" data-scroll-target="#sec-bondenthalpy"><span class="header-section-number">7.5</span> Bond Enthalpies</a></li>
+  <li><a href="#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" id="toc-calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="nav-link" data-scroll-target="#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><span class="header-section-number">7.6</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
+  <li><a href="#sec-rxnspont" id="toc-sec-rxnspont" class="nav-link" data-scroll-target="#sec-rxnspont"><span class="header-section-number">7.7</span> Spontaneity of Chemical Reactions</a></li>
+  <li><a href="#sec-rev7" id="toc-sec-rev7" class="nav-link" data-scroll-target="#sec-rev7"><span class="header-section-number">7.8</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">7.8.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.8.2</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/07_Thermochemistry.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_Thermochemistry.html">Chemical Thermodynamics</a></li><li class="breadcrumb-item"><a href="./07_Thermochemistry.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thermochemistry</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Thermochemistry" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Thermochemistry</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>With this chapter, we begin the second part of the book, where we apply the laws of thermodynamics to chemistry. So far, we have studied changes in energy and entropy in the absence of chemical reactions, with one exception: at the end of <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>, we found that the synthesis of ammonia decreases the entropy of the system (<a href="06_ThirdLaw.html#exm-NH3entropy" class="quarto-xref">example&nbsp;<span>6.3</span></a>), and we left open the question of whether the reaction happens at all. To answer it, we need to know the heat that the reaction exchanges with its surroundings. When a chemical reaction takes place, some bonds break and some new ones form. Breaking a bond always requires energy, while forming a bond always releases energy. The balance between the energy spent to break the bonds of the reactants and the energy released when the bonds of the products form determines whether the reaction, overall, absorbs or releases energy.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> For a proper thermodynamic treatment of the system, this extra energy must be included in the net balance. In this chapter, we will learn how to calculate it from tabulated data, and we will then use it to answer our question about ammonia.</p>
+<section id="sec-rxnenthalpy" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sec-rxnenthalpy"><span class="header-section-number">7.1</span> Reaction Enthalpies</h2>
+<p>Since most chemical reactions happen at constant atmospheric pressure (isobaric conditions) in the lab, we can use <a href="03_FirstLaw.html#eq-dh2" class="quarto-xref">eq.&nbsp;<span>3.13</span></a> to replace the inexact differential of the heat with the exact differential of the state function called enthalpy. The advantage of this transformation is that it allows us to study the heat associated with chemical reactions at constant pressure independently of their path. Using the same notation that we introduced for reaction entropies in <a href="06_ThirdLaw.html#sec-firstreaction" class="quarto-xref"><span>section 6.5</span></a>, the heat associated with the reaction (rxn) is defined as:</p>
+<p><span id="eq-DHrxn1"><span class="math display">\[
+\Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
+\tag{7.1}\]</span></span></p>
+<p>For example, if we take a simple reaction of the form:</p>
+<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
+<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
+<p><span id="eq-DHrxn2"><span class="math display">\[
+Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
+\tag{7.2}\]</span></span></p>
+<p>Using the chemistry sign convention, <a href="01_Basis.html#def-chemistryconv" class="quarto-xref">Definition&nbsp;<span>1.1</span></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
+<div id="def-exoendo" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7.1</strong></span> <span class="math inline">\(\;\)</span></p>
+<ul>
+<li><span class="math inline">\(\Delta_{\text{rxn}} H &gt; 0 \Rightarrow\)</span> <em>Endothermic reaction</em> (heat is gained by the system).</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
+</ul>
+</div>
+<p>If we expand the sample reaction to account for its stoichiometry, as in the general reaction of <a href="06_ThirdLaw.html#eq-genreaction" class="quarto-xref">eq.&nbsp;<span>6.24</span></a>, <a href="#eq-DHrxn2" class="quarto-xref">eq.&nbsp;<span>7.2</span></a> can be rewritten as:</p>
+<p><span id="eq-DHrxn3"><span class="math display">\[
+Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
+\tag{7.3}\]</span></span></p>
+<p>while for the most general case we can write it:</p>
+<p><span id="eq-DHrxn4"><span class="math display">\[
+\Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
+\tag{7.4}\]</span></span></p>
+<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric number of species <span class="math inline">\(i\)</span>, positive for products and negative for reactants, as in <a href="06_ThirdLaw.html#def-nui" class="quarto-xref">definition&nbsp;<span>6.3</span></a>. <a href="#eq-DHrxn4" class="quarto-xref">Eq.&nbsp;<span>7.4</span></a> has exactly the same form as the one that we used for reaction entropies, <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>.</p>
+</section>
+<section id="sec-calorimetry" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sec-calorimetry"><span class="header-section-number">7.2</span> Calorimetry</h2>
+<p>Reaction enthalpies are measured with a <em>calorimeter</em>, an insulated container in which the reaction takes place. Since the calorimeter does not exchange heat with the rest of the lab, the heat released or absorbed by the reaction stays inside it and changes its temperature. If the calorimeter (including everything inside it) has a total heat capacity <span class="math inline">\(C_{\text{cal}}\)</span>, a temperature change <span class="math inline">\(\Delta T\)</span> corresponds to the heat of reaction:</p>
+<p><span id="eq-calorimetry"><span class="math display">\[
+Q_{\text{rxn}} = -C_{\text{cal}}\,\Delta T,
+\tag{7.5}\]</span></span></p>
+<p>where the negative sign follows the chemistry sign convention: an exothermic reaction (<span class="math inline">\(Q_{\text{rxn}}&lt;0\)</span>) warms the calorimeter (<span class="math inline">\(\Delta T&gt;0\)</span>). The heat capacity of the calorimeter is determined beforehand by calibration, either with an electrical heater that supplies a known amount of energy, or with a reaction whose heat is accurately known, such as the combustion of benzoic acid.</p>
+<p>There are two main kinds of calorimeters, and they measure two different state functions:</p>
+<ul>
+<li><strong>Constant-pressure calorimeters</strong> are open to the atmosphere. The simplest example is the “coffee-cup” calorimeter of general chemistry labs, used for reactions in solution. At constant pressure, <a href="03_FirstLaw.html#eq-dh2" class="quarto-xref">eq.&nbsp;<span>3.13</span></a> tells us that the heat equals the enthalpy change, <span class="math inline">\(Q_P = \Delta_{\text{rxn}}H\)</span>.</li>
+<li><strong>Constant-volume (bomb) calorimeters</strong> are sealed steel containers, called <em>bombs</em>, immersed in a water bath. They are used for combustions, where the sample burns in an excess of oxygen under pressure. At constant volume, no work is done, and the heat equals the energy change, <span class="math inline">\(Q_V = \Delta_{\text{rxn}}U\)</span>, as in <a href="03_FirstLaw.html#eq-dUqv" class="quarto-xref">eq.&nbsp;<span>3.7</span></a>.</li>
+</ul>
+<p>Since tables report enthalpies, the energies measured in bomb calorimeters must be converted. Using the definition of enthalpy, <a href="03_FirstLaw.html#eq-enthalpydef" class="quarto-xref">eq.&nbsp;<span>3.9</span></a>:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H = \Delta_{\text{rxn}} U + \Delta(PV).
+\]</span></p>
+<p>The volumes of liquids and solids are so small that their contribution to <span class="math inline">\(\Delta(PV)\)</span> is negligible. For the gases, we can use the ideal gas law, <span class="math inline">\(PV = nRT\)</span>, and at constant temperature <span class="math inline">\(\Delta(PV) = \Delta n_{\text{gas}}RT\)</span>, which gives:</p>
+<p><span id="eq-DHDU"><span class="math display">\[
+\Delta_{\text{rxn}} H = \Delta_{\text{rxn}} U + \Delta n_{\text{gas}} RT,
+\tag{7.6}\]</span></span></p>
+<p>where <span class="math inline">\(\Delta n_{\text{gas}}\)</span> is the number of moles of gaseous products minus the number of moles of gaseous reactants, per mole of reaction. If the number of moles of gas does not change, or if no gases are involved, <span class="math inline">\(\Delta_{\text{rxn}} H \approx \Delta_{\text{rxn}} U\)</span>.</p>
+<div id="exm-bombmethane" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.1 (Combustion of methane in a bomb calorimeter)</strong></span> A sample of <span class="math inline">\(0.0200\;\text{mol}\)</span> of methane is burned in a bomb calorimeter with <span class="math inline">\(C_{\text{cal}} = 10.00\;\text{kJ/K}\)</span>, and the temperature of the calorimeter increases by <span class="math inline">\(1.772\;\text{K}\)</span>. Calculate <span class="math inline">\(\Delta_{\text{rxn}}U\)</span> and <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> at <span class="math inline">\(298\;\text{K}\)</span> for the reaction:</p>
+<p><span class="math display">\[
+\mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)}.
+\]</span></p>
+<p><em>Solution:</em> Using <a href="#eq-calorimetry" class="quarto-xref">eq.&nbsp;<span>7.5</span></a>, the heat released by the sample is:</p>
+<p><span class="math display">\[
+Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
+\]</span></p>
+<p>Since the bomb has a constant volume, this heat is the energy change of the reaction, and per mole of methane:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} U = \frac{Q_V}{n} = \frac{-17.72\;\text{kJ}}{0.0200\;\text{mol}} = -886\;\text{kJ/mol}.
+\]</span></p>
+<p>In the reaction, 3 moles of gas (1 of methane and 2 of oxygen) become 1 mole of gas (carbon dioxide), while water is liquid, so <span class="math inline">\(\Delta n_{\text{gas}} = 1 - 3 = -2\)</span>. Using <a href="#eq-DHDU" class="quarto-xref">eq.&nbsp;<span>7.6</span></a>:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H = -886 + (-2)(8.314 \times 10^{-3})(298) = -886 - 5 = -891\;\text{kJ/mol}.
+\]</span></p>
+<p>The difference between <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> and <span class="math inline">\(\Delta_{\text{rxn}}U\)</span> is only about 0.5%. The reaction enthalpy is more negative than the energy because the gas contracts, and at constant pressure the atmosphere does work on the system as it shrinks. We will obtain the same value of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> from tabulated data in <a href="#exm-HessLawEx" class="quarto-xref">example&nbsp;<span>7.2</span></a>.</p>
+</div>
+<p>Experiments like this one, repeated for many substances, are the source of the tabulated enthalpies of formation that we introduce next.</p>
+</section>
+<section id="sec-formenthalpy" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="sec-formenthalpy"><span class="header-section-number">7.3</span> Standard Enthalpies of Formation</h2>
+<p>In principle, we could use <a href="#eq-DHrxn3" class="quarto-xref">eq.&nbsp;<span>7.3</span></a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist. This is the key difference with the entropy, for which the third law provides a natural zero (<a href="06_ThirdLaw.html#sec-thirdlawsect" class="quarto-xref"><span>section 6.4</span></a>), so that we could use the absolute values <span class="math inline">\(S_i^\standardstate\)</span> directly in <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>. For the enthalpy, we must instead choose a zero, and use enthalpies relative to this reference. The reference is defined as the constituent elements in their standard state, and the enthalpies of 1 mol of substance relative to this reference are called <strong>standard enthalpies of formation</strong>.</p>
+<div id="def-stdenthapies" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7.2</strong></span> The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^\standardstate\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
+</div>
+<p>The standard states are the ones that we defined in <a href="06_ThirdLaw.html#def-standardstate" class="quarto-xref">definition&nbsp;<span>6.2</span></a>, at the standard pressure <span class="math inline">\(P^{\standardstate} = 1 \; \mathrm{bar}\)</span>. As for the entropies, there is no standard temperature, but standard enthalpies of formation are usually reported at room temperature, <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span>. For the elements, the reference is the form in which each element is most stable at standard pressure (for example, for hydrogen, carbon, and oxygen the reference forms are <span class="math inline">\(\mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \text{and }\mathrm{O}_{2(g)}\)</span>, respectively). Since forming an element from itself requires no change at all, the standard enthalpy of formation of an element in its reference form is zero.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>For example, the standard enthalpies of formation of some common compounds at <span class="math inline">\(T = 298.15 \; \mathrm{K}\)</span> are calculated from the following reactions:</p>
+<p><span id="eq-someDfH"><span class="math display">\[
+\begin{aligned}
+  \mathrm{C}_{(s,\text{graphite})}+\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CO}_{2(g)}}^\standardstate = -394 \; \text{kJ/mol} \\
+   \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^\standardstate = -75 \; \text{kJ/mol} \\
+   \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^\standardstate = -286 \; \text{kJ/mol}
+\end{aligned}
+\tag{7.7}\]</span></span></p>
+<p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in <a href="A1_Appendix.html" class="quarto-xref"><span>Appendix A</span></a>.</p>
+</section>
+<section id="sec-hessslaw" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="sec-hessslaw"><span class="header-section-number">7.4</span> Hess’s Law</h2>
+<p>The calculation of a standard reaction enthalpy can be performed using the following cycle:</p>
+<p><span id="eq-Hesscycle"><span class="math display">\[
+\begin{aligned}
+\text{reactants} &amp; \quad \xrightarrow{\Delta_{\text{rxn}} H^\standardstate} \quad \text{products} \\
+\scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^\standardstate} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^\standardstate} \\
+\text{"elements in } &amp; \text{their standard reference state"}
+\end{aligned}
+\tag{7.8}\]</span></span></p>
+<p>This process is summarized by the simple formula:</p>
+<p><span id="eq-Hess1"><span class="math display">\[
+\Delta_{\text{rxn}} H^\standardstate = \Delta_{\mathrm{f}} H_{\text{products}}^\standardstate - \Delta_{\mathrm{f}} H_{\text{reactants}}^\standardstate.
+\tag{7.9}\]</span></span></p>
+<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in <a href="#eq-Hesscycle" class="quarto-xref">eq.&nbsp;<span>7.8</span></a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. <a href="#eq-Hess1" class="quarto-xref">Eq.&nbsp;<span>7.9</span></a> can be generalized using the same technique used to derive <a href="#eq-DHrxn4" class="quarto-xref">eq.&nbsp;<span>7.4</span></a>, resulting in:</p>
+<p><span id="eq-Hess"><span class="math display">\[
+\Delta_{\text{rxn}} H^\standardstate = \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate,
+\tag{7.10}\]</span></span></p>
+<p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
+<div id="exm-HessLawEx" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.2 (Combustion enthalpy of methane from Hess’s law)</strong></span> Calculate the standard enthalpy of combustion at 298 K of 1 mol of methane, using the data in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>.</p>
+<p><em>Solution:</em> The reaction that is under consideration is: <span class="math display">\[
+\mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\text{rxn}} H^\standardstate = ?
+\]</span></p>
+<p>Using Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.10</span></a>, the enthalpy of combustion of methane is:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H^\standardstate =  \Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^\standardstate_{\mathrm{O}_{2(g)}}}_{=0}
+\]</span></p>
+<p>whose values are reported in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>. Notice that the formation enthalpy of <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H^\standardstate =  \overbrace{-394}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}}}  = -891 \; \mathrm{kJ/mol}.
+\]</span></p>
+<p>where the negative sign indicates that the reaction is exothermic (see <a href="#def-exoendo" class="quarto-xref">definition&nbsp;<span>7.1</span></a>), as we should expect. This is the same value that we obtained from the bomb calorimeter in <a href="#exm-bombmethane" class="quarto-xref">example&nbsp;<span>7.1</span></a>. The cycle that we used to solve this exercise can be summarized as:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathrm{CH}_{4(g)} + &amp; 2 \mathrm{O}_{2(g)} \quad \xrightarrow{\Delta_{\text{rxn}} H^\standardstate} \quad \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \\
+  \scriptstyle{-\Delta_{\text{f}} H_{\mathrm{CH}_{4(g)},\mathrm{O}_{2(g)}}^\standardstate} &amp; \searrow \qquad \qquad \qquad \qquad \qquad \nearrow \; \scriptstyle{\Delta_{\text{f}} H_{\text{CO}_{2(g)},\mathrm{H}_{2}\mathrm{O}_{(l)}}^\standardstate}\\
+  &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
+\end{aligned}
+\]</span></p>
+<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporizes the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(g)}} =  -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Delta_{\text{vap}} H^\standardstate_{\mathrm{H_2O}} &amp; = \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(g)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}} \\
+&amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
+\end{aligned}
+\]</span></p>
+<p>which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^\standardstate_{\mathrm{H_2O}}\)</span>, the same value that we used in <a href="06_ThirdLaw.html#exm-troutonex" class="quarto-xref">example&nbsp;<span>6.1</span></a>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).</p>
+</div>
+<p>The same cycle can be drawn as an enthalpy diagram, <a href="#fig-hessmethane" class="quarto-xref">figure&nbsp;<span>7.1</span></a>, where each species sits at its enthalpy relative to the elements. Since the enthalpy is a state function, the two paths from the reactants to the products, directly or through the elements, must give the same enthalpy change.</p>
+<div id="fig-hessmethane" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Enthalpy level diagram. A gray level at 0 kilojoules per mole for the elements, carbon, hydrogen, and oxygen. A blue level slightly below, at minus 75, for methane plus two oxygen molecules, reached by a short blue arrow labeled formation enthalpy of methane. A red level far below, at minus 966, for carbon dioxide plus two liquid water molecules, reached from the elements by a long red arrow. A purple arrow from the methane level to the products level is labeled reaction enthalpy equals minus 966 minus minus 75, equals minus 891 kilojoules per mole.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hessmethane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ch7_hess_methane.png" class="img-fluid figure-img" style="width:80.0%" alt="Enthalpy level diagram. A gray level at 0 kilojoules per mole for the elements, carbon, hydrogen, and oxygen. A blue level slightly below, at minus 75, for methane plus two oxygen molecules, reached by a short blue arrow labeled formation enthalpy of methane. A red level far below, at minus 966, for carbon dioxide plus two liquid water molecules, reached from the elements by a long red arrow. A purple arrow from the methane level to the products level is labeled reaction enthalpy equals minus 966 minus minus 75, equals minus 891 kilojoules per mole.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hessmethane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: Enthalpy Diagram of the Hess Cycle for the Combustion of Methane at 298 K, with the Data of <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>. The Reaction Enthalpy (Purple) Is the Difference Between the Formation Enthalpies of the Products (Red) and of the Reactants (Blue).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-bondenthalpy" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sec-bondenthalpy"><span class="header-section-number">7.5</span> Bond Enthalpies</h2>
+<p>When the formation enthalpies of a compound are not available, we can still estimate a reaction enthalpy from the bonds that break and form, as we described at the beginning of this chapter. The <em>bond enthalpy</em> is the enthalpy needed to break 1 mol of a given bond in the gas phase. Since the same bond has slightly different strengths in different molecules, tables report average values, such as those in <a href="#tbl-bondenthalpies" class="quarto-xref">table&nbsp;<span>7.1</span></a>.</p>
+<div id="tbl-bondenthalpies" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bondenthalpies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7.1: Average Bond Enthalpies.
+</figcaption>
+<div aria-describedby="tbl-bondenthalpies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Bond</th>
+<th style="text-align: center;">Bond enthalpy [kJ/mol]</th>
+<th style="text-align: center;">Bond</th>
+<th style="text-align: center;">Bond enthalpy [kJ/mol]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">H–H</td>
+<td style="text-align: center;">436</td>
+<td style="text-align: center;">N–H</td>
+<td style="text-align: center;">391</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C–H</td>
+<td style="text-align: center;">413</td>
+<td style="text-align: center;">N≡N</td>
+<td style="text-align: center;">945</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">O–H</td>
+<td style="text-align: center;">463</td>
+<td style="text-align: center;">O=O</td>
+<td style="text-align: center;">498</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C–C</td>
+<td style="text-align: center;">348</td>
+<td style="text-align: center;">C=O (in CO<sub>2</sub>)</td>
+<td style="text-align: center;">799</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Breaking a bond always requires energy, and forming a bond always releases it, so:</p>
+<p><span id="eq-bondenthalpy"><span class="math display">\[
+\Delta_{\text{rxn}} H \approx \sum_{\text{broken}} \text{(bond enthalpies)} - \sum_{\text{formed}} \text{(bond enthalpies)}.
+\tag{7.11}\]</span></span></p>
+<p>Notice that the order is the opposite of Hess’s law: the bonds of the <em>reactants</em> come first, with a positive sign. For example, in the synthesis of ammonia we break one N≡N bond and three H–H bonds, and we form six N–H bonds:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H \approx \left[945 + 3(436)\right] - 6(391) = 2253 - 2346 = -93\;\text{kJ/mol},
+\]</span></p>
+<p>very close to the value of <span class="math inline">\(-91.8\;\text{kJ/mol}\)</span> obtained from the formation enthalpies. The agreement is not always this good, since bond enthalpies are averages, and <a href="#eq-bondenthalpy" class="quarto-xref">eq.&nbsp;<span>7.11</span></a> is valid only when all reactants and products are gases. Formation enthalpies, when available, should always be preferred.</p>
+</section>
+<section id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><span class="header-section-number">7.6</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
+<p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T'\)</span> can be calculated from the values at 298 K using <a href="02_ZerothLaw.html#eq-Cpdef" class="quarto-xref">eq.&nbsp;<span>2.4</span></a> and <a href="03_FirstLaw.html#eq-dh2" class="quarto-xref">eq.&nbsp;<span>3.13</span></a>:</p>
+<p><span id="eq-DrxnHneq298"><span class="math display">\[
+\begin{aligned}
+dH = C_P dT \rightarrow &amp; \int_{H_{298}^\standardstate}^{H_{T'}^\standardstate} dH =  \int_{298}^{T'} C_P dT \\
+            &amp; H_{T'}^\standardstate - H_{298}^\standardstate = \int_{298}^{T'} C_P dT \\
+            &amp; H_{T'}^\standardstate = H_{298}^\standardstate + \int_{298}^{T'} C_P dT,
+\end{aligned}
+\tag{7.12}\]</span></span></p>
+<p>which, in conjunction with Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.10</span></a>, results in:</p>
+<p><span id="eq-DrxnHneq298f"><span class="math display">\[
+\Delta_{\text{rxn}} H_{T'}^\standardstate = \Delta_{\text{rxn}} H_{298}^\standardstate + \int_{298}^{T'} \Delta C_P dT,
+\tag{7.13}\]</span></span></p>
+<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>. <a href="#eq-DrxnHneq298f" class="quarto-xref">Eq.&nbsp;<span>7.13</span></a> is known as <strong>Kirchhoff’s law</strong>, after the German physicist Gustav Robert Kirchhoff (1824–1887).</p>
+<div id="exm-DHtdiff298" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.3 (Reaction enthalpy at 398 K)</strong></span> Calculate <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{298}\)</span> is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
+<p><span class="math display">\[
+\mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
+\]</span></p>
+<p><em>Solution:</em> Using <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>7.13</span></a> we obtain:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H^\standardstate_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^\standardstate_{298}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,
+\]</span></p>
+<p>which, assuming that the heat capacities do not depend on the temperature, becomes:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Delta_{\text{rxn}} H^\standardstate_{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
+\end{aligned}
+\]</span></p>
+<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>7.13</span></a>, confirming that the heat capacities are mostly independent of temperature.</p>
+</div>
+</section>
+<section id="sec-rxnspont" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="sec-rxnspont"><span class="header-section-number">7.7</span> Spontaneity of Chemical Reactions</h2>
+<p>We can now go back to the question that we left open at the end of <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>: does the synthesis of ammonia happen? To decide whether a process is spontaneous, we need the entropy of the universe, <a href="06_ThirdLaw.html#eq-dsuniv" class="quarto-xref">eq.&nbsp;<span>6.1</span></a>. For a reaction at constant temperature and pressure, both of its pieces come from tabulated data:</p>
+<ul>
+<li>The entropy of the system is the reaction entropy, which we calculate from the standard entropies with <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>.</li>
+<li>The entropy of the surroundings comes from the heat that the reaction exchanges with them, <a href="06_ThirdLaw.html#eq-dssurr" class="quarto-xref">eq.&nbsp;<span>6.14</span></a>. At constant pressure, this heat is the reaction enthalpy, <span class="math inline">\(Q_{\text{sys}} = \Delta_{\text{rxn}}H\)</span>, and therefore:</li>
+</ul>
+<p><span id="eq-dssurrrxn"><span class="math display">\[
+\Delta S^{\text{surr}} = -\frac{\Delta_{\text{rxn}} H}{T}.
+\tag{7.14}\]</span></span></p>
+<p>An exothermic reaction releases heat and increases the entropy of the surroundings, while an endothermic reaction absorbs heat and decreases it.</p>
+<div id="exm-NH3universe" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.4 (Is the synthesis of ammonia spontaneous?)</strong></span> Using the result of <a href="06_ThirdLaw.html#exm-NH3entropy" class="quarto-xref">example&nbsp;<span>6.3</span></a>, <span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = -198.1\;\frac{\text{J}}{\text{mol K}}\)</span>, and knowing that <span class="math inline">\(\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{NH}_{3(g)}} = -45.9\;\text{kJ/mol}\)</span>, decide whether the synthesis of ammonia at standard conditions and <span class="math inline">\(298\;\text{K}\)</span> is spontaneous:</p>
+<p><span class="math display">\[
+\mathrm{N}_{2(g)} + 3\mathrm{H}_{2(g)} \rightarrow 2\mathrm{NH}_{3(g)}.
+\]</span></p>
+<p><em>Solution:</em> Using Hess’s law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.10</span></a>, and remembering that the formation enthalpies of <span class="math inline">\(\mathrm{N}_{2(g)}\)</span> and <span class="math inline">\(\mathrm{H}_{2(g)}\)</span> are zero, since they are elements in their reference form:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} H^\standardstate = 2 \Delta_{\mathrm{f}} H^\standardstate_{\mathrm{NH}_{3(g)}} - \underbrace{\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{N}_{2(g)}}}_{=0} - 3\underbrace{\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{H}_{2(g)}}}_{=0} = 2(-45.9) = -91.8\;\text{kJ/mol}.
+\]</span></p>
+<p>The reaction is exothermic, and the heat that it releases increases the entropy of the surroundings, <a href="#eq-dssurrrxn" class="quarto-xref">eq.&nbsp;<span>7.14</span></a>:</p>
+<p><span class="math display">\[
+\Delta S^{\text{surr}} = -\frac{\Delta_{\text{rxn}} H^\standardstate}{T} = -\frac{-91.8 \times 10^3}{298} = +308.1\;\frac{\text{J}}{\text{mol K}}.
+\]</span></p>
+<p>The entropy of the universe is therefore:</p>
+<p><span class="math display">\[
+\Delta S^{\text{universe}} = \Delta_{\text{rxn}} S^\standardstate + \Delta S^{\text{surr}} = -198.1 + 308.1 = +110.0\;\frac{\text{J}}{\text{mol K}},
+\]</span></p>
+<p>and the reaction is spontaneous. Just as for the freezing of supercooled water in <a href="06_ThirdLaw.html#exm-supercooledEx" class="quarto-xref">example&nbsp;<span>6.2</span></a>, the system loses entropy, but the heat that it releases increases the entropy of the surroundings by more.</p>
+</div>
+<p>This result should not make us think that a bottle of nitrogen and hydrogen turns into ammonia on its own. At room temperature, the reaction is so slow that nothing measurable happens, even over years. In industry, ammonia is produced with the Haber–Bosch process, which uses a catalyst and high temperatures to make the reaction fast enough. Thermodynamics tells us which way a reaction goes; how fast it goes is the subject of chemical kinetics, which we will study in <a href="14_Kinetics.html" class="quarto-xref"><span>chapter 14</span></a>.</p>
+<p>The calculation in <a href="#exm-NH3universe" class="quarto-xref">example&nbsp;<span>7.4</span></a> works, but it requires two separate pieces, one for the system and one for the surroundings. We can combine them in a single expression by multiplying the entropy of the universe by <span class="math inline">\(-T\)</span>:</p>
+<p><span id="eq-TdSuniv"><span class="math display">\[
+-T\Delta S^{\text{universe}} = -T\Delta_{\text{rxn}} S + \Delta_{\text{rxn}} H = \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.
+\tag{7.15}\]</span></span></p>
+<p>Since <span class="math inline">\(T\)</span> is positive, a reaction is spontaneous (<span class="math inline">\(\Delta S^{\text{universe}}&gt;0\)</span>) when the right-hand side of <a href="#eq-TdSuniv" class="quarto-xref">eq.&nbsp;<span>7.15</span></a> is negative. For the synthesis of ammonia, it is <span class="math inline">\(-91.8 - 298 \times (-0.1981) = -32.8\;\text{kJ/mol}\)</span>. Notice that the right-hand side contains only properties of the system, and no reference to the surroundings. This combination of enthalpy and entropy is so useful that it deserves its own name. In the next chapter, we will see that it is the change of a new state function, the Gibbs energy, and we will discover the general family of functions to which it belongs, called the thermodynamic potentials.</p>
+</section>
+<section id="sec-rev7" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="sec-rev7"><span class="header-section-number">7.8</span> Chapter Review</h2>
+<section id="key-ideas" class="level3" data-number="7.8.1">
+<h3 data-number="7.8.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">7.8.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Reaction enthalpy</strong> is the heat exchanged by a reaction at constant pressure: negative for exothermic reactions, positive for endothermic ones.</li>
+<li><strong>Reaction enthalpies</strong> are calculated with the same stoichiometric numbers, <span class="math inline">\(\nu_i\)</span>, that we used for reaction entropies: negative for reactants and positive for products.</li>
+<li><strong>Calorimetry:</strong> <span class="math inline">\(Q_{\text{rxn}} = -C_{\text{cal}}\Delta T\)</span>. A constant-pressure calorimeter measures <span class="math inline">\(\Delta_{\text{rxn}}H\)</span>, a bomb calorimeter measures <span class="math inline">\(\Delta_{\text{rxn}}U\)</span>, and the two are related by <span class="math inline">\(\Delta_{\text{rxn}}H = \Delta_{\text{rxn}}U + \Delta n_{\text{gas}}RT\)</span>.</li>
+<li><strong>Standard enthalpies of formation,</strong> <span class="math inline">\(\Delta_{\text{f}}H^\standardstate\)</span>, refer to the standard state at <span class="math inline">\(P^\standardstate = 1\;\text{bar}\)</span>, and they are zero for elements in their most stable form. Unlike entropies, enthalpies have no natural zero, so only these relative values can be tabulated.</li>
+<li><strong>Hess’s law:</strong> since <span class="math inline">\(H\)</span> is a state function, <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate = \sum_i \nu_i \Delta_{\text{f}}H_i^\standardstate\)</span>, whatever the path of the reaction.</li>
+<li><strong>Bond enthalpies</strong> give quick estimates for gas-phase reactions: bonds broken minus bonds formed.</li>
+<li><strong>Other temperatures (Kirchhoff’s law):</strong> <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{T'} = \Delta_{\text{rxn}}H^\standardstate_{298} + \int_{298}^{T'} \Delta C_P\,dT\)</span>, and the correction is usually small.</li>
+<li><strong>Spontaneity of a reaction:</strong> <span class="math inline">\(\Delta S^{\text{universe}} = \Delta_{\text{rxn}}S - \frac{\Delta_{\text{rxn}}H}{T}\)</span>. A reaction that lowers the entropy of the system, such as the synthesis of ammonia, can still be spontaneous if it releases enough heat. The combination <span class="math inline">\(\Delta_{\text{rxn}}H - T\Delta_{\text{rxn}}S = -T\Delta S^{\text{universe}}\)</span> depends only on the system, and it is negative for spontaneous reactions.</li>
+<li><strong>Which way, not how fast:</strong> thermodynamics tells us whether a reaction is spontaneous, but not how fast it goes.</li>
+</ul>
+</section>
+<section id="sec-quest7" class="level3" data-number="7.8.2">
+<h3 data-number="7.8.2" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.8.2</span> Study Questions</h3>
+<p><strong>1. What characterizes an endothermic reaction?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\Delta_{\text{rxn}}H &lt; 0\)</span>, and heat is released by the system.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H = 0\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H &gt; 0\)</span>, and heat is gained by the system.</li>
+<li>The reaction is always spontaneous.</li>
+<li>The reaction happens at constant volume.</li>
+</ol>
+<hr>
+<p><strong>2. What is the sign convention for the stoichiometric coefficients <span class="math inline">\(\nu_i\)</span>?</strong></p>
+<ol type="a">
+<li>Positive for products and negative for reactants.</li>
+<li>Positive for reactants and negative for products.</li>
+<li>Always positive.</li>
+<li>Positive for gases and negative for liquids.</li>
+<li>Positive for elements and negative for compounds.</li>
+</ol>
+<hr>
+<p><strong>3. What is the standard enthalpy of formation of a compound?</strong></p>
+<ol type="a">
+<li>The enthalpy of the compound at 0 K.</li>
+<li>The enthalpy change when 1 mol of the compound is decomposed into atoms.</li>
+<li>The heat released when the compound burns in oxygen.</li>
+<li>The absolute enthalpy of the compound at 298 K.</li>
+<li>The enthalpy change when 1 mol of the compound is formed from its elements, with all substances in their standard states.</li>
+</ol>
+<hr>
+<p><strong>4. What is the standard pressure used in thermodynamic tables?</strong></p>
+<ol type="a">
+<li>0 bar.</li>
+<li>1 bar.</li>
+<li>1 atm exactly.</li>
+<li>10 bar.</li>
+<li>It depends on the substance.</li>
+</ol>
+<hr>
+<p><strong>5. What is the standard enthalpy of formation of <span class="math inline">\(\mathrm{O}_{2(g)}\)</span>?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(-286\;\text{kJ/mol}\)</span>.</li>
+<li><span class="math inline">\(-394\;\text{kJ/mol}\)</span>.</li>
+<li><span class="math inline">\(+498\;\text{kJ/mol}\)</span>.</li>
+<li><span class="math inline">\(0\;\text{kJ/mol}\)</span>, since it is an element in its standard state.</li>
+<li>It cannot be measured.</li>
+</ol>
+<hr>
+<p><strong>6. Which formula expresses Hess’s law?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\Delta_{\text{rxn}}H^{\standardstate} = \sum_i \nu_i \Delta_{\text{f}}H_i^{\standardstate}\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H^{\standardstate} = \sum_i \Delta_{\text{f}}H_i^{\standardstate}\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H^{\standardstate} = \prod_i \nu_i \Delta_{\text{f}}H_i^{\standardstate}\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H^{\standardstate} = Q_V\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H^{\standardstate} = \sum_i \nu_i S_i^{\standardstate}\)</span>.</li>
+</ol>
+<hr>
+<p><strong>7. Why can Hess’s law be used to calculate reaction enthalpies?</strong></p>
+<ol type="a">
+<li>Because all reactions are exothermic.</li>
+<li>Because heat is a state function.</li>
+<li>Because the enthalpy is a state function, so its change does not depend on the path.</li>
+<li>Because all reactions happen at standard conditions.</li>
+<li>Because enthalpies of formation are always negative.</li>
+</ol>
+<hr>
+<p><strong>8. What does the difference between the enthalpies of formation of <span class="math inline">\(\mathrm{H}_2\mathrm{O}_{(g)}\)</span> and <span class="math inline">\(\mathrm{H}_2\mathrm{O}_{(l)}\)</span> represent?</strong></p>
+<ol type="a">
+<li>The enthalpy of formation of water.</li>
+<li>The heat capacity of water.</li>
+<li>The enthalpy of combustion of hydrogen.</li>
+<li>Zero, since they are the same substance.</li>
+<li>The enthalpy (latent heat) of vaporization of water.</li>
+</ol>
+<hr>
+<p><strong>9. How can a reaction enthalpy at a temperature <span class="math inline">\(T'\)</span> be calculated from its value at 298 K?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298} \cdot \frac{T'}{298}\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298} + \int_{298}^{T'} \Delta C_P\,dT\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298}\)</span> always.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H_{T'} = \Delta_{\text{rxn}}H_{298} - T'\Delta S\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}H_{T'} = \int_{298}^{T'} C_P\,dT\)</span>.</li>
+</ol>
+<hr>
+<p><strong>10. The synthesis of ammonia has <span class="math inline">\(\Delta_{\text{rxn}}S^\standardstate &lt; 0\)</span>. Why is it spontaneous at 298 K?</strong></p>
+<ol type="a">
+<li>Because the entropy of the system does not matter for spontaneity.</li>
+<li>Because the reaction is endothermic.</li>
+<li>Because every reaction between gases is spontaneous.</li>
+<li>Because the heat that it releases increases the entropy of the surroundings by more than the system loses.</li>
+<li>Because the reaction is fast at room temperature.</li>
+</ol>
+<hr>
+<p><strong>11. A bomb calorimeter measures the heat of a reaction at constant volume. Which quantity does it give?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\Delta_{\text{rxn}}H\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}U\)</span>, which can be converted to <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> with <span class="math inline">\(\Delta_{\text{rxn}}H = \Delta_{\text{rxn}}U + \Delta n_{\text{gas}}RT\)</span>.</li>
+<li><span class="math inline">\(\Delta_{\text{rxn}}S\)</span>.</li>
+<li>The work done by the reaction.</li>
+<li>The heat capacity of the products.</li>
+</ol>
+<hr>
+<p><strong>12. How is a reaction enthalpy estimated from bond enthalpies?</strong></p>
+<ol type="a">
+<li>Bonds formed minus bonds broken.</li>
+<li>Bonds broken plus bonds formed.</li>
+<li>Bonds broken minus bonds formed.</li>
+<li>The sum of the bond enthalpies of the products.</li>
+<li>It cannot be estimated from bond enthalpies.</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.c, 2.a, 3.e, 4.b, 5.d, 6.a, 7.c, 8.e, 9.b, 10.d, 11.b, 12.c</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>A common misconception is that energy is “stored” in chemical bonds and released when they break. It is the opposite: a bond is a more stable (lower-energy) arrangement than the separated atoms, so breaking it always costs energy. Fuels release energy when they burn because the bonds that form in the products (for example, in <span class="math inline">\(\mathrm{CO}_2\)</span> and <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span>) are, overall, stronger than the ones broken in the reactants.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>There are some exceptions, such as phosphorus, for which the most stable form at 1 bar is black phosphorus, but white phosphorus is chosen as the standard reference state for zero enthalpy of formation. For the purposes of this course, however, we can safely ignore them.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+    // section titles with math (e.g., "Temperature Dependence of ΔG") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
+  }).catch(function () {});
+});
+</script>
+<script>
+// Wide screens keep the top bar visible (see quarto.css): measure its height for the sidebar offset.
+(function () {
+  function setHeight() {
+    var h = document.querySelector("#quarto-header");
+    if (h) document.documentElement.style.setProperty("--header-height", h.offsetHeight + "px");
+  }
+  setHeight();
+  window.addEventListener("resize", setHeight);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./06_ThirdLaw.html" class="pagination-link" aria-label="Calculation of Entropy and the Third Law of Thermodynamics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Calculation of Entropy and the Third Law of Thermodynamics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./08_Potentials.html" class="pagination-link" aria-label="Thermodynamic Potentials">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Thermodynamic Potentials</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>, except third-party images as credited · Scripts: <a href="https://github.com/peverati/pchem1/blob/master/scripts/LICENSE">MIT</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/07_Thermochemistry.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
