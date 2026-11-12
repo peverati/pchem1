@@ -95,7 +95,7 @@ $$
 K_P = K_y\cdot \left(\frac{P}{P^\standardstate}\right)^{\Delta \nu} \qquad \qquad K_P = K_C \left( \frac{[i]^\standardstate RT}{P^\standardstate} \right)^{\Delta \nu},
 $$ {#eq-kxkcdef3}
 
-with $\Delta \nu =\sum_i \nu_i$. 
+with $\Delta \nu =\sum_i \nu_i$.
 
 Using the general equilibrium constant, $K_{\text{eq}}$, we can also rewrite the fundamental equation on $\Delta_{\text{rxn}} G^\standardstate$ that we derived in @eq-chemeqdg0 to be applicable at most conditions, as:
 
@@ -104,6 +104,67 @@ $$
 $$ {#eq-chemeqdgG}
 
 and since $\Delta_{\text{rxn}} G^\standardstate$ depends on $T,P$ and $\{n_i\}$, it is useful to explore how $K_{\text{eq}}$ depends on those variables as well.
+
+## Extent of Reaction and the Minimum of the Gibbs Energy {#sec-extent}
+We said that a reaction stops when $\Delta_{\text{rxn}} G = 0$. But what exactly is $\Delta_{\text{rxn}} G$ while a reaction is still going? It is not the difference between two finished states, as the $\Delta$ symbol might suggest. To see what it really is, we need a variable that tells us how far a reaction has gone.
+
+Let's go back to our prototypical reaction, @eq-reaction4. Every time the reaction proceeds, the amounts of all species change together, in the ratios set by the stoichiometric coefficients: if $a$ moles of $\mathrm{A}$ disappear, $c$ moles of $\mathrm{C}$ must appear. We can capture all these changes with a single variable, the **extent of reaction**, $\xi$ (the Greek letter "xi"), defined by:
+
+$$
+dn_i = \nu_i \, d\xi \qquad \text{or, after integration,} \qquad n_i = n_{i,0} + \nu_i \, \xi,
+$$ {#eq-extentdef}
+
+where $n_{i,0}$ is the amount of species $i$ at the start, and $\nu_i$ is its stoichiometric number (negative for reactants, positive for products, as in @def-nui). The extent of reaction is measured in moles, and it is the same number for every species: $\xi=0$ at the start, and $\xi = 1\;\text{mol}$ when the reaction has gone "once" as written, with $a$ moles of $\mathrm{A}$ and $b$ moles of $\mathrm{B}$ turned into $c$ moles of $\mathrm{C}$ and $d$ moles of $\mathrm{D}$.
+
+At constant $T$ and $P$, the change in Gibbs energy of the reacting mixture is given by the last line of @eq-dhagchem1 with $dT=dP=0$. Replacing $dn_i$ with @eq-extentdef, we get:
+
+$$
+dG = \sum_i \mu_i \, dn_i = \left( \sum_i \nu_i \mu_i \right) d\xi
+\quad \longrightarrow \quad
+\left( \frac{\partial G}{\partial \xi} \right)_{T,P} = \sum_i \nu_i \mu_i = \Delta_{\text{rxn}} G,
+$$ {#eq-dGdxi}
+
+where in the last step we recognized the same combination of chemical potentials that appears in @eq-chemeq2. This is the meaning of $\Delta_{\text{rxn}} G$: it is the **slope** of the Gibbs energy of the mixture as a function of the extent of reaction. Its value changes as the reaction proceeds, because the chemical potentials depend on the composition.
+
+![Gibbs energy of the mixture as a function of the extent of reaction for $\mathrm{N_2O_4}_{(g)} \rightleftarrows 2\,\mathrm{NO_2}_{(g)}$ at 298 K and 1 bar, starting from 1 mol of $\mathrm{N_2O_4}$, computed from the standard Gibbs energies of formation in the appendix. The dashed line is the Gibbs energy if reactants and products were kept separate. Mixing lowers the Gibbs energy and creates a minimum, at the equilibrium extent of reaction.](img/ch10_G_vs_xi.png){#fig-Gxi fig-alt="Plot of the Gibbs energy of the reacting mixture, relative to pure N2O4, against the extent of reaction from 0 to 1 mole. A gray dashed straight line rises from 0 at pure N2O4 to about plus 2.8 kilojoules at pure NO2, labeled no mixing. The blue curve starts at 0, drops steeply, reaches a minimum of about minus 1.4 kilojoules at an extent of reaction of about 0.27 mole, marked in purple as equilibrium where the reaction Gibbs energy is zero, and then rises to plus 2.8 kilojoules at pure NO2. Left of the minimum the curve is labeled reaction Gibbs energy less than zero, forward spontaneous; right of the minimum it is labeled greater than zero, reverse spontaneous." width="80%"}
+
+Let's look at what @fig-Gxi tells us about the dissociation of dinitrogen tetroxide into nitrogen dioxide:
+
+1. **The slope decides the direction.** To the left of the minimum, the slope is negative, $\Delta_{\text{rxn}} G<0$, and the Gibbs energy decreases if the reaction moves forward. To the right of the minimum, the slope is positive, and the reaction runs spontaneously in reverse. Either way, the mixture slides downhill toward the bottom of the curve.
+2. **Equilibrium is the bottom of the curve.** At the minimum, the slope is zero, $\Delta_{\text{rxn}} G = 0$, and the reaction has no reason to go in either direction. This is the chemical equilibrium of @eq-chemeq6, and its position, $\xi_{\text{eq}}$, gives the equilibrium composition.
+3. **Mixing is what makes a minimum.** If reactants and products stayed separate, the Gibbs energy would follow the dashed straight line, and the reaction would go either all the way or not at all, depending on the sign of $\Delta_{\text{rxn}} G^\standardstate$. Because the gases mix, the Gibbs energy drops below this line by the Gibbs energy of mixing, which is always negative (@eq-dgconstn9). This is why some products always form, even when $\Delta_{\text{rxn}} G^\standardstate>0$, as in this case, and why most reactions stop at a mixture instead of going to completion.
+4. **$\Delta_{\text{rxn}} G^\standardstate$ is the slope of the dashed line,** that is, the Gibbs energy difference between the pure products and the pure reactants, each at standard pressure. It decides *where* the minimum falls, through $K_{\text{eq}}$, but it is not the quantity that drives the reaction at a given moment: that is $\Delta_{\text{rxn}} G$.
+
+::: {#exm-N2O4}
+## Equilibrium composition of dinitrogen tetroxide
+One mole of $\mathrm{N_2O_4}_{(g)}$ is kept at $298\;\text{K}$ and a total pressure of $1\;\text{bar}$, where it partially dissociates into $\mathrm{NO_2}_{(g)}$. Using $\Delta_{\text{f}} G^\standardstate = 99.8\;\text{kJ/mol}$ for $\mathrm{N_2O_4}_{(g)}$ and $51.3\;\text{kJ/mol}$ for $\mathrm{NO_2}_{(g)}$, find the extent of reaction and the composition at equilibrium.
+
+*Solution:* The standard Gibbs energy of reaction is:
+
+$$
+\Delta_{\text{rxn}} G^\standardstate = 2(51.3) - 99.8 = 2.8\;\text{kJ/mol},
+$$
+
+and from @eq-chemeqdg0:
+
+$$
+K_P = \exp\left(-\frac{\Delta_{\text{rxn}} G^\standardstate}{RT}\right) = \exp\left(-\frac{2\,800}{8.314 \times 298}\right) = 0.323.
+$$
+
+Using @eq-extentdef with $n_{\mathrm{N_2O_4},0}=1\;\text{mol}$ and $n_{\mathrm{NO_2},0}=0$, at a generic extent of reaction we have $n_{\mathrm{N_2O_4}} = 1-\xi$, $n_{\mathrm{NO_2}} = 2\xi$, and a total of $1+\xi$ moles of gas. With a total pressure of $1\;\text{bar}$, the partial pressures are equal to the mole fractions, and the equilibrium constant becomes:
+
+$$
+K_P = \frac{P_{\mathrm{NO_2}}^2}{P_{\mathrm{N_2O_4}}} = \frac{\left(\frac{2\xi}{1+\xi}\right)^2}{\frac{1-\xi}{1+\xi}} = \frac{4\xi^2}{1-\xi^2}.
+$$
+
+Solving for $\xi$ gives:
+
+$$
+\xi_{\text{eq}} = \sqrt{\frac{K_P}{4+K_P}} = \sqrt{\frac{0.323}{4.323}} = 0.273\;\text{mol}.
+$$
+
+At equilibrium, we have $0.727\;\text{mol}$ of $\mathrm{N_2O_4}$ and $0.546\;\text{mol}$ of $\mathrm{NO_2}$, with mole fractions $y_{\mathrm{N_2O_4}} = 0.571$ and $y_{\mathrm{NO_2}}=0.429$. This is exactly the position of the minimum in @fig-Gxi. Even though $\Delta_{\text{rxn}} G^\standardstate$ is positive, more than a quarter of the $\mathrm{N_2O_4}$ dissociates, thanks to the Gibbs energy of mixing.
+:::
 
 ## Temperature Dependence of $K_{\text{eq}}$
 
@@ -127,8 +188,8 @@ $$ {#eq-kptemp3}
 
 which gives the dependence of $\ln K_{\text{eq}}$ on $T$ that we were looking for. @Eq-kptemp3 is also called **van 't Hoff equation**,^[named after Jacobus Henricus "Henry" van 't Hoff Jr. (1852–1911).] and it is the mathematical expression of Le Chatelier's principle. The simplest interpretation is as follows:
 
-- For an exothermic reaction ($\Delta H^\standardstate < 0$): $K_{\text{eq}}$ will decrease as the temperature increases. 
-- For an endothermic reaction ($\Delta H^\standardstate > 0$): $K_{\text{eq}}$ will increase as the temperature increases. 
+- For an exothermic reaction ($\Delta H^\standardstate < 0$): $K_{\text{eq}}$ will decrease as the temperature increases.
+- For an endothermic reaction ($\Delta H^\standardstate > 0$): $K_{\text{eq}}$ will increase as the temperature increases.
 
 If we integrate the van 't Hoff equation between two arbitrary points at constant $P$, and assuming constant $\Delta H^\standardstate$, we obtain the following:
 
@@ -151,7 +212,7 @@ which is the equation that produces the so-called **van 't Hoff plots**, from wh
 
 ## Pressure and Composition Dependence of $K_{\text{eq}}$
 
-While $K_P$ is independent of both total pressure and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants. 
+While $K_P$ is independent of both total pressure and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants.
 
 $$
 \left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i} \right)_{T,P} =0.
@@ -159,7 +220,9 @@ $$ {#eq-kppni}
 
 For example, it is easy to look at @eq-kxkcdef3 and determine that $K_y$ usually depends on $P$.^[$K_y$  becomes independent of $P$ in the particular case where $\Delta \nu=0$, i.e., for reactions where the total number of moles of reactants is the same as the total number of moles of the products.] Using Dalton's Law, @eq-daltonlaw, we can also notice that the equilibrium partial pressures of the reactants and products in a gas-phase reaction can be expressed in terms of their equilibrium mole fractions $y_i$ and the total pressure $P$. As such, we can use $K_y$ to demonstrate that the equilibrium mole fractions will change when $P$ changes,^[Keep in mind that $K_P$ will *not* change.] as it is demonstrated by the following exercise.
 
-::: {#exr-kpkx}
+::: {#exm-kpkx}
+## Dissociation of chlorine under pressure
+
 Calculate the mole fraction change for the dissociation of $\mathrm{Cl}_{2(g)}$ when the pressure is increased from $P^\standardstate$ to $P_f=2.5 \;\text{bar}$ at constant $T=2\,298\;\mathrm{K}$, knowing that $\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}$ and $\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}$, and remembering that both of these values are tabulated at $T=298\;\text{K}$.
 
 *Solution:* Let's consider the reaction:
@@ -167,7 +230,7 @@ $$
 \mathrm{Cl}_{2(g)} \rightleftarrows 2 \mathrm{Cl}_{(g)}
 $$
 
-We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at $T=2\,298\;\mathrm{K}$ from the data at $T=298\;\mathrm{K}$. In the second one, we will calculate the change in mole fraction when the pressure is increased from $P^\standardstate=1\;\text{bar}$ to $P_f=2.5 \;\text{bar}$. 
+We can divide the exercise into two parts. In the first one, we will deal with calculating the equilibrium constant at $T=2\,298\;\mathrm{K}$ from the data at $T=298\;\mathrm{K}$. In the second one, we will calculate the change in mole fraction when the pressure is increased from $P^\standardstate=1\;\text{bar}$ to $P_f=2.5 \;\text{bar}$.
 
 - Let's begin the first part by calculating $\Delta_{\text{rxn}} G^\standardstate$ and $\Delta_{\text{rxn}} H^\standardstate$ from:
 $$
@@ -244,9 +307,16 @@ To summarize, when we increase the pressure from $1\;\text{bar}$ to $2.5\;\text{
 
 The dependence of $K_{\text{eq}}$ on $P$ highlighted above is another mathematical expression of Le Chatelier's principle, on this occasion, for changes in pressure. The interpretation for a reaction happening in the gas phase is as follows:
 
-- If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total number of moles of gas (the equilibrium in @exr-kpkx shifts toward the reactant).
+- If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total number of moles of gas (the equilibrium in @exm-kpkx shifts toward the reactant).
 
 ## Chapter Review {#sec-rev10}
+### Key Ideas
+- **Reaction Gibbs energy:** $\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^\standardstate + RT\ln Q$, which changes as the reaction proceeds.
+- **Extent of reaction:** $\Delta_{\text{rxn}}G = \left(\frac{\partial G}{\partial \xi}\right)_{T,P}$ is the slope of the Gibbs energy of the mixture; equilibrium is the minimum, where $\Delta_{\text{rxn}}G = 0$. Mixing is what creates the minimum.
+- **Equilibrium constant:** $\Delta_{\text{rxn}}G^\standardstate = -RT\ln K_{\text{eq}}$, with $K_{\text{eq}} = \prod_i a_{i,\text{eq}}^{\nu_i}$; pure liquids and solids have $a=1$.
+- **Temperature:** the van 't Hoff equation, $\frac{d\ln K_{\text{eq}}}{dT} = \frac{\Delta_{\text{rxn}}H^\standardstate}{RT^2}$, says that $K$ increases with $T$ for endothermic reactions and decreases for exothermic ones.
+- **Pressure:** $K_P$ does not depend on the pressure, but the composition does, through $K_P = K_y \left(P/P^\standardstate\right)^{\Delta\nu}$. This is Le Chatelier's principle in mathematical form.
+
 ### Study Questions {#sec-quest10}
 **1. How is the Gibbs energy of a reaction related to the reaction quotient?**
 

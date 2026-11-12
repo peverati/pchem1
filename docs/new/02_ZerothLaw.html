@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
-<title>2&nbsp; Zeroth Law of Thermodynamics – The Live Textbook of Physical Chemistry 1</title>
+<title>2&nbsp; Temperature, Heat, and Work – The Live Textbook of Physical Chemistry 1</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -354,7 +354,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_ZerothLaw.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_ZerothLaw.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -488,20 +488,22 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-thermodynamics" id="toc-what-is-thermodynamics" class="nav-link active" data-scroll-target="#what-is-thermodynamics"><span class="header-section-number">2.1</span> What is Thermodynamics?</a></li>
+  <li><a href="#what-is-thermodynamics" id="toc-what-is-thermodynamics" class="nav-link active" data-scroll-target="#what-is-thermodynamics"><span class="header-section-number">2.1</span> What Is Thermodynamics?</a></li>
   <li><a href="#the-zeroth-law-of-thermodynamics" id="toc-the-zeroth-law-of-thermodynamics" class="nav-link" data-scroll-target="#the-zeroth-law-of-thermodynamics"><span class="header-section-number">2.2</span> The Zeroth Law of Thermodynamics</a></li>
-  <li><a href="#sec-heatint" id="toc-sec-heatint" class="nav-link" data-scroll-target="#sec-heatint"><span class="header-section-number">2.3</span> Calculation of Heat</a>
+  <li><a href="#sec-quasistatic" id="toc-sec-quasistatic" class="nav-link" data-scroll-target="#sec-quasistatic"><span class="header-section-number">2.3</span> Equilibrium, Stationary States, and Quasi-Static Processes</a></li>
+  <li><a href="#sec-heatint" id="toc-sec-heatint" class="nav-link" data-scroll-target="#sec-heatint"><span class="header-section-number">2.4</span> Calculation of Heat</a>
   <ul class="collapse">
-  <li><a href="#processes-at-constant-volume-isochoric" id="toc-processes-at-constant-volume-isochoric" class="nav-link" data-scroll-target="#processes-at-constant-volume-isochoric"><span class="header-section-number">2.3.1</span> Processes at constant volume (isochoric)</a></li>
-  <li><a href="#sec-heatconstp" id="toc-sec-heatconstp" class="nav-link" data-scroll-target="#sec-heatconstp"><span class="header-section-number">2.3.2</span> Processes at constant pressure (isobaric)</a></li>
+  <li><a href="#processes-at-constant-volume-isochoric" id="toc-processes-at-constant-volume-isochoric" class="nav-link" data-scroll-target="#processes-at-constant-volume-isochoric"><span class="header-section-number">2.4.1</span> Processes at Constant Volume (Isochoric)</a></li>
+  <li><a href="#sec-heatconstp" id="toc-sec-heatconstp" class="nav-link" data-scroll-target="#sec-heatconstp"><span class="header-section-number">2.4.2</span> Processes at Constant Pressure (Isobaric)</a></li>
   </ul></li>
-  <li><a href="#sec-workint" id="toc-sec-workint" class="nav-link" data-scroll-target="#sec-workint"><span class="header-section-number">2.4</span> Calculation of Work</a>
+  <li><a href="#sec-workint" id="toc-sec-workint" class="nav-link" data-scroll-target="#sec-workint"><span class="header-section-number">2.5</span> Calculation of Work</a>
   <ul class="collapse">
-  <li><a href="#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" id="toc-w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="nav-link" data-scroll-target="#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</a></li>
+  <li><a href="#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" id="toc-w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="nav-link" data-scroll-target="#w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><span class="header-section-number">2.5.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in Processes at Constant Temperature (Isothermal)</a></li>
   </ul></li>
-  <li><a href="#sec-rev2" id="toc-sec-rev2" class="nav-link" data-scroll-target="#sec-rev2"><span class="header-section-number">2.5</span> Chapter Review</a>
+  <li><a href="#sec-rev2" id="toc-sec-rev2" class="nav-link" data-scroll-target="#sec-rev2"><span class="header-section-number">2.6</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest2" id="toc-sec-quest2" class="nav-link" data-scroll-target="#sec-quest2"><span class="header-section-number">2.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">2.6.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest2" id="toc-sec-quest2" class="nav-link" data-scroll-target="#sec-quest2"><span class="header-section-number">2.6.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/02_ZerothLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -512,7 +514,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-ZerothLaw" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></h1>
+<h1 class="title"><span id="sec-ZerothLaw" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></h1>
 </div>
 
 
@@ -531,7 +533,7 @@ window.Quarto = {
 
 <p>In <a href="01_Basis.html" class="quarto-xref"><span>chapter 1</span></a>, we introduced the tools that we need to study thermodynamics: a bit of calculus, the definition of a system, and the distinction between state and path functions. In this chapter, we will define the two ways in which a system can exchange energy with its surroundings, heat and work, and we will learn how to calculate them. Before we do that, however, we need a solid definition of temperature, which comes from the zeroth law of thermodynamics.</p>
 <section id="what-is-thermodynamics" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="what-is-thermodynamics"><span class="header-section-number">2.1</span> What is Thermodynamics?</h2>
+<h2 data-number="2.1" class="anchored" data-anchor-id="what-is-thermodynamics"><span class="header-section-number">2.1</span> What Is Thermodynamics?</h2>
 <p>Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. These are the two ways in which energy can be transferred between a system and its surroundings:</p>
 <ul>
 <li><strong>Work</strong> is exchanged when the system changes one of its external, macroscopic parameters against a force. The typical example in chemistry is a gas that changes its volume by pushing a piston against an external pressure.</li>
@@ -548,11 +550,38 @@ window.Quarto = {
 </div>
 <p>Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at <span class="math inline">\(P=1\;\mathrm{bar}\)</span>. Its temperature, <span class="math inline">\(T_{H_2O}\)</span>, is about 373 K. Let’s now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature <span class="math inline">\(T_W = T_{H_2O}\)</span>. Similarly, the metal coin will also be in thermal equilibrium with the water, hence <span class="math inline">\(T_M = T_{H_2O}\)</span>. According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same <span class="math inline">\(T_W = T_M = 373\;\mathrm{K}\)</span>, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will feel just warm, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.</p>
 </section>
-<section id="sec-heatint" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="sec-heatint"><span class="header-section-number">2.3</span> Calculation of Heat</h2>
+<section id="sec-quasistatic" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-quasistatic"><span class="header-section-number">2.3</span> Equilibrium, Stationary States, and Quasi-Static Processes</h2>
+<p>In the rest of this chapter, we will compare processes that happen “fast” with processes that happen “slowly.” These words are vague on their own: is one second fast or slow? A second is an eternity for a molecule, and an instant for a geologist. To use them with precision, we need to compare the speed of a process with something that belongs to the system itself. That something is how quickly the system can return to equilibrium. Let’s start by defining exactly what we mean by equilibrium.</p>
+<div id="def-equilibriumstate" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.2</strong></span> <em>Equilibrium state:</em> A state in which the macroscopic variables of the system (such as <span class="math inline">\(T\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and the composition) do not change with time, <em>and</em> there are no net flows of energy or matter, neither inside the system nor between the system and its surroundings.</p>
+</div>
+<p>The second part of the definition is important. A system can have variables that do not change with time, and still not be at equilibrium. Consider a metal rod with one end on a hot plate and the other end in a bucket of ice. After a while, the temperature at each point of the rod stops changing: it is high near the plate and low near the ice. Heat, however, flows continuously through the rod, from the plate to the ice. A state like this is called a <strong>stationary state</strong> (or <em>steady state</em>):</p>
+<div id="def-stationarystate" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.3</strong></span> <em>Stationary state:</em> A state in which the macroscopic variables of the system do not change with time, but which is maintained by a continuous flow of energy or matter through the system.</p>
+</div>
+<p>The rod in a stationary state does not have <em>a</em> temperature: it has a different temperature at every point. Only at equilibrium are the intensive variables, such as <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, uniform throughout the system, so that a single value describes the whole system. This is why the thermodynamics in this book deals with equilibrium states: they are the only states that we can describe with a handful of variables, and the only ones that we can represent as points in a diagram such as the <span class="math inline">\(PV\)</span> plots in this chapter. Stationary states are just as important in nature (a living cell is a stationary state, not an equilibrium one), but they are the subject of non-equilibrium thermodynamics, which is beyond the scope of this course.</p>
+<p>When we disturb a system at equilibrium, for example by suddenly moving a piston, the system goes through a series of states that are not at equilibrium: for a short while, the gas near the piston has a different pressure than the gas far from it, and pressure waves bounce around the container. Eventually, these differences die out, and the system reaches a new equilibrium state. The time this takes has a name:</p>
+<div id="def-relaxationtime" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.4</strong></span> <em>Relaxation time:</em> The time, <span class="math inline">\(\tau\)</span>, that a system needs to return to equilibrium after a disturbance.</p>
+</div>
+<p>The relaxation time depends on the system <em>and</em> on the variable that is relaxing. Pressure differences in a gas travel at the speed of sound, so in a container that is a few centimeters wide, the pressure becomes uniform in a fraction of a millisecond. Temperature differences, instead, are smoothed out by heat conduction, which is much slower: a cold glass of water in a warm room takes tens of minutes to reach the temperature of the room. Some chemical reactions have relaxation times longer than the age of the universe: diamond is not at equilibrium with graphite, but nobody has ever seen a diamond turn into graphite at room temperature.</p>
+<p>We now have the yardstick that we were looking for. A process is <strong>fast</strong> if the conditions of the system change on a time scale that is shorter than, or comparable to, its relaxation time, so that the system has no time to adjust and is driven away from equilibrium. A process is <strong>slow</strong> if the conditions change on a time scale much longer than the relaxation time, so that the system has always enough time to re-equilibrate. Notice that the same process can be slow for one variable and fast for another. Pushing a piston in one second is slow for the pressure of the gas, which equalizes in less than a millisecond, but it is fast for the exchange of heat through the walls of the container, which takes minutes. In the limit of a process that is slow compared to all the relevant relaxation times, we have:</p>
+<div id="def-quasistatic" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.5</strong></span> <em>Quasi-static process:</em> A process that happens slowly enough, compared to the relaxation time of the system, that the system passes through a continuous sequence of equilibrium states.</p>
+</div>
+<p>A few things to notice about this definition:</p>
+<ol type="1">
+<li><strong>A quasi-static process can be drawn as a line.</strong> Since every intermediate state is an equilibrium state, it has well-defined values of <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(T\)</span>, and the whole process is a continuous line in a <span class="math inline">\(PV\)</span> diagram. A process that is not quasi-static, instead, has well-defined initial and final states only: in between, the gas does not have a single pressure, and the process cannot be drawn as a line. We will see an example of this in the one-step expansion below.</li>
+<li><strong>A quasi-static process is an idealization.</strong> Any real process takes a finite time, so it is never perfectly quasi-static. However, many real processes are slow enough to be treated as quasi-static to an excellent approximation, and, as we will see in this chapter, we can approach the quasi-static limit as closely as we want by splitting a process into more and more smaller steps.</li>
+<li><strong>Quasi-static does not mean “at equilibrium with the surroundings.”</strong> The system is at equilibrium <em>internally</em> at every moment, but it may still exchange energy with the surroundings. In <a href="03_FirstLaw.html" class="quarto-xref"><span>chapter 3</span></a>, we will see that when the system is also balanced with its surroundings at every moment, the process becomes <em>reversible</em>.</li>
+</ol>
+</section>
+<section id="sec-heatint" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-heatint"><span class="header-section-number">2.4</span> Calculation of Heat</h2>
 <p>Heat (<span class="math inline">\(Q\)</span>) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because <em>heat is a path function</em>. As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in <span class="math inline">\(\frac{\text{J}}{\text{mol K}}\)</span>. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.</p>
-<section id="processes-at-constant-volume-isochoric" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="processes-at-constant-volume-isochoric"><span class="header-section-number">2.3.1</span> Processes at constant volume (isochoric)</h3>
+<section id="processes-at-constant-volume-isochoric" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="processes-at-constant-volume-isochoric"><span class="header-section-number">2.4.1</span> Processes at Constant Volume (Isochoric)</h3>
 <p>The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recalling from general chemistry, the molar heat capacity at constant volume has the following formal definition:</p>
 <blockquote class="blockquote">
 <p>The molar heat capacity at constant volume is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.</p>
@@ -570,8 +599,8 @@ C_V = \frac{đ Q_V}{n dT} \Rightarrow đ Q_V = n C_V dT.
 Q_V \cong n C_V \Delta T.
 \tag{2.3}\]</span></span></p>
 </section>
-<section id="sec-heatconstp" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-heatconstp"><span class="header-section-number">2.3.2</span> Processes at constant pressure (isobaric)</h3>
+<section id="sec-heatconstp" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="sec-heatconstp"><span class="header-section-number">2.4.2</span> Processes at Constant Pressure (Isobaric)</h3>
 <p>Similarly to the previous case, the heat capacity at constant pressure measures the ability of a substance to absorb heat at constant pressure. Recalling again from general chemistry:</p>
 <blockquote class="blockquote">
 <p>The molar heat capacity at constant pressure is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.</p>
@@ -586,8 +615,8 @@ Q_P \cong n C_P \Delta T.
 \tag{2.5}\]</span></span></p>
 </section>
 </section>
-<section id="sec-workint" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="sec-workint"><span class="header-section-number">2.4</span> Calculation of Work</h2>
+<section id="sec-workint" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-workint"><span class="header-section-number">2.5</span> Calculation of Work</h2>
 <p>In thermodynamics, work (<span class="math inline">\(W\)</span>) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because <em>work is a path function</em>. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.</p>
 <div id="fig-Fig2c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Beaker closed by a movable piston. The gas inside pushes on the piston with pressure P from below, while the external pressure pushes down from above. The piston rises from an initial position i to a final position f, a total height h obtained by summing the small displacements dh.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -616,7 +645,7 @@ P_{\text{ext}} = F/A.
 <p><span id="eq-Wdef"><span class="math display">\[
 đ W = - P_{\text{ext}}dV.
 \tag{2.9}\]</span></span></p>
-<p>The external pressure is not necessarily the same as the pressure of the gas, <span class="math inline">\(P\)</span>. In a fast expansion, the gas inside the beaker can be at a much higher pressure than the surroundings. However, if the expansion happens slowly enough that the piston is always balanced, <span class="math inline">\(P_{\text{ext}}=P\)</span> at every moment, and the work can be written using the pressure of the gas:</p>
+<p>The external pressure is not necessarily the same as the pressure of the gas, <span class="math inline">\(P\)</span>. In an expansion that is fast compared to the relaxation time of the gas, the gas inside the beaker does not even have a single pressure, and the part near the piston can be at a very different pressure than the surroundings. However, if the expansion is quasi-static (<a href="#def-quasistatic" class="quarto-xref">definition&nbsp;<span>2.5</span></a>) and the piston is always balanced, <span class="math inline">\(P_{\text{ext}}=P\)</span> at every moment, and the work can be written using the pressure of the gas:</p>
 <p><span id="eq-Wdefrev"><span class="math display">\[
 đ W = - PdV \qquad \text{(when } P_{\text{ext}}=P\text{)}.
 \tag{2.10}\]</span></span></p>
@@ -633,8 +662,8 @@ P_{\text{ext}} = F/A.
 \int đ W = W = - \int_{i}^{f} P_{\text{ext}}dV,
 \tag{2.13}\]</span></span></p>
 <p>where the integral on the left-hand side is taken along the path,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> while the integral on the right-hand side can be taken between the initial and final states, since <span class="math inline">\(V\)</span> is a state function. How do we solve the integral in <a href="#eq-Wint" class="quarto-xref">eq.&nbsp;<span>2.13</span></a>? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.</p>
-<section id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><span class="header-section-number">2.4.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in processes at constant temperature (isothermal)</h3>
+<section id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="w_textmax-and-w_textmin-in-processes-at-constant-temperature-isothermal"><span class="header-section-number">2.5.1</span> <span class="math inline">\(| W_{\text{max}} |\)</span> and <span class="math inline">\(| W_{\text{min}} |\)</span> in Processes at Constant Temperature (Isothermal)</h3>
 <p>At constant temperature, the piston in <a href="#fig-Fig2c3" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> moves along the isotherm in <a href="#fig-pvIso" class="quarto-xref">figure&nbsp;<span>2.2</span></a>, obtained for 1 mol of an ideal gas at <span class="math inline">\(T=298\)</span> K.</p>
 <div id="fig-pvIso" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure-volume plot of an ideal-gas isotherm at 298 K, a curve that falls as volume increases. The initial state i is at small volume and high pressure, and the final state f is at 1 L and low pressure, with dotted lines to their pressures and volumes.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -646,7 +675,7 @@ Figure&nbsp;2.2: Isotherm of 1 mol of an ideal gas at 298 K, with the initial (i
 </figcaption>
 </figure>
 </div>
-<p>An expansion of the gas will happen between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example <span class="math inline">\(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)</span>), and solve the integral as:</p>
+<p>An expansion of the gas will happen between <span class="math inline">\(P_i\)</span> and <span class="math inline">\(P_f\)</span>. If the expansion happens in one step, for example by suddenly releasing the piston against the external atmospheric pressure, the process is not quasi-static: only the initial and final states are equilibrium states, and the gas in between has no single pressure. The external pressure, however, is well defined and constant, and we can use it (for example <span class="math inline">\(P_f=P_{\text{ext}} =1\;\mathrm{bar}\)</span>), and solve the integral as:</p>
 <p><span id="eq-Wint3"><span class="math display">\[
 W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i).
 \tag{2.14}\]</span></span></p>
@@ -725,14 +754,25 @@ Figure&nbsp;2.7: Maximum work for the isothermal expansion: the whole area under
 <p><span id="eq-WmaxV"><span class="math display">\[
 \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
 \tag{2.20}\]</span></span></p>
-<p>This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an <span class="math inline">\(\infty\)</span>-step process.</p>
+<p>This example demonstrates why work is a path function. If we perform the expansion in a single step, which is not quasi-static, the system performs an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens in an <span class="math inline">\(\infty\)</span>-step process. Each step of the <span class="math inline">\(\infty\)</span>-step process is infinitesimally small, so the gas is always at equilibrium: the <span class="math inline">\(\infty\)</span>-step process is quasi-static, and it is the only one that follows the isotherm as a line.</p>
 <p>The same considerations that we made up to this point for expansion processes apply in reverse to compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite number of steps will be an upper bound to the minimum amount of work required to compress the system.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> <span class="math inline">\(\left| W_{\text{min}} \right|\)</span> for compressions is calculated as the area underneath the <span class="math inline">\(PV\)</span> curve, exactly as <span class="math inline">\(\left| W_{\text{max}} \right|\)</span> for expansions in <a href="#eq-WintsolvedV2" class="quarto-xref">eq.&nbsp;<span>2.19</span></a>.</p>
 </section>
 </section>
-<section id="sec-rev2" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="sec-rev2"><span class="header-section-number">2.5</span> Chapter Review</h2>
-<section id="sec-quest2" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="sec-quest2"><span class="header-section-number">2.5.1</span> Study Questions</h3>
+<section id="sec-rev2" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-rev2"><span class="header-section-number">2.6</span> Chapter Review</h2>
+<section id="key-ideas" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">2.6.1</span> Key Ideas</h3>
+<ul>
+<li><strong>The zeroth law:</strong> two systems in thermal equilibrium with a third one are in thermal equilibrium with each other. This is what makes thermometers possible.</li>
+<li><strong>Heat</strong> is exchanged because of a temperature difference. At constant volume or pressure, it is calculated from the heat capacities: <span class="math inline">\(Q_V = n\int C_V\,dT\)</span> and <span class="math inline">\(Q_P = n\int C_P\,dT\)</span>.</li>
+<li><strong>Work</strong> of expansion is <span class="math inline">\(W=-\int P_{\text{ext}}\,dV\)</span>, negative for an expansion (the system does work) and positive for a compression.</li>
+<li><strong>Equilibrium vs.&nbsp;stationary states:</strong> at equilibrium, the variables do not change <em>and</em> nothing flows; a stationary state has constant variables maintained by a steady flow. “Fast” and “slow” are measured against the relaxation time, <span class="math inline">\(\tau\)</span>, and a <strong>quasi-static</strong> process is slow enough to pass only through equilibrium states.</li>
+<li><strong>Work depends on the path.</strong> Between the same two states, a one-step, a two-step, and an infinitely-many-step expansion give different amounts of work.</li>
+<li><strong>Maximum work:</strong> for an isothermal ideal gas expansion, the most work is extracted in infinitely many steps, <span class="math inline">\(|W_{\max}| = nRT\ln\frac{V_f}{V_i}\)</span>, and the least work is needed for a compression performed in the same way.</li>
+</ul>
+</section>
+<section id="sec-quest2" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="sec-quest2"><span class="header-section-number">2.6.2</span> Study Questions</h3>
 <p><strong>1. What does the zeroth law of thermodynamics state?</strong></p>
 <ol type="a">
 <li>If two systems are each in thermal equilibrium with a third one, then they are in thermal equilibrium with each other.</li>
@@ -818,7 +858,7 @@ Figure&nbsp;2.7: Maximum work for the isothermal expansion: the whole area under
 <ol type="a">
 <li>As fast as possible, in one step.</li>
 <li>In two steps.</li>
-<li>Infinitely slowly, in infinitely many steps.</li>
+<li>Quasi-statically, in infinitely many steps.</li>
 <li>At constant volume.</li>
 <li>Against zero external pressure.</li>
 </ol>

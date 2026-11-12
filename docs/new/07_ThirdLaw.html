@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>7&nbsp; Calculation of Entropy and the Third Law of Thermodynamics – The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -490,17 +490,18 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-dssys" id="toc-sec-dssys" class="nav-link active" data-scroll-target="#sec-dssys"><span class="header-section-number">7.1</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></a>
   <ul class="collapse">
-  <li><a href="#entropy-in-isothermal-processes" id="toc-entropy-in-isothermal-processes" class="nav-link" data-scroll-target="#entropy-in-isothermal-processes"><span class="header-section-number">7.1.1</span> Entropy in isothermal processes</a></li>
-  <li><a href="#entropy-in-adiabatic-processes" id="toc-entropy-in-adiabatic-processes" class="nav-link" data-scroll-target="#entropy-in-adiabatic-processes"><span class="header-section-number">7.1.2</span> Entropy in adiabatic processes</a></li>
-  <li><a href="#entropy-in-isochoric-processes" id="toc-entropy-in-isochoric-processes" class="nav-link" data-scroll-target="#entropy-in-isochoric-processes"><span class="header-section-number">7.1.3</span> Entropy in isochoric processes</a></li>
-  <li><a href="#entropy-in-isobaric-processes" id="toc-entropy-in-isobaric-processes" class="nav-link" data-scroll-target="#entropy-in-isobaric-processes"><span class="header-section-number">7.1.4</span> Entropy in isobaric processes</a></li>
+  <li><a href="#entropy-in-isothermal-processes" id="toc-entropy-in-isothermal-processes" class="nav-link" data-scroll-target="#entropy-in-isothermal-processes"><span class="header-section-number">7.1.1</span> Entropy in Isothermal Processes</a></li>
+  <li><a href="#entropy-in-adiabatic-processes" id="toc-entropy-in-adiabatic-processes" class="nav-link" data-scroll-target="#entropy-in-adiabatic-processes"><span class="header-section-number">7.1.2</span> Entropy in Adiabatic Processes</a></li>
+  <li><a href="#entropy-in-isochoric-processes" id="toc-entropy-in-isochoric-processes" class="nav-link" data-scroll-target="#entropy-in-isochoric-processes"><span class="header-section-number">7.1.3</span> Entropy in Isochoric Processes</a></li>
+  <li><a href="#entropy-in-isobaric-processes" id="toc-entropy-in-isobaric-processes" class="nav-link" data-scroll-target="#entropy-in-isobaric-processes"><span class="header-section-number">7.1.4</span> Entropy in Isobaric Processes</a></li>
   </ul></li>
   <li><a href="#sec-dssurr" id="toc-sec-dssurr" class="nav-link" data-scroll-target="#sec-dssurr"><span class="header-section-number">7.2</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{surr}}\)</span></a></li>
   <li><a href="#sec-spontS" id="toc-sec-spontS" class="nav-link" data-scroll-target="#sec-spontS"><span class="header-section-number">7.3</span> Clausius Theorem</a></li>
   <li><a href="#sec-thirdlawsect" id="toc-sec-thirdlawsect" class="nav-link" data-scroll-target="#sec-thirdlawsect"><span class="header-section-number">7.4</span> The Third Law of Thermodynamics</a></li>
   <li><a href="#sec-rev7" id="toc-sec-rev7" class="nav-link" data-scroll-target="#sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">7.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/07_ThirdLaw.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -539,7 +540,7 @@ d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}}.
 \tag{7.2}\]</span></span></p>
 <section id="sec-dssys" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="sec-dssys"><span class="header-section-number">7.1</span> Calculation of <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span></h2>
-<p>In general <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> can be calculated from its definition, <a href="06_SecondLaw.html#def-entropy" class="quarto-xref">definition&nbsp;<span>6.1</span></a>, integrated along a reversible path, <a href="06_SecondLaw.html#eq-dentropyint" class="quarto-xref">eq.&nbsp;<span>6.7</span></a>. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:</p>
+<p>In general <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> can be calculated from its definition, <a href="06_SecondLaw.html#def-entropy" class="quarto-xref">definition&nbsp;<span>6.1</span></a>, integrated along a reversible path, <a href="06_SecondLaw.html#eq-dentropyint" class="quarto-xref">eq.&nbsp;<span>6.8</span></a>. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:</p>
 <p><span id="eq-entropycycle"><span class="math display">\[
 \begin{aligned}
 P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_f, T_f \\
@@ -551,7 +552,7 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 \tag{7.3}\]</span></span></p>
 <p>with <span class="math inline">\(\Delta_1 S^{\text{sys}}\)</span> calculated at constant <span class="math inline">\(P\)</span>, and <span class="math inline">\(\Delta_2 S^{\text{sys}}\)</span> at constant <span class="math inline">\(T\)</span>. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in <a href="03_FirstLaw.html#sec-energyint" class="quarto-xref"><span>section 3.1</span></a>.</p>
 <section id="entropy-in-isothermal-processes" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="entropy-in-isothermal-processes"><span class="header-section-number">7.1.1</span> Entropy in isothermal processes</h3>
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="entropy-in-isothermal-processes"><span class="header-section-number">7.1.1</span> Entropy in Isothermal Processes</h3>
 <ul>
 <li><p>For an ideal gas at constant temperature <span class="math inline">\(\Delta U =0\)</span>, and <span class="math inline">\(Q_{\mathrm{REV}} = -W_{\mathrm{REV}}\)</span>. Using the formula for <span class="math inline">\(W_{\mathrm{REV}}\)</span> in <a href="02_ZerothLaw.html#eq-WintsolvedV2" class="quarto-xref">eq.&nbsp;<span>2.19</span></a> (or its analogue for <span class="math inline">\(P\)</span>), we obtain: <span id="eq-sigconsttV"><span class="math display">\[
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \frac{-W_{\mathrm{REV}}}{T} = \frac{nRT \ln \frac{V_f}{V_i}}{T} = nR \ln \frac{V_f}{V_i},
@@ -569,8 +570,8 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 \Delta_{\mathrm{vap}} S \approx 10.5 R,
 \tag{7.7}\]</span></span></p>
 <p>which corresponds in SI to the range of about 85–88 J/(mol K). This simple rule is named <strong>Trouton’s rule</strong>, after the Irish physicist who discovered it, Frederick Thomas Trouton (1863–1922).</p>
-<div id="exr-troutonex" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.1</strong></span> Calculate the standard entropy of vaporization of water knowing <span class="math inline">\(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^\standardstate = 44 \  \text{kJ/mol}\)</span>, as calculated in <a href="04_Thermochemistry.html#exr-HessLawEx" class="quarto-xref">Exercise&nbsp;<span>4.1</span></a>.</p>
+<div id="exm-troutonex" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.1 (Entropy of vaporization of water)</strong></span> Calculate the standard entropy of vaporization of water knowing <span class="math inline">\(\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^\standardstate = 44 \  \text{kJ/mol}\)</span>, as calculated in <a href="04_Thermochemistry.html#exm-HessLawEx" class="quarto-xref">Example&nbsp;<span>4.1</span></a>.</p>
 <p><em>Solution:</em> Using <a href="#eq-spc" class="quarto-xref">eq.&nbsp;<span>7.6</span></a>—and knowing that at standard conditions of <span class="math inline">\(P^\standardstate = 1 \  \text{bar}\)</span> the boiling temperature of water is 373 K—we calculate:</p>
 <p><span id="eq-trouton1"><span class="math display">\[
 \Delta_{\mathrm{vap}} S_{\mathrm{H}_2\mathrm{O}}^\standardstate = \frac{44 \times 10^3 \text{J/mol}}{373 \ \text{K}} = 118 \  \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}.
@@ -579,7 +580,7 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 </div>
 </section>
 <section id="entropy-in-adiabatic-processes" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="entropy-in-adiabatic-processes"><span class="header-section-number">7.1.2</span> Entropy in adiabatic processes</h3>
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="entropy-in-adiabatic-processes"><span class="header-section-number">7.1.2</span> Entropy in Adiabatic Processes</h3>
 <p>Since adiabatic processes happen without the exchange of heat, <span class="math inline">\(đQ=0\)</span>, it would be tempting to think that <span class="math inline">\(\Delta S^{\mathrm{sys}} = 0\)</span> for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes <span class="math inline">\(\Delta S^{\mathrm{sys}} \neq 0\)</span>. The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:</p>
 <p><span id="eq-adiabaticent"><span class="math display">\[
 \begin{aligned}
@@ -589,7 +590,7 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 \tag{7.9}\]</span></span></p>
 </section>
 <section id="entropy-in-isochoric-processes" class="level3" data-number="7.1.3">
-<h3 data-number="7.1.3" class="anchored" data-anchor-id="entropy-in-isochoric-processes"><span class="header-section-number">7.1.3</span> Entropy in isochoric processes</h3>
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="entropy-in-isochoric-processes"><span class="header-section-number">7.1.3</span> Entropy in Isochoric Processes</h3>
 <p>We can calculate the heat exchanged in a process that happens at constant volume, <span class="math inline">\(Q_V\)</span>, using <a href="02_ZerothLaw.html#eq-Cvint1" class="quarto-xref">eq.&nbsp;<span>2.2</span></a>. Since the heat exchanged at those conditions equals the energy (<a href="03_FirstLaw.html#eq-dUqv" class="quarto-xref">eq.&nbsp;<span>3.7</span></a>), and the energy is a state function, we can use <span class="math inline">\(Q_V\)</span> regardless of the path (reversible or irreversible). The entropy associated with the process will then be:</p>
 <p><span id="eq-sconstV1"><span class="math display">\[
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_V \frac{dT}{T},
@@ -600,7 +601,7 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 \tag{7.11}\]</span></span></p>
 </section>
 <section id="entropy-in-isobaric-processes" class="level3" data-number="7.1.4">
-<h3 data-number="7.1.4" class="anchored" data-anchor-id="entropy-in-isobaric-processes"><span class="header-section-number">7.1.4</span> Entropy in isobaric processes</h3>
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="entropy-in-isobaric-processes"><span class="header-section-number">7.1.4</span> Entropy in Isobaric Processes</h3>
 <p>Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, <span class="math inline">\(Q_P\)</span>, using <a href="02_ZerothLaw.html#eq-Cpdef" class="quarto-xref">eq.&nbsp;<span>2.4</span></a>. Again, similarly to the previous case, <span class="math inline">\(Q_P\)</span> equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:</p>
 <p><span id="eq-sconstP1"><span class="math display">\[
 \Delta S^{\mathrm{sys}} = \int_i^f \frac{đQ_{\mathrm{REV}}}{T} = \int_i^f nC_P \frac{dT}{T},
@@ -622,8 +623,8 @@ P_i, T_i &amp; \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_
 d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
 \tag{7.15}\]</span></span></p>
 <p>where the substitution <span class="math inline">\(Q_{\text{surr}}=-Q_{\text{sys}}\)</span> can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermic chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, <span class="math inline">\(T_{\text{surr}}\)</span> will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.</p>
-<div id="exr-supercooledEx" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7.2</strong></span> Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: <span class="math inline">\(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>, and assuming both <span class="math inline">\(C_P\)</span> to be independent of temperature.</p>
+<div id="exm-supercooledEx" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.2 (Freezing of supercooled water)</strong></span> Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: <span class="math inline">\(\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>, <span class="math inline">\(C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}\)</span>, and assuming both <span class="math inline">\(C_P\)</span> to be independent of temperature.</p>
 <p><em>Solution:</em> <span class="math inline">\(\Delta S^{\mathrm{sys}}\)</span> for the process under consideration can be calculated using the following cycle:</p>
 <p><span id="eq-supercooledsyst"><span class="math display">\[
 \begin{aligned}
@@ -694,8 +695,19 @@ d S^{\mathrm{sys}} &lt; \frac{đQ_{\text{sys}}}{T} \qquad &amp;\text{non-spontan
 </section>
 <section id="sec-rev7" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</h2>
-<section id="sec-quest7" class="level3" data-number="7.5.1">
-<h3 data-number="7.5.1" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">7.5.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Spontaneity</strong> requires the entropy of the whole universe: <span class="math inline">\(\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}}\)</span>.</li>
+<li><strong>System:</strong> <span class="math inline">\(\Delta S^{\mathrm{sys}} = nR\ln\frac{V_f}{V_i}\)</span> (isothermal ideal gas), <span class="math inline">\(0\)</span> (reversible adiabatic), <span class="math inline">\(nC_P\ln\frac{T_f}{T_i}\)</span> (isobaric heating), and <span class="math inline">\(\frac{\Delta H}{T}\)</span> (phase change at the transition temperature).</li>
+<li><strong>Surroundings:</strong> <span class="math inline">\(\Delta S^{\mathrm{surr}} = -\frac{Q_{\text{sys}}}{T_{\text{surr}}}\)</span>, since the surroundings behave as a large reservoir.</li>
+<li><strong>Trouton’s rule:</strong> many liquids have <span class="math inline">\(\Delta_{\text{vap}}S \approx 85\text{–}88\;\text{J/(mol K)}\)</span>; liquids with hydrogen bonds, such as water, have more.</li>
+<li><strong>A process can be spontaneous</strong> even if the entropy of the system decreases, as long as the surroundings gain more entropy (as when supercooled water freezes).</li>
+<li><strong>The third law:</strong> the entropy of a perfect crystal is zero at <span class="math inline">\(0\;\text{K}\)</span>, which allows us to tabulate absolute entropies, <span class="math inline">\(S^\standardstate\)</span>.</li>
+</ul>
+</section>
+<section id="sec-quest7" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.2</span> Study Questions</h3>
 <p><strong>1. How is the entropy change of the universe calculated?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(\Delta S^{\text{universe}} = \Delta S^{\text{sys}} + \Delta S^{\text{surr}}\)</span>.</li>

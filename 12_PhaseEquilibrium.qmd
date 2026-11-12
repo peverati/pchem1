@@ -8,7 +8,7 @@ In @sec-RealGases, we saw that a non-ideal gas can be liquefied, and that the li
 
 ## Phase Stability
 
-We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.^[Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.] For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of "phase" is necessary to discuss several concepts in this chapter and the following ones: 
+We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.^[Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.] For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of "phase" is necessary to discuss several concepts in this chapter and the following ones:
 
 ::: {#def-phasedef}
 *Phase:* A region of the system with homogeneous chemical composition and physical state.
@@ -46,7 +46,7 @@ and since the entropy of a gas is always bigger than the entropy of a liquid, wh
 ![Dependence of the Chemical Potentials of Solid, Liquid, and Gas Phases on Temperature at Constant Pressure.](img/ch12_mu_vs_T.png){#fig-FigPhase1 fig-alt="Chemical potential versus temperature at constant pressure for the solid, liquid, and gas phases: three downward-sloping lines, least steep for the solid and steepest for the gas. The lowest line at each temperature, highlighted in red, is the most stable phase. The solid and liquid lines cross at the melting point, and the liquid and gas lines cross at the boiling point." width="60%"}
 
 
-The effects of pressure on this diagram can be studied using the second coefficient in @eq-muequal2. For the majority of substances, $\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} > \overline{V}_{\text{s}}$, hence the curves will shift to lower values when the pressure is reduced, as in @Fig-FigPhase2. Notice also that since $\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}$, the shifts for both the solid and liquid lines are much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point. 
+The effects of pressure on this diagram can be studied using the second coefficient in @eq-muequal2. For the majority of substances, $\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} > \overline{V}_{\text{s}}$, hence the curves will shift to lower values when the pressure is reduced, as in @Fig-FigPhase2. Notice also that since $\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}$, the shifts for both the solid and liquid lines are much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point.
 Water is a noticeable exception to this trend because $\overline{V}_{\mathrm{H}_2\mathrm{O,l}} < \overline{V}_{\text{ice}}$. This explains the experimental observation that increasing the pressure on ice lowers its melting point.^[You might have heard that this is why we can skate on ice. The effect is real, but far too small to explain skating: the pressure under the blade of a skate lowers the melting point of ice by less than one degree, while we can skate on ice at –20 °C. Ice is slippery mostly because of a very thin, liquid-like layer that is always present on its surface, and because of the heat produced by friction.]
 
 
@@ -116,7 +116,7 @@ A few important considerations can be made by analyzing @eq-Gibbsrule for a pure
 
 Let's now discuss the pressure–temperature diagram of a typical substance, as reported in @Fig-FigPhase3. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, @eq-ClapeyronEq. The interpretation of each line is as follows:
 
-### Liquid $\rightleftarrows$ Gas equilibrium
+### Liquid $\rightleftarrows$ Gas Equilibrium
 
 For this equilibrium we can use Trouton's rule, @eq-trouton, and write:
 $$
@@ -137,9 +137,9 @@ $$ {#eq-PTdia3}
 
 which is always positive, regardless of violations to Trouton's rule. Notice how small this value is: the liquid–gas line in @Fig-FigPhase3 is much flatter than the solid–liquid one.
 
-### Solid $\rightleftarrows$ Gas equilibrium
+### Solid $\rightleftarrows$ Gas Equilibrium
 
-If we look at the signs of each quantity, this case is similar to the previous one: 
+If we look at the signs of each quantity, this case is similar to the previous one:
 $$
 \begin{aligned}
 \Delta_{\text{subl}} S &> 0 \quad \text{always} \\
@@ -151,7 +151,7 @@ $$ {#eq-PTdi1}
 
 However, the entropy of sublimation is larger than the entropy of vaporization, since going from solid to gas is equivalent to melting and then vaporizing ($\Delta_{\text{subl}}S=\Delta_{\text{fus}}S+\Delta_{\text{vap}}S$). Near the triple point, where the two lines meet, the solid–gas line is therefore steeper than the liquid–gas one.
 
-### Solid $\rightleftarrows$ Liquid equilibrium
+### Solid $\rightleftarrows$ Liquid Equilibrium
 
 The final curve is for the solid-liquid equilibrium, for which we have:
 
@@ -171,11 +171,11 @@ $$
 \frac{dP}{dT} > 0 \quad \text{generally}.
 $$ {#eq-PTd2}
 
-For $\mathrm{H}_2\mathrm{O}$ and a few other substances, $\frac{dP}{dT}<0$, an anomalous behavior that has crucial consequences for the existence of life on earth.^[As is well explained by [Wikipedia's article on the properties of water](https://en.wikipedia.org/wiki/Properties_of_water#Density_of_water_and_ice): "The unusual density curve and lower density of ice than of water is vital to life—if water were most dense at the freezing point, then in winter the very cold water at the surface of lakes and other water bodies would sink, lakes could freeze from the bottom up, and all life in them would be killed. Furthermore, given that water is a good thermal insulator (due to its heat capacity), some frozen lakes might not completely thaw in summer. The layer of ice that floats on top insulates the water below. Water at about 4 °C (39 °F) also sinks to the bottom, thus keeping the temperature of the water at the bottom constant."] Because of its importance, this behavior is also depicted in @Fig-FigPhase3 using a dashed green line. 
+For $\mathrm{H}_2\mathrm{O}$ and a few other substances, $\frac{dP}{dT}<0$, an anomalous behavior that has crucial consequences for the existence of life on earth.^[As is well explained by [Wikipedia's article on the properties of water](https://en.wikipedia.org/wiki/Properties_of_water#Density_of_water_and_ice): "The unusual density curve and lower density of ice than of water is vital to life—if water were most dense at the freezing point, then in winter the very cold water at the surface of lakes and other water bodies would sink, lakes could freeze from the bottom up, and all life in them would be killed. Furthermore, given that water is a good thermal insulator (due to its heat capacity), some frozen lakes might not completely thaw in summer. The layer of ice that floats on top insulates the water below. Water at about 4 °C (39 °F) also sinks to the bottom, thus keeping the temperature of the water at the bottom constant."] Because of its importance, this behavior is also depicted in @Fig-FigPhase3 using a dashed green line.
 
-Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of $10^{-3}\;\mathrm{L}$), $\frac{dP}{dT}$ is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are therefore almost vertical, regardless of the signs of their slopes. 
+Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of $10^{-3}\;\mathrm{L}$), $\frac{dP}{dT}$ is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are therefore almost vertical, regardless of the signs of their slopes.
 
-### The triple point and the critical point
+### The Triple Point and the Critical Point
 The only point in the $PT$ diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is $f=1-3+2=0$. The fact that the triple point has zero degrees of freedom means that its coordinates, $\{T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}\}$, are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition—rather than measured—until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the kelvin).^[For more information on the 2019 redefinition of the SI units, see [Wikipedia's article on the 2019 redefinition of the SI base units](https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units).]
 
 In addition to the triple point where the solid, liquid, and gas phases meet, a triple point may involve more than one condensed phase. Triple points are common for substances with multiple solid phases (polymorphs), involving either two solid phases and a liquid one or three solid phases. Helium is a special case that presents a triple point involving two different fluid phases, called the lambda point. Since the number of degrees of freedom cannot be negative, the Gibbs phase rule for a 1-component diagram sets the limit to how many phases can coexist to just three. Therefore, quadruple points (or higher coexistence points) are not possible for pure substances, even for polymorphs.^[Notice that quadruple points are possible for 2-component diagrams.]
@@ -222,6 +222,14 @@ The integrated Clausius–Clapeyron equation shows that the vapor pressure depen
 
 
 ## Chapter Review {#sec-rev12}
+### Key Ideas
+- **Phase stability:** at each $T$ and $P$, the most stable phase is the one with the lowest chemical potential. Since $\left(\frac{\partial \mu}{\partial T}\right)_P = -\overline{S}$, the gas line is the steepest.
+- **Phase equilibrium:** two phases coexist when their chemical potentials are equal.
+- **Clapeyron equation:** $\frac{dP}{dT} = \frac{\Delta H}{T\Delta \overline{V}}$ gives the slope of each line in the $PT$ diagram; the solid–liquid line of water has a negative slope because ice is less dense than liquid water.
+- **Clausius–Clapeyron equation:** $\ln\frac{P_f}{P_i} = -\frac{\Delta_{\text{vap}}H}{R}\left(\frac{1}{T_f} - \frac{1}{T_i}\right)$, so the vapor pressure grows exponentially with $T$.
+- **Gibbs phase rule:** $F = C - P + 2$. At the triple point of a pure substance, $F = 0$.
+- **Critical point:** the end of the liquid–gas line, above which liquid and gas cannot be distinguished.
+
 ### Study Questions {#sec-quest12}
 **1. What is a phase?**
 

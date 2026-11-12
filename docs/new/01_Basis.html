@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>1&nbsp; Introduction to Thermodynamics – The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -501,7 +501,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev1" id="toc-sec-rev1" class="nav-link" data-scroll-target="#sec-rev1"><span class="header-section-number">1.4</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest1" id="toc-sec-quest1" class="nav-link" data-scroll-target="#sec-quest1"><span class="header-section-number">1.4.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">1.4.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest1" id="toc-sec-quest1" class="nav-link" data-scroll-target="#sec-quest1"><span class="header-section-number">1.4.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/01_Basis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -529,6 +530,8 @@ window.Quarto = {
 </header>
 
 
+<p>Why does a match burn once we strike it, while the ashes never turn back into a match? Why does salt dissolve in water but sand does not? How much heat do we get from burning a liter of gasoline, and how much of it can we actually turn into work? And when a reaction stops, why does it stop where it does, and not sooner or later? Every chemist faces questions like these, and thermodynamics is the part of physical chemistry that answers them. The remarkable thing is that thermodynamics answers them without knowing anything about molecules. It works only with quantities that we can measure in the lab, such as temperature, pressure, volume, and heat, and it builds a few simple laws on top of them. Because it does not depend on any particular model of matter, nothing that we will learn about atoms and molecules later will ever force us to change it.</p>
+<p>Before we can use these laws, we need a few tools. In this chapter, we will introduce them: a gentle version of calculus, which is the language thermodynamics is written in; the idea of a thermodynamic system, which is the piece of the universe we decide to study; and the variables that describe it, with the important distinction between state and path variables. None of these tools is difficult on its own, but we will use all of them in every chapter that follows, so it is worth taking the time to get comfortable with them now.</p>
 <section id="calculus-for-physical-chemistry-slicing-and-gluing" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="calculus-for-physical-chemistry-slicing-and-gluing"><span class="header-section-number">1.1</span> Calculus for Physical Chemistry: Slicing and Gluing</h2>
 <p>Calculus is a powerful mathematical tool that helps us understand and analyze change. At its core, calculus involves two main procedures: differentiation and integration. These concepts are fundamental to the study of thermodynamics, as they enable us to examine how physical systems change. Undergraduate students often find calculus intimidating due to its rigorous presentation in mathematical courses. However, a strong mathematical foundation, while beneficial, is not always mandatory to study thermodynamics effectively.</p>
@@ -718,8 +721,19 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 </section>
 <section id="sec-rev1" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="sec-rev1"><span class="header-section-number">1.4</span> Chapter Review</h2>
-<section id="sec-quest1" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="sec-quest1"><span class="header-section-number">1.4.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">1.4.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Calculus is slicing and gluing.</strong> A differential, such as <span class="math inline">\(dL\)</span>, is an infinitesimally small piece of a quantity; differentiation slices, and integration glues the pieces back together.</li>
+<li><strong>The total differential</strong> of a function of several variables adds up the effect of each variable: <span class="math inline">\(d\mathcal{M} = \left(\frac{\partial \mathcal{M}}{\partial a}\right) da + \left(\frac{\partial \mathcal{M}}{\partial b}\right) db + \cdots\)</span>.</li>
+<li><strong>A system</strong> is the part of the universe we choose to study. Open systems exchange mass and energy, closed systems only energy, and isolated systems neither.</li>
+<li><strong>Sign convention:</strong> in chemistry, energy that enters the system (heat absorbed, work done on it) is positive, and energy that leaves it is negative.</li>
+<li><strong>Variables are intensive or extensive.</strong> Intensive ones (such as <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>) do not depend on the size of the system; extensive ones (such as <span class="math inline">\(V\)</span> and <span class="math inline">\(n\)</span>) do.</li>
+<li><strong>State and path variables.</strong> State variables depend only on the current state and have exact differentials; heat and work are path variables, with inexact differentials, <span class="math inline">\(đQ\)</span> and <span class="math inline">\(đW\)</span>.</li>
+</ul>
+</section>
+<section id="sec-quest1" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-quest1"><span class="header-section-number">1.4.2</span> Study Questions</h3>
 <p><strong>1. What is a differential, such as <span class="math inline">\(dL\)</span>?</strong></p>
 <ol type="a">
 <li>The derivative of <span class="math inline">\(L\)</span> with respect to position.</li>
@@ -1442,8 +1456,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02_ZerothLaw.html" class="pagination-link" aria-label="Zeroth Law of Thermodynamics">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02_ZerothLaw.html" class="pagination-link" aria-label="Temperature, Heat, and Work">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

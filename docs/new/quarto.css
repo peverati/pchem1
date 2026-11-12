@@ -59,3 +59,27 @@ body.quarto-dark #quarto-header .navbar .quarto-navigation-tool, body.quarto-dar
      (--header-height is set by the script at the end of sidebar-toc.html) */
   #quarto-sidebar.sidebar-unpinned { top: var(--header-height, 75px) !important; max-height: calc(100vh - var(--header-height, 75px)) !important; }
 }
+/* Worked examples (::: {#exm-...}): numbered green boxes, like the worked-example callouts of P-Chem 2 */
+div.theorem.example {
+  border: 1px solid #198754; border-left: 5px solid #198754; border-radius: 0.375rem;
+  background-color: rgba(25, 135, 84, 0.06); padding: 0.75rem 1rem 0.25rem; margin: 1.25rem 0;
+  overflow-x: auto;
+}
+div.theorem.example .theorem-title { color: #146c43; }
+body.quarto-dark div.theorem.example { background-color: rgba(25, 135, 84, 0.15); border-color: #3fb37f; }
+body.quarto-dark div.theorem.example .theorem-title { color: #75d6a6; }
+/* Definitions (::: {#def-...}): numbered blue boxes */
+div.theorem.definition {
+  border: 1px solid #0d6efd; border-left: 5px solid #0d6efd; border-radius: 0.375rem;
+  background-color: rgba(13, 110, 253, 0.05); padding: 0.75rem 1rem 0.25rem; margin: 1.25rem 0;
+  overflow-x: auto;
+}
+div.theorem.definition .theorem-title { color: #0a58ca; }
+body.quarto-dark div.theorem.definition { background-color: rgba(13, 110, 253, 0.15); border-color: #6ea8fe; }
+body.quarto-dark div.theorem.definition .theorem-title { color: #9ec5fe; }
+/* Preface title block, sized like the PDF title page: series name (medium), volume title (largest), subtitle (smallest) */
+/* only the preface has a subtitle: there, the book title ("...Chemistry 1") is shown as "..., Volume 1" like in the PDF */
+#title-block-header .quarto-title:has(.subtitle) h1.title { font-size: 0; }
+#title-block-header .quarto-title:has(.subtitle) h1.title::before { content: "The Live Textbook of Physical Chemistry, Volume 1"; font-size: 1.6rem; font-weight: 500; }
+#title-block-header .quarto-title .subtitle { font-size: 2.6rem; font-weight: 600; line-height: 1.15; margin-top: 0.4rem; }
+#title-block-header .description { font-size: 1.15rem; }

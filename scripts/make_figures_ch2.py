@@ -44,7 +44,7 @@ save(fig, f"{out}/ch2_pv_2stepB.png")
 ax, fig = base(mid=True)
 ax.fill_between([Vi, V1], 0, P(V1), facecolor="none", edgecolor="tab:blue", hatch="///", lw=1.5)
 ax.fill_between([V1, Vf], 0, P(Vf), facecolor="none", edgecolor="tab:green", hatch="///", lw=1.5)
-ax.text(0.6, 12, r"$|W_{\mathrm{2\text{-}step}}|$", ha="center", fontsize=16, bbox=dict(fc="white", ec="none"))
+ax.text(0.5, 12, r"$|W_{\mathrm{2\text{-}step}}|$", ha="center", fontsize=16, bbox=dict(fc="white", ec="none"))
 save(fig, f"{out}/ch2_pv_2step.png")
 
 ax, fig = base()
@@ -54,6 +54,6 @@ for n, col in [(6, "tab:orange"), (30, "tab:green")]:
     edges = np.linspace(Vi, Vf, n + 1)
     for a, b in zip(edges[:-1], edges[1:]):
         ax.plot([a, a, b], [P(a), P(b), P(b)], color=col, lw=1.5 if n < 20 else 1.0)
-ax.text(0.6, 12, r"$|W_{\max}|$", ha="center", fontsize=17, bbox=dict(fc="white", ec="none"))
+ax.text(0.5, 12, r"$|W_{\max}|$", ha="center", fontsize=17, bbox=dict(fc="white", ec="none"))
 ax.text(0.62, 80, "6 steps", color="tab:orange", fontsize=14); ax.text(0.62, 68, "30 steps", color="tab:green", fontsize=14); ax.text(0.62, 56, r"$\infty$ steps", color="0.4", fontsize=14)
 save(fig, f"{out}/ch2_pv_max.png")

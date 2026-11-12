@@ -92,7 +92,7 @@ which results in the straight lines of @Fig-FigVnideal.
 
 ![Vn-Diagram of an Ideal Gas at Constant Pressure (1 bar).](img/ch11_V_n_ideal.png){#fig-FigVnideal fig-alt="Volume versus number of moles for an ideal gas at 1 bar: two straight lines through the origin, steeper at 373 K than at 273 K. A marked point shows that 1 mol at 273 K occupies 22.7 L." width="70%"}
 
-### The ideal gas Law
+### The Ideal Gas Law
 Despite all of the ingredients being available for more than 20 years, it's only in 1834 that Benoît Paul Émile Clapeyron (1799–1864) was finally able to combine them into what is now known as the **ideal gas Law**. Using the same formulas obtained above, we can write:
 
 $$
@@ -111,7 +111,7 @@ $$
 R=\frac{VP}{nT}=\frac{22.4 \cdot 1}{1 \cdot 273}=0.082 \;\frac{\text{L atm}}{\text{mol K}},
 $$ {#eq-ideallaw3}
 
-which a simple conversion to SI units transforms into: 
+which a simple conversion to SI units transforms into:
 
 $$
 R=8.31\;\frac{\text{J}}{\text{mol K}}.
@@ -120,7 +120,7 @@ $$ {#eq-RvalueSI}
 ## Behaviors of Non-Ideal Gases
 Non-ideal gases (sometimes also referred to as "real gases"), do not behave as ideal gases because at least one of the assumptions in @def-iedalgasdef is violated. What characterizes non-ideal gases is that there is no unique equation that we can use to describe their behavior. For this reason, we have a plethora of several experimental models, none of which is superior to the other. The van der Waals (vdW) equation is the only model that we will analyze in detail because of its simple interpretation. However, it is far from universal, and for several non-ideal gases, it is severely inaccurate. Other popular non-ideal gas equations are the Clausius equation, the virial equation, the Redlich–Kwong equation and several others.^[For more information on empirical equations for non-ideal gases see [Wikipedia's article on real gases](https://en.wikipedia.org/wiki/Real_gas).]
 
-### The van der Waals equation
+### The van der Waals Equation
 One of the simplest empirical equations that describe non-ideal gases was obtained in 1873 by Johannes Diderik van der Waals (1837–1923). The vdW equation includes two empirical parameters ($a$ and $b$) with different values for different non-ideal gases. Each of the parameters corresponds to a correction for the breaking of one of the two conditions that define the ideal gas behavior (@def-iedalgasdef). The vdW equation is obtained from the ideal gas equation performing the following simple substitutions:
 
 $$
@@ -161,7 +161,7 @@ The parameter $a$ accounts for the presence of intermolecular interactions, whil
 | Xenon           |                                4.250                               |                      0.05105                      |
 \normalsize
 
-### Joule–Thomson effect
+### Joule–Thomson Effect
 
 
 ![The Joule–Thomson Experiment.](img/OEP_Figures.015.jpeg){#fig-FigJT fig-alt="Joule-Thomson apparatus: a horizontal insulated tube divided by a porous plug, with a piston on each side. The left piston pushes the gas through the plug at temperature T1 and pressure P1, while the right piston moves out as the gas expands to temperature T2 and pressure P2." width="80%"}
@@ -236,7 +236,7 @@ The value of $\mu_{\mathrm{JT}}$ depends on the type of gas, the temperature and
 For example, helium has a very low Joule–Thomson inversion temperature at standard pressure $(T=45\;\text{K})$, and it warms when expanded at constant enthalpy at typical room temperatures. The only other gases that have standard inversion temperature lower than room temperature are hydrogen and neon. On the other hand, nitrogen and oxygen have high inversion temperatures ($T=621\;\text{K}$ and $T=764\;\text{K}$, respectively), and they both cool when expanded at room temperature. Therefore, it is possible to use the Joule–Thomson effect in refrigeration processes such as air conditioning.^[Nitrogen and oxygen are the two most abundant gases in the air. A sequence of Joule–Thomson expansions is also used for the industrial liquefaction of air.] As we already discussed in @sec-FirstLaw, the temperature of an ideal gas stays constant in an adiabatic expansion, therefore its Joule–Thomson coefficient is always equal to zero.
 
 ## Critical Phenomena
-### Compressibility factors
+### Compressibility Factors
 The compressibility factor is a correction coefficient that describes the deviation of a real gas from ideal gas behavior. It is usually represented with the symbol $z$, and is calculated as:
 
 $$
@@ -284,13 +284,13 @@ Both type I and type II non-ideal gases will approach the ideal gas behavior as 
 - At high $T$: $b>\frac{a}{RT} \; \Rightarrow \; \frac{\partial z}{\partial P} > 0,$ which is the same behavior of type I gases.
 - At a very specific temperature, inversion will occur (i.e., at $T=713 \; \mathrm{K}$ for $\mathrm{CO}_2$). This temperature is called the **Boyle temperature**, $T_{\mathrm{B}}$, and is the temperature at which the attractive and repulsive forces balance out. It can be calculated from the vdW equation, since $b-\frac{a}{RT_{\mathrm{B}}}=0 \; \Rightarrow \; T_{\mathrm{B}}=\frac{a}{bR}.$ At the Boyle temperature a type II gas shows ideal gas behavior over a large range of pressure.
 
-### Phase diagram of a non-ideal gas
+### Phase Diagram of a Non-Ideal Gas
 
 
 ![The Pressure–Volume Diagram of a Non-Ideal Gas, Computed with the van der Waals Equation in Reduced Units ($P/P_c$ and $\overline{V}/\overline{V}_c$). Below the Critical Temperature, the Flat Segments Inside the Green Region Mark the Coexistence of Liquid and Vapor.](img/ch11_vdw_isotherms.png){#fig-FigPVni fig-alt="Pressure-volume diagram of a van der Waals fluid in reduced units, with isotherms from T1 to T5. The critical isotherm Tc, in black, touches the top of a green dome-shaped region labeled liquid plus vapor at the critical point, marked in red. Below Tc, the isotherms are flat inside the dome; the liquid region is to its left, and the vapor region is to its right. Above Tc, the isotherms are smooth, and the region is labeled gas." width="70%"}
 
 
-Let's now turn our attention to the $PV$ phase diagram of a non-ideal gas, reported in @Fig-FigPVni. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas ($T_5$ and $T_4$ in @Fig-FigPVni). Lowering the temperature, we start to see the deviation from ideality getting more prominent ($T_3$ in @Fig-FigPVni) until we reach a particular temperature called the critical temperature, $T_c$. 
+Let's now turn our attention to the $PV$ phase diagram of a non-ideal gas, reported in @Fig-FigPVni. We can start the analysis from an isotherm at a high temperature. Since every gas will behave as an ideal gas at those conditions, the corresponding isotherms will look similar to those of an ideal gas ($T_5$ and $T_4$ in @Fig-FigPVni). Lowering the temperature, we start to see the deviation from ideality getting more prominent ($T_3$ in @Fig-FigPVni) until we reach a particular temperature called the critical temperature, $T_c$.
 
 ::: {#def-criticalT}
 *Critical Temperature:* The temperature above which no appearance of a second phase is observed, regardless of how high the pressure becomes.
@@ -314,7 +314,7 @@ $$
 z_c=\frac{P_c \overline{V}_c}{R T_c}=\left( \frac{a}{27b^2} \right) \left( \frac{3b}{R} \right) \left( \frac{27Rb}{8a} \right) = \frac{3}{8} = 0.375,
 $$ {#eq-critiz}
 
-a value that is independent of the gas. Experimentally measured values of $z_c$ for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental $z_c$ is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume. 
+a value that is independent of the gas. Experimentally measured values of $z_c$ for different non-ideal gases are in the range of 0.2–0.3. These values can be used to infer the accuracy of the vdW equation for each non-ideal gas. Since the experimental $z_c$ is usually lower than the one calculated from the vdW equation, we can deduce that the vdW equation overestimates the critical molar volume.
 
 Notice how slicing the $PT\overline{V}$ diagram at constant $T$ results in the $PV$ diagram that we reported in @Fig-FigPVni. On the other hand, slicing the $PT\overline{V}$ diagram at constant $\overline{V}$ results in a $PT$ diagram, similar to the one that we will examine in detail in the next chapter.
 
@@ -326,7 +326,7 @@ $$
 \mu_{\text{ideal}} = \mu^\standardstate + RT \ln \frac{P}{P^\standardstate}.
 $$ {#eq-dcpig}
 
-For a non-ideal gas, the pressure cannot be used in @eq-dcpig because the response of each gas to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in @eq-dcpig and call it fugacity ($f$). 
+For a non-ideal gas, the pressure cannot be used in @eq-dcpig because the response of each gas to changes in pressure is not universal. We can, however, define a new variable to replace the pressure in @eq-dcpig and call it fugacity ($f$).
 
 ::: {#def-fugacitydef}
 *Fugacity:* The effective pressure of a non-ideal gas that corresponds to the pressure of an ideal gas with the same temperature and chemical potential of the non-ideal one.
@@ -399,6 +399,15 @@ $$ {#eq-kfdef}
 
 
 ## Chapter Review {#sec-rev11}
+### Key Ideas
+- **Ideal gas:** molecules with no volume and no interactions, $PV = nRT$, combining Boyle's, Charles's, Gay-Lussac's, and Avogadro's laws.
+- **Absolute zero:** all isobars extrapolate to zero volume at $-273.15\;^\circ\text{C}$, the origin of the Kelvin scale.
+- **Van der Waals equation:** $\left(P + a\frac{n^2}{V^2}\right)\left(V - nb\right) = nRT$, where $a$ accounts for attractions and $b$ for the volume of the molecules.
+- **Compressibility factor:** $z = \frac{P\overline{V}}{RT}$ measures deviations from ideality, and $z=1$ for an ideal gas.
+- **Joule–Thomson effect:** an expansion at constant enthalpy cools a real gas below its inversion temperature.
+- **Critical point:** above $T_c$, a gas cannot be liquefied by pressure alone.
+- **Fugacity:** the effective pressure of a real gas, $f = \phi P$, with $\phi \rightarrow 1$ as $P \rightarrow 0$.
+
 ### Study Questions {#sec-quest11}
 **1. Which two assumptions define the ideal gas model?**
 

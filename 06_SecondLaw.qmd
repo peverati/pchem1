@@ -27,17 +27,27 @@ $$ {#eq-effcQTrearr2}
 
 The left-hand side of @eq-effcQTrearr2 is a sum of two terms, one for each isothermal stage of the Carnot cycle. Each term is the heat exchanged during that stage, divided by the temperature at which it is exchanged. Since, according to @Def-carnotcycle, each transformation in a Carnot cycle is reversible, these are heats exchanged at reversible conditions, $Q_{\mathrm{REV}}$. The two adiabatic stages do not contribute, since no heat is exchanged during them.
 
-Is this result special to the Carnot cycle? Not really. Any reversible cycle in a $PV$ diagram can be approximated by a sequence of small Carnot cycles, drawn next to each other like tiles, so that their outer edges follow the shape of the cycle in a zig-zag of isotherms and adiabats. Inside the cycle, each isotherm and each adiabat is traveled twice, once in each direction, by two neighboring Carnot cycles, so their contributions cancel out. Only the outer zig-zag contour remains. If we apply @eq-effcQTrearr2 to each small cycle and add everything up, we obtain:
+Is this result special to the Carnot cycle? To find out, let's look at the heat exchanged by an ideal gas along *any* reversible path, not just along isotherms and adiabats. From the first law, the reversible heat is $đQ_{\mathrm{REV}} = dU - đW_{\mathrm{REV}}$. Since the internal energy of an ideal gas depends only on its temperature (@sec-isothermalE), $dU = nC_V\,dT$ for any process, and the reversible work is $đW_{\mathrm{REV}} = -P\,dV = -\frac{nRT}{V}dV$. Therefore:
 
 $$
-\sum_i \frac{Q_{\mathrm{REV},i}}{T_i} = 0,
-$$ {#eq-effQrevT}
+đQ_{\mathrm{REV}} = nC_V\,dT + \frac{nRT}{V}\,dV.
+$$ {#eq-dQrevIG}
 
-where the summation runs over all the isothermal stages around the contour. If we make the small cycles smaller and smaller, the zig-zag contour approaches any smooth reversible cycle, and, following the same calculus procedure that we introduced in @sec-SystemVariables, the sum becomes an integral around the cycle:
+This looks like a total differential, @eq-totdiff, but it is not one. If we apply the Schwarz test of @sec-SystemVariables to the two coefficients, the derivative of $nC_V$ with respect to $V$ is zero, while the derivative of $\frac{nRT}{V}$ with respect to $T$ is $\frac{nR}{V}$. The two mixed derivatives are different, as we expect for the heat, which is a path function. Now let's divide both sides of @eq-dQrevIG by the temperature:
+
+$$
+\frac{đQ_{\mathrm{REV}}}{T} = \frac{nC_V}{T}\,dT + \frac{nR}{V}\,dV.
+$$ {#eq-dQrevTIG}
+
+This time, the derivative of $\frac{nC_V}{T}$ with respect to $V$ is zero, and the derivative of $\frac{nR}{V}$ with respect to $T$ is also zero. The test is passed: @eq-dQrevTIG is an exact differential.^[In fact, we can integrate it directly: if $C_V$ is constant, $\frac{đQ_{\mathrm{REV}}}{T} = d\left(nC_V \ln T + nR \ln V\right)$.] Dividing by $T$ removed the $T$ from the coefficient of $dV$, which was the only thing that made the heat path-dependent. And since the integral of an exact differential around a closed path is always zero, for *any* reversible cycle of an ideal gas we have:
 
 $$
 \oint \frac{đQ_{\mathrm{REV}}}{T} = 0.
 $$ {#eq-ds0}
+
+The Carnot result, @eq-effcQTrearr2, is just a special case: along the two isotherms we add $\frac{Q}{T}$, and along the two adiabats we add nothing.
+
+We have proved @eq-ds0 only for the ideal gas, but the result is general. Carnot showed that every reversible engine working between the same two temperatures has the same efficiency, whatever substance it contains (otherwise, coupling two different engines would let us move heat from a cold body to a hot one with no other effect, which, as we will see in this chapter, never happens). Since the efficiency fixes $\frac{Q_3}{Q_1}$, @eq-effcQTrearr2 holds for the Carnot cycles of every substance, and from there one can show that @eq-ds0 holds for any reversible cycle of any substance. We will not go through this general proof, which requires more work than it is worth here; the ideal-gas calculation already shows the essential point.
 
 @Eq-ds0 is a remarkable result. The heat, $đQ$, is a path function, and its integral around a cycle is in general *not* zero. However, if we take the heat exchanged reversibly and divide it by the temperature, we obtain a quantity whose integral around *any* reversible cycle is zero. As we saw for the energy in @eq-de0, this is precisely the property that defines a state function: when we go back to the starting point, we always find the same value. Clausius realized this in 1865, and he decided to call the new state function *entropy*, and to indicate it with the letter $S$:
 
@@ -136,7 +146,7 @@ To understand Boltzmann's idea, we need to distinguish between two ways of descr
 
 Many different microstates correspond to the same macrostate, since we can swap molecules around without changing the pressure or the temperature. The number of microstates that correspond to a given macrostate is called its **multiplicity**, and is indicated with $\Omega$.
 
-### Counting microstates
+### Counting Microstates
 Let's see how this works with a simple example. Consider a box divided into two halves, left and right, containing just four molecules, which we label $a$, $b$, $c$, and $d$. Each molecule can be in either half, and we consider as a macrostate the number of molecules in the left half. The microstates are all the possible ways of assigning each molecule to one of the two halves:
 
 | Molecules on the left | Microstates (molecules on the left) | $\Omega$ |
@@ -155,7 +165,7 @@ There are $2^4=16$ microstates in total. If the molecules move around randomly, 
 2. **The macrostate with all molecules on one side is the least probable.** It has $\Omega=1$, so its probability is only $1/16$.
 3. **The effect becomes overwhelming for many molecules.** With $N$ molecules, the probability of finding all of them on the left is $1/2^N$. For $N=100$ molecules, this is about $10^{-30}$. For a mole of gas, with $N\approx 6\times 10^{23}$, it is so small that it will never be observed. This is why the gas in the Joule experiment never goes back to one side of the box: not because it is forbidden, but because it is overwhelmingly improbable.
 
-### The Boltzmann equation
+### The Boltzmann Equation
 Boltzmann connected the multiplicity to the thermodynamic entropy through the formula that became famous as the **Boltzmann equation**:
 
 $$
@@ -174,13 +184,20 @@ $$ {#eq-boltzmannexp}
 
 where in the last step we used $N k_B = n N_A \frac{R}{N_A} = nR$. In @sec-thirdlaw, we will calculate the same entropy change from Clausius' definition, obtaining $\Delta S = nR \ln \frac{V_f}{V_i}$, which for $V_f=2V_i$ is exactly the same result. The two definitions of entropy describe the same quantity.
 
-### Why "disorder" can be misleading
+### Why "Disorder" Can Be Misleading
 
 Entropy is often described as a measure of "disorder." This description is not completely wrong, but it can be misleading. A more accurate description is that the entropy measures the *number of microscopic arrangements* compatible with what we observe macroscopically. For example, when ice melts, the entropy increases because the water molecules in the liquid can move around and take many more positions and orientations than in the rigid crystal. Calling the liquid "more disordered" is a shortcut for "has many more microstates," and it is the number of microstates that we should keep in mind.
 
 The shortcut becomes a misconception when we apply it to everyday objects. A messy room does not have a higher thermodynamic entropy than a tidy one. The thermodynamic entropy counts the arrangements of about $10^{23}$ molecules, and the arrangement of a few dozen books and socks does not contribute to it in any measurable way. Moreover, a messy room and a tidy room are each just *one* specific arrangement of the objects. If we really want to count arrangements of objects, we need many identical copies of the same room.^[A better version of the analogy is that of a hotel with many identical rooms containing the same objects. The collection of all the unmade rooms in the morning has a higher entropy than the collection of the same rooms after the housekeepers have arranged all the objects in every room in exactly the same way.]
 
 ## Chapter Review {#sec-rev6}
+### Key Ideas
+- **Clausius entropy:** $dS = \frac{đQ_{\mathrm{REV}}}{T}$. The entropy is a state function, measured in $\text{J/K}$.
+- **Irreversible processes:** to calculate $\Delta S$, we use a reversible path between the same two states, since $S$ is a state function.
+- **Clausius inequality:** $\oint \frac{đQ}{T} \leq 0$ around any cycle, with the equal sign only for reversible cycles.
+- **The second law:** the entropy of the universe increases in every spontaneous process, and stays constant only in reversible ones.
+- **Boltzmann entropy:** $S = k_B \ln \Omega$, where $\Omega$ counts the microstates compatible with the macroscopic state. Spontaneous processes move toward the macrostates with the most microstates.
+
 ### Study Questions {#sec-quest6}
 **1. Which quantity has a sum (or integral) equal to zero around any reversible cycle?**
 

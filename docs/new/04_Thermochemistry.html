@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>4&nbsp; Thermochemistry – The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -494,7 +494,8 @@ window.Quarto = {
   <li><a href="#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" id="toc-calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="nav-link" data-scroll-target="#calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><span class="header-section-number">4.4</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></a></li>
   <li><a href="#sec-rev4" id="toc-sec-rev4" class="nav-link" data-scroll-target="#sec-rev4"><span class="header-section-number">4.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest4" id="toc-sec-quest4" class="nav-link" data-scroll-target="#sec-quest4"><span class="header-section-number">4.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">4.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest4" id="toc-sec-quest4" class="nav-link" data-scroll-target="#sec-quest4"><span class="header-section-number">4.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/04_Thermochemistry.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -598,18 +599,18 @@ Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}}
 \Delta_{\text{rxn}} H^\standardstate = \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate,
 \tag{4.8}\]</span></span></p>
 <p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
-<div id="exr-HessLawEx" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4.1</strong></span> Calculate the standard enthalpy of combustion at 298 K of 1 mol of methane, using the data in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>4.5</span></a>.</p>
+<div id="exm-HessLawEx" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.1 (Combustion enthalpy of methane from Hess’s law)</strong></span> Calculate the standard enthalpy of combustion at 298 K of 1 mol of methane, using the data in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>4.5</span></a>.</p>
 <p><em>Solution:</em> The reaction that is under consideration is: <span class="math display">\[
 \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\text{rxn}} H^\standardstate = ?
 \]</span></p>
 <p>Using Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>4.8</span></a>, the enthalpy of combustion of methane is:</p>
 <p><span class="math display">\[
-\Delta_{\text{rxn}} H^\standardstate =  \Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^\standardstate_{\mathrm{H}_{2}O_{(l)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^\standardstate_{\mathrm{O}_{2(g)}}}_{=0}
+\Delta_{\text{rxn}} H^\standardstate =  \Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^\standardstate_{\mathrm{O}_{2(g)}}}_{=0}
 \]</span></p>
-<p>whose values are reported in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>4.5</span></a>. Notice that the formation enthalpy of <span class="math inline">\(O_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
+<p>whose values are reported in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>4.5</span></a>. Notice that the formation enthalpy of <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
 <p><span class="math display">\[
-\Delta_{\text{rxn}} H^\standardstate =  \overbrace{-394}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{H}_{2}O_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}}}  = -891 \; \mathrm{kJ/mol}.
+\Delta_{\text{rxn}} H^\standardstate =  \overbrace{-394}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}}}  = -891 \; \mathrm{kJ/mol}.
 \]</span></p>
 <p>where the negative sign indicates that the reaction is exothermic (see <a href="#def-exoendo" class="quarto-xref">definition&nbsp;<span>4.1</span></a>), as we should expect. The cycle that we used to solve this exercise can be summarized as:</p>
 <p><span class="math display">\[
@@ -619,14 +620,14 @@ Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}}
   &amp; \qquad \mathrm{H}_{2(g)}, \mathrm{C}_{(s,\text{graphite})}, \mathrm{O}_{2(g)}
 \end{aligned}
 \]</span></p>
-<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporizes the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^\standardstate_{\mathrm{H}_{2}O_{(g)}} =  -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
+<p>Notice that at standard pressure and <span class="math inline">\(T = 298 \; \mathrm{K}\)</span> water is in liquid form. However, when we burn methane, the heat associated with the exothermic reaction immediately vaporizes the water. Substances in different states of matter have different formation enthalpies, and <span class="math inline">\(\Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(g)}} =  -242 \  \mathrm{kJ/mol}\)</span>. The difference between the formation enthalpies of the same substance in different states represents the latent heat that separates them. For example, for water:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\Delta_{\text{vap}} H^\standardstate_{\mathrm{H}_2O} &amp; = \Delta_{\text{f}} H^\standardstate_{\mathrm{H}_{2}O_{(g)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{H}_{2}O_{(l)}} \\
+\Delta_{\text{vap}} H^\standardstate_{\mathrm{H_2O}} &amp; = \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(g)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}} \\
 &amp; = (-242) - (-286) = + 44 \; \text{kJ/mol}
 \end{aligned}
 \]</span></p>
-<p>which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^\standardstate_{\mathrm{H}_2O}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).</p>
+<p>which is the latent heat of vaporization for water, <span class="math inline">\(\Delta_{\text{vap}} H^\standardstate_{\mathrm{H_2O}}\)</span>. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).</p>
 </div>
 </section>
 <section id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="level2" data-number="4.4">
@@ -634,38 +635,48 @@ Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}}
 <p>Standard enthalpies of formation are usually reported at room temperature (<span class="math inline">\(T\)</span> = 298 K), but enthalpies of formation at any temperature <span class="math inline">\(T'\)</span> can be calculated from the values at 298 K using <a href="02_ZerothLaw.html#eq-Cpdef" class="quarto-xref">eq.&nbsp;<span>2.4</span></a> and <a href="03_FirstLaw.html#eq-dh2" class="quarto-xref">eq.&nbsp;<span>3.13</span></a>:</p>
 <p><span id="eq-DrxnHneq298"><span class="math display">\[
 \begin{aligned}
-dH = C_P dT \rightarrow &amp; \int_{H_{T=298}^\standardstate}^{H_{T'}} dH =  \int_{T=298}^{T'} C_P dT \\
-            &amp; H_{T'}^\standardstate - H_{T=298}^\standardstate = \int_{T=298}^{T'} C_P dT \\
-            &amp; H_{T'}^\standardstate = H_{T=298}^\standardstate + \int_{T=298}^{T'} C_P dT,
+dH = C_P dT \rightarrow &amp; \int_{H_{298}^\standardstate}^{H_{T'}^\standardstate} dH =  \int_{298}^{T'} C_P dT \\
+            &amp; H_{T'}^\standardstate - H_{298}^\standardstate = \int_{298}^{T'} C_P dT \\
+            &amp; H_{T'}^\standardstate = H_{298}^\standardstate + \int_{298}^{T'} C_P dT,
 \end{aligned}
 \tag{4.9}\]</span></span></p>
 <p>which, in conjunction with Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>4.8</span></a>, results in:</p>
 <p><span id="eq-DrxnHneq298f"><span class="math display">\[
-\Delta_{\text{rxn}} H_{T'}^\standardstate = \Delta_{\text{rxn}} H_{T=298}^\standardstate + \int_{T=298}^{T'} \Delta C_P dT,
+\Delta_{\text{rxn}} H_{T'}^\standardstate = \Delta_{\text{rxn}} H_{298}^\standardstate + \int_{298}^{T'} \Delta C_P dT,
 \tag{4.10}\]</span></span></p>
 <p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>.</p>
-<div id="exr-DHtdiff298" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4.2</strong></span> Calculate <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> at 298 K is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
+<div id="exm-DHtdiff298" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4.2 (Reaction enthalpy at 398 K)</strong></span> Calculate <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{298}\)</span> is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
 <p><span class="math display">\[
 \mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
 \]</span></p>
 <p><em>Solution:</em> Using <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>4.10</span></a> we obtain:</p>
 <p><span class="math display">\[
-\Delta_{\text{rxn}} H^{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^\standardstate} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,
+\Delta_{\text{rxn}} H^\standardstate_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^\standardstate_{298}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,
 \]</span></p>
 <p>which, assuming that the heat capacities do not depend on the temperature, becomes:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\Delta_{\text{rxn}} H^{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
+\Delta_{\text{rxn}} H^\standardstate_{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
 \end{aligned}
 \]</span></p>
-<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>4.10</span></a>, confirming that the heat capacities are mostly independent of temperature.</p>
+<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>4.10</span></a>, confirming that the heat capacities are mostly independent of temperature.</p>
 </div>
 </section>
 <section id="sec-rev4" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-rev4"><span class="header-section-number">4.5</span> Chapter Review</h2>
-<section id="sec-quest4" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="sec-quest4"><span class="header-section-number">4.5.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">4.5.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Reaction enthalpy</strong> is the heat exchanged by a reaction at constant pressure: negative for exothermic reactions, positive for endothermic ones.</li>
+<li><strong>Stoichiometric numbers,</strong> <span class="math inline">\(\nu_i\)</span>, are negative for reactants and positive for products.</li>
+<li><strong>Standard enthalpies of formation,</strong> <span class="math inline">\(\Delta_{\text{f}}H^\standardstate\)</span>, are measured at <span class="math inline">\(P^\standardstate = 1\;\text{bar}\)</span>, and they are zero for elements in their most stable form.</li>
+<li><strong>Hess’s law:</strong> since <span class="math inline">\(H\)</span> is a state function, <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate = \sum_i \nu_i \Delta_{\text{f}}H_i^\standardstate\)</span>, whatever the path of the reaction.</li>
+<li><strong>Other temperatures:</strong> <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{T'} = \Delta_{\text{rxn}}H^\standardstate_{298} + \int_{298}^{T'} \Delta C_P\,dT\)</span>, and the correction is usually small.</li>
+</ul>
+</section>
+<section id="sec-quest4" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-quest4"><span class="header-section-number">4.5.2</span> Study Questions</h3>
 <p><strong>1. What characterizes an endothermic reaction?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(\Delta_{\text{rxn}}H &lt; 0\)</span>, and heat is released by the system.</li>

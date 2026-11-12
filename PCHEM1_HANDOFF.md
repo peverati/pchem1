@@ -63,11 +63,11 @@ Known limitations to keep in mind:
 **Chapter anatomy** (the model is chapters 4 and 5 of P-Chem 2):
 - **Opening:** a short introduction that links to the previous chapter and says what this one does.
 - **Body:** sections built in small steps, with numbered, labeled equations.
-- **Interpretation:** after every key result or figure, a numbered list introduced by "A few important considerations can be made by analyzing…", with a **bold lead phrase** per item.
+- **Interpretation:** after every key result or figure, a numbered list with a **bold lead phrase** per item. *Vary the opener* ("Let's look at what @fig-x tells us:", "Notice three things in this diagram:", "What do these results mean?"). The old fixed phrase "A few important considerations can be made by analyzing…" was removed from P-Chem 2 as a recognizable tic.
 - **Figures:** multiple representations of the same result (equation, plot, map, diagram).
 - **Worked numbers in the text:** real molecules and real data (for example, CO's bond length from B, and photon energies in kJ/mol).
-- **Ending:** `## Chapter Review {#revN}` / `### Study Questions {#questN}`, with 10–16 conceptual multiple-choice questions. Every question must be answerable from that chapter's text.
-- **Answer reveal:** the R inline block. In HTML it outputs `<details><summary>Answers (select to reveal)</summary>…</details>`; in the PDF it outputs plain text.
+- **Ending:** `## Chapter Review {#sec-revN}` / `### Key Ideas` (5–6 bullets) / `### Study Questions {#sec-questN}`, with **exactly 10** multiple-choice questions, one per key concept of the chapter, 5 options each. Every question must be answerable from that chapter's text; misconceptions may appear only as wrong options. Spread the correct letters evenly (each letter twice per chapter, shuffled) and verify every answer key programmatically.
+- **Answer reveal:** a collapsible callout, `::: {.callout-tip collapse="true" icon="false"}` / `## Answers` / `1.c, 2.e, …` / `:::`.
 
 **Voice and pedagogy:**
 - **Voice:** first-person plural ("we"), direct and friendly, aimed at chemistry students who are not strong in math and physics.
@@ -136,3 +136,56 @@ Known limitations to keep in mind:
   13. Spectroscopy (selection rules, rotational, vibrational including polyatomics, electronic, Jablonski, NMR/ESR)
 - **Figures:** more than 70 computed figures, every one with alt text.
 - **Planning files:** `REVISION_CHECKLIST.md` and `COURSE_SCHEDULE.md` sit in the project root and are not part of the build.
+
+---
+
+## 6. Additions after the Quarto move (November 2026): replicate these in P-Chem 1
+
+### 6.1 Style rules (from the full style pass of P-Chem 2; see `pchem2/STYLE_CHECKLIST.md`)
+
+- **Voice:** colloquial and guided ("we", "let's", "notice that"); walk students through each step, never "throw them in the pool". Every equation gets a sentence saying what it means.
+- **Rigor over convention:** break misleading conventions when needed. In P-Chem 1 terms, the same spirit applies to, e.g., heat and work as *processes* (not things a system "contains"), or entropy explained precisely rather than only as "disorder".
+- **Audience:** undergraduate chemistry and chemical-engineering students at non-top-10 schools, weak in math. Avoid "it can be shown", "obviously", "trivially", "clearly"; never drop a special-function family or a formula without saying what to take away from it.
+- **No AI-flavored text:** watch for bold "crucial", "presents challenges", "amplified by", "excellent for…", bullet lists of hype, and pasted non-breaking hyphens (‑). Rewrite such passages in the author's voice.
+- **Wikipedia-derived passages** (recognizable by `{\textstyle …}`, `{\displaystyle …}`, encyclopedic tone) get rewritten from scratch, checking the physics (P-Chem 2's Coulomb's law and tunneling sections both had real errors).
+- **Process that worked:** first an audit file (`STYLE_CHECKLIST.md`) with locations and H/M priorities and a one-line verdict per chapter; then section-by-section rewrites, each shown to the author as a quick before/after before applying.
+
+### 6.2 Collapsible boxes for proofs and worked examples
+
+- **Proofs and derivations** go in a blue box, closed by default on the website (printed open in the PDF). The main text keeps the *result* and one plain sentence of meaning:
+  ```
+  ::: {.callout-note collapse="true" icon="false"}
+  ## Proof: the eigenvalues are real
+  …
+  :::
+  ```
+  Use `## Derivation: …` when nothing is being proved, and `## Details: …` for formulas students do not need (e.g., general Laguerre polynomials). Keep core derivations that *are* the story in the main text.
+- **Worked examples:** one per chapter (more for long chapters), at the end of the section they apply, in a green box, closed by default:
+  ```
+  ::: {.callout-tip collapse="true" icon="false"}
+  ## Worked example: the photoelectric effect in sodium
+  **Step 1: …** … **Step 2: …** …
+  :::
+  ```
+  Solve step by step with real numbers and units; **verify every number with a short Python calculation** before writing it.
+- **Key Ideas:** `### Key Ideas` with 5–6 bullets at the start of each chapter review.
+
+### 6.3 Interactive figures (website only)
+
+- Written in Observable JS inside the chapter (no extra software): an `{ojs}` cell with `//| echo: false`, wrapped in `::: {.content-visible when-format="html"}` so the PDF keeps the static figure. Each starts with a short **Try it yourself.** paragraph.
+- Every plot: `Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, …})`, so labels are readable and work in dark mode (without this, Plot draws a white background and the labels disappear in dark mode).
+- Side-by-side plots: compute widths from the built-in `width` and use an inline flex `<div>` (stack only below 600 px). Don't rely on CSS classes for layout (cached stylesheets broke it).
+- **Buttons** (Play/Pause): wrap the button in a `<span>` that is the `viewof` element and dispatch `input` yourself; a bare button triggers a re-run on every click. Store animation state on that element so *Pause* keeps the current frame and *Play* resumes.
+- Helper cells that only compute values: add `//| output: false`.
+- Verify the numbers against the text (for P-Chem 2, the tunneling simulation was checked against the exact transmission formula in Python).
+- Good P-Chem 1 candidates: an ideal vs. van der Waals isotherm explorer, Boltzmann populations vs. T, equilibrium composition vs. K and T, first- vs. second-order kinetics plots, a phase-diagram explorer.
+
+### 6.4 Other features to copy from pchem2
+
+- **Appendices** (`appendices:` in `_quarto.yml`): math toolkit (`A1_Math.qmd`), constants and conversions (`A2_Constants.qmd`), further reading with a bibliography (`A3_References.qmd` + `book.bib`, `bibliography: book.bib`).
+- **Website layout:** top bar with title, *Report an issue* link (`navbar: right:` with `icon: bug`), GitHub/PDF/dark-mode buttons and the logo at the far right; left sidebar with search and expandable chapter sections; no right-hand column (see `QUARTO_LAYOUT_FOR_PCHEM1.md`).
+- **PDF:** cover via `\AtBeginDocument{\includepdf…}`, floating figures (`fig-pos: "htbp"`), and for wide tables a `\begingroup\footnotesize\hyphenpenalty=10000 … \endgroup` raw-LaTeX wrapper plus `tbl-colwidths="[…]"` on the caption. Check every table page in the PDF for broken words or overflow.
+- **All display equations numbered** (label every `$$ … $$` with `{#eq-…}`).
+- **License:** decide with the author (P-Chem 2 uses CC BY-NC-SA 4.0 for the text and MIT for `scripts/`).
+- **Do not propose** perturbation theory/Morse-style content additions or PDF accessibility work for P-Chem 2; for P-Chem 1, ask the author before adding new topics.
+

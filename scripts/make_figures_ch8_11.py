@@ -49,7 +49,7 @@ for ax, slope, col, title in [(axs[0], -1, "tab:blue", "endothermic, $\\Delta H^
     ax.plot(x, y, color=col, lw=2.5)
     for xi, lab in [(0.15, "1"), (0.85, "2")]:
         yi = 0.5 + slope * 0.6 * (xi - 0.5); ax.plot(xi, yi, "o", color=PURPLE, ms=8)
-        ax.annotate(lab, (xi, yi), xytext=(6, 6), textcoords="offset points", color=PURPLE)
+        ax.annotate(lab, (xi, yi), xytext=(6, 6) if slope < 0 else (-4, 14), textcoords="offset points", color=PURPLE)
     ax.text(0.5 if slope < 0 else 0.62, 0.1, r"slope $=-\Delta H^{\ominus}/R$", ha="center", fontsize=14, color="0.3")
     ax.set_xticks([]); ax.set_yticks([]); ax.set_xlabel("$1/T$"); ax.set_ylabel(r"$\ln K$")
     ax.set_title(title, fontsize=15); ax.set_xlim(0, 1); ax.set_ylim(0, 1)

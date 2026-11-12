@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>13&nbsp; Multi-Component Phase Diagrams and Solutions – The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./15_Kinetics.html" rel="next">
+<link href="./14_Kinetics.html" rel="next">
 <link href="./12_PhaseEquilibrium.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -491,21 +491,23 @@ window.Quarto = {
   <li><a href="#describing-a-two-component-system" id="toc-describing-a-two-component-system" class="nav-link active" data-scroll-target="#describing-a-two-component-system"><span class="header-section-number">13.1</span> Describing a Two-Component System</a></li>
   <li><a href="#ideal-solutions-and-raoults-law" id="toc-ideal-solutions-and-raoults-law" class="nav-link" data-scroll-target="#ideal-solutions-and-raoults-law"><span class="header-section-number">13.2</span> Ideal Solutions and Raoult’s Law</a>
   <ul class="collapse">
-  <li><a href="#one-volatile-component" id="toc-one-volatile-component" class="nav-link" data-scroll-target="#one-volatile-component"><span class="header-section-number">13.2.1</span> One volatile component</a></li>
-  <li><a href="#two-volatile-components" id="toc-two-volatile-components" class="nav-link" data-scroll-target="#two-volatile-components"><span class="header-section-number">13.2.2</span> Two volatile components</a></li>
-  <li><a href="#tx_textb-phase-diagrams-and-fractional-distillation" id="toc-tx_textb-phase-diagrams-and-fractional-distillation" class="nav-link" data-scroll-target="#tx_textb-phase-diagrams-and-fractional-distillation"><span class="header-section-number">13.2.3</span> <span class="math inline">\(Tx_{\text{B}}\)</span> phase diagrams and fractional distillation</a></li>
+  <li><a href="#one-volatile-component" id="toc-one-volatile-component" class="nav-link" data-scroll-target="#one-volatile-component"><span class="header-section-number">13.2.1</span> One Volatile Component</a></li>
+  <li><a href="#two-volatile-components" id="toc-two-volatile-components" class="nav-link" data-scroll-target="#two-volatile-components"><span class="header-section-number">13.2.2</span> Two Volatile Components</a></li>
+  <li><a href="#tx_textb-phase-diagrams-and-fractional-distillation" id="toc-tx_textb-phase-diagrams-and-fractional-distillation" class="nav-link" data-scroll-target="#tx_textb-phase-diagrams-and-fractional-distillation"><span class="header-section-number">13.2.3</span> <span class="math inline">\(Tx_{\text{B}}\)</span> Phase Diagrams and Fractional Distillation</a></li>
   </ul></li>
   <li><a href="#phase-diagrams-of-non-ideal-solutions" id="toc-phase-diagrams-of-non-ideal-solutions" class="nav-link" data-scroll-target="#phase-diagrams-of-non-ideal-solutions"><span class="header-section-number">13.3</span> Phase Diagrams of Non-Ideal Solutions</a></li>
   <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity"><span class="header-section-number">13.4</span> Activity</a></li>
   <li><a href="#colligative-properties" id="toc-colligative-properties" class="nav-link" data-scroll-target="#colligative-properties"><span class="header-section-number">13.5</span> Colligative Properties</a>
   <ul class="collapse">
-  <li><a href="#vapor-pressure-lowering" id="toc-vapor-pressure-lowering" class="nav-link" data-scroll-target="#vapor-pressure-lowering"><span class="header-section-number">13.5.1</span> Vapor pressure lowering</a></li>
-  <li><a href="#boiling-point-elevation-and-melting-point-depression" id="toc-boiling-point-elevation-and-melting-point-depression" class="nav-link" data-scroll-target="#boiling-point-elevation-and-melting-point-depression"><span class="header-section-number">13.5.2</span> Boiling point elevation and melting point depression</a></li>
-  <li><a href="#osmotic-pressure" id="toc-osmotic-pressure" class="nav-link" data-scroll-target="#osmotic-pressure"><span class="header-section-number">13.5.3</span> Osmotic pressure</a></li>
+  <li><a href="#vapor-pressure-lowering" id="toc-vapor-pressure-lowering" class="nav-link" data-scroll-target="#vapor-pressure-lowering"><span class="header-section-number">13.5.1</span> Vapor Pressure Lowering</a></li>
+  <li><a href="#boiling-point-elevation-and-melting-point-depression" id="toc-boiling-point-elevation-and-melting-point-depression" class="nav-link" data-scroll-target="#boiling-point-elevation-and-melting-point-depression"><span class="header-section-number">13.5.2</span> Boiling Point Elevation and Melting Point Depression</a></li>
+  <li><a href="#osmotic-pressure" id="toc-osmotic-pressure" class="nav-link" data-scroll-target="#osmotic-pressure"><span class="header-section-number">13.5.3</span> Osmotic Pressure</a></li>
   </ul></li>
-  <li><a href="#sec-rev13" id="toc-sec-rev13" class="nav-link" data-scroll-target="#sec-rev13"><span class="header-section-number">13.6</span> Chapter Review</a>
+  <li><a href="#sec-eutectic" id="toc-sec-eutectic" class="nav-link" data-scroll-target="#sec-eutectic"><span class="header-section-number">13.6</span> Solid–Liquid Phase Diagrams</a></li>
+  <li><a href="#sec-rev13" id="toc-sec-rev13" class="nav-link" data-scroll-target="#sec-rev13"><span class="header-section-number">13.7</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.6.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">13.7.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.7.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/13_MCPhaseDiagrams.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -627,7 +629,7 @@ P_i=x_i P_i^*,
 \tag{13.2}\]</span></span></p>
 <p>where <span class="math inline">\(P_i\)</span> is the partial pressure of component <span class="math inline">\(i\)</span> above the solution, <span class="math inline">\(x_i\)</span> is its mole fraction in the liquid, and <span class="math inline">\(P_i^*\)</span> is the vapor pressure of pure <span class="math inline">\(i\)</span> at the same temperature. Raoult’s law can also be used as an alternative definition of an ideal solution: a solution is ideal if all of its components follow <a href="#eq-mc1" class="quarto-xref">eq.&nbsp;<span>13.2</span></a> at all compositions.</p>
 <section id="one-volatile-component" class="level3" data-number="13.2.1">
-<h3 data-number="13.2.1" class="anchored" data-anchor-id="one-volatile-component"><span class="header-section-number">13.2.1</span> One volatile component</h3>
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="one-volatile-component"><span class="header-section-number">13.2.1</span> One Volatile Component</h3>
 <p>Let’s first consider a solution where only one of the two components, <span class="math inline">\(\mathrm{A}\)</span>, is volatile. This is the case, for example, of a solution of sugar in water, since sugar has no measurable vapor pressure. In this case, the pressure above the solution is entirely due to <span class="math inline">\(\mathrm{A}\)</span>, and Raoult’s law describes a straight line in the <span class="math inline">\(Px_{\text{B}}\)</span> diagram, going from <span class="math inline">\(P_{\text{A}}^*\)</span> for pure <span class="math inline">\(\mathrm{A}\)</span> (<span class="math inline">\(x_{\text{B}}=0\)</span>) to zero for pure <span class="math inline">\(\mathrm{B}\)</span> (<span class="math inline">\(x_{\text{B}}=1\)</span>), as in <a href="#fig-FigMC1" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>.</p>
 <div id="fig-FigMC1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus mole fraction of B, from 0 (pure A, toluene) to 1 (pure B, a nonvolatile solute), at 25 degrees Celsius. A straight line goes from the vapor pressure of pure toluene, about 0.038 bar, down to zero. The liquid region is above the line and the vapor region is below it.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -647,7 +649,7 @@ Figure&nbsp;13.1: The Pressure–Composition Phase Diagram of a Solution of Tolu
 </ol>
 </section>
 <section id="two-volatile-components" class="level3" data-number="13.2.2">
-<h3 data-number="13.2.2" class="anchored" data-anchor-id="two-volatile-components"><span class="header-section-number">13.2.2</span> Two volatile components</h3>
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="two-volatile-components"><span class="header-section-number">13.2.2</span> Two Volatile Components</h3>
 <p>When both components are volatile, each of them follows Raoult’s law, and both contribute to the vapor. Since we are treating the vapor as a mixture of ideal gases, the total pressure is simply the sum of the two partial pressures, according to Dalton’s law, <a href="09_Gibbs.html#eq-daltonlaw" class="quarto-xref">eq.&nbsp;<span>9.23</span></a>:</p>
 <p><span id="eq-mcdalton"><span class="math display">\[
 P_{\text{TOT}}=P_{\text{A}}+P_{\text{B}}=x_{\text{A}}P_{\text{A}}^*+x_{\text{B}}P_{\text{B}}^*=P_{\text{A}}^*+x_{\text{B}}\left(P_{\text{B}}^*-P_{\text{A}}^*\right),
@@ -663,8 +665,8 @@ Figure&nbsp;13.2: The Pressure–Composition Phase Diagram of an Ideal Solution 
 </figcaption>
 </figure>
 </div>
-<div id="exr-xaya" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 13.1</strong></span> Calculate the mole fraction in the vapor phase of a liquid solution composed of 67% of toluene (<span class="math inline">\(\mathrm{A}\)</span>) and 33% of benzene (<span class="math inline">\(\mathrm{B}\)</span>) (in moles), given the vapor pressures of the pure substances: <span class="math inline">\(P_{\text{A}}^*=0.03\;\text{bar}\)</span>, and <span class="math inline">\(P_{\text{B}}^*=0.10\;\text{bar}\)</span>.</p>
+<div id="exm-xaya" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13.1 (Vapor composition above a toluene–benzene solution)</strong></span> Calculate the mole fraction in the vapor phase of a liquid solution composed of 67% of toluene (<span class="math inline">\(\mathrm{A}\)</span>) and 33% of benzene (<span class="math inline">\(\mathrm{B}\)</span>) (in moles), given the vapor pressures of the pure substances: <span class="math inline">\(P_{\text{A}}^*=0.03\;\text{bar}\)</span>, and <span class="math inline">\(P_{\text{B}}^*=0.10\;\text{bar}\)</span>.</p>
 <p><em>Solution:</em> The data available for the system are summarized as follows: <span id="eq-mc2"><span class="math display">\[
 \begin{aligned}
 x_{\text{A}}=0.67  \qquad &amp; \qquad x_{\text{B}}=0.33 \\
@@ -685,7 +687,7 @@ y_{\text{A}}=\frac{0.020}{0.053}=0.38 &amp; \qquad y_{\text{B}}=\frac{0.033}{0.0
 \end{aligned}
 \tag{13.6}\]</span></span> Notice how the vapor is much richer in benzene (<span class="math inline">\(y_{\text{B}}=0.62\)</span>) than the liquid (<span class="math inline">\(x_{\text{B}}=0.33\)</span>). Benzene has the higher vapor pressure (it is more <em>volatile</em>), so its molecules escape more easily into the gas phase.</p>
 </div>
-<p>The result of <a href="#exr-xaya" class="quarto-xref">Exercise&nbsp;<span>13.1</span></a> is completely general: <em>the vapor above an ideal solution is always richer in the more volatile component than the liquid it comes from.</em> Since the compositions of the liquid and of the vapor are different, we can report both of them in the same diagram, as in <a href="#fig-FigMC3" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>. The line that gives the composition of the liquid, <span class="math inline">\(x_{\text{B}}\)</span>, is called the <em>liquidus line</em> (or bubble point line), while the line that gives the composition of the vapor, <span class="math inline">\(y_{\text{B}}\)</span>, is called the <em>dew point line</em>.</p>
+<p>The result of <a href="#exm-xaya" class="quarto-xref">Example&nbsp;<span>13.1</span></a> is completely general: <em>the vapor above an ideal solution is always richer in the more volatile component than the liquid it comes from.</em> Since the compositions of the liquid and of the vapor are different, we can report both of them in the same diagram, as in <a href="#fig-FigMC3" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>. The line that gives the composition of the liquid, <span class="math inline">\(x_{\text{B}}\)</span>, is called the <em>liquidus line</em> (or bubble point line), while the line that gives the composition of the vapor, <span class="math inline">\(y_{\text{B}}\)</span>, is called the <em>dew point line</em>.</p>
 <div id="fig-FigMC3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pressure versus mole fraction of benzene at 25 degrees Celsius. The upper red straight line is the liquidus line and the lower blue curve is the dew point line, with a gray liquid plus vapor region between them. A purple arrow goes down from a liquid of composition x B i equal to 0.4 to the liquidus line, and a dashed tie line connects it to the dew point line at a vapor composition y B f of about 0.69.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigMC3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -703,9 +705,32 @@ Figure&nbsp;13.3: The Pressure–Composition Phase Diagram of an Ideal Solution 
 <li><strong>The first bubble of vapor</strong> that forms does not have the same composition as the liquid. Its composition is found by moving horizontally (at the same pressure) until we hit the dew point line, which gives <span class="math inline">\(y^f_{\text{B}}\)</span>. As expected, the vapor is richer in the more volatile component, <span class="math inline">\(\mathrm{B}\)</span>.</li>
 <li><strong>Inside the coexistence region</strong>, any horizontal line (called a <em>tie line</em>) connects a liquid and a vapor in equilibrium with each other. Since there are only two degrees of freedom inside this region, and the temperature is fixed, once we fix the pressure, the compositions of both phases are determined.</li>
 </ol>
+<p>A tie line tells us <em>what</em> the two phases are, but not <em>how much</em> of each we have. To find the amounts, we can use a simple bookkeeping argument. Let’s call <span class="math inline">\(z_{\text{B}}\)</span> the overall mole fraction of <span class="math inline">\(\mathrm{B}\)</span> in the whole system (the composition we started with), <span class="math inline">\(n_{\text{l}}\)</span> and <span class="math inline">\(n_{\text{v}}\)</span> the total moles of liquid and vapor, and <span class="math inline">\(x_{\text{B}}\)</span> and <span class="math inline">\(y_{\text{B}}\)</span> their compositions, read at the two ends of the tie line. The total amount of <span class="math inline">\(\mathrm{B}\)</span> does not change when the system splits into two phases, so:</p>
+<p><span id="eq-leverrule"><span class="math display">\[
+\left( n_{\text{l}} + n_{\text{v}} \right) z_{\text{B}} = n_{\text{l}}\, x_{\text{B}} + n_{\text{v}}\, y_{\text{B}}
+\quad \longrightarrow \quad
+n_{\text{l}} \left( z_{\text{B}} - x_{\text{B}} \right) = n_{\text{v}} \left( y_{\text{B}} - z_{\text{B}} \right).
+\tag{13.7}\]</span></span></p>
+<p><a href="#eq-leverrule" class="quarto-xref">Eq.&nbsp;<span>13.7</span></a> is called the <strong>lever rule</strong>, because it has the same form as the balance of a lever: if we think of the tie line as a seesaw resting on a pivot at <span class="math inline">\(z_{\text{B}}\)</span>, the amount of each phase times its distance from the pivot is the same on both sides. The phase whose end of the tie line is <em>closer</em> to the overall composition is the more abundant one. The lever rule is valid on any tie line, in any two-component phase diagram, including the <span class="math inline">\(Tx_{\text{B}}\)</span> diagrams that we will see next.</p>
+<div id="exm-lever" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13.2 (How much liquid and how much vapor?)</strong></span> A solution with <span class="math inline">\(z_{\text{B}}=0.40\)</span> of the same two components as in <a href="#exm-xaya" class="quarto-xref">example&nbsp;<span>13.1</span></a> (<span class="math inline">\(P_{\text{A}}^* = 0.03\;\text{bar}\)</span>, <span class="math inline">\(P_{\text{B}}^* = 0.10\;\text{bar}\)</span>) is brought to a pressure of <span class="math inline">\(0.05\;\text{bar}\)</span> at constant temperature. What fraction of the moles is in the liquid?</p>
+<p><em>Solution:</em> At <span class="math inline">\(0.05\;\text{bar}\)</span>, the liquid at the left end of the tie line has a total pressure equal to <span class="math inline">\(0.05\;\text{bar}\)</span>. Using Raoult’s law for both components:</p>
+<p><span class="math display">\[
+P_{\text{TOT}} = (1-x_{\text{B}})P_{\text{A}}^* + x_{\text{B}}P_{\text{B}}^* \quad \rightarrow \quad x_{\text{B}} = \frac{P_{\text{TOT}}-P_{\text{A}}^*}{P_{\text{B}}^*-P_{\text{A}}^*} = \frac{0.05-0.03}{0.10-0.03} = 0.286,
+\]</span></p>
+<p>and the vapor at the right end of the tie line has, from Dalton’s law:</p>
+<p><span class="math display">\[
+y_{\text{B}} = \frac{x_{\text{B}} P_{\text{B}}^*}{P_{\text{TOT}}} = \frac{0.286 \times 0.10}{0.05} = 0.571.
+\]</span></p>
+<p>The overall composition, <span class="math inline">\(z_{\text{B}}=0.40\)</span>, falls between the two, so the system is indeed split into two phases. Using the lever rule, <a href="#eq-leverrule" class="quarto-xref">eq.&nbsp;<span>13.7</span></a>:</p>
+<p><span class="math display">\[
+\frac{n_{\text{l}}}{n_{\text{v}}} = \frac{y_{\text{B}} - z_{\text{B}}}{z_{\text{B}} - x_{\text{B}}} = \frac{0.571-0.40}{0.40-0.286} = 1.50,
+\]</span></p>
+<p>which means that <span class="math inline">\(60\%\)</span> of the moles are in the liquid, and <span class="math inline">\(40\%\)</span> in the vapor. The liquid is the more abundant phase, because its end of the tie line is closer to the overall composition.</p>
+</div>
 </section>
 <section id="tx_textb-phase-diagrams-and-fractional-distillation" class="level3" data-number="13.2.3">
-<h3 data-number="13.2.3" class="anchored" data-anchor-id="tx_textb-phase-diagrams-and-fractional-distillation"><span class="header-section-number">13.2.3</span> <span class="math inline">\(Tx_{\text{B}}\)</span> phase diagrams and fractional distillation</h3>
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="tx_textb-phase-diagrams-and-fractional-distillation"><span class="header-section-number">13.2.3</span> <span class="math inline">\(Tx_{\text{B}}\)</span> Phase Diagrams and Fractional Distillation</h3>
 <p>In the lab, we usually boil liquids at constant (atmospheric) pressure by increasing the temperature, rather than by reducing the pressure. It is therefore more useful to look at the phase diagram of a 2-component ideal solution as a function of temperature at constant pressure. The <span class="math inline">\(Tx_{\text{B}}\)</span> diagram for two volatile components is reported in <a href="#fig-FigMC4" class="quarto-xref">Figure&nbsp;<span>13.4</span></a>. As in the previous diagrams, the more volatile component is <span class="math inline">\(\mathrm{B}\)</span> (benzene), which has the lower boiling point, <span class="math inline">\(T_{\text{b}}^{\text{B}}\)</span>.</p>
 <div id="fig-FigMC4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Temperature versus mole fraction of benzene at 1 atmosphere. A lens-shaped liquid plus vapor region lies between the lower red liquidus line and the upper blue dew point line, which meet at the boiling points of toluene, about 111 degrees Celsius, and benzene, about 80 degrees Celsius. A purple arrow shows a liquid with x B i equal to 0.3 heated until it boils at about 99 degrees Celsius, producing vapor with y B f of about 0.51.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -759,7 +784,7 @@ Figure&nbsp;13.6: The Pressure–Composition Phase Diagram of a Non-Ideal Soluti
 <p>The law that describes the dilute region was found by William Henry (1774–1836), who extensively studied the behavior of gases dissolved in liquids. <strong>Henry’s law</strong> states that the partial pressure of a dilute solute <span class="math inline">\(i\)</span> is proportional to its mole fraction in the solution:</p>
 <p><span id="eq-mc1b"><span class="math display">\[
 P_i=k_{\text{H},i}\, x_i \qquad \text{(for } x_i \rightarrow 0\text{)},
-\tag{13.7}\]</span></span></p>
+\tag{13.8}\]</span></span></p>
 <p>where the <em>Henry’s law constant</em>, <span class="math inline">\(k_{\text{H},i}\)</span>, depends on the chemical nature of both the solute and the solvent, and on the temperature. Henry’s law is commonly used for gases dissolved in liquids. For example, the amount of <span class="math inline">\(\mathrm{CO}_2\)</span> dissolved in a carbonated drink is proportional to the pressure of <span class="math inline">\(\mathrm{CO}_2\)</span> above it, which is why the drink goes flat when we open the bottle and the pressure drops. In a dilute solution, the solvent follows Raoult’s law, while the solute follows Henry’s law.</p>
 <p>When both components are volatile, the total pressure is once again the sum of the two partial pressures. Two different behaviors are possible, depending on the strength of the <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{B}\)</span> interactions, as reported in <a href="#fig-FigMC7" class="quarto-xref">Figure&nbsp;<span>13.7</span></a>:</p>
 <ul>
@@ -799,32 +824,32 @@ Figure&nbsp;13.8: The Temperature–Composition Phase Diagrams of Non-Ideal Solu
 <ol type="1">
 <li><strong>The vapor.</strong> Assuming that the vapor behaves as an ideal gas, the chemical potential of component <span class="math inline">\(i\)</span> in the vapor is given by <a href="11_NonIdealGases.html#eq-dcpig" class="quarto-xref">eq.&nbsp;<span>11.29</span></a>: <span id="eq-act2"><span class="math display">\[
 \mu_i^{\text{vapor}} = \mu_i^{\standardstate} + RT \ln \frac{P_i}{P^{\standardstate}}.
-\tag{13.8}\]</span></span></li>
+\tag{13.9}\]</span></span></li>
 <li><strong>Equilibrium with the solution.</strong> If the vapor is in equilibrium with the solution, the chemical potential of <span class="math inline">\(i\)</span> must be the same in both phases (<a href="12_PhaseEquilibrium.html#eq-muequal" class="quarto-xref">eq.&nbsp;<span>12.4</span></a>): <span id="eq-act3"><span class="math display">\[
 \mu_i^{\text{solution}} = \mu_i^{\text{vapor}} = \mu_i^{\standardstate} + RT \ln \frac{P_i}{P^{\standardstate}}.
-\tag{13.9}\]</span></span></li>
+\tag{13.10}\]</span></span></li>
 <li><strong>The pure liquid as a reference.</strong> The same reasoning applies to the pure liquid <span class="math inline">\(i\)</span>, which is in equilibrium with its vapor at the pressure <span class="math inline">\(P_i^*\)</span>. Its chemical potential, <span class="math inline">\(\mu_i^*\)</span>, is therefore: <span id="eq-act3b"><span class="math display">\[
 \mu_i^* = \mu_i^{\standardstate} + RT \ln \frac{P_i^*}{P^{\standardstate}}.
-\tag{13.10}\]</span></span></li>
-<li><strong>Subtracting</strong> <a href="#eq-act3b" class="quarto-xref">eq.&nbsp;<span>13.10</span></a> from <a href="#eq-act3" class="quarto-xref">eq.&nbsp;<span>13.9</span></a>, the standard chemical potential of the gas and the standard pressure cancel out, and we obtain: <span id="eq-act4"><span class="math display">\[
-\mu_i^{\text{solution}} = \mu_i^* + RT \ln \frac{P_i}{P^*_i}.
 \tag{13.11}\]</span></span></li>
+<li><strong>Subtracting</strong> <a href="#eq-act3b" class="quarto-xref">eq.&nbsp;<span>13.11</span></a> from <a href="#eq-act3" class="quarto-xref">eq.&nbsp;<span>13.10</span></a>, the standard chemical potential of the gas and the standard pressure cancel out, and we obtain: <span id="eq-act4"><span class="math display">\[
+\mu_i^{\text{solution}} = \mu_i^* + RT \ln \frac{P_i}{P^*_i}.
+\tag{13.12}\]</span></span></li>
 </ol>
-<p><a href="#eq-act4" class="quarto-xref">Eq.&nbsp;<span>13.11</span></a> tells us that the ratio <span class="math inline">\(P_i/P_i^*\)</span> measures how much the chemical potential of <span class="math inline">\(i\)</span> in the solution differs from that of the pure liquid. We call this ratio the <strong>activity</strong> of component <span class="math inline">\(i\)</span>:</p>
+<p><a href="#eq-act4" class="quarto-xref">Eq.&nbsp;<span>13.12</span></a> tells us that the ratio <span class="math inline">\(P_i/P_i^*\)</span> measures how much the chemical potential of <span class="math inline">\(i\)</span> in the solution differs from that of the pure liquid. We call this ratio the <strong>activity</strong> of component <span class="math inline">\(i\)</span>:</p>
 <p><span id="eq-act1"><span class="math display">\[
 a_i = \frac{P_i}{P_i^*} \qquad \Rightarrow \qquad \mu_i^{\text{solution}} = \mu_i^* + RT \ln a_i.
-\tag{13.12}\]</span></span></p>
-<p>A few important considerations can be made by analyzing <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.12</span></a>:</p>
+\tag{13.13}\]</span></span></p>
+<p>A few important considerations can be made by analyzing <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.13</span></a>:</p>
 <ol type="1">
-<li><strong>For an ideal solution, the activity is the mole fraction.</strong> Using Raoult’s law, <a href="#eq-mc1" class="quarto-xref">eq.&nbsp;<span>13.2</span></a>, <span class="math inline">\(a_i=x_i\)</span>, and <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.12</span></a> becomes: <span id="eq-act5"><span class="math display">\[
+<li><strong>For an ideal solution, the activity is the mole fraction.</strong> Using Raoult’s law, <a href="#eq-mc1" class="quarto-xref">eq.&nbsp;<span>13.2</span></a>, <span class="math inline">\(a_i=x_i\)</span>, and <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.13</span></a> becomes: <span id="eq-act5"><span class="math display">\[
 \mu_i^{\text{solution}} = \mu_i^* + RT \ln x_i.
-\tag{13.13}\]</span></span> Since <span class="math inline">\(x_i&lt;1\)</span>, the logarithm is negative, and the chemical potential of a component in an ideal solution is always lower than that of the pure liquid. This is the same result we found for mixtures of ideal gases in <a href="09_Gibbs.html" class="quarto-xref"><span>chapter 9</span></a>, and it is the reason why ideal solutions form spontaneously.</li>
+\tag{13.14}\]</span></span> Since <span class="math inline">\(x_i&lt;1\)</span>, the logarithm is negative, and the chemical potential of a component in an ideal solution is always lower than that of the pure liquid. This is the same result we found for mixtures of ideal gases in <a href="09_Gibbs.html" class="quarto-xref"><span>chapter 9</span></a>, and it is the reason why ideal solutions form spontaneously.</li>
 <li><strong>For a non-ideal solution, the activity is an effective mole fraction.</strong> We can write it as the mole fraction multiplied by a correction factor, called the <em>activity coefficient</em>, <span class="math inline">\(\gamma_i\)</span>: <span id="eq-act6"><span class="math display">\[
 a_i = \gamma_i x_i \qquad \Rightarrow \qquad \mu_i^{\text{solution}} = \mu_i^* + RT \ln \left(\gamma_i x_i\right).
-\tag{13.14}\]</span></span></li>
-<li><strong>The activity coefficient is measured from the vapor pressure.</strong> Combining <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.12</span></a> and <a href="#eq-act6" class="quarto-xref">eq.&nbsp;<span>13.14</span></a>: <span id="eq-act9"><span class="math display">\[
+\tag{13.15}\]</span></span></li>
+<li><strong>The activity coefficient is measured from the vapor pressure.</strong> Combining <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.13</span></a> and <a href="#eq-act6" class="quarto-xref">eq.&nbsp;<span>13.15</span></a>: <span id="eq-act9"><span class="math display">\[
 \gamma_i = \frac{P_i}{x_i P_i^*} = \frac{P_i}{P_i^{\text{R}}},
-\tag{13.15}\]</span></span> where <span class="math inline">\(P_i^{\text{R}}=x_i P_i^*\)</span> is the partial pressure predicted by Raoult’s law. For a positive deviation, the measured pressure is higher than the Raoult one, and <span class="math inline">\(\gamma_i&gt;1\)</span>. For a negative deviation, it is lower, and <span class="math inline">\(0&lt;\gamma_i&lt;1\)</span>. For an ideal solution, <span class="math inline">\(\gamma_i=1\)</span>. This procedure is illustrated in <a href="#fig-FigSol1" class="quarto-xref">Figure&nbsp;<span>13.9</span></a>.</li>
+\tag{13.16}\]</span></span> where <span class="math inline">\(P_i^{\text{R}}=x_i P_i^*\)</span> is the partial pressure predicted by Raoult’s law. For a positive deviation, the measured pressure is higher than the Raoult one, and <span class="math inline">\(\gamma_i&gt;1\)</span>. For a negative deviation, it is lower, and <span class="math inline">\(0&lt;\gamma_i&lt;1\)</span>. For an ideal solution, <span class="math inline">\(\gamma_i=1\)</span>. This procedure is illustrated in <a href="#fig-FigSol1" class="quarto-xref">Figure&nbsp;<span>13.9</span></a>.</li>
 <li><strong>The activity is a relative quantity.</strong> It measures the “escaping tendency” of a component <em>relative</em> to a reference state, which in this case is the pure liquid at the same temperature and pressure, for which <span class="math inline">\(a_i=1\)</span>. This choice of reference (<em>standard state</em>) is a convention. We could choose a different one, and the values of the activities would change accordingly, but the physics would not. For gases, the standard state is the ideal gas at <span class="math inline">\(P^{\standardstate}=1\;\text{bar}\)</span>, and the activity is <span class="math inline">\(f/P^{\standardstate}\)</span>.</li>
 </ol>
 <div id="fig-FigSol1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two plots of the vapor pressure of component A versus mole fraction of B for model non-ideal mixtures. In both, a dotted blue line is Raoult's law. Left, gamma greater than 1: at x B equal to 0.6 the measured pressure, a red dot, lies above the Raoult value, a blue dot. Right, gamma between 0 and 1: the measured pressure lies below the Raoult value.">
@@ -842,10 +867,10 @@ Figure&nbsp;13.9: Activity Coefficients from the Vapor Pressure: Positive (Left)
 <section id="colligative-properties" class="level2" data-number="13.5">
 <h2 data-number="13.5" class="anchored" data-anchor-id="colligative-properties"><span class="header-section-number">13.5</span> Colligative Properties</h2>
 <p>Colligative properties are properties of solutions that depend on the <em>number</em> of solute particles in the solution, and not on their chemical nature. They usually appear when we dissolve a nonvolatile solute (such as sugar or salt) in a volatile liquid solvent (such as water), and they are properties of the solvent, modified by the presence of the solute. We will discuss four of them: the lowering of the vapor pressure, the elevation of the boiling point, the depression of the melting point, and the osmotic pressure.</p>
-<p>All four of them have the same origin, which we have already found in <a href="#eq-act5" class="quarto-xref">eq.&nbsp;<span>13.13</span></a>. In an ideal solution, the chemical potential of the solvent is:</p>
+<p>All four of them have the same origin, which we have already found in <a href="#eq-act5" class="quarto-xref">eq.&nbsp;<span>13.14</span></a>. In an ideal solution, the chemical potential of the solvent is:</p>
 <p><span id="eq-collA"><span class="math display">\[
 \mu_{\text{solvent}}^{\text{solution}} = \mu_{\text{solvent}}^* + RT \ln x_{\text{solvent}} &lt; \mu_{\text{solvent}}^*.
-\tag{13.16}\]</span></span></p>
+\tag{13.17}\]</span></span></p>
 <p>In other words, <em>dissolving a solute always lowers the chemical potential of the solvent.</em> This lowering is not due to any special interaction between solute and solvent. In an ideal solution there is none: it is a purely entropic effect, due to the increased number of ways in which the molecules can be arranged in the mixture. This is also why the result depends only on the mole fraction, and not on what the solute is. At the same time, the phases that contain only pure solvent (the vapor above the solution, since the solute is nonvolatile, and the solid, since the solute usually does not dissolve in the solid solvent) are not affected at all. The liquid is therefore stabilized with respect to both the vapor and the solid, as shown in <a href="#fig-FigSol2" class="quarto-xref">Figure&nbsp;<span>13.10</span></a>. For non-ideal solutions, the formulas that we will derive below are only valid approximately, but they work well for dilute solutions.</p>
 <div id="fig-FigSol2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Chemical potential of the solvent versus temperature for the solid, liquid, and gas phases. Adding a solute lowers the liquid line from the gray pure solvent line to the purple solution line, while the solid and gas lines do not change. The solution line crosses the solid line at a lower temperature, a melting point decrease, and the gas line at a higher temperature, a boiling point increase. The melting point shift is larger than the boiling point shift.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -860,52 +885,52 @@ Figure&nbsp;13.10: Reduction of the Chemical Potential of the Liquid Phase Due t
 <p>For dilute solutions, the most useful measure of concentration is the molality, <span class="math inline">\(m\)</span>, defined as the number of moles of solute divided by the mass of the solvent in kilograms:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p><span id="eq-coll1"><span class="math display">\[
 m = \frac{n_{\text{solute}}}{m_{\text{solvent}}}.
-\tag{13.17}\]</span></span></p>
+\tag{13.18}\]</span></span></p>
 <p>For a dilute solution, the mole fraction of the solute is related to the molality by a simple approximation. Since <span class="math inline">\(n_{\text{solute}} \ll n_{\text{solvent}}\)</span>:</p>
 <p><span id="eq-collxm"><span class="math display">\[
 x_{\text{solute}}=\frac{n_{\text{solute}}}{n_{\text{solute}}+n_{\text{solvent}}} \approx \frac{n_{\text{solute}}}{n_{\text{solvent}}} = \frac{n_{\text{solute}}}{m_{\text{solvent}}/M} = mM,
-\tag{13.18}\]</span></span></p>
+\tag{13.19}\]</span></span></p>
 <p>where <span class="math inline">\(M\)</span> is the molar mass of the solvent, in <span class="math inline">\(\text{kg/mol}\)</span>.</p>
 <section id="vapor-pressure-lowering" class="level3" data-number="13.5.1">
-<h3 data-number="13.5.1" class="anchored" data-anchor-id="vapor-pressure-lowering"><span class="header-section-number">13.5.1</span> Vapor pressure lowering</h3>
+<h3 data-number="13.5.1" class="anchored" data-anchor-id="vapor-pressure-lowering"><span class="header-section-number">13.5.1</span> Vapor Pressure Lowering</h3>
 <p>As we have already seen in <a href="#fig-FigMC1" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>, the vapor pressure above a solution of a nonvolatile solute follows Raoult’s law. Its difference with respect to the vapor pressure of the pure solvent is:</p>
 <p><span id="eq-coll2"><span class="math display">\[
 \begin{aligned}
 P_{\text{solvent}}^* &amp;- P_{\text{solution}} = P_{\text{solvent}}^* - x_{\text{solvent}} P_{\text{solvent}}^* \\
 &amp; = \left( 1-x_{\text{solvent}}\right)P_{\text{solvent}}^* =x_{\text{solute}} P_{\text{solvent}}^*,
 \end{aligned}
-\tag{13.19}\]</span></span></p>
+\tag{13.20}\]</span></span></p>
 <p>which shows that the vapor pressure lowering depends only on the mole fraction of the solute, and not on its nature. As such, it is a colligative property.</p>
 </section>
 <section id="boiling-point-elevation-and-melting-point-depression" class="level3" data-number="13.5.2">
-<h3 data-number="13.5.2" class="anchored" data-anchor-id="boiling-point-elevation-and-melting-point-depression"><span class="header-section-number">13.5.2</span> Boiling point elevation and melting point depression</h3>
+<h3 data-number="13.5.2" class="anchored" data-anchor-id="boiling-point-elevation-and-melting-point-depression"><span class="header-section-number">13.5.2</span> Boiling Point Elevation and Melting Point Depression</h3>
 <p>Let’s now look at <a href="#fig-FigSol2" class="quarto-xref">Figure&nbsp;<span>13.10</span></a> again. Since the chemical potential of the liquid is lowered, its line crosses the line of the gas at a higher temperature, and the line of the solid at a lower temperature. Therefore, the boiling point increases, and the melting point decreases. To find out by how much, let’s follow the boiling point step by step.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <ol type="1">
-<li><strong>The equilibrium condition.</strong> At the boiling point of the solution, <span class="math inline">\(T_{\text{b}}\)</span>, the chemical potential of the pure vapor equals that of the solvent in the solution, <a href="#eq-collA" class="quarto-xref">eq.&nbsp;<span>13.16</span></a>: <span id="eq-coll4"><span class="math display">\[
+<li><strong>The equilibrium condition.</strong> At the boiling point of the solution, <span class="math inline">\(T_{\text{b}}\)</span>, the chemical potential of the pure vapor equals that of the solvent in the solution, <a href="#eq-collA" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>: <span id="eq-coll4"><span class="math display">\[
 \mu_{\text{gas}}^*(T_{\text{b}}) = \mu_{\text{liquid}}^*(T_{\text{b}}) + RT_{\text{b}}\ln x_{\text{solvent}} \quad \Rightarrow \quad \ln x_{\text{solvent}} = \frac{\mu_{\text{gas}}^*-\mu_{\text{liquid}}^*}{RT_{\text{b}}}=\frac{\Delta_{\text{vap}}G(T_{\text{b}})}{RT_{\text{b}}},
-\tag{13.20}\]</span></span> where <span class="math inline">\(\Delta_{\text{vap}}G\)</span> is the molar Gibbs energy of vaporization of the <em>pure</em> solvent.</li>
+\tag{13.21}\]</span></span> where <span class="math inline">\(\Delta_{\text{vap}}G\)</span> is the molar Gibbs energy of vaporization of the <em>pure</em> solvent.</li>
 <li><strong>The Gibbs–Helmholtz equation.</strong> We know that <span class="math inline">\(\Delta_{\text{vap}}G=0\)</span> at the boiling point of the pure solvent, <span class="math inline">\(T_{\text{b}}^*\)</span>. We can find its value at <span class="math inline">\(T_{\text{b}}\)</span> by integrating the Gibbs–Helmholtz equation, <a href="09_Gibbs.html#eq-gibbshelm" class="quarto-xref">eq.&nbsp;<span>9.9</span></a>, between <span class="math inline">\(T_{\text{b}}^*\)</span> and <span class="math inline">\(T_{\text{b}}\)</span>, assuming that <span class="math inline">\(\Delta_{\text{vap}}H\)</span> is constant: <span id="eq-coll4b"><span class="math display">\[
 \frac{\Delta_{\text{vap}}G(T_{\text{b}})}{T_{\text{b}}} = \Delta_{\text{vap}}H \left(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}\right) \quad \Rightarrow \quad \ln x_{\text{solvent}} = \frac{\Delta_{\text{vap}}H}{R}\left(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}\right).
-\tag{13.21}\]</span></span></li>
-<li><strong>The dilute-solution approximations.</strong> For a dilute solution, <span class="math inline">\(\ln x_{\text{solvent}}=\ln (1-x_{\text{solute}}) \approx -x_{\text{solute}}\)</span>, and since <span class="math inline">\(T_{\text{b}}\)</span> and <span class="math inline">\(T_{\text{b}}^*\)</span> are very close to each other, <span class="math inline">\(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}=\frac{T_{\text{b}}^*-T_{\text{b}}}{T_{\text{b}}T_{\text{b}}^*} \approx -\frac{\Delta T_{\text{b}}}{\left(T_{\text{b}}^*\right)^2}\)</span>. Replacing both into <a href="#eq-coll4b" class="quarto-xref">eq.&nbsp;<span>13.21</span></a>, and using <a href="#eq-collxm" class="quarto-xref">eq.&nbsp;<span>13.18</span></a> for the mole fraction of the solute: <span id="eq-coll5"><span class="math display">\[
-\Delta T_{\text{b}} = \frac{R\left(T_{\text{b}}^*\right)^2}{\Delta_{\text{vap}}H}\, x_{\text{solute}} = \underbrace{\frac{RM\left(T_{\text{b}}^*\right)^2}{\Delta_{\text{vap}}H}}_{K_{\text{b}}}\, m.
 \tag{13.22}\]</span></span></li>
+<li><strong>The dilute-solution approximations.</strong> For a dilute solution, <span class="math inline">\(\ln x_{\text{solvent}}=\ln (1-x_{\text{solute}}) \approx -x_{\text{solute}}\)</span>, and since <span class="math inline">\(T_{\text{b}}\)</span> and <span class="math inline">\(T_{\text{b}}^*\)</span> are very close to each other, <span class="math inline">\(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}=\frac{T_{\text{b}}^*-T_{\text{b}}}{T_{\text{b}}T_{\text{b}}^*} \approx -\frac{\Delta T_{\text{b}}}{\left(T_{\text{b}}^*\right)^2}\)</span>. Replacing both into <a href="#eq-coll4b" class="quarto-xref">eq.&nbsp;<span>13.22</span></a>, and using <a href="#eq-collxm" class="quarto-xref">eq.&nbsp;<span>13.19</span></a> for the mole fraction of the solute: <span id="eq-coll5"><span class="math display">\[
+\Delta T_{\text{b}} = \frac{R\left(T_{\text{b}}^*\right)^2}{\Delta_{\text{vap}}H}\, x_{\text{solute}} = \underbrace{\frac{RM\left(T_{\text{b}}^*\right)^2}{\Delta_{\text{vap}}H}}_{K_{\text{b}}}\, m.
+\tag{13.23}\]</span></span></li>
 </ol>
 <p>The constant <span class="math inline">\(K_{\text{b}}\)</span> is called the <em>ebullioscopic constant</em> of the solvent, and it depends only on the properties of the pure solvent. For example, for water, using <span class="math inline">\(M=0.018\;\text{kg/mol}\)</span>, <span class="math inline">\(T_{\text{b}}^*=373\;\text{K}\)</span>, and <span class="math inline">\(\Delta_{\text{vap}}H=40.7\;\text{kJ/mol}\)</span>, we obtain <span class="math inline">\(K_{\text{b}}=0.51\;\frac{\text{K kg}}{\text{mol}}\)</span>, in excellent agreement with the experimental value of <span class="math inline">\(0.512\;\frac{\text{K kg}}{\text{mol}}\)</span>.</p>
 <p>So far, we have assumed that each unit of solute produces one particle in solution. Since colligative properties depend on the <em>number</em> of particles, if a solute dissociates into ions, its effect is multiplied. We account for this with the <em>van ’t Hoff factor</em>, <span class="math inline">\(i\)</span>, which counts the number of particles produced by each formula unit of solute. The final formula for the boiling point elevation is:</p>
 <p><span id="eq-coll3"><span class="math display">\[
 \Delta T_{\text{b}}=T_{\text{b}}^{\text{solution}}-T_{\text{b}}^{\text{solvent}}=iK_{\text{b}}m.
-\tag{13.23}\]</span></span></p>
+\tag{13.24}\]</span></span></p>
 <p>For a solute that does not dissociate in solution, such as sugar, <span class="math inline">\(i=1\)</span>. For example, the strong electrolyte <span class="math inline">\(\mathrm{Ca}\mathrm{Cl}_2\)</span> completely dissociates into three particles in solution, one <span class="math inline">\(\mathrm{Ca}^{2+}\)</span> and two <span class="math inline">\(\mathrm{Cl}^-\)</span>, and <span class="math inline">\(i=3\)</span>. For cases of partial dissociation, such as weak acids, weak bases, and their salts, <span class="math inline">\(i\)</span> can assume non-integer values.</p>
 <p>The depression of the melting point is obtained with exactly the same procedure, using the equilibrium between the pure solid and the solution instead of the one between the pure vapor and the solution. The result is:</p>
 <p><span id="eq-coll6"><span class="math display">\[
 \Delta T_{\text{m}}=T_{\text{m}}^{\text{solution}}-T_{\text{m}}^{\text{solvent}}=-iK_{\text{m}}m, \qquad \text{with} \qquad K_{\text{m}}=\frac{RM\left(T_{\text{m}}^*\right)^{2}}{\Delta_{\mathrm{fus}}H},
-\tag{13.24}\]</span></span></p>
+\tag{13.25}\]</span></span></p>
 <p>where <span class="math inline">\(K_{\text{m}}\)</span> is the <em>cryoscopic constant</em> of the solvent, and the minus sign accounts for the fact that the melting temperature decreases (<span class="math inline">\(\Delta T_{\text{m}}\)</span> is negative, while <span class="math inline">\(i\)</span>, <span class="math inline">\(K_{\text{m}}\)</span>, and <span class="math inline">\(m\)</span> are all positive). For water, <span class="math inline">\(K_{\text{m}} = 1.86\; \frac{\text{K kg}}{\text{mol}}\)</span>. This is why we spread salt on icy roads: a salt solution freezes at a lower temperature than pure water.</p>
 <p>Notice from <a href="#fig-FigSol2" class="quarto-xref">Figure&nbsp;<span>13.10</span></a> how the depression of the melting point is much larger than the elevation of the boiling point. To understand why, we can recall that the slope of each line in <a href="#fig-FigSol2" class="quarto-xref">Figure&nbsp;<span>13.10</span></a> is <span class="math inline">\(-S\)</span> (<a href="12_PhaseEquilibrium.html#eq-muequal2" class="quarto-xref">eq.&nbsp;<span>12.2</span></a>). When we lower the liquid line, the new crossing point moves more if the two crossing lines have similar slopes, and less if their slopes are very different. The slopes of the liquid and the solid lines differ by the entropy of fusion, which is small, while the slopes of the liquid and gas lines differ by the entropy of vaporization, which is large. Mathematically, since <span class="math inline">\(\Delta H = T\Delta S\)</span> at the transition, we can rewrite the two constants as <span class="math inline">\(K=RMT^*/\Delta S\)</span>, where <span class="math inline">\(\Delta S\)</span> is the entropy of the corresponding transition. For water, <span class="math inline">\(\Delta_{\text{fus}}S=22\;\text{J}\,\text{mol}^{-1}\,\text{K}^{-1}\)</span> and <span class="math inline">\(\Delta_{\text{vap}}S=109\;\text{J}\,\text{mol}^{-1}\,\text{K}^{-1}\)</span>, which explains why <span class="math inline">\(K_{\text{m}}\)</span> is almost four times larger than <span class="math inline">\(K_{\text{b}}\)</span>.</p>
 </section>
 <section id="osmotic-pressure" class="level3" data-number="13.5.3">
-<h3 data-number="13.5.3" class="anchored" data-anchor-id="osmotic-pressure"><span class="header-section-number">13.5.3</span> Osmotic pressure</h3>
+<h3 data-number="13.5.3" class="anchored" data-anchor-id="osmotic-pressure"><span class="header-section-number">13.5.3</span> Osmotic Pressure</h3>
 <p>The osmotic pressure is probably the most important colligative property for biology and medicine. Consider the apparatus in <a href="#fig-FigSol3" class="quarto-xref">Figure&nbsp;<span>13.11</span></a>, where a solution and the pure solvent are separated by a <em>semi-permeable</em> (osmotic) membrane. This membrane is made of a material that lets the solvent molecules through, but blocks the solute ones.</p>
 <div id="fig-FigSol3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="U-shaped tube with a semi-permeable membrane at the bottom, before and after. Before: the left arm contains solution with solute particles, the right arm contains pure solvent, and the levels are equal under the same external pressure. After: solvent has moved into the left arm, whose level is higher by a height delta h, matching the osmotic pressure pi.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -917,25 +942,63 @@ Figure&nbsp;13.11: Osmotic Pressure of a Solution.
 </figcaption>
 </figure>
 </div>
-<p>Since the chemical potential of the solvent in the solution is lower than that of the pure solvent, <a href="#eq-collA" class="quarto-xref">eq.&nbsp;<span>13.16</span></a>, the solvent spontaneously flows from the pure side into the solution, across the membrane. As a consequence, the level of the solution rises, and its pressure increases. The flow stops when the extra pressure on the solution side raises the chemical potential of its solvent back to that of the pure solvent. This extra pressure, <span class="math inline">\(\pi\)</span>, is called the <strong>osmotic pressure</strong>. We can calculate it step by step:</p>
+<p>Since the chemical potential of the solvent in the solution is lower than that of the pure solvent, <a href="#eq-collA" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>, the solvent spontaneously flows from the pure side into the solution, across the membrane. As a consequence, the level of the solution rises, and its pressure increases. The flow stops when the extra pressure on the solution side raises the chemical potential of its solvent back to that of the pure solvent. This extra pressure, <span class="math inline">\(\pi\)</span>, is called the <strong>osmotic pressure</strong>. We can calculate it step by step:</p>
 <ol type="1">
 <li><strong>The equilibrium condition.</strong> At equilibrium, the chemical potential of the pure solvent at pressure <span class="math inline">\(P\)</span> equals that of the solvent in the solution at pressure <span class="math inline">\(P+\pi\)</span>: <span id="eq-coll8a"><span class="math display">\[
 \mu_{\text{solvent}}^*(P) = \mu_{\text{solvent}}^*(P+\pi) + RT\ln x_{\text{solvent}}.
-\tag{13.25}\]</span></span></li>
-<li><strong>The effect of pressure.</strong> As we saw in <a href="09_Gibbs.html" class="quarto-xref"><span>chapter 9</span></a>, the chemical potential of a liquid increases with pressure as <span class="math inline">\(d\mu=\overline{V}dP\)</span>, and, since liquids are essentially incompressible, <span class="math inline">\(\mu_{\text{solvent}}^*(P+\pi)-\mu_{\text{solvent}}^*(P)=\overline{V}\pi\)</span>, where <span class="math inline">\(\overline{V}\)</span> is the molar volume of the solvent. Replacing into <a href="#eq-coll8a" class="quarto-xref">eq.&nbsp;<span>13.25</span></a>: <span id="eq-coll8b"><span class="math display">\[
-\overline{V}\pi = -RT\ln x_{\text{solvent}}.
 \tag{13.26}\]</span></span></li>
+<li><strong>The effect of pressure.</strong> As we saw in <a href="09_Gibbs.html" class="quarto-xref"><span>chapter 9</span></a>, the chemical potential of a liquid increases with pressure as <span class="math inline">\(d\mu=\overline{V}dP\)</span>, and, since liquids are essentially incompressible, <span class="math inline">\(\mu_{\text{solvent}}^*(P+\pi)-\mu_{\text{solvent}}^*(P)=\overline{V}\pi\)</span>, where <span class="math inline">\(\overline{V}\)</span> is the molar volume of the solvent. Replacing into <a href="#eq-coll8a" class="quarto-xref">eq.&nbsp;<span>13.26</span></a>: <span id="eq-coll8b"><span class="math display">\[
+\overline{V}\pi = -RT\ln x_{\text{solvent}}.
+\tag{13.27}\]</span></span></li>
 <li><strong>The dilute-solution approximation.</strong> Using again <span class="math inline">\(-\ln x_{\text{solvent}} \approx x_{\text{solute}} \approx n_{\text{solute}}/n_{\text{solvent}}\)</span>, and noticing that <span class="math inline">\(n_{\text{solvent}}\overline{V}\)</span> is essentially the volume of the solution, <span class="math inline">\(V\)</span>: <span id="eq-coll8"><span class="math display">\[
 \pi = \frac{n_{\text{solute}}}{V}RT = i\,cRT,
-\tag{13.27}\]</span></span> where <span class="math inline">\(c\)</span> is the molar concentration of the solute, and we have introduced again the van ’t Hoff factor, <span class="math inline">\(i\)</span>, to account for dissociation.</li>
+\tag{13.28}\]</span></span> where <span class="math inline">\(c\)</span> is the molar concentration of the solute, and we have introduced again the van ’t Hoff factor, <span class="math inline">\(i\)</span>, to account for dissociation.</li>
 </ol>
-<p><a href="#eq-coll8" class="quarto-xref">Eq.&nbsp;<span>13.27</span></a> was proposed by van ’t Hoff, and it is remarkably similar to the ideal gas law. Morse later refined it by using the molality instead of the molar concentration, which gives better results at higher concentrations.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Osmotic pressures can be surprisingly large: a solution with <span class="math inline">\(c=0.10\;\text{mol/L}\)</span> of sugar at room temperature has <span class="math inline">\(\pi \approx 2.5\;\text{bar}\)</span>, enough to push a column of water up by about 25 m. This is why intravenous fluids must have the same osmotic pressure as blood: if the solution were too dilute, water would flow into the red blood cells, making them swell and burst. If we apply to the solution side a pressure higher than <span class="math inline">\(\pi\)</span>, we can reverse the flow and push pure solvent out of the solution. This process, called <em>reverse osmosis</em>, is widely used to obtain drinkable water from seawater.</p>
+<p><a href="#eq-coll8" class="quarto-xref">Eq.&nbsp;<span>13.28</span></a> was proposed by van ’t Hoff, and it is remarkably similar to the ideal gas law. Morse later refined it by using the molality instead of the molar concentration, which gives better results at higher concentrations.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Osmotic pressures can be surprisingly large: a solution with <span class="math inline">\(c=0.10\;\text{mol/L}\)</span> of sugar at room temperature has <span class="math inline">\(\pi \approx 2.5\;\text{bar}\)</span>, enough to push a column of water up by about 25 m. This is why intravenous fluids must have the same osmotic pressure as blood: if the solution were too dilute, water would flow into the red blood cells, making them swell and burst. If we apply to the solution side a pressure higher than <span class="math inline">\(\pi\)</span>, we can reverse the flow and push pure solvent out of the solution. This process, called <em>reverse osmosis</em>, is widely used to obtain drinkable water from seawater.</p>
 </section>
 </section>
-<section id="sec-rev13" class="level2" data-number="13.6">
-<h2 data-number="13.6" class="anchored" data-anchor-id="sec-rev13"><span class="header-section-number">13.6</span> Chapter Review</h2>
-<section id="sec-quest13" class="level3" data-number="13.6.1">
-<h3 data-number="13.6.1" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.6.1</span> Study Questions</h3>
+<section id="sec-eutectic" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="sec-eutectic"><span class="header-section-number">13.6</span> Solid–Liquid Phase Diagrams</h2>
+<p>So far, we have looked at the equilibrium between a liquid solution and its vapor. The same ideas apply to the equilibrium between a liquid solution and a solid. The simplest, and very common, case is that of two substances that mix completely as liquids, but do not mix at all as solids: when the liquid freezes, each solid that forms is pure <span class="math inline">\(\mathrm{A}\)</span> or pure <span class="math inline">\(\mathrm{B}\)</span>. An example is the mixture of naphthalene (<span class="math inline">\(\mathrm{A}\)</span>, the molecule of mothballs) and benzene (<span class="math inline">\(\mathrm{B}\)</span>), whose <span class="math inline">\(Tx_{\text{B}}\)</span> diagram is reported in <a href="#fig-eutectic" class="quarto-xref">figure&nbsp;<span>13.12</span></a>.</p>
+<p>The two curves in this diagram are something we already know: they are melting point depression curves. Starting from pure <span class="math inline">\(\mathrm{A}\)</span>, adding <span class="math inline">\(\mathrm{B}\)</span> lowers the temperature at which solid <span class="math inline">\(\mathrm{A}\)</span> forms, exactly as a solute lowers the melting point of a solvent in the colligative properties section above. Starting from pure <span class="math inline">\(\mathrm{B}\)</span>, adding <span class="math inline">\(\mathrm{A}\)</span> does the same to the melting point of <span class="math inline">\(\mathrm{B}\)</span>. For an ideal solution, each curve is given by the same procedure that we used for the boiling point elevation, <a href="#eq-coll4b" class="quarto-xref">eq.&nbsp;<span>13.22</span></a>, with the enthalpy of fusion in place of the enthalpy of vaporization, and without the dilute-solution approximations:</p>
+<p><span id="eq-idealsolubility"><span class="math display">\[
+\ln x_{\text{A}} = \frac{\Delta_{\text{fus}}H_{\text{A}}}{R}\left(\frac{1}{T_{\text{m}}^{\text{A}}}-\frac{1}{T}\right) \qquad \qquad \ln x_{\text{B}} = \frac{\Delta_{\text{fus}}H_{\text{B}}}{R}\left(\frac{1}{T_{\text{m}}^{\text{B}}}-\frac{1}{T}\right),
+\tag{13.29}\]</span></span></p>
+<p>where each equation gives the composition of the liquid that is in equilibrium with the pure solid at temperature <span class="math inline">\(T\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div id="fig-eutectic" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Temperature versus mole fraction of benzene. A red curve falls from the melting point of naphthalene, about 80 degrees Celsius, at the left axis, and a short red curve falls from the melting point of benzene, about 5.5 degrees Celsius, at the right axis. They meet at the purple eutectic point, at about minus 3.6 degrees Celsius and x B of about 0.87, on a black horizontal line. Above the curves is the liquid; the gray regions below them are liquid plus solid A, on the left, and liquid plus solid B, a small region on the right; below the horizontal line is solid A plus solid B. A purple arrow goes down from a liquid at x B equal to 0.5 to the left curve at about 46 degrees Celsius.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-eutectic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ch13_eutectic.png" class="img-fluid figure-img" style="width:70.0%" alt="Temperature versus mole fraction of benzene. A red curve falls from the melting point of naphthalene, about 80 degrees Celsius, at the left axis, and a short red curve falls from the melting point of benzene, about 5.5 degrees Celsius, at the right axis. They meet at the purple eutectic point, at about minus 3.6 degrees Celsius and x B of about 0.87, on a black horizontal line. Above the curves is the liquid; the gray regions below them are liquid plus solid A, on the left, and liquid plus solid B, a small region on the right; below the horizontal line is solid A plus solid B. A purple arrow goes down from a liquid at x B equal to 0.5 to the left curve at about 46 degrees Celsius.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eutectic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.12: The Temperature–Composition Phase Diagram of Naphthalene (A) and Benzene (B) at 1 atm, Computed with the Ideal Solubility Equation. The Two Solids Do Not Mix, and the Two Melting Point Curves Meet at the Eutectic Point.
+</figcaption>
+</figure>
+</div>
+<p>Let’s follow the purple arrow in <a href="#fig-eutectic" class="quarto-xref">figure&nbsp;<span>13.12</span></a>, cooling a liquid with <span class="math inline">\(x_{\text{B}}=0.5\)</span>:</p>
+<ol type="1">
+<li><strong>The first crystals.</strong> Nothing happens until the liquid reaches the red curve, at about <span class="math inline">\(46\;^\circ\text{C}\)</span>. At this temperature, crystals of <em>pure</em> naphthalene start to form. Notice that this is well below the melting point of pure naphthalene, <span class="math inline">\(80\;^\circ\text{C}\)</span>: the benzene acts as a solute and depresses its melting point.</li>
+<li><strong>The liquid changes composition.</strong> As naphthalene crystallizes, the remaining liquid becomes richer in benzene, and its freezing point drops further. The liquid slides down the red curve, while more and more solid naphthalene forms. At any temperature, the tie line connects pure solid <span class="math inline">\(\mathrm{A}\)</span> (on the left axis) to the liquid on the red curve, and the lever rule, <a href="#eq-leverrule" class="quarto-xref">eq.&nbsp;<span>13.7</span></a>, tells us how much of each we have.</li>
+<li><strong>The eutectic point.</strong> The liquid reaches the point where the two curves meet, called the <strong>eutectic point</strong>, at about <span class="math inline">\(-3.6\;^\circ\text{C}\)</span> and <span class="math inline">\(x_{\text{B}} = 0.87\)</span>. Here the liquid is in equilibrium with <em>both</em> solids. With three phases and two components, the phase rule leaves only one degree of freedom, which is used by the fixed pressure, so the temperature cannot change until all the liquid has frozen into a fine mixture of the two solids.</li>
+<li><strong>Below the eutectic temperature</strong>, no liquid can exist at any composition.</li>
+</ol>
+<p>The eutectic temperature is the lowest temperature at which a liquid can exist in the mixture, lower than the melting points of both pure components. The word comes from the Greek for “easily melted,” and eutectic mixtures are used exactly for this reason. Tin–lead solders melt at about <span class="math inline">\(183\;^\circ\text{C}\)</span>, well below the melting points of tin and lead, and salt melts ice on roads because the water–sodium chloride mixture has a eutectic at about <span class="math inline">\(-21\;^\circ\text{C}\)</span>: as long as the temperature is above it, salt and ice in contact turn into a liquid brine.</p>
+</section>
+<section id="sec-rev13" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="sec-rev13"><span class="header-section-number">13.7</span> Chapter Review</h2>
+<section id="key-ideas" class="level3" data-number="13.7.1">
+<h3 data-number="13.7.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">13.7.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Raoult’s law:</strong> in an ideal solution, <span class="math inline">\(P_i = x_i P_i^*\)</span>, and the vapor is richer in the more volatile component.</li>
+<li><strong>Phase diagrams</strong> (<span class="math inline">\(Px_{\text{B}}\)</span> and <span class="math inline">\(Tx_{\text{B}}\)</span>) show the liquidus and dew point lines; tie lines connect phases in equilibrium, and the <strong>lever rule</strong>, <span class="math inline">\(n_{\text{l}}(z_{\text{B}} - x_{\text{B}}) = n_{\text{v}}(y_{\text{B}} - z_{\text{B}})\)</span>, gives how much of each.</li>
+<li><strong>Fractional distillation</strong> repeats evaporation and condensation to separate the components, but it cannot go past an azeotrope.</li>
+<li><strong>Non-ideal solutions:</strong> dilute solutes follow Henry’s law, <span class="math inline">\(P_i = k_{\text{H},i}x_i\)</span>; deviations from Raoult’s law are described by the activity, <span class="math inline">\(a_i = \gamma_i x_i\)</span>.</li>
+<li><strong>Colligative properties</strong> (vapor pressure lowering, boiling point elevation, melting point depression, osmotic pressure) depend only on the number of solute particles, because the solute lowers the chemical potential of the solvent.</li>
+<li><strong>Eutectics:</strong> when two solids do not mix, their melting point curves meet at the eutectic point, the lowest temperature at which a liquid can exist.</li>
+</ul>
+</section>
+<section id="sec-quest13" class="level3" data-number="13.7.2">
+<h3 data-number="13.7.2" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.7.2</span> Study Questions</h3>
 <p><strong>1. What is an ideal solution?</strong></p>
 <ol type="a">
 <li>A solution where the interactions between different molecules (<span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{B}\)</span>) are, on average, the same as those between equal molecules (<span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(\mathrm{B}\)</span>–<span class="math inline">\(\mathrm{B}\)</span>).</li>
@@ -1063,6 +1126,7 @@ Figure&nbsp;13.11: Osmotic Pressure of a Solution.
 <li id="fn2"><p>Molality is preferred over molarity because it does not depend on the temperature, since masses, unlike volumes, do not change when the solution is heated or cooled.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>This is a plausibility argument rather than a rigorous proof, since we will use two approximations that are valid only for dilute solutions.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>The Morse equation reads <span class="math inline">\(\pi = imRT\)</span>. For dilute aqueous solutions, molality and molarity are nearly equal, since 1 kg of water occupies about 1 L.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><a href="#eq-idealsolubility" class="quarto-xref">Eq.&nbsp;<span>13.29</span></a> is also called the <em>ideal solubility</em> equation, since it gives the maximum mole fraction of a solid that can dissolve in a liquid at temperature <span class="math inline">\(T\)</span>, if the solution is ideal.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1664,7 +1728,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./15_Kinetics.html" class="pagination-link" aria-label="Chemical Kinetics">
+      <a href="./14_Kinetics.html" class="pagination-link" aria-label="Chemical Kinetics">
         <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

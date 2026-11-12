@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>8&nbsp; Thermodynamic Potentials – The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -494,7 +494,8 @@ window.Quarto = {
   <li><a href="#sec-maxwell" id="toc-sec-maxwell" class="nav-link" data-scroll-target="#sec-maxwell"><span class="header-section-number">8.4</span> Maxwell Relations</a></li>
   <li><a href="#sec-rev8" id="toc-sec-rev8" class="nav-link" data-scroll-target="#sec-rev8"><span class="header-section-number">8.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest8" id="toc-sec-quest8" class="nav-link" data-scroll-target="#sec-quest8"><span class="header-section-number">8.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">8.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest8" id="toc-sec-quest8" class="nav-link" data-scroll-target="#sec-quest8"><span class="header-section-number">8.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/08_Potentials.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -804,8 +805,8 @@ V &amp;= \left(\frac{\partial H}{\partial P} \right)_{S,\{n_i\}} = \left(\frac{\
 \Delta S = nR \ln \frac{V_f}{V_i} \qquad \text{(constant } T\text{)},
 \tag{8.20}\]</span></span></p>
 <p>which is exactly the result that we obtained in <a href="07_ThirdLaw.html#eq-sigconsttV" class="quarto-xref">eq.&nbsp;<span>7.4</span></a>, using the heat exchanged along a reversible path. With the Maxwell relation, we obtained it without ever thinking about heat, starting only from the ideal gas law.</p>
-<div id="exr-maxwellEx" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8.1</strong></span> Derive the last Maxwell relation in <a href="#eq-maxrelf" class="quarto-xref">eq.&nbsp;<span>8.19</span></a>.</p>
+<div id="exm-maxwellEx" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8.1 (Deriving a Maxwell relation)</strong></span> Derive the last Maxwell relation in <a href="#eq-maxrelf" class="quarto-xref">eq.&nbsp;<span>8.19</span></a>.</p>
 <p><em>Solution:</em> We can start our derivation from the definitions of <span class="math inline">\(V\)</span> and <span class="math inline">\(S\)</span> as partial derivatives of <span class="math inline">\(G\)</span>:</p>
 <p><span class="math display">\[
 V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \qquad -S = \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}},
@@ -834,8 +835,18 @@ V = \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}} \qquad \text{and:} \
 </section>
 <section id="sec-rev8" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="sec-rev8"><span class="header-section-number">8.5</span> Chapter Review</h2>
-<section id="sec-quest8" class="level3" data-number="8.5.1">
-<h3 data-number="8.5.1" class="anchored" data-anchor-id="sec-quest8"><span class="header-section-number">8.5.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">8.5.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Fundamental equation:</strong> <span class="math inline">\(dU = T\,dS - P\,dV + \sum_i \mu_i\,dn_i\)</span>. It contains only state functions, so it applies to reversible and irreversible processes alike.</li>
+<li><strong>Chemical potential:</strong> <span class="math inline">\(\mu_i\)</span> measures how the energy changes when moles of species <span class="math inline">\(i\)</span> are added.</li>
+<li><strong>Legendre transformations</strong> swap a variable with its conjugate, giving <span class="math inline">\(H = U + PV\)</span>, <span class="math inline">\(A = U - TS\)</span>, and <span class="math inline">\(G = U - TS + PV\)</span>, each with its own natural variables.</li>
+<li><strong>Spontaneity criteria:</strong> at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(V\)</span>, the Helmholtz energy decreases (<span class="math inline">\(dA &lt; 0\)</span>); at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, the Gibbs energy decreases (<span class="math inline">\(dG &lt; 0\)</span>).</li>
+<li><strong>Maxwell relations</strong> follow from the equality of mixed second derivatives, and they turn hard-to-measure derivatives of <span class="math inline">\(S\)</span> into easy-to-measure ones of <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(T\)</span>.</li>
+</ul>
+</section>
+<section id="sec-quest8" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="sec-quest8"><span class="header-section-number">8.5.2</span> Study Questions</h3>
 <p><strong>1. What is the fundamental equation of thermodynamics for a closed system?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(dU = TdS + PdV\)</span>.</li>

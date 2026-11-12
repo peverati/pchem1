@@ -18,7 +18,7 @@ book:
   title: "The Live Textbook of Physical Chemistry 1"
   output-file: pchem1
   author: "Roberto Peverati"
-  description: "Textbook for the P-Chem 1 class at Florida Tech"
+  description: "Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics"   # tentative title, same as the PDF
   date: today
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/peverati/pchem1
@@ -58,7 +58,7 @@ book:
     - 11_NonIdealGases.qmd
     - 12_PhaseEquilibrium.qmd
     - 13_MCPhaseDiagrams.qmd
-    - 15_Kinetics.qmd
+    - 14_Kinetics.qmd
   appendices:
     - A1_Appendix.qmd
 
@@ -68,7 +68,7 @@ crossref:
   tbl-prefix: table
   sec-prefix: section
   def-prefix: definition
-  exr-prefix: exercise
+  exm-prefix: example
 
 format:
   html:
@@ -86,6 +86,7 @@ format:
     page-layout: full   # no right-hand column: the content uses the space
     fig-align: center
   pdf:
+    subtitle: "Thermodynamics, Equilibria, and Chemical Kinetics"   # print subtitle (tentative)
     documentclass: scrbook
     classoption: [oneside]
     geometry:
@@ -100,8 +101,14 @@ format:
         \usepackage{pdfpages}
         \usepackage[version=4]{mhchem}
         \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+        \subject{The Live Textbook of Physical Chemistry, Volume 1}
+        \AtBeginDocument{\title{Which Way, and How Fast}}  % print title, tentative (the website keeps the series name)
         \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
         \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
         \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
         \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+        % worked examples (exm-) in a green frame, as on the website
+        \usepackage[most]{tcolorbox}
+        \AtBeginDocument{\tcolorboxenvironment{definition}{breakable, enhanced, colback=blue!4!white, colframe=blue!55!black, boxrule=0.5pt, leftrule=3pt, arc=2pt, left=6pt, right=6pt}}
+        \AtBeginDocument{\tcolorboxenvironment{example}{breakable, enhanced, colback=green!4!white, colframe=green!45!black, boxrule=0.5pt, leftrule=3pt, arc=2pt, left=6pt, right=6pt}}
     fig-pos: "htbp"

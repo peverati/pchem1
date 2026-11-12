@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>10&nbsp; Chemical Equilibrium – The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -389,7 +389,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -460,7 +460,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -489,11 +489,13 @@ window.Quarto = {
    
   <ul>
   <li><a href="#reaction-quotient-and-equilibrium-constant" id="toc-reaction-quotient-and-equilibrium-constant" class="nav-link active" data-scroll-target="#reaction-quotient-and-equilibrium-constant"><span class="header-section-number">10.1</span> Reaction Quotient and Equilibrium Constant</a></li>
-  <li><a href="#temperature-dependence-of-k_texteq" id="toc-temperature-dependence-of-k_texteq" class="nav-link" data-scroll-target="#temperature-dependence-of-k_texteq"><span class="header-section-number">10.2</span> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
-  <li><a href="#pressure-and-composition-dependence-of-k_texteq" id="toc-pressure-and-composition-dependence-of-k_texteq" class="nav-link" data-scroll-target="#pressure-and-composition-dependence-of-k_texteq"><span class="header-section-number">10.3</span> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
-  <li><a href="#sec-rev10" id="toc-sec-rev10" class="nav-link" data-scroll-target="#sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</a>
+  <li><a href="#sec-extent" id="toc-sec-extent" class="nav-link" data-scroll-target="#sec-extent"><span class="header-section-number">10.2</span> Extent of Reaction and the Minimum of the Gibbs Energy</a></li>
+  <li><a href="#temperature-dependence-of-k_texteq" id="toc-temperature-dependence-of-k_texteq" class="nav-link" data-scroll-target="#temperature-dependence-of-k_texteq"><span class="header-section-number">10.3</span> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+  <li><a href="#pressure-and-composition-dependence-of-k_texteq" id="toc-pressure-and-composition-dependence-of-k_texteq" class="nav-link" data-scroll-target="#pressure-and-composition-dependence-of-k_texteq"><span class="header-section-number">10.4</span> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></a></li>
+  <li><a href="#sec-rev10" id="toc-sec-rev10" class="nav-link" data-scroll-target="#sec-rev10"><span class="header-section-number">10.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">10.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/10_ChemicalEquilibrium.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -593,21 +595,74 @@ K_P = K_y\cdot \left(\frac{P}{P^\standardstate}\right)^{\Delta \nu} \qquad \qqua
 \tag{10.14}\]</span></span></p>
 <p>and since <span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate\)</span> depends on <span class="math inline">\(T,P\)</span> and <span class="math inline">\(\{n_i\}\)</span>, it is useful to explore how <span class="math inline">\(K_{\text{eq}}\)</span> depends on those variables as well.</p>
 </section>
-<section id="temperature-dependence-of-k_texteq" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="temperature-dependence-of-k_texteq"><span class="header-section-number">10.2</span> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></h2>
+<section id="sec-extent" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sec-extent"><span class="header-section-number">10.2</span> Extent of Reaction and the Minimum of the Gibbs Energy</h2>
+<p>We said that a reaction stops when <span class="math inline">\(\Delta_{\text{rxn}} G = 0\)</span>. But what exactly is <span class="math inline">\(\Delta_{\text{rxn}} G\)</span> while a reaction is still going? It is not the difference between two finished states, as the <span class="math inline">\(\Delta\)</span> symbol might suggest. To see what it really is, we need a variable that tells us how far a reaction has gone.</p>
+<p>Let’s go back to our prototypical reaction, <a href="#eq-reaction4" class="quarto-xref">eq.&nbsp;<span>10.1</span></a>. Every time the reaction proceeds, the amounts of all species change together, in the ratios set by the stoichiometric coefficients: if <span class="math inline">\(a\)</span> moles of <span class="math inline">\(\mathrm{A}\)</span> disappear, <span class="math inline">\(c\)</span> moles of <span class="math inline">\(\mathrm{C}\)</span> must appear. We can capture all these changes with a single variable, the <strong>extent of reaction</strong>, <span class="math inline">\(\xi\)</span> (the Greek letter “xi”), defined by:</p>
+<p><span id="eq-extentdef"><span class="math display">\[
+dn_i = \nu_i \, d\xi \qquad \text{or, after integration,} \qquad n_i = n_{i,0} + \nu_i \, \xi,
+\tag{10.15}\]</span></span></p>
+<p>where <span class="math inline">\(n_{i,0}\)</span> is the amount of species <span class="math inline">\(i\)</span> at the start, and <span class="math inline">\(\nu_i\)</span> is its stoichiometric number (negative for reactants, positive for products, as in <a href="04_Thermochemistry.html#def-nui" class="quarto-xref">definition&nbsp;<span>4.2</span></a>). The extent of reaction is measured in moles, and it is the same number for every species: <span class="math inline">\(\xi=0\)</span> at the start, and <span class="math inline">\(\xi = 1\;\text{mol}\)</span> when the reaction has gone “once” as written, with <span class="math inline">\(a\)</span> moles of <span class="math inline">\(\mathrm{A}\)</span> and <span class="math inline">\(b\)</span> moles of <span class="math inline">\(\mathrm{B}\)</span> turned into <span class="math inline">\(c\)</span> moles of <span class="math inline">\(\mathrm{C}\)</span> and <span class="math inline">\(d\)</span> moles of <span class="math inline">\(\mathrm{D}\)</span>.</p>
+<p>At constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, the change in Gibbs energy of the reacting mixture is given by the last line of <a href="08_Potentials.html#eq-dhagchem1" class="quarto-xref">eq.&nbsp;<span>8.16</span></a> with <span class="math inline">\(dT=dP=0\)</span>. Replacing <span class="math inline">\(dn_i\)</span> with <a href="#eq-extentdef" class="quarto-xref">eq.&nbsp;<span>10.15</span></a>, we get:</p>
+<p><span id="eq-dGdxi"><span class="math display">\[
+dG = \sum_i \mu_i \, dn_i = \left( \sum_i \nu_i \mu_i \right) d\xi
+\quad \longrightarrow \quad
+\left( \frac{\partial G}{\partial \xi} \right)_{T,P} = \sum_i \nu_i \mu_i = \Delta_{\text{rxn}} G,
+\tag{10.16}\]</span></span></p>
+<p>where in the last step we recognized the same combination of chemical potentials that appears in <a href="#eq-chemeq2" class="quarto-xref">eq.&nbsp;<span>10.3</span></a>. This is the meaning of <span class="math inline">\(\Delta_{\text{rxn}} G\)</span>: it is the <strong>slope</strong> of the Gibbs energy of the mixture as a function of the extent of reaction. Its value changes as the reaction proceeds, because the chemical potentials depend on the composition.</p>
+<div id="fig-Gxi" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of the Gibbs energy of the reacting mixture, relative to pure N2O4, against the extent of reaction from 0 to 1 mole. A gray dashed straight line rises from 0 at pure N2O4 to about plus 2.8 kilojoules at pure NO2, labeled no mixing. The blue curve starts at 0, drops steeply, reaches a minimum of about minus 1.4 kilojoules at an extent of reaction of about 0.27 mole, marked in purple as equilibrium where the reaction Gibbs energy is zero, and then rises to plus 2.8 kilojoules at pure NO2. Left of the minimum the curve is labeled reaction Gibbs energy less than zero, forward spontaneous; right of the minimum it is labeled greater than zero, reverse spontaneous.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Gxi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ch10_G_vs_xi.png" class="img-fluid figure-img" style="width:80.0%" alt="Plot of the Gibbs energy of the reacting mixture, relative to pure N2O4, against the extent of reaction from 0 to 1 mole. A gray dashed straight line rises from 0 at pure N2O4 to about plus 2.8 kilojoules at pure NO2, labeled no mixing. The blue curve starts at 0, drops steeply, reaches a minimum of about minus 1.4 kilojoules at an extent of reaction of about 0.27 mole, marked in purple as equilibrium where the reaction Gibbs energy is zero, and then rises to plus 2.8 kilojoules at pure NO2. Left of the minimum the curve is labeled reaction Gibbs energy less than zero, forward spontaneous; right of the minimum it is labeled greater than zero, reverse spontaneous.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Gxi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: Gibbs energy of the mixture as a function of the extent of reaction for <span class="math inline">\(\mathrm{N_2O_4}_{(g)} \rightleftarrows 2\,\mathrm{NO_2}_{(g)}\)</span> at 298 K and 1 bar, starting from 1 mol of <span class="math inline">\(\mathrm{N_2O_4}\)</span>, computed from the standard Gibbs energies of formation in the appendix. The dashed line is the Gibbs energy if reactants and products were kept separate. Mixing lowers the Gibbs energy and creates a minimum, at the equilibrium extent of reaction.
+</figcaption>
+</figure>
+</div>
+<p>Let’s look at what <a href="#fig-Gxi" class="quarto-xref">figure&nbsp;<span>10.1</span></a> tells us about the dissociation of dinitrogen tetroxide into nitrogen dioxide:</p>
+<ol type="1">
+<li><strong>The slope decides the direction.</strong> To the left of the minimum, the slope is negative, <span class="math inline">\(\Delta_{\text{rxn}} G&lt;0\)</span>, and the Gibbs energy decreases if the reaction moves forward. To the right of the minimum, the slope is positive, and the reaction runs spontaneously in reverse. Either way, the mixture slides downhill toward the bottom of the curve.</li>
+<li><strong>Equilibrium is the bottom of the curve.</strong> At the minimum, the slope is zero, <span class="math inline">\(\Delta_{\text{rxn}} G = 0\)</span>, and the reaction has no reason to go in either direction. This is the chemical equilibrium of <a href="#eq-chemeq6" class="quarto-xref">eq.&nbsp;<span>10.7</span></a>, and its position, <span class="math inline">\(\xi_{\text{eq}}\)</span>, gives the equilibrium composition.</li>
+<li><strong>Mixing is what makes a minimum.</strong> If reactants and products stayed separate, the Gibbs energy would follow the dashed straight line, and the reaction would go either all the way or not at all, depending on the sign of <span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate\)</span>. Because the gases mix, the Gibbs energy drops below this line by the Gibbs energy of mixing, which is always negative (<a href="09_Gibbs.html#eq-dgconstn9" class="quarto-xref">eq.&nbsp;<span>9.27</span></a>). This is why some products always form, even when <span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate&gt;0\)</span>, as in this case, and why most reactions stop at a mixture instead of going to completion.</li>
+<li><strong><span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate\)</span> is the slope of the dashed line,</strong> that is, the Gibbs energy difference between the pure products and the pure reactants, each at standard pressure. It decides <em>where</em> the minimum falls, through <span class="math inline">\(K_{\text{eq}}\)</span>, but it is not the quantity that drives the reaction at a given moment: that is <span class="math inline">\(\Delta_{\text{rxn}} G\)</span>.</li>
+</ol>
+<div id="exm-N2O4" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.1 (Equilibrium composition of dinitrogen tetroxide)</strong></span> One mole of <span class="math inline">\(\mathrm{N_2O_4}_{(g)}\)</span> is kept at <span class="math inline">\(298\;\text{K}\)</span> and a total pressure of <span class="math inline">\(1\;\text{bar}\)</span>, where it partially dissociates into <span class="math inline">\(\mathrm{NO_2}_{(g)}\)</span>. Using <span class="math inline">\(\Delta_{\text{f}} G^\standardstate = 99.8\;\text{kJ/mol}\)</span> for <span class="math inline">\(\mathrm{N_2O_4}_{(g)}\)</span> and <span class="math inline">\(51.3\;\text{kJ/mol}\)</span> for <span class="math inline">\(\mathrm{NO_2}_{(g)}\)</span>, find the extent of reaction and the composition at equilibrium.</p>
+<p><em>Solution:</em> The standard Gibbs energy of reaction is:</p>
+<p><span class="math display">\[
+\Delta_{\text{rxn}} G^\standardstate = 2(51.3) - 99.8 = 2.8\;\text{kJ/mol},
+\]</span></p>
+<p>and from <a href="#eq-chemeqdg0" class="quarto-xref">eq.&nbsp;<span>10.8</span></a>:</p>
+<p><span class="math display">\[
+K_P = \exp\left(-\frac{\Delta_{\text{rxn}} G^\standardstate}{RT}\right) = \exp\left(-\frac{2\,800}{8.314 \times 298}\right) = 0.323.
+\]</span></p>
+<p>Using <a href="#eq-extentdef" class="quarto-xref">eq.&nbsp;<span>10.15</span></a> with <span class="math inline">\(n_{\mathrm{N_2O_4},0}=1\;\text{mol}\)</span> and <span class="math inline">\(n_{\mathrm{NO_2},0}=0\)</span>, at a generic extent of reaction we have <span class="math inline">\(n_{\mathrm{N_2O_4}} = 1-\xi\)</span>, <span class="math inline">\(n_{\mathrm{NO_2}} = 2\xi\)</span>, and a total of <span class="math inline">\(1+\xi\)</span> moles of gas. With a total pressure of <span class="math inline">\(1\;\text{bar}\)</span>, the partial pressures are equal to the mole fractions, and the equilibrium constant becomes:</p>
+<p><span class="math display">\[
+K_P = \frac{P_{\mathrm{NO_2}}^2}{P_{\mathrm{N_2O_4}}} = \frac{\left(\frac{2\xi}{1+\xi}\right)^2}{\frac{1-\xi}{1+\xi}} = \frac{4\xi^2}{1-\xi^2}.
+\]</span></p>
+<p>Solving for <span class="math inline">\(\xi\)</span> gives:</p>
+<p><span class="math display">\[
+\xi_{\text{eq}} = \sqrt{\frac{K_P}{4+K_P}} = \sqrt{\frac{0.323}{4.323}} = 0.273\;\text{mol}.
+\]</span></p>
+<p>At equilibrium, we have <span class="math inline">\(0.727\;\text{mol}\)</span> of <span class="math inline">\(\mathrm{N_2O_4}\)</span> and <span class="math inline">\(0.546\;\text{mol}\)</span> of <span class="math inline">\(\mathrm{NO_2}\)</span>, with mole fractions <span class="math inline">\(y_{\mathrm{N_2O_4}} = 0.571\)</span> and <span class="math inline">\(y_{\mathrm{NO_2}}=0.429\)</span>. This is exactly the position of the minimum in <a href="#fig-Gxi" class="quarto-xref">figure&nbsp;<span>10.1</span></a>. Even though <span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate\)</span> is positive, more than a quarter of the <span class="math inline">\(\mathrm{N_2O_4}\)</span> dissociates, thanks to the Gibbs energy of mixing.</p>
+</div>
+</section>
+<section id="temperature-dependence-of-k_texteq" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="temperature-dependence-of-k_texteq"><span class="header-section-number">10.3</span> Temperature Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></h2>
 <p>To study the temperature dependence of <span class="math inline">\(K_{\text{eq}}\)</span> we can use <a href="#eq-chemeqdgG" class="quarto-xref">eq.&nbsp;<span>10.14</span></a> for the general equilibrium constant and write:</p>
 <p><span id="eq-kptemp1"><span class="math display">\[
 \ln K_{\text{eq}} = -\frac{\Delta G^\standardstate}{RT},
-\tag{10.15}\]</span></span></p>
+\tag{10.17}\]</span></span></p>
 <p>which we can then differentiate with respect to temperature at constant <span class="math inline">\(P,\{n_i\}\)</span> on both sides:</p>
 <p><span id="eq-kptemp2"><span class="math display">\[
 \left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R}  \left[ \frac{\partial \left( \frac{\Delta G^\standardstate}{T} \right)}{\partial T} \right]_{P,\{n_i\}},
-\tag{10.16}\]</span></span></p>
+\tag{10.18}\]</span></span></p>
 <p>and, using the Gibbs–Helmholtz equation (<a href="09_Gibbs.html#eq-gibbshelm" class="quarto-xref">eq.&nbsp;<span>9.9</span></a>) to simplify the right-hand side, becomes:</p>
 <p><span id="eq-kptemp3"><span class="math display">\[
 \left( \frac{\partial \ln K_{\text{eq}}}{\partial T} \right)_{P,\{n_i\}} = -\frac{1}{R} \left( -\frac{\Delta H^\standardstate}{T^2} \right) = \frac{\Delta H^\standardstate}{RT^2},
-\tag{10.17}\]</span></span></p>
-<p>which gives the dependence of <span class="math inline">\(\ln K_{\text{eq}}\)</span> on <span class="math inline">\(T\)</span> that we were looking for. <a href="#eq-kptemp3" class="quarto-xref">Eq.&nbsp;<span>10.17</span></a> is also called <strong>van ’t Hoff equation</strong>,<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> and it is the mathematical expression of Le Chatelier’s principle. The simplest interpretation is as follows:</p>
+\tag{10.19}\]</span></span></p>
+<p>which gives the dependence of <span class="math inline">\(\ln K_{\text{eq}}\)</span> on <span class="math inline">\(T\)</span> that we were looking for. <a href="#eq-kptemp3" class="quarto-xref">Eq.&nbsp;<span>10.19</span></a> is also called <strong>van ’t Hoff equation</strong>,<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> and it is the mathematical expression of Le Chatelier’s principle. The simplest interpretation is as follows:</p>
 <ul>
 <li>For an exothermic reaction (<span class="math inline">\(\Delta H^\standardstate &lt; 0\)</span>): <span class="math inline">\(K_{\text{eq}}\)</span> will decrease as the temperature increases.</li>
 <li>For an endothermic reaction (<span class="math inline">\(\Delta H^\standardstate &gt; 0\)</span>): <span class="math inline">\(K_{\text{eq}}\)</span> will increase as the temperature increases.</li>
@@ -615,11 +670,11 @@ K_P = K_y\cdot \left(\frac{P}{P^\standardstate}\right)^{\Delta \nu} \qquad \qqua
 <p>If we integrate the van ’t Hoff equation between two arbitrary points at constant <span class="math inline">\(P\)</span>, and assuming constant <span class="math inline">\(\Delta H^\standardstate\)</span>, we obtain the following:</p>
 <p><span id="eq-kptemp4"><span class="math display">\[
 \int_1^2 d \ln K_{\text{eq}} = \frac{\Delta H^\standardstate}{R} \int_1^2 \frac{dT}{T^2},
-\tag{10.18}\]</span></span></p>
+\tag{10.20}\]</span></span></p>
 <p>which leads to the linear equation:</p>
 <p><span id="eq-vthoffeqI"><span class="math display">\[
 \ln K_{\text{eq}}(2) = \ln K_{\text{eq}}(1) - \frac{\Delta H^\standardstate}{R} \left( \frac{1}{T_2}-\frac{1}{T_1} \right),
-\tag{10.19}\]</span></span></p>
+\tag{10.21}\]</span></span></p>
 <p>which is the equation that produces the so-called <strong>van ’t Hoff plots</strong>, from which <span class="math inline">\(\Delta H^\standardstate\)</span> can be experimentally determined:</p>
 <div id="fig-vthoffplt" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two van 't Hoff plots of ln K versus 1 over T, each with two points labeled 1 and 2. Left, endothermic reaction: a blue line with negative slope, equal to minus the standard reaction enthalpy over R. Right, exothermic reaction: a red line with positive slope.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -627,20 +682,20 @@ K_P = K_y\cdot \left(\frac{P}{P^\standardstate}\right)^{\Delta \nu} \qquad \qqua
 <img src="img/ch10_vanthoff.png" class="img-fluid figure-img" style="width:85.0%" alt="Two van 't Hoff plots of ln K versus 1 over T, each with two points labeled 1 and 2. Left, endothermic reaction: a blue line with negative slope, equal to minus the standard reaction enthalpy over R. Right, exothermic reaction: a red line with positive slope.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vthoffplt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.1: Van ’t Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reaction at Constant P.
+Figure&nbsp;10.2: Van ’t Hoff Plots for an Endothermic (Left, Blue) and an Exothermic (Right, Red) Reaction at Constant P.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="pressure-and-composition-dependence-of-k_texteq" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="pressure-and-composition-dependence-of-k_texteq"><span class="header-section-number">10.3</span> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></h2>
+<section id="pressure-and-composition-dependence-of-k_texteq" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="pressure-and-composition-dependence-of-k_texteq"><span class="header-section-number">10.4</span> Pressure and Composition Dependence of <span class="math inline">\(K_{\text{eq}}\)</span></h2>
 <p>While <span class="math inline">\(K_P\)</span> is independent of both total pressure and number of moles for an ideal gas, the same is not necessarily true for the other equilibrium constants.</p>
 <p><span id="eq-kppni"><span class="math display">\[
 \left( \frac{\partial K_P}{\partial P} \right)_{T,\{n_i\}} = 0 \qquad \qquad \left( \frac{\partial K_P}{\partial n_i} \right)_{T,P} =0.
-\tag{10.20}\]</span></span></p>
+\tag{10.22}\]</span></span></p>
 <p>For example, it is easy to look at <a href="#eq-kxkcdef3" class="quarto-xref">eq.&nbsp;<span>10.13</span></a> and determine that <span class="math inline">\(K_y\)</span> usually depends on <span class="math inline">\(P\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Using Dalton’s Law, <a href="09_Gibbs.html#eq-daltonlaw" class="quarto-xref">eq.&nbsp;<span>9.23</span></a>, we can also notice that the equilibrium partial pressures of the reactants and products in a gas-phase reaction can be expressed in terms of their equilibrium mole fractions <span class="math inline">\(y_i\)</span> and the total pressure <span class="math inline">\(P\)</span>. As such, we can use <span class="math inline">\(K_y\)</span> to demonstrate that the equilibrium mole fractions will change when <span class="math inline">\(P\)</span> changes,<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> as it is demonstrated by the following exercise.</p>
-<div id="exr-kpkx" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 10.1</strong></span> Calculate the mole fraction change for the dissociation of <span class="math inline">\(\mathrm{Cl}_{2(g)}\)</span> when the pressure is increased from <span class="math inline">\(P^\standardstate\)</span> to <span class="math inline">\(P_f=2.5 \;\text{bar}\)</span> at constant <span class="math inline">\(T=2\,298\;\mathrm{K}\)</span>, knowing that <span class="math inline">\(\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\)</span> and <span class="math inline">\(\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\)</span>, and remembering that both of these values are tabulated at <span class="math inline">\(T=298\;\text{K}\)</span>.</p>
+<div id="exm-kpkx" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10.2 (Dissociation of chlorine under pressure)</strong></span> Calculate the mole fraction change for the dissociation of <span class="math inline">\(\mathrm{Cl}_{2(g)}\)</span> when the pressure is increased from <span class="math inline">\(P^\standardstate\)</span> to <span class="math inline">\(P_f=2.5 \;\text{bar}\)</span> at constant <span class="math inline">\(T=2\,298\;\mathrm{K}\)</span>, knowing that <span class="math inline">\(\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{Cl}_{(g)}} = 105.3 \;\text{kJ/mol}\)</span> and <span class="math inline">\(\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{Cl}_{(g)}} = 121.3 \;\text{kJ/mol}\)</span>, and remembering that both of these values are tabulated at <span class="math inline">\(T=298\;\text{K}\)</span>.</p>
 <p><em>Solution:</em> Let’s consider the reaction: <span class="math display">\[
 \mathrm{Cl}_{2(g)} \rightleftarrows 2 \mathrm{Cl}_{(g)}
 \]</span></p>
@@ -658,7 +713,7 @@ Figure&nbsp;10.1: Van ’t Hoff Plots for an Endothermic (Left, Blue) and an Exo
 \end{aligned}
 \]</span> Using <a href="#eq-chemeqdg0" class="quarto-xref">eq.&nbsp;<span>10.8</span></a> to calculate <span class="math inline">\(K_P (P^\standardstate,298\;\text{K})\)</span>, we obtain:<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> <span class="math display">\[
 \ln [ K_P (P^\standardstate,298\;\text{K}) ] =  \frac{ - \Delta_{\text{rxn}} G^\standardstate}{RT}  =  \frac{-210.6\times10^3}{8.31 \cdot 298} = - 85.0.
-\]</span> We can now use the integrated van ’t Hoff equation, <a href="#eq-vthoffeqI" class="quarto-xref">eq.&nbsp;<span>10.19</span></a>, to calculate <span class="math inline">\(K_P\)</span> at <span class="math inline">\(T=2\,298\;\text{K}\)</span>: <span class="math display">\[
+\]</span> We can now use the integrated van ’t Hoff equation, <a href="#eq-vthoffeqI" class="quarto-xref">eq.&nbsp;<span>10.21</span></a>, to calculate <span class="math inline">\(K_P\)</span> at <span class="math inline">\(T=2\,298\;\text{K}\)</span>: <span class="math display">\[
 \begin{aligned}
 \ln [K_P (P^\standardstate,&amp;2\,298\;\text{K})] = \ln [K_P (P^\standardstate,298\;\text{K})] \;+ \\ &amp;-\frac{\Delta_{\text{rxn}} H^\standardstate}{R} \left(\frac{1}{2\,298}-\frac{1}{298} \right),
 \end{aligned}
@@ -693,13 +748,23 @@ y_{\mathrm{Cl}_{(g)}}^f=0.507 \quad \xrightarrow \qquad y_{\mathrm{Cl}_{2(g)}}^f
 </div>
 <p>The dependence of <span class="math inline">\(K_{\text{eq}}\)</span> on <span class="math inline">\(P\)</span> highlighted above is another mathematical expression of Le Chatelier’s principle, on this occasion, for changes in pressure. The interpretation for a reaction happening in the gas phase is as follows:</p>
 <ul>
-<li>If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total number of moles of gas (the equilibrium in <a href="#exr-kpkx" class="quarto-xref">exercise&nbsp;<span>10.1</span></a> shifts toward the reactant).</li>
+<li>If the total pressure increases, the equilibrium will shift towards the side of the chemical equation that contains the smallest total number of moles of gas (the equilibrium in <a href="#exm-kpkx" class="quarto-xref">example&nbsp;<span>10.2</span></a> shifts toward the reactant).</li>
 </ul>
 </section>
-<section id="sec-rev10" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</h2>
-<section id="sec-quest10" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</h3>
+<section id="sec-rev10" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="sec-rev10"><span class="header-section-number">10.5</span> Chapter Review</h2>
+<section id="key-ideas" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">10.5.1</span> Key Ideas</h3>
+<ul>
+<li><strong>Reaction Gibbs energy:</strong> <span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^\standardstate + RT\ln Q\)</span>, which changes as the reaction proceeds.</li>
+<li><strong>Extent of reaction:</strong> <span class="math inline">\(\Delta_{\text{rxn}}G = \left(\frac{\partial G}{\partial \xi}\right)_{T,P}\)</span> is the slope of the Gibbs energy of the mixture; equilibrium is the minimum, where <span class="math inline">\(\Delta_{\text{rxn}}G = 0\)</span>. Mixing is what creates the minimum.</li>
+<li><strong>Equilibrium constant:</strong> <span class="math inline">\(\Delta_{\text{rxn}}G^\standardstate = -RT\ln K_{\text{eq}}\)</span>, with <span class="math inline">\(K_{\text{eq}} = \prod_i a_{i,\text{eq}}^{\nu_i}\)</span>; pure liquids and solids have <span class="math inline">\(a=1\)</span>.</li>
+<li><strong>Temperature:</strong> the van ’t Hoff equation, <span class="math inline">\(\frac{d\ln K_{\text{eq}}}{dT} = \frac{\Delta_{\text{rxn}}H^\standardstate}{RT^2}\)</span>, says that <span class="math inline">\(K\)</span> increases with <span class="math inline">\(T\)</span> for endothermic reactions and decreases for exothermic ones.</li>
+<li><strong>Pressure:</strong> <span class="math inline">\(K_P\)</span> does not depend on the pressure, but the composition does, through <span class="math inline">\(K_P = K_y \left(P/P^\standardstate\right)^{\Delta\nu}\)</span>. This is Le Chatelier’s principle in mathematical form.</li>
+</ul>
+</section>
+<section id="sec-quest10" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.5.2</span> Study Questions</h3>
 <p><strong>1. How is the Gibbs energy of a reaction related to the reaction quotient?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(\Delta_{\text{rxn}}G = \Delta_{\text{rxn}}G^{\standardstate} + RT\ln Q\)</span>.</li>

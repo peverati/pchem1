@@ -8,7 +8,7 @@
 
 <meta name="author" content="Roberto Peverati">
 <meta name="dcterms.date" content="2026-11-11">
-<meta name="description" content="Textbook for the P-Chem 1 class at Florida Tech">
+<meta name="description" content="Thermodynamics, Equilibria, and Chemical Kinetics">
 
 <title>The Live Textbook of Physical Chemistry 1</title>
 <style>
@@ -390,7 +390,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_ZerothLaw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Zeroth Law of Thermodynamics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Temperature, Heat, and Work</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -461,7 +461,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Kinetics.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Kinetics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chemical Kinetics</span></span></a>
   </div>
 </li>
@@ -492,8 +492,9 @@ window.Quarto = {
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul class="collapse">
   <li><a href="#authors-note-to-the-august-2024-edition" id="toc-authors-note-to-the-august-2024-edition" class="nav-link" data-scroll-target="#authors-note-to-the-august-2024-edition">Author’s Note to the August 2024 Edition</a></li>
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to use this book</a></li>
-  <li><a href="#a-note-on-units" id="toc-a-note-on-units" class="nav-link" data-scroll-target="#a-note-on-units">A note on units</a></li>
+  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to Use This Book</a></li>
+  <li><a href="#a-note-on-units" id="toc-a-note-on-units" class="nav-link" data-scroll-target="#a-note-on-units">A Note on Units</a></li>
+  <li><a href="#a-note-on-the-use-of-ai" id="toc-a-note-on-the-use-of-ai" class="nav-link" data-scroll-target="#a-note-on-the-use-of-ai">A Note on the Use of AI</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem1/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -505,11 +506,12 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">The Live Textbook of Physical Chemistry 1</h1>
+<p class="subtitle lead">Which Way, and How Fast</p>
 </div>
 
 <div>
   <div class="description">
-    Textbook for the P-Chem 1 class at Florida Tech
+    Thermodynamics, Equilibria, and Chemical Kinetics
   </div>
 </div>
 
@@ -554,18 +556,22 @@ window.Quarto = {
 <p>As usual, if you spot any mistakes, I encourage you to reach out to me at the contacts listed above.</p>
 </section>
 <section id="how-to-use-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to use this book</h2>
+<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to Use This Book</h2>
 <p>If you are a student in my course, please read this book carefully, since everything that will be in your exams is explained here! Since this book is specifically tailored for the CHM 3001 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.</p>
 <blockquote class="blockquote">
-<p>Definitions and exercises are numbered (e.g., Definition 1.1, Exercise 4.1) and are set apart from the rest of the text. Notes and examples are highlighted in this format (indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Exercises are essential for cementing the concepts, and you should attempt to execute them first without looking at the solution. Even if you were able to solve an exercise on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.</p>
+<p>Definitions and worked examples are numbered (e.g., Definition 1.1, Example 4.1) and are set apart from the rest of the text in boxes, blue for definitions and green for examples. Notes are highlighted in this format (indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Worked examples are essential for cementing the concepts, and you should attempt to solve them first without looking at the solution. Even if you were able to solve an example on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.</p>
 </blockquote>
 <p>Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, with a few important tools at its top. Arrows to move between chapters are at the bottom of each page. If you are old-school and prefer a pdf, you can download a printout by clicking on the corresponding icon at the top of the sidebar. If you are <em>really</em> old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the sidebar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find there a link to the raw GitHub source code. Feel free to head to <a href="https://github.com/peverati/pchem1">the GitHub repository of this book</a> and fork it.</p>
 <p>For my students, each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week’s chapter before the lecture on Friday.</p>
 </section>
 <section id="a-note-on-units" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="a-note-on-units">A note on units</h2>
+<h2 class="unnumbered anchored" data-anchor-id="a-note-on-units">A Note on Units</h2>
 <p>In general, we will use SI units or some of their multiples throughout the textbook, lectures, and exercises. For example, temperatures will be measured in kelvin (<span class="math inline">\(\text{K}\)</span>), energetic terms will be measured in either joules (<span class="math inline">\(\text{J}\)</span>) or kilojoules (<span class="math inline">\(\text{kJ}\)</span>), while volumes will be measured in cubic meters, or more often in liters (<span class="math inline">\(\text{L}\)</span>), where <span class="math inline">\(1\,\text{L} = 10^{-3}\,\text{m}^3\)</span>. An important exception is made for pressures, which will be measured in bars (<span class="math inline">\(\text{bar}\)</span>). This exception is not completely unjustified, since bar is still an (unconventional) multiple of the SI unit of pressure, pascal (<span class="math inline">\(\text{Pa}\)</span>), where <span class="math inline">\(1\,\text{bar} = 10^5\,\text{Pa}\)</span>. This choice is made to retain a reasonable similarity with the unit atmosphere (<span class="math inline">\(\text{atm}\)</span>) which is extensively used in several other chemistry textbooks <span class="math inline">\((1\,\text{atm} = 1.013\,\text{bar})\)</span> and in previous physical chemistry courses.</p>
 <p>We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of <span class="math inline">\(273.15\,\text{K}\)</span>. Other unconventional conversions might happen in some of the exercises, with the conversion factors always reported within the exercise itself. Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting <span class="math inline">\(P_{\text{atm}} = 1\,\text{bar},\)</span> rather than <span class="math inline">\(P_{\text{atm}} = 1\,\text{atm} = 1.013\, \text{bar},\)</span> an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.</p>
+</section>
+<section id="a-note-on-the-use-of-ai" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-note-on-the-use-of-ai">A Note on the Use of AI</h2>
+<p>The November 2026 revision of this book was prepared with the help of Claude Code (Anthropic’s Claude Opus 5.5), an AI assistant. The book, its structure, its scope, and its approach to teaching thermodynamics and kinetics are my own, developed over several years of teaching this course. In the revision, I used the AI as an assistant: to proofread the text, to rephrase passages, to draft new sections, figures, examples, and review questions following my outline and instructions, and to write the code for the computed figures. Every change was reviewed, corrected or rewritten, and approved by me, and I take full responsibility for the content of the book, including any remaining errors.</p>
 <blockquote class="blockquote">
 <p>This live open textbook is distributed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a> and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library. Third-party images keep their own licenses, as credited in their captions or footnotes. The scripts used to build the book are available under the <a href="https://opensource.org/license/mit">MIT License</a>.</p>
 </blockquote>

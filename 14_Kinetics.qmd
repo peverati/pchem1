@@ -1,19 +1,20 @@
 ---
 aliases:
   - Kinetics.html
+  - 15_Kinetics.html
 ---
 
 # Chemical Kinetics {#sec-Kinetics}
-From thermodynamics, we can determine the spontaneity of a reaction and its extent, using $\Delta G$ and $K_{\text{eq}}$, respectively. However, thermodynamics does not provide any information on how *fast* the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics. 
+From thermodynamics, we can determine the spontaneity of a reaction and its extent, using $\Delta G$ and $K_{\text{eq}}$, respectively. However, thermodynamics does not provide any information on how *fast* the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.
 
 A chemical kinetics study aims to find the *rate* of a reaction and to find the microscopic steps that compose it, determining its *mechanism*. In this last chapter, we will therefore leave equilibrium behind and look at how concentrations change with time, how we can measure the rate of a reaction, and why reactions speed up when we heat them.
 
-## Differential and integrated rate laws {#sec-diffintk}
-The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, $k$,  called the *rate coefficient*, and several parameters found at the exponent of the concentrations of the reactants, and are called *reaction orders*. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The rate coefficient is usually represented with the lowercase letter $k$, and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter $K$. Another useful concept in kinetics is the half-life, usually abbreviated with $t_{1/2}$. The half-life is defined as the time required to reach half of the initial reactant concentration. 
+## Differential and Integrated Rate Laws {#sec-diffintk}
+The rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, $k$,  called the *rate coefficient*, and several parameters found at the exponent of the concentrations of the reactants, and are called *reaction orders*. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The rate coefficient is usually represented with the lowercase letter $k$, and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter $K$. Another useful concept in kinetics is the half-life, usually abbreviated with $t_{1/2}$. The half-life is defined as the time required to reach half of the initial reactant concentration.
 
 A reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant's individual orders and is, at most, equal to three. The number of molecules that take part in an elementary step is called its *molecularity*: an elementary step involving one molecule is *unimolecular*, one involving two molecules is *bimolecular*, and one involving three molecules is *termolecular*. Keep in mind that the order is an experimental property of the rate law, while the molecularity describes a single microscopic step: the two coincide only for elementary reactions. We examine in detail the four most common reaction orders below.
 
-### Zeroth-order reaction
+### Zeroth-Order Reaction
 For a zeroth-order reaction, the reaction rate is independent of the concentration of a reactant. In other words, if we have a reaction of the type:
 
 $$
@@ -26,7 +27,7 @@ $$
 - \frac{d[\mathrm{A}]}{dt}=k_0 [\mathrm{A}]^0 = k_0,
 $$ {#eq-kin2}
 
-which shows that any change in the concentration of $\mathrm{A}$ will have no effect on the speed of the reaction. The minus sign on the left-hand side is required because the rate is always defined as a positive quantity, while the derivative is negative because the concentration of the reactant is diminishing with time. 
+which shows that any change in the concentration of $\mathrm{A}$ will have no effect on the speed of the reaction. The minus sign on the left-hand side is required because the rate is always defined as a positive quantity, while the derivative is negative because the concentration of the reactant is diminishing with time.
 Separating the variables $[\mathrm{A}]$ and $t$ of @eq-kin2 and integrating both sides, we obtain the integrated rate law for a zeroth-order reaction as:
 
 $$
@@ -37,7 +38,7 @@ $$
 \end{aligned}
 $$ {#eq-kin3}
 
-Using the integrated rate law, we notice that the concentration of the reactant diminishes linearly with respect to time. A plot of $[\mathrm{A}]$ as a function of $t$, therefore, will result in a straight line with a slope equal to $-k_0$, as in the plot of @Fig-figk1. 
+Using the integrated rate law, we notice that the concentration of the reactant diminishes linearly with respect to time. A plot of $[\mathrm{A}]$ as a function of $t$, therefore, will result in a straight line with a slope equal to $-k_0$, as in the plot of @Fig-figk1.
 
 
 ![Reaction Rate Plot for a Zeroth-Order Reaction.](img/ch14_zeroth.png){#fig-figk1 fig-alt="Concentration of A versus time for a zeroth-order reaction: a straight line that decreases with slope minus k0 and reaches zero." width="70%"}
@@ -55,7 +56,7 @@ $$ {#eq-kin4}
 
 Zeroth-order reactions are common in several biochemical processes catalyzed by enzymes, such as the oxidation of ethanol to acetaldehyde in the liver by the alcohol dehydrogenase enzyme, which is zero-order in ethanol.
 
-### First-order reaction
+### First-Order Reaction
 In a first-order reaction, the rate is proportional to the concentration of a single reactant. If a first-order reaction is elementary, it involves a single molecule, and it is unimolecular (for example, an isomerization or a radioactive decay). However, many first-order reactions are not elementary, so we should not use the two words as synonyms. As for the previous case, if we consider a reaction of the type:
 
 $$
@@ -78,7 +79,7 @@ $$
 \end{aligned}
 $$ {#eq-kin7}
 
-Using the integrated rate law to plot the concentration of the reactant, $[\mathrm{A}]$, as a function of time, $t$, we obtain an exponential decay, as in @Fig-figk2. 
+Using the integrated rate law to plot the concentration of the reactant, $[\mathrm{A}]$, as a function of time, $t$, we obtain an exponential decay, as in @Fig-figk2.
 
 
 ![Reaction Rate Plot for a First-Order Reaction.](img/ch14_first.png){#fig-figk2 fig-alt="Concentration of A versus time for a first-order reaction: an exponential decay that approaches zero." width="70%"}
@@ -99,9 +100,9 @@ t_{1/2} &= \frac{\ln 2}{k_1}.
 \end{aligned}
 $$ {#eq-kin8}
 
-The half-life of a first-order reaction is independent of the initial concentration of the reactant. Therefore, the half-life can be used in place of the rate coefficient to describe the reaction rate. Typical examples of first-order reactions are radioactive decays. For radioactive isotopes, it is common to report their rate of decay in terms of their half-life. For example, the most stable uranium isotope, $^{238}\mathrm{U}$, has a half-life of $4.468\times 10^9$ years, while the most common fissile isotope of uranium, $^{235}\mathrm{U}$, has a half-life of $7.038\times 10^8$ years.^[Notice how large these numbers are for uranium. To put these numbers in perspective, we can compare them with the half-life of a common isotope of plutonium, $^{241}\mathrm{Pu}$, which is $t_{1/2}=14.3$ years.] Other examples of first-order reactions in chemistry are the class of S~N~1 nucleophilic substitution reactions in organic chemistry. 
+The half-life of a first-order reaction is independent of the initial concentration of the reactant. Therefore, the half-life can be used in place of the rate coefficient to describe the reaction rate. Typical examples of first-order reactions are radioactive decays. For radioactive isotopes, it is common to report their rate of decay in terms of their half-life. For example, the most stable uranium isotope, $^{238}\mathrm{U}$, has a half-life of $4.468\times 10^9$ years, while the most common fissile isotope of uranium, $^{235}\mathrm{U}$, has a half-life of $7.038\times 10^8$ years.^[Notice how large these numbers are for uranium. To put these numbers in perspective, we can compare them with the half-life of a common isotope of plutonium, $^{241}\mathrm{Pu}$, which is $t_{1/2}=14.3$ years.] Other examples of first-order reactions in chemistry are the class of S~N~1 nucleophilic substitution reactions in organic chemistry.
 
-### Second-order reaction
+### Second-Order Reaction
 A reaction is second-order when the sum of the reaction orders is two. Elementary second-order reactions are also called *bimolecular reactions*. There are two possibilities, a simple one, where the reaction order of one reagent is two, or a more complicated one, with two reagents having each a reaction order of one.
 
 - For the simple case, we can write the reaction as:
@@ -120,7 +121,7 @@ $$
 \frac{1}{[\mathrm{A}]}&=\frac{1}{[\mathrm{A}]_0} + k_2 t.
 \end{aligned}
 $$ {#eq-kin11}
-As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, $\frac{1}{[\mathrm{A}]}$, as a function of time, $t$, we obtain a line with slope $+k_2$, as in the plot of @Fig-figk4. 
+As for first-order reactions, the plot of the concentration as a function of time shows a non-linear decay. However, if we plot the inverse of the concentration, $\frac{1}{[\mathrm{A}]}$, as a function of time, $t$, we obtain a line with slope $+k_2$, as in the plot of @Fig-figk4.
 
 
 ![Linear Plot for a Second-Order Reaction. Notice that the Quantity on the y Axis is 1/[A].](img/ch14_second_lin.png){#fig-figk4 fig-alt="Inverse of the concentration of A versus time for a second-order reaction: a straight line with positive slope k2." width="70%"}
@@ -151,7 +152,7 @@ $$ {#eq-kin15}
 The units of $k$ for a complex second order reaction can be calculated from @eq-kin15, and are the same as those for the simple case, $\frac{1}{\mathrm{M}\cdot \mathrm{s}}$.
 The half-life of a complex second-order reaction cannot be easily written since two different half-lives could, in principle, be defined for each of the corresponding reactants.
 
-### Third- and higher-order reactions
+### Third- and Higher-Order Reactions
 Although elementary reactions with order higher than two are possible, they are in practice infrequent, and only very few experimental third-order reactions are observed. Fourth-order or higher have never been observed because the probabilities for a simultaneous interaction between four molecules are essentially zero. Third-order elementary reactions are also called *termolecular reactions*. While termolecular reactions with three identical reactants are possible in principle, there is no known experimental example. Some complex third-order reactions are known, such as:
 
 $$
@@ -165,9 +166,9 @@ $$
 $$ {#eq-kin17}
 
 ## Complex Rate Laws
-It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants. 
+It is essential to specify that the order of a reaction and its molecularity are equal only for elementary reactions. Reactions that follow complex laws are composed of several elementary steps, and they usually have non-integer reaction orders, for at least one of the reactants.
 
-### Consecutive reactions
+### Consecutive Reactions
 A reaction that happens following a sequence of two elementary steps can be written as follows:
 
 $$
@@ -257,7 +258,7 @@ $$
 \end{aligned}
 $$ {#eq-kincomp8}
 
-### Competitive reactions
+### Competitive Reactions
 
 A process where two elementary reactions happen in parallel, competing with each other, can be written as follows:
 
@@ -293,7 +294,7 @@ $$
 \frac{[\mathrm{B}]}{[\mathrm{C}]} =\frac{k_1}{k_2}.
 $$ {#eq-kincomp5b}
 
-### Opposed reactions
+### Opposed Reactions
 
 Another case of complex kinetic law happens when a pair of forward and reverse reactions occur simultaneously:
 
@@ -361,7 +362,7 @@ To experimentally measure the reaction rate, we need a method to measure concent
 
 However, this method works only if the reaction has few reactants, and it requires several measurements, each of which might be complicated to make. More useful methods to determine the reaction rate are the *initial rate* and the *isolation* methods that we describe below.
 
-### Initial rates method
+### Initial Rates Method
 
 The *initial rates method* involves measuring the rate of a reaction as soon as it starts before any significant change in the concentrations of the reactants occurs. The initial rate method is practical only if the reaction is reasonably slow, but it can measure the rate unambiguously when more than one reactant is involved. For example, if we have a reaction with the following stoichiometry:
 
@@ -397,7 +398,7 @@ $$ {#eq-kiniso1}
 
 $\beta$ can be calculated similarly by taking the ratio between experiments 1 and 3. Alternatively, we can also notice that the reaction rate does not change when the initial concentration $[\mathrm{B}]_0$ is doubled, therefore $\beta=0$.
 
-### Isolation method
+### Isolation Method
 
 Another method that is widely used to determine reaction orders is the *isolation method*. This method is performed by using large excess concentrations of all reactants but one. For example, if we have the following reaction with three reagents and unknown rate law:
 
@@ -409,9 +410,9 @@ we can perform three different experiments, in each of which we use an excess am
 
 - Experiment 1: $[\mathrm{A}]_0=1\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},$ in which the reaction order with respect to $\mathrm{A}$ is measured.
 
-- Experiment 2: $[\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},$ in which the reaction order with respect to $\mathrm{B}$ is measured. 
+- Experiment 2: $[\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1\;\text{M}, \quad [\mathrm{C}]_0=1000\;\text{M},$ in which the reaction order with respect to $\mathrm{B}$ is measured.
 
-- Experiment 3: $[\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1\;\text{M},$ in which the reaction order with respect to $\mathrm{C}$ is measured. 
+- Experiment 3: $[\mathrm{A}]_0=1000\;\text{M},\quad [\mathrm{B}]_0=1000\;\text{M}, \quad [\mathrm{C}]_0=1\;\text{M},$ in which the reaction order with respect to $\mathrm{C}$ is measured.
 
 From each experiment we can determine the *pseudo-order* of the reaction with respect to the reagent that is in minority concentration. For example, for the reaction above, we can write the rate law as:
 
@@ -447,7 +448,7 @@ $$
 k=A\exp\left( -\frac{E_a}{RT}\right),
 $$ {#eq-Arr1}
 
-where $A$ is the so-called Arrhenius pre-exponential factor, and $E_a$ is the activation energy. Both of these terms are independent of temperature,^[In theory, both $A$ and $E_a$ show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.] and they represent experimental quantities that are unique to each individual reaction. Since the vast majority of reactions speed up when the temperature increases, both $A$ and $E_a$ are positive.^[A few reactions, such as some recombinations of radicals, slow down when the temperature increases, and they show a negative *apparent* activation energy. These reactions are not elementary: their mechanism involves more than one step, and the measured $E_a$ is a combination of the activation energies of the individual steps.] The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, $\frac{\mathrm{J}}{\mathrm{mol}}$ in SI. 
+where $A$ is the so-called Arrhenius pre-exponential factor, and $E_a$ is the activation energy. Both of these terms are independent of temperature,^[In theory, both $A$ and $E_a$ show a weak temperature dependence. However, they can be considered constants at most experimental conditions, since kinetic studies are usually performed in a small temperature range.] and they represent experimental quantities that are unique to each individual reaction. Since the vast majority of reactions speed up when the temperature increases, both $A$ and $E_a$ are positive.^[A few reactions, such as some recombinations of radicals, slow down when the temperature increases, and they show a negative *apparent* activation energy. These reactions are not elementary: their mechanism involves more than one step, and the measured $E_a$ is a combination of the activation energies of the individual steps.] The pre-exponential factor units are the same as the rate constant and will vary depending on the order of the reaction. As suggested by its name, the activation energy has units of energy per mole of substance, $\frac{\mathrm{J}}{\mathrm{mol}}$ in SI.
 
 A few important considerations can be made by analyzing @eq-Arr1:
 
@@ -473,8 +474,16 @@ From empirical arguments, Arrhenius proposed the idea that reactants must acquir
 
 ![Energy Profile of a Reaction along the Reaction Coordinate (Schematic).](img/ch14_reaction_coordinate.png){#fig-figk9 fig-alt="Schematic energy profile of a reaction along the reaction coordinate. The curve starts flat at the reactants, rises to a maximum labeled transition state, and falls to the lower-energy products. A purple double arrow from the reactants to the top of the barrier is labeled E a, and a blue double arrow between reactants and products is labeled delta rxn H." width="70%"}
 
-## Chapter Review {#sec-rev15}
-### Study Questions {#sec-quest15}
+## Chapter Review {#sec-rev14}
+### Key Ideas
+- **Rate laws** relate the rate of a reaction to the concentrations; the order must be determined experimentally, and it equals the molecularity only for elementary reactions.
+- **Integrated rate laws:** $[\mathrm{A}]$ vs $t$ is linear for zeroth order, $\ln[\mathrm{A}]$ vs $t$ for first order, and $1/[\mathrm{A}]$ vs $t$ for second order.
+- **Half-life:** for a first-order reaction, $t_{1/2} = \frac{\ln 2}{k}$, independent of the initial concentration.
+- **Complex reactions:** in consecutive reactions, the slowest step controls the rate, and a short-lived intermediate can be treated with the steady-state approximation; competitive reactions give products in the ratio $k_1/k_2$; opposed reactions reach equilibrium with $K = k_1/k_{-1}$.
+- **Experimental methods:** the initial rates and isolation methods determine the order with respect to each reactant.
+- **Arrhenius equation:** $k = A\,e^{-E_a/RT}$, so a plot of $\ln k$ vs $1/T$ has slope $-E_a/R$.
+
+### Study Questions {#sec-quest14}
 **1. How does the rate of a zeroth-order reaction depend on the concentration of the reactant?**
 
 a. It is proportional to the concentration.

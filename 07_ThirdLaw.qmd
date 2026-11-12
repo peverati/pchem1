@@ -19,7 +19,7 @@ d S^{\mathrm{universe}} = d S^{\mathrm{sys}} + d S^{\mathrm{surr}}.
 $$ {#eq-dsunivd}
 
 ## Calculation of $\Delta S^{\mathrm{sys}}$ {#sec-dssys}
-In general $\Delta S^{\mathrm{sys}}$ can be calculated from its definition, @def-entropy, integrated along a reversible path, @eq-dentropyint. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example: 
+In general $\Delta S^{\mathrm{sys}}$ can be calculated from its definition, @def-entropy, integrated along a reversible path, @eq-dentropyint. In practice, it is always convenient to keep in mind that entropy is a state function, and as such it does not depend on the path. For this reason, we can break every transformation into elementary steps, and calculate the entropy on any path that goes from the initial state to the final state, such as, for example:
 
 $$
 \begin{aligned}
@@ -31,9 +31,9 @@ P_i, T_i & \quad \xrightarrow{ \Delta_{\text{TOT}} S^{\text{sys}} } \quad P_f, T
 \end{aligned}
 $$ {#eq-entropycycle}
 
-with $\Delta_1 S^{\text{sys}}$ calculated at constant $P$, and $\Delta_2 S^{\text{sys}}$ at constant $T$. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in @sec-energyint. 
+with $\Delta_1 S^{\text{sys}}$ calculated at constant $P$, and $\Delta_2 S^{\text{sys}}$ at constant $T$. The most important elementary steps from which we can calculate the entropy resemble the prototypical processes for which we calculated the energy in @sec-energyint.
 
-### Entropy in isothermal processes 
+### Entropy in Isothermal Processes
 
 - For an ideal gas at constant temperature $\Delta U =0$, and $Q_{\mathrm{REV}} = -W_{\mathrm{REV}}$. Using the formula for $W_{\mathrm{REV}}$ in @eq-WintsolvedV2 (or its analogue for $P$), we obtain:
 $$
@@ -60,8 +60,10 @@ $$ {#eq-trouton}
 
 which corresponds in SI to the range of about 85–88 J/(mol K). This simple rule is named **Trouton's rule**, after the Irish physicist who discovered it, Frederick Thomas Trouton (1863–1922).
 
-::: {#exr-troutonex}
-Calculate the standard entropy of vaporization of water knowing $\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^\standardstate = 44 \  \text{kJ/mol}$, as calculated in @Exr-HessLawEx.
+::: {#exm-troutonex}
+## Entropy of vaporization of water
+
+Calculate the standard entropy of vaporization of water knowing $\Delta_{\mathrm{vap}} H_{\mathrm{H}_2\mathrm{O}}^\standardstate = 44 \  \text{kJ/mol}$, as calculated in @Exm-HessLawEx.
 
 *Solution:* Using @eq-spc—and knowing that at standard conditions of $P^\standardstate = 1 \  \text{bar}$ the boiling temperature of water is 373 K—we calculate:
 
@@ -73,7 +75,7 @@ The entropy of vaporization of water is far from Trouton's rule range of 85–88
 :::
 
 
-### Entropy in adiabatic processes 
+### Entropy in Adiabatic Processes
 Since adiabatic processes happen without the exchange of heat, $đQ=0$, it would be tempting to think that $\Delta S^{\mathrm{sys}} = 0$ for every one of them. A transformation at constant entropy (isentropic) is always, in fact, a reversible adiabatic process. However, the opposite case is not always true, and an irreversible adiabatic transformation is usually associated with a change in entropy. To explain this fact, we need to recall that the definition of entropy includes the heat exchanged at reversible conditions only. Therefore, for irreversible adiabatic processes  $\Delta S^{\mathrm{sys}} \neq 0$. The calculation of the entropy change for an irreversible adiabatic transformation requires a substantial effort, and we will not cover it at this stage. The situation for adiabatic processes can be summarized as follows:
 
 $$
@@ -84,7 +86,7 @@ $$
 $$ {#eq-adiabaticent}
 
 
-### Entropy in isochoric processes 
+### Entropy in Isochoric Processes
 We can calculate the heat exchanged in a process that happens at constant volume, $Q_V$, using @eq-Cvint1. Since the heat exchanged at those conditions equals the energy (@eq-dUqv), and the energy is a state function, we can use $Q_V$ regardless of the path (reversible or irreversible). The entropy associated with the process will then be:
 
 $$
@@ -97,7 +99,7 @@ $$
 \Delta S^{\mathrm{sys}} \approx n C_V \ln \frac{T_f}{T_i}.
 $$ {#eq-sconstV}
 
-### Entropy in isobaric processes 
+### Entropy in Isobaric Processes
 Similarly to the constant volume case, we can calculate the heat exchanged in a process that happens at constant pressure, $Q_P$, using @eq-Cpdef. Again, similarly to the previous case, $Q_P$ equals a state function (the enthalpy), and we can use it regardless of the path to calculate the entropy as:
 
 $$
@@ -123,9 +125,11 @@ $$
 d S^{\mathrm{surr}} = \frac{đQ_{\text{surr}}}{T_{\text{surr}}}=\frac{-đQ_{\text{sys}}}{T_{\text{surr}}},
 $$ {#eq-dssurrd}
 
-where the substitution $Q_{\text{surr}}=-Q_{\text{sys}}$ can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.^[Even if we think of the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.] To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermic chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, $T_{\text{surr}}$ will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions. 
+where the substitution $Q_{\text{surr}}=-Q_{\text{sys}}$ can be performed regardless of whether the transformation is reversible or not. In other words, the surroundings always absorb heat reversibly. To justify this statement, we need to restrict the analysis of the interaction between the system and the surroundings to just the vicinity of the system itself. Outside of a generally restricted region, the rest of the universe is so vast that it remains untouched by anything happening inside the system.^[Even if we think of the most energetic event that we could imagine happening here on earth—such as the explosion of an atomic bomb or the hit of a meteorite from outer space—such an event will not modify the average temperature of the universe by the slightest degree.] To facilitate our comprehension, we might consider a system composed of a beaker on a workbench. We can then consider the room that the beaker is in as the immediate surroundings. To all effects, the beaker+room combination behaves as a system isolated from the rest of the universe. The room is obviously much larger than the beaker itself, and therefore every energy production that happens in the system will have minimal effect on the parameters of the room. For example, an exothermic chemical reaction occurring in the beaker will not affect the overall temperature of the room substantially. When we study our reaction, $T_{\text{surr}}$ will be constant, and the transfer of heat from the reaction to the surroundings will happen at reversible conditions.
 
-::: {#exr-supercooledEx}
+::: {#exm-supercooledEx}
+## Freezing of supercooled water
+
 Calculate the changes in entropy of the universe for the process of 1 mol of supercooled water, freezing at –10°C, knowing the following data: $\Delta_{\mathrm{fus}}H = 6 \; \text{kJ/mol}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(l)}}=76 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, $C_P^{\mathrm{H}_2 \mathrm{O}_{(s)}}=38 \; \text{J} \, \text{mol}^{-1} \, \text{K}^{-1}$, and assuming both $C_P$ to be independent of temperature.
 
 *Solution:* $\Delta S^{\mathrm{sys}}$ for the process under consideration can be calculated using the following cycle:
@@ -201,7 +205,7 @@ In @sec-Thermochemistry, we have discussed how to calculate reaction enthalpies 
 *Third Law of Thermodynamics:* The entropy of a perfectly ordered, pure, crystalline substance is zero at $T=0 \; \text{K}$.
 :::
 
-This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive.   This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences. 
+This law sets an unambiguous zero of the entropy scale, similar to what happens with absolute zero in the temperature scale. The absolute value of the entropy of every substance can then be calculated in reference to this unambiguous zero. As such, absolute entropies are always positive.   This is in stark contrast to what happened for the enthalpy. An unambiguous zero of the enthalpy scale is lacking, and standard formation enthalpies (which might be negative) must be agreed upon to calculate relative differences.
 
 In simpler terms, given a substance $i$, we are not able to measure absolute values of its enthalpy $H_i$ (and we must resort to known enthalpy differences, such as  $\Delta_{\mathrm{f}} H^\standardstate$). At the same time, for entropy, we can measure $S_i$ thanks to the third law, and we usually report them as $S_i^\standardstate$. A comprehensive list of standard entropies of inorganic and organic compounds is reported in @sec-appendix. Reaction entropies can be calculated from the tabulated standard entropies as differences between products and reactants, using:
 
@@ -211,7 +215,7 @@ $$ {#eq-thirdlaweq}
 
 with $\nu_i$ being the usual stoichiometric coefficients with their signs given in @Def-nui.
 
-The careful wording in the definition of the third law (@def-thirdlawdef) allows for the fact that some crystals might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at $T=0 \; \text{K}$. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.^[A procedure that—in practice—might be extremely difficult to achieve.] 
+The careful wording in the definition of the third law (@def-thirdlawdef) allows for the fact that some crystals might form with defects (i.e., not as a perfectly ordered crystal). In this case, a residual entropy will be present even at $T=0 \; \text{K}$. However, this residual entropy can be removed, at least in theory, by forcing the substance into a perfectly ordered crystal.^[A procedure that—in practice—might be extremely difficult to achieve.]
 
 An interesting corollary to the third law states that it is impossible to find a procedure that reduces the temperature of a substance to $T=0 \; \text{K}$ in a finite number of steps.
 
@@ -219,6 +223,14 @@ An interesting corollary to the third law states that it is impossible to find a
 
 
 ## Chapter Review {#sec-rev7}
+### Key Ideas
+- **Spontaneity** requires the entropy of the whole universe: $\Delta S^{\mathrm{universe}} = \Delta S^{\mathrm{sys}} + \Delta S^{\mathrm{surr}}$.
+- **System:** $\Delta S^{\mathrm{sys}} = nR\ln\frac{V_f}{V_i}$ (isothermal ideal gas), $0$ (reversible adiabatic), $nC_P\ln\frac{T_f}{T_i}$ (isobaric heating), and $\frac{\Delta H}{T}$ (phase change at the transition temperature).
+- **Surroundings:** $\Delta S^{\mathrm{surr}} = -\frac{Q_{\text{sys}}}{T_{\text{surr}}}$, since the surroundings behave as a large reservoir.
+- **Trouton's rule:** many liquids have $\Delta_{\text{vap}}S \approx 85\text{–}88\;\text{J/(mol K)}$; liquids with hydrogen bonds, such as water, have more.
+- **A process can be spontaneous** even if the entropy of the system decreases, as long as the surroundings gain more entropy (as when supercooled water freezes).
+- **The third law:** the entropy of a perfect crystal is zero at $0\;\text{K}$, which allows us to tabulate absolute entropies, $S^\standardstate$.
+
 ### Study Questions {#sec-quest7}
 **1. How is the entropy change of the universe calculated?**
 

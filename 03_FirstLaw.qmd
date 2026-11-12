@@ -24,13 +24,13 @@ $$
 dU = đ Q + đ W,
 $$ {#eq-dU}
 
-which, for processes where the pressure of the system equals the external pressure (as in the slow processes that we discussed in @sec-workint, and in processes at constant pressure, where the system is in mechanical equilibrium with the atmosphere), using @eq-Wdefrev becomes:
+which, for processes where the pressure of the system equals the external pressure (as in the quasi-static processes with a balanced piston that we discussed in @sec-workint, and in processes at constant pressure, where the system is in mechanical equilibrium with the atmosphere), using @eq-Wdefrev becomes:
 
 $$
 dU = đ Q - PdV.
 $$ {#eq-dUpdv}
 
-### Internal energy in isothermal processes {#sec-isothermalE}
+### Internal Energy in Isothermal Processes {#sec-isothermalE}
 To study the behavior of the internal energy in a process at constant temperature ($dT=0$), James Prescott Joule (1818–1889) created the apparatus depicted in @Fig-FigJexp.
 
 
@@ -49,12 +49,12 @@ $$
 dU = đ Q = 0.
 $$ {#eq-JexpQU}
 
-> Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas, we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in @sec-RealGases when we will study non-ideal gases. 
+> Notice that Joule's conclusion is valid only for an ideal gas. If we expand a real gas, we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in @sec-RealGases when we will study non-ideal gases.
 
-From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature. 
+From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature.
 
 
-### Internal energy in adiabatic processes 
+### Internal Energy in Adiabatic Processes
 An adiabatic process is defined as a process that happens without the exchange of heat. As such, $đ Q=0$, and the work associated with an adiabatic process is equal to the change in internal energy:
 
 $$
@@ -63,7 +63,7 @@ $$ {#eq-dUadiabatic}
 
 which can then be calculated using the formulas that we derived in @sec-workint. Notice that the work is still a path function: in general, its value depends on the path. However, *along adiabatic paths*, the work is fixed by the change of a state function, so all adiabatic paths connecting the same two states require the same amount of work. Notice also that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system's boundaries, this does not mean that the system's temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.
 
-### Internal energy in isochoric processes
+### Internal Energy in Isochoric Processes
 An isochoric process is a process in which the volume does not change. Therefore, $đ W=0$, and $dU = đ Q_V$, which using @eq-Cvdef, becomes:
 
 $$
@@ -82,7 +82,7 @@ where we have replaced the total derivative $d$ with a partial one $\partial$, a
 *The heat capacity of a substance, $C_V$, represents its ability to absorb **energy** at constant **volume**.*
 :::
 
-### Internal energy in isobaric processes {#sec-enthalpy}
+### Internal Energy in Isobaric Processes {#sec-enthalpy}
 In an isobaric process, the pressure does not change, hence $dP=0$. Unfortunately, @eq-dU for this case does not simplify further, as happened in the two previous cases. However, in @sec-heatconstp, we have introduced the useful concept of heat capacity at constant $P$. $C_P$ was used in an isobaric process in the same manner as $C_V$ was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. @Eq-cvstatefunc gave a mathematical definition of $C_V$ as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain $C_P$? In order to do so, we can introduce a new state function, called the enthalpy ($H$), as:
 
 $$
@@ -141,7 +141,7 @@ The first law is a conservation law. It is intuitive since it comes directly fro
 :::
 
 
-## Reversible and Irreversible processes
+## Reversible and Irreversible Processes
 
 Let's now consider the cycle in @Fig-FigRevCyc. The process in this case starts from state 1 (system at $P_1V_1$), expands to state 2 (system at $P_2V_2$), and compresses back to state 1 (system back to $P_1V_1$).
 
@@ -155,7 +155,7 @@ $$
 \oint dU=0,
 $$ {#eq-de0}
 
-where the symbol $\oint$ indicates an integral around a cycle. Considering the work associated with the cycle, however, the situation is radically different because it depends on the path that the system is taking, and in general 
+where the symbol $\oint$ indicates an integral around a cycle. Considering the work associated with the cycle, however, the situation is radically different because it depends on the path that the system is taking, and in general
 $$
 \oint_{\text{path}} đW \neq 0.
 $$ {#eq-dw0}
@@ -188,7 +188,7 @@ or, in other words, the surroundings have to put more work into the compression 
 > In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it, and it moves back up.
 
 
-In contrast, if both the expansion and the compression happen in a slow $\infty$-step manner, the work associated with them will be $W_{\text{max}}$ and $W_{\text{min}}$, respectively, which are calculated using @eq-WmaxV. The total work related to the cycle will be in this case:
+In contrast, if both the expansion and the compression happen in a quasi-static $\infty$-step manner, the work associated with them will be $W_{\text{max}}$ and $W_{\text{min}}$, respectively, which are calculated using @eq-WmaxV. The total work related to the cycle will be in this case:
 
 $$
 \begin{aligned}
@@ -210,12 +210,20 @@ This process can happen both ways without losses, and is called *reversible*:
 
 A few important considerations can be made by analyzing @Def-reversible:
 
-1. **A reversible process is infinitely slow.** It happens in an infinite number of infinitesimal steps, and at each step the system is in equilibrium with its surroundings (for example, $P=P_{\text{ext}}$ at every moment).
+1. **A reversible process is quasi-static, and more.** It happens in an infinite number of infinitesimal steps, so the system passes through equilibrium states only (@def-quasistatic). In addition, at each step the system is balanced with its surroundings (for example, $P=P_{\text{ext}}$ at every moment), and there is no friction or other dissipation. Every reversible process is quasi-static, but a quasi-static process is not necessarily reversible: a piston that moves very slowly but with friction converts part of the work into heat at every step, and the process cannot be undone without leaving a trace.
 2. **A reversible process is the most efficient one.** A reversible expansion gives the maximum work, $W_{\text{max}}$, and a reversible compression requires the minimum work, $W_{\text{min}}$. Running a reversible process forward and then backward leaves no trace, neither in the system nor in the surroundings.
-3. **All real processes are irreversible.** Reversible processes are idealizations, like the ideal gas. We can approach them by carrying out a process very slowly, but never reach them. Despite this, they are extremely useful, since they set the limits that real processes can only approach.
+3. **All real processes are irreversible.** Reversible processes are idealizations, like the ideal gas. We can approach them by carrying out a process slowly compared to the relaxation time of the system, and with as little friction as possible, but never reach them. Despite this, they are extremely useful, since they set the limits that real processes can only approach.
 
 
 ## Chapter Review {#sec-rev3}
+### Key Ideas
+- **Internal energy, $U$,** is a state function: the energy contained in the system.
+- **The first law:** energy is conserved, $dU = đQ + đW$. Heat and work are path functions, but their sum is not.
+- **Ideal gas:** $U$ depends only on the temperature (Joule's experiment), so $\Delta U = 0$ for any isothermal process.
+- **Special processes:** $\Delta U = W$ in an adiabatic process, and $\Delta U = Q_V$ in an isochoric one, with $C_V = \frac{1}{n}\left(\frac{\partial U}{\partial T}\right)_V$.
+- **Enthalpy,** $H = U + PV$, is the state function whose change equals the heat at constant pressure, $\Delta H = Q_P$.
+- **Reversible processes** happen in infinitely many steps, always at equilibrium; an expansion followed by the reverse compression leaves no net work only if both are reversible.
+
 ### Study Questions {#sec-quest3}
 **1. What is the internal energy of a system?**
 

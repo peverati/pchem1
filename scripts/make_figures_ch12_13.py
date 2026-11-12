@@ -295,3 +295,35 @@ ax.annotate("", xy=(tb1, -36), xytext=(tb0, -36), arrowprops=dict(arrowstyle="->
 ax.text(tb1 + 5, -33, "boiling point\nincrease", color="tab:blue", fontsize=11, ha="left")
 ax.set_xlabel("$T$"); ax.set_ylabel(r"$\mu$ of the solvent"); ax.set_xticks([]); ax.set_yticks([]); ax.set_ylim(-42, 12); ax.set_xlim(175, 560)
 save(fig, f"{out}/ch13_colligative.png")
+
+# simple eutectic: naphthalene (A) + benzene (B), ideal solubility of each pure solid in the liquid
+# (melting points and enthalpies of fusion: naphthalene 353.4 K, 19.01 kJ/mol; benzene 278.7 K, 9.87 kJ/mol)
+TmA, HA = 353.4, 19010.0
+TmB, HB = 278.68, 9870.0
+xA_liq = lambda T: np.exp(HA / Rj * (1 / TmA - 1 / T))      # liquid in equilibrium with pure solid A
+xB_liq = lambda T: np.exp(HB / Rj * (1 / TmB - 1 / T))      # liquid in equilibrium with pure solid B
+Te = brentq(lambda T: xA_liq(T) + xB_liq(T) - 1, 200, TmB - 0.01); xe = xB_liq(Te)
+fig, ax = plt.subplots(figsize=(7, 5))
+TA = np.linspace(Te, TmA, 200); TB = np.linspace(Te, TmB, 200)
+ax.plot(1 - xA_liq(TA), TA - 273.15, color="tab:red", lw=2.5)
+ax.plot(xB_liq(TB), TB - 273.15, color="tab:red", lw=2.5)
+ax.plot([0, 1], [Te - 273.15] * 2, color="k", lw=2)
+ax.fill_between(1 - xA_liq(TA), Te - 273.15, TA - 273.15, color="0.85")
+ax.fill_between(xB_liq(TB), Te - 273.15, TB - 273.15, color="0.85")
+ax.plot(xe, Te - 273.15, "o", color=PURPLE, ms=9, zorder=5)
+ax.annotate("eutectic", (xe, Te - 273.15), xytext=(-10, -22), textcoords="offset points", color=PURPLE, fontsize=14, ha="right")
+xi = 0.5; Ti = TmA * 0 + 1 / (1 / TmA - Rj / HA * np.log(1 - xi))   # liquidus temperature at x_B = 0.5
+ax.annotate("", xy=(xi, Ti - 273.15), xytext=(xi, 75), arrowprops=dict(arrowstyle="->", color=PURPLE, lw=2))
+ax.plot(xi, 75, "o", color=PURPLE, ms=8); ax.text(xi + 0.02, 75, "$i$", color=PURPLE, fontsize=15, va="center")
+ax.plot(xi, Ti - 273.15, "o", color=PURPLE, ms=8, zorder=5)
+ax.text(0.62, 55, "liquid", fontsize=15)
+ax.text(0.2, 22, "liquid\n+ solid A", fontsize=13, ha="center")
+ax.annotate("liquid + solid B", xy=(0.955, 0.5), xytext=(0.98, 22), fontsize=12, ha="right",
+            arrowprops=dict(arrowstyle="-", color="0.3", lw=1))
+ax.text(0.5, -14, "solid A + solid B", fontsize=14, ha="center")
+ax.plot([0, 1], [TmA - 273.15, TmB - 273.15], "o", color="tab:orange", ms=9, clip_on=False, zorder=5)
+ax.set_ylim(-20, 90)
+frame(ax, "Temperature [°C]", (TmA - 273.15, r"$T_{\mathrm{m}}^{\mathrm{A}}$"), (TmB - 273.15, r"$T_{\mathrm{m}}^{\mathrm{B}}$"))
+ax.set_title("naphthalene (A) + benzene (B), 1 atm", fontsize=14)
+save(fig, f"{out}/ch13_eutectic.png")
+print(f"eutectic: T = {Te - 273.15:.1f} C, x_B = {xe:.3f}; liquidus at x_B = 0.5: {Ti - 273.15:.1f} C")

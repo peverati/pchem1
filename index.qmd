@@ -1,3 +1,8 @@
+---
+subtitle: "Which Way, and How Fast"   # tentative title, same as the PDF
+description: "Thermodynamics, Equilibria, and Chemical Kinetics"
+---
+
 # Preface {.unnumbered}
 ![](img/OEP_Figures.000.jpeg){fig-alt="Hand-lettered illustration of a thermodynamic system: the word SYSTEM repeated in the center, surrounded by a pink ring labeled BOUNDARIES, with the word ENVIRONMENT repeated all around the outside." width="80%"}
 
@@ -24,22 +29,25 @@ Additionally, in the summer of 2026, I have reworked all of the pictures in the 
 
 As usual, if you spot any mistakes, I encourage you to reach out to me at the contacts listed above.
 
-## How to use this book {.unnumbered}
+## How to Use This Book {.unnumbered}
 If you are a student in my course, please read this book carefully, since everything that will be in your exams is explained here! Since this book is specifically tailored for the CHM 3001 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.
 
-> Definitions and exercises are numbered (e.g., Definition 1.1, Exercise 4.1) and are set apart from the rest of the text. Notes and examples are highlighted in this format (indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Exercises are essential for cementing the concepts, and you should attempt to execute them first without looking at the solution. Even if you were able to solve an exercise on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.
+> Definitions and worked examples are numbered (e.g., Definition 1.1, Example 4.1) and are set apart from the rest of the text in boxes, blue for definitions and green for examples. Notes are highlighted in this format (indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Worked examples are essential for cementing the concepts, and you should attempt to solve them first without looking at the solution. Even if you were able to solve an example on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.
 
 Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, with a few important tools at its top. Arrows to move between chapters are at the bottom of each page. If you are old-school and prefer a pdf, you can download a printout by clicking on the corresponding icon at the top of the sidebar. If you are *really* old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the sidebar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find there a link to the raw GitHub source code. Feel free to head to [the GitHub repository of this book](https://github.com/peverati/pchem1) and fork it. 
 
 For my students, each chapter of this book represents one week of work in the classroom and at home. The sidebar on the left will reflect your syllabus, as well as the main structure of the class on Canvas. The book is a live document, which means it will be updated throughout the semester with new material. While you are not required to check it every day, you might want to review each week's chapter before the lecture on Friday.
 
 
-## A note on units {.unnumbered}
+## A Note on Units {.unnumbered}
 In general, we will use SI units or some of their multiples throughout the textbook, lectures, and exercises. For example, temperatures will be measured in kelvin ($\text{K}$), energetic terms will be measured in either joules ($\text{J}$) or kilojoules ($\text{kJ}$), while volumes will be measured in cubic meters, or more often in liters ($\text{L}$), where $1\,\text{L} = 10^{-3}\,\text{m}^3$. An important exception is made for pressures, which will be measured in bars ($\text{bar}$). This exception is not completely unjustified, since bar is still an (unconventional) multiple of the SI unit of pressure, pascal ($\text{Pa}$), where $1\,\text{bar} = 10^5\,\text{Pa}$. This choice is made to retain a reasonable similarity with the unit atmosphere ($\text{atm}$) which is extensively used in several other chemistry textbooks $(1\,\text{atm} = 1.013\,\text{bar})$ and in previous physical chemistry courses. 
 
 
 We will generally also try to avoid conversion between units, except for some trivial conversion between degrees Celsius (°C) and Kelvin, with the conversion factor being an addition of $273.15\,\text{K}$. Other unconventional conversions might happen in some of the exercises, with the conversion factors always reported within the exercise itself.
 Additionally, we will avoid unnecessary conversion between the average atmospheric pressure and bars by setting $P_{\text{atm}} = 1\,\text{bar},$ rather than $P_{\text{atm}} = 1\,\text{atm} = 1.013\, \text{bar},$ an approximation that is mostly inconsequential, at least at the scale of the problems that we treat here.
+
+## A Note on the Use of AI {.unnumbered}
+The November 2026 revision of this book was prepared with the help of Claude Code (Anthropic's Claude Opus 5.5), an AI assistant. The book, its structure, its scope, and its approach to teaching thermodynamics and kinetics are my own, developed over several years of teaching this course. In the revision, I used the AI as an assistant: to proofread the text, to rephrase passages, to draft new sections, figures, examples, and review questions following my outline and instructions, and to write the code for the computed figures. Every change was reviewed, corrected or rewritten, and approved by me, and I take full responsibility for the content of the book, including any remaining errors.
 
 > This live open textbook is distributed under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/) and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library. Third-party images keep their own licenses, as credited in their captions or footnotes. The scripts used to build the book are available under the [MIT License](https://opensource.org/license/mit).
 

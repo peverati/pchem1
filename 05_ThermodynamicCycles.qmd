@@ -4,21 +4,21 @@ aliases:
 ---
 
 # Thermodynamic Cycles {#sec-ThermodynamicCycles}
-The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let's consider once again the Joule experiment (@Fig-FigJexp). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in @Fig-FigJexpC, there are no restrictions imposed on this hypothetical cycle by the first law. 
+The first law of thermodynamics places no restrictions on the conversion of energy from one form to another. For example, let's consider once again the Joule experiment (@Fig-FigJexp). If we design a cycle that goes from the gas on the left chamber only to the gas equilibrated in both chambers and backward, as in @Fig-FigJexpC, there are no restrictions imposed on this hypothetical cycle by the first law.
 
 
 ![Closing the Cycle in The Joule Expansion Experiment.](img/OEP_Figures.008.jpeg){#fig-FigJexpC fig-alt="Cycle diagram for the Joule experiment at constant temperature. The arrow labeled expansion goes from state 1, gas in the left flask and vacuum in the right one, to state 2, gas in both flasks. The arrow labeled compression closes the cycle back to state 1." width="80%"}
 
 
-As we saw in @sec-isothermalE, states 1 and 2 have exactly the same energy at constant temperature. Restricting the analysis to the information contained in the first law, the ideal gas could hypothetically go from state 1 (all gas in the left chamber) to state 2 (gas in both chambers), as well as spontaneously close the cycle back from state 2 to state 1, without external intervention. While the transformation from 1 $\rightarrow$ 2 is intuitively spontaneous (it's the same transformation that we considered in @sec-isothermalE), the backward transformation from 2 $\rightarrow$ 1 is clearly not as intuitive. In this case, the gas should spontaneously compress back to the left side, leaving a vacuum on the right chamber, without interventions from the outside. This transformation is clearly never observed. A gas just does not spontaneously concentrate on one side of a room, leaving a vacuum on the other side. In fact, when we need to create a vacuum, a lot of energy must be spent. Suppose we use exclusively information contained in the first law. In this case, there is nothing that might suggest a system's preference to perform the transformation 1 $\rightarrow$ 2, while preventing the 2 $\rightarrow$ 1 from happening spontaneously. Both states have the same energy, and 
+As we saw in @sec-isothermalE, states 1 and 2 have exactly the same energy at constant temperature. Restricting the analysis to the information contained in the first law, the ideal gas could hypothetically go from state 1 (all gas in the left chamber) to state 2 (gas in both chambers), as well as spontaneously close the cycle back from state 2 to state 1, without external intervention. While the transformation from 1 $\rightarrow$ 2 is intuitively spontaneous (it's the same transformation that we considered in @sec-isothermalE), the backward transformation from 2 $\rightarrow$ 1 is clearly not as intuitive. In this case, the gas should spontaneously compress back to the left side, leaving a vacuum on the right chamber, without interventions from the outside. This transformation is clearly never observed. A gas just does not spontaneously concentrate on one side of a room, leaving a vacuum on the other side. In fact, when we need to create a vacuum, a lot of energy must be spent. Suppose we use exclusively information contained in the first law. In this case, there is nothing that might suggest a system's preference to perform the transformation 1 $\rightarrow$ 2, while preventing the 2 $\rightarrow$ 1 from happening spontaneously. Both states have the same energy, and
 
 $$
 \oint dU=0.
 $$ {#eq-de0c}
 
-James Joule himself was indeed convinced that this must be the case and that we don't observe the backward transformation in practice only because we cannot build ideal machines.^[Either because we don't really have ideal gases, or because we are unable to construct mechanical devices without loss, or in general because of other experimental factors.] Another scientist of that era was not convinced. William Thomson, the 1^st^ Baron Kelvin (1824–1907), was unsure about this idea, and invested substantial resources to try to prove Joule wrong.^[Interestingly enough, both Joule and Lord Kelvin are now recognized as key figures in the development of thermodynamics and science in general. So much so, that the energy unit and the temperature unit in the SI system are named after them.] 
+James Joule himself was indeed convinced that this must be the case and that we don't observe the backward transformation in practice only because we cannot build ideal machines.^[Either because we don't really have ideal gases, or because we are unable to construct mechanical devices without loss, or in general because of other experimental factors.] Another scientist of that era was not convinced. William Thomson, the 1^st^ Baron Kelvin (1824–1907), was unsure about this idea, and invested substantial resources to try to prove Joule wrong.^[Interestingly enough, both Joule and Lord Kelvin are now recognized as key figures in the development of thermodynamics and science in general. So much so, that the energy unit and the temperature unit in the SI system are named after them.]
 
-The key to resolving the controversy, in favor of Kelvin, came from an unexpected source: the theoretical work of the French military engineer Nicolas Léonard Sadi Carnot (1796–1832), published years before Joule and Kelvin started working on this problem, and largely forgotten until Kelvin and Rudolf Clausius built on it in the late 1840s and 1850s.^[Carnot's lone book, the [*Réflexions sur la Puissance Motrice du Feu* ("Reflections on the Motive Power of Fire")](https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire) was published in France in 1824, the same year Kelvin was born and just 6 years after Joule's birth.] At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency. 
+The key to resolving the controversy, in favor of Kelvin, came from an unexpected source: the theoretical work of the French military engineer Nicolas Léonard Sadi Carnot (1796–1832), published years before Joule and Kelvin started working on this problem, and largely forgotten until Kelvin and Rudolf Clausius built on it in the late 1840s and 1850s.^[Carnot's lone book, the [*Réflexions sur la Puissance Motrice du Feu* ("Reflections on the Motive Power of Fire")](https://en.wikipedia.org/wiki/Reflections_on_the_Motive_Power_of_Fire) was published in France in 1824, the same year Kelvin was born and just 6 years after Joule's birth.] At that time, the importance of steam engines was growing for industrial applications, but a theoretical perspective was lacking. Carnot was convinced that a scientific understanding of heat engines was necessary to improve their efficiency.
 
 ## Carnot Cycle {#sec-carnotcyclesect}
 The main contribution of Carnot to thermodynamics is his abstraction of the steam engine's essential features into a more general and idealized heat engine. The definition of Carnot's idealized cycle is as follows:
@@ -33,7 +33,7 @@ A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T
 ![PV-Diagram of a Carnot Cycle (computed for 1 mol of a monatomic ideal gas between $T_h=600\;\text{K}$ and $T_l=300\;\text{K}$).](img/ch5_carnot_pv.png){#fig-FigCarnotPV fig-alt="Pressure-volume diagram of a Carnot cycle for 1 mol of a monatomic ideal gas. The cycle runs from A to B along the hot isotherm (stage 1, red), from B to C along an adiabat (stage 2), from C to D along the cold isotherm (stage 3, blue), and from D back to A along a second adiabat (stage 4). The adiabats are steeper than the isotherms." width="70%"}
 
 
-### Stage 1: isothermal expansion $A \rightarrow B$ {#sec-CCstage1}
+### Stage 1: Isothermal Expansion $A \rightarrow B$ {#sec-CCstage1}
 ![Stage 1 of a Carnot cycle: isothermal expansion. The cylinder is in contact with the hot reservoir, from which the gas absorbs the heat $|Q_h|$.](img/ch5_carnot_stage1.png){#fig-carnotstage1 fig-alt="Cylinder with a movable piston sitting on a red hot reservoir at temperature T h. The gas particles are red, the piston moves up (expansion), and a purple arrow shows heat Q h entering the gas from the reservoir." width="50%"}
 
 
@@ -53,10 +53,10 @@ $$
 \end{aligned}
 $$ {#eq-CCst1b}
 
-where we denoted $\left| Q_h \right|$ the absolute value of the heat that gets **into** the system from the hot reservoir. 
+where we denoted $\left| Q_h \right|$ the absolute value of the heat that gets **into** the system from the hot reservoir.
 
 
-### Stage 2: adiabatic expansion $B \rightarrow C$ {#sec-CCstage2}
+### Stage 2: Adiabatic Expansion $B \rightarrow C$ {#sec-CCstage2}
 ![Stage 2 of a Carnot cycle: adiabatic expansion. The cylinder is insulated, no heat is exchanged, and the gas cools down while it keeps expanding.](img/ch5_carnot_stage2.png){#fig-carnotstage2 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves up (expansion) and the gas particles are drawn in purple, cooling down." width="50%"}
 
 
@@ -73,7 +73,7 @@ $$
 $$ {#eq-CCst2b}
 
 
-### Stage 3: isothermal compression $C \rightarrow D$ {#sec-CCstage3}
+### Stage 3: Isothermal Compression $C \rightarrow D$ {#sec-CCstage3}
 ![Stage 3 of a Carnot cycle: isothermal compression. The cylinder is in contact with the cold reservoir, to which the gas releases the heat $|Q_l|$.](img/ch5_carnot_stage3.png){#fig-carnotstage3 fig-alt="Cylinder with a movable piston sitting on a blue cold reservoir at temperature T l. The gas particles are blue, the piston moves down (compression), and a purple arrow shows heat Q l leaving the gas towards the reservoir." width="50%"}
 
 
@@ -92,10 +92,10 @@ $$
 \end{aligned}
 $$ {#eq-CCst3b}
 
-where $\left| Q_l \right|$ is the absolute value of the heat that gets **out of** the system to the cold reservoir ($Q_3 = -\left| Q_l \right|$ being the heat entering the system). 
+where $\left| Q_l \right|$ is the absolute value of the heat that gets **out of** the system to the cold reservoir ($Q_3 = -\left| Q_l \right|$ being the heat entering the system).
 
 
-### Stage 4: adiabatic compression $D \rightarrow A$ {#sec-CCstage4}
+### Stage 4: Adiabatic Compression $D \rightarrow A$ {#sec-CCstage4}
 ![Stage 4 of a Carnot cycle: adiabatic compression. The cylinder is insulated again, and the compression warms the gas back to its initial temperature.](img/ch5_carnot_stage4.png){#fig-carnotstage4 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves down (compression) and the gas particles, drawn in purple, warm back up." width="50%"}
 
 
@@ -169,12 +169,14 @@ or, in other words, more heat is extracted from the hot reservoir than it is put
 ![Carnot Cycle Diagram.](img/OEP_Figures.009.jpeg){#fig-FigCarnotEff fig-alt="Heat engine diagram. Heat of magnitude Q h flows from a hot reservoir at temperature T h into a gear labeled ideal heat engine following Carnot cycle. Part of it leaves as work W TOT, pointing down, and the rest, Q l, flows out into a cold reservoir at temperature T l." width="80%"}
 
 
-::: {#exr-CarnotEx}
+::: {#exm-CarnotEx}
+## A Carnot cycle run in reverse
+
 Up to this point, we have discussed Carnot cycles working in the hot $\rightarrow$ cold direction ($A$ $\rightarrow$ $B$ $\rightarrow$ $C$ $\rightarrow$ $D$ $\rightarrow$ $A$), since this is the primary mode of operation of heat engines that produce work. However, a heat engine could also—in principle—work in the reversed cold $\rightarrow$ hot direction ($A$ $\rightarrow$ $D$ $\rightarrow$ $C$ $\rightarrow$ $B$ $\rightarrow$ $A$). Write the equations for heat, work, and energy of each stage of a Carnot cycle going the opposite direction than the one discussed in @sec-carnotcyclesect and @sec-UWQCarnot.
 
 *Solution:* When the heat engine works in reverse order, the formulas remain the same, but all the signs in front of $Q$, $W$, and $U$ will be reversed. In this case, the total work would get **into** the system, and heat would be transferred from the cold reservoir to the hot one. @Fig-FigCarnotEff would be modified as in @fig-FigCarnotRef.
 
-![A Carnot cycle run in reverse works as a refrigerator: the work $|W_{TOT}|$ is used to move the heat $|Q_l|$ from the cold reservoir to the hot one.](img/OEP_Figures.010.jpeg){#fig-FigCarnotRef fig-alt="Refrigerator diagram, the reverse of the heat engine. Work W TOT enters a gear labeled ideal refrigerator following Carnot cycle. Heat Q l is drawn from the cold reservoir at temperature T l, and heat Q h is released into the hot reservoir at temperature T h." width="60%"}
+![A Carnot cycle run in reverse works as a refrigerator: the work $|W_{TOT}|$ is used to move the heat $|Q_l|$ from the cold reservoir to the hot one.](img/OEP_Figures.010.jpeg){#fig-FigCarnotRef fig-pos="H" fig-alt="Refrigerator diagram, the reverse of the heat engine. Work W TOT enters a gear labeled ideal refrigerator following Carnot cycle. Heat Q l is drawn from the cold reservoir at temperature T l, and heat Q h is released into the hot reservoir at temperature T h." width="60%"}
 
 :::
 This reversed mode of operation is the basic principle behind refrigerators and air conditioning.
@@ -205,6 +207,14 @@ which proves that the efficiency of a Carnot cycle is strictly smaller than 1.^[
 
 
 ## Chapter Review {#sec-rev5}
+### Key Ideas
+- **The first law is not enough:** it allows processes that never happen, such as a gas spontaneously compressing into half of its container.
+- **The Carnot cycle** is made of two reversible isotherms and two reversible adiabats, between a hot reservoir at $T_h$ and a cold one at $T_l$.
+- **Over a full cycle,** $\Delta U = 0$, so the total work equals minus the total heat exchanged.
+- **Efficiency** is the work produced divided by the heat absorbed from the hot reservoir. For a Carnot cycle, $\varepsilon = 1 - \frac{T_l}{T_h} < 1$.
+- **No engine converts all of its heat into work,** because some heat must always be released to the cold reservoir.
+- **Run in reverse,** a Carnot cycle uses work to move heat from the cold to the hot reservoir: it works as a refrigerator.
+
 ### Study Questions {#sec-quest5}
 **1. What does the first law of thermodynamics say about a gas that spontaneously compresses back into one side of the Joule apparatus?**
 

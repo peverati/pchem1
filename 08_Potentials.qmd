@@ -105,7 +105,7 @@ dG &= dU -SdT -TdS +VdP +PdV = dH -SdT -TdS\\
    &= TdS - PdV +\sum_i\mu_i dn_i -SdT -TdS +VdP +PdV \\
    &= VdP -SdT +\sum_i\mu_i dn_i.
 \end{aligned}
-$$ {#eq-dgdef2} 
+$$ {#eq-dgdef2}
 
 The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles: exactly the knobs that we control when we run a reaction in an open beaker.
 
@@ -168,7 +168,7 @@ $$
 \begin{aligned}
 \text{constant} & \; T,V:           & \qquad & \qquad &     \text{constant} & \; T,P: \\
 \\
-(dA)_{T,V} &= dU -TdS     & &   &       (dG)_{T,P} &= dH - TdS \\ 
+(dA)_{T,V} &= dU -TdS     & &   &       (dG)_{T,P} &= dH - TdS \\
 \\
 dU = (dA)_{T,V} &+TdS       & &   &       dH = (dG)_{T,P} &+TdS
 \end{aligned}
@@ -198,7 +198,7 @@ $\;$
 
 
 ## Maxwell Relations {#sec-maxwell}
-Let's consider the fundamental equations for the thermodynamic potentials that we have derived in @sec-thermpot: 
+Let's consider the fundamental equations for the thermodynamic potentials that we have derived in @sec-thermpot:
 
 $$
 \begin{aligned}
@@ -256,7 +256,9 @@ $$ {#eq-maxwellidealgas}
 
 which is exactly the result that we obtained in @eq-sigconsttV, using the heat exchanged along a reversible path. With the Maxwell relation, we obtained it without ever thinking about heat, starting only from the ideal gas law.
 
-::: {#exr-maxwellEx}
+::: {#exm-maxwellEx}
+## Deriving a Maxwell relation
+
 Derive the last Maxwell relation in @eq-maxrelf.
 
 *Solution:* We can start our derivation from the definitions of $V$ and $S$ as partial derivatives of $G$:
@@ -292,6 +294,13 @@ which is the last of Maxwell relations, as defined in @eq-maxrelf. This relation
 :::
 
 ## Chapter Review {#sec-rev8}
+### Key Ideas
+- **Fundamental equation:** $dU = T\,dS - P\,dV + \sum_i \mu_i\,dn_i$. It contains only state functions, so it applies to reversible and irreversible processes alike.
+- **Chemical potential:** $\mu_i$ measures how the energy changes when moles of species $i$ are added.
+- **Legendre transformations** swap a variable with its conjugate, giving $H = U + PV$, $A = U - TS$, and $G = U - TS + PV$, each with its own natural variables.
+- **Spontaneity criteria:** at constant $T$ and $V$, the Helmholtz energy decreases ($dA < 0$); at constant $T$ and $P$, the Gibbs energy decreases ($dG < 0$).
+- **Maxwell relations** follow from the equality of mixed second derivatives, and they turn hard-to-measure derivatives of $S$ into easy-to-measure ones of $P$, $V$, and $T$.
+
 ### Study Questions {#sec-quest8}
 **1. What is the fundamental equation of thermodynamics for a closed system?**
 

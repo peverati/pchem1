@@ -56,10 +56,10 @@ Or, in other words:
 - Exothermic reactions that increase the entropy are always spontaneous.
 - Endothermic reactions that reduce the entropy are always non-spontaneous.
 - For the other two cases, the spontaneity of the reaction depends on the temperature:
-    - Exothermic reactions that reduce the entropy are spontaneous at low $T$. 
+    - Exothermic reactions that reduce the entropy are spontaneous at low $T$.
     - Endothermic reactions that increase the entropy are spontaneous at high $T$.
 
-    
+
 A simple criterion to estimate the sign of the entropy change of a reaction is to count the moles of *gas* among the reactants and the products. Gases have much larger entropies than liquids and solids, since their molecules can occupy a much larger volume. Therefore, if the reaction produces more moles of gas than it consumes, it will most likely increase the entropy. Vice versa, if the number of moles of gas decreases, the entropy will most likely decrease. For example, the combustion of methane, $\mathrm{CH}_{4(g)} + 2\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2\mathrm{H}_2\mathrm{O}_{(l)}$, goes from 3 moles of gas to 1, and its entropy change is indeed negative. This criterion is only a rule of thumb: when the number of moles of gas does not change, we need the tabulated entropies to decide.
 
 As we saw in @sec-thermpot, the natural variables of the Gibbs energy are the temperature, $T$, the pressure, $P$, and chemical composition, as the number of moles $\{n_i\}$. The Gibbs energy can therefore be expressed using the total differential as (see also the last formula in @eq-dhagchem2):
@@ -68,7 +68,7 @@ $$
 dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 $$ {#eq-dgtotdiff}
 
-If we know the behavior of $G$ as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential $dG$. Each of these terms represents a coefficient in @eq-dgtotdiff, which are given in @eq-dhagchem3. 
+If we know the behavior of $G$ as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential $dG$. Each of these terms represents a coefficient in @eq-dgtotdiff, which are given in @eq-dhagchem3.
 
 ## Temperature Dependence of $\Delta G$
 $$
@@ -248,6 +248,13 @@ or, in other words, the process is spontaneous under all circumstances, and pure
 
 
 ## Chapter Review {#sec-rev9}
+### Key Ideas
+- **Gibbs equation:** at constant $T$ and $P$, $\Delta G = \Delta H - T\Delta S$, which balances enthalpy and entropy.
+- **Temperature dependence:** $\left(\frac{\partial G}{\partial T}\right)_{P} = -S$, and the Gibbs–Helmholtz equation gives $\Delta G$ at other temperatures from $\Delta H$.
+- **Pressure dependence:** $\left(\frac{\partial G}{\partial P}\right)_{T} = V$. For an ideal gas, $G = G^\standardstate + nRT\ln\frac{P}{P^\standardstate}$; for liquids and solids, $G$ barely changes with $P$.
+- **Chemical potential:** for a pure substance, $\mu^* = G/n$; for an ideal gas in a mixture, $\mu_i = \mu_i^\standardstate + RT\ln P_i$.
+- **Mixing:** ideal gases always mix spontaneously, since $\Delta_{\text{mixing}}G < 0$.
+
 ### Study Questions {#sec-quest9}
 **1. Which equation gives the Gibbs energy change of a process at constant $T$ and $P$?**
 

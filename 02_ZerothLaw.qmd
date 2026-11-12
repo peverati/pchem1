@@ -3,10 +3,10 @@ aliases:
   - ZerothLaw.html
 ---
 
-# Zeroth Law of Thermodynamics {#sec-ZerothLaw}
+# Temperature, Heat, and Work {#sec-ZerothLaw}
 In @sec-SystemVariables, we introduced the tools that we need to study thermodynamics: a bit of calculus, the definition of a system, and the distinction between state and path functions. In this chapter, we will define the two ways in which a system can exchange energy with its surroundings, heat and work, and we will learn how to calculate them. Before we do that, however, we need a solid definition of temperature, which comes from the zeroth law of thermodynamics.
 
-## What is Thermodynamics?
+## What Is Thermodynamics?
 Thermodynamics is the branch of science that deals with heat and work, and their relation to energy. These are the two ways in which energy can be transferred between a system and its surroundings:
 
 - **Work** is exchanged when the system changes one of its external, macroscopic parameters against a force. The typical example in chemistry is a gas that changes its volume by pushing a piston against an external pressure.
@@ -25,11 +25,46 @@ We all know from experience that if we put a hot object in contact with a cold o
 
 Notice that when we state the zeroth law, it appears intuitive. However, this is not necessarily the case. Let’s, for example, consider a pot of boiling water at $P=1\;\mathrm{bar}$. Its temperature, $T_{H_2O}$, is about 373 K. Let’s now submerge in this water a coin made of wood and another coin made of metal. After some sufficient time, the wood coin will be in thermal equilibrium with the water, and its temperature $T_W = T_{H_2O}$. Similarly, the metal coin will also be in thermal equilibrium with the water, hence $T_M = T_{H_2O}$. According to the zeroth law, the temperature of the wood coin and that of the metal coin are precisely the same $T_W = T_M = 373\;\mathrm{K}$, even if they are not in direct contact with each other. Now here’s the catch: since wood and metal transmit heat in different manners, if I take the coins out of the water and put them immediately in your hands, one of them will feel just warm, but the other will burn you. If you had to guess the temperature of the two coins without a thermometer, and without knowing that they were immersed in boiling water, would you suppose that they have the same temperature? Probably not.
 
+## Equilibrium, Stationary States, and Quasi-Static Processes {#sec-quasistatic}
+In the rest of this chapter, we will compare processes that happen "fast" with processes that happen "slowly." These words are vague on their own: is one second fast or slow? A second is an eternity for a molecule, and an instant for a geologist. To use them with precision, we need to compare the speed of a process with something that belongs to the system itself. That something is how quickly the system can return to equilibrium. Let's start by defining exactly what we mean by equilibrium.
+
+::: {#def-equilibriumstate}
+*Equilibrium state:* A state in which the macroscopic variables of the system (such as $T$, $P$, $V$, and the composition) do not change with time, *and* there are no net flows of energy or matter, neither inside the system nor between the system and its surroundings.
+:::
+
+The second part of the definition is important. A system can have variables that do not change with time, and still not be at equilibrium. Consider a metal rod with one end on a hot plate and the other end in a bucket of ice. After a while, the temperature at each point of the rod stops changing: it is high near the plate and low near the ice. Heat, however, flows continuously through the rod, from the plate to the ice. A state like this is called a **stationary state** (or *steady state*):
+
+::: {#def-stationarystate}
+*Stationary state:* A state in which the macroscopic variables of the system do not change with time, but which is maintained by a continuous flow of energy or matter through the system.
+:::
+
+The rod in a stationary state does not have *a* temperature: it has a different temperature at every point. Only at equilibrium are the intensive variables, such as $T$ and $P$, uniform throughout the system, so that a single value describes the whole system. This is why the thermodynamics in this book deals with equilibrium states: they are the only states that we can describe with a handful of variables, and the only ones that we can represent as points in a diagram such as the $PV$ plots in this chapter. Stationary states are just as important in nature (a living cell is a stationary state, not an equilibrium one), but they are the subject of non-equilibrium thermodynamics, which is beyond the scope of this course.
+
+When we disturb a system at equilibrium, for example by suddenly moving a piston, the system goes through a series of states that are not at equilibrium: for a short while, the gas near the piston has a different pressure than the gas far from it, and pressure waves bounce around the container. Eventually, these differences die out, and the system reaches a new equilibrium state. The time this takes has a name:
+
+::: {#def-relaxationtime}
+*Relaxation time:* The time, $\tau$, that a system needs to return to equilibrium after a disturbance.
+:::
+
+The relaxation time depends on the system *and* on the variable that is relaxing. Pressure differences in a gas travel at the speed of sound, so in a container that is a few centimeters wide, the pressure becomes uniform in a fraction of a millisecond. Temperature differences, instead, are smoothed out by heat conduction, which is much slower: a cold glass of water in a warm room takes tens of minutes to reach the temperature of the room. Some chemical reactions have relaxation times longer than the age of the universe: diamond is not at equilibrium with graphite, but nobody has ever seen a diamond turn into graphite at room temperature.
+
+We now have the yardstick that we were looking for. A process is **fast** if the conditions of the system change on a time scale that is shorter than, or comparable to, its relaxation time, so that the system has no time to adjust and is driven away from equilibrium. A process is **slow** if the conditions change on a time scale much longer than the relaxation time, so that the system has always enough time to re-equilibrate. Notice that the same process can be slow for one variable and fast for another. Pushing a piston in one second is slow for the pressure of the gas, which equalizes in less than a millisecond, but it is fast for the exchange of heat through the walls of the container, which takes minutes. In the limit of a process that is slow compared to all the relevant relaxation times, we have:
+
+::: {#def-quasistatic}
+*Quasi-static process:* A process that happens slowly enough, compared to the relaxation time of the system, that the system passes through a continuous sequence of equilibrium states.
+:::
+
+A few things to notice about this definition:
+
+1. **A quasi-static process can be drawn as a line.** Since every intermediate state is an equilibrium state, it has well-defined values of $P$, $V$, and $T$, and the whole process is a continuous line in a $PV$ diagram. A process that is not quasi-static, instead, has well-defined initial and final states only: in between, the gas does not have a single pressure, and the process cannot be drawn as a line. We will see an example of this in the one-step expansion below.
+2. **A quasi-static process is an idealization.** Any real process takes a finite time, so it is never perfectly quasi-static. However, many real processes are slow enough to be treated as quasi-static to an excellent approximation, and, as we will see in this chapter, we can approach the quasi-static limit as closely as we want by splitting a process into more and more smaller steps.
+3. **Quasi-static does not mean "at equilibrium with the surroundings."** The system is at equilibrium *internally* at every moment, but it may still exchange energy with the surroundings. In @sec-FirstLaw, we will see that when the system is also balanced with its surroundings at every moment, the process becomes *reversible*.
+
 ## Calculation of Heat {#sec-heatint}
 Heat ($Q$) is a property that gets transferred between substances. Similarly to work, the amount of heat that flows through a boundary can be measured, but its mathematical treatment is complicated because *heat is a path function*.
 As you probably recall from general chemistry, the ability of a substance to absorb heat is given by a coefficient called the heat capacity, which is measured in SI in $\frac{\text{J}}{\text{mol K}}$. However, since heat is a path function, these coefficients are not unique, and we have different ones depending on how the heat transfer happens.
 
-### Processes at constant volume (isochoric)
+### Processes at Constant Volume (Isochoric)
 The heat capacity at constant volume measures the ability of a substance to absorb heat at constant volume. Recalling from general chemistry, the molar heat capacity at constant volume has the following formal definition:
 
 > The molar heat capacity at constant volume is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant volume.
@@ -53,7 +88,7 @@ Q_V \cong n C_V \Delta T.
 $$ {#eq-Cvint}
 
 
-### Processes at constant pressure (isobaric) {#sec-heatconstp}
+### Processes at Constant Pressure (Isobaric) {#sec-heatconstp}
 Similarly to the previous case, the heat capacity at constant pressure measures the ability of a substance to absorb heat at constant pressure. Recalling again from general chemistry:
 
 > The molar heat capacity at constant pressure is the amount of heat required to increase the temperature of 1 mol of a substance by 1 K at constant pressure.
@@ -71,7 +106,7 @@ Q_P \cong n C_P \Delta T.
 $$ {#eq-Cpint}
 
 ## Calculation of Work {#sec-workint}
-In thermodynamics, work ($W$) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because *work is a path function*. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.  
+In thermodynamics, work ($W$) is the ability of a system to transfer energy by exerting a force on its surroundings. Work can be measured simply by evaluating its effects, such as displacing a massive object by some amount of space. The mathematical treatment of work, however, is complicated because *work is a path function*. In the following sections, we will analyze how work is calculated in some prototypical situations commonly encountered in the thermodynamical treatment of systems.
 
 
 ![Isothermal Expansion of an Ideal Gas Against a Constant External Pressure.](img/OEP_Figures.004.jpeg){#fig-Fig2c3 fig-alt="Beaker closed by a movable piston. The gas inside pushes on the piston with pressure P from below, while the external pressure pushes down from above. The piston rises from an initial position i to a final position f, a total height h obtained by summing the small displacements dh." width="50%"}
@@ -103,7 +138,7 @@ $$
 đ W = - P_{\text{ext}}dV.
 $$ {#eq-Wdef}
 
-The external pressure is not necessarily the same as the pressure of the gas, $P$. In a fast expansion, the gas inside the beaker can be at a much higher pressure than the surroundings. However, if the expansion happens slowly enough that the piston is always balanced, $P_{\text{ext}}=P$ at every moment, and the work can be written using the pressure of the gas:
+The external pressure is not necessarily the same as the pressure of the gas, $P$. In an expansion that is fast compared to the relaxation time of the gas, the gas inside the beaker does not even have a single pressure, and the part near the piston can be at a very different pressure than the surroundings. However, if the expansion is quasi-static (@def-quasistatic) and the piston is always balanced, $P_{\text{ext}}=P$ at every moment, and the work can be written using the pressure of the gas:
 
 $$
 đ W = - PdV \qquad \text{(when } P_{\text{ext}}=P\text{)}.
@@ -131,14 +166,14 @@ where the integral on the left-hand side is taken along the path,^[from here on 
 How do we solve the integral in @eq-Wint? It turns out that there are many different ways to solve this integral (perhaps not surprisingly, since the left-hand side depends on the path), which we will explore in the next section.
 
 
-### $| W_{\text{max}} |$ and  $| W_{\text{min}} |$ in processes at constant temperature (isothermal)
+### $| W_{\text{max}} |$ and $| W_{\text{min}} |$ in Processes at Constant Temperature (Isothermal)
 At constant temperature, the piston in @Fig-Fig2c3 moves along the isotherm in @fig-pvIso, obtained for 1 mol of an ideal gas at $T=298$ K.
 
 
 ![Isotherm of 1 mol of an ideal gas at 298 K, with the initial (i) and final (f) states of an expansion.](img/ch2_pv_isotherm.png){#fig-pvIso fig-alt="Pressure-volume plot of an ideal-gas isotherm at 298 K, a curve that falls as volume increases. The initial state i is at small volume and high pressure, and the final state f is at 1 L and low pressure, with dotted lines to their pressures and volumes." width="70%"}
 
 
-An expansion of the gas will happen between $P_i$ and $P_f$. If the expansion happens in a one-step fast process, for example against external atmospheric pressure, then we can consider such final pressure constant (for example $P_f=P_{\text{ext}} =1\;\mathrm{bar}$), and solve the integral as: 
+An expansion of the gas will happen between $P_i$ and $P_f$. If the expansion happens in one step, for example by suddenly releasing the piston against the external atmospheric pressure, the process is not quasi-static: only the initial and final states are equilibrium states, and the gas in between has no single pressure. The external pressure, however, is well defined and constant, and we can use it (for example $P_f=P_{\text{ext}} =1\;\mathrm{bar}$), and solve the integral as:
 
 $$
 W_{\text{1-step}} = - \int_{i}^{f} P_{\text{ext}}dV = -P_{\text{ext}} \int_{i}^{f} dV = -P_{\text{ext}} (V_f-V_i).
@@ -204,11 +239,19 @@ $$
 \left| W_{\text{max}} \right| = nRT \int_{i}^{f} \frac{dV}{V} = nRT \ln \frac{V_f}{V_i}.
 $$ {#eq-WmaxV}
 
-This example demonstrates why work is a path function. If we perform a fast 1-step expansion, the system will perform an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens slowly in an $\infty$-step process.
+This example demonstrates why work is a path function. If we perform the expansion in a single step, which is not quasi-static, the system performs an amount of work that is much smaller than the amount of work it can perform if the expansion between the same points happens in an $\infty$-step process. Each step of the $\infty$-step process is infinitesimally small, so the gas is always at equilibrium: the $\infty$-step process is quasi-static, and it is the only one that follows the isotherm as a line.
 
 The same considerations that we made up to this point for expansion processes apply in reverse to compression ones. The only difference is that the work associated with compressions will have a positive sign since it must be performed onto the system. As such, the amount of work for a transformation that happens in a finite number of steps will be an upper bound to the minimum amount of work required to compress the system.^[In contrast to a lower bound for expansion processes.] $\left| W_{\text{min}} \right|$ for compressions is calculated as the area underneath the $PV$ curve, exactly as $\left| W_{\text{max}} \right|$ for expansions in @eq-WintsolvedV2.
 
 ## Chapter Review {#sec-rev2}
+### Key Ideas
+- **The zeroth law:** two systems in thermal equilibrium with a third one are in thermal equilibrium with each other. This is what makes thermometers possible.
+- **Heat** is exchanged because of a temperature difference. At constant volume or pressure, it is calculated from the heat capacities: $Q_V = n\int C_V\,dT$ and $Q_P = n\int C_P\,dT$.
+- **Work** of expansion is $W=-\int P_{\text{ext}}\,dV$, negative for an expansion (the system does work) and positive for a compression.
+- **Equilibrium vs. stationary states:** at equilibrium, the variables do not change *and* nothing flows; a stationary state has constant variables maintained by a steady flow. "Fast" and "slow" are measured against the relaxation time, $\tau$, and a **quasi-static** process is slow enough to pass only through equilibrium states.
+- **Work depends on the path.** Between the same two states, a one-step, a two-step, and an infinitely-many-step expansion give different amounts of work.
+- **Maximum work:** for an isothermal ideal gas expansion, the most work is extracted in infinitely many steps, $|W_{\max}| = nRT\ln\frac{V_f}{V_i}$, and the least work is needed for a compression performed in the same way.
+
 ### Study Questions {#sec-quest2}
 **1. What does the zeroth law of thermodynamics state?**
 
@@ -304,7 +347,7 @@ e. That work depends on how the process is carried out between the same initial 
 
 a. As fast as possible, in one step.
 b. In two steps.
-c. Infinitely slowly, in infinitely many steps.
+c. Quasi-statically, in infinitely many steps.
 d. At constant volume.
 e. Against zero external pressure.
 
