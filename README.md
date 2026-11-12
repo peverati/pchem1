@@ -82,7 +82,7 @@ Every image needs `fig-alt` (accessibility).
 
 ## Files
 
-- `_quarto.yml`: book settings (title, chapter list, website theme, PDF layout). The website shows the series name (`book: title`); the PDF title page uses the volume title and subtitle, set by `\title{...}` in the PDF header and `subtitle:` under `pdf:` (currently the tentative "Which Way, and How Fast" / "Thermodynamics, Equilibria, and Chemical Kinetics").
+- `_quarto.yml`: book settings (title, chapter list, website theme, PDF layout). The website shows the series name (`book: title`); the PDF title page uses the volume title and subtitle, set by `\title{...}` in the PDF header and `subtitle:` under `pdf:` (currently the tentative "Which Way and How Fast" / "Thermodynamics, Equilibria, and Chemical Kinetics").
 - `quarto.css`, `punctuation.html`, `sidebar-toc.html`: website layout and tweaks (top bar with title, tools, and the group logo in light/dark versions; left sidebar with search and expandable chapter sections; no right-hand column; caption contrast; scrollable equations and wide tables; no line breaks before punctuation after math).
 - `mathjax-macros.html`: the `\standardstate` symbol for the website (the PDF defines it in `_quarto.yml`).
 - `scripts/sidebar_sections.py`: post-render step that builds the sidebar section lists.

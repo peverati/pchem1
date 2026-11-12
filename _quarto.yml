@@ -18,7 +18,7 @@ book:
   title: "The Live Textbook of Physical Chemistry 1"
   output-file: pchem1
   author: "Roberto Peverati"
-  description: "Volume 1 — Which Way, and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics"   # tentative title, same as the PDF
+  description: "Volume 1 — Which Way and How Fast: Thermodynamics, Equilibria, and Chemical Kinetics"   # tentative title, same as the PDF
   date: today
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/peverati/pchem1
@@ -102,7 +102,7 @@ format:
         \usepackage[version=4]{mhchem}
         \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
         \subject{The Live Textbook of Physical Chemistry, Volume 1}
-        \AtBeginDocument{\title{Which Way, and How Fast}}  % print title, tentative (the website keeps the series name)
+        \AtBeginDocument{\title{Which Way and How Fast}}  % print title, tentative (the website keeps the series name)
         \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
         \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
         \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
