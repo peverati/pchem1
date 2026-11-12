@@ -48,8 +48,8 @@ ax.text(Tb - 6, (S_b_l + S_b_g) / 2, r"$\frac{\Delta_{\mathrm{vap}}H}{T_{\mathrm
 ax.text(150, 18, "ice", color="tab:blue", fontsize=15); ax.text(300, S_m_l - 14, "liquid", color="tab:green", fontsize=15)
 ax.text(400, S_b_g - 18, "vapor", color="tab:red", fontsize=15)
 ax.plot(0, 0, "o", color=PURPLE, ms=8, clip_on=False, zorder=5)
-ax.annotate(r"third law: $S=0$ at $0\;\mathrm{K}$", (0, 0), xytext=(25, 40), textcoords="data", color=PURPLE, fontsize=13,
-            arrowprops=dict(arrowstyle="-", color=PURPLE, lw=1))
+ax.annotate(r"third law: $S=0$ at $0\;\mathrm{K}$", (0, 0), xytext=(15, 100), textcoords="data", color=PURPLE, fontsize=13,
+            arrowprops=dict(arrowstyle="-|>", color=PURPLE, lw=1.2, mutation_scale=15, shrinkB=6))
 ax.set_xlim(0, 450); ax.set_ylim(0, 220)
 ax.set_xticks([0, 100, 200, Tm, Tb]); ax.set_xticklabels(["0", "100", "200", r"$T_{\mathrm{m}}$", r"$T_{\mathrm{b}}$"])
 ax.set_xlabel("Temperature [K]"); ax.set_ylabel(r"$S$ [J/(mol K)]")
