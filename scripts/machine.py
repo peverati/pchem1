@@ -39,6 +39,6 @@ def draw_machine(path, display, knobs, title="the machine"):
     ax.set_xlim(0, 10); ax.set_ylim(0, 6.4); ax.set_aspect("equal"); ax.axis("off")
     draw_machine_ax(ax, 0, 0, 1.0, display, knobs, title)
     fig.tight_layout()
-    fig.savefig(path, dpi=200)
+    fig.savefig(path, dpi=200, bbox_inches="tight" if not title else None)
     plt.close(fig)
     print("saved", path)

@@ -38,7 +38,7 @@ A Carnot cycle connects two "heat reservoirs" at temperatures $T_h$ (hot) and $T
 ![Stage 1 of a Carnot cycle: isothermal expansion. The cylinder is in contact with the hot reservoir, from which the gas absorbs the heat $|Q_h|$.](img/ch4_carnot_stage1.png){#fig-carnotstage1 fig-alt="Cylinder with a movable piston sitting on a red hot reservoir at temperature T h. The gas particles are red, the piston moves up (expansion), and a purple arrow shows heat Q h entering the gas from the reservoir." width="50%"}
 
 
-Starting the analysis of the cycle from point $A$ in @Fig-FigCarnotPV, (@fig-carnotstage1)(https://en.wikipedia.org/wiki/Carnot_cycle), and have been generated and distributed by Author BlyumJ under CC-BY-SA license.] the first transformation we encounter is an isothermal expansion at $T_h$. Since the transformation is isothermal:
+Starting the analysis of the cycle from point $A$ in @Fig-FigCarnotPV, the first transformation we encounter is an isothermal expansion at $T_h$ (@fig-carnotstage1). Since the transformation is isothermal:
 
 $$
 \Delta U_1 = \overbrace{W_1}^{<0} + \overbrace{Q_1}^{>0} = 0 \Rightarrow Q_1 = -W_1,
@@ -61,7 +61,7 @@ where we denoted $\left| Q_h \right|$ the absolute value of the heat that gets *
 ![Stage 2 of a Carnot cycle: adiabatic expansion. The cylinder is insulated, no heat is exchanged, and the gas cools down while it keeps expanding.](img/ch4_carnot_stage2.png){#fig-carnotstage2 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves up (expansion) and the gas particles are drawn in purple, cooling down." width="50%"}
 
 
-The second transformation is an adiabatic expansion between $T_h$ and $T_l$. Since we are at adiabatic conditions:
+The second transformation is an adiabatic expansion between $T_h$ and $T_l$ (@fig-carnotstage2). Since we are at adiabatic conditions:
 
 $$
 Q_2 = 0 \Rightarrow \Delta U_2 = W_2,
@@ -78,7 +78,7 @@ $$ {#eq-CCst2b}
 ![Stage 3 of a Carnot cycle: isothermal compression. The cylinder is in contact with the cold reservoir, to which the gas releases the heat $|Q_l|$.](img/ch4_carnot_stage3.png){#fig-carnotstage3 fig-alt="Cylinder with a movable piston sitting on a blue cold reservoir at temperature T l. The gas particles are blue, the piston moves down (compression), and a purple arrow shows heat Q l leaving the gas towards the reservoir." width="50%"}
 
 
-The third transformation is an isothermal compression at $T_l$. The formulas are the same as those used for stage 1, but they will result in heat and work with reversed signs (since this is a compression):
+The third transformation is an isothermal compression at $T_l$ (@fig-carnotstage3). The formulas are the same as those used for stage 1, but they will result in heat and work with reversed signs (since this is a compression):
 
 $$
 \Delta U_3 = \overbrace{W_3}^{>0} + \overbrace{Q_3}^{<0} = 0 \Rightarrow Q_3 = -W_3,
@@ -100,7 +100,7 @@ where $\left| Q_l \right|$ is the absolute value of the heat that gets **out of*
 ![Stage 4 of a Carnot cycle: adiabatic compression. The cylinder is insulated again, and the compression warms the gas back to its initial temperature.](img/ch4_carnot_stage4.png){#fig-carnotstage4 fig-alt="Cylinder with a movable piston sitting on a gray insulating block labeled Q = 0. The piston moves down (compression) and the gas particles, drawn in purple, warm back up." width="50%"}
 
 
-The fourth and final transformation is an adiabatic compression that restores the system to point $A$, bringing it from $T_l$ to $T_h$. Similarly to stage 2:
+The fourth and final transformation is an adiabatic compression that restores the system to point $A$, bringing it from $T_l$ to $T_h$ (@fig-carnotstage4). Similarly to stage 2:
 
 $$
 Q_4 = 0 \Rightarrow \Delta U_4 = W_4,

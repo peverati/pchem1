@@ -4,7 +4,7 @@ from machine import draw_machine
 
 out = sys.argv[1] if len(sys.argv) > 1 else "img"
 draw_machine(f"{out}/machine_knobs.png", r"$\mathcal{M}=\,$" + "42.0",
-             [("a", "$a$", "$da$"), ("b", "$b$", "$db$"), ("c", "$c$", "$dc$")])
+             [("a", "$a$", "$da$"), ("b", "$b$", "$db$"), ("c", "$c$", "$dc$")], title="")
 
 # ---------- four examples of thermodynamic systems and their boundaries ----------
 import numpy as np
