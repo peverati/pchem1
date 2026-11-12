@@ -29,7 +29,7 @@ $$
 f=2-p+2=4-p.
 $$ {#eq-mcgibbs}
 
-A few important considerations can be made by analyzing @eq-mcgibbs:
+What does @eq-mcgibbs mean?
 
 1. **One phase needs three variables.** When the solution is in a single phase (e.g., a liquid), we need $4-1=3$ variables to describe it. These are usually the temperature, $T$, the pressure, $P$, and the composition. For two components, the composition is given by a single mole fraction, since the other one is obtained from $x_{\text{A}}+x_{\text{B}}=1$. We will use $x_i$ for the mole fractions in the liquid phase and $y_i$ for those in the gas phase.
 2. **Three variables would require a 3D plot.** To represent all states of a single-phase binary system, we would need a three-dimensional $T,P,x$ diagram. Since 3D plots are hard to draw and to read, we will always keep one of the variables constant: either the temperature (obtaining a $Px$ diagram) or the pressure (obtaining a $Tx$ diagram).
@@ -57,7 +57,7 @@ Let's first consider a solution where only one of the two components, $\mathrm{A
 
 ![The Pressure–Composition Phase Diagram of a Solution of Toluene (A) with a Nonvolatile Solute (B) at 25 °C.](img/ch13_Px_one_volatile.png){#fig-FigMC1 fig-alt="Pressure versus mole fraction of B, from 0 (pure A, toluene) to 1 (pure B, a nonvolatile solute), at 25 degrees Celsius. A straight line goes from the vapor pressure of pure toluene, about 0.038 bar, down to zero. The liquid region is above the line and the vapor region is below it." width="60%"}
 
-A few important considerations can be made by analyzing @Fig-FigMC1:
+Notice three things in @Fig-FigMC1:
 
 1. **The line separates two regions.** Above the line, the pressure is higher than the vapor pressure of the solution, and only the liquid is stable. Below the line, the pressure is lower, the liquid evaporates, and only the vapor is stable. Each region has $f=3$ degrees of freedom, but only two of them are visible in the diagram, since the temperature is kept constant.
 2. **Along the line, liquid and vapor coexist.** Raoult's law acts as an additional constraint for the points on the line, which have only two degrees of freedom. Since the temperature is fixed, choosing the composition of the liquid determines the pressure, and vice versa.
@@ -158,7 +158,7 @@ In the lab, we usually boil liquids at constant (atmospheric) pressure by increa
 
 ![The Temperature–Composition Phase Diagram of an Ideal Solution of toluene (A) and benzene (B) at 1 atm.](img/ch13_Tx_ideal.png){#fig-FigMC4 fig-alt="Temperature versus mole fraction of benzene at 1 atmosphere. A lens-shaped liquid plus vapor region lies between the lower red liquidus line and the upper blue dew point line, which meet at the boiling points of toluene, about 111 degrees Celsius, and benzene, about 80 degrees Celsius. A purple arrow shows a liquid with x B i equal to 0.3 heated until it boils at about 99 degrees Celsius, producing vapor with y B f of about 0.51." width="60%"}
 
-A few important considerations can be made by analyzing @Fig-FigMC4:
+Let's compare @Fig-FigMC4 with the pressure diagram:
 
 1. **The phases are in reversed order.** Compared to the $Px_{\text{B}}$ diagram of @Fig-FigMC3, the liquid is now at the bottom (low temperature), and the vapor is on top (high temperature).
 2. **The two lines form a lens.** The liquidus and dew point lines are curved, and they enclose a lens-shaped region where liquid and vapor coexist. Inside the lens there are only two degrees of freedom, and since the pressure is kept constant, only one of them is visible in the plot: if we choose the temperature, the compositions of both phases are fixed, and vice versa.
@@ -175,7 +175,7 @@ In most real solutions, the $\mathrm{A}$–$\mathrm{B}$ interactions are not the
 
 ![The Pressure–Composition Phase Diagram of a Non-Ideal Solution Where Only A Is Volatile (Model Mixture with a Positive Deviation).](img/ch13_Px_henry.png){#fig-FigMC6 fig-alt="Pressure versus mole fraction of B for a model non-ideal mixture where only A is volatile. The black curve starts at the vapor pressure of pure A and lies above the dotted blue Raoult's law line, which it follows near x B equal to 0. Near x B equal to 1, where A is dilute, the curve follows a steeper dotted green line labeled Henry's law." width="60%"}
 
-A few important considerations can be made by analyzing @Fig-FigMC6:
+What does @Fig-FigMC6 tell us?
 
 1. **When $\mathrm{A}$ is abundant ($x_{\text{B}} \rightarrow 0$), Raoult's law holds.** In this region, $\mathrm{A}$ is the solvent, and almost every molecule of $\mathrm{A}$ is surrounded by other molecules of $\mathrm{A}$, as in the pure liquid. Its escaping tendency is therefore the same as in pure $\mathrm{A}$, as Raoult's law assumes.
 2. **When $\mathrm{A}$ is dilute ($x_{\text{B}} \rightarrow 1$), Henry's law holds.** In this region, $\mathrm{A}$ is the solute, and each molecule of $\mathrm{A}$ is surrounded almost exclusively by molecules of $\mathrm{B}$. Its escaping tendency is now determined by the $\mathrm{A}$–$\mathrm{B}$ interactions, which are different from the $\mathrm{A}$–$\mathrm{A}$ ones. The partial pressure is still proportional to the mole fraction, but with a different proportionality constant, as shown by the green dotted line.
@@ -231,7 +231,7 @@ $$
 a_i = \frac{P_i}{P_i^*} \qquad \Rightarrow \qquad \mu_i^{\text{solution}} = \mu_i^* + RT \ln a_i.
 $$ {#eq-act1}
 
-A few important considerations can be made by analyzing @eq-act1:
+Let's look at what @eq-act1 means:
 
 1. **For an ideal solution, the activity is the mole fraction.** Using Raoult's law, @eq-mc1, $a_i=x_i$, and @eq-act1 becomes:
 $$
@@ -415,23 +415,23 @@ e. Richer in the more volatile component.
 
 ---
 
-**4. How many degrees of freedom does a binary system have when a liquid and its vapor coexist?**
+**4. A two-component system with overall composition $z_{\text{B}}$ splits into a liquid ($x_{\text{B}}$) and a vapor ($y_{\text{B}}$). What does the lever rule state?**
 
-a. 0.
-b. 2.
-c. 3.
-d. 4.
-e. 1.
+a. $n_{\text{l}}\, x_{\text{B}} = n_{\text{v}}\, y_{\text{B}}$.
+b. $n_{\text{l}}\left(z_{\text{B}}-x_{\text{B}}\right) = n_{\text{v}}\left(y_{\text{B}}-z_{\text{B}}\right)$, so the phase whose composition is closer to $z_{\text{B}}$ is the more abundant.
+c. The amounts of liquid and vapor are always equal.
+d. $n_{\text{l}}+n_{\text{v}} = z_{\text{B}}$.
+e. The phase whose composition is farther from $z_{\text{B}}$ is the more abundant.
 
 ---
 
-**5. Why is the melting point depression of water larger than its boiling point elevation, for the same amount of solute?**
+**5. Two substances mix completely as liquids but not at all as solids. What is their eutectic point?**
 
-a. Because ice is less dense than water.
-b. Because the solute dissolves in ice.
-c. Because the vapor contains the solute.
-d. Because the entropy of fusion is much smaller than the entropy of vaporization.
-e. Because water has a high heat capacity.
+a. The temperature at which both pure substances melt.
+b. The point where the liquid and the vapor have the same composition.
+c. The critical point of the mixture.
+d. The point where the two melting point curves meet: the lowest temperature at which a liquid can exist, in equilibrium with both pure solids.
+e. The temperature at which the mixture boils.
 
 ---
 

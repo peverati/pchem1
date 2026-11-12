@@ -609,7 +609,7 @@ window.Quarto = {
 <p><span id="eq-mcgibbs"><span class="math display">\[
 f=2-p+2=4-p.
 \tag{13.1}\]</span></span></p>
-<p>A few important considerations can be made by analyzing <a href="#eq-mcgibbs" class="quarto-xref">eq.&nbsp;<span>13.1</span></a>:</p>
+<p>What does <a href="#eq-mcgibbs" class="quarto-xref">eq.&nbsp;<span>13.1</span></a> mean?</p>
 <ol type="1">
 <li><strong>One phase needs three variables.</strong> When the solution is in a single phase (e.g., a liquid), we need <span class="math inline">\(4-1=3\)</span> variables to describe it. These are usually the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and the composition. For two components, the composition is given by a single mole fraction, since the other one is obtained from <span class="math inline">\(x_{\text{A}}+x_{\text{B}}=1\)</span>. We will use <span class="math inline">\(x_i\)</span> for the mole fractions in the liquid phase and <span class="math inline">\(y_i\)</span> for those in the gas phase.</li>
 <li><strong>Three variables would require a 3D plot.</strong> To represent all states of a single-phase binary system, we would need a three-dimensional <span class="math inline">\(T,P,x\)</span> diagram. Since 3D plots are hard to draw and to read, we will always keep one of the variables constant: either the temperature (obtaining a <span class="math inline">\(Px\)</span> diagram) or the pressure (obtaining a <span class="math inline">\(Tx\)</span> diagram).</li>
@@ -641,7 +641,7 @@ Figure&nbsp;13.1: The Pressure–Composition Phase Diagram of a Solution of Tolu
 </figcaption>
 </figure>
 </div>
-<p>A few important considerations can be made by analyzing <a href="#fig-FigMC1" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>:</p>
+<p>Notice three things in <a href="#fig-FigMC1" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>:</p>
 <ol type="1">
 <li><strong>The line separates two regions.</strong> Above the line, the pressure is higher than the vapor pressure of the solution, and only the liquid is stable. Below the line, the pressure is lower, the liquid evaporates, and only the vapor is stable. Each region has <span class="math inline">\(f=3\)</span> degrees of freedom, but only two of them are visible in the diagram, since the temperature is kept constant.</li>
 <li><strong>Along the line, liquid and vapor coexist.</strong> Raoult’s law acts as an additional constraint for the points on the line, which have only two degrees of freedom. Since the temperature is fixed, choosing the composition of the liquid determines the pressure, and vice versa.</li>
@@ -742,7 +742,7 @@ Figure&nbsp;13.4: The Temperature–Composition Phase Diagram of an Ideal Soluti
 </figcaption>
 </figure>
 </div>
-<p>A few important considerations can be made by analyzing <a href="#fig-FigMC4" class="quarto-xref">Figure&nbsp;<span>13.4</span></a>:</p>
+<p>Let’s compare <a href="#fig-FigMC4" class="quarto-xref">Figure&nbsp;<span>13.4</span></a> with the pressure diagram:</p>
 <ol type="1">
 <li><strong>The phases are in reversed order.</strong> Compared to the <span class="math inline">\(Px_{\text{B}}\)</span> diagram of <a href="#fig-FigMC3" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>, the liquid is now at the bottom (low temperature), and the vapor is on top (high temperature).</li>
 <li><strong>The two lines form a lens.</strong> The liquidus and dew point lines are curved, and they enclose a lens-shaped region where liquid and vapor coexist. Inside the lens there are only two degrees of freedom, and since the pressure is kept constant, only one of them is visible in the plot: if we choose the temperature, the compositions of both phases are fixed, and vice versa.</li>
@@ -775,7 +775,7 @@ Figure&nbsp;13.6: The Pressure–Composition Phase Diagram of a Non-Ideal Soluti
 </figcaption>
 </figure>
 </div>
-<p>A few important considerations can be made by analyzing <a href="#fig-FigMC6" class="quarto-xref">Figure&nbsp;<span>13.6</span></a>:</p>
+<p>What does <a href="#fig-FigMC6" class="quarto-xref">Figure&nbsp;<span>13.6</span></a> tell us?</p>
 <ol type="1">
 <li><strong>When <span class="math inline">\(\mathrm{A}\)</span> is abundant (<span class="math inline">\(x_{\text{B}} \rightarrow 0\)</span>), Raoult’s law holds.</strong> In this region, <span class="math inline">\(\mathrm{A}\)</span> is the solvent, and almost every molecule of <span class="math inline">\(\mathrm{A}\)</span> is surrounded by other molecules of <span class="math inline">\(\mathrm{A}\)</span>, as in the pure liquid. Its escaping tendency is therefore the same as in pure <span class="math inline">\(\mathrm{A}\)</span>, as Raoult’s law assumes.</li>
 <li><strong>When <span class="math inline">\(\mathrm{A}\)</span> is dilute (<span class="math inline">\(x_{\text{B}} \rightarrow 1\)</span>), Henry’s law holds.</strong> In this region, <span class="math inline">\(\mathrm{A}\)</span> is the solute, and each molecule of <span class="math inline">\(\mathrm{A}\)</span> is surrounded almost exclusively by molecules of <span class="math inline">\(\mathrm{B}\)</span>. Its escaping tendency is now determined by the <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{B}\)</span> interactions, which are different from the <span class="math inline">\(\mathrm{A}\)</span>–<span class="math inline">\(\mathrm{A}\)</span> ones. The partial pressure is still proportional to the mole fraction, but with a different proportionality constant, as shown by the green dotted line.</li>
@@ -839,7 +839,7 @@ Figure&nbsp;13.8: The Temperature–Composition Phase Diagrams of Non-Ideal Solu
 <p><span id="eq-act1"><span class="math display">\[
 a_i = \frac{P_i}{P_i^*} \qquad \Rightarrow \qquad \mu_i^{\text{solution}} = \mu_i^* + RT \ln a_i.
 \tag{13.13}\]</span></span></p>
-<p>A few important considerations can be made by analyzing <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.13</span></a>:</p>
+<p>Let’s look at what <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.13</span></a> means:</p>
 <ol type="1">
 <li><strong>For an ideal solution, the activity is the mole fraction.</strong> Using Raoult’s law, <a href="#eq-mc1" class="quarto-xref">eq.&nbsp;<span>13.2</span></a>, <span class="math inline">\(a_i=x_i\)</span>, and <a href="#eq-act1" class="quarto-xref">eq.&nbsp;<span>13.13</span></a> becomes: <span id="eq-act5"><span class="math display">\[
 \mu_i^{\text{solution}} = \mu_i^* + RT \ln x_i.
@@ -1026,32 +1026,22 @@ Figure&nbsp;13.12: The Temperature–Composition Phase Diagram of Naphthalene (A
 <li>Richer in the more volatile component.</li>
 </ol>
 <hr>
-<p><strong>4. How many degrees of freedom does a binary system have when a liquid and its vapor coexist?</strong></p>
+<p><strong>4. A two-component system with overall composition <span class="math inline">\(z_{\text{B}}\)</span> splits into a liquid (<span class="math inline">\(x_{\text{B}}\)</span>) and a vapor (<span class="math inline">\(y_{\text{B}}\)</span>). What does the lever rule state?</strong></p>
 <ol type="a">
-<li><ol start="0" type="1">
-<li></li>
-</ol></li>
-<li><ol start="2" type="1">
-<li></li>
-</ol></li>
-<li><ol start="3" type="1">
-<li></li>
-</ol></li>
-<li><ol start="4" type="1">
-<li></li>
-</ol></li>
-<li><ol type="1">
-<li></li>
-</ol></li>
+<li><span class="math inline">\(n_{\text{l}}\, x_{\text{B}} = n_{\text{v}}\, y_{\text{B}}\)</span>.</li>
+<li><span class="math inline">\(n_{\text{l}}\left(z_{\text{B}}-x_{\text{B}}\right) = n_{\text{v}}\left(y_{\text{B}}-z_{\text{B}}\right)\)</span>, so the phase whose composition is closer to <span class="math inline">\(z_{\text{B}}\)</span> is the more abundant.</li>
+<li>The amounts of liquid and vapor are always equal.</li>
+<li><span class="math inline">\(n_{\text{l}}+n_{\text{v}} = z_{\text{B}}\)</span>.</li>
+<li>The phase whose composition is farther from <span class="math inline">\(z_{\text{B}}\)</span> is the more abundant.</li>
 </ol>
 <hr>
-<p><strong>5. Why is the melting point depression of water larger than its boiling point elevation, for the same amount of solute?</strong></p>
+<p><strong>5. Two substances mix completely as liquids but not at all as solids. What is their eutectic point?</strong></p>
 <ol type="a">
-<li>Because ice is less dense than water.</li>
-<li>Because the solute dissolves in ice.</li>
-<li>Because the vapor contains the solute.</li>
-<li>Because the entropy of fusion is much smaller than the entropy of vaporization.</li>
-<li>Because water has a high heat capacity.</li>
+<li>The temperature at which both pure substances melt.</li>
+<li>The point where the liquid and the vapor have the same composition.</li>
+<li>The critical point of the mixture.</li>
+<li>The point where the two melting point curves meet: the lowest temperature at which a liquid can exist, in equilibrium with both pure solids.</li>
+<li>The temperature at which the mixture boils.</li>
 </ol>
 <hr>
 <p><strong>6. When does a component of a solution follow Henry’s law?</strong></p>

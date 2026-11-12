@@ -120,7 +120,7 @@ A summary of the four thermodynamic potentials is given in the following table.
 | **Gibbs Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
 \normalsize
 
-A few important considerations can be made by analyzing this table:
+Let's look at what this table tells us:
 
 1. **Each potential is suited to different conditions.** We should use the potential whose natural variables are the ones that we keep constant in our experiment. The internal energy is natural for an isolated, rigid container. The enthalpy is natural for heat exchanged at constant pressure, as we saw in @sec-Thermochemistry. The Helmholtz energy is natural for processes at constant temperature and volume, such as reactions in a sealed rigid vessel. The Gibbs energy is natural for processes at constant temperature and pressure, which is the case for most chemical reactions in the lab and for all the processes in living organisms.
 2. **No information is lost.** A Legendre transformation does not throw away anything: the four potentials contain exactly the same information, written in terms of different variables.

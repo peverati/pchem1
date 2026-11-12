@@ -35,7 +35,7 @@ $$
 \left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
 $$ {#eq-muequal3}
 
-and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid ($S_{\text{g}} \gg S_{\text{l}}>S_{\text{s}}$), we obtain three lines with different slopes that intersect each other, as in @Fig-FigPhase1. A few important considerations can be made by analyzing this diagram:
+and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid ($S_{\text{g}} \gg S_{\text{l}}>S_{\text{s}}$), we obtain three lines with different slopes that intersect each other, as in @Fig-FigPhase1. What can we read from this diagram?
 
 1. **The most stable phase has the lowest chemical potential.** At each temperature, the phase whose line is the lowest is the stable one (red segments in @Fig-FigPhase1). Just as a ball rolls downhill, matter moves spontaneously towards the phase with the lowest chemical potential, since this lowers the Gibbs energy at constant $T$ and $P$.
 2. **Phase changes happen where two lines cross.** At each intersection, the two phases have the same chemical potential, and they coexist. At the crossing between the solid and the liquid lines, the fusion (fus) process occurs, at the melting point $T_{\text{m}}$. At the crossing between the liquid and the gas lines, the vaporization (vap) process occurs, at the boiling point $T_{\text{b}}$.
@@ -86,7 +86,7 @@ $$
 \frac{dP}{dT}=\frac{\Delta S}{\Delta \overline{V}}.
 $$ {#eq-ClapeyronEq}
 
-This equation is known as the **Clapeyron equation**, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of @eq-ClapeyronEq on a $PT$ phase diagram for common substances results in three lines representing the equilibrium between two different phases. A few important considerations can be made by analyzing @eq-ClapeyronEq:
+This equation is known as the **Clapeyron equation**, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of @eq-ClapeyronEq on a $PT$ phase diagram for common substances results in three lines representing the equilibrium between two different phases. Let's see what @eq-ClapeyronEq tells us about each line:
 
 1. **The slope of a phase boundary is the ratio between two differences.** It depends only on how much the entropy and the molar volume change when we go from one phase to the other.
 2. **The sign of the slope is decided by the volume change.** Going from a lower-temperature phase to a higher-temperature one, the entropy always increases ($\Delta S>0$). Therefore, the line slopes up if the volume increases ($\Delta\overline{V}>0$), and down if it decreases.
@@ -103,7 +103,7 @@ The Gibbs phase rule derives from the fact that different phases are in equilibr
 
 The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by $(c-1)$ variables.^[For a 1-component system $c-1=1-1=0$, and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence $c-1=2-1=1$ additional variable will be required to describe it–the mole fraction.] The number of constraints is determined by the number of possible equilibrium relations, which is $c(p-1)$ since the chemical potential of each component must be equal in all phases. The number of degrees of freedom $f$ is then given by $f=(c-1)p+2-c(p-1)$ $=c-p+2$, which is the Gibbs phase rule, as in @eq-Gibbsrule.
 
-A few important considerations can be made by analyzing @eq-Gibbsrule for a pure substance ($c=1$, so $f=3-p$):
+For a pure substance ($c=1$, so $f=3-p$), @eq-Gibbsrule gives:
 
 1. **One phase, $f=2$.** We can change both $T$ and $P$ independently, and the substance stays in the same phase. In a $PT$ diagram, single phases are *areas*.
 2. **Two phases, $f=1$.** If we choose the temperature, the pressure at which the two phases coexist is fixed, and vice versa. Two-phase equilibria are *lines*.

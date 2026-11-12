@@ -568,7 +568,7 @@ dS = \frac{đQ_{\mathrm{REV}}}{T}.
 <p><span id="eq-dentropyint"><span class="math display">\[
 \Delta S = S_f - S_i = \int_i^f \frac{đQ_{\mathrm{REV}}}{T}.
 \tag{6.8}\]</span></span></p>
-<p>A few important considerations can be made by analyzing <a href="#def-entropy" class="quarto-xref">Definition&nbsp;<span>6.1</span></a>:</p>
+<p>Let’s unpack <a href="#def-entropy" class="quarto-xref">Definition&nbsp;<span>6.1</span></a>:</p>
 <ol type="1">
 <li><strong>Dividing by <span class="math inline">\(T\)</span> turns a path function into a state function.</strong> In <a href="01_Basis.html" class="quarto-xref"><span>chapter 1</span></a>, we introduced inexact differentials, such as <span class="math inline">\(đQ\)</span>, which cannot be integrated as differences between final and initial values. <a href="#eq-dentropy" class="quarto-xref">Eq.&nbsp;<span>6.7</span></a> tells us that, for reversible processes, dividing <span class="math inline">\(đQ_{\mathrm{REV}}\)</span> by the temperature turns it into the exact differential of a state function, <span class="math inline">\(dS\)</span>. Mathematicians call <span class="math inline">\(1/T\)</span> an <em>integrating factor</em>.</li>
 <li><strong>Only the reversible heat works.</strong> The heat exchanged along an irreversible path is different, and dividing it by <span class="math inline">\(T\)</span> does <em>not</em> give <span class="math inline">\(dS\)</span>. To calculate the entropy change of an irreversible process, we must find a reversible path between the same initial and final states and calculate <span class="math inline">\(\Delta S\)</span> along that path. Since the entropy is a state function, the result is valid for the irreversible process as well.</li>
@@ -622,7 +622,7 @@ Figure&nbsp;6.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
 <p><span id="eq-secondlaweq"><span class="math display">\[
 \Delta S &gt; 0.
 \tag{6.15}\]</span></span></p>
-<p>A few important considerations can be made by analyzing <a href="#eq-secondlaweq" class="quarto-xref">eq.&nbsp;<span>6.15</span></a>:</p>
+<p>What does <a href="#eq-secondlaweq" class="quarto-xref">eq.&nbsp;<span>6.15</span></a> tell us?</p>
 <ol type="1">
 <li><strong>In an isolated system, spontaneous processes increase the entropy.</strong> Every irreversible process that happens on its own in an isolated system has <span class="math inline">\(\Delta S &gt; 0\)</span>. Spontaneous processes are always irreversible, since reversible processes are idealizations that require infinitely slow, controlled changes.</li>
 <li><strong>The entropy changes even if no heat is exchanged.</strong> In the Joule expansion, <span class="math inline">\(Q=0\)</span>, and yet <span class="math inline">\(\Delta S&gt;0\)</span>. This is not a contradiction: the entropy change must be calculated along a reversible path between the same states, and along that path heat <em>is</em> exchanged. We will calculate this value in <a href="07_ThirdLaw.html" class="quarto-xref"><span>chapter 7</span></a>.</li>
@@ -695,7 +695,7 @@ Table&nbsp;6.1: Microstates of four molecules in a box divided into two halves.
 </div>
 </figure>
 </div>
-<p>There are <span class="math inline">\(2^4=16\)</span> microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. A few important considerations can be made by analyzing <a href="#tbl-microstates" class="quarto-xref">table&nbsp;<span>6.1</span></a>:</p>
+<p>There are <span class="math inline">\(2^4=16\)</span> microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. Notice three things in <a href="#tbl-microstates" class="quarto-xref">table&nbsp;<span>6.1</span></a>:</p>
 <ol type="1">
 <li><strong>The evenly distributed macrostate is the most probable.</strong> Two molecules on each side has <span class="math inline">\(\Omega=6\)</span>, which corresponds to a probability of <span class="math inline">\(6/16\)</span>, almost 40%.</li>
 <li><strong>The macrostate with all molecules on one side is the least probable.</strong> It has <span class="math inline">\(\Omega=1\)</span>, so its probability is only <span class="math inline">\(1/16\)</span>.</li>
@@ -728,6 +728,7 @@ S = k_B \ln \Omega,
 <h3 data-number="6.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">6.5.1</span> Key Ideas</h3>
 <ul>
 <li><strong>Clausius entropy:</strong> <span class="math inline">\(dS = \frac{đQ_{\mathrm{REV}}}{T}\)</span>. The entropy is a state function, measured in <span class="math inline">\(\text{J/K}\)</span>.</li>
+<li><strong>Why dividing by <span class="math inline">\(T\)</span> works:</strong> for an ideal gas, <span class="math inline">\(đQ_{\mathrm{REV}} = nC_V\,dT + \frac{nRT}{V}dV\)</span> fails the Schwarz test, but <span class="math inline">\(\frac{đQ_{\mathrm{REV}}}{T}\)</span> passes it. Its integral around any reversible cycle is zero, which makes <span class="math inline">\(S\)</span> a state function (<span class="math inline">\(1/T\)</span> is an integrating factor).</li>
 <li><strong>Irreversible processes:</strong> to calculate <span class="math inline">\(\Delta S\)</span>, we use a reversible path between the same two states, since <span class="math inline">\(S\)</span> is a state function.</li>
 <li><strong>Clausius inequality:</strong> <span class="math inline">\(\oint \frac{đQ}{T} \leq 0\)</span> around any cycle, with the equal sign only for reversible cycles.</li>
 <li><strong>The second law:</strong> the entropy of the universe increases in every spontaneous process, and stays constant only in reversible ones.</li>

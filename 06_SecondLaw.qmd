@@ -64,7 +64,7 @@ $$
 \Delta S = S_f - S_i = \int_i^f \frac{đQ_{\mathrm{REV}}}{T}.
 $$ {#eq-dentropyint}
 
-A few important considerations can be made by analyzing @Def-entropy:
+Let's unpack @Def-entropy:
 
 1. **Dividing by $T$ turns a path function into a state function.** In @sec-SystemVariables, we introduced inexact differentials, such as $đQ$, which cannot be integrated as differences between final and initial values. @Eq-dentropy tells us that, for reversible processes, dividing $đQ_{\mathrm{REV}}$ by the temperature turns it into the exact differential of a state function, $dS$. Mathematicians call $1/T$ an *integrating factor*.
 2. **Only the reversible heat works.** The heat exchanged along an irreversible path is different, and dividing it by $T$ does *not* give $dS$. To calculate the entropy change of an irreversible process, we must find a reversible path between the same initial and final states and calculate $\Delta S$ along that path. Since the entropy is a state function, the result is valid for the irreversible process as well.
@@ -123,7 +123,7 @@ $$
 \Delta S > 0.
 $$ {#eq-secondlaweq}
 
-A few important considerations can be made by analyzing @eq-secondlaweq:
+What does @eq-secondlaweq tell us?
 
 1. **In an isolated system, spontaneous processes increase the entropy.** Every irreversible process that happens on its own in an isolated system has $\Delta S > 0$. Spontaneous processes are always irreversible, since reversible processes are idealizations that require infinitely slow, controlled changes.
 2. **The entropy changes even if no heat is exchanged.** In the Joule expansion, $Q=0$, and yet $\Delta S>0$. This is not a contradiction: the entropy change must be calculated along a reversible path between the same states, and along that path heat *is* exchanged. We will calculate this value in @sec-thirdlaw.
@@ -159,7 +159,7 @@ Let's see how this works with a simple example. Consider a box divided into two 
 
 : Microstates of four molecules in a box divided into two halves. {#tbl-microstates}
 
-There are $2^4=16$ microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. A few important considerations can be made by analyzing @tbl-microstates:
+There are $2^4=16$ microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. Notice three things in @tbl-microstates:
 
 1. **The evenly distributed macrostate is the most probable.** Two molecules on each side has $\Omega=6$, which corresponds to a probability of $6/16$, almost 40%.
 2. **The macrostate with all molecules on one side is the least probable.** It has $\Omega=1$, so its probability is only $1/16$.
@@ -193,6 +193,7 @@ The shortcut becomes a misconception when we apply it to everyday objects. A mes
 ## Chapter Review {#sec-rev6}
 ### Key Ideas
 - **Clausius entropy:** $dS = \frac{đQ_{\mathrm{REV}}}{T}$. The entropy is a state function, measured in $\text{J/K}$.
+- **Why dividing by $T$ works:** for an ideal gas, $đQ_{\mathrm{REV}} = nC_V\,dT + \frac{nRT}{V}dV$ fails the Schwarz test, but $\frac{đQ_{\mathrm{REV}}}{T}$ passes it. Its integral around any reversible cycle is zero, which makes $S$ a state function ($1/T$ is an integrating factor).
 - **Irreversible processes:** to calculate $\Delta S$, we use a reversible path between the same two states, since $S$ is a state function.
 - **Clausius inequality:** $\oint \frac{đQ}{T} \leq 0$ around any cycle, with the equal sign only for reversible cycles.
 - **The second law:** the entropy of the universe increases in every spontaneous process, and stays constant only in reversible ones.

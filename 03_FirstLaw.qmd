@@ -208,7 +208,7 @@ This process can happen both ways without losses, and is called *reversible*:
 *Reversible process:* A process whose direction can be inverted at any moment by an infinitesimally small change in the conditions of the surroundings (for example, an infinitesimally small increase of the external pressure), so that the system goes back through exactly the same states.^[Adapted from: Sears, F.W. and Salinger, G.L. (1986), Thermodynamics, Kinetic Theory, and Statistical Thermodynamics, 3rd edition (Addison-Wesley).]
 :::
 
-A few important considerations can be made by analyzing @Def-reversible:
+What does @Def-reversible imply in practice? Three things:
 
 1. **A reversible process is quasi-static, and more.** It happens in an infinite number of infinitesimal steps, so the system passes through equilibrium states only (@def-quasistatic). In addition, at each step the system is balanced with its surroundings (for example, $P=P_{\text{ext}}$ at every moment), and there is no friction or other dissipation. Every reversible process is quasi-static, but a quasi-static process is not necessarily reversible: a piston that moves very slowly but with friction converts part of the work into heat at every step, and the process cannot be undone without leaving a trace.
 2. **A reversible process is the most efficient one.** A reversible expansion gives the maximum work, $W_{\text{max}}$, and a reversible compression requires the minimum work, $W_{\text{min}}$. Running a reversible process forward and then backward leaves no trace, neither in the system nor in the surroundings.

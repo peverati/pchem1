@@ -148,6 +148,10 @@ $$
 which is the latent heat of vaporization for water, $\Delta_{\text{vap}} H^\standardstate_{\mathrm{H_2O}}$. The latent heat is positive to indicate that the system absorbs energy in going from the liquid to the gaseous state (and it will release energy when going the opposite direction from gas to liquid).
 :::
 
+The same cycle can be drawn as an enthalpy diagram, @fig-hessmethane, where each species sits at its enthalpy relative to the elements. Since the enthalpy is a state function, the two paths from the reactants to the products, directly or through the elements, must give the same enthalpy change.
+
+![Enthalpy Diagram of the Hess Cycle for the Combustion of Methane at 298 K, with the Data of @eq-someDfH. The Reaction Enthalpy (Purple) Is the Difference Between the Formation Enthalpies of the Products (Red) and of the Reactants (Blue).](img/ch4_hess_methane.png){#fig-hessmethane fig-alt="Enthalpy level diagram. A gray level at 0 kilojoules per mole for the elements, carbon, hydrogen, and oxygen. A blue level slightly below, at minus 75, for methane plus two oxygen molecules, reached by a short blue arrow labeled formation enthalpy of methane. A red level far below, at minus 966, for carbon dioxide plus two liquid water molecules, reached from the elements by a long red arrow. A purple arrow from the methane level to the products level is labeled reaction enthalpy equals minus 966 minus minus 75, equals minus 891 kilojoules per mole." width="80%"}
+
 ## Calculations of Enthalpies of Reaction at $T \neq 298 \; \text{K}$
 
 Standard enthalpies of formation are usually reported at room temperature ($T$ = 298 K), but enthalpies of formation at any temperature $T'$ can be calculated from the values at 298 K using @eq-Cpdef and @eq-dh2:
