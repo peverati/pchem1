@@ -555,7 +555,7 @@ window.Quarto = {
 </header>
 
 
-<p>In <a href="05_SecondLaw.html" class="quarto-xref"><span>chapter 5</span></a> and <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>, we learned that the entropy of the universe tells us whether a process is spontaneous, and in <a href="07_Thermochemistry.html#sec-rxnspont" class="quarto-xref"><span>section 7.7</span></a> we used it to show that the synthesis of ammonia is spontaneous. This criterion is general, but it is not very practical: to use it, we always need to calculate what happens to the surroundings, in addition to what happens to the system. Chemists would much rather have a criterion that depends only on the system, and that works at the conditions that we can easily control in a lab, such as constant temperature and constant pressure. At the end of <a href="07_Thermochemistry.html" class="quarto-xref"><span>chapter 7</span></a>, we already found a hint: for a reaction at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, the combination <span class="math inline">\(\Delta H - T\Delta S\)</span> of the system alone tells us whether the reaction is spontaneous (<a href="07_Thermochemistry.html#eq-TdSuniv" class="quarto-xref">eq.&nbsp;<span>7.15</span></a>). In this chapter, we will build such criteria. We will start by combining the first and second laws into a single equation, and we will then use a simple mathematical trick to define new state functions, called <em>thermodynamic potentials</em>, each tailored to a specific set of experimental conditions. One of them, the Gibbs energy, will be the protagonist of the rest of this book.</p>
+<p>In <a href="05_SecondLaw.html" class="quarto-xref"><span>chapter 5</span></a> and <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>, we learned that the entropy of the universe tells us whether a process is spontaneous, and in <a href="07_Thermochemistry.html#sec-rxnspont" class="quarto-xref"><span>section 7.7</span></a> we used it to show that the synthesis of ammonia is spontaneous. This criterion is general, but it is not very practical: to use it, we always need to calculate what happens to the surroundings, in addition to what happens to the system. Chemists would much rather have a criterion that depends only on the system, and that works at the conditions that we can easily control in a lab, such as constant temperature and constant pressure. At the end of <a href="07_Thermochemistry.html" class="quarto-xref"><span>chapter 7</span></a>, we already found a hint: for a reaction at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, the combination <span class="math inline">\(\Delta H - T\Delta S\)</span> of the system alone tells us whether the reaction is spontaneous (<a href="07_Thermochemistry.html#eq-TdSuniv" class="quarto-xref">eq.&nbsp;<span>7.14</span></a>). In this chapter, we will build such criteria. We will start by combining the first and second laws into a single equation, and we will then use a simple mathematical trick to define new state functions, called <em>thermodynamic potentials</em>, each tailored to a specific set of experimental conditions. One of them, the Gibbs energy, will be the protagonist of the rest of this book.</p>
 <section id="sec-fundeq" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="sec-fundeq"><span class="header-section-number">8.1</span> Fundamental Equation of Thermodynamics</h2>
 <p>Let’s summarize some of the results from the first and second law of thermodynamics that we have seen so far. For reversible processes in closed systems, the first law gives us the change in internal energy, and the definition of entropy gives us the reversible heat:</p>
@@ -581,7 +581,7 @@ dU = TdS-PdV+\sum_i\mu_i dn_i,
 <div id="fig-machineU" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Machine drawn as a rounded box labeled internal energy, with a display showing U and three knobs labeled S, V, and n i, each with a curved arrow labeled dS, dV, and dn i.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-machineU-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="img/machine_U.png" class="img-fluid figure-img" style="width:60.0%" alt="Machine drawn as a rounded box labeled internal energy, with a display showing U and three knobs labeled S, V, and n i, each with a curved arrow labeled dS, dV, and dn i.">
+<img src="img/machine_U.png" class="img-fluid figure-img" style="width:45.0%" alt="Machine drawn as a rounded box labeled internal energy, with a display showing U and three knobs labeled S, V, and n i, each with a curved arrow labeled dS, dV, and dn i.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-machineU-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;8.1: The internal energy as a machine. Its natural variables, the knobs that control it, are the entropy <span class="math inline">\(S\)</span>, the volume <span class="math inline">\(V\)</span>, and the numbers of moles <span class="math inline">\(\{n_i\}\)</span>, as in <a href="#eq-dunv2" class="quarto-xref">eq.&nbsp;<span>8.2</span></a>.
@@ -644,49 +644,52 @@ dG &amp;= dU -SdT -TdS +VdP +PdV = dH -SdT -TdS\\
 \end{aligned}
 \tag{8.9}\]</span></span></p>
 <p>The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles: exactly the knobs that we control when we run a reaction in an open beaker.</p>
-<p>A summary of the four thermodynamic potentials is given in the following table.</p>
+<p>A summary of the four thermodynamic potentials is given in <a href="#tbl-potentials" class="quarto-xref">table&nbsp;<span>8.1</span></a>.</p>
+<div id="tbl-potentials" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="false">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-potentials-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8.1: Summary of the Four Thermodynamic Potentials.
+</figcaption>
+<div aria-describedby="tbl-potentials-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 12%">
-<col style="width: 34%">
-<col style="width: 24%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><strong>Name</strong></th>
-<th style="text-align: center;"><strong>Symbol</strong></th>
-<th style="text-align: center;"><strong>Fundamental Equation</strong></th>
-<th style="text-align: center;"><strong>Natural Variables</strong></th>
+<th style="text-align: left;">Potential</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Fundamental Equation</th>
+<th style="text-align: center;">Natural Var.</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><strong>Energy</strong></td>
+<td style="text-align: left;"><strong>Energy</strong></td>
 <td style="text-align: center;"><span class="math inline">\(U\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(dU=TdS-PdV+\sum_i\mu_i dn_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(dU=TdS-PdV+\sum_i\mu_i dn_i\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(S,V,\{n_i\}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>Enthalpy</strong></td>
+<td style="text-align: left;"><strong>Enthalpy</strong></td>
 <td style="text-align: center;"><span class="math inline">\(H\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(dH=TdS+VdP+\sum_i\mu_i dn_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(dH=TdS+VdP+\sum_i\mu_i dn_i\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(S,P,\{n_i\}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><strong>Helmholtz Energy</strong></td>
+<td style="text-align: left;"><strong>Helmholtz</strong></td>
 <td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(dA=-SdT-PdV+\sum_i\mu_i dn_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(dA=-SdT-PdV+\sum_i\mu_i dn_i\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(T,V,\{n_i\}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>Gibbs Energy</strong></td>
+<td style="text-align: left;"><strong>Gibbs</strong></td>
 <td style="text-align: center;"><span class="math inline">\(G\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(dG=VdP-SdT+\sum_i\mu_i dn_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(dG=-SdT+VdP+\sum_i\mu_i dn_i\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(T,P,\{n_i\}\)</span></td>
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <p>Let’s look at what this table tells us:</p>
 <ol type="1">
 <li><strong>Each potential is suited to different conditions.</strong> We should use the potential whose natural variables are the ones that we keep constant in our experiment. The internal energy is natural for an isolated, rigid container. The enthalpy is natural for heat exchanged at constant pressure, as we saw in <a href="07_Thermochemistry.html" class="quarto-xref"><span>chapter 7</span></a>. The Helmholtz energy is natural for processes at constant temperature and volume, such as reactions in a sealed rigid vessel. The Gibbs energy is natural for processes at constant temperature and pressure, which is the case for most chemical reactions in the lab and for all the processes in living organisms.</li>

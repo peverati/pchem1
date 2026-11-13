@@ -36,7 +36,7 @@ where $dn_i$ is the differential change in the number of moles of substance $i$,
 
 According to the fundamental equation, the internal energy of a system is a function of the three variables entropy, $S$, volume, $V$, and the numbers of moles $\{n_i\}$.^[In the case of the numbers of moles we include them in curly brackets to indicate that there might be more than one, depending on how many species are present.] To emphasize this connection, we can use the notation $U(S,V,\{n_i\})$, and we call $S$, $V$, and $\{n_i\}$ the **natural variables** of the energy. Using the language of @sec-SystemVariables, the natural variables are the "knobs" that control the "machine" $U$: if we know how to turn them, we know everything about how $U$ changes.
 
-![The internal energy as a machine. Its natural variables, the knobs that control it, are the entropy $S$, the volume $V$, and the numbers of moles $\{n_i\}$, as in @eq-dunv2.](img/machine_U.png){#fig-machineU fig-alt="Machine drawn as a rounded box labeled internal energy, with a display showing U and three knobs labeled S, V, and n i, each with a curved arrow labeled dS, dV, and dn i." width="60%"}
+![The internal energy as a machine. Its natural variables, the knobs that control it, are the entropy $S$, the volume $V$, and the numbers of moles $\{n_i\}$, as in @eq-dunv2.](img/machine_U.png){#fig-machineU fig-alt="Machine drawn as a rounded box labeled internal energy, with a display showing U and three knobs labeled S, V, and n i, each with a curved arrow labeled dS, dV, and dn i." width="45%"}
 
 ## Thermodynamic Potentials {#sec-thermpot}
 The natural variables of the internal energy have a practical problem. While the volume and the number of moles are easy to control, nobody has ever built an "entropy-meter," and we have no knob to set the entropy of a system in the lab. The knobs that we *can* easily turn are the temperature (with a thermostat or a water bath) and the pressure (by leaving the beaker open to the atmosphere). We would like, therefore, to define new state functions whose natural variables include $T$ and $P$ instead of $S$ and $V$.
@@ -103,16 +103,16 @@ $$ {#eq-dgdef2}
 
 The Gibbs energy is named after Willard Gibbs himself, and its natural variables are temperature, pressure, and number of moles: exactly the knobs that we control when we run a reaction in an open beaker.
 
-A summary of the four thermodynamic potentials is given in the following table.
+A summary of the four thermodynamic potentials is given in @tbl-potentials.
 
-\tiny
-|          **Name**         | **Symbol** |    **Fundamental Equation**    | **Natural Variables** |
-|:-------------------------:|:----------:|:------------------------------:|:---------------------:|
-| **Energy**                |     $U$    |  $dU=TdS-PdV+\sum_i\mu_i dn_i$ |      $S,V,\{n_i\}$      |
-| **Enthalpy**              |     $H$    |  $dH=TdS+VdP+\sum_i\mu_i dn_i$ |      $S,P,\{n_i\}$      |
-| **Helmholtz Energy** |     $A$    | $dA=-SdT-PdV+\sum_i\mu_i dn_i$ |      $T,V,\{n_i\}$      |
-| **Gibbs Energy**     |     $G$    |  $dG=VdP-SdT+\sum_i\mu_i dn_i$ |      $T,P,\{n_i\}$      |
-\normalsize
+| Potential | Symbol | Fundamental Equation | Natural Var. |
+|:---|:---:|:---|:---:|
+| **Energy** | $U$ | $dU=TdS-PdV+\sum_i\mu_i dn_i$ | $S,V,\{n_i\}$ |
+| **Enthalpy** | $H$ | $dH=TdS+VdP+\sum_i\mu_i dn_i$ | $S,P,\{n_i\}$ |
+| **Helmholtz** | $A$ | $dA=-SdT-PdV+\sum_i\mu_i dn_i$ | $T,V,\{n_i\}$ |
+| **Gibbs** | $G$ | $dG=-SdT+VdP+\sum_i\mu_i dn_i$ | $T,P,\{n_i\}$ |
+
+: Summary of the Four Thermodynamic Potentials. {#tbl-potentials tbl-colwidths="false"}
 
 Let's look at what this table tells us:
 

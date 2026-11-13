@@ -14,15 +14,20 @@ $$
 \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
 $$ {#eq-DHrxn1}
 
-For example, if we take a simple reaction of the form:
-
-$$ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, $$
-
-the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:
+For the general reaction in @eq-genreaction, the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:
 
 $$
-Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
-$$ {#eq-DHrxn2}
+Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}}.
+$$ {#eq-DHrxn3}
+
+Using the stoichiometric numbers, we can write it in compact form as:
+
+$$
+\Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
+$$ {#eq-DHrxn4}
+
+where $\nu_i$ is the stoichiometric number of species $i$, positive for products and negative for reactants, as in @def-nui. @Eq-DHrxn4 has exactly the same form as the one that we used for reaction entropies, @eq-thirdlaweq.
+
 
 Using the chemistry sign convention, @Def-chemistryconv, reactions are classified in terms of the sign of their reaction enthalpies as follows:
 
@@ -32,20 +37,6 @@ $\;$
 - $\Delta_{\text{rxn}} H > 0 \Rightarrow$ *Endothermic reaction* (heat is gained by the system).
 - $\Delta_{\text{rxn}} H < 0 \Rightarrow$ *Exothermic reaction* (heat is lost by the system).
 :::
-
-If we expand the sample reaction to account for its stoichiometry, as in the general reaction of @eq-genreaction, @eq-DHrxn2 can be rewritten as:
-
-$$
-Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
-$$ {#eq-DHrxn3}
-
-while for the most general case we can write it:
-
-$$
-\Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
-$$ {#eq-DHrxn4}
-
-where $\nu_i$ is the stoichiometric number of species $i$, positive for products and negative for reactants, as in @def-nui. @Eq-DHrxn4 has exactly the same form as the one that we used for reaction entropies, @eq-thirdlaweq.
 
 
 ## Calorimetry {#sec-calorimetry}
@@ -109,7 +100,7 @@ The difference between $\Delta_{\text{rxn}}H$ and $\Delta_{\text{rxn}}U$ is only
 Experiments like this one, repeated for many substances, are the source of the tabulated enthalpies of formation that we introduce next.
 
 ## Standard Enthalpies of Formation {#sec-formenthalpy}
-In principle, we could use @eq-DHrxn3 to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies $H_i$ of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist. This is the key difference with the entropy, for which the third law provides a natural zero (@sec-thirdlawsect), so that we could use the absolute values $S_i^\standardstate$ directly in @eq-thirdlaweq. For the enthalpy, we must instead choose a zero, and use enthalpies relative to this reference. The reference is defined as the constituent elements in their standard state, and the enthalpies of 1 mol of substance relative to this reference are called **standard enthalpies of formation**.
+In principle, we could use @eq-DHrxn4 to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies $H_i$ of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist. This is the key difference with the entropy, for which the third law provides a natural zero (@sec-thirdlawsect), so that we could use the absolute values $S_i^\standardstate$ directly in @eq-thirdlaweq. For the enthalpy, we must instead choose a zero, and use enthalpies relative to this reference. The reference is defined as the constituent elements in their standard state, and the enthalpies of 1 mol of substance relative to this reference are called **standard enthalpies of formation**.
 
 ::: {#def-stdenthapies}
 The *standard enthalpy of formation* of compound $i$, $\Delta_{\mathrm{f}} H_i^\standardstate$, is the change of enthalpy during the formation of 1 mol of $i$ from its constituent elements, with all substances in their standard states.
@@ -146,7 +137,7 @@ $$
 \Delta_{\text{rxn}} H^\standardstate = \Delta_{\mathrm{f}} H_{\text{products}}^\standardstate - \Delta_{\mathrm{f}} H_{\text{reactants}}^\standardstate.
 $$ {#eq-Hess1}
 
-Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in @eq-Hesscycle, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. @Eq-Hess1 can be generalized using the same technique used to derive @eq-DHrxn4, resulting in:
+Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in @eq-Hesscycle, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Similarly to @eq-DHrxn4, @Eq-Hess1 can be generalized to any reaction, resulting in:
 
 $$
 \Delta_{\text{rxn}} H^\standardstate = \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate,
@@ -200,7 +191,7 @@ which is the latent heat of vaporization for water, $\Delta_{\text{vap}} H^\stan
 
 The same cycle can be drawn as an enthalpy diagram, @fig-hessmethane, where each species sits at its enthalpy relative to the elements. Since the enthalpy is a state function, the two paths from the reactants to the products, directly or through the elements, must give the same enthalpy change.
 
-![Enthalpy Diagram of the Hess Cycle for the Combustion of Methane at 298 K, with the Data of @eq-someDfH. The Reaction Enthalpy (Purple) Is the Difference Between the Formation Enthalpies of the Products (Red) and of the Reactants (Blue).](img/ch7_hess_methane.png){#fig-hessmethane fig-alt="Enthalpy level diagram. A gray level at 0 kilojoules per mole for the elements, carbon, hydrogen, and oxygen. A blue level slightly below, at minus 75, for methane plus two oxygen molecules, reached by a short blue arrow labeled formation enthalpy of methane. A red level far below, at minus 966, for carbon dioxide plus two liquid water molecules, reached from the elements by a long red arrow. A purple arrow from the methane level to the products level is labeled reaction enthalpy equals minus 966 minus minus 75, equals minus 891 kilojoules per mole." width="80%"}
+![Enthalpy Diagram of the Hess Cycle for the Combustion of Methane at 298 K, with the Data of @eq-someDfH. The Reaction Enthalpy (Purple) Is the Difference Between the Formation Enthalpies of the Products (Red) and of the Reactants (Blue). All Values Are in kJ/mol.](img/ch7_hess_methane.png){#fig-hessmethane fig-alt="Enthalpy level diagram. A gray level at 0 kilojoules per mole for the elements, carbon, hydrogen, and oxygen. A blue level slightly below, at minus 75, for methane plus two oxygen molecules, reached by a short blue arrow labeled formation enthalpy of methane. A red level far below, at minus 966, for carbon dioxide plus two liquid water molecules, reached from the elements by a long red arrow. A purple arrow from the methane level to the products level is labeled reaction enthalpy equals minus 966 minus minus 75, equals minus 891 kilojoules per mole." width="80%"}
 
 ## Bond Enthalpies {#sec-bondenthalpy}
 When the formation enthalpies of a compound are not available, we can still estimate a reaction enthalpy from the bonds that break and form, as we described at the beginning of this chapter. The *bond enthalpy* is the enthalpy needed to break 1 mol of a given bond in the gas phase. Since the same bond has slightly different strengths in different molecules, tables report average values, such as those in @tbl-bondenthalpies.
@@ -317,7 +308,7 @@ $$
 and the reaction is spontaneous. Just as for the freezing of supercooled water in @exm-supercooledEx, the system loses entropy, but the heat that it releases increases the entropy of the surroundings by more.
 :::
 
-This result should not make us think that a bottle of nitrogen and hydrogen turns into ammonia on its own. At room temperature, the reaction is so slow that nothing measurable happens, even over years. In industry, ammonia is produced with the Haber–Bosch process, which uses a catalyst and high temperatures to make the reaction fast enough. Thermodynamics tells us which way a reaction goes; how fast it goes is the subject of chemical kinetics, which we will study in @sec-Kinetics.
+This result should not make us think that a bottle of nitrogen and hydrogen turns into ammonia on its own. At room temperature, the reaction is so slow that nothing measurable happens, even over years. In industry, ammonia is produced with the Haber–Bosch process, which uses a catalyst and high temperatures to make the reaction fast enough. Thermodynamics tells us which way a reaction goes; how fast it goes is the subject of chemical kinetics, which we will introduce in @sec-Kinetics.
 
 The calculation in @exm-NH3universe works, but it requires two separate pieces, one for the system and one for the surroundings. We can combine them in a single expression by multiplying the entropy of the universe by $-T$:
 

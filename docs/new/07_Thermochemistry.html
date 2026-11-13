@@ -565,12 +565,15 @@ window.Quarto = {
 <p><span id="eq-DHrxn1"><span class="math display">\[
 \Delta_{\text{rxn}} H = H_{\text{products}}-H_{\text{reactants}} \; .
 \tag{7.1}\]</span></span></p>
-<p>For example, if we take a simple reaction of the form:</p>
-<p><span class="math display">\[ \mathrm{A} + \mathrm{B} \rightarrow \mathrm{C} + \mathrm{D}, \]</span></p>
-<p>the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
-<p><span id="eq-DHrxn2"><span class="math display">\[
-Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( H_{\mathrm{A}}+H_{\mathrm{B}}\right)}_{\text{reactants}}.
+<p>For the general reaction in <a href="06_ThirdLaw.html#eq-genreaction" class="quarto-xref">eq.&nbsp;<span>6.24</span></a>, the heat at constant pressure is equal to the enthalpy of reaction, which is calculated as:</p>
+<p><span id="eq-DHrxn3"><span class="math display">\[
+Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}}.
 \tag{7.2}\]</span></span></p>
+<p>Using the stoichiometric numbers, we can write it in compact form as:</p>
+<p><span id="eq-DHrxn4"><span class="math display">\[
+\Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
+\tag{7.3}\]</span></span></p>
+<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric number of species <span class="math inline">\(i\)</span>, positive for products and negative for reactants, as in <a href="06_ThirdLaw.html#def-nui" class="quarto-xref">definition&nbsp;<span>6.3</span></a>. <a href="#eq-DHrxn4" class="quarto-xref">Eq.&nbsp;<span>7.3</span></a> has exactly the same form as the one that we used for reaction entropies, <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>.</p>
 <p>Using the chemistry sign convention, <a href="01_Basis.html#def-chemistryconv" class="quarto-xref">Definition&nbsp;<span>1.1</span></a>, reactions are classified in terms of the sign of their reaction enthalpies as follows:</p>
 <div id="def-exoendo" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7.1</strong></span> <span class="math inline">\(\;\)</span></p>
@@ -579,22 +582,13 @@ Q_P = \Delta_{\text{rxn}} H = \underbrace{ \left (H_{\mathrm{C}}+H_{\mathrm{D}} 
 <li><span class="math inline">\(\Delta_{\text{rxn}} H &lt; 0 \Rightarrow\)</span> <em>Exothermic reaction</em> (heat is lost by the system).</li>
 </ul>
 </div>
-<p>If we expand the sample reaction to account for its stoichiometry, as in the general reaction of <a href="06_ThirdLaw.html#eq-genreaction" class="quarto-xref">eq.&nbsp;<span>6.24</span></a>, <a href="#eq-DHrxn2" class="quarto-xref">eq.&nbsp;<span>7.2</span></a> can be rewritten as:</p>
-<p><span id="eq-DHrxn3"><span class="math display">\[
-Q_P = \Delta_{\text{rxn}} H = \underbrace{\left( cH_{\mathrm{C}}+dH_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{ \left( aH_{\mathrm{A}}+bH_{\mathrm{B}} \right)}_{\text{reactants}},
-\tag{7.3}\]</span></span></p>
-<p>while for the most general case we can write it:</p>
-<p><span id="eq-DHrxn4"><span class="math display">\[
-\Delta_{\text{rxn}} H = \sum_i \nu_i H_i,
-\tag{7.4}\]</span></span></p>
-<p>where <span class="math inline">\(\nu_i\)</span> is the stoichiometric number of species <span class="math inline">\(i\)</span>, positive for products and negative for reactants, as in <a href="06_ThirdLaw.html#def-nui" class="quarto-xref">definition&nbsp;<span>6.3</span></a>. <a href="#eq-DHrxn4" class="quarto-xref">Eq.&nbsp;<span>7.4</span></a> has exactly the same form as the one that we used for reaction entropies, <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>.</p>
 </section>
 <section id="sec-calorimetry" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="sec-calorimetry"><span class="header-section-number">7.2</span> Calorimetry</h2>
 <p>Reaction enthalpies are measured with a <em>calorimeter</em>, an insulated container in which the reaction takes place. Since the calorimeter does not exchange heat with the rest of the lab, the heat released or absorbed by the reaction stays inside it and changes its temperature. If the calorimeter (including everything inside it) has a total heat capacity <span class="math inline">\(C_{\text{cal}}\)</span>, a temperature change <span class="math inline">\(\Delta T\)</span> corresponds to the heat of reaction:</p>
 <p><span id="eq-calorimetry"><span class="math display">\[
 Q_{\text{rxn}} = -C_{\text{cal}}\,\Delta T,
-\tag{7.5}\]</span></span></p>
+\tag{7.4}\]</span></span></p>
 <p>where the negative sign follows the chemistry sign convention: an exothermic reaction (<span class="math inline">\(Q_{\text{rxn}}&lt;0\)</span>) warms the calorimeter (<span class="math inline">\(\Delta T&gt;0\)</span>). The heat capacity of the calorimeter is determined beforehand by calibration, either with an electrical heater that supplies a known amount of energy, or with a reaction whose heat is accurately known, such as the combustion of benzoic acid.</p>
 <p>There are two main kinds of calorimeters, and they measure two different state functions:</p>
 <ul>
@@ -608,14 +602,14 @@ Q_{\text{rxn}} = -C_{\text{cal}}\,\Delta T,
 <p>The volumes of liquids and solids are so small that their contribution to <span class="math inline">\(\Delta(PV)\)</span> is negligible. For the gases, we can use the ideal gas law, <span class="math inline">\(PV = nRT\)</span>, and at constant temperature <span class="math inline">\(\Delta(PV) = \Delta n_{\text{gas}}RT\)</span>, which gives:</p>
 <p><span id="eq-DHDU"><span class="math display">\[
 \Delta_{\text{rxn}} H = \Delta_{\text{rxn}} U + \Delta n_{\text{gas}} RT,
-\tag{7.6}\]</span></span></p>
+\tag{7.5}\]</span></span></p>
 <p>where <span class="math inline">\(\Delta n_{\text{gas}}\)</span> is the number of moles of gaseous products minus the number of moles of gaseous reactants, per mole of reaction. If the number of moles of gas does not change, or if no gases are involved, <span class="math inline">\(\Delta_{\text{rxn}} H \approx \Delta_{\text{rxn}} U\)</span>.</p>
 <div id="exm-bombmethane" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7.1 (Combustion of methane in a bomb calorimeter)</strong></span> A sample of <span class="math inline">\(0.0200\;\text{mol}\)</span> of methane is burned in a bomb calorimeter with <span class="math inline">\(C_{\text{cal}} = 10.00\;\text{kJ/K}\)</span>, and the temperature of the calorimeter increases by <span class="math inline">\(1.772\;\text{K}\)</span>. Calculate <span class="math inline">\(\Delta_{\text{rxn}}U\)</span> and <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> at <span class="math inline">\(298\;\text{K}\)</span> for the reaction:</p>
 <p><span class="math display">\[
 \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)}.
 \]</span></p>
-<p><em>Solution:</em> Using <a href="#eq-calorimetry" class="quarto-xref">eq.&nbsp;<span>7.5</span></a>, the heat released by the sample is:</p>
+<p><em>Solution:</em> Using <a href="#eq-calorimetry" class="quarto-xref">eq.&nbsp;<span>7.4</span></a>, the heat released by the sample is:</p>
 <p><span class="math display">\[
 Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
 \]</span></p>
@@ -623,7 +617,7 @@ Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
 <p><span class="math display">\[
 \Delta_{\text{rxn}} U = \frac{Q_V}{n} = \frac{-17.72\;\text{kJ}}{0.0200\;\text{mol}} = -886\;\text{kJ/mol}.
 \]</span></p>
-<p>In the reaction, 3 moles of gas (1 of methane and 2 of oxygen) become 1 mole of gas (carbon dioxide), while water is liquid, so <span class="math inline">\(\Delta n_{\text{gas}} = 1 - 3 = -2\)</span>. Using <a href="#eq-DHDU" class="quarto-xref">eq.&nbsp;<span>7.6</span></a>:</p>
+<p>In the reaction, 3 moles of gas (1 of methane and 2 of oxygen) become 1 mole of gas (carbon dioxide), while water is liquid, so <span class="math inline">\(\Delta n_{\text{gas}} = 1 - 3 = -2\)</span>. Using <a href="#eq-DHDU" class="quarto-xref">eq.&nbsp;<span>7.5</span></a>:</p>
 <p><span class="math display">\[
 \Delta_{\text{rxn}} H = -886 + (-2)(8.314 \times 10^{-3})(298) = -886 - 5 = -891\;\text{kJ/mol}.
 \]</span></p>
@@ -633,7 +627,7 @@ Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
 </section>
 <section id="sec-formenthalpy" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="sec-formenthalpy"><span class="header-section-number">7.3</span> Standard Enthalpies of Formation</h2>
-<p>In principle, we could use <a href="#eq-DHrxn3" class="quarto-xref">eq.&nbsp;<span>7.3</span></a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist. This is the key difference with the entropy, for which the third law provides a natural zero (<a href="06_ThirdLaw.html#sec-thirdlawsect" class="quarto-xref"><span>section 6.4</span></a>), so that we could use the absolute values <span class="math inline">\(S_i^\standardstate\)</span> directly in <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>. For the enthalpy, we must instead choose a zero, and use enthalpies relative to this reference. The reference is defined as the constituent elements in their standard state, and the enthalpies of 1 mol of substance relative to this reference are called <strong>standard enthalpies of formation</strong>.</p>
+<p>In principle, we could use <a href="#eq-DHrxn4" class="quarto-xref">eq.&nbsp;<span>7.3</span></a> to calculate the reaction enthalpy associated with any reaction. However, to do so, the absolute enthalpies <span class="math inline">\(H_i\)</span> of reactants and products would be required. Unfortunately, absolute enthalpies are not known—and theoretically unknowable, since this would require an absolute zero for the enthalpy scale, which does not exist. This is the key difference with the entropy, for which the third law provides a natural zero (<a href="06_ThirdLaw.html#sec-thirdlawsect" class="quarto-xref"><span>section 6.4</span></a>), so that we could use the absolute values <span class="math inline">\(S_i^\standardstate\)</span> directly in <a href="06_ThirdLaw.html#eq-thirdlaweq" class="quarto-xref">eq.&nbsp;<span>6.25</span></a>. For the enthalpy, we must instead choose a zero, and use enthalpies relative to this reference. The reference is defined as the constituent elements in their standard state, and the enthalpies of 1 mol of substance relative to this reference are called <strong>standard enthalpies of formation</strong>.</p>
 <div id="def-stdenthapies" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7.2</strong></span> The <em>standard enthalpy of formation</em> of compound <span class="math inline">\(i\)</span>, <span class="math inline">\(\Delta_{\mathrm{f}} H_i^\standardstate\)</span>, is the change of enthalpy during the formation of 1 mol of <span class="math inline">\(i\)</span> from its constituent elements, with all substances in their standard states.</p>
 </div>
@@ -645,7 +639,7 @@ Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
    \mathrm{C}_{(s,\text{graphite})}+2 \mathrm{H}_{2(g)} \rightarrow \mathrm{CH}_{4(g)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{CH}_{4(g)}}^\standardstate = -75 \; \text{kJ/mol} \\
    \mathrm{H}_{2(g)}+\frac{1}{2} \mathrm{O}_{2(g)} \rightarrow \mathrm{H}_2 \mathrm{O}_{(l)} \qquad &amp; \Delta_{\mathrm{f}} H_{\mathrm{H}_2 \mathrm{O}_{(l)}}^\standardstate = -286 \; \text{kJ/mol}
 \end{aligned}
-\tag{7.7}\]</span></span></p>
+\tag{7.6}\]</span></span></p>
 <p>A comprehensive list of standard enthalpies of formation of inorganic and organic compounds is also reported in <a href="A1_Appendix.html" class="quarto-xref"><span>Appendix A</span></a>.</p>
 </section>
 <section id="sec-hessslaw" class="level2" data-number="7.4">
@@ -657,26 +651,26 @@ Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
 \scriptstyle{-\Delta_{\text{f}} H_{\text{reactants}}^\standardstate} \quad \bigg\downarrow \quad &amp; \qquad \qquad \qquad \qquad \scriptstyle{\bigg\uparrow  \; \Delta_{\text{f}} H_{\text{products}}^\standardstate} \\
 \text{"elements in } &amp; \text{their standard reference state"}
 \end{aligned}
-\tag{7.8}\]</span></span></p>
+\tag{7.7}\]</span></span></p>
 <p>This process is summarized by the simple formula:</p>
 <p><span id="eq-Hess1"><span class="math display">\[
 \Delta_{\text{rxn}} H^\standardstate = \Delta_{\mathrm{f}} H_{\text{products}}^\standardstate - \Delta_{\mathrm{f}} H_{\text{reactants}}^\standardstate.
-\tag{7.9}\]</span></span></p>
-<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in <a href="#eq-Hesscycle" class="quarto-xref">eq.&nbsp;<span>7.8</span></a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. <a href="#eq-Hess1" class="quarto-xref">Eq.&nbsp;<span>7.9</span></a> can be generalized using the same technique used to derive <a href="#eq-DHrxn4" class="quarto-xref">eq.&nbsp;<span>7.4</span></a>, resulting in:</p>
+\tag{7.8}\]</span></span></p>
+<p>Notice how there is a negative sign in front of the enthalpy of formation of the reactants because they are normally defined for the reactions that go from the elements to the reactants and not vice-versa. To close the cycle in <a href="#eq-Hesscycle" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>, however, we should go from the reactants to the elements, and therefore we must invert the sign in front of the formation enthalpies of the reactants. Similarly to <a href="#eq-DHrxn4" class="quarto-xref">eq.&nbsp;<span>7.3</span></a>, <a href="#eq-Hess1" class="quarto-xref">Eq.&nbsp;<span>7.8</span></a> can be generalized to any reaction, resulting in:</p>
 <p><span id="eq-Hess"><span class="math display">\[
 \Delta_{\text{rxn}} H^\standardstate = \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate,
-\tag{7.10}\]</span></span></p>
+\tag{7.9}\]</span></span></p>
 <p>which is a mathematical expression of the law that is known as <strong>Hess’s Law</strong>. Hess’s law is valid at constant pressure because, at those conditions, the heat of reaction—a path function—is equal to the enthalpy of reaction—a state function. Therefore, the enthalpy of a reaction depends exclusively on the initial and final state, and it can be obtained via the pathway that passes through the elements in their standard state (the formation pathway).</p>
 <div id="exm-HessLawEx" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7.2 (Combustion enthalpy of methane from Hess’s law)</strong></span> Calculate the standard enthalpy of combustion at 298 K of 1 mol of methane, using the data in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>.</p>
+<p><span class="theorem-title"><strong>Example 7.2 (Combustion enthalpy of methane from Hess’s law)</strong></span> Calculate the standard enthalpy of combustion at 298 K of 1 mol of methane, using the data in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.6</span></a>.</p>
 <p><em>Solution:</em> The reaction that is under consideration is: <span class="math display">\[
 \mathrm{CH}_{4(g)} + 2 \mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2 \mathrm{H}_2 \mathrm{O}_{(l)} \qquad \Delta_{\text{rxn}} H^\standardstate = ?
 \]</span></p>
-<p>Using Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.10</span></a>, the enthalpy of combustion of methane is:</p>
+<p>Using Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.9</span></a>, the enthalpy of combustion of methane is:</p>
 <p><span class="math display">\[
 \Delta_{\text{rxn}} H^\standardstate =  \Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}} + 2 \Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}} - \Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}} - 2 \underbrace{\Delta_{\text{f}} H^\standardstate_{\mathrm{O}_{2(g)}}}_{=0}
 \]</span></p>
-<p>whose values are reported in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>. Notice that the formation enthalpy of <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
+<p>whose values are reported in <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.6</span></a>. Notice that the formation enthalpy of <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> is zero, since it is an element in its standard state. The final result is:</p>
 <p><span class="math display">\[
 \Delta_{\text{rxn}} H^\standardstate =  \overbrace{-394}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CO}_{2(g)}}} +2 \overbrace{(-286)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{H_2O}_{(l)}}} - \overbrace{(-75)}^{\Delta_{\text{f}} H^\standardstate_{\mathrm{CH}_{4(g)}}}  = -891 \; \mathrm{kJ/mol}.
 \]</span></p>
@@ -704,7 +698,7 @@ Q_V = -C_{\text{cal}}\,\Delta T = -10.00 \times 1.772 = -17.72\;\text{kJ}.
 <img src="img/ch7_hess_methane.png" class="img-fluid figure-img" style="width:80.0%" alt="Enthalpy level diagram. A gray level at 0 kilojoules per mole for the elements, carbon, hydrogen, and oxygen. A blue level slightly below, at minus 75, for methane plus two oxygen molecules, reached by a short blue arrow labeled formation enthalpy of methane. A red level far below, at minus 966, for carbon dioxide plus two liquid water molecules, reached from the elements by a long red arrow. A purple arrow from the methane level to the products level is labeled reaction enthalpy equals minus 966 minus minus 75, equals minus 891 kilojoules per mole.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hessmethane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.1: Enthalpy Diagram of the Hess Cycle for the Combustion of Methane at 298 K, with the Data of <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.7</span></a>. The Reaction Enthalpy (Purple) Is the Difference Between the Formation Enthalpies of the Products (Red) and of the Reactants (Blue).
+Figure&nbsp;7.1: Enthalpy Diagram of the Hess Cycle for the Combustion of Methane at 298 K, with the Data of <a href="#eq-someDfH" class="quarto-xref">eq.&nbsp;<span>7.6</span></a>. The Reaction Enthalpy (Purple) Is the Difference Between the Formation Enthalpies of the Products (Red) and of the Reactants (Blue). All Values Are in kJ/mol.
 </figcaption>
 </figure>
 </div>
@@ -760,12 +754,12 @@ Table&nbsp;7.1: Average Bond Enthalpies.
 <p>Breaking a bond always requires energy, and forming a bond always releases it, so:</p>
 <p><span id="eq-bondenthalpy"><span class="math display">\[
 \Delta_{\text{rxn}} H \approx \sum_{\text{broken}} \text{(bond enthalpies)} - \sum_{\text{formed}} \text{(bond enthalpies)}.
-\tag{7.11}\]</span></span></p>
+\tag{7.10}\]</span></span></p>
 <p>Notice that the order is the opposite of Hess’s law: the bonds of the <em>reactants</em> come first, with a positive sign. For example, in the synthesis of ammonia we break one N≡N bond and three H–H bonds, and we form six N–H bonds:</p>
 <p><span class="math display">\[
 \Delta_{\text{rxn}} H \approx \left[945 + 3(436)\right] - 6(391) = 2253 - 2346 = -93\;\text{kJ/mol},
 \]</span></p>
-<p>very close to the value of <span class="math inline">\(-91.8\;\text{kJ/mol}\)</span> obtained from the formation enthalpies. The agreement is not always this good, since bond enthalpies are averages, and <a href="#eq-bondenthalpy" class="quarto-xref">eq.&nbsp;<span>7.11</span></a> is valid only when all reactants and products are gases. Formation enthalpies, when available, should always be preferred.</p>
+<p>very close to the value of <span class="math inline">\(-91.8\;\text{kJ/mol}\)</span> obtained from the formation enthalpies. The agreement is not always this good, since bond enthalpies are averages, and <a href="#eq-bondenthalpy" class="quarto-xref">eq.&nbsp;<span>7.10</span></a> is valid only when all reactants and products are gases. Formation enthalpies, when available, should always be preferred.</p>
 </section>
 <section id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="calculations-of-enthalpies-of-reaction-at-t-neq-298-textk"><span class="header-section-number">7.6</span> Calculations of Enthalpies of Reaction at <span class="math inline">\(T \neq 298 \; \text{K}\)</span></h2>
@@ -776,18 +770,18 @@ dH = C_P dT \rightarrow &amp; \int_{H_{298}^\standardstate}^{H_{T'}^\standardsta
             &amp; H_{T'}^\standardstate - H_{298}^\standardstate = \int_{298}^{T'} C_P dT \\
             &amp; H_{T'}^\standardstate = H_{298}^\standardstate + \int_{298}^{T'} C_P dT,
 \end{aligned}
-\tag{7.12}\]</span></span></p>
-<p>which, in conjunction with Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.10</span></a>, results in:</p>
+\tag{7.11}\]</span></span></p>
+<p>which, in conjunction with Hess’s Law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.9</span></a>, results in:</p>
 <p><span id="eq-DrxnHneq298f"><span class="math display">\[
 \Delta_{\text{rxn}} H_{T'}^\standardstate = \Delta_{\text{rxn}} H_{298}^\standardstate + \int_{298}^{T'} \Delta C_P dT,
-\tag{7.13}\]</span></span></p>
-<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>. <a href="#eq-DrxnHneq298f" class="quarto-xref">Eq.&nbsp;<span>7.13</span></a> is known as <strong>Kirchhoff’s law</strong>, after the German physicist Gustav Robert Kirchhoff (1824–1887).</p>
+\tag{7.12}\]</span></span></p>
+<p>with <span class="math inline">\(\Delta C_P = \sum_i \nu_i C_{P,i}\)</span>. <a href="#eq-DrxnHneq298f" class="quarto-xref">Eq.&nbsp;<span>7.12</span></a> is known as <strong>Kirchhoff’s law</strong>, after the German physicist Gustav Robert Kirchhoff (1824–1887).</p>
 <div id="exm-DHtdiff298" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7.3 (Reaction enthalpy at 398 K)</strong></span> Calculate <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of the following reaction at 398 K, knowing that <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{298}\)</span> is -283.0 kJ/mol, and the following <span class="math inline">\(C_P\)</span> values: <span class="math inline">\(\mathrm{CO}_{(g)}\)</span> = 29 J/(mol K), <span class="math inline">\(\mathrm{O}_{2(g)}\)</span> = 30 J/(mol K), <span class="math inline">\(\mathrm{CO}_{2(g)}\)</span> = 38 J/(mol K):</p>
 <p><span class="math display">\[
 \mathrm{CO}_{(g)}+\frac{1}{2}\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)},
 \]</span></p>
-<p><em>Solution:</em> Using <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>7.13</span></a> we obtain:</p>
+<p><em>Solution:</em> Using <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>7.12</span></a> we obtain:</p>
 <p><span class="math display">\[
 \Delta_{\text{rxn}} H^\standardstate_{398} = \overbrace{-283.0}^{\Delta_{\text{rxn}}H^\standardstate_{298}} + \int_{298}^{398} ( \overbrace{38}^{C_P^{\mathrm{CO}_2}} -\overbrace{29}^{C_P^{\mathrm{CO}}} -\frac{1}{2}\overbrace{30}^{C_P^{\mathrm{O}_2}} ) \times 10^{-3} dT,
 \]</span></p>
@@ -797,7 +791,7 @@ dH = C_P dT \rightarrow &amp; \int_{H_{298}^\standardstate}^{H_{T'}^\standardsta
 \Delta_{\text{rxn}} H^\standardstate_{398} &amp;= -283.0 + \left(38-29-\frac{1}{2}30 \right) \times 10^{-3} (398-298) \\ &amp;= -283.6 \; \text{kJ/mol}.
 \end{aligned}
 \]</span></p>
-<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>7.13</span></a>, confirming that the heat capacities are mostly independent of temperature.</p>
+<p>As we notice from this result, a difference in temperature of 100 K translates into a change in <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> of this reaction of only 0.6 kJ/mol. This is a trend that is often observed, and values of <span class="math inline">\(\Delta_{\text{rxn}}H\)</span> are very weakly dependent on changes in temperature for most chemical reactions. This numerical result can also be compared with the amount that is experimentally measured for <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate_{398}\)</span> of this reaction, which is –283.67 kJ/mol. This comparison strongly supports the assumption that we used to solve the integral in <a href="#eq-DrxnHneq298f" class="quarto-xref">eq.&nbsp;<span>7.12</span></a>, confirming that the heat capacities are mostly independent of temperature.</p>
 </div>
 </section>
 <section id="sec-rxnspont" class="level2" data-number="7.7">
@@ -809,18 +803,18 @@ dH = C_P dT \rightarrow &amp; \int_{H_{298}^\standardstate}^{H_{T'}^\standardsta
 </ul>
 <p><span id="eq-dssurrrxn"><span class="math display">\[
 \Delta S^{\text{surr}} = -\frac{\Delta_{\text{rxn}} H}{T}.
-\tag{7.14}\]</span></span></p>
+\tag{7.13}\]</span></span></p>
 <p>An exothermic reaction releases heat and increases the entropy of the surroundings, while an endothermic reaction absorbs heat and decreases it.</p>
 <div id="exm-NH3universe" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7.4 (Is the synthesis of ammonia spontaneous?)</strong></span> Using the result of <a href="06_ThirdLaw.html#exm-NH3entropy" class="quarto-xref">example&nbsp;<span>6.3</span></a>, <span class="math inline">\(\Delta_{\text{rxn}} S^\standardstate = -198.1\;\frac{\text{J}}{\text{mol K}}\)</span>, and knowing that <span class="math inline">\(\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{NH}_{3(g)}} = -45.9\;\text{kJ/mol}\)</span>, decide whether the synthesis of ammonia at standard conditions and <span class="math inline">\(298\;\text{K}\)</span> is spontaneous:</p>
 <p><span class="math display">\[
 \mathrm{N}_{2(g)} + 3\mathrm{H}_{2(g)} \rightarrow 2\mathrm{NH}_{3(g)}.
 \]</span></p>
-<p><em>Solution:</em> Using Hess’s law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.10</span></a>, and remembering that the formation enthalpies of <span class="math inline">\(\mathrm{N}_{2(g)}\)</span> and <span class="math inline">\(\mathrm{H}_{2(g)}\)</span> are zero, since they are elements in their reference form:</p>
+<p><em>Solution:</em> Using Hess’s law, <a href="#eq-Hess" class="quarto-xref">eq.&nbsp;<span>7.9</span></a>, and remembering that the formation enthalpies of <span class="math inline">\(\mathrm{N}_{2(g)}\)</span> and <span class="math inline">\(\mathrm{H}_{2(g)}\)</span> are zero, since they are elements in their reference form:</p>
 <p><span class="math display">\[
 \Delta_{\text{rxn}} H^\standardstate = 2 \Delta_{\mathrm{f}} H^\standardstate_{\mathrm{NH}_{3(g)}} - \underbrace{\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{N}_{2(g)}}}_{=0} - 3\underbrace{\Delta_{\mathrm{f}} H^\standardstate_{\mathrm{H}_{2(g)}}}_{=0} = 2(-45.9) = -91.8\;\text{kJ/mol}.
 \]</span></p>
-<p>The reaction is exothermic, and the heat that it releases increases the entropy of the surroundings, <a href="#eq-dssurrrxn" class="quarto-xref">eq.&nbsp;<span>7.14</span></a>:</p>
+<p>The reaction is exothermic, and the heat that it releases increases the entropy of the surroundings, <a href="#eq-dssurrrxn" class="quarto-xref">eq.&nbsp;<span>7.13</span></a>:</p>
 <p><span class="math display">\[
 \Delta S^{\text{surr}} = -\frac{\Delta_{\text{rxn}} H^\standardstate}{T} = -\frac{-91.8 \times 10^3}{298} = +308.1\;\frac{\text{J}}{\text{mol K}}.
 \]</span></p>
@@ -830,12 +824,12 @@ dH = C_P dT \rightarrow &amp; \int_{H_{298}^\standardstate}^{H_{T'}^\standardsta
 \]</span></p>
 <p>and the reaction is spontaneous. Just as for the freezing of supercooled water in <a href="06_ThirdLaw.html#exm-supercooledEx" class="quarto-xref">example&nbsp;<span>6.2</span></a>, the system loses entropy, but the heat that it releases increases the entropy of the surroundings by more.</p>
 </div>
-<p>This result should not make us think that a bottle of nitrogen and hydrogen turns into ammonia on its own. At room temperature, the reaction is so slow that nothing measurable happens, even over years. In industry, ammonia is produced with the Haber–Bosch process, which uses a catalyst and high temperatures to make the reaction fast enough. Thermodynamics tells us which way a reaction goes; how fast it goes is the subject of chemical kinetics, which we will study in <a href="14_Kinetics.html" class="quarto-xref"><span>chapter 14</span></a>.</p>
+<p>This result should not make us think that a bottle of nitrogen and hydrogen turns into ammonia on its own. At room temperature, the reaction is so slow that nothing measurable happens, even over years. In industry, ammonia is produced with the Haber–Bosch process, which uses a catalyst and high temperatures to make the reaction fast enough. Thermodynamics tells us which way a reaction goes; how fast it goes is the subject of chemical kinetics, which we will introduce in <a href="14_Kinetics.html" class="quarto-xref"><span>chapter 14</span></a>.</p>
 <p>The calculation in <a href="#exm-NH3universe" class="quarto-xref">example&nbsp;<span>7.4</span></a> works, but it requires two separate pieces, one for the system and one for the surroundings. We can combine them in a single expression by multiplying the entropy of the universe by <span class="math inline">\(-T\)</span>:</p>
 <p><span id="eq-TdSuniv"><span class="math display">\[
 -T\Delta S^{\text{universe}} = -T\Delta_{\text{rxn}} S + \Delta_{\text{rxn}} H = \Delta_{\text{rxn}} H - T\Delta_{\text{rxn}} S.
-\tag{7.15}\]</span></span></p>
-<p>Since <span class="math inline">\(T\)</span> is positive, a reaction is spontaneous (<span class="math inline">\(\Delta S^{\text{universe}}&gt;0\)</span>) when the right-hand side of <a href="#eq-TdSuniv" class="quarto-xref">eq.&nbsp;<span>7.15</span></a> is negative. For the synthesis of ammonia, it is <span class="math inline">\(-91.8 - 298 \times (-0.1981) = -32.8\;\text{kJ/mol}\)</span>. Notice that the right-hand side contains only properties of the system, and no reference to the surroundings. This combination of enthalpy and entropy is so useful that it deserves its own name. In the next chapter, we will see that it is the change of a new state function, the Gibbs energy, and we will discover the general family of functions to which it belongs, called the thermodynamic potentials.</p>
+\tag{7.14}\]</span></span></p>
+<p>Since <span class="math inline">\(T\)</span> is positive, a reaction is spontaneous (<span class="math inline">\(\Delta S^{\text{universe}}&gt;0\)</span>) when the right-hand side of <a href="#eq-TdSuniv" class="quarto-xref">eq.&nbsp;<span>7.14</span></a> is negative. For the synthesis of ammonia, it is <span class="math inline">\(-91.8 - 298 \times (-0.1981) = -32.8\;\text{kJ/mol}\)</span>. Notice that the right-hand side contains only properties of the system, and no reference to the surroundings. This combination of enthalpy and entropy is so useful that it deserves its own name. In the next chapter, we will see that it is the change of a new state function, the Gibbs energy, and we will discover the general family of functions to which it belongs, called the thermodynamic potentials.</p>
 </section>
 <section id="sec-rev7" class="level2" data-number="7.8">
 <h2 data-number="7.8" class="anchored" data-anchor-id="sec-rev7"><span class="header-section-number">7.8</span> Chapter Review</h2>

@@ -241,7 +241,7 @@ This is a true limit of nature, not of our technology. Physicists have cooled sm
 Since we can measure the absolute entropy of every substance, we can collect the values in tables and use them for any process that we like. To make such tables useful, however, everybody must agree on the conditions at which the values are reported. The entropy of a substance depends on its temperature, as in @fig-SvsTwater, and, for a gas, it also depends strongly on the pressure, as we saw in @eq-sigconsttP. For this reason, thermodynamic tables report the properties of each substance in a common reference state, called the *standard state*:
 
 ::: {#def-standardstate}
-*Standard State:* The standard state of a substance is its pure form at the standard pressure, $P^{\standardstate} = 1\;\text{bar}$. For a gas, it is the pure gas, behaving ideally, at $P^{\standardstate}$. For a liquid or a solid, it is the pure liquid or the pure solid at $P^{\standardstate}$.
+*Standard State:* The standard state of a substance is its pure form at the standard pressure, $P^{\standardstate} = 1\;\text{bar}$. For a gas, it is the pure gas at $P^{\standardstate}$, assuming ideal gas behavior. For a liquid or a solid, it is the pure liquid or the pure solid at $P^{\standardstate}$.
 :::
 
 Quantities that refer to the standard state are marked with the symbol $^\standardstate$, as in $S^\standardstate$. The standard pressure is $P^{\standardstate} = 100\;\text{kPa} = 1\;\text{bar}$.^[Prior to 1982, the value $P^{\standardstate} = 1\;\text{atm}$ was used. The two values are within 1% of each other, since $1\;\text{atm} = 101.325\;\text{kPa}$.] Notice that the definition does not include a temperature. A standard state can be defined at any temperature, but most tables report their values at room temperature, $T = 298.15\;\text{K}$, which we will often round to $298\;\text{K}$. Do not confuse the standard state with the "standard temperature and pressure" (STP, $0\;°\text{C}$ and $1\;\text{atm}$) that you might have used for gases in general chemistry. For example, the standard molar entropy of liquid water at $298\;\text{K}$ is $S^\standardstate_{\mathrm{H_2O}_{(l)}} = 70.0\;\frac{\text{J}}{\text{mol K}}$, close to the value that we can read on the curve in @fig-SvsTwater at that temperature. A comprehensive list of standard entropies of inorganic and organic compounds is reported in @sec-appendix.
@@ -265,7 +265,7 @@ $$
 \Delta_{\text{rxn}} S^\standardstate = \sum_i \nu_i S_i^\standardstate = \underbrace{\left( cS^\standardstate_{\mathrm{C}}+dS^\standardstate_{\mathrm{D}} \right) }_{\text{products}} - \underbrace{\left( aS^\standardstate_{\mathrm{A}}+bS^\standardstate_{\mathrm{B}}\right)}_{\text{reactants}},
 $$ {#eq-thirdlaweq}
 
-where the sum runs over all reactants and products.
+where the sum runs over all reactants and products. Notice how equation @eq-thirdlaweq extends beyond reactions with two reactants and two products, and it can generally account for any reactions with any numbers of reactants and products.
 
 ::: {#exm-NH3entropy}
 ## Entropy of the synthesis of ammonia

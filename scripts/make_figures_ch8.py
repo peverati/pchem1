@@ -7,7 +7,7 @@ from machine import draw_machine, draw_machine_ax
 out = sys.argv[1] if len(sys.argv) > 1 else "img"
 S = ("S", "$S$", "$dS$"); V = ("V", "$V$", "$dV$"); T = ("T", "$T$", "$dT$"); P = ("P", "$P$", "$dP$")
 n = ("n", r"$n_i$", r"$dn_i$")
-draw_machine(f"{out}/machine_U.png", "$U$", [S, V, n], "internal energy")
+draw_machine(f"{out}/machine_U.png", "$U$", [S, V, n], "")
 
 # Legendre transformations as knob swaps
 fig, ax = plt.subplots(figsize=(13, 10))

@@ -169,6 +169,10 @@ Let's see how this works with a simple example. Consider a box divided into two 
 
 : Microstates of four molecules in a box divided into two halves. {#tbl-microstates}
 
+The same microstates are drawn in @fig-microstates, where each box is one microstate, and each row collects the microstates that belong to the same macrostate.
+
+![The 16 Microstates of Four Molecules in a Box Divided into Two Halves, Grouped by Macrostate (Number of Molecules in the Left Half). The Evenly Distributed Macrostate (Highlighted) Has the Most Microstates.](img/ch5_microstates.png){#fig-microstates fig-alt="Five rows of small boxes, each split in half by a dashed line, containing four colored molecules labeled a, b, c, and d. The top row, 4 left, has one box with all molecules on the left, multiplicity 1, probability 1 in 16. The second row, 3 left, has four boxes, multiplicity 4, probability 4 in 16. The middle row, 2 left, highlighted in purple, has six boxes, multiplicity 6, probability 6 in 16. The fourth row, 1 left, has four boxes, multiplicity 4. The bottom row, 0 left, has one box with all molecules on the right, multiplicity 1." width="95%"}
+
 There are $2^4=16$ microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. Notice three things in @tbl-microstates:
 
 1. **The evenly distributed macrostate is the most probable.** Two molecules on each side has $\Omega=6$, which corresponds to a probability of $6/16$, almost 40%.

@@ -8,7 +8,7 @@ from figstyle import save, PURPLE
 
 out = sys.argv[1] if len(sys.argv) > 1 else "img"
 
-# ---------- ch. 4: enthalpy-level diagram of the Hess cycle (data of eq-someDfH) ----------
+# ---------- ch. 7: enthalpy-level diagram of the Hess cycle (data of eq-someDfH) ----------
 H_el, H_r, H_p = 0.0, -75.0, -394.0 + 2 * (-286.0)
 fig, ax = plt.subplots(figsize=(7.5, 5.2))
 def arrow(x0, y0, x1, y1, col):
@@ -23,7 +23,7 @@ arrow(0.65, H_el - 3, 0.65, H_r + 3, "tab:blue")
 arrow(1.75, H_el - 3, 1.75, H_p + 3, "tab:red")
 ax.text(1.8, (H_el + H_p) / 2, r"$\Delta_{\mathrm{f}}H^{\ominus}_{\mathrm{CO_2}}$" + "\n" + r"$+\,2\,\Delta_{\mathrm{f}}H^{\ominus}_{\mathrm{H_2O}}$" + "\n" + r"$= -966$", fontsize=12, color="tab:red", va="center")
 arrow(0.4, H_r - 70, 1.3, H_p + 3, PURPLE)
-ax.text(0.62, (H_r + H_p) / 2 - 20, r"$\Delta_{\mathrm{rxn}}H^{\ominus}$" + "\n" + r"$= -966-(-75)$" + "\n" + r"$= -891\;\mathrm{kJ/mol}$", fontsize=13, color=PURPLE, ha="right", va="center")
+ax.text(0.62, (H_r + H_p) / 2 - 20, r"$\Delta_{\mathrm{rxn}}H^{\ominus}$" + "\n" + r"$= -966-(-75)$" + "\n" + r"$= -891$", fontsize=13, color=PURPLE, ha="right", va="center")
 ax.text(-0.17, H_r, r"$\Delta_{\mathrm{f}}H^{\ominus}_{\mathrm{CH_4}} = -75$", fontsize=12, color="tab:blue", ha="right", va="center")
 ax.set_xlim(-1.05, 2.5); ax.set_ylim(-1060, 70)
 ax.set_xticks([]); ax.spines["bottom"].set_visible(False)
