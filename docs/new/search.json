@@ -1210,7 +1210,7 @@
     "href": "14_Kinetics.html",
     "title": "14  Chemical Kinetics",
     "section": "",
-    "text": "14.1 Differential and Integrated Rate Laws\nFrom thermodynamics, we can determine the spontaneity of a reaction and its extent, using \\(\\Delta G\\) and \\(K_{\\text{eq}}\\), respectively. However, thermodynamics does not provide any information on how fast the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.\nA chemical kinetics study aims to find the rate of a reaction and to find the microscopic steps that compose it, determining its mechanism. In this last chapter, we will therefore leave equilibrium behind and look at how concentrations change with time, how we can measure the rate of a reaction, and why reactions speed up when we heat them.\nThe rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, \\(k\\), called the rate coefficient, and several parameters found at the exponent of the concentrations of the reactants, and are called reaction orders. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The rate coefficient is usually represented with the lowercase letter \\(k\\), and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter \\(K\\). Another useful concept in kinetics is the half-life, usually abbreviated with \\(t_{1/2}\\). The half-life is defined as the time required to reach half of the initial reactant concentration.\nA reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant’s individual orders and is, at most, equal to three. The number of molecules that take part in an elementary step is called its molecularity: an elementary step involving one molecule is unimolecular, one involving two molecules is bimolecular, and one involving three molecules is termolecular. Keep in mind that the order is an experimental property of the rate law, while the molecularity describes a single microscopic step: the two coincide only for elementary reactions. We examine in detail the four most common reaction orders below.",
+    "text": "14.1 Differential and Integrated Rate Laws\nFrom thermodynamics, we can determine the spontaneity of a reaction and its extent, using \\(\\Delta G\\) and \\(K_{\\text{eq}}\\), respectively. However, thermodynamics does not provide any information on how fast the reaction is going to happen. For example, while the reaction that converts solid carbon from its diamond allotropic form into hexagonal graphite is thermodynamically spontaneous, it is so slow as to be virtually non-existent. Diamond is effectively a meta-stable phase. The speed of a chemical reaction is the subject of a branch of physical chemistry called chemical kinetics.\nA chemical kinetics study aims to find the rate of a reaction and to find the microscopic steps that compose it, determining its mechanism. In this last chapter, we will therefore leave equilibrium behind and look at how concentrations change with time, how we can measure the rate of a reaction, and why reactions speed up when we heat them. Keep in mind, however, that this chapter only gives a taste of chemical kinetics. Kinetics is a huge field of science in its own right: in many programs it is a full course, and entire textbooks are dedicated to it, covering topics such as reaction mechanisms, catalysis, and the theories that explain rate coefficients from the motion of molecules. Here, we will only present its foundations. If you want to go further, Appendix B suggests some good textbooks on chemical kinetics.\nThe rate law of a chemical reaction is an equation that links the initial rate with the concentrations (or pressures) of the reactants. Rate laws usually include a constant parameter, \\(k\\), called the rate coefficient, and several parameters found at the exponent of the concentrations of the reactants, and are called reaction orders. The rate coefficient depends on several conditions, including the reaction type, the temperature, the surface area of an adsorbent, light irradiation, and others. The rate coefficient is usually represented with the lowercase letter \\(k\\), and it should not be confused with the thermodynamic equilibrium constant that is generally designated with the uppercase letter \\(K\\). Another useful concept in kinetics is the half-life, usually abbreviated with \\(t_{1/2}\\). The half-life is defined as the time required to reach half of the initial reactant concentration.\nA reaction that happens in one single microscopic step is called elementary. Elementary reactions have reaction orders equal to the (integer) stoichiometric coefficients for each reactant. As such, only a limited number of elementary reactions are possible (four types are commonly observed), and they are classified according to their overall reaction order. The global reaction order of a reaction is calculated as the sum of each reactant’s individual orders and is, at most, equal to three. The number of molecules that take part in an elementary step is called its molecularity: an elementary step involving one molecule is unimolecular, one involving two molecules is bimolecular, and one involving three molecules is termolecular. Keep in mind that the order is an experimental property of the rate law, while the molecularity describes a single microscopic step: the two coincide only for elementary reactions. We examine in detail the four most common reaction orders below.",
     "crumbs": [
       "The Live Textbook of Physical Chemistry 1",
       "Chemical Kinetics",
@@ -1323,6 +1323,90 @@
       "The Live Textbook of Physical Chemistry 1",
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Appendix</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html",
+    "href": "A2_References.html",
+    "title": "Appendix B — Further Reading and References",
+    "section": "",
+    "text": "B.1 A second explanation, at the same level\nThis book covers the essentials at a level suitable for a first course. When you want a second explanation, more detail, or the topics that we only touched on, these are good places to look. They are grouped by purpose, roughly from the most accessible to the most advanced. Resources marked free are available online at no cost.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html#a-second-explanation-at-the-same-level",
+    "href": "A2_References.html#a-second-explanation-at-the-same-level",
+    "title": "Appendix B — Further Reading and References",
+    "section": "",
+    "text": "McQuarrie and Simon (1997) and Atkins et al. (2018): the classic chemistry texts for this course, with clear derivations and many worked problems. Most topics in this book have a matching chapter in either one.\nLibreTexts (n.d.) (free): open textbooks and course notes covering the same material, written by many different instructors. Useful when you want the same topic explained in different words.\nMIT OpenCourseWare (2008) (free): lecture notes, problem sets, and exams from MIT’s thermodynamics and kinetics course.\nPeverati (n.d.) (free): the companion volume, on quantum mechanics, atoms, molecules, and spectroscopy.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html#more-depth-on-thermodynamics-chapters-113",
+    "href": "A2_References.html#more-depth-on-thermodynamics-chapters-113",
+    "title": "Appendix B — Further Reading and References",
+    "section": "B.2 More depth on thermodynamics (chapters 1–13)",
+    "text": "B.2 More depth on thermodynamics (chapters 1–13)\n\nCallen (1985): the classic text on the logical structure of thermodynamics, from its postulates to the thermodynamic potentials and stability.\nSmith et al. (2005): the standard engineering text, with a thorough treatment of non-ideal gases, phase equilibria, and solutions.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html#chemical-kinetics-chapter-14",
+    "href": "A2_References.html#chemical-kinetics-chapter-14",
+    "title": "Appendix B — Further Reading and References",
+    "section": "B.3 Chemical kinetics (chapter 14)",
+    "text": "B.3 Chemical kinetics (chapter 14)\n\nHouston (2001): a readable introduction that goes from rate laws to collision theory, transition-state theory, and reaction dynamics.\nEspenson (1995): a practical text on how rate laws are measured and how mechanisms are deduced from them.\nLaidler (1987): the classic comprehensive text, covering both the experimental and the theoretical side of kinetics.\nSteinfeld et al. (1999): a more advanced text on the theories of reaction rates and on reaction dynamics.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html#mathematics",
+    "href": "A2_References.html#mathematics",
+    "title": "Appendix B — Further Reading and References",
+    "section": "B.4 Mathematics",
+    "text": "B.4 Mathematics\n\nMcQuarrie (2003): written by a chemist for chemists, covering the calculus used in this book and much more.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html#data",
+    "href": "A2_References.html#data",
+    "title": "Appendix B — Further Reading and References",
+    "section": "B.5 Data",
+    "text": "B.5 Data\n\nNational Institute of Standards and Technology (n.d.) (free): experimental thermochemical data for thousands of substances, including heat capacities, enthalpies of formation, and entropies.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
+    ]
+  },
+  {
+    "objectID": "A2_References.html#references",
+    "href": "A2_References.html#references",
+    "title": "Appendix B — Further Reading and References",
+    "section": "References",
+    "text": "References\n\n\nAtkins, Peter, Julio de Paula, and James Keeler. 2018. Atkins’\nPhysical Chemistry. 11th ed. Oxford University Press.\n\n\nCallen, Herbert B. 1985. Thermodynamics and an Introduction to\nThermostatistics. 2nd ed. Wiley.\n\n\nEspenson, James H. 1995. Chemical Kinetics and Reaction\nMechanisms. 2nd ed. McGraw-Hill.\n\n\nHouston, Paul L. 2001. Chemical Kinetics and Reaction Dynamics.\nMcGraw-Hill.\n\n\nLaidler, Keith J. 1987. Chemical Kinetics. 3rd ed. Harper &\nRow.\n\n\nLibreTexts. n.d. Physical and Theoretical Chemistry Textbook\nMaps. https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps.\n\n\nMcQuarrie, Donald A. 2003. Mathematical Methods for Scientists and\nEngineers. University Science Books.\n\n\nMcQuarrie, Donald A., and John D. Simon. 1997. Physical Chemistry: A\nMolecular Approach. University Science Books.\n\n\nMIT OpenCourseWare. 2008. 5.60 Thermodynamics & Kinetics, Spring\n2008. https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/.\n\n\nNational Institute of Standards and Technology. n.d.\nNIST Chemistry WebBook. https://webbook.nist.gov/chemistry/.\n\n\nPeverati, Roberto. n.d. The Live Textbook of Physical Chemistry\n2. https://peverati.github.io/pchem2/.\n\n\nSmith, J. M., H. C. Van Ness, and M. M. Abbott. 2005. Introduction\nto Chemical Engineering Thermodynamics. 7th ed. McGraw-Hill.\n\n\nSteinfeld, Jeffrey I., Joseph S. Francisco, and William L. Hase. 1999.\nChemical Kinetics and Dynamics. 2nd ed. Prentice Hall.",
+    "crumbs": [
+      "The Live Textbook of Physical Chemistry 1",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Further Reading and References</span>"
     ]
   }
 ]

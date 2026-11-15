@@ -69,6 +69,10 @@ book:
         - 14_Kinetics.qmd
   appendices:
     - A1_Appendix.qmd
+    - A2_References.qmd
+
+bibliography: book.bib
+citation-location: document
 
 filters:
   - path: pdf-fixes.lua      # "Eq. (5.7)" in the PDF; no empty line after each answer choice
