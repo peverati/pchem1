@@ -581,17 +581,17 @@ window.Quarto = {
 <p><span id="eq-integraldefgen"><span class="math display">\[
 L = \int dL.
 \tag{1.1}\]</span></span></p>
-<p>This operation is called an integral, and is represented by the symbol <span class="math inline">\(\int\)</span>. The integral is the inverse of <span class="math inline">\(d\)</span>, as it reconstructs the original object by gluing together an infinite amount of infinitesimally small differentials. This operation is, in practice, just a sanity check for the differentiation procedure introduced in the previous section. What <a href="#eq-integraldefgen" class="quarto-xref">eq.&nbsp;<span>1.1</span></a> is telling us, is nothing other than: if you start from an object, <span class="math inline">\(L\)</span>, and apply a certain operation to it (<span class="math inline">\(d\)</span>), then there has to be another operation (<span class="math inline">\(\int\)</span>) that undoes what the first operation did. This inverse procedure becomes really useful when we want to measure things in the real world. How so? Because we can compare differentials of an unknown quantity to differentials of known ones, and then use the latter to reconstruct the former. In our simple example, we can use the derivative, <span class="math inline">\(\frac{dL}{dx}=1\)</span>, to compare the length of the object (unknown) to the position along our axis (known, because we can manipulate it). This is the mathematical counterpart of taking an object with unknown length, and comparing it to the length of a standard stick (a meter, a kilometer, a mile, …). The formula that describes this operation is:</p>
+<p>This operation is called an integral, and is represented by the symbol <span class="math inline">\(\int\)</span>. The integral is the inverse of <span class="math inline">\(d\)</span>, as it reconstructs the original object by gluing together an infinite amount of infinitesimally small differentials. This operation is, in practice, just a sanity check for the differentiation procedure introduced in the previous section. What <a href="#eq-integraldefgen" class="quarto-xref">Eq.&nbsp;<span>1.1</span></a> is telling us, is nothing other than: if you start from an object, <span class="math inline">\(L\)</span>, and apply a certain operation to it (<span class="math inline">\(d\)</span>), then there has to be another operation (<span class="math inline">\(\int\)</span>) that undoes what the first operation did. This inverse procedure becomes really useful when we want to measure things in the real world. How so? Because we can compare differentials of an unknown quantity to differentials of known ones, and then use the latter to reconstruct the former. In our simple example, we can use the derivative, <span class="math inline">\(\frac{dL}{dx}=1\)</span>, to compare the length of the object (unknown) to the position along our axis (known, because we can manipulate it). This is the mathematical counterpart of taking an object with unknown length, and comparing it to the length of a standard stick (a meter, a kilometer, a mile, …). The formula that describes this operation is:</p>
 <p><span id="eq-integraldef"><span class="math display">\[
 L=\int dL = \int_{i}^{f} 1 dx = x_f-x_i =\Delta x,
 \tag{1.2}\]</span></span></p>
-<p>where the length (<span class="math inline">\(L\)</span>) of the original object is reconstructed by fixing the initial piece at position <span class="math inline">\(x_i\)</span> on the <span class="math inline">\(x\)</span> axis, the final piece at position <span class="math inline">\(x_f\)</span>, and then by gluing together the differentials <span class="math inline">\(dx\)</span> in between these points, using the integral procedure. Switching from <span class="math inline">\(dL\)</span> to <span class="math inline">\(dx\)</span> has the noticeable advantage of going from something that we initially don’t know anything about (the length of the stick) to something that we can manipulate as much as we want, because we specifically built it for this task (the position along the axis, <span class="math inline">\(x\)</span>). This concept, of course, is not limited to length. If we differentiate an area, or a volume, or a pressure, or a temperature using <a href="#eq-integraldefgen" class="quarto-xref">eq.&nbsp;<span>1.1</span></a>, we obtain the corresponding differentials. By comparing these differentials to specifically built ones that we are able to manipulate to our will, we can reconstruct the original quantity via integration, using <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a>. Every differential will retain the <em>dimension</em> of the original quantity (<span class="math inline">\(dT\)</span> still retains the dimension of a temperature, a.k.a. it <em>is</em> a temperature, despite the fact that it has a value of essentially zero). In addition, every differential will retain <em>hidden</em> information about the initial object, which we can reconstruct by comparing to something we know, and then by applying integration to the latter. Notice that it is the operation in <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a> that turns the infinitesimal pieces back into a finite, measurable quantity, by comparing an unknown differential to a known one. This is effectively the “measuring” procedure, written in mathematical terms.</p>
-<p>When we wrote <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a>, we glanced over the fact that <span class="math inline">\(\int_{i}^{f} 1 dx = x_f-x_i\)</span>. Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you’ll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that <span class="math inline">\(\int_{i}^{f} dx = x_f-x_i\)</span>. Other common integration rules that we’ll need in this course are, for example: <span class="math inline">\(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f  =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\)</span> for <span class="math inline">\(n\neq -1\)</span>, and <span class="math inline">\(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|.\)</span></p>
+<p>where the length (<span class="math inline">\(L\)</span>) of the original object is reconstructed by fixing the initial piece at position <span class="math inline">\(x_i\)</span> on the <span class="math inline">\(x\)</span> axis, the final piece at position <span class="math inline">\(x_f\)</span>, and then by gluing together the differentials <span class="math inline">\(dx\)</span> in between these points, using the integral procedure. Switching from <span class="math inline">\(dL\)</span> to <span class="math inline">\(dx\)</span> has the noticeable advantage of going from something that we initially don’t know anything about (the length of the stick) to something that we can manipulate as much as we want, because we specifically built it for this task (the position along the axis, <span class="math inline">\(x\)</span>). This concept, of course, is not limited to length. If we differentiate an area, or a volume, or a pressure, or a temperature using <a href="#eq-integraldefgen" class="quarto-xref">Eq.&nbsp;<span>1.1</span></a>, we obtain the corresponding differentials. By comparing these differentials to specifically built ones that we are able to manipulate to our will, we can reconstruct the original quantity via integration, using <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a>. Every differential will retain the <em>dimension</em> of the original quantity (<span class="math inline">\(dT\)</span> still retains the dimension of a temperature, a.k.a. it <em>is</em> a temperature, despite the fact that it has a value of essentially zero). In addition, every differential will retain <em>hidden</em> information about the initial object, which we can reconstruct by comparing to something we know, and then by applying integration to the latter. Notice that it is the operation in <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a> that turns the infinitesimal pieces back into a finite, measurable quantity, by comparing an unknown differential to a known one. This is effectively the “measuring” procedure, written in mathematical terms.</p>
+<p>When we wrote <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a>, we glanced over the fact that <span class="math inline">\(\int_{i}^{f} 1 dx = x_f-x_i\)</span>. Where did that come from? And most importantly, how are we going to manage more complicated cases? At this point, you’ll have to go fetch a mathematics textbook, as you need to know how to perform some of those integrals. For all intents and purposes, we can use those formulas as recipes that mathematicians have written in the past. Granted, we are well aware of the fact that if we want to understand where the formulas are coming from, it is possible to do so with a little effort.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Mathematicians have clear rules on how to compute many of these objects, and one of such rules tells us that <span class="math inline">\(\int_{i}^{f} dx = x_f-x_i\)</span>. Other common integration rules that we’ll need in this course are, for example: <span class="math inline">\(\int_{i}^{f} x^{n}\,dx=\left.\frac{x^{n+1}}{n+1}\right| _i^f  =\frac{1}{n+1}\left(x_f^{n+1}-x_i^{n+1}\right)\)</span> for <span class="math inline">\(n\neq -1\)</span>, and <span class="math inline">\(\int_{i}^{f} x^{-1} dx=\ln \left|x_f\right|-\ln \left|x_i\right|=\ln \left|\frac{x_f}{x_i}\right|.\)</span></p>
 <p>This is indeed a good point to go fetch that old math textbook and refresh some of the simplest integration rules, as well as some of the simplest differentiation ones. Not that we will use all of them, but we might indeed use a few ones.</p>
 </section>
 <section id="calculus-for-thermodynamics" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="calculus-for-thermodynamics"><span class="header-section-number">1.1.3</span> Calculus for Thermodynamics</h3>
-<p>Now comes the interesting question: How are we going to practically perform these two important operations of differentiation and integration in thermodynamics? Well, imagine we need to study the behavior of a machine that prints out a number on a display. The first thing we need to do if we want to study this machine is to find something that makes the number change. Let’s represent this something with a knob. We can then turn the knob voluntarily one way or another, and register how the number changes on the display. This is how you apply calculus in thermodynamics (and in most science, for that matter). Our machine might be the length of an object <span class="math inline">\(L\)</span>, while our knob might be the position along an axis <span class="math inline">\(x\)</span>. We can voluntarily change the position on the axis, and observe how the length changes on the display. Does that sound familiar? Can we use <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a> to do so? I believe so…</p>
+<p>Now comes the interesting question: How are we going to practically perform these two important operations of differentiation and integration in thermodynamics? Well, imagine we need to study the behavior of a machine that prints out a number on a display. The first thing we need to do if we want to study this machine is to find something that makes the number change. Let’s represent this something with a knob. We can then turn the knob voluntarily one way or another, and register how the number changes on the display. This is how you apply calculus in thermodynamics (and in most science, for that matter). Our machine might be the length of an object <span class="math inline">\(L\)</span>, while our knob might be the position along an axis <span class="math inline">\(x\)</span>. We can voluntarily change the position on the axis, and observe how the length changes on the display. Does that sound familiar? Can we use <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a> to do so? I believe so…</p>
 <p>Now, obviously the example of length and position is the simplest we could imagine, and doesn’t really pertain to physical chemistry. A more relevant example is that of a gas, whose pressure changes when we change the temperature at constant volume. In this case, the pressure, <span class="math inline">\(P\)</span>, is the machine, and the temperature, <span class="math inline">\(T\)</span>, is the knob. To understand the machine, we will need to know the derivative <span class="math inline">\(\frac{dP}{dT}\)</span>. In many cases the derivative between our machine and our knob(s) might not be as simple as 1. In some of such cases, the derivative might be a different number, while in others it might be as complicated as a function itself. Some of the machines we will encounter might have more than just one knob, each with their own specific derivative, and each as complicated as it might be. In all cases, however, our analysis follows the same procedure: First, we identify all the knobs that affect the machine. Second, we use calculus to voluntarily change the position of the knobs and to register how the machine behaves. In mathematical terms, this procedure is to define and study the total differential:</p>
 <p><span id="eq-totdiff"><span class="math display">\[
 \begin{aligned}
@@ -605,7 +605,7 @@ d\mathcal{M} &amp;= \left( \frac{\partial \mathcal{M}}{\partial a} \right) da + 
 <img src="img/machine_knobs.png" class="img-fluid figure-img" style="width:40.0%" alt="Illustration of a machine drawn as a rounded box with a dark display showing M = 42.0 and three colored knobs labeled a, b, and c. A curved purple arrow above each knob, labeled da, db, and dc, shows a small rotation of that knob.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-machineknobs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: A machine <span class="math inline">\(\mathcal{M}\)</span> with three knobs, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>. Turning each knob by an infinitesimal amount (<span class="math inline">\(da\)</span>, <span class="math inline">\(db\)</span>, <span class="math inline">\(dc\)</span>) changes the number on the display. The total change, <span class="math inline">\(d\mathcal{M}\)</span>, is the sum of the three contributions in <a href="#eq-totdiff" class="quarto-xref">eq.&nbsp;<span>1.3</span></a>, each obtained by multiplying how sensitive the machine is to that knob (the partial derivative) by how much we turned it.
+Figure&nbsp;1.1: A machine <span class="math inline">\(\mathcal{M}\)</span> with three knobs, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>. Turning each knob by an infinitesimal amount (<span class="math inline">\(da\)</span>, <span class="math inline">\(db\)</span>, <span class="math inline">\(dc\)</span>) changes the number on the display. The total change, <span class="math inline">\(d\mathcal{M}\)</span>, is the sum of the three contributions in <a href="#eq-totdiff" class="quarto-xref">Eq.&nbsp;<span>1.3</span></a>, each obtained by multiplying how sensitive the machine is to that knob (the partial derivative) by how much we turned it.
 </figcaption>
 </figure>
 </div>
@@ -614,7 +614,7 @@ Figure&nbsp;1.1: A machine <span class="math inline">\(\mathcal{M}\)</span> with
 </section>
 <section id="thermodynamic-systems" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="thermodynamic-systems"><span class="header-section-number">1.2</span> Thermodynamic Systems</h2>
-<p>A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Defining a system this way is itself a deliberate simplification that is common in science. This procedure is often jokingly referred to as the “spherical cow” analogy,<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> where a complex real-world object (a cow) is treated as a simple sphere to make the math tractable. Typical examples of systems are reported in <a href="#fig-Fig1c1" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> below.</p>
+<p>A thermodynamic system—or just simply a system—is a portion of space with defined boundaries that separate it from its surroundings (see also the title picture of this book). The surroundings may include other thermodynamic systems or physical systems that are not thermodynamic systems. A boundary may be a real physical barrier or a purely notional one. Defining a system this way is itself a deliberate simplification that is common in science. This procedure is often jokingly referred to as the “spherical cow” analogy,<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> where a complex real-world object (a cow) is treated as a simple sphere to make the math tractable. Typical examples of systems are reported in <a href="#fig-Fig1c1" class="quarto-xref">Fig.&nbsp;<span>1.2</span></a> below.</p>
 <div id="fig-Fig1c1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Drawing of four thermodynamic systems side by side. A green liquid in an Erlenmeyer flask, with the glass walls labeled as the boundary. A balloon filled with gas particles, with the plastic labeled as the boundary. A gray cloud surrounded by a dashed red line, labeled boundary set by a condition, such as water content. A flame on a burner surrounded by a dashed red line, labeled boundary set by a condition, such as a temperature.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig1c1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -693,7 +693,7 @@ PV=nRT
 <p><span id="eq-Vmdef"><span class="math display">\[
 \overline{V}=\frac{V}{n}.
 \tag{1.5}\]</span></span></p>
-<p>We can then recast <a href="#eq-idealgaslaworiginal" class="quarto-xref">eq.&nbsp;<span>1.4</span></a> as:</p>
+<p>We can then recast <a href="#eq-idealgaslaworiginal" class="quarto-xref">Eq.&nbsp;<span>1.4</span></a> as:</p>
 <p><span id="eq-idealgaslaw"><span class="math display">\[
 P\overline{V}=RT,
 \tag{1.6}\]</span></span></p>
@@ -707,11 +707,11 @@ P(T,\overline{V})=\frac{RT}{\overline{V}},
 <p><span id="eq-TPVm"><span class="math display">\[
 T(P,\overline{V})=\frac{P\overline{V}}{R}.
 \tag{1.9}\]</span></span></p>
-<p>These equations define three state functions, each one expressed in terms of two independent natural variables. For example, <a href="#eq-PTVm" class="quarto-xref">eq.&nbsp;<span>1.7</span></a> defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, <a href="#eq-VmTP" class="quarto-xref">eq.&nbsp;<span>1.8</span></a> defines the “molar volume” as a function of temperature and pressure, and <a href="#eq-TPVm" class="quarto-xref">eq.&nbsp;<span>1.9</span></a> defines the “temperature” as a function of pressure and molar volume. As we mentioned above, when we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure <span class="math inline">\(P(T, \overline{V})\)</span>, using the definition of total differential in <a href="#eq-totdiff" class="quarto-xref">eq.&nbsp;<span>1.3</span></a>, we get:</p>
+<p>These equations define three state functions, each one expressed in terms of two independent natural variables. For example, <a href="#eq-PTVm" class="quarto-xref">Eq.&nbsp;<span>1.7</span></a> defines the state function called “pressure”, expressed as a function of temperature and molar volume. Similarly, <a href="#eq-VmTP" class="quarto-xref">Eq.&nbsp;<span>1.8</span></a> defines the “molar volume” as a function of temperature and pressure, and <a href="#eq-TPVm" class="quarto-xref">Eq.&nbsp;<span>1.9</span></a> defines the “temperature” as a function of pressure and molar volume. As we mentioned above, when we know the natural variables that define a state function, we can express the function using its total differential, for example for the pressure <span class="math inline">\(P(T, \overline{V})\)</span>, using the definition of total differential in <a href="#eq-totdiff" class="quarto-xref">Eq.&nbsp;<span>1.3</span></a>, we get:</p>
 <p><span id="eq-totaldifferentialP"><span class="math display">\[
 dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\partial \overline{V}} \right)d\overline{V}
 \tag{1.10}\]</span></span></p>
-<p>Recalling Schwarz’s theorem, the mixed partial second derivatives that can be obtained from <a href="#eq-totaldifferentialP" class="quarto-xref">eq.&nbsp;<span>1.10</span></a> are the same:</p>
+<p>Recalling Schwarz’s theorem, the mixed partial second derivatives that can be obtained from <a href="#eq-totaldifferentialP" class="quarto-xref">Eq.&nbsp;<span>1.10</span></a> are the same:</p>
 <p><span id="eq-schwartzP"><span class="math display">\[
 \frac{\partial^2 P}{\partial T \partial \overline{V}}=\frac{\partial}{\partial \overline{V}}\frac{\partial P}{\partial T}=\frac{\partial}{\partial T}\frac{\partial P}{\partial \overline{V}}=\frac{\partial^2 P}{\partial \overline{V} \partial T}
 \tag{1.11}\]</span></span></p>
@@ -728,17 +728,17 @@ dP=\left( \frac{\partial P}{\partial T} \right)dT + \left( \frac{\partial P}{\pa
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="state-and-path-functions"><span class="header-section-number">1.3.1</span> State and Path Functions</h3>
 <p>Before going further, we should clarify two words that we have been using somewhat loosely: <em>variable</em> and <em>function</em>. In mathematics, a variable is a quantity that we can choose freely (a knob), while a function is a quantity whose value is determined by the variables (the display). In thermodynamics, this distinction is not fixed, but depends on what we decide to control. For an ideal gas, we can choose <span class="math inline">\(P\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(n\)</span> and calculate <span class="math inline">\(T = \frac{PV}{nR}\)</span>, or we can choose <span class="math inline">\(T\)</span>, <span class="math inline">\(V\)</span>, and <span class="math inline">\(n\)</span> and calculate <span class="math inline">\(P = \frac{nRT}{V}\)</span>: the temperature is a variable in the second case and a function in the first. What these quantities have in common is that, once the state of the system is fixed, their values are fixed too. For this reason, the terms <em>state variable</em> and <em>state function</em> are used interchangeably, and we will mostly use the latter.</p>
 <p>Mathematically, if Schwarz’s theorem is violated (i.e., if the mixed second derivatives are not equal), then the corresponding function cannot be integrated. Quantities of this kind do not describe a state at all, but they depend on the path that the system follows to go from one state to another. For this reason, they are never used as variables (there is no “heat knob” that sets the state of a system), and they are called <strong>path functions</strong> (sometimes also path variables). In contrast, the well-behaved quantities that can be used to define the state of the system are the <strong>state functions</strong> (or state variables).</p>
-<p>Since path functions violate Schwarz’s theorem, their differential cannot be defined exactly, therefore <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a> does not exist. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we can attempt to infinitely slice the initial variable by using the same calculus procedure introduced in <a href="#sec-infslici" class="quarto-xref"><span>section 1.1.1</span></a> and defined in <a href="#eq-integraldefgen" class="quarto-xref">eq.&nbsp;<span>1.1</span></a>. The resulting infinitely small pieces, however, are different than regular “exact” differentials, and are called <strong>inexact differentials</strong>. To differentiate between exact and inexact differentials, we use the letter <span class="math inline">\(d\)</span> for the former, and the letter <span class="math inline">\(đ\)</span> for the latter. It is important to remember that inexact differentials are defined using <a href="#eq-integraldefgen" class="quarto-xref">eq.&nbsp;<span>1.1</span></a>, but the procedure in <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a> does not exist for them. Summarizing for a case that we will use often in thermodynamics, we can define the following quantity for heat (<span class="math inline">\(Q\)</span>):</p>
+<p>Since path functions violate Schwarz’s theorem, their differential cannot be defined exactly, therefore <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a> does not exist. The most typical examples of path functions that we will encounter in the next chapters are heat (<span class="math inline">\(Q\)</span>) and work (<span class="math inline">\(W\)</span>). For these functions, we can attempt to infinitely slice the initial variable by using the same calculus procedure introduced in <a href="#sec-infslici" class="quarto-xref"><span>Sec. 1.1.1</span></a> and defined in <a href="#eq-integraldefgen" class="quarto-xref">Eq.&nbsp;<span>1.1</span></a>. The resulting infinitely small pieces, however, are different than regular “exact” differentials, and are called <strong>inexact differentials</strong>. To differentiate between exact and inexact differentials, we use the letter <span class="math inline">\(d\)</span> for the former, and the letter <span class="math inline">\(đ\)</span> for the latter. It is important to remember that inexact differentials are defined using <a href="#eq-integraldefgen" class="quarto-xref">Eq.&nbsp;<span>1.1</span></a>, but the procedure in <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a> does not exist for them. Summarizing for a case that we will use often in thermodynamics, we can define the following quantity for heat (<span class="math inline">\(Q\)</span>):</p>
 <p><span id="eq-intdbarQ"><span class="math display">\[
 Q = \int đQ.
 \tag{1.14}\]</span></span></p>
-<p>However, we cannot use the familiar formula given by <a href="#eq-integraldef" class="quarto-xref">eq.&nbsp;<span>1.2</span></a> to calculate it:</p>
+<p>However, we cannot use the familiar formula given by <a href="#eq-integraldef" class="quarto-xref">Eq.&nbsp;<span>1.2</span></a> to calculate it:</p>
 <p><span id="eq-intdbarQfull"><span class="math display">\[
 \int_{i}^{f} đQ \neq Q_f - Q_i,
 \tag{1.15}\]</span></span></p>
 <p>as the left hand side of this equation is not defined.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Work also behaves similarly.</p>
 <blockquote class="blockquote">
-<p>We will return to exact and inexact differentials when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have access to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs.&nbsp;car vs.&nbsp;train vs.&nbsp;boat vs.&nbsp;…). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See <a href="#fig-Fig2c1" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>.</p>
+<p>We will return to exact and inexact differentials when we discuss heat and work, but for this chapter, it is crucial to notice the difference between a state function and a path function. A typical example to understand the difference between state and path function is to consider the distance between two geographical locations. Let’s, for example, consider the distance between New York City and Los Angeles. If we fly straight from one city to the other, there are roughly 4,000 km between them. This “air distance” depends exclusively on the geographical location of the two cities. It stays constant regardless of the method of transportation that I have access to travel between them. Since the cities’ positions depend uniquely on their latitudes and longitudes, the “air distance” is a state function, i.e., it is uniquely defined from a simple relationship between measurable variables. However, the “air distance” is not the distance that I will practically have to drive when I go from NYC to LA. Such “travel distance” depends on the method of transportation that I decide to take (airplane vs.&nbsp;car vs.&nbsp;train vs.&nbsp;boat vs.&nbsp;…). It will depend on a plentiful amount of other factors such as the choice of the road to be traveled (if going by car), the atmospheric conditions (if flying), and so on. A typical “travel distance” by car is, for example, about 4,500 km, which is about 12% more than the “air distance.” Indeed, we could even design a very inefficient road trip that avoids all highways and will result in a “travel distance” of 8,000 km or even more (200% of the “air distance”). The “travel distance” is a clear example of a path function because it depends on the specific path that I decide to travel to go from NYC to LA. See <a href="#fig-Fig2c1" class="quarto-xref">Fig.&nbsp;<span>1.3</span></a>.</p>
 </blockquote>
 <div id="fig-Fig2c1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map of the United States with New York (A) and Los Angeles (B). A straight purple arc between them is labeled air distance, about 4,000 km, state function. A winding blue road route is labeled travel distance, about 4,500 km, path function.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -767,7 +767,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 </section>
 <section id="sec-quest1" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-quest1"><span class="header-section-number">1.4.2</span> Study Questions</h3>
+<div class="question">
 <p><strong>1. What is a differential, such as <span class="math inline">\(dL\)</span>?</strong></p>
+</div>
 <ol type="a">
 <li>The derivative of <span class="math inline">\(L\)</span> with respect to position.</li>
 <li>A small but finite change in <span class="math inline">\(L\)</span>, such as 1 mm.</li>
@@ -775,8 +777,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>The total length <span class="math inline">\(L\)</span> of the object.</li>
 <li>A pure number with no dimension.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>2. What does integration do, in the language of this chapter?</strong></p>
+</div>
 <ol type="a">
 <li>It glues together infinitely many infinitesimal pieces to reconstruct the whole quantity.</li>
 <li>It slices a quantity into infinitesimal pieces.</li>
@@ -784,8 +787,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>It converts a quantity from one unit to another.</li>
 <li>It removes the dimension from a quantity.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>3. Which of the following does an isolated system exchange with its surroundings?</strong></p>
+</div>
 <ol type="a">
 <li>Mass only.</li>
 <li>Energy only.</li>
@@ -793,8 +797,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>Neither mass nor energy.</li>
 <li>Heat, but not work.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>4. According to the chemistry sign convention, what is the sign of the heat released by a system to its surroundings?</strong></p>
+</div>
 <ol type="a">
 <li>Positive, since heat is energy.</li>
 <li>Negative, since the system is losing energy.</li>
@@ -802,8 +807,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>Positive if the process is fast, negative if it is slow.</li>
 <li>It depends on the temperature of the surroundings.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>5. Which of the following is an intensive variable?</strong></p>
+</div>
 <ol type="a">
 <li>Volume.</li>
 <li>Number of moles.</li>
@@ -811,8 +817,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>Temperature.</li>
 <li>Total energy.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>6. What is the total differential of the pressure of an ideal gas, <span class="math inline">\(P(T,\overline{V})\)</span>?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(dP = \frac{dT}{d\overline{V}}\)</span>.</li>
 <li><span class="math inline">\(dP = PdT + Pd\overline{V}\)</span>.</li>
@@ -820,8 +827,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li><span class="math inline">\(dP = \left(\frac{\partial T}{\partial P}\right)dT + \left(\frac{\partial \overline{V}}{\partial P}\right)d\overline{V}\)</span>.</li>
 <li><span class="math inline">\(dP = \left(\frac{\partial P}{\partial T}\right)dT + \left(\frac{\partial P}{\partial \overline{V}}\right)d\overline{V}\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>7. What does Schwarz’s theorem state for a state function?</strong></p>
+</div>
 <ol type="a">
 <li>The mixed second partial derivatives are equal, regardless of the order of differentiation.</li>
 <li>The first derivatives are always zero.</li>
@@ -829,8 +837,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>The function depends on the path.</li>
 <li>The second derivatives are always positive.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>8. Which of the following is a path function?</strong></p>
+</div>
 <ol type="a">
 <li>Pressure.</li>
 <li>Temperature.</li>
@@ -838,8 +847,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>Molar volume.</li>
 <li>Internal energy.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>9. What does the symbol <span class="math inline">\(đ\)</span> indicate, as in <span class="math inline">\(đQ\)</span>?</strong></p>
+</div>
 <ol type="a">
 <li>An exact differential.</li>
 <li>An inexact differential, whose integral depends on the path.</li>
@@ -847,8 +857,9 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>A state function.</li>
 <li>A very large change.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>10. In the example of the trip from New York to Los Angeles, why is the air distance a state function?</strong></p>
+</div>
 <ol type="a">
 <li>Because it depends on the means of transportation.</li>
 <li>Because it changes with the weather.</li>
@@ -856,7 +867,6 @@ Figure&nbsp;1.3: State Functions vs.&nbsp;Path Functions.
 <li>Because it is always longer than the travel distance.</li>
 <li>Because it is measured in kilometers.</li>
 </ol>
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

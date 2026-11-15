@@ -209,8 +209,10 @@ which proves that the efficiency of a Carnot cycle is strictly smaller than 1.^[
 For a cycle run in reverse, as in @fig-FigCarnotRef, the efficiency is replaced by the *coefficient of performance* (COP), the ratio between what we want and the work that we pay for it. A refrigerator is meant to extract the heat $\left| Q_l \right|$ from the cold reservoir (the inside of the fridge), while a heat pump is meant to deliver the heat $\left| Q_h \right|$ to the hot reservoir (the inside of a house in winter). Following the same steps as for @eq-effCC3, for a Carnot cycle:
 
 $$
-\text{COP}_{\text{refrigerator}} = \frac{\left| Q_l \right|}{\left| W_{TOT} \right|} = \frac{T_l}{T_h-T_l}, \qquad \qquad
-\text{COP}_{\text{heat pump}} = \frac{\left| Q_h \right|}{\left| W_{TOT} \right|} = \frac{T_h}{T_h-T_l}.
+\begin{aligned}
+\text{COP}_{\text{refrigerator}} &= \frac{\left| Q_l \right|}{\left| W_{TOT} \right|} = \frac{T_l}{T_h-T_l},\\
+\text{COP}_{\text{heat pump}} &= \frac{\left| Q_h \right|}{\left| W_{TOT} \right|} = \frac{T_h}{T_h-T_l}.
+\end{aligned}
 $$ {#eq-COP}
 
 Unlike the efficiency, the COP can be (and usually is) larger than 1, since the work is used only to *move* heat, not to create it. For example, a heat pump that keeps a house at $20\;°\text{C}$ ($293\;\text{K}$) when it is $0\;°\text{C}$ outside ($273\;\text{K}$) has a Carnot COP of $\frac{293}{20} \approx 15$: in the ideal case, every joule of electricity delivers 15 joules of heat to the house. Real heat pumps reach COPs of about 3–4, which still makes them much more efficient than electric heaters, whose COP is 1. The COP decreases as the temperature difference grows, which is why heat pumps work less well in very cold climates.
@@ -236,8 +238,6 @@ c. It requires heat to flow out of the gas.
 d. Nothing: the process would conserve energy, so the first law does not forbid it.
 e. It shows that the process is spontaneous.
 
----
-
 **2. What transformations make up a Carnot cycle?**
 
 a. Two isochoric and two isobaric transformations.
@@ -245,8 +245,6 @@ b. Two isothermal and two adiabatic reversible transformations.
 c. Four isothermal transformations.
 d. Four adiabatic transformations.
 e. One isothermal, one adiabatic, one isochoric, and one isobaric transformation.
-
----
 
 **3. What happens during the isothermal expansion at $T_h$ in a Carnot cycle?**
 
@@ -256,8 +254,6 @@ c. The temperature drops from $T_h$ to $T_l$.
 d. Heat is released to the cold reservoir.
 e. Work is done on the gas.
 
----
-
 **4. What happens during the adiabatic expansion in a Carnot cycle?**
 
 a. Heat is absorbed from the hot reservoir.
@@ -265,8 +261,6 @@ b. The internal energy stays constant.
 c. Heat is released to the cold reservoir.
 d. The volume decreases.
 e. No heat is exchanged, the gas performs work, and its temperature drops from $T_h$ to $T_l$.
-
----
 
 **5. What is the total change in internal energy for a complete Carnot cycle?**
 
@@ -276,8 +270,6 @@ c. Zero, since the internal energy is a state function.
 d. Equal to the total work.
 e. Equal to the heat absorbed from the hot reservoir.
 
----
-
 **6. What is the total work of a Carnot cycle?**
 
 a. $W_{TOT} = nR(T_h-T_l)\ln\frac{V_B}{V_A}$.
@@ -285,8 +277,6 @@ b. $W_{TOT} = -nR(T_h-T_l)\ln\frac{V_B}{V_A}$.
 c. $W_{TOT} = 0$.
 d. $W_{TOT} = nRT_h\ln\frac{V_B}{V_A}$.
 e. $W_{TOT} = nC_V(T_h-T_l)$.
-
----
 
 **7. How is the efficiency of a heat engine defined?**
 
@@ -296,8 +286,6 @@ c. $\varepsilon = \frac{|W_{TOT}|}{|Q_l|}$.
 d. $\varepsilon = \frac{|W_{TOT}|}{|Q_h|}$.
 e. $\varepsilon = \frac{T_h}{T_l}$.
 
----
-
 **8. What is the efficiency of a Carnot cycle in terms of the reservoir temperatures?**
 
 a. $\varepsilon = 1-\frac{T_l}{T_h}$.
@@ -305,8 +293,6 @@ b. $\varepsilon = 1-\frac{T_h}{T_l}$.
 c. $\varepsilon = \frac{T_h}{T_l}$.
 d. $\varepsilon = \frac{T_h-T_l}{T_l}$.
 e. $\varepsilon = 1$.
-
----
 
 **9. Why is the efficiency of a Carnot cycle always smaller than 1?**
 
@@ -316,8 +302,6 @@ c. Because heat is a state function.
 d. Because the cycle is irreversible.
 e. Because it would be 1 only if $T_l=0\;\text{K}$ or $T_h=\infty$, which are impossible.
 
----
-
 **10. What happens when a Carnot cycle is run in reverse?**
 
 a. It produces more work than the forward cycle.
@@ -325,8 +309,6 @@ b. It reaches 100% efficiency.
 c. Work is put into the system, and heat is moved from the cold reservoir to the hot one, as in a refrigerator.
 d. Heat flows from the hot reservoir to the cold one without work.
 e. It violates the first law.
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

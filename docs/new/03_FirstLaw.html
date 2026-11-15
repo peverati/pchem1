@@ -560,7 +560,7 @@ window.Quarto = {
 </header>
 
 
-<p>In <a href="02_ZerothLaw.html" class="quarto-xref"><span>chapter 2</span></a>, we learned how to calculate heat and work, and we saw that both of them are path functions: their values depend on how a process is carried out. In this chapter, we will connect heat and work to a state function, the internal energy, and we will see how this connection becomes one of the most fundamental laws of nature, the first law of thermodynamics. Along the way, we will introduce a second state function, the enthalpy, which will become the protagonist when we study the heat of chemical reactions in <a href="07_Thermochemistry.html" class="quarto-xref"><span>chapter 7</span></a>.</p>
+<p>In <a href="02_ZerothLaw.html" class="quarto-xref"><span>Chapter 2</span></a>, we learned how to calculate heat and work, and we saw that both of them are path functions: their values depend on how a process is carried out. In this chapter, we will connect heat and work to a state function, the internal energy, and we will see how this connection becomes one of the most fundamental laws of nature, the first law of thermodynamics. Along the way, we will introduce a second state function, the enthalpy, which will become the protagonist when we study the heat of chemical reactions in <a href="07_Thermochemistry.html" class="quarto-xref"><span>Chapter 7</span></a>.</p>
 <section id="sec-energyint" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-energyint"><span class="header-section-number">3.1</span> Calculation of Internal Energy Changes</h2>
 <p>Energy is a property of a system that can be either transferred or converted. The internal energy (<span class="math inline">\(U\)</span>) of a system is a thermodynamic state function defined as:</p>
@@ -574,13 +574,13 @@ window.Quarto = {
 <p>which we can write in differential form by considering that the internal energy is a state function, as: <span id="eq-dU"><span class="math display">\[
 dU = đ Q + đ W,
 \tag{3.2}\]</span></span></p>
-<p>which, for processes where the pressure of the system equals the external pressure (as in the quasi-static processes with a balanced piston that we discussed in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>section 2.5</span></a>, and in processes at constant pressure, where the system is in mechanical equilibrium with the atmosphere), using <a href="02_ZerothLaw.html#eq-Wdefrev" class="quarto-xref">eq.&nbsp;<span>2.10</span></a> becomes:</p>
+<p>which, for processes where the pressure of the system equals the external pressure (as in the quasi-static processes with a balanced piston that we discussed in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>Sec. 2.5</span></a>, and in processes at constant pressure, where the system is in mechanical equilibrium with the atmosphere), using <a href="02_ZerothLaw.html#eq-Wdefrev" class="quarto-xref">Eq.&nbsp;<span>2.10</span></a> becomes:</p>
 <p><span id="eq-dUpdv"><span class="math display">\[
 dU = đ Q - PdV.
 \tag{3.3}\]</span></span></p>
 <section id="sec-isothermalE" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-isothermalE"><span class="header-section-number">3.1.1</span> Internal Energy in Isothermal Processes</h3>
-<p>To study the behavior of the internal energy in a process at constant temperature (<span class="math inline">\(dT=0\)</span>), James Prescott Joule (1818–1889) created the apparatus depicted in <a href="#fig-FigJexp" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>.</p>
+<p>To study the behavior of the internal energy in a process at constant temperature (<span class="math inline">\(dT=0\)</span>), James Prescott Joule (1818–1889) created the apparatus depicted in <a href="#fig-FigJexp" class="quarto-xref">Fig.&nbsp;<span>3.1</span></a>.</p>
 <div id="fig-FigJexp" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Joule expansion apparatus before and after. Before: a flask of ideal gas, with a thermometer reading the initial temperature, is connected through a closed valve to an evacuated flask. After: the valve is open and the gas fills both flasks, and the thermometer reads the final temperature. Both flasks sit in a water bath.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigJexp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -600,7 +600,7 @@ Figure&nbsp;3.1: The Joule Expansion Experiment.
 dU = đ Q = 0.
 \tag{3.5}\]</span></span></p>
 <blockquote class="blockquote">
-<p>Notice that Joule’s conclusion is valid only for an ideal gas. If we expand a real gas, we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in <a href="11_NonIdealGases.html" class="quarto-xref"><span>chapter 11</span></a> when we will study non-ideal gases.</p>
+<p>Notice that Joule’s conclusion is valid only for an ideal gas. If we expand a real gas, we do notice a change in temperature associated with the expansion. A typical example of this behavior is when you use a pressurized spray bottle and release its content for an extended time in the air. The container will typically get colder. We will discuss this behavior in <a href="11_NonIdealGases.html" class="quarto-xref"><span>Chapter 11</span></a> when we will study non-ideal gases.</p>
 </blockquote>
 <p>From this simple experiment, we can conclude that the internal energy of an ideal gas depends only on its temperature.</p>
 </section>
@@ -610,11 +610,11 @@ dU = đ Q = 0.
 <p><span id="eq-dUadiabatic"><span class="math display">\[
 dU=đ W=-PdV,
 \tag{3.6}\]</span></span></p>
-<p>which can then be calculated using the formulas that we derived in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>section 2.5</span></a>. Notice that the work is still a path function: in general, its value depends on the path. However, <em>along adiabatic paths</em>, the work is fixed by the change of a state function, so all adiabatic paths connecting the same two states require the same amount of work. Notice also that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system’s boundaries, this does not mean that the system’s temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.</p>
+<p>which can then be calculated using the formulas that we derived in <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>Sec. 2.5</span></a>. Notice that the work is still a path function: in general, its value depends on the path. However, <em>along adiabatic paths</em>, the work is fixed by the change of a state function, so all adiabatic paths connecting the same two states require the same amount of work. Notice also that isothermal and adiabatic are two very different processes. While an adiabatic process happens without the exchange of heat across the system’s boundaries, this does not mean that the system’s temperature does not change. Isothermal processes are usually associated with a heat transfer across the boundaries to maintain the temperature of the system constant. For adiabatic processes, it is quite the opposite since they are usually associated with a change in temperature.</p>
 </section>
 <section id="internal-energy-in-isochoric-processes" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="internal-energy-in-isochoric-processes"><span class="header-section-number">3.1.3</span> Internal Energy in Isochoric Processes</h3>
-<p>An isochoric process is a process in which the volume does not change. Therefore, <span class="math inline">\(đ W=0\)</span>, and <span class="math inline">\(dU = đ Q_V\)</span>, which using <a href="02_ZerothLaw.html#eq-Cvdef" class="quarto-xref">eq.&nbsp;<span>2.1</span></a>, becomes:</p>
+<p>An isochoric process is a process in which the volume does not change. Therefore, <span class="math inline">\(đ W=0\)</span>, and <span class="math inline">\(dU = đ Q_V\)</span>, which using <a href="02_ZerothLaw.html#eq-Cvdef" class="quarto-xref">Eq.&nbsp;<span>2.1</span></a>, becomes:</p>
 <p><span id="eq-dUqv"><span class="math display">\[
 dU = đ Q_V = n C_V dT.
 \tag{3.7}\]</span></span></p>
@@ -629,7 +629,7 @@ C_V = \left( \frac{\partial U} {\partial T} \right)_{V,n=1},
 </section>
 <section id="sec-enthalpy" class="level3" data-number="3.1.4">
 <h3 data-number="3.1.4" class="anchored" data-anchor-id="sec-enthalpy"><span class="header-section-number">3.1.4</span> Internal Energy in Isobaric Processes</h3>
-<p>In an isobaric process, the pressure does not change, hence <span class="math inline">\(dP=0\)</span>. Unfortunately, <a href="#eq-dU" class="quarto-xref">eq.&nbsp;<span>3.2</span></a> for this case does not simplify further, as happened in the two previous cases. However, in <a href="02_ZerothLaw.html#sec-heatconstp" class="quarto-xref"><span>section 2.4.2</span></a>, we have introduced the useful concept of heat capacity at constant <span class="math inline">\(P\)</span>. <span class="math inline">\(C_P\)</span> was used in an isobaric process in the same manner as <span class="math inline">\(C_V\)</span> was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. <a href="#eq-cvstatefunc" class="quarto-xref">Eq.&nbsp;<span>3.8</span></a> gave a mathematical definition of <span class="math inline">\(C_V\)</span> as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain <span class="math inline">\(C_P\)</span>? In order to do so, we can introduce a new state function, called the enthalpy (<span class="math inline">\(H\)</span>), as:</p>
+<p>In an isobaric process, the pressure does not change, hence <span class="math inline">\(dP=0\)</span>. Unfortunately, <a href="#eq-dU" class="quarto-xref">Eq.&nbsp;<span>3.2</span></a> for this case does not simplify further, as happened in the two previous cases. However, in <a href="02_ZerothLaw.html#sec-heatconstp" class="quarto-xref"><span>Sec. 2.4.2</span></a>, we have introduced the useful concept of heat capacity at constant <span class="math inline">\(P\)</span>. <span class="math inline">\(C_P\)</span> was used in an isobaric process in the same manner as <span class="math inline">\(C_V\)</span> was used in the isochoric case. That is, as a coefficient to measure the amount of heat absorbed at constant pressure. <a href="#eq-cvstatefunc" class="quarto-xref">Eq.&nbsp;<span>3.8</span></a> gave a mathematical definition of <span class="math inline">\(C_V\)</span> as the partial derivative of a state function (the internal energy). But if heat capacities are coefficients, and coefficients are partial derivatives of state functions, how do we explain <span class="math inline">\(C_P\)</span>? In order to do so, we can introduce a new state function, called the enthalpy (<span class="math inline">\(H\)</span>), as:</p>
 <p><span id="eq-enthalpydef"><span class="math display">\[
 H = U + PV,
 \tag{3.9}\]</span></span></p>
@@ -641,7 +641,7 @@ dH = dU + d(PV) = dU + PdV + \overbrace{VdP}^{0},
 <p><span id="eq-enthalpydefdiffu"><span class="math display">\[
 dU = dH -PdV.
 \tag{3.11}\]</span></span></p>
-<p>Replacing <a href="#eq-enthalpydefdiffu" class="quarto-xref">eq.&nbsp;<span>3.11</span></a> into <a href="#eq-dUpdv" class="quarto-xref">eq.&nbsp;<span>3.3</span></a>:</p>
+<p>Replacing <a href="#eq-enthalpydefdiffu" class="quarto-xref">Eq.&nbsp;<span>3.11</span></a> into <a href="#eq-dUpdv" class="quarto-xref">Eq.&nbsp;<span>3.3</span></a>:</p>
 <p><span id="eq-dh1"><span class="math display">\[
 dH -PdV = đ Q_P - PdV,
 \tag{3.12}\]</span></span></p>
@@ -649,7 +649,7 @@ dH -PdV = đ Q_P - PdV,
 <p><span id="eq-dh2"><span class="math display">\[
 dH = đ Q_P = n C_P dT.
 \tag{3.13}\]</span></span></p>
-<p><a href="#eq-dh2" class="quarto-xref">Eq.&nbsp;<span>3.13</span></a> establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by <a href="#eq-enthalpydef" class="quarto-xref">eq.&nbsp;<span>3.9</span></a>. It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to <span class="math inline">\(C_V\)</span>, <span class="math inline">\(C_P\)</span> can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):</p>
+<p><a href="#eq-dh2" class="quarto-xref">Eq.&nbsp;<span>3.13</span></a> establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by <a href="#eq-enthalpydef" class="quarto-xref">Eq.&nbsp;<span>3.9</span></a>. It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to <span class="math inline">\(C_V\)</span>, <span class="math inline">\(C_P\)</span> can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):</p>
 <p><span id="eq-cpstatefunc"><span class="math display">\[
 C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n=1},
 \tag{3.14}\]</span></span></p>
@@ -665,7 +665,7 @@ C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n=1},
 <p><span id="eq-heateqwork"><span class="math display">\[
 đ Q = -đ W,
 \tag{3.15}\]</span></span></p>
-<p>and heat and work can be easily calculated using any of the appropriate formulas introduced in either <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>section 2.5</span></a> or <a href="02_ZerothLaw.html#sec-heatint" class="quarto-xref"><span>section 2.4</span></a>.</p>
+<p>and heat and work can be easily calculated using any of the appropriate formulas introduced in either <a href="02_ZerothLaw.html#sec-workint" class="quarto-xref"><span>Sec. 2.5</span></a> or <a href="02_ZerothLaw.html#sec-heatint" class="quarto-xref"><span>Sec. 2.4</span></a>.</p>
 <p>The first law is a conservation law. It is intuitive since it comes directly from Lavoisier’s principle of “nothing is lost, nothing is created, everything is transformed.” Considering that the only system that is truly isolated is the universe, we can condense the first law in one simple sentence:</p>
 <div id="def-firstlaw" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3.4</strong></span> <em>First Law of Thermodynamics:</em> The energy of the universe is conserved.</p>
@@ -673,7 +673,7 @@ C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n=1},
 </section>
 <section id="reversible-and-irreversible-processes" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reversible-and-irreversible-processes"><span class="header-section-number">3.3</span> Reversible and Irreversible Processes</h2>
-<p>Let’s now consider the cycle in <a href="#fig-FigRevCyc" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>. The process in this case starts from state 1 (system at <span class="math inline">\(P_1V_1\)</span>), expands to state 2 (system at <span class="math inline">\(P_2V_2\)</span>), and compresses back to state 1 (system back to <span class="math inline">\(P_1V_1\)</span>).</p>
+<p>Let’s now consider the cycle in <a href="#fig-FigRevCyc" class="quarto-xref">Fig.&nbsp;<span>3.2</span></a>. The process in this case starts from state 1 (system at <span class="math inline">\(P_1V_1\)</span>), expands to state 2 (system at <span class="math inline">\(P_2V_2\)</span>), and compresses back to state 1 (system back to <span class="math inline">\(P_1V_1\)</span>).</p>
 <div id="fig-FigRevCyc" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cycle diagram with two curved arrows. The green arrow, labeled expansion, takes a piston-and-beaker system from state 1 (pressure P1, volume V1) to state 2 (pressure P2, volume V2). The blue arrow, labeled compression, brings it back from state 2 to state 1.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigRevCyc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -691,7 +691,7 @@ Figure&nbsp;3.2: Expansion/Compression Cycle of an Ideal Gas.
 <p>where the symbol <span class="math inline">\(\oint\)</span> indicates an integral around a cycle. Considering the work associated with the cycle, however, the situation is radically different because it depends on the path that the system is taking, and in general <span id="eq-dw0"><span class="math display">\[
 \oint_{\text{path}} đW \neq 0.
 \tag{3.17}\]</span></span></p>
-<p>For instance, if we perform the expansion in one step, the work associated with it will be (using <a href="02_ZerothLaw.html#eq-Wint3" class="quarto-xref">eq.&nbsp;<span>2.14</span></a>):<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>For instance, if we perform the expansion in one step, the work associated with it will be (using <a href="02_ZerothLaw.html#eq-Wint3" class="quarto-xref">Eq.&nbsp;<span>2.14</span></a>):<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p><span id="eq-Wexp1"><span class="math display">\[
 W^{\text{expansion}}_{\text{1-step}}=-P_2(\underbrace{V_2-V_1}_{&gt;0})&lt;0,
 \tag{3.18}\]</span></span></p>
@@ -712,7 +712,7 @@ W^{\text{cycle}}_{\text{1-step}} {} &amp; =  W^{\text{expansion}}_{\text{1-step}
 <blockquote class="blockquote">
 <p>In practice, if we want to manually perform this cycle by pushing on the piston by hand, we will notice that it requires more energy to push down than the amount it gives back when we release it, and it moves back up.</p>
 </blockquote>
-<p>In contrast, if both the expansion and the compression happen in a quasi-static <span class="math inline">\(\infty\)</span>-step manner, the work associated with them will be <span class="math inline">\(W_{\text{max}}\)</span> and <span class="math inline">\(W_{\text{min}}\)</span>, respectively, which are calculated using <a href="02_ZerothLaw.html#eq-WmaxV" class="quarto-xref">eq.&nbsp;<span>2.20</span></a>. The total work related to the cycle will be in this case:</p>
+<p>In contrast, if both the expansion and the compression happen in a quasi-static <span class="math inline">\(\infty\)</span>-step manner, the work associated with them will be <span class="math inline">\(W_{\text{max}}\)</span> and <span class="math inline">\(W_{\text{min}}\)</span>, respectively, which are calculated using <a href="02_ZerothLaw.html#eq-WmaxV" class="quarto-xref">Eq.&nbsp;<span>2.20</span></a>. The total work related to the cycle will be in this case:</p>
 <p><span id="eq-Wtot2"><span class="math display">\[
 \begin{aligned}
 W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max}}+W^{\text{compression}}_{\text{min}} \\
@@ -730,7 +730,7 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 </div>
 <p>What does <a href="#def-reversible" class="quarto-xref">Definition&nbsp;<span>3.5</span></a> imply in practice? Three things:</p>
 <ol type="1">
-<li><strong>A reversible process is quasi-static, and more.</strong> It happens in an infinite number of infinitesimal steps, so the system passes through equilibrium states only (<a href="02_ZerothLaw.html#def-quasistatic" class="quarto-xref">definition&nbsp;<span>2.5</span></a>). In addition, at each step the system is balanced with its surroundings (for example, <span class="math inline">\(P=P_{\text{ext}}\)</span> at every moment), and there is no friction or other dissipation. Every reversible process is quasi-static, but a quasi-static process is not necessarily reversible: a piston that moves very slowly but with friction converts part of the work into heat at every step, and the process cannot be undone without leaving a trace. We will see a second example, a slow flow of heat between two bodies at different temperatures, in <a href="05_SecondLaw.html#sec-secondlaw" class="quarto-xref"><span>section 5.3</span></a>.</li>
+<li><strong>A reversible process is quasi-static, and more.</strong> It happens in an infinite number of infinitesimal steps, so the system passes through equilibrium states only (<a href="02_ZerothLaw.html#def-quasistatic" class="quarto-xref">Definition&nbsp;<span>2.5</span></a>). In addition, at each step the system is balanced with its surroundings (for example, <span class="math inline">\(P=P_{\text{ext}}\)</span> at every moment), and there is no friction or other dissipation. Every reversible process is quasi-static, but a quasi-static process is not necessarily reversible: a piston that moves very slowly but with friction converts part of the work into heat at every step, and the process cannot be undone without leaving a trace. We will see a second example, a slow flow of heat between two bodies at different temperatures, in <a href="05_SecondLaw.html#sec-secondlaw" class="quarto-xref"><span>Sec. 5.3</span></a>.</li>
 <li><strong>A reversible process is the most efficient one.</strong> A reversible expansion gives the maximum work, <span class="math inline">\(W_{\text{max}}\)</span>, and a reversible compression requires the minimum work, <span class="math inline">\(W_{\text{min}}\)</span>. Running a reversible process forward and then backward leaves no trace, neither in the system nor in the surroundings.</li>
 <li><strong>All real processes are irreversible.</strong> Reversible processes are idealizations, like the ideal gas. We can approach them by carrying out a process slowly compared to the relaxation time of the system, and with as little friction as possible, but never reach them. Despite this, they are extremely useful, since they set the limits that real processes can only approach.</li>
 </ol>
@@ -750,7 +750,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 </section>
 <section id="sec-quest3" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="sec-quest3"><span class="header-section-number">3.4.2</span> Study Questions</h3>
+<div class="question">
 <p><strong>1. What is the internal energy of a system?</strong></p>
+</div>
 <ol type="a">
 <li>The kinetic energy of the system as a whole.</li>
 <li>The energy contained within the system, excluding the kinetic and potential energy of the system as a whole.</li>
@@ -758,8 +760,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li>The work that the system can perform.</li>
 <li>The potential energy of the system in a gravitational field.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>2. What is the first law of thermodynamics in differential form for a closed system?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(dU = đQ + đW\)</span>.</li>
 <li><span class="math inline">\(dU = đQ - đW\)</span>.</li>
@@ -767,8 +770,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li><span class="math inline">\(dU = 0\)</span> always.</li>
 <li><span class="math inline">\(dU = PdV\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>3. What did Joule conclude from the expansion of an ideal gas into a vacuum?</strong></p>
+</div>
 <ol type="a">
 <li>The gas cools down during the expansion.</li>
 <li>The gas performs work on the surroundings.</li>
@@ -776,8 +780,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li>The internal energy of an ideal gas depends only on its temperature.</li>
 <li>The internal energy of an ideal gas depends on its volume.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>4. What characterizes an adiabatic process?</strong></p>
+</div>
 <ol type="a">
 <li>The temperature is constant.</li>
 <li>The volume is constant.</li>
@@ -785,8 +790,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li>The internal energy is constant.</li>
 <li>No heat is exchanged, so <span class="math inline">\(dU = đW\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>5. How does the internal energy change in an isochoric process?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(dU = -PdV\)</span>.</li>
 <li><span class="math inline">\(dU = 0\)</span>.</li>
@@ -794,8 +800,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li><span class="math inline">\(dU = n C_P dT\)</span>.</li>
 <li><span class="math inline">\(dU = đW\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>6. How can the heat capacity at constant volume be written as a derivative of a state function?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(C_V = \left(\frac{\partial U}{\partial T}\right)_V\)</span> (for 1 mol).</li>
 <li><span class="math inline">\(C_V = \left(\frac{\partial H}{\partial T}\right)_P\)</span> (for 1 mol).</li>
@@ -803,8 +810,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li><span class="math inline">\(C_V = \left(\frac{\partial T}{\partial U}\right)_V\)</span>.</li>
 <li><span class="math inline">\(C_V = \left(\frac{\partial P}{\partial T}\right)_V\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>7. What is the definition of enthalpy?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(H = U - PV\)</span>.</li>
 <li><span class="math inline">\(H = U + TS\)</span>.</li>
@@ -812,8 +820,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li><span class="math inline">\(H = U + PV\)</span>.</li>
 <li><span class="math inline">\(H = U - TS\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>8. To which quantity is the heat exchanged at constant pressure equal?</strong></p>
+</div>
 <ol type="a">
 <li>The change in internal energy, <span class="math inline">\(\Delta U\)</span>.</li>
 <li>The change in enthalpy, <span class="math inline">\(\Delta H\)</span>.</li>
@@ -821,8 +830,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li>Zero.</li>
 <li>The change in temperature, <span class="math inline">\(\Delta T\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>9. An ideal gas is expanded in one step and then compressed back in one step. What is the total work of this cycle?</strong></p>
+</div>
 <ol type="a">
 <li>Zero, since the gas returns to its initial state.</li>
 <li>Negative, since net work is performed by the gas.</li>
@@ -830,8 +840,9 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li>It cannot be calculated.</li>
 <li>Positive, since more work is spent compressing the gas than is obtained from the expansion.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>10. What is the total work of an expansion–compression cycle of an ideal gas performed reversibly, in infinitely many steps, at constant temperature?</strong></p>
+</div>
 <ol type="a">
 <li>Positive.</li>
 <li>Negative.</li>
@@ -839,7 +850,6 @@ W^{\text{cycle}}_{\infty\text{-step}} {} &amp; = W^{\text{expansion}}_{\text{max
 <li>Infinite.</li>
 <li>Equal to <span class="math inline">\(nRT\)</span>.</li>
 </ol>
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

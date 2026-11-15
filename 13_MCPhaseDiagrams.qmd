@@ -297,12 +297,18 @@ Let's now look at @Fig-FigSol2 again. Since the chemical potential of the liquid
 
 1. **The equilibrium condition.** At the boiling point of the solution, $T_{\text{b}}$, the chemical potential of the pure vapor equals that of the solvent in the solution, @eq-collA:
 $$
-\mu_{\text{gas}}^*(T_{\text{b}}) = \mu_{\text{liquid}}^*(T_{\text{b}}) + RT_{\text{b}}\ln x_{\text{solvent}} \quad \Rightarrow \quad \ln x_{\text{solvent}} = \frac{\mu_{\text{gas}}^*-\mu_{\text{liquid}}^*}{RT_{\text{b}}}=\frac{\Delta_{\text{vap}}G(T_{\text{b}})}{RT_{\text{b}}},
+\begin{aligned}
+&\mu_{\text{gas}}^*(T_{\text{b}}) = \mu_{\text{liquid}}^*(T_{\text{b}}) + RT_{\text{b}}\ln x_{\text{solvent}} \\
+\Rightarrow\quad &\ln x_{\text{solvent}} = \frac{\mu_{\text{gas}}^*-\mu_{\text{liquid}}^*}{RT_{\text{b}}}=\frac{\Delta_{\text{vap}}G(T_{\text{b}})}{RT_{\text{b}}},
+\end{aligned}
 $$ {#eq-coll4}
 where $\Delta_{\text{vap}}G$ is the molar Gibbs energy of vaporization of the *pure* solvent.
 2. **The Gibbs–Helmholtz equation.** We know that $\Delta_{\text{vap}}G=0$ at the boiling point of the pure solvent, $T_{\text{b}}^*$. We can find its value at $T_{\text{b}}$ by integrating the Gibbs–Helmholtz equation, @eq-gibbshelm, between $T_{\text{b}}^*$ and $T_{\text{b}}$, assuming that $\Delta_{\text{vap}}H$ is constant:
 $$
-\frac{\Delta_{\text{vap}}G(T_{\text{b}})}{T_{\text{b}}} = \Delta_{\text{vap}}H \left(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}\right) \quad \Rightarrow \quad \ln x_{\text{solvent}} = \frac{\Delta_{\text{vap}}H}{R}\left(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}\right).
+\begin{aligned}
+&\frac{\Delta_{\text{vap}}G(T_{\text{b}})}{T_{\text{b}}} = \Delta_{\text{vap}}H \left(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}\right) \\
+\Rightarrow\quad &\ln x_{\text{solvent}} = \frac{\Delta_{\text{vap}}H}{R}\left(\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}\right).
+\end{aligned}
 $$ {#eq-coll4b}
 3. **The dilute-solution approximations.** For a dilute solution, $\ln x_{\text{solvent}}=\ln (1-x_{\text{solute}}) \approx -x_{\text{solute}}$, and since $T_{\text{b}}$ and $T_{\text{b}}^*$ are very close to each other, $\frac{1}{T_{\text{b}}}-\frac{1}{T_{\text{b}}^*}=\frac{T_{\text{b}}^*-T_{\text{b}}}{T_{\text{b}}T_{\text{b}}^*} \approx -\frac{\Delta T_{\text{b}}}{\left(T_{\text{b}}^*\right)^2}$. Replacing both into @eq-coll4b, and using @eq-collxm for the mole fraction of the solute:
 $$
@@ -393,8 +399,6 @@ c. A solution whose vapor is an ideal gas.
 d. A solution of a single component.
 e. A solution that cannot be distilled.
 
----
-
 **2. What does Raoult's law state?**
 
 a. $P_i = y_i P_{\text{TOT}}$.
@@ -402,8 +406,6 @@ b. $P_i = k_{\text{H},i} x_i$.
 c. $P_i = x_i P_i^*$.
 d. $P_i = \frac{x_i}{P_i^*}$.
 e. $P_i = x_i RT$.
-
----
 
 **3. What is the composition of the vapor above an ideal solution of two volatile components?**
 
@@ -413,8 +415,6 @@ c. Richer in the less volatile component.
 d. Always 50% of each component.
 e. Richer in the more volatile component.
 
----
-
 **4. A two-component system with overall composition $z_{\text{B}}$ splits into a liquid ($x_{\text{B}}$) and a vapor ($y_{\text{B}}$). What does the lever rule state?**
 
 a. $n_{\text{l}}\, x_{\text{B}} = n_{\text{v}}\, y_{\text{B}}$.
@@ -422,8 +422,6 @@ b. $n_{\text{l}}\left(z_{\text{B}}-x_{\text{B}}\right) = n_{\text{v}}\left(y_{\t
 c. The amounts of liquid and vapor are always equal.
 d. $n_{\text{l}}+n_{\text{v}} = z_{\text{B}}$.
 e. The phase whose composition is farther from $z_{\text{B}}$ is the more abundant.
-
----
 
 **5. Two substances mix completely as liquids but not at all as solids. What is their eutectic point?**
 
@@ -433,8 +431,6 @@ c. The critical point of the mixture.
 d. The point where the two melting point curves meet: the lowest temperature at which a liquid can exist, in equilibrium with both pure solids.
 e. The temperature at which the mixture boils.
 
----
-
 **6. When does a component of a solution follow Henry's law?**
 
 a. When it is dilute (its mole fraction is close to zero).
@@ -442,8 +438,6 @@ b. When it is the solvent.
 c. When it is pure.
 d. When the solution is ideal.
 e. When it is not volatile.
-
----
 
 **7. What is the molecular origin of a positive deviation from Raoult's law?**
 
@@ -453,8 +447,6 @@ c. The $\mathrm{A}$–$\mathrm{B}$ interactions are weaker than the $\mathrm{A}$
 d. The solute is nonvolatile.
 e. The vapor is not an ideal gas.
 
----
-
 **8. Why can an azeotrope not be separated by simple distillation?**
 
 a. Because it does not boil.
@@ -462,8 +454,6 @@ b. Because it boils at 100 °C.
 c. Because it contains only one component.
 d. Because its components react with each other.
 e. Because the liquid and the vapor have the same composition.
-
----
 
 **9. What is the activity coefficient of a component that shows a positive deviation from Raoult's law?**
 
@@ -473,8 +463,6 @@ c. $\gamma_i = 1$.
 d. $0 < \gamma_i < 1$.
 e. $\gamma_i < 0$.
 
----
-
 **10. What is the common origin of all colligative properties?**
 
 a. The solute reacts with the solvent.
@@ -482,8 +470,6 @@ b. The solute increases the vapor pressure of the solvent.
 c. The solute increases the chemical potential of the solvent.
 d. The solute lowers the chemical potential of the solvent, an entropic effect that depends only on the mole fraction.
 e. The solute changes the molar mass of the solvent.
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

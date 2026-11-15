@@ -44,7 +44,10 @@ The natural variables of the internal energy have a practical problem. While the
 There is a simple trick to do this, called a **Legendre transformation**. Look at @eq-dunv2: the variables appear in pairs, multiplied together, as $T$ and $S$ in $TdS$, and $-P$ and $V$ in $-PdV$. These pairs are called *conjugate variables*. In each pair, one variable is intensive ($T$ and $-P$), the other one is extensive ($S$ and $V$), and their product has the units of an energy.^[The intensive variable can be thought of as a thermodynamic "force," and the extensive one as the corresponding "displacement," similarly to how a force times a displacement gives a work in classical mechanics.] Now, let's subtract the product $TS$ from $U$ and take the differential. Using the product rule, $d(TS)=TdS+SdT$, and therefore:
 
 $$
-d(U-TS) = \underbrace{TdS-PdV+\sum_i\mu_i dn_i}_{dU} - TdS - SdT = -SdT-PdV+\sum_i\mu_i dn_i.
+\begin{aligned}
+d(U-TS) &= \underbrace{TdS-PdV+\sum_i\mu_i dn_i}_{dU} - TdS - SdT \\
+&= -SdT-PdV+\sum_i\mu_i dn_i.
+\end{aligned}
 $$ {#eq-legendretrick}
 
 The term $TdS$ has disappeared, and it has been replaced by $-SdT$. The new function, $U-TS$, has $T$ as a natural variable instead of $S$: we have swapped a knob that we cannot turn for one that we can. This is all there is to a Legendre transformation: to replace a natural variable with its conjugate partner, we subtract the product of the two from the original function. In the language of our machines, a Legendre transformation swaps one knob for its partner, as summarized in @fig-legendremachines. The new functions obtained this way are called **thermodynamic potentials**.^[Even if we introduced both concepts in the same chapter, it is important to never confuse the *thermodynamic potentials*—which are energy functions such as $H$, $A$, and $G$—with the *chemical potential*—which describes how the energy changes with the composition.]
@@ -301,8 +304,6 @@ c. $dU = TdS - PdV$.
 d. $dU = SdT - VdP$.
 e. $dU = TdS - VdP$.
 
----
-
 **2. Why does the fundamental equation apply to irreversible processes too, even if it was derived for reversible ones?**
 
 a. Because it contains only state functions.
@@ -310,8 +311,6 @@ b. Because irreversible processes do not exist.
 c. Because heat is a state function.
 d. Because it contains the entropy.
 e. Because it is an approximation.
-
----
 
 **3. What is the chemical potential?**
 
@@ -321,8 +320,6 @@ c. The pressure of a chemical species.
 d. The energy needed to break a molecule into atoms.
 e. The amount of energy absorbed or released due to a change in the number of particles of a chemical species.
 
----
-
 **4. What are the natural variables of the internal energy?**
 
 a. $T$, $P$, $\{n_i\}$.
@@ -330,8 +327,6 @@ b. $S$, $V$, $\{n_i\}$.
 c. $T$, $V$, $\{n_i\}$.
 d. $S$, $P$, $\{n_i\}$.
 e. $U$, $V$, $T$.
-
----
 
 **5. What does a Legendre transformation do?**
 
@@ -341,8 +336,6 @@ c. It converts a path function into a state function.
 d. It defines a new function by subtracting a product of conjugate variables, replacing one natural variable with its conjugate.
 e. It changes the units of the energy.
 
----
-
 **6. What are the natural variables of the Gibbs energy?**
 
 a. $T$, $P$, $\{n_i\}$.
@@ -350,8 +343,6 @@ b. $S$, $V$, $\{n_i\}$.
 c. $T$, $V$, $\{n_i\}$.
 d. $S$, $P$, $\{n_i\}$.
 e. $G$, $H$, $S$.
-
----
 
 **7. What is the fundamental equation for the Helmholtz energy?**
 
@@ -361,8 +352,6 @@ c. $dA = -SdT - PdV + \sum_i \mu_i dn_i$.
 d. $dA = TdS + VdP + \sum_i \mu_i dn_i$.
 e. $dA = SdT + PdV$.
 
----
-
 **8. What is the condition for a spontaneous process at constant temperature and pressure?**
 
 a. $dA < 0$.
@@ -370,8 +359,6 @@ b. $dS = 0$.
 c. $dH > 0$.
 d. $dG > 0$.
 e. $dG < 0$, until $dG = 0$ at equilibrium.
-
----
 
 **9. From which mathematical property do the Maxwell relations follow?**
 
@@ -381,8 +368,6 @@ c. The ideal gas law.
 d. The definition of the chemical potential.
 e. The Clausius inequality.
 
----
-
 **10. Why is the Maxwell relation $\left(\frac{\partial V}{\partial T}\right)_P = -\left(\frac{\partial S}{\partial P}\right)_T$ useful?**
 
 a. Because it shows that the entropy is constant.
@@ -390,8 +375,6 @@ b. Because it defines the temperature.
 c. Because it is valid only for ideal gases.
 d. Because it relates a quantity that is hard to measure (how $S$ changes with $P$) to one that is easy to measure (thermal expansion).
 e. Because it gives the value of the Gibbs energy.
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

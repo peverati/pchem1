@@ -1,0 +1,73 @@
+% PDF style: one serif family (STIX Two) for text, headings, and math, in the
+% style of a scientific book. Included in the PDF header by _quarto.yml.
+
+% ---- Headings: serif, no trailing periods, "Chapter N" line above the title
+\KOMAoptions{numbers=noendperiod, chapterprefix=true}
+\addtokomafont{disposition}{\rmfamily}
+\addtokomafont{chapterprefix}{\large\scshape\mdseries}
+\addtokomafont{chapter}{\Huge\mdseries}
+\addtokomafont{section}{\Large\bfseries}
+\addtokomafont{subsection}{\large\bfseries}
+\addtokomafont{subsubsection}{\normalsize\bfseries}
+\renewcommand*{\chapterformat}{\chapapp~\thechapter}
+\makeatletter
+% a thin rule under the chapter title (the prefix line "Chapter N" is #2, the title #3)
+\renewcommand*{\chapterlineswithprefixformat}[3]{%
+  #2#3\par\nobreak\vspace{0.5\baselineskip}\hrule height 0.4pt\relax}
+\makeatother
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=2.5\baselineskip]{chapter}
+
+% ---- Table of contents: serif, chapter entries in bold
+\addtokomafont{chapterentry}{\rmfamily}
+
+% ---- Captions: bold label, no colon, smaller text
+\usepackage{caption}
+\captionsetup{labelfont=bf, labelsep=quad, font=small, format=plain, justification=justified, singlelinecheck=true}
+
+% ---- Running heads: chapter title (small caps) on the left, page number on the right
+\usepackage[headsepline=0.4pt]{scrlayer-scrpage}
+\clearpairofpagestyles
+\automark{chapter}
+\renewcommand*{\chaptermarkformat}{\thechapter\enskip}
+\ihead{\headmark}
+\ohead{\pagemark}
+\cfoot*{}
+\addtokomafont{pagehead}{\normalfont\small\scshape}
+\addtokomafont{pagenumber}{\normalfont\small}
+\pagestyle{scrheadings}
+\renewcommand*{\chapterpagestyle}{plain.scrheadings}
+\cfoot[\pagemark]{}
+
+% ---- Figures: let large figures share a page with text instead of getting a page of their own
+% (LaTeX's defaults send any figure taller than half a page that doesn't fit to a separate "float page")
+\renewcommand{\topfraction}{0.9}       % a figure may fill up to 90% of the top of a page
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}     % a page needs only 7% of text
+\renewcommand{\floatpagefraction}{0.8} % a page of figures only, when they fill at least 80% of it
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+
+% ---- Tables: a little more air between rows
+\renewcommand{\arraystretch}{1.15}
+% center the text of each cell vertically in its row (Pandoc writes the columns as p{...}, which align to the top)
+\usepackage{array}
+\newcolumntype{p}[1]{m{#1}}
+% and a little space between rows of text (padding added above and below each row)
+\AtBeginEnvironment{longtable}{\setlength{\extrarowheight}{2pt}}
+% narrower spacing between matrix columns, so that wide matrices fit the page
+\setlength{\arraycolsep}{3.5pt}
+
+% ---- Boxes (Quarto callouts): neutral and thin, with a bold title
+% examples and answers (tip): dark gray frame; proofs and details (note): light gray frame
+\usepackage[skins,breakable]{tcolorbox}
+\tcbset{boxrule=0.4pt, fonttitle=\bfseries, leftrule/.style={}}  % ignore Quarto's thick left rule
+% boxes that break across pages: each piece gets its full frame (no open "jigsaw" edges), and the
+% piece on the next page starts with the same title followed by "(continued)"
+\tcbset{enhanced jigsaw/.style={enhanced}, opacityback/.style={}, opacitybacktitle/.style={},
+  title/.append code={\gdef\pchemboxtitle{#1}\tcbset{title after break={\pchemboxtitle\ \textmd{\itshape(continued)}}}}}
+\AtBeginDocument{%
+  \definecolor{quarto-callout-tip-color}{HTML}{000000}%
+  \definecolor{quarto-callout-tip-color-frame}{HTML}{595959}%
+  \definecolor{quarto-callout-note-color}{HTML}{000000}%
+  \definecolor{quarto-callout-note-color-frame}{HTML}{A6A6A6}}

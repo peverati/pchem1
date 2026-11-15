@@ -560,10 +560,10 @@ window.Quarto = {
 </header>
 
 
-<p>In <a href="04_ThermodynamicCycles.html" class="quarto-xref"><span>chapter 4</span></a>, we used heat engines to understand why some processes are spontaneous while others are not, and we found that no engine can convert all the heat it absorbs into work. Carnot’s findings did not just inspire Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822–1888) to introduce a new state function, the <em>entropy</em>. In this chapter, we will follow Clausius’ reasoning to define the entropy, we will use it to write the second law of thermodynamics, and we will then look at the same quantity from the microscopic point of view of Boltzmann, to understand what entropy really measures.</p>
+<p>In <a href="04_ThermodynamicCycles.html" class="quarto-xref"><span>Chapter 4</span></a>, we used heat engines to understand why some processes are spontaneous while others are not, and we found that no engine can convert all the heat it absorbs into work. Carnot’s findings did not just inspire Lord Kelvin on this subject, but they also motivated Rudolf Clausius (1822–1888) to introduce a new state function, the <em>entropy</em>. In this chapter, we will follow Clausius’ reasoning to define the entropy, we will use it to write the second law of thermodynamics, and we will then look at the same quantity from the microscopic point of view of Boltzmann, to understand what entropy really measures.</p>
 <section id="sec-entropyint" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="sec-entropyint"><span class="header-section-number">5.1</span> Entropy</h2>
-<p>Let’s return to the efficiency of a Carnot cycle, and bring together the two expressions that we found in <a href="04_ThermodynamicCycles.html#eq-effCC2" class="quarto-xref">eq.&nbsp;<span>4.17</span></a> and <a href="04_ThermodynamicCycles.html#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>4.18</span></a>:</p>
+<p>Let’s return to the efficiency of a Carnot cycle, and bring together the two expressions that we found in <a href="04_ThermodynamicCycles.html#eq-effCC2" class="quarto-xref">Eq.&nbsp;<span>4.17</span></a> and <a href="04_ThermodynamicCycles.html#eq-effCC3" class="quarto-xref">Eq.&nbsp;<span>4.18</span></a>:</p>
 <p><span id="eq-effcQT"><span class="math display">\[
 \varepsilon = 1+\frac{Q_3}{Q_1} = 1-\frac{T_l}{T_h}.
 \tag{5.1}\]</span></span></p>
@@ -575,22 +575,22 @@ window.Quarto = {
 <p><span id="eq-effcQTrearr2"><span class="math display">\[
 \frac{Q_3}{T_l} + \frac{Q_1}{T_h} = 0.
 \tag{5.3}\]</span></span></p>
-<p>The left-hand side of <a href="#eq-effcQTrearr2" class="quarto-xref">eq.&nbsp;<span>5.3</span></a> is a sum of two terms, one for each isothermal stage of the Carnot cycle. Each term is the heat exchanged during that stage, divided by the temperature at which it is exchanged. Since, according to <a href="04_ThermodynamicCycles.html#def-carnotcycle" class="quarto-xref">Definition&nbsp;<span>4.1</span></a>, each transformation in a Carnot cycle is reversible, these are heats exchanged at reversible conditions, <span class="math inline">\(Q_{\mathrm{REV}}\)</span>. The two adiabatic stages do not contribute, since no heat is exchanged during them.</p>
-<p>Is this result special to the Carnot cycle? To find out, let’s look at the heat exchanged by an ideal gas along <em>any</em> reversible path, not just along isotherms and adiabats. From the first law, the reversible heat is <span class="math inline">\(đQ_{\mathrm{REV}} = dU - đW_{\mathrm{REV}}\)</span>. Since the internal energy of an ideal gas depends only on its temperature (<a href="03_FirstLaw.html#sec-isothermalE" class="quarto-xref"><span>section 3.1.1</span></a>), <span class="math inline">\(dU = nC_V\,dT\)</span> for any process, and the reversible work is <span class="math inline">\(đW_{\mathrm{REV}} = -P\,dV = -\frac{nRT}{V}dV\)</span>. Therefore:</p>
+<p>The left-hand side of <a href="#eq-effcQTrearr2" class="quarto-xref">Eq.&nbsp;<span>5.3</span></a> is a sum of two terms, one for each isothermal stage of the Carnot cycle. Each term is the heat exchanged during that stage, divided by the temperature at which it is exchanged. Since, according to <a href="04_ThermodynamicCycles.html#def-carnotcycle" class="quarto-xref">Definition&nbsp;<span>4.1</span></a>, each transformation in a Carnot cycle is reversible, these are heats exchanged at reversible conditions, <span class="math inline">\(Q_{\mathrm{REV}}\)</span>. The two adiabatic stages do not contribute, since no heat is exchanged during them.</p>
+<p>Is this result special to the Carnot cycle? To find out, let’s look at the heat exchanged by an ideal gas along <em>any</em> reversible path, not just along isotherms and adiabats. From the first law, the reversible heat is <span class="math inline">\(đQ_{\mathrm{REV}} = dU - đW_{\mathrm{REV}}\)</span>. Since the internal energy of an ideal gas depends only on its temperature (<a href="03_FirstLaw.html#sec-isothermalE" class="quarto-xref"><span>Sec. 3.1.1</span></a>), <span class="math inline">\(dU = nC_V\,dT\)</span> for any process, and the reversible work is <span class="math inline">\(đW_{\mathrm{REV}} = -P\,dV = -\frac{nRT}{V}dV\)</span>. Therefore:</p>
 <p><span id="eq-dQrevIG"><span class="math display">\[
 đQ_{\mathrm{REV}} = nC_V\,dT + \frac{nRT}{V}\,dV.
 \tag{5.4}\]</span></span></p>
-<p>This looks like a total differential, <a href="01_Basis.html#eq-totdiff" class="quarto-xref">eq.&nbsp;<span>1.3</span></a>, but it is not one. If we apply the Schwarz test of <a href="01_Basis.html" class="quarto-xref"><span>chapter 1</span></a> to the two coefficients, the derivative of <span class="math inline">\(nC_V\)</span> with respect to <span class="math inline">\(V\)</span> is zero, while the derivative of <span class="math inline">\(\frac{nRT}{V}\)</span> with respect to <span class="math inline">\(T\)</span> is <span class="math inline">\(\frac{nR}{V}\)</span>. The two mixed derivatives are different, as we expect for the heat, which is a path function. Now let’s divide both sides of <a href="#eq-dQrevIG" class="quarto-xref">eq.&nbsp;<span>5.4</span></a> by the temperature:</p>
+<p>This looks like a total differential, <a href="01_Basis.html#eq-totdiff" class="quarto-xref">Eq.&nbsp;<span>1.3</span></a>, but it is not one. If we apply the Schwarz test of <a href="01_Basis.html" class="quarto-xref"><span>Chapter 1</span></a> to the two coefficients, the derivative of <span class="math inline">\(nC_V\)</span> with respect to <span class="math inline">\(V\)</span> is zero, while the derivative of <span class="math inline">\(\frac{nRT}{V}\)</span> with respect to <span class="math inline">\(T\)</span> is <span class="math inline">\(\frac{nR}{V}\)</span>. The two mixed derivatives are different, as we expect for the heat, which is a path function. Now let’s divide both sides of <a href="#eq-dQrevIG" class="quarto-xref">Eq.&nbsp;<span>5.4</span></a> by the temperature:</p>
 <p><span id="eq-dQrevTIG"><span class="math display">\[
 \frac{đQ_{\mathrm{REV}}}{T} = \frac{nC_V}{T}\,dT + \frac{nR}{V}\,dV.
 \tag{5.5}\]</span></span></p>
-<p>This time, the derivative of <span class="math inline">\(\frac{nC_V}{T}\)</span> with respect to <span class="math inline">\(V\)</span> is zero, and the derivative of <span class="math inline">\(\frac{nR}{V}\)</span> with respect to <span class="math inline">\(T\)</span> is also zero. The test is passed: <a href="#eq-dQrevTIG" class="quarto-xref">eq.&nbsp;<span>5.5</span></a> is an exact differential.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Dividing by <span class="math inline">\(T\)</span> removed the <span class="math inline">\(T\)</span> from the coefficient of <span class="math inline">\(dV\)</span>, which was the only thing that made the heat path-dependent. And since the integral of an exact differential around a closed path is always zero, for <em>any</em> reversible cycle of an ideal gas we have:</p>
+<p>This time, the derivative of <span class="math inline">\(\frac{nC_V}{T}\)</span> with respect to <span class="math inline">\(V\)</span> is zero, and the derivative of <span class="math inline">\(\frac{nR}{V}\)</span> with respect to <span class="math inline">\(T\)</span> is also zero. The test is passed: <a href="#eq-dQrevTIG" class="quarto-xref">Eq.&nbsp;<span>5.5</span></a> is an exact differential.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Dividing by <span class="math inline">\(T\)</span> removed the <span class="math inline">\(T\)</span> from the coefficient of <span class="math inline">\(dV\)</span>, which was the only thing that made the heat path-dependent. And since the integral of an exact differential around a closed path is always zero, for <em>any</em> reversible cycle of an ideal gas we have:</p>
 <p><span id="eq-ds0"><span class="math display">\[
 \oint \frac{đQ_{\mathrm{REV}}}{T} = 0.
 \tag{5.6}\]</span></span></p>
-<p>The Carnot result, <a href="#eq-effcQTrearr2" class="quarto-xref">eq.&nbsp;<span>5.3</span></a>, is just a special case: along the two isotherms we add <span class="math inline">\(\frac{Q}{T}\)</span>, and along the two adiabats we add nothing.</p>
-<p>We have proved <a href="#eq-ds0" class="quarto-xref">eq.&nbsp;<span>5.6</span></a> only for the ideal gas, but the result is general. Carnot showed that every reversible engine working between the same two temperatures has the same efficiency, whatever substance it contains (otherwise, coupling two different engines would let us move heat from a cold body to a hot one with no other effect, which, as we will see in this chapter, never happens). Since the efficiency fixes <span class="math inline">\(\frac{Q_3}{Q_1}\)</span>, <a href="#eq-effcQTrearr2" class="quarto-xref">eq.&nbsp;<span>5.3</span></a> holds for the Carnot cycles of every substance, and from there one can show that <a href="#eq-ds0" class="quarto-xref">eq.&nbsp;<span>5.6</span></a> holds for any reversible cycle of any substance. We will not go through this general proof, which requires more work than it is worth here; the ideal-gas calculation already shows the essential point.</p>
-<p><a href="#eq-ds0" class="quarto-xref">Eq.&nbsp;<span>5.6</span></a> is a remarkable result. The heat, <span class="math inline">\(đQ\)</span>, is a path function, and its integral around a cycle is in general <em>not</em> zero. However, if we take the heat exchanged reversibly and divide it by the temperature, we obtain a quantity whose integral around <em>any</em> reversible cycle is zero. As we saw for the energy in <a href="03_FirstLaw.html#eq-de0" class="quarto-xref">eq.&nbsp;<span>3.16</span></a>, this is precisely the property that defines a state function: when we go back to the starting point, we always find the same value. Clausius realized this in 1865, and he decided to call the new state function <em>entropy</em>, and to indicate it with the letter <span class="math inline">\(S\)</span>:</p>
+<p>The Carnot result, <a href="#eq-effcQTrearr2" class="quarto-xref">Eq.&nbsp;<span>5.3</span></a>, is just a special case: along the two isotherms we add <span class="math inline">\(\frac{Q}{T}\)</span>, and along the two adiabats we add nothing.</p>
+<p>We have proved <a href="#eq-ds0" class="quarto-xref">Eq.&nbsp;<span>5.6</span></a> only for the ideal gas, but the result is general. Carnot showed that every reversible engine working between the same two temperatures has the same efficiency, whatever substance it contains (otherwise, coupling two different engines would let us move heat from a cold body to a hot one with no other effect, which, as we will see in this chapter, never happens). Since the efficiency fixes <span class="math inline">\(\frac{Q_3}{Q_1}\)</span>, <a href="#eq-effcQTrearr2" class="quarto-xref">Eq.&nbsp;<span>5.3</span></a> holds for the Carnot cycles of every substance, and from there one can show that <a href="#eq-ds0" class="quarto-xref">Eq.&nbsp;<span>5.6</span></a> holds for any reversible cycle of any substance. We will not go through this general proof, which requires more work than it is worth here; the ideal-gas calculation already shows the essential point.</p>
+<p><a href="#eq-ds0" class="quarto-xref">Eq.&nbsp;<span>5.6</span></a> is a remarkable result. The heat, <span class="math inline">\(đQ\)</span>, is a path function, and its integral around a cycle is in general <em>not</em> zero. However, if we take the heat exchanged reversibly and divide it by the temperature, we obtain a quantity whose integral around <em>any</em> reversible cycle is zero. As we saw for the energy in <a href="03_FirstLaw.html#eq-de0" class="quarto-xref">Eq.&nbsp;<span>3.16</span></a>, this is precisely the property that defines a state function: when we go back to the starting point, we always find the same value. Clausius realized this in 1865, and he decided to call the new state function <em>entropy</em>, and to indicate it with the letter <span class="math inline">\(S\)</span>:</p>
 <div id="def-entropy" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5.1</strong></span> <em>Entropy:</em> The state function <span class="math inline">\(S\)</span> whose infinitesimal change is equal to the heat exchanged at reversible conditions, divided by the temperature at which it is exchanged: <span id="eq-dentropy"><span class="math display">\[
 dS = \frac{đQ_{\mathrm{REV}}}{T}.
@@ -602,20 +602,20 @@ dS = \frac{đQ_{\mathrm{REV}}}{T}.
 \tag{5.8}\]</span></span></p>
 <p>Let’s unpack <a href="#def-entropy" class="quarto-xref">Definition&nbsp;<span>5.1</span></a>:</p>
 <ol type="1">
-<li><strong>Dividing by <span class="math inline">\(T\)</span> turns a path function into a state function.</strong> In <a href="01_Basis.html" class="quarto-xref"><span>chapter 1</span></a>, we introduced inexact differentials, such as <span class="math inline">\(đQ\)</span>, which cannot be integrated as differences between final and initial values. <a href="#eq-dentropy" class="quarto-xref">Eq.&nbsp;<span>5.7</span></a> tells us that, for reversible processes, dividing <span class="math inline">\(đQ_{\mathrm{REV}}\)</span> by the temperature turns it into the exact differential of a state function, <span class="math inline">\(dS\)</span>. Mathematicians call <span class="math inline">\(1/T\)</span> an <em>integrating factor</em>.</li>
+<li><strong>Dividing by <span class="math inline">\(T\)</span> turns a path function into a state function.</strong> In <a href="01_Basis.html" class="quarto-xref"><span>Chapter 1</span></a>, we introduced inexact differentials, such as <span class="math inline">\(đQ\)</span>, which cannot be integrated as differences between final and initial values. <a href="#eq-dentropy" class="quarto-xref">Eq.&nbsp;<span>5.7</span></a> tells us that, for reversible processes, dividing <span class="math inline">\(đQ_{\mathrm{REV}}\)</span> by the temperature turns it into the exact differential of a state function, <span class="math inline">\(dS\)</span>. Mathematicians call <span class="math inline">\(1/T\)</span> an <em>integrating factor</em>.</li>
 <li><strong>Only the reversible heat works.</strong> The heat exchanged along an irreversible path is different, and dividing it by <span class="math inline">\(T\)</span> does <em>not</em> give <span class="math inline">\(dS\)</span>. To calculate the entropy change of an irreversible process, we must find a reversible path between the same initial and final states and calculate <span class="math inline">\(\Delta S\)</span> along that path. Since the entropy is a state function, the result is valid for the irreversible process as well.</li>
 <li><strong>The same heat matters more at low temperature.</strong> The entropy change produced by a given amount of heat is larger when the heat is exchanged at a low temperature than at a high temperature. Intuitively, giving 1 kJ of heat to a cold object changes it more than giving the same 1 kJ to a hot one.</li>
 <li><strong>The units of entropy are energy divided by temperature</strong>, <span class="math inline">\(\text{J/K}\)</span> in SI. The entropy is an extensive property, and its molar version, <span class="math inline">\(\overline{S}\)</span>, is measured in <span class="math inline">\(\text{J}\,\text{mol}^{-1}\,\text{K}^{-1}\)</span>.</li>
-<li><strong>Only changes in entropy are defined, for now.</strong> <a href="#eq-dentropyint" class="quarto-xref">Eq.&nbsp;<span>5.8</span></a> gives us differences in entropy, but not absolute values. We will see in <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a> that the third law of thermodynamics fixes the zero of the entropy scale.</li>
+<li><strong>Only changes in entropy are defined, for now.</strong> <a href="#eq-dentropyint" class="quarto-xref">Eq.&nbsp;<span>5.8</span></a> gives us differences in entropy, but not absolute values. We will see in <a href="06_ThirdLaw.html" class="quarto-xref"><span>Chapter 6</span></a> that the third law of thermodynamics fixes the zero of the entropy scale.</li>
 </ol>
 </section>
 <section id="irreversible-cycles" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="irreversible-cycles"><span class="header-section-number">5.2</span> Irreversible Cycles</h2>
-<p>Up to this point, we have discussed <em>reversible</em> cycles only. What happens when the cycle is irreversible? In <a href="04_ThermodynamicCycles.html" class="quarto-xref"><span>chapter 4</span></a>, we saw that the efficiency of a Carnot cycle, <a href="04_ThermodynamicCycles.html#eq-effCC3" class="quarto-xref">eq.&nbsp;<span>4.18</span></a>, is the maximum efficiency that any cycle working between two temperatures can reach. Any real (irreversible) cycle loses some energy along the way, for example to friction, and its efficiency is always smaller than the Carnot one. Therefore, <a href="#eq-effcQT" class="quarto-xref">eq.&nbsp;<span>5.1</span></a> does not hold anymore for an <em>irreversible</em> cycle, and it must be replaced by an inequality:</p>
+<p>Up to this point, we have discussed <em>reversible</em> cycles only. What happens when the cycle is irreversible? In <a href="04_ThermodynamicCycles.html" class="quarto-xref"><span>Chapter 4</span></a>, we saw that the efficiency of a Carnot cycle, <a href="04_ThermodynamicCycles.html#eq-effCC3" class="quarto-xref">Eq.&nbsp;<span>4.18</span></a>, is the maximum efficiency that any cycle working between two temperatures can reach. Any real (irreversible) cycle loses some energy along the way, for example to friction, and its efficiency is always smaller than the Carnot one. Therefore, <a href="#eq-effcQT" class="quarto-xref">Eq.&nbsp;<span>5.1</span></a> does not hold anymore for an <em>irreversible</em> cycle, and it must be replaced by an inequality:</p>
 <p><span id="eq-effcIRR"><span class="math display">\[
 \overbrace{1+\frac{Q^{\mathrm{IRR}}_3}{Q^{\mathrm{IRR}}_1}}^{\varepsilon_{\mathrm{IRR}}} &lt; \overbrace{1-\frac{T_l}{T_h}}^{\varepsilon_{\mathrm{REV}}}.
 \tag{5.9}\]</span></span></p>
-<p>Following exactly the same steps used in <a href="#sec-entropyint" class="quarto-xref"><span>section 5.1</span></a> (subtracting 1 from both sides and multiplying by <span class="math inline">\(\frac{Q^{\mathrm{IRR}}_1}{T_l}\)</span>, which is positive, so the direction of the inequality does not change), we obtain:</p>
+<p>Following exactly the same steps used in <a href="#sec-entropyint" class="quarto-xref"><span>Sec. 5.1</span></a> (subtracting 1 from both sides and multiplying by <span class="math inline">\(\frac{Q^{\mathrm{IRR}}_1}{T_l}\)</span>, which is positive, so the direction of the inequality does not change), we obtain:</p>
 <p><span id="eq-effcIRR2"><span class="math display">\[
 \frac{Q^{\mathrm{IRR}}_3}{Q^{\mathrm{IRR}}_1} &lt; - \frac{T_l}{T_h} \longrightarrow \frac{Q^{\mathrm{IRR}}_3}{T_l} + \frac{Q^{\mathrm{IRR}}_1}{T_h} &lt; 0 \longrightarrow \sum_i \frac{Q_{\mathrm{IRR},i}}{T_i} &lt; 0,
 \tag{5.10}\]</span></span></p>
@@ -623,7 +623,7 @@ dS = \frac{đQ_{\mathrm{REV}}}{T}.
 <p><span id="eq-dqirrineq"><span class="math display">\[
 \oint \frac{đQ_{\mathrm{IRR}}}{T} &lt; 0.
 \tag{5.11}\]</span></span></p>
-<p>Putting <a href="#eq-ds0" class="quarto-xref">eq.&nbsp;<span>5.6</span></a> and <a href="#eq-dqirrineq" class="quarto-xref">eq.&nbsp;<span>5.11</span></a> together, we obtain:</p>
+<p>Putting <a href="#eq-ds0" class="quarto-xref">Eq.&nbsp;<span>5.6</span></a> and <a href="#eq-dqirrineq" class="quarto-xref">Eq.&nbsp;<span>5.11</span></a> together, we obtain:</p>
 <p><span id="eq-clausiusineq"><span class="math display">\[
 \oint \frac{đQ}{T} \leq 0,
 \tag{5.12}\]</span></span></p>
@@ -631,7 +631,7 @@ dS = \frac{đQ_{\mathrm{REV}}}{T}.
 </section>
 <section id="sec-secondlaw" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-secondlaw"><span class="header-section-number">5.3</span> The Second Law of Thermodynamics</h2>
-<p>We are now ready to use the Clausius inequality to understand spontaneity. Let’s consider an isolated system that undergoes an irreversible transformation from state 1 to state 2, and then let’s bring it back from state 2 to state 1 along a reversible path, as in <a href="#fig-FigJexpC2" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>.</p>
+<p>We are now ready to use the Clausius inequality to understand spontaneity. Let’s consider an isolated system that undergoes an irreversible transformation from state 1 to state 2, and then let’s bring it back from state 2 to state 1 along a reversible path, as in <a href="#fig-FigJexpC2" class="quarto-xref">Fig.&nbsp;<span>5.1</span></a>.</p>
 <div id="fig-FigJexpC2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cycle between state 1 (pressure P1, volume V1) and state 2 (pressure P2, volume V2). The top arrow, from 1 to 2, is labeled irreversible and spontaneous with a green check mark. The bottom arrow, from 2 to 1, is labeled reversible and non-spontaneous with a red cross.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigJexpC2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -642,11 +642,11 @@ Figure&nbsp;5.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
 </figcaption>
 </figure>
 </div>
-<p>This cycle is similar to the one in <a href="04_ThermodynamicCycles.html#fig-FigJexpC" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> for the Joule expansion experiment: the gas expands spontaneously into the vacuum (1 <span class="math inline">\(\rightarrow\)</span> 2), but it never goes back on its own (2 <span class="math inline">\(\rightarrow\)</span> 1). To bring it back, we must compress it from the outside.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Since the cycle contains an irreversible step, it is irreversible overall, and the Clausius inequality, <a href="#eq-clausiusineq" class="quarto-xref">eq.&nbsp;<span>5.12</span></a>, gives:</p>
+<p>This cycle is similar to the one in <a href="04_ThermodynamicCycles.html#fig-FigJexpC" class="quarto-xref">Fig.&nbsp;<span>4.1</span></a> for the Joule expansion experiment: the gas expands spontaneously into the vacuum (1 <span class="math inline">\(\rightarrow\)</span> 2), but it never goes back on its own (2 <span class="math inline">\(\rightarrow\)</span> 1). To bring it back, we must compress it from the outside.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Since the cycle contains an irreversible step, it is irreversible overall, and the Clausius inequality, <a href="#eq-clausiusineq" class="quarto-xref">Eq.&nbsp;<span>5.12</span></a>, gives:</p>
 <p><span id="eq-qirrcycle1"><span class="math display">\[
 \int_1^2 \frac{đQ_{\mathrm{IRR}}}{T} + \int_2^1 \frac{đQ_{\mathrm{REV}}}{T} &lt; 0.
 \tag{5.13}\]</span></span></p>
-<p>The second integral is taken along a reversible path, so, according to <a href="#eq-dentropyint" class="quarto-xref">eq.&nbsp;<span>5.8</span></a>, it is the entropy change from state 2 to state 1, which is <span class="math inline">\(-\Delta S\)</span>, where <span class="math inline">\(\Delta S=S_2-S_1\)</span> is the entropy change of the forward process. Moving it to the right-hand side, we obtain:</p>
+<p>The second integral is taken along a reversible path, so, according to <a href="#eq-dentropyint" class="quarto-xref">Eq.&nbsp;<span>5.8</span></a>, it is the entropy change from state 2 to state 1, which is <span class="math inline">\(-\Delta S\)</span>, where <span class="math inline">\(\Delta S=S_2-S_1\)</span> is the entropy change of the forward process. Moving it to the right-hand side, we obtain:</p>
 <p><span id="eq-qirrcycle2"><span class="math display">\[
 \underbrace{\int_1^2 \frac{đQ_{\mathrm{REV}}}{T}}_{\Delta S} &gt; \underbrace{\int_1^2 \frac{đQ_{\mathrm{IRR}}}{T}}_{=0},
 \tag{5.14}\]</span></span></p>
@@ -654,10 +654,10 @@ Figure&nbsp;5.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
 <p><span id="eq-secondlaweq"><span class="math display">\[
 \Delta S &gt; 0.
 \tag{5.15}\]</span></span></p>
-<p>What does <a href="#eq-secondlaweq" class="quarto-xref">eq.&nbsp;<span>5.15</span></a> tell us?</p>
+<p>What does <a href="#eq-secondlaweq" class="quarto-xref">Eq.&nbsp;<span>5.15</span></a> tell us?</p>
 <ol type="1">
 <li><strong>In an isolated system, spontaneous processes increase the entropy.</strong> Every irreversible process that happens on its own in an isolated system has <span class="math inline">\(\Delta S &gt; 0\)</span>. Spontaneous processes are always irreversible, since reversible processes are idealizations that require infinitely slow, controlled changes.</li>
-<li><strong>The entropy changes even if no heat is exchanged.</strong> In the Joule expansion, <span class="math inline">\(Q=0\)</span>, and yet <span class="math inline">\(\Delta S&gt;0\)</span>. This is not a contradiction: the entropy change must be calculated along a reversible path between the same states, and along that path heat <em>is</em> exchanged. We will calculate this value in <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>.</li>
+<li><strong>The entropy changes even if no heat is exchanged.</strong> In the Joule expansion, <span class="math inline">\(Q=0\)</span>, and yet <span class="math inline">\(\Delta S&gt;0\)</span>. This is not a contradiction: the entropy change must be calculated along a reversible path between the same states, and along that path heat <em>is</em> exchanged. We will calculate this value in <a href="06_ThirdLaw.html" class="quarto-xref"><span>Chapter 6</span></a>.</li>
 <li><strong>The reverse process would decrease the entropy</strong>, and it never happens on its own in an isolated system. This is why the gas never goes back to one side of the box.</li>
 </ol>
 <p>Since the only system that is truly isolated is the universe, we can write a concise statement for a new fundamental law of thermodynamics:</p>
@@ -669,8 +669,8 @@ Figure&nbsp;5.1: Spontaneous and Non-Spontaneous Transformations in a Cycle.
 <li><strong>Clausius statement:</strong> heat cannot flow spontaneously from a colder body to a hotter one. If the heat <span class="math inline">\(Q&gt;0\)</span> moved on its own from a reservoir at <span class="math inline">\(T_l\)</span> to one at <span class="math inline">\(T_h &gt; T_l\)</span>, the entropy of the universe would change by <span class="math inline">\(-\frac{Q}{T_l}+\frac{Q}{T_h} &lt; 0\)</span>.</li>
 <li><strong>Kelvin statement:</strong> no cyclic process can absorb heat from a single reservoir and convert it entirely into work. After a full cycle, the entropy of the engine is unchanged, while the reservoir loses the entropy <span class="math inline">\(\frac{Q}{T}\)</span>, so the entropy of the universe would decrease.</li>
 </ul>
-<p>The two statements are equivalent: a device that violated one of them could be combined with an ordinary engine or refrigerator to violate the other. Both are contained in Kelvin’s 1851 words that we quoted at the end of <a href="04_ThermodynamicCycles.html" class="quarto-xref"><span>chapter 4</span></a>.</p>
-<p>The entropy also lets us complete the distinction between quasi-static and reversible processes that we started in <a href="03_FirstLaw.html" class="quarto-xref"><span>chapter 3</span></a>. Consider two large reservoirs, at <span class="math inline">\(T_h\)</span> and <span class="math inline">\(T_l\)</span>, connected by a thin rod that conducts heat very poorly. Heat flows so slowly that both reservoirs pass only through equilibrium states, and the process is quasi-static. Yet, when the heat <span class="math inline">\(Q\)</span> moves from the hot reservoir to the cold one, the entropy of the universe changes by <span class="math inline">\(\frac{Q}{T_l}-\frac{Q}{T_h}&gt;0\)</span>, and the process is irreversible: the heat will never flow back on its own. A slow process is reversible only if, in addition, there are no finite differences of temperature (or pressure) between the system and its surroundings, and no friction.</p>
+<p>The two statements are equivalent: a device that violated one of them could be combined with an ordinary engine or refrigerator to violate the other. Both are contained in Kelvin’s 1851 words that we quoted at the end of <a href="04_ThermodynamicCycles.html" class="quarto-xref"><span>Chapter 4</span></a>.</p>
+<p>The entropy also lets us complete the distinction between quasi-static and reversible processes that we started in <a href="03_FirstLaw.html" class="quarto-xref"><span>Chapter 3</span></a>. Consider two large reservoirs, at <span class="math inline">\(T_h\)</span> and <span class="math inline">\(T_l\)</span>, connected by a thin rod that conducts heat very poorly. Heat flows so slowly that both reservoirs pass only through equilibrium states, and the process is quasi-static. Yet, when the heat <span class="math inline">\(Q\)</span> moves from the hot reservoir to the cold one, the entropy of the universe changes by <span class="math inline">\(\frac{Q}{T_l}-\frac{Q}{T_h}&gt;0\)</span>, and the process is irreversible: the heat will never flow back on its own. A slow process is reversible only if, in addition, there are no finite differences of temperature (or pressure) between the system and its surroundings, and no friction.</p>
 </section>
 <section id="boltzmann-entropy" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="boltzmann-entropy"><span class="header-section-number">5.4</span> Boltzmann Entropy</h2>
@@ -734,7 +734,7 @@ Table&nbsp;5.1: Microstates of four molecules in a box divided into two halves.
 </div>
 </figure>
 </div>
-<p>The same microstates are drawn in <a href="#fig-microstates" class="quarto-xref">figure&nbsp;<span>5.2</span></a>, where each box is one microstate, and each row collects the microstates that belong to the same macrostate.</p>
+<p>The same microstates are drawn in <a href="#fig-microstates" class="quarto-xref">Fig.&nbsp;<span>5.2</span></a>, where each box is one microstate, and each row collects the microstates that belong to the same macrostate.</p>
 <div id="fig-microstates" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Five rows of small boxes, each split in half by a dashed line, containing four colored molecules labeled a, b, c, and d. The top row, 4 left, has one box with all molecules on the left, multiplicity 1, probability 1 in 16. The second row, 3 left, has four boxes, multiplicity 4, probability 4 in 16. The middle row, 2 left, highlighted in purple, has six boxes, multiplicity 6, probability 6 in 16. The fourth row, 1 left, has four boxes, multiplicity 4. The bottom row, 0 left, has one box with all molecules on the right, multiplicity 1.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-microstates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -745,7 +745,7 @@ Figure&nbsp;5.2: The 16 Microstates of Four Molecules in a Box Divided into Two 
 </figcaption>
 </figure>
 </div>
-<p>There are <span class="math inline">\(2^4=16\)</span> microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. Notice three things in <a href="#tbl-microstates" class="quarto-xref">table&nbsp;<span>5.1</span></a>:</p>
+<p>There are <span class="math inline">\(2^4=16\)</span> microstates in total. If the molecules move around randomly, each microstate is equally likely, and the probability of each macrostate is proportional to its multiplicity. Notice three things in <a href="#tbl-microstates" class="quarto-xref">Table&nbsp;<span>5.1</span></a>:</p>
 <ol type="1">
 <li><strong>The evenly distributed macrostate is the most probable.</strong> Two molecules on each side has <span class="math inline">\(\Omega=6\)</span>, which corresponds to a probability of <span class="math inline">\(6/16\)</span>, almost 40%.</li>
 <li><strong>The macrostate with all molecules on one side is the least probable.</strong> It has <span class="math inline">\(\Omega=1\)</span>, so its probability is only <span class="math inline">\(1/16\)</span>.</li>
@@ -760,11 +760,11 @@ S = k_B \ln \Omega,
 \tag{5.16}\]</span></span></p>
 <p>where <span class="math inline">\(k_B\)</span> is the Boltzmann constant, <span class="math inline">\(k_B = R/N_A = 1.380649 \times 10^{-23} \, \text{J/K}\)</span>, with <span class="math inline">\(R\)</span> being the ideal gas constant and <span class="math inline">\(N_A\)</span> Avogadro’s constant. The Boltzmann constant is the ideal gas constant “per molecule”, and it is the conversion factor between the microscopic counting of <span class="math inline">\(\Omega\)</span> and the macroscopic entropy measured in <span class="math inline">\(\text{J/K}\)</span>.</p>
 <p>Why the logarithm? If we put together two independent systems, the number of microstates of the combined system is the <em>product</em> of the two multiplicities, <span class="math inline">\(\Omega=\Omega_1\Omega_2\)</span>, since every microstate of the first can be combined with every microstate of the second. However, the entropy is extensive, so the entropy of the combined system must be the <em>sum</em> of the two entropies. The logarithm is the function that turns products into sums: <span class="math inline">\(k_B\ln(\Omega_1\Omega_2)=k_B\ln\Omega_1+k_B\ln\Omega_2\)</span>.</p>
-<p>Let’s now check that Boltzmann’s entropy agrees with Clausius’ one, using the expansion of an ideal gas into twice its initial volume. Each molecule now has twice as many positions available, so, for each microstate of the initial state, there are <span class="math inline">\(2^N\)</span> microstates of the final state, where <span class="math inline">\(N\)</span> is the number of molecules. Using <a href="#eq-boltzmanneq" class="quarto-xref">eq.&nbsp;<span>5.16</span></a>:</p>
+<p>Let’s now check that Boltzmann’s entropy agrees with Clausius’ one, using the expansion of an ideal gas into twice its initial volume. Each molecule now has twice as many positions available, so, for each microstate of the initial state, there are <span class="math inline">\(2^N\)</span> microstates of the final state, where <span class="math inline">\(N\)</span> is the number of molecules. Using <a href="#eq-boltzmanneq" class="quarto-xref">Eq.&nbsp;<span>5.16</span></a>:</p>
 <p><span id="eq-boltzmannexp"><span class="math display">\[
 \Delta S = k_B \ln \Omega_f - k_B \ln \Omega_i = k_B \ln \frac{\Omega_f}{\Omega_i} = k_B \ln 2^N = N k_B \ln 2 = nR \ln 2,
 \tag{5.17}\]</span></span></p>
-<p>where in the last step we used <span class="math inline">\(N k_B = n N_A \frac{R}{N_A} = nR\)</span>. In <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>, we will calculate the same entropy change from Clausius’ definition, obtaining <span class="math inline">\(\Delta S = nR \ln \frac{V_f}{V_i}\)</span>, which for <span class="math inline">\(V_f=2V_i\)</span> is exactly the same result. The two definitions of entropy describe the same quantity.</p>
+<p>where in the last step we used <span class="math inline">\(N k_B = n N_A \frac{R}{N_A} = nR\)</span>. In <a href="06_ThirdLaw.html" class="quarto-xref"><span>Chapter 6</span></a>, we will calculate the same entropy change from Clausius’ definition, obtaining <span class="math inline">\(\Delta S = nR \ln \frac{V_f}{V_i}\)</span>, which for <span class="math inline">\(V_f=2V_i\)</span> is exactly the same result. The two definitions of entropy describe the same quantity.</p>
 </section>
 <section id="why-disorder-can-be-misleading" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="why-disorder-can-be-misleading"><span class="header-section-number">5.4.3</span> Why “Disorder” Can Be Misleading</h3>
@@ -788,7 +788,9 @@ S = k_B \ln \Omega,
 </section>
 <section id="sec-quest5" class="level3" data-number="5.5.2">
 <h3 data-number="5.5.2" class="anchored" data-anchor-id="sec-quest5"><span class="header-section-number">5.5.2</span> Study Questions</h3>
+<div class="question">
 <p><strong>1. Which quantity has a sum (or integral) equal to zero around any reversible cycle?</strong></p>
+</div>
 <ol type="a">
 <li>The heat, <span class="math inline">\(Q_{\mathrm{REV}}\)</span>.</li>
 <li>The heat divided by the temperature, <span class="math inline">\(\frac{Q_{\mathrm{REV}}}{T}\)</span>.</li>
@@ -796,8 +798,9 @@ S = k_B \ln \Omega,
 <li>The temperature, <span class="math inline">\(T\)</span>.</li>
 <li>The heat multiplied by the temperature, <span class="math inline">\(Q_{\mathrm{REV}}T\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>2. Which formula defines the entropy according to Clausius?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(dS = \frac{đQ_{\mathrm{REV}}}{T}\)</span>.</li>
 <li><span class="math inline">\(dS = \frac{đQ_{\mathrm{IRR}}}{T}\)</span>.</li>
@@ -805,8 +808,9 @@ S = k_B \ln \Omega,
 <li><span class="math inline">\(S = \frac{T}{Q}\)</span>.</li>
 <li><span class="math inline">\(dS = \frac{đW}{T}\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>3. How can we calculate the entropy change of an irreversible process?</strong></p>
+</div>
 <ol type="a">
 <li>By integrating the irreversible heat divided by the temperature.</li>
 <li>It cannot be calculated.</li>
@@ -814,8 +818,9 @@ S = k_B \ln \Omega,
 <li>By calculating it along a reversible path between the same initial and final states.</li>
 <li>By assuming it is always zero.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>4. What are the units of entropy in the SI?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(\text{J}\)</span>.</li>
 <li><span class="math inline">\(\text{K/J}\)</span>.</li>
@@ -823,8 +828,9 @@ S = k_B \ln \Omega,
 <li><span class="math inline">\(\text{J/mol}\)</span>.</li>
 <li><span class="math inline">\(\text{J/K}\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>5. What is the Clausius inequality?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(\oint \frac{đQ}{T} \geq 0\)</span>.</li>
 <li><span class="math inline">\(\oint \frac{đQ}{T} = 0\)</span> always.</li>
@@ -832,8 +838,9 @@ S = k_B \ln \Omega,
 <li><span class="math inline">\(\oint đQ \leq 0\)</span>.</li>
 <li><span class="math inline">\(\oint dS &gt; 0\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>6. How does the efficiency of an irreversible cycle compare with that of a Carnot cycle between the same temperatures?</strong></p>
+</div>
 <ol type="a">
 <li>It is smaller.</li>
 <li>It is larger.</li>
@@ -841,8 +848,9 @@ S = k_B \ln \Omega,
 <li>It is always zero.</li>
 <li>It can be larger than 1.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>7. What does the second law of thermodynamics state?</strong></p>
+</div>
 <ol type="a">
 <li>The energy of the universe is conserved.</li>
 <li>The entropy of the universe is constant.</li>
@@ -850,8 +858,9 @@ S = k_B \ln \Omega,
 <li>For any spontaneous process, the entropy of the universe increases.</li>
 <li>Heat can be completely converted into work.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>8. A gas expands into a vacuum inside an insulated container (the Joule expansion). What are the heat exchanged and the entropy change of the gas?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(Q&gt;0\)</span> and <span class="math inline">\(\Delta S&gt;0\)</span>.</li>
 <li><span class="math inline">\(Q=0\)</span> and <span class="math inline">\(\Delta S&gt;0\)</span>.</li>
@@ -859,8 +868,9 @@ S = k_B \ln \Omega,
 <li><span class="math inline">\(Q&lt;0\)</span> and <span class="math inline">\(\Delta S&lt;0\)</span>.</li>
 <li><span class="math inline">\(Q=0\)</span> and <span class="math inline">\(\Delta S&lt;0\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>9. Which formula is the Boltzmann equation for the entropy?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(S = k_B\,\Omega\)</span>.</li>
 <li><span class="math inline">\(S = R \ln T\)</span>.</li>
@@ -868,8 +878,9 @@ S = k_B \ln \Omega,
 <li><span class="math inline">\(S = k_B T\)</span>.</li>
 <li><span class="math inline">\(S = k_B \ln \Omega\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>10. Four molecules move randomly in a box divided into two halves. Which macrostate is the most probable?</strong></p>
+</div>
 <ol type="a">
 <li>All four molecules on the left.</li>
 <li>Three molecules on the left and one on the right.</li>
@@ -877,7 +888,6 @@ S = k_B \ln \Omega,
 <li>All four molecules on the right.</li>
 <li>All macrostates are equally probable.</li>
 </ol>
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

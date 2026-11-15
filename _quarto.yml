@@ -11,8 +11,8 @@ project:
 
 lang: en
 language:
-  crossref-ch-prefix: chapter
-  crossref-sec-prefix: section
+  crossref-ch-prefix: Chapter
+  crossref-sec-prefix: Sec.
 
 book:
   title: "The Live Textbook of Physical Chemistry 1"
@@ -70,13 +70,17 @@ book:
   appendices:
     - A1_Appendix.qmd
 
+filters:
+  - path: pdf-fixes.lua      # "Eq. (5.7)" in the PDF; no empty line after each answer choice
+    at: post-render
+
 crossref:
-  eq-prefix: eq.
-  fig-prefix: figure
-  tbl-prefix: table
-  sec-prefix: section
-  def-prefix: definition
-  exm-prefix: example
+  eq-prefix: Eq.
+  fig-prefix: Fig.
+  tbl-prefix: Table
+  sec-prefix: Sec.
+  def-prefix: Definition
+  exm-prefix: Example
 
 format:
   html:
@@ -96,6 +100,18 @@ format:
   pdf:
     subtitle: "Thermodynamics, Equilibria, Solutions, and Chemical Kinetics"   # print subtitle
     documentclass: scrbook
+    pdf-engine: xelatex
+    mainfont: STIXTwoText        # STIX Two, from fonts/ (static files, so bold and italic work); one family for text, headings, and math
+    mainfontoptions: [Path=./fonts/, Extension=.otf, UprightFont=*-Regular, ItalicFont=*-Italic, BoldFont=*-Bold, BoldItalicFont=*-BoldItalic]
+    mathfont: STIXTwoMath-Regular.otf
+    mathfontoptions: [Path=./fonts/]
+    indent: true                 # indented paragraphs, as in printed books (no blank line between paragraphs)
+    toc-title: Contents
+    colorlinks: true             # clickable links shown in dark blue (cross-references, URLs, citations)
+    linkcolor: "blue!55!black"
+    urlcolor: "blue!55!black"
+    citecolor: "blue!55!black"
+    filecolor: "blue!55!black"
     classoption: [oneside]
     geometry:
       - paperwidth=6in
@@ -103,20 +119,21 @@ format:
       - margin=0.75in
     fontsize: 10pt
     include-in-header:
-      text: |
-        \usepackage{cancel}
-        \usepackage{booktabs}
-        \usepackage{pdfpages}
-        \usepackage[version=4]{mhchem}
-        \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
-        \subject{The Live Textbook of Physical Chemistry, Volume 1}
-        \AtBeginDocument{\title{Which Way and How Fast}}  % print title (the website keeps the series name)
-        \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
-        \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
-        \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-        \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-        % worked examples (exm-) in a green frame, as on the website
-        \usepackage[most]{tcolorbox}
-        \AtBeginDocument{\tcolorboxenvironment{definition}{breakable, enhanced, colback=blue!4!white, colframe=blue!55!black, boxrule=0.5pt, leftrule=3pt, arc=2pt, left=6pt, right=6pt}}
-        \AtBeginDocument{\tcolorboxenvironment{example}{breakable, enhanced, colback=green!4!white, colframe=green!45!black, boxrule=0.5pt, leftrule=3pt, arc=2pt, left=6pt, right=6pt}}
+      - file: pdf-style.tex     # headings, captions, running heads, boxes
+      - text: |
+          \usepackage{cancel}
+          \usepackage{booktabs}
+          \usepackage{pdfpages}
+          \usepackage[version=4]{mhchem}
+          \newcommand*{\standardstate}{{-\kern-6pt{\ominus}\kern-6pt-}}
+          \subject{The Live Textbook of Physical Chemistry, Volume 1}
+          \AtBeginDocument{\title{Which Way and How Fast}}  % print title (the website keeps the series name)
+          \AtBeginDocument{\subtitle{Thermodynamics, Equilibria, Solutions, and Chemical Kinetics}}  % the preface's own subtitle would otherwise replace it
+          \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
+          \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+          \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+          \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+          % definitions (def-) and worked examples (exm-): thin gray frames, like the other boxes (pdf-style.tex loads tcolorbox)
+          \AtBeginDocument{\tcolorboxenvironment{definition}{breakable, enhanced, colback=white, colframe=black!35, boxrule=0.4pt, arc=0pt, left=2.5mm, right=2.5mm}}
+          \AtBeginDocument{\tcolorboxenvironment{example}{breakable, enhanced, colback=white, colframe=black!65, boxrule=0.4pt, arc=0pt, left=2.5mm, right=2.5mm}}
     fig-pos: "htbp"

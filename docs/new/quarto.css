@@ -83,3 +83,10 @@ body.quarto-dark div.theorem.definition .theorem-title { color: #9ec5fe; }
 #title-block-header .quarto-title:has(.subtitle) h1.title::before { content: "The Live Textbook of Physical Chemistry, Volume 1"; font-size: 1.6rem; font-weight: 500; }
 #title-block-header .quarto-title .subtitle { font-size: 2.6rem; font-weight: 600; line-height: 1.15; margin-top: 0.4rem; }
 #title-block-header .description { font-size: 1.15rem; }
+
+/* equation references as "Eq. (5.7)", like the equation numbers and the PDF (pdf-fixes.lua) */
+a.quarto-xref[href*="#eq-"] > span::before { content: "("; }
+a.quarto-xref[href*="#eq-"] > span::after { content: ")"; }
+
+/* study questions: a question that wraps to a second line is aligned with the text after its number (pdf-fixes.lua) */
+.question > p { padding-left: 1.7em; text-indent: -1.7em; }

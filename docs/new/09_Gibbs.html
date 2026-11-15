@@ -555,10 +555,10 @@ window.Quarto = {
 </header>
 
 
-<p>In <a href="08_Potentials.html" class="quarto-xref"><span>chapter 8</span></a>, we found that, at constant temperature and pressure, a process is spontaneous if it decreases the Gibbs energy of the system. In this chapter, we will concentrate on chemical processes that happen at these conditions.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We will learn how to calculate the Gibbs energy of a reaction from tabulated data, and how the Gibbs energy changes with temperature, pressure, and composition. These three dependencies will be the foundations of the next chapters on chemical equilibrium, phase equilibrium, and solutions.</p>
+<p>In <a href="08_Potentials.html" class="quarto-xref"><span>Chapter 8</span></a>, we found that, at constant temperature and pressure, a process is spontaneous if it decreases the Gibbs energy of the system. In this chapter, we will concentrate on chemical processes that happen at these conditions.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We will learn how to calculate the Gibbs energy of a reaction from tabulated data, and how the Gibbs energy changes with temperature, pressure, and composition. These three dependencies will be the foundations of the next chapters on chemical equilibrium, phase equilibrium, and solutions.</p>
 <section id="sec-gibbseqsec" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="sec-gibbseqsec"><span class="header-section-number">9.1</span> Gibbs Equation</h2>
-<p>Recalling from <a href="08_Potentials.html" class="quarto-xref"><span>chapter 8</span></a>, the definition of <span class="math inline">\(G\)</span> is:</p>
+<p>Recalling from <a href="08_Potentials.html" class="quarto-xref"><span>Chapter 8</span></a>, the definition of <span class="math inline">\(G\)</span> is:</p>
 <p><span id="eq-dgdeftot"><span class="math display">\[
 G = U -TS +PV = H-TS,
 \tag{9.1}\]</span></span></p>
@@ -566,7 +566,7 @@ G = U -TS +PV = H-TS,
 <p><span id="eq-dgdeftot2"><span class="math display">\[
 dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 \tag{9.2}\]</span></span></p>
-<p>Integrating <a href="#eq-dgdeftot2" class="quarto-xref">eq.&nbsp;<span>9.2</span></a> between the initial and final states of a process results in:</p>
+<p>Integrating <a href="#eq-dgdeftot2" class="quarto-xref">Eq.&nbsp;<span>9.2</span></a> between the initial and final states of a process results in:</p>
 <p><span id="eq-gibbseq"><span class="math display">\[
 \begin{aligned}
 \int_i^f dG &amp;= \int_i^f dH -T \int_i^f dS \\
@@ -582,7 +582,7 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 &amp;= \sum_i \nu_i \Delta_{\mathrm{f}} H_i^\standardstate - T \sum_i \nu_i S_i^\standardstate,
 \end{aligned}
 \tag{9.4}\]</span></span></p>
-<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^\standardstate\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^\standardstate\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in <a href="07_Thermochemistry.html" class="quarto-xref"><span>chapter 7</span></a> and <a href="06_ThirdLaw.html" class="quarto-xref"><span>chapter 6</span></a>, respectively.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>where <span class="math inline">\(\Delta_{\mathrm{f}} H_i^\standardstate\)</span> are the standard enthalpies of formation, <span class="math inline">\(S_i^\standardstate\)</span> are the standard entropies, and <span class="math inline">\(\nu_i\)</span> are the stoichiometric coefficients for every species <span class="math inline">\(i\)</span> involved in the reaction. All these quantities are commonly available, and we have already discussed their usage in <a href="07_Thermochemistry.html" class="quarto-xref"><span>Chapter 7</span></a> and <a href="06_ThirdLaw.html" class="quarto-xref"><span>Chapter 6</span></a>, respectively.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p>The following four options are possible for <span class="math inline">\(\Delta G^\standardstate\)</span> of a chemical reaction:</p>
 <table class="caption-top table">
 <colgroup>
@@ -642,8 +642,8 @@ dG = dH \; \overbrace{-SdT}^{=0} -TdS = dH -TdS.
 <li>Endothermic reactions that increase the entropy are spontaneous at high <span class="math inline">\(T\)</span>.</li>
 </ul></li>
 </ul>
-<p>The synthesis of ammonia is an example of the third case. Its standard Gibbs energy of reaction at <span class="math inline">\(298\;\text{K}\)</span> is <span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate = -91.8 - 298 \times (-0.1981) = -32.8\;\text{kJ/mol}\)</span>, the same number that we obtained from the entropy of the universe in <a href="07_Thermochemistry.html#sec-rxnspont" class="quarto-xref"><span>section 7.7</span></a>, and the same that we get from the tabulated Gibbs energy of formation of ammonia, <span class="math inline">\(2\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{NH}_{3(g)}} = 2(-16.4)\;\text{kJ/mol}\)</span>. The reaction is spontaneous at room temperature, but it becomes non-spontaneous at high temperature, where the <span class="math inline">\(-T\Delta_{\text{rxn}}S^\standardstate\)</span> term wins. If we assume that <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> and <span class="math inline">\(\Delta_{\text{rxn}}S^\standardstate\)</span> do not depend on temperature, the switch happens where <span class="math inline">\(\Delta_{\text{rxn}}G^\standardstate=0\)</span>, at <span class="math inline">\(T = \frac{91.8\times 10^3}{198.1} \approx 463\;\text{K}\)</span>.</p>
-<p><a href="#fig-dGvsT" class="quarto-xref">figure&nbsp;<span>9.1</span></a> shows the four cases as lines, since, if <span class="math inline">\(\Delta H\)</span> and <span class="math inline">\(\Delta S\)</span> do not depend much on the temperature, <span class="math inline">\(\Delta G = \Delta H - T\Delta S\)</span> is a straight line with intercept <span class="math inline">\(\Delta H\)</span> and slope <span class="math inline">\(-\Delta S\)</span>. In the two cases where the spontaneity depends on the temperature, the line crosses <span class="math inline">\(\Delta G=0\)</span> at <span class="math inline">\(T=\frac{\Delta H}{\Delta S}\)</span>, the temperature at which the reaction changes direction.</p>
+<p>The synthesis of ammonia is an example of the third case. Its standard Gibbs energy of reaction at <span class="math inline">\(298\;\text{K}\)</span> is <span class="math inline">\(\Delta_{\text{rxn}} G^\standardstate = -91.8 - 298 \times (-0.1981) = -32.8\;\text{kJ/mol}\)</span>, the same number that we obtained from the entropy of the universe in <a href="07_Thermochemistry.html#sec-rxnspont" class="quarto-xref"><span>Sec. 7.7</span></a>, and the same that we get from the tabulated Gibbs energy of formation of ammonia, <span class="math inline">\(2\Delta_{\mathrm{f}} G^\standardstate_{\mathrm{NH}_{3(g)}} = 2(-16.4)\;\text{kJ/mol}\)</span>. The reaction is spontaneous at room temperature, but it becomes non-spontaneous at high temperature, where the <span class="math inline">\(-T\Delta_{\text{rxn}}S^\standardstate\)</span> term wins. If we assume that <span class="math inline">\(\Delta_{\text{rxn}}H^\standardstate\)</span> and <span class="math inline">\(\Delta_{\text{rxn}}S^\standardstate\)</span> do not depend on temperature, the switch happens where <span class="math inline">\(\Delta_{\text{rxn}}G^\standardstate=0\)</span>, at <span class="math inline">\(T = \frac{91.8\times 10^3}{198.1} \approx 463\;\text{K}\)</span>.</p>
+<p><a href="#fig-dGvsT" class="quarto-xref">Fig.&nbsp;<span>9.1</span></a> shows the four cases as lines, since, if <span class="math inline">\(\Delta H\)</span> and <span class="math inline">\(\Delta S\)</span> do not depend much on the temperature, <span class="math inline">\(\Delta G = \Delta H - T\Delta S\)</span> is a straight line with intercept <span class="math inline">\(\Delta H\)</span> and slope <span class="math inline">\(-\Delta S\)</span>. In the two cases where the spontaneity depends on the temperature, the line crosses <span class="math inline">\(\Delta G=0\)</span> at <span class="math inline">\(T=\frac{\Delta H}{\Delta S}\)</span>, the temperature at which the reaction changes direction.</p>
 <div id="fig-dGvsT" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of delta G equal to delta H minus T delta S against temperature, with four straight lines. Orange: positive delta H and negative delta S, a line rising from a positive intercept, never spontaneous. Green: negative delta H and positive delta S, a line falling from a negative intercept, always spontaneous. Blue: negative delta H and negative delta S, a line rising from a negative intercept and crossing zero, spontaneous at low temperature. Red: positive delta H and positive delta S, a line falling from a positive intercept and crossing zero, spontaneous at high temperature. The red and blue lines cross zero at the same purple point, labeled T equals delta H over delta S. The region below zero is shaded green and labeled spontaneous.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dGvsT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -655,11 +655,11 @@ Figure&nbsp;9.1: Gibbs Energy of Reaction as a Function of Temperature for the F
 </figure>
 </div>
 <p>A simple criterion to estimate the sign of the entropy change of a reaction is to count the moles of <em>gas</em> among the reactants and the products. Gases have much larger entropies than liquids and solids, since their molecules can occupy a much larger volume. Therefore, if the reaction produces more moles of gas than it consumes, it will most likely increase the entropy. Vice versa, if the number of moles of gas decreases, the entropy will most likely decrease. For example, the combustion of methane, <span class="math inline">\(\mathrm{CH}_{4(g)} + 2\mathrm{O}_{2(g)} \rightarrow \mathrm{CO}_{2(g)} + 2\mathrm{H}_2\mathrm{O}_{(l)}\)</span>, goes from 3 moles of gas to 1, and its entropy change is indeed negative. This criterion is only a rule of thumb: when the number of moles of gas does not change, we need the tabulated entropies to decide.</p>
-<p>As we saw in <a href="08_Potentials.html#sec-thermpot" class="quarto-xref"><span>section 8.2</span></a>, the natural variables of the Gibbs energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs energy can therefore be expressed using the total differential as (see also the last formula in <a href="08_Potentials.html#eq-dhagchem2" class="quarto-xref">eq.&nbsp;<span>8.17</span></a>):</p>
+<p>As we saw in <a href="08_Potentials.html#sec-thermpot" class="quarto-xref"><span>Sec. 8.2</span></a>, the natural variables of the Gibbs energy are the temperature, <span class="math inline">\(T\)</span>, the pressure, <span class="math inline">\(P\)</span>, and chemical composition, as the number of moles <span class="math inline">\(\{n_i\}\)</span>. The Gibbs energy can therefore be expressed using the total differential as (see also the last formula in <a href="08_Potentials.html#eq-dhagchem2" class="quarto-xref">Eq.&nbsp;<span>8.17</span></a>):</p>
 <p><span id="eq-dgtotdiff"><span class="math display">\[
 dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}}_{\text{temperature dependence}} \mkern-36mu dT + \underbrace{\left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}}_{\text{pressure dependence}} \mkern-36mu dP + \sum_i \underbrace{\left(\frac{\partial G}{\partial n_i} \right)_{T,P,\{n_{j \neq i}\}}}_{\text{composition dependence}} \mkern-36mu dn_i.
 \tag{9.5}\]</span></span></p>
-<p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in <a href="#eq-dgtotdiff" class="quarto-xref">eq.&nbsp;<span>9.5</span></a>, which are given in <a href="08_Potentials.html#eq-dhagchem3" class="quarto-xref">eq.&nbsp;<span>8.18</span></a>.</p>
+<p>If we know the behavior of <span class="math inline">\(G\)</span> as we vary each of the three natural variables independently of the other two, we can reconstruct the total differential <span class="math inline">\(dG\)</span>. Each of these terms represents a coefficient in <a href="#eq-dgtotdiff" class="quarto-xref">Eq.&nbsp;<span>9.5</span></a>, which are given in <a href="08_Potentials.html#eq-dhagchem3" class="quarto-xref">Eq.&nbsp;<span>8.18</span></a>.</p>
 </section>
 <section id="temperature-dependence-of-delta-g" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="temperature-dependence-of-delta-g"><span class="header-section-number">9.2</span> Temperature Dependence of <span class="math inline">\(\Delta G\)</span></h2>
@@ -667,15 +667,15 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 \left(\frac{\partial G}{\partial T} \right)_{P,\{n_i\}}=-S
 \]</span></p>
 <p>Let’s analyze the first coefficient that gives the dependence of the Gibbs energy on temperature. Since this coefficient is equal to <span class="math inline">\(-S\)</span> and the entropy is always positive, <span class="math inline">\(G\)</span> must decrease when <span class="math inline">\(T\)</span> increases at constant <span class="math inline">\(P\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and vice versa.</p>
-<p>If we replace this coefficient for <span class="math inline">\(-S\)</span> in the Gibbs equation, <a href="#eq-gibbseq" class="quarto-xref">eq.&nbsp;<span>9.3</span></a>, we obtain:</p>
+<p>If we replace this coefficient for <span class="math inline">\(-S\)</span> in the Gibbs equation, <a href="#eq-gibbseq" class="quarto-xref">Eq.&nbsp;<span>9.3</span></a>, we obtain:</p>
 <p><span id="eq-dgconsttt"><span class="math display">\[
 \Delta G = \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}},
 \tag{9.6}\]</span></span></p>
-<p>and since <a href="#eq-dgconsttt" class="quarto-xref">eq.&nbsp;<span>9.6</span></a> includes both <span class="math inline">\(\Delta G\)</span> and its partial derivative with respect to temperature <span class="math inline">\(\left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}}\)</span> we need to rearrange it to include the temperature derivative only. To do so, we can start by evaluating the partial derivative of <span class="math inline">\(\left( \frac{\Delta G}{T} \right)\)</span> using the product rule:</p>
+<p>and since <a href="#eq-dgconsttt" class="quarto-xref">Eq.&nbsp;<span>9.6</span></a> includes both <span class="math inline">\(\Delta G\)</span> and its partial derivative with respect to temperature <span class="math inline">\(\left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}}\)</span> we need to rearrange it to include the temperature derivative only. To do so, we can start by evaluating the partial derivative of <span class="math inline">\(\left( \frac{\Delta G}{T} \right)\)</span> using the product rule:</p>
 <p><span id="eq-dgconsttt1"><span class="math display">\[
 \left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} = \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2}\Delta G,
 \tag{9.7}\]</span></span></p>
-<p>which, replacing <span class="math inline">\(\Delta G\)</span> from <a href="#eq-dgconsttt" class="quarto-xref">eq.&nbsp;<span>9.6</span></a> into <a href="#eq-dgconsttt1" class="quarto-xref">eq.&nbsp;<span>9.7</span></a>, becomes:</p>
+<p>which, replacing <span class="math inline">\(\Delta G\)</span> from <a href="#eq-dgconsttt" class="quarto-xref">Eq.&nbsp;<span>9.6</span></a> into <a href="#eq-dgconsttt1" class="quarto-xref">Eq.&nbsp;<span>9.7</span></a>, becomes:</p>
 <p><span id="eq-dgconsttt2"><span class="math display">\[
 \begin{aligned}
 \left[ \frac{\partial\left( \frac{\Delta G}{T} \right)}{\partial T} \right]_{P,\{n_i\}} &amp;= \frac{1}{T} \left(\frac{\partial \Delta G}{\partial T}  \right)_{P,\{n_i\}} - \frac{1}{T^2} \left[ \Delta H + T \left(\frac{\partial \Delta G}{\partial T} \right)_{P,\{n_i\}} \right] \\
@@ -704,18 +704,18 @@ dG(T,P,\{n_i\}) = \mkern-18mu \underbrace{\left(\frac{\partial G}{\partial T} \r
 <p><span class="math display">\[
 \left(\frac{\partial G}{\partial P} \right)_{T,\{n_i\}}=V
 \]</span></p>
-<p>We can now turn our attention to the second coefficient that gives how the Gibbs energy changes when the pressure changes. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From <a href="08_Potentials.html#eq-dgdef2" class="quarto-xref">eq.&nbsp;<span>8.9</span></a>:</p>
+<p>We can now turn our attention to the second coefficient that gives how the Gibbs energy changes when the pressure changes. To do this, we put the system at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(\{n_i\}\)</span>, and then we consider infinitesimal variations of <span class="math inline">\(G\)</span>. From <a href="08_Potentials.html#eq-dgdef2" class="quarto-xref">Eq.&nbsp;<span>8.9</span></a>:</p>
 <p><span id="eq-dgconsttp"><span class="math display">\[
 dG = VdP -SdT +\sum_i\mu_i dn_i \quad \xrightarrow{\text{constant}\; T,\{n_i\}} \quad dG = VdP,
 \tag{9.12}\]</span></span></p>
-<p>which is the differential equation that we were looking for. To study changes of <span class="math inline">\(G\)</span> for macroscopic changes in <span class="math inline">\(P\)</span>, we can integrate <a href="#eq-dgconsttp" class="quarto-xref">eq.&nbsp;<span>9.12</span></a> between initial and final pressures, and considering an ideal gas, we obtain:</p>
+<p>which is the differential equation that we were looking for. To study changes of <span class="math inline">\(G\)</span> for macroscopic changes in <span class="math inline">\(P\)</span>, we can integrate <a href="#eq-dgconsttp" class="quarto-xref">Eq.&nbsp;<span>9.12</span></a> between initial and final pressures, and considering an ideal gas, we obtain:</p>
 <p><span id="eq-dgconsttpintegral1"><span class="math display">\[
 \begin{aligned}
 \int_i^f dG &amp;= \int_i^f VdP \\
 \Delta G &amp;= nRT \int_i^f \frac{dP}{P} = nRT \ln \frac{P_f}{P_i}.
 \end{aligned}
 \tag{9.13}\]</span></span></p>
-<p>If we take <span class="math inline">\(P_i = P^\standardstate = 1 \, \text{bar}\)</span>, we can rewrite <a href="#eq-dgconsttpintegral1" class="quarto-xref">eq.&nbsp;<span>9.13</span></a> as:</p>
+<p>If we take <span class="math inline">\(P_i = P^\standardstate = 1 \, \text{bar}\)</span>, we can rewrite <a href="#eq-dgconsttpintegral1" class="quarto-xref">Eq.&nbsp;<span>9.13</span></a> as:</p>
 <p><span id="eq-dgconsttpintegral2"><span class="math display">\[
 G = G^\standardstate + nRT \ln \frac{P_f}{P^\standardstate},
 \tag{9.14}\]</span></span></p>
@@ -723,11 +723,11 @@ G = G^\standardstate + nRT \ln \frac{P_f}{P^\standardstate},
 <p><span id="eq-dgconsttpintegral2b"><span class="math display">\[
 \Delta_{\text{f}} G = \Delta_{\text{f}} G^\standardstate + nRT \ln \frac{P_f}{\underbrace{P^\standardstate}_{=1 \; \text{bar}}} = \Delta_{\text{f}} G^\standardstate + nRT \ln P_f
 \tag{9.15}\]</span></span></p>
-<p>For liquids and solids, <span class="math inline">\(V\)</span> is essentially independent of <span class="math inline">\(P\)</span> (liquids and solids are incompressible), and <a href="#eq-dgconsttp" class="quarto-xref">eq.&nbsp;<span>9.12</span></a> can be integrated as:</p>
+<p>For liquids and solids, <span class="math inline">\(V\)</span> is essentially independent of <span class="math inline">\(P\)</span> (liquids and solids are incompressible), and <a href="#eq-dgconsttp" class="quarto-xref">Eq.&nbsp;<span>9.12</span></a> can be integrated as:</p>
 <p><span id="eq-dgconsttpintegral3"><span class="math display">\[
 \Delta G = \int_i^f VdP = V \int_i^f dP = V \Delta P.
 \tag{9.16}\]</span></span></p>
-<p>The plots in <a href="#fig-gdeppfig" class="quarto-xref">Figure&nbsp;<span>9.2</span></a> show the remarkable difference in the behaviors of <span class="math inline">\(\Delta_{\text{f}} G\)</span> for a gas and for a liquid, as obtained from <a href="#eq-dgconsttpintegral1" class="quarto-xref">eq.&nbsp;<span>9.13</span></a> and <a href="#eq-dgconsttpintegral3" class="quarto-xref">eq.&nbsp;<span>9.16</span></a>.</p>
+<p>The plots in <a href="#fig-gdeppfig" class="quarto-xref">Fig.&nbsp;<span>9.2</span></a> show the remarkable difference in the behaviors of <span class="math inline">\(\Delta_{\text{f}} G\)</span> for a gas and for a liquid, as obtained from <a href="#eq-dgconsttpintegral1" class="quarto-xref">Eq.&nbsp;<span>9.13</span></a> and <a href="#eq-dgconsttpintegral3" class="quarto-xref">Eq.&nbsp;<span>9.16</span></a>.</p>
 <div id="fig-gdeppfig" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gibbs energy of formation of 1 mol of ethanol at 310 K versus pressure from 0 to 10 bar. The liquid line is almost flat at about minus 174 kJ per mol. The gas curve rises steeply at low pressure and then more slowly, crossing the liquid line at the vapor pressure, 0.15 bar. Below that pressure the gas has the lower Gibbs energy, and above it the liquid does.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gdeppfig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -758,16 +758,16 @@ Figure&nbsp;9.2: Pressure Dependence of the Gibbs Energy of Formation of Liquid 
 <p><span class="theorem-title"><strong>Definition 9.1</strong></span> The <em>partial molar quantity</em> of component <span class="math inline">\(i\)</span>, <span class="math inline">\(\overline{X}_i = \left(\frac{\partial X}{\partial n_i}\right)_{T,P,n_{j\neq i}}\)</span>, is the change in the extensive property <span class="math inline">\(X\)</span> per mole of <span class="math inline">\(i\)</span> added to a mixture, at constant temperature, pressure, and amounts of all the other components.</p>
 </div>
 <p>The most intuitive example is the volume. Adding 1 mol of water (<span class="math inline">\(18\;\text{cm}^3\)</span>) to a large amount of pure water increases the volume by <span class="math inline">\(18\;\text{cm}^3\)</span>, but adding it to a large amount of ethanol increases the volume by only about <span class="math inline">\(14\;\text{cm}^3\)</span>, because the water molecules pack tightly around the ethanol molecules. Partial molar quantities depend on the composition of the mixture. The chemical potential is the partial molar Gibbs energy, <span class="math inline">\(\mu_i = \overline{G}_i\)</span>.</p>
-<p>Repeating the argument of <a href="#eq-dgconstn" class="quarto-xref">eq.&nbsp;<span>9.17</span></a> for a mixture built by adding all the components at once, at constant composition, gives:</p>
+<p>Repeating the argument of <a href="#eq-dgconstn" class="quarto-xref">Eq.&nbsp;<span>9.17</span></a> for a mixture built by adding all the components at once, at constant composition, gives:</p>
 <p><span id="eq-Gsumnmu"><span class="math display">\[
 G = \sum_i n_i \mu_i.
 \tag{9.19}\]</span></span></p>
-<p>Differentiating <a href="#eq-Gsumnmu" class="quarto-xref">eq.&nbsp;<span>9.19</span></a> gives <span class="math inline">\(dG = \sum_i \mu_i dn_i + \sum_i n_i d\mu_i\)</span>, and at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, <a href="08_Potentials.html#eq-dhagchem2" class="quarto-xref">eq.&nbsp;<span>8.17</span></a> gives <span class="math inline">\(dG = \sum_i \mu_i dn_i\)</span>. The two expressions agree only if:</p>
+<p>Differentiating <a href="#eq-Gsumnmu" class="quarto-xref">Eq.&nbsp;<span>9.19</span></a> gives <span class="math inline">\(dG = \sum_i \mu_i dn_i + \sum_i n_i d\mu_i\)</span>, and at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>, <a href="08_Potentials.html#eq-dhagchem2" class="quarto-xref">Eq.&nbsp;<span>8.17</span></a> gives <span class="math inline">\(dG = \sum_i \mu_i dn_i\)</span>. The two expressions agree only if:</p>
 <p><span id="eq-gibbsduhem"><span class="math display">\[
 \sum_i n_i d\mu_i = 0 \qquad \text{(constant } T, P\text{)},
 \tag{9.20}\]</span></span></p>
 <p>which is the <strong>Gibbs–Duhem equation</strong>. It tells us that the chemical potentials of the components of a mixture cannot change independently. For a binary mixture, <span class="math inline">\(d\mu_{\text{B}} = -\frac{n_{\text{A}}}{n_{\text{B}}} d\mu_{\text{A}}\)</span>: if the chemical potential of one component increases, the other one must decrease.</p>
-<p>We can start from <a href="#eq-dgconsttpintegral2" class="quarto-xref">eq.&nbsp;<span>9.14</span></a> and write for a pure substance that is brought from <span class="math inline">\(P_i=P^\standardstate\)</span> to <span class="math inline">\(P_f=P\)</span> at constant <span class="math inline">\(T\)</span>:</p>
+<p>We can start from <a href="#eq-dgconsttpintegral2" class="quarto-xref">Eq.&nbsp;<span>9.14</span></a> and write for a pure substance that is brought from <span class="math inline">\(P_i=P^\standardstate\)</span> to <span class="math inline">\(P_f=P\)</span> at constant <span class="math inline">\(T\)</span>:</p>
 <p><span id="eq-dgconstn2"><span class="math display">\[
 G - G^\standardstate = nRT \ln \frac{P}{P^\standardstate},
 \tag{9.21}\]</span></span></p>
@@ -779,7 +779,7 @@ G - G^\standardstate = nRT \ln \frac{P}{P^\standardstate},
 <p><span id="eq-dgconstn4"><span class="math display">\[
 \mu^* - \mu^\standardstate =      RT \ln P.
 \tag{9.23}\]</span></span></p>
-<p>Notice that, while we use the pressure of the gas inside the logarithm in <a href="#eq-dgconstn4" class="quarto-xref">eq.&nbsp;<span>9.23</span></a>, the quantity is formally divided by the standard pressure <span class="math inline">\(P^\standardstate = 1 \;\text{bar}\)</span>, and therefore it is a dimensionless quantity, as it should be. For simplicity of notation, however, we will omit the division by <span class="math inline">\(P^\standardstate\)</span> in the remainder of this textbook, especially wherever it does not create confusion. Let’s now consider a mixture of ideal gases, and let’s try to find out whether the chemical potential of a pure gas inside the mixture, <span class="math inline">\(\mu_i^{\text{mixture}}\)</span>, is the same as its chemical potential outside the mixture, <span class="math inline">\(\mu^*\)</span>. To do so, we can use <a href="#eq-dgconstn4" class="quarto-xref">eq.&nbsp;<span>9.23</span></a> and replace the pressure <span class="math inline">\(P\)</span> with the partial pressure <span class="math inline">\(P_i\)</span>:</p>
+<p>Notice that, while we use the pressure of the gas inside the logarithm in <a href="#eq-dgconstn4" class="quarto-xref">Eq.&nbsp;<span>9.23</span></a>, the quantity is formally divided by the standard pressure <span class="math inline">\(P^\standardstate = 1 \;\text{bar}\)</span>, and therefore it is a dimensionless quantity, as it should be. For simplicity of notation, however, we will omit the division by <span class="math inline">\(P^\standardstate\)</span> in the remainder of this textbook, especially wherever it does not create confusion. Let’s now consider a mixture of ideal gases, and let’s try to find out whether the chemical potential of a pure gas inside the mixture, <span class="math inline">\(\mu_i^{\text{mixture}}\)</span>, is the same as its chemical potential outside the mixture, <span class="math inline">\(\mu^*\)</span>. To do so, we can use <a href="#eq-dgconstn4" class="quarto-xref">Eq.&nbsp;<span>9.23</span></a> and replace the pressure <span class="math inline">\(P\)</span> with the partial pressure <span class="math inline">\(P_i\)</span>:</p>
 <p><span id="eq-dgconstn5"><span class="math display">\[
 \mu_i^{\text{mixture}} = \mu_i^\standardstate + RT \ln P_i,
 \tag{9.24}\]</span></span></p>
@@ -787,7 +787,7 @@ G - G^\standardstate = nRT \ln \frac{P}{P^\standardstate},
 <p><span id="eq-daltonlaw"><span class="math display">\[
 P_i = y_i P,
 \tag{9.25}\]</span></span></p>
-<p>with <span class="math inline">\(y_i\)</span> being the concentration of gas <span class="math inline">\(i\)</span> measured as a mole fraction in the gas phase <span class="math inline">\(y_i=\frac{n_i}{n_{\text{TOT}}} &lt; 1\)</span>. Replacing <a href="#eq-daltonlaw" class="quarto-xref">eq.&nbsp;<span>9.25</span></a> into <a href="#eq-dgconstn5" class="quarto-xref">eq.&nbsp;<span>9.24</span></a>, we obtain:</p>
+<p>with <span class="math inline">\(y_i\)</span> being the concentration of gas <span class="math inline">\(i\)</span> measured as a mole fraction in the gas phase <span class="math inline">\(y_i=\frac{n_i}{n_{\text{TOT}}} &lt; 1\)</span>. Replacing <a href="#eq-daltonlaw" class="quarto-xref">Eq.&nbsp;<span>9.25</span></a> into <a href="#eq-dgconstn5" class="quarto-xref">Eq.&nbsp;<span>9.24</span></a>, we obtain:</p>
 <p><span id="eq-dgconstn6"><span class="math display">\[
 \begin{aligned}
 \mu_i^{\text{mixture}} &amp;= \mu_i^\standardstate + RT \ln (y_i P) \\
@@ -798,7 +798,7 @@ P_i = y_i P,
 <p><span id="eq-dgconstn7"><span class="math display">\[
 \mu_i^{\text{mixture}} = \mu_i^* + RT \ln y_i.
 \tag{9.27}\]</span></span></p>
-<p>Analyzing <a href="#eq-dgconstn7" class="quarto-xref">eq.&nbsp;<span>9.27</span></a>, we can immediately see that, since <span class="math inline">\(y_i &lt; 1\)</span>:</p>
+<p>Analyzing <a href="#eq-dgconstn7" class="quarto-xref">Eq.&nbsp;<span>9.27</span></a>, we can immediately see that, since <span class="math inline">\(y_i &lt; 1\)</span>:</p>
 <p><span id="eq-dgconstn8"><span class="math display">\[
 \mu_i^{\text{mixture}} &lt; \mu_i^*,
 \tag{9.28}\]</span></span></p>
@@ -823,7 +823,9 @@ P_i = y_i P,
 </section>
 <section id="sec-quest9" class="level3" data-number="9.5.2">
 <h3 data-number="9.5.2" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.5.2</span> Study Questions</h3>
+<div class="question">
 <p><strong>1. Which equation gives the Gibbs energy change of a process at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(\Delta G = \Delta H + T\Delta S\)</span>.</li>
 <li><span class="math inline">\(\Delta G = \Delta H - T\Delta S\)</span>.</li>
@@ -831,8 +833,9 @@ P_i = y_i P,
 <li><span class="math inline">\(\Delta G = T\Delta S - \Delta H\)</span>.</li>
 <li><span class="math inline">\(\Delta G = \Delta H \cdot \Delta S\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>2. An exothermic reaction decreases the entropy of the system. When is it spontaneous?</strong></p>
+</div>
 <ol type="a">
 <li>Always.</li>
 <li>Never.</li>
@@ -840,8 +843,9 @@ P_i = y_i P,
 <li>Only at low temperature.</li>
 <li>Only at high pressure.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>3. An endothermic reaction increases the entropy of the system. When is it spontaneous?</strong></p>
+</div>
 <ol type="a">
 <li>Only at high temperature.</li>
 <li>Only at low temperature.</li>
@@ -849,8 +853,9 @@ P_i = y_i P,
 <li>Never.</li>
 <li>Only at low pressure.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>4. Since <span class="math inline">\(\left(\frac{\partial G}{\partial T}\right)_{P,\{n_i\}} = -S\)</span>, how does the Gibbs energy of a substance change when the temperature increases?</strong></p>
+</div>
 <ol type="a">
 <li>It increases, since the entropy is positive.</li>
 <li>It stays constant.</li>
@@ -858,8 +863,9 @@ P_i = y_i P,
 <li>It oscillates.</li>
 <li>It decreases, since the entropy is positive.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>5. What is the Gibbs–Helmholtz equation?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_T = V\)</span>.</li>
 <li><span class="math inline">\(\Delta G = \Delta H - T\Delta S\)</span>.</li>
@@ -867,8 +873,9 @@ P_i = y_i P,
 <li><span class="math inline">\(\left[\frac{\partial (\Delta G/T)}{\partial T}\right]_P = \frac{\Delta S}{T^2}\)</span>.</li>
 <li><span class="math inline">\(\Delta G = -RT\ln K\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>6. What is the pressure dependence coefficient of the Gibbs energy?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = -V\)</span>.</li>
 <li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = V\)</span>.</li>
@@ -876,8 +883,9 @@ P_i = y_i P,
 <li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = H\)</span>.</li>
 <li><span class="math inline">\(\left(\frac{\partial G}{\partial P}\right)_{T,\{n_i\}} = 0\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>7. How does the Gibbs energy of an ideal gas depend on the pressure at constant temperature?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(G = G^{\standardstate} - nRT\ln\frac{P}{P^{\standardstate}}\)</span>.</li>
 <li><span class="math inline">\(G = G^{\standardstate} + nRT\frac{P}{P^{\standardstate}}\)</span>.</li>
@@ -885,8 +893,9 @@ P_i = y_i P,
 <li><span class="math inline">\(G = G^{\standardstate} + nRT\ln\frac{P}{P^{\standardstate}}\)</span>.</li>
 <li><span class="math inline">\(G\)</span> does not depend on <span class="math inline">\(P\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>8. Why does the Gibbs energy of a liquid change much less with pressure than that of a gas?</strong></p>
+</div>
 <ol type="a">
 <li>Because the molar volume of a liquid is small and almost independent of pressure.</li>
 <li>Because liquids have zero entropy.</li>
@@ -894,8 +903,9 @@ P_i = y_i P,
 <li>Because the Gibbs energy of a liquid is zero.</li>
 <li>Because liquids do not have a chemical potential.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>9. What is the chemical potential of a pure substance?</strong></p>
+</div>
 <ol type="a">
 <li>Its enthalpy.</li>
 <li>Its entropy per mole.</li>
@@ -903,8 +913,9 @@ P_i = y_i P,
 <li>Zero at standard conditions.</li>
 <li>Its molar Gibbs energy, <span class="math inline">\(\mu^* = G/n\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>10. Two pure ideal gases are allowed to mix at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. What is the sign of <span class="math inline">\(\Delta_{\text{mixing}}G\)</span>?</strong></p>
+</div>
 <ol type="a">
 <li>Positive, so the gases do not mix.</li>
 <li>Zero, since ideal gases do not interact.</li>
@@ -912,7 +923,6 @@ P_i = y_i P,
 <li>It depends on the gases.</li>
 <li>It depends on the temperature.</li>
 </ol>
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

@@ -561,7 +561,7 @@ window.Quarto = {
 </header>
 
 
-<p>In <a href="11_NonIdealGases.html" class="quarto-xref"><span>chapter 11</span></a>, we saw that a non-ideal gas can be liquefied, and that the liquid and the gas can coexist under certain conditions. In <a href="09_Gibbs.html" class="quarto-xref"><span>chapter 9</span></a>, we introduced the chemical potential, the molar Gibbs energy of a substance, and we learned how it changes with temperature and pressure. In this chapter, we will put these two ideas together to understand when a pure substance is solid, liquid, or gas, and what happens at the boundaries between these phases. We will build the phase diagrams that chemists use every day, and we will derive the equations that tell us how melting and boiling points change with pressure.</p>
+<p>In <a href="11_NonIdealGases.html" class="quarto-xref"><span>Chapter 11</span></a>, we saw that a non-ideal gas can be liquefied, and that the liquid and the gas can coexist under certain conditions. In <a href="09_Gibbs.html" class="quarto-xref"><span>Chapter 9</span></a>, we introduced the chemical potential, the molar Gibbs energy of a substance, and we learned how it changes with temperature and pressure. In this chapter, we will put these two ideas together to understand when a pure substance is solid, liquid, or gas, and what happens at the boundaries between these phases. We will build the phase diagrams that chemists use every day, and we will derive the equations that tell us how melting and boiling points change with pressure.</p>
 <section id="phase-stability" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="phase-stability"><span class="header-section-number">12.1</span> Phase Stability</h2>
 <p>We have already encountered the gas, liquid, and solid phases and already discussed some of their properties. These terms are intuitive since these are the three most common states of matter.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> For this reason, we have previously used the terms without the necessity of formally defining their meaning. However, a formal definition of “phase” is necessary to discuss several concepts in this chapter and the following ones:</p>
@@ -579,13 +579,13 @@ d\mu &amp;= -SdT+\overline{V}dP,
 <p><span id="eq-muequal2"><span class="math display">\[
 \left( \frac{\partial \mu}{\partial T} \right)_P=-S \qquad \left( \frac{\partial \mu}{\partial P} \right)_T =\overline{V}.
 \tag{12.2}\]</span></span></p>
-<p>We can use these definitions to study the dependence of the chemical potential with respect to changes in pressure and temperature. If we plot <span class="math inline">\(\mu\)</span> as a function of <span class="math inline">\(T\)</span> using the first coefficient in <a href="#eq-muequal2" class="quarto-xref">eq.&nbsp;<span>12.2</span></a>, we obtain the diagram in <a href="#fig-FigPhase1" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>. The diagram presents three curves, each corresponding to one of the three most common states of matter – solid, liquid, and gas. As we saw in several previous chapters, the entropy of a phase is almost constant with respect to temperature,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and therefore the three curves are essentially straight, with negative slopes equal to <span class="math inline">\(-S\)</span>. Since the solid has the smallest entropy of the three phases, its line is the least steep.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The difference between the slopes of the three lines is explained by the fact that each of these states has a different value of entropy:</p>
+<p>We can use these definitions to study the dependence of the chemical potential with respect to changes in pressure and temperature. If we plot <span class="math inline">\(\mu\)</span> as a function of <span class="math inline">\(T\)</span> using the first coefficient in <a href="#eq-muequal2" class="quarto-xref">Eq.&nbsp;<span>12.2</span></a>, we obtain the diagram in <a href="#fig-FigPhase1" class="quarto-xref">Fig.&nbsp;<span>12.1</span></a>. The diagram presents three curves, each corresponding to one of the three most common states of matter – solid, liquid, and gas. As we saw in several previous chapters, the entropy of a phase is almost constant with respect to temperature,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and therefore the three curves are essentially straight, with negative slopes equal to <span class="math inline">\(-S\)</span>. Since the solid has the smallest entropy of the three phases, its line is the least steep.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The difference between the slopes of the three lines is explained by the fact that each of these states has a different value of entropy:</p>
 <p><span id="eq-muequal3"><span class="math display">\[
 \left( \frac{\partial \mu_{\text{solid}}}{\partial T} \right)_P =-S_{\text{s}} \qquad \left( \frac{\partial \mu_{\text{liquid}}}{\partial T} \right)_P =-S_{\text{l}} \qquad \left( \frac{\partial \mu_{\text{gas}}}{\partial T} \right)_P =-S_{\text{g}},
 \tag{12.3}\]</span></span></p>
-<p>and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (<span class="math inline">\(S_{\text{g}} \gg S_{\text{l}}&gt;S_{\text{s}}\)</span>), we obtain three lines with different slopes that intersect each other, as in <a href="#fig-FigPhase1" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>. What can we read from this diagram?</p>
+<p>and since the entropy of a gas is always bigger than the entropy of a liquid, which in turn, is yet bigger than the entropy of a solid (<span class="math inline">\(S_{\text{g}} \gg S_{\text{l}}&gt;S_{\text{s}}\)</span>), we obtain three lines with different slopes that intersect each other, as in <a href="#fig-FigPhase1" class="quarto-xref">Fig.&nbsp;<span>12.1</span></a>. What can we read from this diagram?</p>
 <ol type="1">
-<li><strong>The most stable phase has the lowest chemical potential.</strong> At each temperature, the phase whose line is the lowest is the stable one (red segments in <a href="#fig-FigPhase1" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>). Just as a ball rolls downhill, matter moves spontaneously towards the phase with the lowest chemical potential, since this lowers the Gibbs energy at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>.</li>
+<li><strong>The most stable phase has the lowest chemical potential.</strong> At each temperature, the phase whose line is the lowest is the stable one (red segments in <a href="#fig-FigPhase1" class="quarto-xref">Fig.&nbsp;<span>12.1</span></a>). Just as a ball rolls downhill, matter moves spontaneously towards the phase with the lowest chemical potential, since this lowers the Gibbs energy at constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>.</li>
 <li><strong>Phase changes happen where two lines cross.</strong> At each intersection, the two phases have the same chemical potential, and they coexist. At the crossing between the solid and the liquid lines, the fusion (fus) process occurs, at the melting point <span class="math inline">\(T_{\text{m}}\)</span>. At the crossing between the liquid and the gas lines, the vaporization (vap) process occurs, at the boiling point <span class="math inline">\(T_{\text{b}}\)</span>.</li>
 <li><strong>Heating favors the phases with higher entropy.</strong> Since the gas line is the steepest, the gas always wins at high enough temperature, while the solid always wins at low enough temperature.</li>
 <li><strong>The liquid can be skipped.</strong> Depending on the substance and on the pressure, the solid line might intersect the gas line before the liquid line. When that occurs, the liquid phase is never observed, and the solid turns directly into gas, at the sublimation (subl) point <span class="math inline">\(T_{\text{subl}}\)</span>.</li>
@@ -600,7 +600,7 @@ Figure&nbsp;12.1: Dependence of the Chemical Potentials of Solid, Liquid, and Ga
 </figcaption>
 </figure>
 </div>
-<p>The effects of pressure on this diagram can be studied using the second coefficient in <a href="#eq-muequal2" class="quarto-xref">eq.&nbsp;<span>12.2</span></a>. For the majority of substances, <span class="math inline">\(\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} &gt; \overline{V}_{\text{s}}\)</span>, hence the curves will shift to lower values when the pressure is reduced, as in <a href="#fig-FigPhase2" class="quarto-xref">Figure&nbsp;<span>12.2</span></a>. Notice also that since <span class="math inline">\(\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}\)</span>, the shifts for both the solid and liquid lines are much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point. Water is a noticeable exception to this trend because <span class="math inline">\(\overline{V}_{\mathrm{H}_2\mathrm{O,l}} &lt; \overline{V}_{\text{ice}}\)</span>. This explains the experimental observation that increasing the pressure on ice lowers its melting point.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>The effects of pressure on this diagram can be studied using the second coefficient in <a href="#eq-muequal2" class="quarto-xref">Eq.&nbsp;<span>12.2</span></a>. For the majority of substances, <span class="math inline">\(\overline{V}_{\text{g}} \gg \overline{V}_{\text{l}} &gt; \overline{V}_{\text{s}}\)</span>, hence the curves will shift to lower values when the pressure is reduced, as in <a href="#fig-FigPhase2" class="quarto-xref">Fig.&nbsp;<span>12.2</span></a>. Notice also that since <span class="math inline">\(\overline{V}_{\text{l}} \cong \overline{V}_{\text{s}}\)</span>, the shifts for both the solid and liquid lines are much smaller than the shift for the gas line. These shifts also translate to different values of the junctions, which means the phase changes will occur at different temperatures. Therefore both the melting point and the boiling point in general increase when pressure is increased (and vice versa). Notice how the change for the melting point is always much smaller than the change for the boiling point. Water is a noticeable exception to this trend because <span class="math inline">\(\overline{V}_{\mathrm{H}_2\mathrm{O,l}} &lt; \overline{V}_{\text{ice}}\)</span>. This explains the experimental observation that increasing the pressure on ice lowers its melting point.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <div id="fig-FigPhase2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Chemical potential versus temperature at two pressures. Lowering the pressure from P1 to P2 shifts the gas line down, shown by a purple arrow, while the solid and liquid lines barely move. As a result, the boiling point moves to a much lower temperature, while the melting point is almost unchanged.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FigPhase2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -615,15 +615,15 @@ Figure&nbsp;12.2: Effect of Pressure on the Chemical Potential Diagram.
 <p><span id="eq-muequal"><span class="math display">\[
 \mu_{\alpha} = \mu_{\beta}.
 \tag{12.4}\]</span></span></p>
-<p>If we now change either the temperature or the pressure, the location of the intersection will be shifted (see again <a href="#fig-FigPhase2" class="quarto-xref">Figure&nbsp;<span>12.2</span></a> and the discussion above). For infinitesimal changes in variables, the new location will be:</p>
+<p>If we now change either the temperature or the pressure, the location of the intersection will be shifted (see again <a href="#fig-FigPhase2" class="quarto-xref">Fig.&nbsp;<span>12.2</span></a> and the discussion above). For infinitesimal changes in variables, the new location will be:</p>
 <p><span id="eq-muequalA"><span class="math display">\[
 \mu_{\alpha} + d\mu_{\alpha}= \mu_{\beta}+d\mu_{\beta},
 \tag{12.5}\]</span></span></p>
-<p>which using <a href="#eq-muequal" class="quarto-xref">eq.&nbsp;<span>12.4</span></a>, simply becomes:</p>
+<p>which using <a href="#eq-muequal" class="quarto-xref">Eq.&nbsp;<span>12.4</span></a>, simply becomes:</p>
 <p><span id="eq-muequalB"><span class="math display">\[
 d\mu_{\alpha}= d\mu_{\beta}.
 \tag{12.6}\]</span></span></p>
-<p>Replacing the differential with the definition of chemical potential in <a href="#eq-muequal1" class="quarto-xref">eq.&nbsp;<span>12.1</span></a>, we obtain:</p>
+<p>Replacing the differential with the definition of chemical potential in <a href="#eq-muequal1" class="quarto-xref">Eq.&nbsp;<span>12.1</span></a>, we obtain:</p>
 <p><span id="eq-muequalC"><span class="math display">\[
 \begin{aligned}
 -S_{\alpha}dT+\overline{V}_{\alpha}dP &amp;= -S_{\beta}dT+\overline{V}_{\beta}dP \\
@@ -634,7 +634,7 @@ d\mu_{\alpha}= d\mu_{\beta}.
 <p><span id="eq-ClapeyronEq"><span class="math display">\[
 \frac{dP}{dT}=\frac{\Delta S}{\Delta \overline{V}}.
 \tag{12.8}\]</span></span></p>
-<p>This equation is known as the <strong>Clapeyron equation</strong>, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of <a href="#eq-ClapeyronEq" class="quarto-xref">eq.&nbsp;<span>12.8</span></a> on a <span class="math inline">\(PT\)</span> phase diagram for common substances results in three lines representing the equilibrium between two different phases. Let’s see what <a href="#eq-ClapeyronEq" class="quarto-xref">eq.&nbsp;<span>12.8</span></a> tells us about each line:</p>
+<p>This equation is known as the <strong>Clapeyron equation</strong>, and it is the mathematical relation at the basis of the pressure-temperature phase diagrams. Plotting the results of <a href="#eq-ClapeyronEq" class="quarto-xref">Eq.&nbsp;<span>12.8</span></a> on a <span class="math inline">\(PT\)</span> phase diagram for common substances results in three lines representing the equilibrium between two different phases. Let’s see what <a href="#eq-ClapeyronEq" class="quarto-xref">Eq.&nbsp;<span>12.8</span></a> tells us about each line:</p>
 <ol type="1">
 <li><strong>The slope of a phase boundary is the ratio between two differences.</strong> It depends only on how much the entropy and the molar volume change when we go from one phase to the other.</li>
 <li><strong>The sign of the slope is decided by the volume change.</strong> Going from a lower-temperature phase to a higher-temperature one, the entropy always increases (<span class="math inline">\(\Delta S&gt;0\)</span>). Therefore, the line slopes up if the volume increases (<span class="math inline">\(\Delta\overline{V}&gt;0\)</span>), and down if it decreases.</li>
@@ -643,13 +643,13 @@ d\mu_{\alpha}= d\mu_{\beta}.
 </section>
 <section id="gibbs-phase-rule" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="gibbs-phase-rule"><span class="header-section-number">12.2</span> Gibbs Phase Rule</h2>
-<p>In <a href="01_Basis.html" class="quarto-xref"><span>chapter 1</span></a>, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables <span class="math inline">\((3: P,\overline{V},T)\)</span>, and reducing it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of <span class="math inline">\(c\)</span> components (chemical substances) and <span class="math inline">\(p\)</span> phases, the number of independent variables, <span class="math inline">\(f\)</span>, is given by the Gibbs phase rule:</p>
+<p>In <a href="01_Basis.html" class="quarto-xref"><span>Chapter 1</span></a>, we have already seen that the number of independent variables required to describe an ideal gas is two. This number was derived by counting the total number of variables <span class="math inline">\((3: P,\overline{V},T)\)</span>, and reducing it by one because the ideal gas law constrains the value of one of them, once the other two are fixed. For a generic system potentially containing more than one chemical substance in several different phases, however, the number of independent variables can be different than two. For a system composed of <span class="math inline">\(c\)</span> components (chemical substances) and <span class="math inline">\(p\)</span> phases, the number of independent variables, <span class="math inline">\(f\)</span>, is given by the Gibbs phase rule:</p>
 <p><span id="eq-Gibbsrule"><span class="math display">\[
 f=c-p+2.
 \tag{12.9}\]</span></span></p>
-<p>The Gibbs phase rule derives from the fact that different phases are in equilibrium with each other at some conditions, resulting in the reduction of the number of independent variables at those conditions. More rigorously, when two phases are in thermodynamic equilibrium, their chemical potentials are equal (see <a href="#eq-muequal" class="quarto-xref">eq.&nbsp;<span>12.4</span></a>). For each equality, the number of independent variables—also called the number of <em>degrees of freedom</em>—is reduced by one. For example, the chemical potentials of the liquid and its vapor depend on both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. But when these phases are in equilibrium with each other, their chemical potentials must be equal. If either the pressure or the temperature is fixed, the other variable will be uniquely determined by the equality relation. In other terms, when a liquid is in equilibrium with its vapor at a given pressure, the temperature is determined by the fact that the chemical potentials of the two phases are the same, and is denoted as the boiling temperature <span class="math inline">\(T_{\text{b}}\)</span>. Similarly, at a given temperature, the pressure of the vapor is uniquely determined by the same equality relation and is denoted as the vapor pressure, <span class="math inline">\(P^*\)</span>.</p>
-<p>The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by <span class="math inline">\((c-1)\)</span> variables.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> The number of constraints is determined by the number of possible equilibrium relations, which is <span class="math inline">\(c(p-1)\)</span> since the chemical potential of each component must be equal in all phases. The number of degrees of freedom <span class="math inline">\(f\)</span> is then given by <span class="math inline">\(f=(c-1)p+2-c(p-1)\)</span> <span class="math inline">\(=c-p+2\)</span>, which is the Gibbs phase rule, as in <a href="#eq-Gibbsrule" class="quarto-xref">eq.&nbsp;<span>12.9</span></a>.</p>
-<p>For a pure substance (<span class="math inline">\(c=1\)</span>, so <span class="math inline">\(f=3-p\)</span>), <a href="#eq-Gibbsrule" class="quarto-xref">eq.&nbsp;<span>12.9</span></a> gives:</p>
+<p>The Gibbs phase rule derives from the fact that different phases are in equilibrium with each other at some conditions, resulting in the reduction of the number of independent variables at those conditions. More rigorously, when two phases are in thermodynamic equilibrium, their chemical potentials are equal (see <a href="#eq-muequal" class="quarto-xref">Eq.&nbsp;<span>12.4</span></a>). For each equality, the number of independent variables—also called the number of <em>degrees of freedom</em>—is reduced by one. For example, the chemical potentials of the liquid and its vapor depend on both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span>. But when these phases are in equilibrium with each other, their chemical potentials must be equal. If either the pressure or the temperature is fixed, the other variable will be uniquely determined by the equality relation. In other terms, when a liquid is in equilibrium with its vapor at a given pressure, the temperature is determined by the fact that the chemical potentials of the two phases are the same, and is denoted as the boiling temperature <span class="math inline">\(T_{\text{b}}\)</span>. Similarly, at a given temperature, the pressure of the vapor is uniquely determined by the same equality relation and is denoted as the vapor pressure, <span class="math inline">\(P^*\)</span>.</p>
+<p>The Gibbs phase rule is obtained considering that the number of independent variables is given by the total number of variables minus the constraints. The total number of variables is given by temperature, pressure, plus all the variables required to describe each of the phases. The composition of each phase is determined by <span class="math inline">\((c-1)\)</span> variables.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> The number of constraints is determined by the number of possible equilibrium relations, which is <span class="math inline">\(c(p-1)\)</span> since the chemical potential of each component must be equal in all phases. The number of degrees of freedom <span class="math inline">\(f\)</span> is then given by <span class="math inline">\(f=(c-1)p+2-c(p-1)\)</span> <span class="math inline">\(=c-p+2\)</span>, which is the Gibbs phase rule, as in <a href="#eq-Gibbsrule" class="quarto-xref">Eq.&nbsp;<span>12.9</span></a>.</p>
+<p>For a pure substance (<span class="math inline">\(c=1\)</span>, so <span class="math inline">\(f=3-p\)</span>), <a href="#eq-Gibbsrule" class="quarto-xref">Eq.&nbsp;<span>12.9</span></a> gives:</p>
 <ol type="1">
 <li><strong>One phase, <span class="math inline">\(f=2\)</span>.</strong> We can change both <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> independently, and the substance stays in the same phase. In a <span class="math inline">\(PT\)</span> diagram, single phases are <em>areas</em>.</li>
 <li><strong>Two phases, <span class="math inline">\(f=1\)</span>.</strong> If we choose the temperature, the pressure at which the two phases coexist is fixed, and vice versa. Two-phase equilibria are <em>lines</em>.</li>
@@ -668,10 +668,10 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 </figcaption>
 </figure>
 </div>
-<p>Let’s now discuss the pressure–temperature diagram of a typical substance, as reported in <a href="#fig-FigPhase3" class="quarto-xref">Figure&nbsp;<span>12.3</span></a>. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, <a href="#eq-ClapeyronEq" class="quarto-xref">eq.&nbsp;<span>12.8</span></a>. The interpretation of each line is as follows:</p>
+<p>Let’s now discuss the pressure–temperature diagram of a typical substance, as reported in <a href="#fig-FigPhase3" class="quarto-xref">Fig.&nbsp;<span>12.3</span></a>. Each of the lines reported in the diagram represents an equilibrium between two phases, and therefore it represents a condition that reduces the number of degrees of freedom to one. The lines can be determined using the Clapeyron equation, <a href="#eq-ClapeyronEq" class="quarto-xref">Eq.&nbsp;<span>12.8</span></a>. The interpretation of each line is as follows:</p>
 <section id="liquid-rightleftarrows-gas-equilibrium" class="level3" data-number="12.3.1">
 <h3 data-number="12.3.1" class="anchored" data-anchor-id="liquid-rightleftarrows-gas-equilibrium"><span class="header-section-number">12.3.1</span> Liquid <span class="math inline">\(\rightleftarrows\)</span> Gas Equilibrium</h3>
-<p>For this equilibrium we can use Trouton’s rule, <a href="06_ThirdLaw.html#eq-trouton" class="quarto-xref">eq.&nbsp;<span>6.7</span></a>, and write: <span id="eq-PTdia1"><span class="math display">\[
+<p>For this equilibrium we can use Trouton’s rule, <a href="06_ThirdLaw.html#eq-trouton" class="quarto-xref">Eq.&nbsp;<span>6.7</span></a>, and write: <span id="eq-PTdia1"><span class="math display">\[
 \Delta_{\text{vap}} S = S_{\text{g}}-S_{\text{l}} \cong 88 \; \frac{\text{J}}{\text{mol K}} &gt; 0\quad \text{always},
 \tag{12.10}\]</span></span></p>
 <p>where the entropy of vaporization is always positive, even for cases where the Trouton’s rule is violated. The difference in molar volumes is easily obtained, since the volume of the gas is always much greater than the volume of the liquid:</p>
@@ -682,7 +682,7 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <p><span id="eq-PTdia3"><span class="math display">\[
 \frac{dP}{dT}=\frac{88}{22.4}\left( \frac{0.0831}{8.31} \right) = 0.04\;\text{bar/K} &gt; 0 \quad \text{always},
 \tag{12.12}\]</span></span></p>
-<p>which is always positive, regardless of violations to Trouton’s rule. Notice how small this value is: the liquid–gas line in <a href="#fig-FigPhase3" class="quarto-xref">Figure&nbsp;<span>12.3</span></a> is much flatter than the solid–liquid one.</p>
+<p>which is always positive, regardless of violations to Trouton’s rule. Notice how small this value is: the liquid–gas line in <a href="#fig-FigPhase3" class="quarto-xref">Fig.&nbsp;<span>12.3</span></a> is much flatter than the solid–liquid one.</p>
 </section>
 <section id="solid-rightleftarrows-gas-equilibrium" class="level3" data-number="12.3.2">
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="solid-rightleftarrows-gas-equilibrium"><span class="header-section-number">12.3.2</span> Solid <span class="math inline">\(\rightleftarrows\)</span> Gas Equilibrium</h3>
@@ -710,14 +710,14 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <p><span id="eq-PTd2"><span class="math display">\[
 \frac{dP}{dT} &gt; 0 \quad \text{generally}.
 \tag{12.15}\]</span></span></p>
-<p>For <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> and a few other substances, <span class="math inline">\(\frac{dP}{dT}&lt;0\)</span>, an anomalous behavior that has crucial consequences for the existence of life on earth.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Because of its importance, this behavior is also depicted in <a href="#fig-FigPhase3" class="quarto-xref">Figure&nbsp;<span>12.3</span></a> using a dashed green line.</p>
+<p>For <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> and a few other substances, <span class="math inline">\(\frac{dP}{dT}&lt;0\)</span>, an anomalous behavior that has crucial consequences for the existence of life on earth.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Because of its importance, this behavior is also depicted in <a href="#fig-FigPhase3" class="quarto-xref">Fig.&nbsp;<span>12.3</span></a> using a dashed green line.</p>
 <p>Since the differences in molar volumes between the solid and the liquid phases are usually small (changes are generally of the order of <span class="math inline">\(10^{-3}\;\mathrm{L}\)</span>), <span class="math inline">\(\frac{dP}{dT}\)</span> is always much larger than for the previous two cases. The resulting lines for the solid–liquid equilibria are therefore almost vertical, regardless of the signs of their slopes.</p>
 </section>
 <section id="the-triple-point-and-the-critical-point" class="level3" data-number="12.3.4">
 <h3 data-number="12.3.4" class="anchored" data-anchor-id="the-triple-point-and-the-critical-point"><span class="header-section-number">12.3.4</span> The Triple Point and the Critical Point</h3>
 <p>The only point in the <span class="math inline">\(PT\)</span> diagram where all the three phases coexist is called the triple point. The number of degrees of freedom at the triple point for every 1-component diagram is <span class="math inline">\(f=1-3+2=0\)</span>. The fact that the triple point has zero degrees of freedom means that its coordinates, <span class="math inline">\(\{T_{\text{tp}},P_{\text{tp}},\overline{V}_{\text{tp}}\}\)</span>, are uniquely determined for each chemical substance. For this reason, the value of the triple point of water was fixed by definition—rather than measured—until 2019. This definition was necessary to establish the base unit of the thermodynamic temperature scale in the SI (the kelvin).<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
 <p>In addition to the triple point where the solid, liquid, and gas phases meet, a triple point may involve more than one condensed phase. Triple points are common for substances with multiple solid phases (polymorphs), involving either two solid phases and a liquid one or three solid phases. Helium is a special case that presents a triple point involving two different fluid phases, called the lambda point. Since the number of degrees of freedom cannot be negative, the Gibbs phase rule for a 1-component diagram sets the limit to how many phases can coexist to just three. Therefore, quadruple points (or higher coexistence points) are not possible for pure substances, even for polymorphs.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
-<p>Another point with a fixed position in the <span class="math inline">\(PT\)</span> diagram is the critical point, <span class="math inline">\(\{T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}\}\)</span>. We have already given the definition of the critical temperature in <a href="11_NonIdealGases.html#def-criticalT" class="quarto-xref">definition&nbsp;<span>11.2</span></a>. This point represents the end of the liquid–gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in <a href="#fig-FigPhase3" class="quarto-xref">Figure&nbsp;<span>12.3</span></a>. A gas whose temperature is below the critical temperature is called a <em>vapor</em>, since it can be liquefied by compression. A gas whose temperature and pressure are above the critical ones is called a <em>supercritical fluid</em>. Finally, a liquid whose pressure is above the critical point is called a <em>compressible liquid</em>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>Another point with a fixed position in the <span class="math inline">\(PT\)</span> diagram is the critical point, <span class="math inline">\(\{T_{\text{c}},P_{\text{c}},\overline{V}_{\text{c}}\}\)</span>. We have already given the definition of the critical temperature in <a href="11_NonIdealGases.html#def-criticalT" class="quarto-xref">Definition&nbsp;<span>11.2</span></a>. This point represents the end of the liquid–gas equilibrium curve. This point is also semantically important to define different regions of the phase diagram, as in <a href="#fig-FigPhase3" class="quarto-xref">Fig.&nbsp;<span>12.3</span></a>. A gas whose temperature is below the critical temperature is called a <em>vapor</em>, since it can be liquefied by compression. A gas whose temperature and pressure are above the critical ones is called a <em>supercritical fluid</em>. Finally, a liquid whose pressure is above the critical point is called a <em>compressible liquid</em>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 </section>
 </section>
 <section id="the-clausiusclapeyron-equation" class="level2" data-number="12.4">
@@ -762,7 +762,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 </section>
 <section id="sec-quest12" class="level3" data-number="12.5.2">
 <h3 data-number="12.5.2" class="anchored" data-anchor-id="sec-quest12"><span class="header-section-number">12.5.2</span> Study Questions</h3>
+<div class="question">
 <p><strong>1. What is a phase?</strong></p>
+</div>
 <ol type="a">
 <li>A region of the system at constant temperature.</li>
 <li>A region of the system with homogeneous chemical composition and physical state.</li>
@@ -770,8 +772,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>A region of the system with constant volume.</li>
 <li>A mixture of solid and liquid.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>2. In a plot of the chemical potential versus temperature, which phase has the steepest (most negative) slope, and why?</strong></p>
+</div>
 <ol type="a">
 <li>The solid, because it is the densest.</li>
 <li>The liquid, because it can flow.</li>
@@ -779,8 +782,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>The gas, because it has the highest entropy.</li>
 <li>The solid, because it has the highest entropy.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>3. At a given temperature and pressure, which phase of a substance is the most stable?</strong></p>
+</div>
 <ol type="a">
 <li>The one with the lowest chemical potential.</li>
 <li>The one with the highest chemical potential.</li>
@@ -788,8 +792,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>The one with the largest volume.</li>
 <li>Always the liquid.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>4. What condition must be satisfied for two phases to be in equilibrium?</strong></p>
+</div>
 <ol type="a">
 <li>Their entropies must be equal.</li>
 <li>Their volumes must be equal.</li>
@@ -797,8 +802,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>Their densities must be equal.</li>
 <li>Their chemical potentials must be equal.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>5. What is the Clapeyron equation?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(\frac{dP}{dT} = \frac{\Delta V}{\Delta S}\)</span>.</li>
 <li><span class="math inline">\(\frac{dP}{dT} = \Delta S\,\Delta \overline{V}\)</span>.</li>
@@ -806,8 +812,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li><span class="math inline">\(\frac{dP}{dT} = \frac{\Delta G}{\Delta \overline{V}}\)</span>.</li>
 <li><span class="math inline">\(\frac{dP}{dT} = \frac{R}{\Delta \overline{V}}\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>6. Why does the solid–liquid line of water have a negative slope in the <span class="math inline">\(PT\)</span> phase diagram?</strong></p>
+</div>
 <ol type="a">
 <li>Because ice has a higher entropy than liquid water.</li>
 <li>Because the molar volume of ice is larger than that of liquid water.</li>
@@ -815,8 +822,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>Because the enthalpy of fusion of water is negative.</li>
 <li>Because water boils at 100 °C.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>7. What is the Gibbs phase rule?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(f = c + p + 2\)</span>.</li>
 <li><span class="math inline">\(f = c - p\)</span>.</li>
@@ -824,8 +832,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li><span class="math inline">\(f = c - p + 2\)</span>.</li>
 <li><span class="math inline">\(f = 2 - p\)</span>.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>8. How many degrees of freedom are there at the triple point of a pure substance?</strong></p>
+</div>
 <ol type="a">
 <li><ol start="0" type="1">
 <li></li>
@@ -841,8 +850,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 </ol></li>
 <li>It depends on the substance.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>9. What does the critical point represent in a <span class="math inline">\(PT\)</span> phase diagram?</strong></p>
+</div>
 <ol type="a">
 <li>The point where solid, liquid, and gas coexist.</li>
 <li>The end of the solid–liquid line.</li>
@@ -850,8 +860,9 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>The point where the solid sublimates.</li>
 <li>The end of the liquid–gas equilibrium line.</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>10. According to the integrated Clausius–Clapeyron equation, how does the vapor pressure of a liquid depend on the temperature?</strong></p>
+</div>
 <ol type="a">
 <li>It decreases linearly.</li>
 <li>It is independent of temperature.</li>
@@ -859,7 +870,6 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <li>It increases linearly.</li>
 <li>It is proportional to <span class="math inline">\(1/T\)</span>.</li>
 </ol>
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -884,7 +894,7 @@ Figure&nbsp;12.3: The Pressure–Temperature Phase Diagram of Carbon Dioxide, Co
 <hr>
 <ol>
 <li id="fn1"><p>Other states of matter—such as plasma—are possible, but they are not usually observed at the values of temperature and pressure that classical thermodynamics is usually applied to. Discussion of these extreme cases is beyond the scope of this textbook.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Think, for example, of the integral <span class="math inline">\(\int SdT\)</span>, for which we can assume <span class="math inline">\(S\)</span> independent of temperature to obtain <span class="math inline">\(S\Delta T\)</span>. In practice, the entropy increases slightly with the temperature. Therefore the curves in <a href="#fig-FigPhase1" class="quarto-xref">Figure&nbsp;<span>12.1</span></a> are slightly concave downwards (remember that they are obtained from values of <span class="math inline">\(-S\)</span>, so if <span class="math inline">\(S\)</span> increases with <span class="math inline">\(T\)</span>, the curves bend downwards.)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Think, for example, of the integral <span class="math inline">\(\int SdT\)</span>, for which we can assume <span class="math inline">\(S\)</span> independent of temperature to obtain <span class="math inline">\(S\Delta T\)</span>. In practice, the entropy increases slightly with the temperature. Therefore the curves in <a href="#fig-FigPhase1" class="quarto-xref">Fig.&nbsp;<span>12.1</span></a> are slightly concave downwards (remember that they are obtained from values of <span class="math inline">\(-S\)</span>, so if <span class="math inline">\(S\)</span> increases with <span class="math inline">\(T\)</span>, the curves bend downwards.)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>The solid line would become perfectly flat only as <span class="math inline">\(T\rightarrow 0\)</span>, where, according to the third law, the entropy of a perfect crystal goes to zero. At any temperature at which a substance melts, the entropy of the solid is positive, and its line slopes downward.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>You might have heard that this is why we can skate on ice. The effect is real, but far too small to explain skating: the pressure under the blade of a skate lowers the melting point of ice by less than one degree, while we can skate on ice at –20 °C. Ice is slippery mostly because of a very thin, liquid-like layer that is always present on its surface, and because of the heat produced by friction.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>For a 1-component system <span class="math inline">\(c-1=1-1=0\)</span>, and no additional variable is required to determine the composition of each phase. For a 2-component system, however, each phase will contain both components, hence <span class="math inline">\(c-1=2-1=1\)</span> additional variable will be required to describe it–the mole fraction.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
