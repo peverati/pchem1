@@ -504,14 +504,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  <a href="./A2_References.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Further Reading and References</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./A2_References.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Further Reading and References</span></span></a>
+  <a href="./A1_Appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Thermodynamic Data Tables</span></span></a>
   </div>
 </li>
       </ul>
@@ -720,36 +720,31 @@ dA(T,V,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dV=0, \\
 dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 \end{aligned}
 \tag{8.11}\]</span></span></p>
-<p>The latter two cases are particularly interesting, since most of chemistry happens at constant temperature and either constant volume,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> or constant pressure.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Neither of them requires the entropy to be constant, which we could not control anyway. We will now show that <span class="math inline">\(A\)</span> and <span class="math inline">\(G\)</span> also give us what we were looking for at the beginning of this chapter: criteria for spontaneity that depend only on the system. The starting point is the Clausius theorem, <a href="06_ThirdLaw.html#eq-dssyscrit7" class="quarto-xref">Eq.&nbsp;<span>6.21</span></a>, which contains the second law written in terms of the system only:</p>
-<p><span id="eq-dssyscrit"><span class="math display">\[
-d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
+<p>The latter two cases are particularly interesting, since most of chemistry happens at constant temperature and either constant volume,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> or constant pressure.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Neither of them requires the entropy to be constant, which we could not control anyway. We will now show that <span class="math inline">\(A\)</span> and <span class="math inline">\(G\)</span> also give us what we were looking for at the beginning of this chapter: criteria for spontaneity that depend only on the system.</p>
+<p>We fix the temperature from the start, so that the system and its surroundings are always at the same temperature, <span class="math inline">\(T\)</span>, and we treat the two cases side by side: constant <span class="math inline">\(T\)</span> and <span class="math inline">\(V\)</span> on the left, and constant <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> on the right. The derivation takes three steps.</p>
+<p><strong>Step 1: the second law.</strong> The Clausius theorem, <a href="06_ThirdLaw.html#eq-dssyscrit7" class="quarto-xref">Eq.&nbsp;<span>6.21</span></a>, contains the second law written in terms of the system only. Multiplying both sides by the constant temperature <span class="math inline">\(T\)</span>, and dropping the <span class="math inline">\(\mathrm{sys}\)</span> notation, it becomes the same for both cases: <span id="eq-dssyscrit"><span class="math display">\[
+d S^{\mathrm{sys}} \geq \frac{đQ}{T} \quad \longrightarrow \quad TdS \geq đQ.
 \tag{8.12}\]</span></span></p>
-<p>where in the second step we multiplied both sides by <span class="math inline">\(T\)</span>, the temperature of the system and of its surroundings, which we keep constant. We can now consider two cases, side by side: constant <span class="math inline">\(V\)</span> (left), where no work is done and the heat is <span class="math inline">\(đQ_V=dU\)</span>, and constant <span class="math inline">\(P\)</span> (right), where the heat is <span class="math inline">\(đQ_P=dH\)</span>:</p>
+<p><strong>Step 2: the heat.</strong> At constant volume, no work is done, and the heat equals the change of the internal energy, <span class="math inline">\(đQ_V=dU\)</span> (<a href="03_FirstLaw.html#eq-dUqv" class="quarto-xref">Eq.&nbsp;<span>3.7</span></a>). At constant pressure, the heat equals the change of the enthalpy, <span class="math inline">\(đQ_P=dH\)</span> (<a href="03_FirstLaw.html#eq-dh2" class="quarto-xref">Eq.&nbsp;<span>3.13</span></a>). Replacing the heat in <a href="#eq-dssyscrit" class="quarto-xref">Eq.&nbsp;<span>8.12</span></a>, and moving everything to one side:</p>
 <p><span id="eq-dadgder1"><span class="math display">\[
 \begin{aligned}
-\text{constant} &amp; \; V:           &amp; \qquad \qquad &amp; \qquad \qquad &amp;     \text{constant} &amp; \; P: \\
+\text{constant} &amp; \; T,V:  &amp; \qquad &amp; \qquad &amp; \text{constant} &amp; \; T,P: \\
 \\
-TdS &amp; \geq dU           &amp; &amp;   &amp;     TdS &amp; \geq dH \\
+TdS &amp; \geq dU               &amp; &amp;        &amp; TdS &amp; \geq dH \\
 \\
-TdS -dU &amp; \geq 0         &amp; &amp;   &amp;      TdS -dH &amp; \geq 0 \\
+dU - TdS &amp; \leq 0           &amp; &amp;        &amp; dH - TdS &amp; \leq 0
 \end{aligned}
 \tag{8.13}\]</span></span></p>
-<p>On the other hand, at constant temperature, <span class="math inline">\(SdT=0\)</span>, and the differentials of the definitions of <span class="math inline">\(A\)</span> and <span class="math inline">\(G\)</span>, <a href="#eq-dadef1" class="quarto-xref">Eq.&nbsp;<span>8.6</span></a> and <a href="#eq-dgdef1" class="quarto-xref">Eq.&nbsp;<span>8.8</span></a>, simplify to:</p>
+<p><strong>Step 3: the potentials.</strong> Taking the differentials of the definitions of <span class="math inline">\(A\)</span> and <span class="math inline">\(G\)</span>, <a href="#eq-dadef1" class="quarto-xref">Eq.&nbsp;<span>8.6</span></a> and <a href="#eq-dgdef1" class="quarto-xref">Eq.&nbsp;<span>8.8</span></a>, at constant temperature (<span class="math inline">\(SdT=0\)</span>):</p>
 <p><span id="eq-dadgder3"><span class="math display">\[
 \begin{aligned}
-\text{constant} &amp; \; T,V:           &amp; \qquad &amp; \qquad &amp;     \text{constant} &amp; \; T,P: \\
-\\
-(dA)_{T,V} &amp;= dU -TdS     &amp; &amp;   &amp;       (dG)_{T,P} &amp;= dH - TdS \\
-\\
-dU = (dA)_{T,V} &amp;+TdS       &amp; &amp;   &amp;       dH = (dG)_{T,P} &amp;+TdS
+(dA)_{T,V} &amp;= dU - TdS      &amp; \qquad &amp; \qquad &amp; (dG)_{T,P} &amp;= dH - TdS.
 \end{aligned}
 \tag{8.14}\]</span></span></p>
-<p>Replacing <span class="math inline">\(dU\)</span> and <span class="math inline">\(dH\)</span> from the last line of <a href="#eq-dadgder3" class="quarto-xref">Eq.&nbsp;<span>8.14</span></a> into <a href="#eq-dadgder1" class="quarto-xref">Eq.&nbsp;<span>8.13</span></a>, the terms <span class="math inline">\(TdS\)</span> cancel out, and we obtain:</p>
+<p>The right-hand sides of <a href="#eq-dadgder3" class="quarto-xref">Eq.&nbsp;<span>8.14</span></a> are exactly the left-hand sides of the last line of <a href="#eq-dadgder1" class="quarto-xref">Eq.&nbsp;<span>8.13</span></a>. Therefore:</p>
 <p><span id="eq-dadgcond"><span class="math display">\[
 \begin{aligned}
-TdS -(dA)_{T,V} &amp;- TdS \geq 0 &amp; \qquad &amp; \qquad &amp; TdS -(dG)_{T,P} &amp;- TdS \geq 0 \\
-\\
-(dA)_{T,V} &amp; \leq 0 &amp; \qquad &amp; \qquad &amp; (dG)_{T,P} &amp; \leq 0. \\
+(dA)_{T,V} &amp; \leq 0 &amp; \qquad &amp; \qquad &amp; (dG)_{T,P} &amp; \leq 0.
 \end{aligned}
 \tag{8.15}\]</span></span></p>
 <p>These are the conditions on <span class="math inline">\(dA\)</span> and <span class="math inline">\(dG\)</span> for inferring the spontaneity of a process. Notice how they contain only properties of the system: the entropy change of the surroundings is hidden inside them, through the heat that the system exchanges. They can be summarized as follows:</p>

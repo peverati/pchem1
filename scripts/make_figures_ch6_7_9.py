@@ -75,8 +75,8 @@ for k in range(7):
 ax.text(0.89, (S1(0.9) + S2(0.9)) / 2, "isothermal", color=PURPLE, fontsize=12, va="center", ha="right")
 ax.text(0.62, S2(0.9) + 0.025, "adiabatic", color=PURPLE, fontsize=12)
 ax.plot(0, 0, "o", color="k", ms=7, clip_on=False, zorder=5)
-ax.annotate("both curves reach $S=0$\nat $T=0$ (third law)", (0, 0), xytext=(0.12, 0.62), fontsize=12,
-            arrowprops=dict(arrowstyle="-", color="0.3", lw=1))
+ax.annotate("both curves reach $S=0$\nat $T=0$ (third law)", (0, 0), xytext=(0.3, 0.02), fontsize=12, va="bottom",
+            arrowprops=dict(arrowstyle="-|>", color="0.3", lw=1.2, mutation_scale=14, shrinkB=6))
 ax.set_xlim(0, 1); ax.set_ylim(0, 1.0); ax.set_xticks([0]); ax.set_yticks([])
 ax.set_xlabel("$T$"); ax.set_ylabel("$S$")
 save(fig, f"{out}/ch6_unattainability.png")

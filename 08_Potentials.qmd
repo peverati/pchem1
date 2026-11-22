@@ -140,43 +140,40 @@ dG(T,P,\{n_i\}) = \sum_i\mu_i dn_i \quad \text{if} \quad dT=dP=0.
 \end{aligned}
 $$ {#eq-dhagchem}
 
-The latter two cases are particularly interesting, since most of chemistry happens at constant temperature and either constant volume,^[For example, several industrial processes in sealed reactors.] or constant pressure.^[For example, most processes in a chemistry lab.] Neither of them requires the entropy to be constant, which we could not control anyway. We will now show that $A$ and $G$ also give us what we were looking for at the beginning of this chapter: criteria for spontaneity that depend only on the system. The starting point is the Clausius theorem, @eq-dssyscrit7, which contains the second law written in terms of the system only:
+The latter two cases are particularly interesting, since most of chemistry happens at constant temperature and either constant volume,^[For example, several industrial processes in sealed reactors.] or constant pressure.^[For example, most processes in a chemistry lab.] Neither of them requires the entropy to be constant, which we could not control anyway. We will now show that $A$ and $G$ also give us what we were looking for at the beginning of this chapter: criteria for spontaneity that depend only on the system.
 
+We fix the temperature from the start, so that the system and its surroundings are always at the same temperature, $T$, and we treat the two cases side by side: constant $T$ and $V$ on the left, and constant $T$ and $P$ on the right. The derivation takes three steps.
+
+**Step 1: the second law.** The Clausius theorem, @eq-dssyscrit7, contains the second law written in terms of the system only. Multiplying both sides by the constant temperature $T$, and dropping the $\mathrm{sys}$ notation, it becomes the same for both cases:
 $$
-d S^{\mathrm{sys}} \geq \frac{đQ}{T_{\text{surr}}} \quad \longrightarrow \quad TdS \geq đQ,
+d S^{\mathrm{sys}} \geq \frac{đQ}{T} \quad \longrightarrow \quad TdS \geq đQ.
 $$ {#eq-dssyscrit}
 
-where in the second step we multiplied both sides by $T$, the temperature of the system and of its surroundings, which we keep constant. We can now consider two cases, side by side: constant $V$ (left), where no work is done and the heat is $đQ_V=dU$, and constant $P$ (right), where the heat is $đQ_P=dH$:
+**Step 2: the heat.** At constant volume, no work is done, and the heat equals the change of the internal energy, $đQ_V=dU$ (@eq-dUqv). At constant pressure, the heat equals the change of the enthalpy, $đQ_P=dH$ (@eq-dh2). Replacing the heat in @eq-dssyscrit, and moving everything to one side:
 
 $$
 \begin{aligned}
-\text{constant} & \; V:           & \qquad \qquad & \qquad \qquad &     \text{constant} & \; P: \\
+\text{constant} & \; T,V:  & \qquad & \qquad & \text{constant} & \; T,P: \\
 \\
-TdS & \geq dU           & &   &     TdS & \geq dH \\
+TdS & \geq dU               & &        & TdS & \geq dH \\
 \\
-TdS -dU & \geq 0         & &   &      TdS -dH & \geq 0 \\
+dU - TdS & \leq 0           & &        & dH - TdS & \leq 0
 \end{aligned}
 $$ {#eq-dadgder1}
 
-On the other hand, at constant temperature, $SdT=0$, and the differentials of the definitions of $A$ and $G$, @eq-dadef1 and @eq-dgdef1, simplify to:
+**Step 3: the potentials.** Taking the differentials of the definitions of $A$ and $G$, @eq-dadef1 and @eq-dgdef1, at constant temperature ($SdT=0$):
 
 $$
 \begin{aligned}
-\text{constant} & \; T,V:           & \qquad & \qquad &     \text{constant} & \; T,P: \\
-\\
-(dA)_{T,V} &= dU -TdS     & &   &       (dG)_{T,P} &= dH - TdS \\
-\\
-dU = (dA)_{T,V} &+TdS       & &   &       dH = (dG)_{T,P} &+TdS
+(dA)_{T,V} &= dU - TdS      & \qquad & \qquad & (dG)_{T,P} &= dH - TdS.
 \end{aligned}
 $$ {#eq-dadgder3}
 
-Replacing $dU$ and $dH$ from the last line of @eq-dadgder3 into @eq-dadgder1, the terms $TdS$ cancel out, and we obtain:
+The right-hand sides of @eq-dadgder3 are exactly the left-hand sides of the last line of @eq-dadgder1. Therefore:
 
 $$
 \begin{aligned}
-TdS -(dA)_{T,V} &- TdS \geq 0 & \qquad & \qquad & TdS -(dG)_{T,P} &- TdS \geq 0 \\
-\\
-(dA)_{T,V} & \leq 0 & \qquad & \qquad & (dG)_{T,P} & \leq 0. \\
+(dA)_{T,V} & \leq 0 & \qquad & \qquad & (dG)_{T,P} & \leq 0.
 \end{aligned}
 $$ {#eq-dadgcond}
 

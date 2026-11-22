@@ -46,20 +46,29 @@ save(fig, f"{out}/ch12_mu_vs_T.png")
 
 fig, ax = plt.subplots(figsize=(7.5, 5))
 tm1, tb1 = mu_plot(ax, highlight=False, color_lines="0.6", label=False)
-shift = Rj * 300 * np.log(0.1) / 1000          # pressure lowered tenfold: gas shifts, condensed phases almost do not
-tm2, tb2 = mu_plot(ax, shift_g=shift, highlight=False, label=False)
-for f_, name in [(mu_s, "solid"), (mu_l, "liquid"), (lambda T: mu_g0(T) + shift, r"gas, $P_2<P_1$")]:
+shift = Rj * 300 * np.log(0.1) / 1000          # pressure lowered tenfold: gas shifts a lot
+shift_l = 0.05 * shift                         # the liquid shifts too, but much less (V_liquid << V_gas)
+tm2, tb2 = mu_plot(ax, shift_g=shift, shift_l=shift_l, highlight=False, label=False)
+for f_, name in [(mu_s, "solid"), (lambda T: mu_l(T) + shift_l, "liquid"), (lambda T: mu_g0(T) + shift, r"gas, $P_2<P_1$")]:
     ax.text(T[-1] + 4, f_(T[-1]), name, fontsize=14, va="center")
 ax.text(T[-1] + 4, mu_g0(T[-1]), r"gas, $P_1$", color="0.5", fontsize=13, va="center")
 ax.annotate("", xy=(425, mu_g0(425) + shift), xytext=(425, mu_g0(425)), arrowprops=dict(arrowstyle="->", color=PURPLE, lw=2))
-for t1, t2, col, lab in [(tm1, tm2, "tab:green", r"$T_{\mathrm{m}}$"), (tb1, tb2, "tab:blue", r"$T_{\mathrm{b}}$")]:
+for t1, t2, col in [(tm1, tm2, "tab:green"), (tb1, tb2, "tab:blue")]:
     ax.axvline(t1, ls=":", color="0.6"); ax.axvline(t2, ls=":", color=col)
-    ax.text(t2 + 2, -38 if col == 'tab:green' else -34, lab + r"$(P_2)$", color=col, fontsize=13)
-ax.text(tb1 + 3, -30, r"$T_{\mathrm{b}}(P_1)$", color="0.5", fontsize=13)
 # junction points: purple at P2, faded purple at P1
-ax.plot([tm2, tb2], [mu_s(tm2), mu_l(tb2)], "o", color=PURPLE, ms=8, zorder=5)
-ax.plot(tb1, mu_l(tb1), "o", color=PURPLE, ms=8, alpha=0.45, zorder=5)
-ax.set_xlabel("$T$"); ax.set_ylabel(r"$\mu$"); ax.set_xticks([]); ax.set_yticks([]); ax.set_ylim(-40, 12); ax.set_xlim(175, 520)
+ax.plot([tm2, tb2], [mu_s(tm2), mu_l(tb2) + shift_l], "o", color=PURPLE, ms=8, zorder=5)
+ax.plot([tm1, tb1], [mu_s(tm1), mu_l(tb1)], "o", color=PURPLE, ms=8, alpha=0.45, zorder=5)
+ax.set_xlabel("$T$", labelpad=2); ax.set_ylabel(r"$\mu$"); ax.set_yticks([]); ax.set_ylim(-40, 12); ax.set_xlim(175, 520)
+ax.set_xticks([tm2, tm1, tb2, tb1])
+ax.set_xticklabels(["", "", r"$T_{\mathrm{b}}^{P_2}$", r"$T_{\mathrm{b}}^{P_1}$"], fontsize=14)
+for lab, c in zip(ax.get_xticklabels(), ["k", "k", "tab:blue", "0.45"]):
+    lab.set_color(c)
+# the two melting points are close: put their labels right next to each other, around the midpoint
+import matplotlib.transforms as mtransforms
+tr = mtransforms.blended_transform_factory(ax.transData, ax.transAxes)
+mid = (tm1 + tm2) / 2
+ax.text(mid - 1.2, -0.02, r"$T_{\mathrm{m}}^{P_2}$", transform=tr, ha="right", va="top", fontsize=14, color="tab:green")
+ax.text(mid + 1.2, -0.02, r"$T_{\mathrm{m}}^{P_1}$", transform=tr, ha="left", va="top", fontsize=14, color="0.45")
 save(fig, f"{out}/ch12_mu_pressure.png")
 
 # PT diagram of CO2 (Clausius-Clapeyron), with a water-like anomalous melting line
@@ -68,17 +77,18 @@ dH_vap = Rj * np.log(Pc / Ptp) / (1 / Ttp - 1 / Tc)
 dH_sub = 26100.0
 fig, ax = plt.subplots(figsize=(7.5, 5.2))
 Ts = np.linspace(170, Ttp, 100); ax.plot(Ts, Ptp * np.exp(-dH_sub / Rj * (1 / Ts - 1 / Ttp)), color="tab:red", lw=2.5)
-Tv = np.linspace(Ttp, Tc, 100); ax.plot(Tv, Ptp * np.exp(-dH_vap / Rj * (1 / Tv - 1 / Ttp)), color="tab:blue", lw=2.5)
+Tv = np.linspace(Ttp, Tc, 100)   # schematic: starts flat at the triple point, then rises steeply to the critical point
+ax.plot(Tv, Ptp * np.exp(np.log(Pc / Ptp) * ((Tv - Ttp) / (Tc - Ttp)) ** 2), color="tab:blue", lw=2.5)
 Pf = np.geomspace(Ptp, 2000, 50); ax.plot(Ttp + (Pf - Ptp) / 200, Pf, color="tab:green", lw=2.5)
-ax.plot(Ttp - (Pf - Ptp) / 200, Pf, "--", color="tab:green", lw=2)
-ax.text(Ttp - 28, 900, "anomalous\n(water-like)", color="tab:green", fontsize=11, ha="center")
+ax.plot(Ttp - (Pf - Ptp) / 1000, Pf, "--", color="tab:green", lw=2)
+ax.text(Ttp - 16, 900, "anomalous\n(water-like)", color="tab:green", fontsize=11, ha="center")
 ax.plot(Ttp, Ptp, "o", color="tab:orange", ms=9, zorder=5); ax.plot(Tc, Pc, "o", color="tab:red", ms=9, zorder=5)
 ax.annotate("triple point", (Ttp, Ptp), xytext=(7, -15), textcoords="offset points", color="tab:orange", fontsize=13)
 ax.annotate("critical point", (Tc, Pc), xytext=(-40, 12), textcoords="offset points", color="tab:red", fontsize=13)
 ax.axhline(Pc, ls=":", color="tab:red", lw=1); ax.axvline(Tc, ls=":", color="tab:red", lw=1)
 ax.axhline(1, ls="--", color="0.5", lw=1); ax.text(172, 1.12, "1 bar", color="0.4", fontsize=12)
 for x, y, t in [(195, 30, "solid"), (255, 45, "liquid"), (262, 600, "compressible\nliquid"), (326, 500, "supercritical\nfluid"),
-                (262, 9, "vapor"), (326, 15, "gas")]:
+                (275, 5.5, "vapor"), (326, 15, "gas")]:
     ax.text(x, y, t, fontsize=14, ha="center", va="center")
 ax.set_yscale("log"); ax.set_xlim(170, 350); ax.set_ylim(0.3, 2000)
 ax.set_yticks([1, 10, Pc, 1000]); ax.set_yticklabels(["1", "10", r"$P_c$", "1000"])
@@ -139,15 +149,20 @@ fig, ax = plt.subplots(figsize=(7, 5))
 ax.plot(x, Pliq, color="tab:red", lw=2.5); ax.plot(ydew, Pliq, color="tab:blue", lw=2.5)
 ax.fill_betweenx(Pliq, ydew, x, color="0.85")
 xi = 0.4; Pi = (1 - xi) * PA + xi * PB; yi = xi * PB / Pi
-ax.annotate("", xy=(xi, Pi), xytext=(xi, 0.125), arrowprops=dict(arrowstyle="->", color=PURPLE, lw=2))
-ax.plot([xi, yi], [Pi, Pi], "--", color=PURPLE, lw=1.8); ax.plot([xi, yi], [Pi, Pi], "o", color=PURPLE, ms=8, zorder=5); ax.plot(xi, 0.125, "o", color=PURPLE, ms=8)
-ax.text(xi + 0.01, 0.127, "$i$", color=PURPLE, fontsize=15)
-ax.annotate(r"$x_{\mathrm{B}}^i$", (xi, 0), xytext=(xi - 0.03, 0.004), fontsize=14, color=PURPLE)
-ax.annotate(r"$y_{\mathrm{B}}^f$", (yi, 0), xytext=(yi - 0.03, 0.004), fontsize=14, color=PURPLE)
-ax.plot([xi, xi], [0, Pi], ":", color=PURPLE); ax.plot([yi, yi], [0, Pi], ":", color=PURPLE)
-ax.text(0.08, 0.11, "liquid", fontsize=15); ax.text(0.75, 0.03, "vapor", fontsize=15)
-ax.text(0.55, 0.1, "liquidus\n(bubble point) line", color="tab:red", fontsize=12)
-ax.text(0.68, 0.06, "dew point line", color="tab:blue", fontsize=12)
+Pf_ = 0.03                                         # final state f: all vapor
+arr = dict(arrowstyle="-|>", color=PURPLE, lw=2, mutation_scale=16)
+ax.annotate("", xy=(xi, Pi), xytext=(xi, 0.125), arrowprops=arr)            # i down to the liquidus
+ax.annotate("", xy=(yi, Pf_), xytext=(yi, Pi), arrowprops=arr)              # from y_B^f down to f
+ax.plot([xi, yi], [Pi, Pi], "--", color=PURPLE, lw=1.8); ax.plot([xi, yi], [Pi, Pi], "o", color=PURPLE, ms=8, zorder=5)
+ax.plot(xi, 0.125, "o", color=PURPLE, ms=8); ax.plot(yi, Pf_, "o", color=PURPLE, ms=8, zorder=5)
+ax.text(xi + 0.015, 0.125, "$i$", color=PURPLE, fontsize=15, va="center")
+ax.text(yi + 0.015, Pf_, "$f$", color=PURPLE, fontsize=15, va="center")
+ax.text(xi - 0.012, 0.007, r"$x_{\mathrm{B}}^i$", fontsize=14, color=PURPLE, ha="right")
+ax.text(yi - 0.012, 0.007, r"$y_{\mathrm{B}}^f$", fontsize=14, color=PURPLE, ha="right")
+ax.plot([xi, xi], [0, Pi], ":", color=PURPLE); ax.plot([yi, yi], [0, Pf_], ":", color=PURPLE)
+ax.text(0.12, 0.118, "liquid", fontsize=15); ax.text(0.75, 0.03, "vapor", fontsize=15)
+ax.text(0.05, 0.085, "liquidus\n(bubble point) line", color="tab:red", fontsize=12)
+ax.text(0.72, 0.06, "dew point line", color="tab:blue", fontsize=12)
 ax.text(0.53, 0.068, "liquid\n+ vapor", fontsize=12, ha="center")
 ax.plot([0, 1], [PA, PB], "o", color="tab:orange", ms=9, clip_on=False, zorder=5)
 ax.set_ylim(0, 0.14); frame(ax, "Pressure [bar]", (PA, r"$P_{\mathrm{A}}^*$"), (PB, r"$P_{\mathrm{B}}^*$")); ax.set_title("toluene (A) + benzene (B), 25 °C", fontsize=14)
@@ -169,13 +184,18 @@ def tx_base(ax):
 fig, ax = plt.subplots(figsize=(7, 5))
 tx_base(ax)
 xi = 0.3; Ti = np.interp(xi, x, Tbub); yi = np.interp(xi, x, ybub)
-ax.annotate("", xy=(xi, Ti), xytext=(xi, 78), arrowprops=dict(arrowstyle="->", color=PURPLE, lw=2))
-ax.plot(xi, 78, "o", color=PURPLE, ms=8); ax.text(xi + 0.015, 78, "$i$", color=PURPLE, fontsize=15)
+Ti0 = 84
+ax.annotate("", xy=(xi, Ti), xytext=(xi, Ti0), arrowprops=dict(arrowstyle="-|>", color=PURPLE, lw=2, mutation_scale=16))
+ax.plot(xi, Ti0, "o", color=PURPLE, ms=8); ax.text(xi + 0.015, Ti0, "$i$", color=PURPLE, fontsize=15, va="center")
 ax.plot([xi, yi], [Ti, Ti], "--", color=PURPLE); ax.plot([xi, yi], [Ti, Ti], "o", color=PURPLE, ms=8, zorder=5)
-ax.annotate(r"$x_{\mathrm{B}}^i$", (xi, 75), xytext=(xi + 0.01, 75.5), fontsize=14, color=PURPLE)
-ax.annotate(r"$y_{\mathrm{B}}^f$", (yi, Ti), xytext=(yi + 0.01, Ti + 1), fontsize=14, color=PURPLE)
-ax.text(0.75, 108, "vapor", fontsize=15); ax.text(0.08, 82, "liquid", fontsize=15)
-ax.text(0.12, 112, "dew point line", color="tab:blue", fontsize=12); ax.text(0.62, 86, "liquidus line", color="tab:red", fontsize=12)
+Tf0 = 107                                        # f: above the dew line, all vapor
+ax.annotate("", xy=(yi, Tf0), xytext=(yi, Ti), arrowprops=dict(arrowstyle="-|>", color=PURPLE, lw=2, mutation_scale=16))
+ax.plot(yi, Tf0, "o", color=PURPLE, ms=8, zorder=5); ax.text(yi + 0.015, Tf0, "$f$", color=PURPLE, fontsize=15, va="center")
+ax.plot([xi, xi], [75, Ti0], ":", color=PURPLE); ax.plot([yi, yi], [75, Tf0], ":", color=PURPLE)
+ax.text(xi - 0.012, 76.0, r"$x_{\mathrm{B}}^i$", fontsize=14, color=PURPLE, ha="right")
+ax.text(yi - 0.012, 76.0, r"$y_{\mathrm{B}}^f$", fontsize=14, color=PURPLE, ha="right")
+ax.text(0.75, 108, "vapor", fontsize=15); ax.text(0.06, 80, "liquid", fontsize=15)
+ax.text(0.12, 112, "dew point line", color="tab:blue", fontsize=12); ax.text(0.64, 81.8, "liquidus line", color="tab:red", fontsize=12)
 ax.set_title("toluene (A) + benzene (B), 1 atm", fontsize=14)
 save(fig, f"{out}/ch13_Tx_ideal.png")
 
@@ -287,13 +307,20 @@ tm0, tb0 = brentq(lambda t: mu_s(t) - mu_l(t), 200, 360), brentq(lambda t: mu_l(
 tm1, tb1 = brentq(lambda t: mu_s(t) - sol(t), 200, 360), brentq(lambda t: sol(t) - mu_g0(t), 280, 465)
 for t, c in [(tm0, "0.6"), (tb0, "0.6"), (tm1, "tab:green"), (tb1, "tab:blue")]:
     ax.axvline(t, ls=":", color=c)
+# crossings: pure solvent (faded) and solution
+ax.plot([tm0, tb0], [mu_s(tm0), mu_l(tb0)], "o", color=PURPLE, ms=8, alpha=0.45, zorder=5)
+ax.plot([tm1, tb1], [mu_s(tm1), sol(tb1)], "o", color=PURPLE, ms=8, zorder=5)
 ax.text(T[-1] + 4, mu_s(T[-1]), "solid", fontsize=14, va="center"); ax.text(T[-1] + 4, mu_g0(T[-1]), "gas", fontsize=14, va="center")
 ax.text(T[-1] + 4, mu_l(T[-1]), "pure solvent", fontsize=13, color="0.5", va="center"); ax.text(T[-1] + 4, sol(T[-1]), "solution", fontsize=13, color="tab:purple", va="center")
 ax.annotate("", xy=(tm1, -36), xytext=(tm0, -36), arrowprops=dict(arrowstyle="->", color="tab:green", lw=2))
-ax.text(tm1 - 5, -33, "melting point\ndecrease", color="tab:green", fontsize=11, ha="right")
+ax.text(tm1 + 4, -33, "melting point\ndecrease", color="tab:green", fontsize=11, ha="left")
 ax.annotate("", xy=(tb1, -36), xytext=(tb0, -36), arrowprops=dict(arrowstyle="->", color="tab:blue", lw=2))
 ax.text(tb1 + 5, -33, "boiling point\nincrease", color="tab:blue", fontsize=11, ha="left")
-ax.set_xlabel("$T$"); ax.set_ylabel(r"$\mu$ of the solvent"); ax.set_xticks([]); ax.set_yticks([]); ax.set_ylim(-42, 12); ax.set_xlim(175, 560)
+ax.set_xlabel("$T$"); ax.set_ylabel(r"$\mu$ of the solvent"); ax.set_yticks([]); ax.set_ylim(-42, 12); ax.set_xlim(175, 560)
+ax.set_xticks([tm1, tm0, tb0, tb1])
+ax.set_xticklabels([r"$T_{\mathrm{m}}$", r"$T_{\mathrm{m}}^*$", r"$T_{\mathrm{b}}^*$", r"$T_{\mathrm{b}}$"])
+for lab, c in zip(ax.get_xticklabels(), ["tab:green", "0.45", "0.45", "tab:blue"]):
+    lab.set_color(c)
 save(fig, f"{out}/ch13_colligative.png")
 
 # simple eutectic: naphthalene (A) + benzene (B), ideal solubility of each pure solid in the liquid
@@ -311,15 +338,12 @@ ax.plot([0, 1], [Te - 273.15] * 2, color="k", lw=2)
 ax.fill_between(1 - xA_liq(TA), Te - 273.15, TA - 273.15, color="0.85")
 ax.fill_between(xB_liq(TB), Te - 273.15, TB - 273.15, color="0.85")
 ax.plot(xe, Te - 273.15, "o", color=PURPLE, ms=9, zorder=5)
-ax.annotate("eutectic", (xe, Te - 273.15), xytext=(-10, -22), textcoords="offset points", color=PURPLE, fontsize=14, ha="right")
+ax.annotate("eutectic", (xe, Te - 273.15), xytext=(0, -24), textcoords="offset points", color=PURPLE, fontsize=14, ha="center")
 xi = 0.5; Ti = TmA * 0 + 1 / (1 / TmA - Rj / HA * np.log(1 - xi))   # liquidus temperature at x_B = 0.5
-ax.annotate("", xy=(xi, Ti - 273.15), xytext=(xi, 75), arrowprops=dict(arrowstyle="->", color=PURPLE, lw=2))
-ax.plot(xi, 75, "o", color=PURPLE, ms=8); ax.text(xi + 0.02, 75, "$i$", color=PURPLE, fontsize=15, va="center")
-ax.plot(xi, Ti - 273.15, "o", color=PURPLE, ms=8, zorder=5)
 ax.text(0.62, 55, "liquid", fontsize=15)
-ax.text(0.2, 22, "liquid\n+ solid A", fontsize=13, ha="center")
-ax.annotate("liquid + solid B", xy=(0.955, 0.5), xytext=(0.98, 22), fontsize=12, ha="right",
-            arrowprops=dict(arrowstyle="-", color="0.3", lw=1))
+ax.text(0.33, 17, "liquid + solid A", fontsize=13, ha="center", va="center")
+ax.annotate("liquid + solid B", xy=(0.95, 0.0), xytext=(0.98, 40), fontsize=12, ha="right",
+            arrowprops=dict(arrowstyle="-", color="0.3", lw=1, shrinkA=2, shrinkB=0))
 ax.text(0.5, -14, "solid A + solid B", fontsize=14, ha="center")
 ax.plot([0, 1], [TmA - 273.15, TmB - 273.15], "o", color="tab:orange", ms=9, clip_on=False, zorder=5)
 ax.set_ylim(-20, 90)

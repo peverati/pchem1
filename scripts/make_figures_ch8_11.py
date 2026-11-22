@@ -32,8 +32,9 @@ fig, ax = plt.subplots(figsize=(7.5, 4.8))
 ax.plot(Pp, G_g0 + Rk * T * np.log(Pp), color="tab:blue", lw=2.5, label="gas")
 ax.plot(Pp, G_l0 + Vl * (Pp - 1), color="k", lw=2.5, label="liquid")
 ax.plot(Pvap, G_l0, "o", color=PURPLE, ms=9, zorder=5)
-ax.annotate(r"$P^*_{\mathrm{vap}}=0.15$ bar", (Pvap, G_l0), xytext=(25, -40), textcoords="offset points",
-            color=PURPLE, arrowprops=dict(arrowstyle="->", color=PURPLE))
+ax.annotate(r"$P^*_{\mathrm{vap}}=0.15$ bar", (Pvap, G_l0), xytext=(1.2, -177.5), textcoords="data", va="center",
+            color=PURPLE, arrowprops=dict(arrowstyle="-|>", color=PURPLE, lw=1.5, mutation_scale=16, shrinkB=7,
+                                          connectionstyle="arc3,rad=-0.25"))
 ax.text(8, -162.5, "gas", color="tab:blue"); ax.text(8, -173.4, "liquid")
 ax.text(0.3, -160.7, r"1 mol of C$_2$H$_5$OH, $T=310$ K", fontsize=14)
 ax.set_xlim(0, 10); ax.set_ylim(-180, -159)

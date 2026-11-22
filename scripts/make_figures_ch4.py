@@ -26,16 +26,26 @@ for Va, Vb, T0 in [(VB, VC, Th), (VA, VD, Th)]:
 for v, T, lab, off in [(VA, Th, "A", (-18, 6)), (VB, Th, "B", (8, 6)), (VC, Tl, "C", (8, 4)), (VD, Tl, "D", (-20, -16))]:
     ax.plot(v, P(v, T), "o", color=PURPLE, ms=9, zorder=5)
     ax.annotate(lab, (v, P(v, T)), xytext=off, textcoords="offset points", fontsize=17, color=PURPLE)
-mid = lambda a, b: (a + b) / 2
-ax.text(mid(VA, VB), P(mid(VA, VB), Th) + 6, "1", fontsize=15, color="tab:green")
-ax.text(mid(VB, VC) + 0.01, 105, "2", fontsize=15, color="tab:green")
-ax.text(mid(VD, VC), P(mid(VD, VC), Tl) + 5, "3", fontsize=15, color="tab:green")
-ax.text(mid(VA, VD) - 0.03, 120, "4", fontsize=15, color="tab:green")
+Pad = lambda v, Va, T0: P(v, T0 * (Va / v) ** g)          # pressure along an adiabat
+num = dict(fontsize=15, color="tab:green", textcoords="offset points", ha="center", va="center")
+v1 = 0.25; ax.annotate("1", (v1, P(v1, Th)), xytext=(10, 12), **num)
+v2 = 0.40; ax.annotate("2", (v2, Pad(v2, VB, Th)), xytext=(10, 10), **num)
+v3 = 0.43; ax.annotate("3", (v3, P(v3, Tl)), xytext=(-4, -14), **num)
+v4 = 0.26; ax.annotate("4", (v4, Pad(v4, VA, Th)), xytext=(-12, 4), **num)
 ax.text(0.55, P(0.55, Th) + 4, r"isotherm $T_h$", color="tab:red", fontsize=14)
 ax.text(0.55, P(0.55, Tl) - 12, r"isotherm $T_l$", color="tab:blue", fontsize=14)
-ax.text(0.205, 60, "adiabats", color="0.25", fontsize=14)
+
 ax.set_xlim(0.15, 0.62); ax.set_ylim(30, 230)
 ax.set_xlabel("Volume [L]"); ax.set_ylabel("Pressure [bar]")
+# adiabat labels, rotated to follow each adiabat (angle measured on screen)
+def adiabat_label(text, v0, Va, dx, dy):
+    dv = 0.004
+    p1, p2 = ax.transData.transform([(v0 - dv, Pad(v0 - dv, Va, Th)), (v0 + dv, Pad(v0 + dv, Va, Th))])
+    ang = np.degrees(np.arctan2(p2[1] - p1[1], p2[0] - p1[0]))
+    ax.text(v0 + dx, Pad(v0, Va, Th) + dy, text, color="0.25", fontsize=13, ha="center", va="center",
+            rotation=ang, rotation_mode="anchor", bbox=dict(fc="white", ec="none", pad=0.5, alpha=0.85), zorder=4)
+adiabat_label("adiabat 2", 0.292, VA, -0.014, -6)     # D -> A, below the 4
+adiabat_label("adiabat 1", 0.345, VB, 0.016, 7)       # B -> C, between B and the 2
 save(fig, f"{out}/ch4_carnot_pv.png")
 
 

@@ -15,8 +15,9 @@ def simple(path, y, ylabel, title, slope_lab, col):
     ax.set_xlabel("$t$"); ax.set_ylabel(ylabel); ax.set_title(title, fontsize=15)
     ax.set_xlim(0, 4); ax.set_ylim(min(0, y.min() * 1.1), max(2.0, y.max() * 1.1))
     if slope_lab:
-        k = 120; ax.annotate(slope_lab, (t[k], y[k]), xytext=(30, -45 if "+" in slope_lab else 20), textcoords="offset points",
-                             color=PURPLE, fontsize=16, arrowprops=dict(arrowstyle="->", color=PURPLE))
+        k = 150; up = "+" in slope_lab       # label just below the line, on the side away from the curve
+        ax.annotate(slope_lab, (t[k], y[k]), xytext=(12, -22) if up else (-12, -22), textcoords="offset points",
+                    color=PURPLE, fontsize=16, ha="left" if up else "right", va="top")
     save(fig, path)
 
 
@@ -63,7 +64,7 @@ A = (kr + kf * np.exp(-(kf + kr) * tt)) / (kf + kr); B = 1 - A
 fig, ax = conc_plot("", [(A, "[A]", "tab:blue"), (B, "[B]", "tab:red")],
                     r"opposed: $k_1=0.1\;\mathrm{s^{-1}}$, $k_{-1}=0.05\;\mathrm{s^{-1}}$")
 ax.axhline(kr / (kf + kr), ls=":", color="tab:blue"); ax.axhline(kf / (kf + kr), ls=":", color="tab:red")
-ax.text(60, kf / (kf + kr) + 0.03, r"$[\mathrm{B}]_{\mathrm{eq}}/[\mathrm{A}]_{\mathrm{eq}}=K_C=k_1/k_{-1}=2$", fontsize=13)
+ax.text(45, kf / (kf + kr) + 0.04, r"$[\mathrm{B}]_{\mathrm{eq}}/[\mathrm{A}]_{\mathrm{eq}}=K_C=k_1/k_{-1}$" + "\n" + r"($=2$ for the rate constants of this example)", fontsize=12)
 save(fig, f"{out}/ch14_opposed.png")
 
 # Arrhenius plot
@@ -92,9 +93,9 @@ ax.plot([0.2, s[i_ts]], [Ets, Ets], ":", color="gray")
 ax.text(0.22, (Ets + Er) / 2, r"$E_a$", color=PURPLE, fontsize=17)
 ax.annotate("", xy=(0.88, Ep), xytext=(0.88, Er), arrowprops=dict(arrowstyle="<->", color="tab:blue", lw=2))
 ax.plot([0.35, 0.88], [Er, Er], ":", color="gray")
-ax.text(0.9, (Er + Ep) / 2, r"$\Delta_{\mathrm{rxn}}H$", color="tab:blue", fontsize=15)
+ax.text(0.9, (Er + Ep) / 2, r"$\Delta E$", color="tab:blue", fontsize=16)
 ax.text(s[i_ts], Ets + 0.05, "transition state", ha="center", fontsize=14)
 ax.text(0.02, Er + 0.05, "reactants", fontsize=14); ax.text(0.78, Ep - 0.12, "products", fontsize=14)
-ax.set_xticks([]); ax.set_yticks([]); ax.set_xlabel("reaction coordinate"); ax.set_ylabel("energy")
+ax.set_xticks([]); ax.set_yticks([]); ax.set_xlabel("reaction coordinate"); ax.set_ylabel("potential energy, $E$")
 ax.set_ylim(Ep - 0.25, Ets + 0.2)
 save(fig, f"{out}/ch14_reaction_coordinate.png")

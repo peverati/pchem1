@@ -116,7 +116,7 @@ $$ {#eq-dh2}
 @Eq-dh2 establishes that the heat exchanged at constant pressure is equal to a new state function called the enthalpy, defined by @eq-enthalpydef. It also establishes a mathematical justification of the concept of heat capacity at constant pressure. Similarly to $C_V$, $C_P$ can now be interpreted as the partial derivative (a coefficient) of the new state function (the enthalpy):
 
 $$
-C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n=1},
+C_P = \left( \frac{\partial H} {\partial T} \right)_{P,n=1}.
 $$ {#eq-cpstatefunc}
 
 @Eq-cpstatefunc brings also a rigorous definition of heat capacity at constant pressure for 1 mol of substance:
